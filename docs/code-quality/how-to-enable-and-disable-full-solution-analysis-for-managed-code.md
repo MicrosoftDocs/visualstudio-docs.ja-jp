@@ -1,5 +1,5 @@
 ---
-title: '方法: を有効にして、マネージ コードの完全なソリューション分析を無効にします。'
+title: '方法: マネージ コードの完全ソリューション分析を有効または無効にします'
 ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +17,11 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>方法: を有効にして、マネージ コードの完全なソリューション分析を無効にします。
+# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>方法: マネージ コードの完全ソリューション分析を有効または無効にします
 
-*完全ソリューション解析*は、ソリューション内の開いている Visual c# または Visual Basic ファイルでのみコード分析の問題が発生することができますをもコードでファイルを Visual Studio 機能は閉じられます。 完全ソリューション解析は、既定では、*有効になっている*Visual basic の場合と*無効になっている*Visual c# の場合。
+*完全ソリューション分析*は、Visual Studio の機能の 1 つで、ソリューション内で開いている Visual C# または Visual Basic ファイルのみのコード分析の問題を見ることができるようになります。また閉じられたファイルのコードでも有効です。既定では、完全ソリューション解析は Visual basic で *有効* で、Visual C# では *無効* になっています。
 
-すべてのファイルにすべての問題が発生すると便利であることができますが、無駄なこともできます。 長くなる Visual Studio ソリューションが非常に大きいまたは多くのファイルが含まれる場合。 表示の問題の数を制限して、Visual Studio のパフォーマンスを向上させる、完全なソリューション分析を無効にできます。 必要に応じて簡単に、この機能を再有効化することができます。
+すべてのファイルのすべての問題を表示できるのは便利なことでもありますが、場合によっては無駄にもなります。 Visual Studio ソリューションが非常に大きくまたは多くのファイルが含まれる場合、この機能は Visual Studio を遅くさせます。 表示する問題の数を制限して、Visual Studio のパフォーマンスを向上させるために、完全なソリューション分析を無効にすることもできます。 必要に応じて、この機能を簡単に再有効化することができます。
 
 ## <a name="to-toggle-full-solution-analysis"></a>完全なソリューション分析を切り替える
 
