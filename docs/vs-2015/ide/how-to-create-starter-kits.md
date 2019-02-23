@@ -53,7 +53,7 @@ ms.locfileid: "54798947"
  [方法 : 既存のテンプレートを更新する](../ide/how-to-update-existing-templates.md)  
  エクスポートしたテンプレートの編集方法について説明します。 この手順を使用して .vstemplate ファイルを変更し、スタート キットをカスタマイズします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)   
  [テンプレートのカスタマイズ](../ide/customizing-project-and-item-templates.md)   
  [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
