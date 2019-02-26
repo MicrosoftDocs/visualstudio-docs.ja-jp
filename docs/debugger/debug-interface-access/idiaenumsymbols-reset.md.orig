@@ -31,13 +31,5 @@ HRESULT Reset ();
 ## <a name="return-value"></a>戻り値  
  `S_OK` を返します。  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
- [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
- [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
-=======
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
