@@ -134,12 +134,6 @@ Visual C++ for Cross-Platform Mobile Development](http://go.microsoft.com/fwlink
   
 4.  **[OK]** を選んで、カスタム ツール フォルダーの場所を保存します。  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [iOS を使用してビルドするためのツールのインストールおよび構成](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
  [Visual C++ クロスプラットフォーム モバイル](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)
