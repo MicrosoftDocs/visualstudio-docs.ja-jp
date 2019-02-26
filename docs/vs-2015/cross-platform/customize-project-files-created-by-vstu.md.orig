@@ -69,11 +69,5 @@ public class ProjectFileHook
 }  
 ```  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [例: ログのコールバック](../cross-platform/share-the-unity-log-callback-with-vstu.md)
