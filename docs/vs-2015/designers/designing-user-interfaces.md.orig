@@ -28,12 +28,6 @@ Visual Studio のさまざまなツールを使用して、アプリケーショ
 |Visual Studio での DirectX アプリケーションの開発。|[ゲームとアプリケーション用の 3D アセットの操作](../designers/working-with-3-d-assets-for-games-and-apps.md)|  
 |プログラムで使用可能な標準アイコン。|[Visual Studio Image Library](../designers/the-visual-studio-image-library.md)|  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [チュートリアル : 簡単なアプリケーションの作成](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)   
  [Visual Studio Image Library](../designers/the-visual-studio-image-library.md)
