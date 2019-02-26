@@ -31,13 +31,7 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 |WPF の詳細な説明...|[WPF の概要](../designers/introduction-to-wpf.md)<br /><br /> [XAML の概要 (WPF)](https://msdn.microsoft.com/library/ms752059\(v=vs.100\).aspx)<br /><br /> [コントロール](https://msdn.microsoft.com/library/bb613551\(v=vs.100\).aspx)<br /><br /> [データ バインディングの概要](https://msdn.microsoft.com/library/ms752347\(v=vs.100\).aspx)<br /><br /> [LINQ to XML による WPF のデータ バインディング](../designers/wpf-data-binding-with-linq-to-xml.md)|  
 |Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](https://msdn.microsoft.com/library/ms750559\(v=vs.100\).aspx)<br /><br /> [WPF と Windows フォームの相互運用性に関してサポートするシナリオ](https://msdn.microsoft.com/library/ms751797\(v=vs.100\).aspx)|  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [クラス ライブラリ (WPF)](https://msdn.microsoft.com/library/ms753307\(v=vs.100\).aspx)   
  [アプリケーション開発の概要](https://msdn.microsoft.com/library/bb613549\(v=vs.100\).aspx)   
  [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=187437)   
