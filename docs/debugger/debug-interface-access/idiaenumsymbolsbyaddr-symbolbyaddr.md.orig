@@ -45,12 +45,6 @@ HRESULT symbolByAddr ( 
 ## <a name="return-value"></a>戻り値  
  正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合は、シンボルが見つかりませんでした。 それ以外の場合はエラー コードを返します。  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
