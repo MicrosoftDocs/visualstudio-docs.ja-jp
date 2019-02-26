@@ -41,15 +41,7 @@ HRESULT symbolByRVA ( 
 ## <a name="return-value"></a>戻り値  
  正常に終了した場合は、`S_OK` を返します。 返します`S_FALSE`場合は、シンボルが見つかりませんでした。 それ以外の場合はエラー コードを返します。  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-[IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
- [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
-=======
 ## <a name="see-also"></a>関連項目  
  [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
