@@ -111,12 +111,6 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
   
 -   Visual Studio またはエミュレーター マネージャーで、[気に入った機能の報告] を使用して、問題を報告します。  
   
-<<<<<<< HEAD
-## <a name="see-also"></a>関連項目
-||||||| merged common ancestors
-## <a name="see-also"></a>参照  
-=======
 ## <a name="see-also"></a>関連項目  
->>>>>>> 7803ff7da52279cbbd19636476a2822d50ab013f
  [Visual Studio Emulator for Android のシステム要件](../cross-platform/system-requirements-for-the-visual-studio-emulator-for-android.md)   
  [Troubleshooting the Visual Studio Emulator for Android](../cross-platform/troubleshooting-the-visual-studio-emulator-for-android.md)
