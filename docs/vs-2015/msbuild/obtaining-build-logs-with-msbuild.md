@@ -77,7 +77,7 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
   
  MSBuild コマンドラインでは、**/logger** スイッチを使用してカスタム ロガーを指定します。 また、**/noconsolelogger** スイッチを使用して、既定のコンソール ロガーを無効にすることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  <xref:Microsoft.Build.Framework.LoggerVerbosity>   
  [ビルド ロガー](../msbuild/build-loggers.md)   
  [マルチプロセッサ環境でのログ](../msbuild/logging-in-a-multi-processor-environment.md)   
