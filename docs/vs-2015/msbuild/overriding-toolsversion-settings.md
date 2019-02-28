@@ -127,7 +127,7 @@ msbuild.exe someproj.proj /tv:12.0 /p:Configuration=Debug
   
     4.  それ以外の場合は、現在の `ToolsVersion` を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [マルチターゲット](../msbuild/msbuild-multitargeting-overview.md)   
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [ツール セット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)   
