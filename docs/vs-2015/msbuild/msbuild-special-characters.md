@@ -41,6 +41,6 @@ ms.locfileid: "54793101"
 |?|%3F|`Include` 属性と `Exclude` 属性のファイル名のワイルドカード文字|  
 |*|%2A|`Include` 属性と `Exclude` 属性のファイル名で使用するワイルドカード文字|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [詳細な概念](../msbuild/msbuild-advanced-concepts.md)   
  [項目](../msbuild/msbuild-items.md)
