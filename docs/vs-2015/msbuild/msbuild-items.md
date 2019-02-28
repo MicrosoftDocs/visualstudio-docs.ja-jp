@@ -355,7 +355,7 @@ Output:
 -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild の概念](../msbuild/msbuild-concepts.md)  
  [MSBuild](msbuild.md)   
  [方法: ビルドするファイルを選択する](../msbuild/how-to-select-the-files-to-build.md)   
