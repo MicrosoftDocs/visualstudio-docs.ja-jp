@@ -86,6 +86,6 @@ ms.locfileid: "54790285"
 </Target>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
  [タスク](../msbuild/msbuild-tasks.md)
