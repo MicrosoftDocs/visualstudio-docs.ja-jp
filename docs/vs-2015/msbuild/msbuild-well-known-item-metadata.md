@@ -50,7 +50,7 @@ ms.locfileid: "54790188"
 |%(CreatedTime)|アイテムが作成された時間からのタイムスタンプが含まれます。 次に例を示します。<br /><br /> `2004-06-25 09:26:45.8237425`|  
 |%(AccessedTime)|アイテムが最後にアクセスされた時間からのタイムスタンプが含まれます。<br /><br /> `2004-08-14 16:52:36.3168743`|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [項目](../msbuild/msbuild-items.md)   
  [バッチ](../msbuild/msbuild-batching.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)
