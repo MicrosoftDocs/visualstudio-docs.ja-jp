@@ -109,7 +109,7 @@ relativedir: sub1\sub2\sub3\
 extension: .xsd  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [方法: インクリメンタル ビルドを実行する](../msbuild/how-to-build-incrementally.md)
