@@ -192,6 +192,6 @@ File.WriteAllText(Path, content);
 </Project>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [タスク](../msbuild/msbuild-tasks.md)   
  [チュートリアル: インライン タスクの作成](../msbuild/walkthrough-creating-an-inline-task.md)
