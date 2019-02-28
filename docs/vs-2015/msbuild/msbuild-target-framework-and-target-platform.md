@@ -86,5 +86,5 @@ ms.locfileid: "54796612"
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)
