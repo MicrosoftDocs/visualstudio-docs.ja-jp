@@ -79,7 +79,7 @@ ms.locfileid: "54752835"
 ### <a name="parent-elements"></a>親要素  
  なし。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [方法 : 最初にビルドするターゲットを指定する](../msbuild/how-to-specify-which-target-to-build-first.md)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)   
  [プロジェクト ファイル スキーマ リファレンス](../msbuild/msbuild-project-file-schema-reference.md)   
