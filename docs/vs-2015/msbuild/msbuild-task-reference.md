@@ -226,7 +226,7 @@ ms.locfileid: "54834424"
  [XslTransformation タスク](../msbuild/xsltransformation-task.md)  
  XSLT *Extensible Stylesheet Language Transformation* (XSLT) またはコンパイル済み XSLT を使用して XML 入力を変換し、出力デバイスまたはファイルに出力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [タスクの作成](../msbuild/task-writing.md)   
  [タスク](../msbuild/msbuild-tasks.md)
