@@ -58,7 +58,7 @@ ms.locfileid: "54772587"
 |[UsingTask 要素 (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> TaskBody|AssemblyFile<br /><br /> AssemblyName<br /><br /> 条件<br /><br /> TaskFactory<br /><br /> TaskName|  
 |[When 要素 (MSBuild)](../msbuild/when-element-msbuild.md)|[保存]<br /><br /> ItemGroup<br /><br /> PropertyGroup|条件|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [タスク リファレンス](../msbuild/msbuild-task-reference.md)   
  [条件](../msbuild/msbuild-conditions.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)  
