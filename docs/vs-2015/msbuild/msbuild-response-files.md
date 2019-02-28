@@ -34,6 +34,6 @@ ms.locfileid: "54770724"
   
  自動応答ファイルは、プロジェクトをビルドする際に MSBuild.exe が自動的に使用する特別な .rsp ファイルです。 この MSBuild.rsp ファイルは、MSBuild.exe と同じディレクトリに配置する必要があります。それ以外の場合は検出されません。 このファイルを編集して、MSBuild.exe に既定のコマンド ライン スイッチを指定できます。 たとえば、プロジェクトをビルドする際に毎回同じロガーを使用する場合は、**/logger** スイッチを MSBuild.rsp に追加することで、プロジェクトがビルドされるたびに MSBuild.exe がそのロガーを使用するようになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [Command-Line Reference (コマンド ライン リファレンス)](../msbuild/msbuild-command-line-reference.md)
