@@ -35,6 +35,6 @@ ms.locfileid: "54796599"
 |[マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework のいくつかのバージョンのいずれかで実行するアプリケーションをコンパイルする方法について説明します。|  
 |[ベスト プラクティス](../msbuild/msbuild-best-practices.md)|MSBuild スクリプトを記述するためのベスト プラクティスを紹介します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild の概念](../msbuild/msbuild-concepts.md)   
  [MSBuild でのログ](../msbuild/logging-in-msbuild.md)
