@@ -43,7 +43,7 @@ ms.locfileid: "54758333"
 |()|内部に含まれる式が `true` と評価される場合に `true` と評価されるグループ化機構。|  
 |$if$ ( %expression% )、$else$、$endif$|指定した `%expression%` が、渡されるカスタム テンプレート パラメーターの文字列の値と一致するかどうかをチェックします。 `$if$` 条件が `true` と評価される場合、そのステートメントが実行されます。それ以外の場合、`$else$` 条件がチェックされます。 `$else$` 条件が `true` の場合、そのステートメントが実行されます。それ以外の場合、`$endif$` 条件は式の評価を終了します。<br /><br /> 使用の例については、「[Visual Studio Project/Item Template Parameter Logic (Visual Studio プロジェクト/項目テンプレート パラメーター ロジック)](http://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)   
  [条件構造](../msbuild/msbuild-conditional-constructs.md)   
  [チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)
