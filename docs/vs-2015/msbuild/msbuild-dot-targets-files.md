@@ -45,7 +45,7 @@ ms.locfileid: "54772287"
 |Microsoft.CSharp.targets|Visual C# プロジェクトの標準ビルド プロセスの手順を定義します。<br /><br /> 次のステートメントが含まれている Visual C# プロジェクト ファイル (.csproj) によってインポートされます: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
 |Microsoft.VisualBasic.targets|Visual Basic プロジェクトの標準ビルド プロセスの手順を定義します。<br /><br /> 次のステートメントが含まれている Visual Basic プロジェクト ファイル (.vbproj) によってインポートされます: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [Import 要素 (MSBuild)](../msbuild/import-element-msbuild.md)   
  [MSBuild リファレンス](../msbuild/msbuild-reference.md)  
  [MSBuild](msbuild.md)
