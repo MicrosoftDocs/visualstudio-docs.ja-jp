@@ -116,6 +116,6 @@ MSBuild は、タスク、ターゲット、およびツールのツールセッ
   
   サブツールセットは .NET Framework 4.5 で導入されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)   
  [マルチ ターゲット](../msbuild/msbuild-multitargeting-overview.md)
