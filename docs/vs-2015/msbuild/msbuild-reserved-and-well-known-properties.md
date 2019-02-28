@@ -60,5 +60,5 @@ ms.locfileid: "54804177"
 |`MSBuildToolsPath`|[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] の値に関連付けられている `MSBuildToolsVersion` のバージョンのインストール パス。<br /><br /> パスに最後の円記号を含めません。<br /><br /> このプロパティはオーバーライドできません。|予約されています。|  
 |`MSBuildToolsVersion`|プロジェクトのビルドに使用する [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ツールセットのバージョン。<br /><br /> メモ：[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ツールセットは、アプリケーションのビルドで使用するタスク、ターゲット、およびツールで構成されます。 ツールには、csc.exe や vbc.exe などのコンパイラが含まれます。 詳細については、「[MSBuild ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」をご覧ください。|予約されています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目
  [MSBuild リファレンス](../msbuild/msbuild-reference.md) [MSBuild プロパティ](msbuild-properties1.md)
