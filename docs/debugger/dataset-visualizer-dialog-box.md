@@ -36,7 +36,7 @@ DataSet ビジュアライザーを使用すると、DataSet、DataTable、DataV
 ## <a name="uielement-list"></a>UIElement の一覧
  テーブルでは、このドロップダウン リスト ボックスを使用して、視覚化するデータセット内のテーブルを選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [デバッガーのセキュリティ](../debugger/debugger-security.md)
 - [カスタム ビジュアライザーを作成する](../debugger/create-custom-visualizers-of-data.md)
