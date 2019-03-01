@@ -48,5 +48,5 @@ ms.locfileid: "56695584"
 
  [デバッガーの設定と準備](../debugger/debugger-settings-and-preparation.md)デバッガーに関連するプロパティの設定でプログラムをデバッグするために必要な準備について説明します、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]デバッガー。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [デバッガーのセキュリティ](../debugger/debugger-security.md)
