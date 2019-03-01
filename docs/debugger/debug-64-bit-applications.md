@@ -52,7 +52,7 @@ ms.locfileid: "56599169"
 
 -   Visual Studio でハングまたはパフォーマンスに関する問題が発生しています。 問題が定期的に発生する場合は、Visual Studio (devenv.exe) とワーカー プロセス (msvsmon.exe) のダンプを収集して、Microsoft に送信できます。 問題の報告については、「 [How to Report a Problem with Visual Studio](../ide/How-to-Report-a-Problem-with-Visual-Studio-2017.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [64 ビット アプリケーション](https://docs.microsoft.com/dotnet/framework/64-bit-apps)
 - [64 ビット用プログラムの構成](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
