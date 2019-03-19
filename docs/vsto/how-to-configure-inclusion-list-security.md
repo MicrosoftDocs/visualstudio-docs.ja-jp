@@ -64,7 +64,7 @@ ms.locfileid: "56596478"
 
 ### <a name="to-enable-the-inclusion-list-programmatically"></a>プログラムの信頼のリストを有効にするには
 
-1.  Visual Basic または Visual c# コンソール アプリケーションを作成します。
+1.  Visual Basic または Visual C# コンソール アプリケーションを作成します。
 
 2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。
 
@@ -123,7 +123,7 @@ ms.locfileid: "56596478"
 
 ### <a name="to-restrict-the-inclusion-list-programmatically"></a>プログラムで、信頼のリストを制限するには
 
-1.  Visual Basic または Visual c# コンソール アプリケーションを作成します。
+1.  Visual Basic または Visual C# コンソール アプリケーションを作成します。
 
 2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。
 
@@ -178,7 +178,7 @@ ms.locfileid: "56596478"
 
 ### <a name="to-disable-the-inclusion-list-programmatically"></a>信頼のリストをプログラムで無効にするには
 
-1.  Visual Basic または Visual c# コンソール アプリケーションを作成します。
+1.  Visual Basic または Visual C# コンソール アプリケーションを作成します。
 
 2.  開く、 *Program.vb*または*Program.cs*を編集するためのファイルを開き、次のコードを追加します。
 
