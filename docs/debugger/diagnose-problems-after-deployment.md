@@ -185,7 +185,7 @@ Visual Studio 2017 およびそれ以降のバージョンには *BuildInfo.conf
 
      特定のマッピングを備えたワークスペースや、コンピューターとは名前が異なるワークスペースを作成するには、 **[管理]** を選択します。
 
-     [Q: 選択したワークスペースが適切でないというメッセージが Vidual Studio によって表示されるのはなぜですか。](#IneligibleWorkspace)
+     [Q: 選択したワークスペースが適切でないというメッセージが Visual Studio によって表示されるのはなぜですか。](#IneligibleWorkspace)
 
      [Q: チーム コレクションまたは別のコレクションを選択するまで続行できないのはなぜですか。](#ChooseTeamProject)
 
@@ -356,7 +356,7 @@ Visual Studio 2017 およびそれ以降のバージョンには *BuildInfo.conf
     </Build>
     ```
 
-#### <a name="IneligibleWorkspace"></a> Q: 選択したワークスペースが適切でないというメッセージが Vidual Studio によって表示されるのはなぜですか。
+#### <a name="IneligibleWorkspace"></a> Q: 選択したワークスペースが適切でないというメッセージが Visual Studio によって表示されるのはなぜですか。
  **A:** 選択したワークスペースのソース コントロール フォルダーとローカル フォルダーの間にマッピングがありません。 このワークスペースのマッピングを作成するには、 **[管理]** を選択します。 それ以外の場合は、既に割り当てられているワークスペースを選択するか、新しいワークスペースを作成します。
 
  ![マップされたワークスペースがないソース管理から開く](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")
