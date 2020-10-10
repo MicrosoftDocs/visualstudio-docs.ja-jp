@@ -1,5 +1,5 @@
 ---
-title: Linix で .NET Core をリモート デバッグする | Microsoft Docs
+title: Linux で .NET Core をリモート デバッグする | Microsoft Docs
 ms.date: 02/26/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/29/2020
 ms.locfileid: "78200867"
 ---
-# <a name="remote-debug-net-core-on-linux-using-ssh"></a>SSH を使用して Linix で .NET Core をリモート デバッグする
+# <a name="remote-debug-net-core-on-linux-using-ssh"></a>SSH を使用して Linux で .NET Core をリモート デバッグする
 
 Visual Studio 2017 以降では、Linux で実行されている .NET Core プロセスに SSH 経由でアタッチできます。 この記事では、デバッグのセットアップ方法とデバッグ方法について説明します。
 
