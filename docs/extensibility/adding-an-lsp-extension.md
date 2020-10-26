@@ -37,7 +37,7 @@ Visual Studio での LSP とそのサポートの目的は、Visual Studio 製�
 
 プロトコル自体の詳細については、 [こちら](https://github.com/Microsoft/language-server-protocol)のドキュメントを参照してください。
 
-サンプル言語サーバーを作成する方法、または既存の言語サーバーを Visual Studio Code に統合する方法の詳細については、 [こちら](https://code.visualstudio.com/docs/extensions/example-language-server)のドキュメントを参照してください。
+サンプル言語サーバーを作成する方法、または既存の言語サーバーを Visual Studio Code に統合する方法の詳細については、[こちら](https://code.visualstudio.com/docs/extensions/example-language-server)のドキュメントを参照してください。
 
 ## <a name="language-server-protocol-supported-features"></a>言語サーバープロトコルでサポートされる機能
 
