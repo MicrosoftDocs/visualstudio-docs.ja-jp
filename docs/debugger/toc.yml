@@ -286,7 +286,7 @@
           href: remote-debugging-csharp.md
         - name: C++ Project プロジェクトのリモート デバッグ
           href: remote-debugging-cpp.md
-        - name: Linix での .NET Core のリモート デバッグ
+        - name: Linux での .NET Core のリモート デバッグ
           href: remote-debugging-dotnet-core-linux-with-ssh.md
         - name: リモート デバッガーのポートの割り当て
           href: remote-debugger-port-assignments.md
