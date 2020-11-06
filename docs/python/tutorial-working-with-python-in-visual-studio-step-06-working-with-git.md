@@ -22,13 +22,13 @@ ms.locfileid: "72289721"
 
 **前の手順: [パッケージのインストールと、Python 環境の管理](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure Repos などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリのクローン、変更のコミット、分岐の管理が含まれます。
+Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure Repos などのサービス上のリモート リポジトリを直接統合できます。 この統合には、リポジトリのクローン、変更のコミット、ブランチの管理が含まれます。
 
 この記事では、既存のプロジェクト向けのローカルの Git リポジトリを作成することの概要について説明し、Visual Studio の Git に関連するいくつかの機能を理解できるようにします。
 
 1. [前の手順](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)のプロジェクトなどを Visual Studio で開き、ソリューションを右クリックして、 **[Add Solution to Source Control]\(ソリューションをソース管理に追加\)** を選択します。 Visual Studio によって、プロジェクト コードを含むローカルの Git リポジトリが作成されます。
 
-1. プロジェクトが Git リポジトリで管理されていることを Visual Studio が検出すると、Git に関連するコントロールが Visual Studio ウィンドウの右下に表示されます。 コントロールには、保留中のコミット、変更、リポジトリの名前と分岐が表示されます。 コントロール上にカーソルを置き、追加情報を表します。
+1. プロジェクトが Git リポジトリで管理されていることを Visual Studio が検出すると、Git に関連するコントロールが Visual Studio ウィンドウの右下に表示されます。 コントロールには、保留中のコミット、変更、リポジトリの名前とブランチが表示されます。 コントロール上にカーソルを置き、追加情報を表します。
 
     ![Visual Studio ウィンドウの Git コントロールの上にカーソルを置くと表示される追加情報](media/working-with-git-01.png)
 
@@ -44,7 +44,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure
 
     ![ファイルに対する変更の差分ビュー](media/working-with-git-05.png)
 
-1. **[分岐]** (または分岐名の Git コントロール) を選択し、分岐を調査して、マージとリベース操作を実行します。
+1. **[分岐]** (またはブランチ名の Git コントロール) を選択し、ブランチを調査して、マージとリベース操作を実行します。
 
     ![分岐を示す Visual Studio のチーム エクスプローラー](media/working-with-git-04.png)
 
@@ -56,7 +56,7 @@ Visual Studio には、ローカルの Git リポジトリと、GitHub や Azure
 
 リモート Git リポジトリからプロジェクトを作成する方法の短いチュートリアルについては、「[クイック スタート: Visual Studio で Python コードのリポジトリを複製する](quickstart-03-python-in-visual-studio-project-from-repository.md)」を参照してください。
 
-マージの競合、pull request があるコードのレビュー、リベース、分岐間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart)に関する記事を参照してください。
+マージの競合、プルリクエストがあるコードのレビュー、リベース、ブランチ間のチェリー ピック変更などの包括的なチュートリアルについては、[Git と Azure Repos の使用開始](/azure/devops/repos/git/gitquickstart)に関する記事を参照してください。
 
 ## <a name="tutorial-review"></a>チュートリアルのレビュー
 
