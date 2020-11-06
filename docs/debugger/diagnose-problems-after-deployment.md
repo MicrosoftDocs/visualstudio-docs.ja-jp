@@ -171,7 +171,7 @@ Visual Studio 2017 およびそれ以降のバージョンには *BuildInfo.conf
 
      Visual Studio では、対応するソリューションまたはプロジェクトが開くと、保留中のすべての変更が自動的にシェルブされます。 このシェルブセットの詳細情報を取得するには、 **[出力]** ウィンドウまたは **チーム エクスプローラー**を確認します。
 
-     変更する前に、適切なソースがあることを確認してください。 分岐を使用する場合、Visual Studio が対応するソースを検出した分岐 (リリース ブランチなど) とは異なる分岐で作業する可能性があります。
+     変更する前に、適切なソースがあることを確認してください。 ブランチを使用する場合、Visual Studio が対応するソースを検出したブランチ (リリース ブランチなど) とは異なるブランチで作業する可能性があります。
 
      ![IntelliTrace ログからソリューションを開く](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")
 
@@ -179,7 +179,7 @@ Visual Studio 2017 およびそれ以降のバージョンには *BuildInfo.conf
 
      ![ソース管理から、マップされたワークスペースを開く](../debugger/media/ffr_openprojectfromsourcecontrol_mapped.png "FFR_OpenProjectFromSourceControl_Mapped")
 
-     それ以外の場合は、別のワークスペースを選択するか、新しいワークスペースを作成します。 Visual Studio では、分岐全体がこのワークスペースに割り当てられます。
+     それ以外の場合は、別のワークスペースを選択するか、新しいワークスペースを作成します。 Visual Studio では、ブランチ全体がこのワークスペースに割り当てられます。
 
      ![ソース管理から開く - 新しいワークスペースの作成](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")
 
