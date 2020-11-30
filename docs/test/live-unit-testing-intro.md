@@ -32,7 +32,7 @@ Live Unit Testing について詳細を学習するには:
 
 - 入門用のチュートリアルを試してください: [Live Unit Testing の概要](live-unit-testing-start.md)。
 
-- 詳細なドキュメントをお読みください: [Visual Studio Enterprise エディションで Live Unit Testing を使用する](live-unit-testing.md)。
+- 詳細なドキュメントをお読みください: [Visual Studio Enterprise エディションで Live Unit Testing を使用する方法](live-unit-testing.md)。
 
 - Live Unit Testing の新しい機能およびヒントとテクニックについては、「[Live Unit Testing についてよく寄せられる質問](live-unit-testing-faq.md)」を参照してください。
 
