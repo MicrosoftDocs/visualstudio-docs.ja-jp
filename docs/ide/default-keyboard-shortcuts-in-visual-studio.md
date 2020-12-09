@@ -114,11 +114,11 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Debug.IntelliTraceEvents|**Ctrl + Alt + Y、F**|
 |Debug.JavaScriptConsole|**Ctrl + Alt + V、C**|
 |Debug.Locals|**Ctrl + Alt + V、L**|
-|Debug.LocationToolbar.ProcessCombo|**Ctrl + 数字 5**|
-|Debug.LocationToolbar.StackFrameCombo|**Ctrl + 数字 7**|
-|Debug.LocationToolbar.ThreadCombo|**Ctrl + 数字 6**|
-|Debug.LocationToolbar.ToggleCurrentThreadFlaggedState|**Ctrl + 数字 8**|
-|Debug.LocationToolbar.ToggleFlaggedThreads|**Ctrl + 数字 9**|
+|Debug.LocationToolbar.ProcessCombo|**Ctrl + 5**|
+|Debug.LocationToolbar.StackFrameCombo|**Ctrl + 7**|
+|Debug.LocationToolbar.ThreadCombo|**Ctrl + 6**|
+|Debug.LocationToolbar.ToggleCurrentThreadFlaggedState|**Ctrl + 8**|
+|Debug.LocationToolbar.ToggleFlaggedThreads|**Ctrl + 9**|
 |Debug.Memory1|**Ctrl + Alt + M、1**|
 |Debug.Memory2|**Ctrl + Alt + M、2**|
 |Debug.Memory3|**Ctrl + Alt + M、3**|
@@ -181,7 +181,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.Copy|**Ctrl + C**<br /><br /> or<br /><br /> **Ctrl + Ins**|
 |Edit.Cut|**Ctrl + X**<br /><br /> or<br /><br /> **Shift + Delete**|
 |Edit.CycleClipboardRing|**Ctrl + Shift + V**<br /><br /> or<br /><br /> **Ctrl + Shift + Ins**|
-|Edit.Delete|**削除**|
+|Edit.Delete|**Delete**|
 |Edit.Duplicate|**Ctrl + D**|
 |Edit.Find|**Ctrl + F**|
 |Edit.FindAllReferences|**Shift+F12**|
@@ -381,8 +381,8 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |View.ArchitectureExplorer|**Ctrl + \\、Ctrl + R**|
 |View.Backward|**Alt + 左矢印** (テキスト エディターでの View.NavigateBackward の機能とは異なる)|
 |View.BookmarkWindow|**Ctrl + K、Ctrl + W**|
-|View.BrowseNext|**Ctrl + Shift + 数字 1**|
-|View.BrowsePrevious|**Ctrl + Shift + 数字 2**|
+|View.BrowseNext|**Ctrl + Shift + 1**|
+|View.BrowsePrevious|**Ctrl + Shift + 2**|
 |View.CallHierarchy|**Ctrl + Alt + K**|
 |View.ClassView|**Ctrl + Shift + C**|
 |View.ClassViewGoToSearchCombo|**Ctrl + K、Ctrl + V**|
@@ -473,8 +473,8 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Up5|**Alt + PgUp**|
 |OtherContextMenus.MicrosoftDataEntityDesignContext.Refactor.Rename|**Ctrl + R、R**|
 |OtherContextMenus.MicrosoftDataEntityDesignContext.RemovefromDiagram|**Shift + Del**|
-|View.EntityDataModelBrowser|**Ctrl + 数字 1**|
-|View.EntityDataModelMappingDetails|**Ctrl + 数字 2**|
+|View.EntityDataModelBrowser|**Ctrl + 1**|
+|View.EntityDataModelMappingDetails|**Ctrl + 2**|
 
 ## <a name="class-diagram"></a>クラス ダイアグラム
 
@@ -485,7 +485,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.Delete|**Ctrl + Del**|
 |Edit.ExpandCollapseBaseTypeList|**Shift + Alt + B**|
 |Edit.NavigateToLollipop|**Shift + Alt + L**|
-|Edit.RemovefromDiagram|**削除**|
+|Edit.RemovefromDiagram|**Delete**|
 |View.ViewCode|**Enter**|
 
 ## <a name="coded-ui-test-editor"></a>コード化された UI テスト エディター
@@ -545,7 +545,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies|**I**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies|**O**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.NewComment|**Ctrl + Shift + K**<br /><br /> or<br /><br /> **Ctrl + E、C**|
-|ArchitectureContextMenus.DirectedGraphContextMenu.Remove|**削除**|
+|ArchitectureContextMenus.DirectedGraphContextMenu.Remove|**Delete**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|**F2**|
 
 ## <a name="graphics-diagnostics"></a>グラフィックス診断
@@ -612,15 +612,15 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |Edit.EditCell|**F2**|
-|Edit.Remove|**削除**|
+|Edit.Remove|**Delete**|
 |Edit.RemoveRow|**Ctrl + Delete**|
 |Edit.SelectionCancel|**Escape**|
-|Resources.Audio|**Ctrl + 数字 4**|
-|Resources.Files|**Ctrl + 数字 5**|
-|Resources.Icons|**Ctrl + 数字 3**|
-|Resources.Images|**Ctrl + 数字 2**|
-|Resources.Other|**Ctrl + 数字 6**|
-|Resources.Strings|**Ctrl + 数字 1**|
+|Resources.Audio|**Ctrl + 4**|
+|Resources.Files|**Ctrl + 5**|
+|Resources.Icons|**Ctrl + 3**|
+|Resources.Images|**Ctrl + 2**|
+|Resources.Other|**Ctrl + 6**|
+|Resources.Strings|**Ctrl + 1**|
 
 ## <a name="merge-editor-window"></a>マージ エディター ウィンドウ
 
@@ -699,13 +699,13 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |QueryDesigner.CancelRetrievingData|**Ctrl + T**|
-|QueryDesigner.Criteria|**Ctrl + 数字 2**|
-|QueryDesigner.Diagram|**Ctrl + 数字 1**|
+|QueryDesigner.Criteria|**Ctrl + 2**|
+|QueryDesigner.Diagram|**Ctrl + 1**|
 |QueryDesigner.ExecuteSQL|**Ctrl + R**|
 |QueryDesigner.GoToRow|**Ctrl + G**|
 |QueryDesigner.JoinMode|**Ctrl + Shift + J**|
-|QueryDesigner.Results|**Ctrl + 数字 4**|
-|QueryDesigner.SQL|**Ctrl + 数字 3**|
+|QueryDesigner.Results|**Ctrl + 4**|
+|QueryDesigner.SQL|**Ctrl + 3**|
 
 ## <a name="query-results"></a>クエリ結果
 
@@ -767,7 +767,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 
 |コマンド|ショートカット キー|
 |-------------| - |
-|Edit.Delete|**削除**|
+|Edit.Delete|**Delete**|
 |File.Rename|**F2**|
 |TeamFoundationContextMenus.Commands.GoToTeamExplorerNavigation|**Alt + Home**|
 |TeamFoundationContextMenus.Commands.GoToTeamExplorerNextSectionContent|**Alt + ↓**|
@@ -1031,19 +1031,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |QueryDesigner.CancelRetrievingData|**Ctrl + T**|
-|QueryDesigner.Criteria|**Ctrl + 数字 2**|
-|QueryDesigner.Diagram|**Ctrl + 数字 1**|
+|QueryDesigner.Criteria|**Ctrl + 2**|
+|QueryDesigner.Diagram|**Ctrl + 1**|
 |QueryDesigner.ExecuteSQL|**Ctrl + R**|
 |QueryDesigner.GoToRow|**Ctrl + G**|
 |QueryDesigner.JoinMode|**Ctrl + Shift + J**|
-|QueryDesigner.Results|**Ctrl + 数字 4**|
-|QueryDesigner.SQL|**Ctrl + 数字 3**|
+|QueryDesigner.Results|**Ctrl + 4**|
+|QueryDesigner.SQL|**Ctrl + 3**|
 
 ## <a name="visual-studio"></a>Visual Studio
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
-|OtherContextMenus.ORDesignerContext.HideMethodsPane|**Ctrl + 数字 1**|
+|OtherContextMenus.ORDesignerContext.HideMethodsPane|**Ctrl + 1**|
 
 ## <a name="windows-forms-designer"></a>Windows フォーム デザイナー
 
@@ -1171,10 +1171,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |GraphView.LefttoRight|**Alt + →**|
 |GraphView.RighttoLeft|**Alt + ←**|
 |GraphView.ToptoBottom|**Alt + ↓**|
-|OtherContextMenus.GraphView.RemovefromWorkspace|**削除**|
-|XsdDesigner.ShowContentModelView|**Ctrl + 数字 2**|
-|XsdDesigner.ShowGraphView|**Ctrl + 数字 3**|
-|XsdDesigner.ShowStartView|**Ctrl + 数字 1**|
+|OtherContextMenus.GraphView.RemovefromWorkspace|**Delete**|
+|XsdDesigner.ShowContentModelView|**Ctrl + 2**|
+|XsdDesigner.ShowGraphView|**Ctrl + 3**|
+|XsdDesigner.ShowStartView|**Ctrl + 1**|
 
 ## <a name="see-also"></a>関連項目
 
