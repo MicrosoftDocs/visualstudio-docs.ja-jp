@@ -25,13 +25,13 @@ ms.locfileid: "88801673"
 > [!Note]
 > Visual Studio 2017 以前では、Python コードを実行するには Visual Studio プロジェクトを作成する必要がありますが、組み込みのプロジェクト テンプレートを使用すれば簡単に行うことができます。 例については、「[クイック スタート:既存のコードから Python プロジェクトを作成する](quickstart-01-python-in-visual-studio-project-from-existing-code.md)」をご覧ください
 
-1. このチュートリアルでは、Python コードが含まれるフォルダーであれば好きなものを使用できます。 以下の例を進めるには、`git clone https://github.com/gregmalcolm/python_koans` コマンドを使用して、gregmalcolm/python_koans GitHub リポジトリをお使いのコンピューターの適当なフォルダーに複製します。
+1. このチュートリアルでは、Python コードが含まれるフォルダーであれば好きなものを使用できます。 以下の例を進めるには、`git clone https://github.com/gregmalcolm/python_koans` コマンドを使用して、gregmalcolm/python_koans GitHub リポジトリをお使いのコンピューターの適当なフォルダーにクローンします。
 
 1. Visual Studio 2019 を起動し、スタート ウィンドウで **[作業の開始]** 列の下部にある **[開く]** を選択します。 または、Visual Studio を既に実行している場合は、代わりに **[ファイル]**  >  **[開く]**  >  **[フォルダー]** コマンドを選択します。
 
     ![Visual Studio のスタートアップ画面](media/quickstart-open-folder/01-open-local-folder.png)
 
-1. Python コードが格納されているフォルダーに移動し、 **[フォルダーの選択]** を選択します。 python_koans コードを使用している場合は、複製フォルダー内の `python3` フォルダーを選択します。
+1. Python コードが格納されているフォルダーに移動し、 **[フォルダーの選択]** を選択します。 python_koans コードを使用している場合は、クローンしたフォルダー内の `python3` フォルダーを選択します。
 
     ![フォルダーを開くコマンドからの [フォルダーの選択] ダイアログ](media/quickstart-open-folder/02-select-folder.png)
 
