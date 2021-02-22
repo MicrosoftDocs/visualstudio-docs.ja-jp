@@ -55,7 +55,7 @@ Visual Studio には 3 つのエディションがあります:という 3 つ�
 
 Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2019 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。 この記事では、Windows バージョンの Visual Studio 2019 について説明します。
 
-Visual Studio 2019 には 3 つのエディションがあります:という 3 つのエディションの Visual Studio 2017 があります。 各エディションでサポートされている機能については、[Visual Studio エディションの比較](https://visualstudio.microsoft.com/vs/compare/)に関するページを参照してください。
+Visual Studio 2019には、コミュニティ、プロフェッショナル、エンタープライズの3つのエディションがあります。 各エディションでサポートされている機能については、[Visual Studio エディションの比較](https://visualstudio.microsoft.com/vs/compare/)に関するページを参照してください。
 
 ::: moniker-end
 
