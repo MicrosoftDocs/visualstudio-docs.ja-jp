@@ -39,7 +39,7 @@ ms.locfileid: "99903969"
 Visual Studio には、すぐに使用できる強力な JavaScript 編集機能があります。 TypeScript ベースの言語サービスを活用して、Visual Studio で高度な IntelliSense が提供されます。また、最新の JavaScript 機能がサポートされ、定義へ移動、リファクタリングなどの生産性向上機能が改善されています。
 
 > [!NOTE]
-> Visual Studio 2017 以降では、JavaScript Language Service で言語サービスに ("Salsa" と呼ばれる) 新しいエンジンが使用されています。 この記事でも詳しく説明しますが、この[ブログ記事](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/)も参照してください。 新しい編集機能のほとんどは Visual Studio Code にも適用されます。 詳細については、[VS コードのドキュメント](https://code.visualstudio.com/docs/languages/javascript)を参照してください。
+> Visual Studio 2017 以降では、JavaScript Language Service で言語サービスに ("Salsa" と呼ばれる) 新しいエンジンが使用されています。 この記事でも詳しく説明しますが、この[ブログ記事](https://devblogs.microsoft.com/visualstudio/previewing-salsa-javascript-language-service-visual-studio-15/)も参照してください。 新しい編集機能のほとんどは Visual Studio Code にも適用されます。 詳細については、[VS Code docs](https://code.visualstudio.com/docs/languages/javascript) を参照してください。
 
 Visual Studio の一般的な IntelliSense の機能の詳細については、「[IntelliSense の使用方法](../ide/using-intellisense.md)」を参照してください。
 
