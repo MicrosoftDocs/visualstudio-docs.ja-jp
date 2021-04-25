@@ -905,15 +905,8 @@
       href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
 - name: デバッグ >>
   href: debugger/index.yml
-- name: バージョン コントロール
-  expanded: true
-  items:
-    - name: Visual Studio での新しい Git エクスペリエンス
-      href: ide/git-with-visual-studio.md
-    - name: Visual Studio がソース管理を簡単にする方法
-      href: ide/git-visual-studio-source-control.md
-    - name: Git とチーム エクスプローラーを並べて比較する
-      href: ide/git-team-explorer-feature-comparison.md
+- name: バージョン コントロール >>
+  href: version-control/index.yml
 - name: テスト >>
   displayName: Unit testing
   href: test/index.yml
@@ -991,7 +984,7 @@
       href: ide/reference/accessibility-tips-and-tricks.md
     - name: マイクロソフトのアクセシビリティ製品とサービス
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
-- name: リファレンス
+- name: 関連項目
   items:
     - name: キーボード ショートカット
       items:
