@@ -6,14 +6,14 @@ ms.assetid: 00b82d16-6a80-42d1-8b71-e12047c6b50c
 ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 04/02/2021
+ms.date: 04/19/2021
 ms.faqid: q4_2
-ms.openlocfilehash: 8d8b516a7572688314d043dc7ca052d30d26dcf4
-ms.sourcegitcommit: 4bf7d82eb3a837ad5d1ae5c110039cbf74258f18
+ms.openlocfilehash: c53b866cab32270cfa10b6a8632af776ff9afd92
+ms.sourcegitcommit: 6b74cb197e59c23492722935457c7ec278cadb57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106273397"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107736999"
 ---
 ## <a name="how-do-i-renew-visual-studio-subscriptions"></a>Visual Studio サブスクリプションを更新するにはどうすればよいですか? 
 
@@ -34,7 +34,7 @@ Visual Studio サブスクリプションはいくつかの方法で取得でき
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 > [!Note]
-> 更新料金を適用するには、有効期限の 30 日以内にサブスクリプションを更新する必要があります。
+> 更新料金を適用するには、有効期限の 30 日以内にサブスクリプションを更新する必要があります。 Microsoft Store から更新する場合は、必ず受け取った 5x5 のキーを使用して更新をアクティブにしてください。そうしないと、サブスクリプションの終了日が更新されないか、更新がされません。
 
 ### <a name="how-to-renew-cloud-subscriptions"></a>クラウド サブスクリプションを更新する方法
 クラウド サブスクリプションは、[Visual Studio Marketplace](https://marketplace.visualstudio.com/) から購入するものです。  月間および年間の両方のクラウド サブスクリプションは、お客様がキャンセルするまで更新されるため、それらを更新するために必要な操作はありません。

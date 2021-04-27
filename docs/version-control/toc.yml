@@ -1,0 +1,20 @@
+- name: バージョン コントロールに関するドキュメント
+  href: index.yml
+- name: 概要
+  items:
+    - name: Visual Studio での Git エクスペリエンス
+      href: git-with-visual-studio.md
+    - name: Visual Studio でソース管理を簡単にする方法
+      href: git-visual-studio-source-control.md
+- name: はじめに
+  items:
+    - name: Visual Studio での Git と GitHub の概要
+      href: /learn/modules/visual-studio-github-push/
+    - name: Git とチーム エクスプローラーを並べて比較する
+      href: git-team-explorer-feature-comparison.md
+- name: 新機能
+  items:
+    - name: Visual Studio での Git による生産性の向上 (プレビュー)
+      href: 'https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/'
+    - name: Visual Studio 2019 リリース ノート
+      href: /visualstudio/releases/2019/release-notes/

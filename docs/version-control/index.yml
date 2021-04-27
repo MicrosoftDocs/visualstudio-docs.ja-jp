@@ -1,0 +1,48 @@
+### YamlMime:Landing
+title: Visual Studio のバージョン コントロールに関するドキュメント
+summary: Git や GitHub などのバージョン コントロール テクノロジを使用して、Visual Studio 2019 内からコードを共有します。
+metadata:
+  title: Visual Studio でのバージョン コントロール
+  description: Git や GitHub などのバージョン コントロール テクノロジは、Visual Studio 内から直接入手できます。 これらのコードを使用して、コードベースを離れることなくコードを共有および管理できます。
+  ms.topic: landing-page
+  ms.date: 04/20/2021
+  author: TerryGLee
+  ms.author: tglee
+  manager: jmartens
+  ms.prod: visual-studio-windows
+  ms.technology: vs-general-ide
+  ms.openlocfilehash: a377d39b0d8184dc7aca038238f2dacb0345627d
+  ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/23/2021
+  ms.locfileid: "107917643"
+landingContent:
+- title: 概要
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio での Git エクスペリエンス
+      url: git-with-visual-studio.md
+  - linkListType: concept
+    links:
+    - text: Visual Studio でソース管理を簡単にする方法
+      url: git-visual-studio-source-control.md
+- title: はじめに
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Visual Studio での Git と GitHub の概要
+      url: /learn/modules/visual-studio-github-push/
+  - linkListType: how-to-guide
+    links:
+    - text: Git とチーム エクスプローラーを並べて比較する
+      url: git-team-explorer-feature-comparison.md
+- title: 新機能
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio での Git による生産性の向上 (プレビュー)
+      url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
+    - text: Visual Studio 2019 リリース ノート
+      url: /visualstudio/releases/2019/release-notes/

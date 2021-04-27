@@ -6,13 +6,13 @@ ms.topic: include
 ms.assetid: c8dd39de-bf7f-40a2-a203-f2be21b87f5c
 author: CaityBuschlen
 ms.author: cabuschl
-ms.date: 01/27/2021
-ms.openlocfilehash: a2dca00b1a7ebea80a883825783785c84c2352cc
-ms.sourcegitcommit: cfeffe2364275a347db0ba2dce36d8e80001c081
+ms.date: 04/20/2021
+ms.openlocfilehash: c18d855ad79bc3463e310a9fcf1c3a17ea5c6fbc
+ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99104438"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107800760"
 ---
 ## <a name="how-do-i-purchase-visual-studio-subscriptions"></a>Visual Studio サブスクリプションを購入するにはどうすればよいですか?
 Visual Studio サブスクリプションは、 [ボリューム ライセンス](https://www.microsoft.com/licensing/default)、 [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions)、[Microsoft Store](https://www.microsoft.com/store/collections/visualstudio) など、さまざまなチャネルを通じて購入できます。  
@@ -26,6 +26,8 @@ Microsoft Store を介して入手できる小売版の Visual Studio サブス�
 - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
 これらの各サブスクリプションには、初回購入を行ったり、既存のサブスクリプションを更新したりするオプションが用意されています。 大幅な割引を反映した更新料金は、既存のサブスクリプションでのみ利用できます。 割引更新料金でサブスクリプションを更新する資格を得るには、有効期限が切れる前にサブスクリプションを更新する必要があります。 
+
+サブスクリプションを使用せずに Visual Studio の 1 回限りの購入を行う場合、またはサブスクリプションに含まれているベネフィットについては、[Visual Studio Professional 2019](https://www.microsoft.com/p/visual-studio-professional-2019/dg7gmgf0f6q1?cid=msft_web_collection&activetab=pivot%3aoverviewtab) の Microsoft Store にアクセスしてください。 
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Marketplace 
 月単位のサブスクリプションでは、長期契約なしで Visual Studio と Azure DevOps をレンタルすることができます。 請求は Microsoft Azure サブスクリプションを通じて処理されます。 まだ Azure サブスクリプションをお持ちでなくても、最初に購入を行う際に、無料で設定してこれを行うことができます。  
