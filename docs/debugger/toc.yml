@@ -688,6 +688,8 @@
       items:
         - name: ダンプ ファイルの使用
           href: using-dump-files.md
+        - name: マネージド メモリ ダンプをデバッグする
+          href: how-to-debug-managed-memory-dump.md
         - name: ダンプ ファイルの概要機能拡張 API
           href: dump-file-summary-extensibility-api.md
     - name: デバッガーのセキュリティ
