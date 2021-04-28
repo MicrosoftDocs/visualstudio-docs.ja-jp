@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: e6e7dfd0d677412ded44459c7850fa9028142c42
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: 863ba91f88ee953ce7d62179ff3b50aca5500c83
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031581"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913060"
 ---
 # <a name="visual-studio-docs-whats-new-for-march-2021"></a>Visual Studio のドキュメント:2021 年 3 月の最新情報
 
@@ -85,9 +85,9 @@ ms.locfileid: "107031581"
 ## <a name="ide"></a>IDE
 
 **新しい記事**
-- [Visual Studio でソース管理を簡単にする方法](./git-visual-studio-source-control.md) - 新しい Visual Studio ソース管理トピックの作成
+- [Visual Studio でソース管理を簡単にする方法](../version-control/git-visual-studio-source-control.md) - 新しい Visual Studio ソース管理トピックの作成
 - [開発者コマンド プロンプトと開発者用 PowerShell](./reference/command-prompt-powershell.md) - 開発者コマンド プロンプトと開発者用 PowerShell
-- [Git とチーム エクスプローラーを並べて比較する](./git-team-explorer-feature-comparison.md) - チーム エクスプローラーと Git の新機能を並べて比較した新しいページの追加
+- [Git とチーム エクスプローラーを並べて比較する](../version-control/git-team-explorer-feature-comparison.md) - チーム エクスプローラーと Git の新機能を並べて比較した新しいページの追加
 
 **更新された記事**
 

@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 0fe13030478f62f759b3eabc8e897c09a4295bad
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 267bd8567b60a66bcf9d78c3aef8f02bbc942e0d
+ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936757"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108025879"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 の JavaScript および TypeScript
 
@@ -46,4 +46,4 @@ Visual Studio 2019 では、TypeScript のコンパイルをプロジェクト�
 
 ## <a name="projects"></a>プロジェクト
 
-Visual Studio 2019 で、UWP JavaScript アプリはサポートされなくなりました。 JavaScript UWP プロジェクト (拡張子が *.jsproj* のファイル) は、作成することも、開くこともできません。 詳細については、Windows 上で適切に実行される[プログレッシブ Web アプリ (PWA) の作成](/microsoft-edge/progressive-web-apps/get-started)に関するドキュメントを参照してください。
+Visual Studio 2019 で、UWP JavaScript アプリはサポートされなくなりました。 JavaScript UWP プロジェクト (拡張子が *.jsproj* のファイル) は、作成することも、開くこともできません。 詳細については、Windows 上で適切に実行される[プログレッシブ Web アプリ (PWA) の作成](/microsoft-edge/progressive-web-apps-chromium)に関するドキュメントを参照してください。

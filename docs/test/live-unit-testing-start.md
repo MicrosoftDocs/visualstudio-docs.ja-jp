@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d411465869cc960631063d09752d38536af94119
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 5c965fd73f63906f7a1e055ae5ff051eebab19d5
+ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683606"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "107828814"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing の概要
 
@@ -82,7 +82,41 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 5. コード エディター内の既存のコードをすべて、次のコードに置き換えます。
 
-   [!code-csharp[StringLibrary source code](samples/csharp/utilitylibraries/stringlibrary/class1.cs)]
+   ```csharp
+   using System;
+
+   namespace UtilityLibraries
+   {
+       public static class StringLibrary
+       {
+           public static bool StartsWithUpper(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsUpper(s[0]);
+           }
+
+           public static bool StartsWithLower(this string s)
+           {
+               if (String.IsNullOrWhiteSpace(s))
+                   return false;
+
+               return Char.IsLower(s[0]);
+           }
+
+           public static bool HasEmbeddedSpaces(this string s)
+           {
+               foreach (var ch in s.Trim())
+               {
+                   if (ch == ' ')
+                       return true;
+               }
+               return false;
+           }
+       }
+   }
+   ```
 
    StringLibrary には 3 つの静的メソッドがあります。
 
@@ -140,7 +174,59 @@ Live Unit Testing を使用すると、.NET Framework または .NET Core のい
 
 6. テンプレートで入力されている定型的な単体テスト コードを次のコードに置き換えます。
 
-   [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest1.cs)]
+   ```csharp
+   using System;
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   using UtilityLibraries;
+
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestStartsWithUpper()
+           {
+               // Tests that we expect to return true.
+               string[] words = { "Alphabet", "Zebra", "ABC", "Αθήνα", "Москва" };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsTrue(result,
+                                 $"Expected for '{word}': true; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void TestDoesNotStartWithUpper()
+           {
+               // Tests that we expect to return false.
+               string[] words = { "alphabet", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
+                                  "1234", ".", ";", " " };
+               foreach (var word in words)
+               {
+                   bool result = word.StartsWithUpper();
+                   Assert.IsFalse(result,
+                                  $"Expected for '{word}': false; Actual: {result}");
+               }
+           }
+
+           [TestMethod]
+           public void DirectCallWithNullOrEmpty()
+           {
+               // Tests that we expect to return false.
+               string[] words = { String.Empty, null };
+               foreach (var word in words)
+               {
+                   bool result = StringLibrary.StartsWithUpper(word);
+                   Assert.IsFalse(result,
+                                  $"Expected for '{(word == null ? "<null>" : word)}': " +
+                                  $"false; Actual: {result}");
+               }
+           }
+       }
+   }
+   ```
 
 7. ツール バーの **[保存]** アイコンを選択してプロジェクトを保存します。
 
@@ -199,11 +285,11 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
 1. 次の `TestStartsWithLower` メソッドと `TestDoesNotStartWithLower` メソッドをプロジェクトのテスト ソース コード ファイルに追加します。
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet1":::
 
 1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) メソッドへの呼び出しのすぐ後に、次のコードを追加して、`DirectCallWithNullOrEmpty` メソッドを変更します。
 
-    [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet2":::
 
 1. ソース コードを変更すると、Live Unit Testing によって新しいテストと変更したテストが自動的に実行されます。 次の図に示すように、追加した 2 つのテストと変更した 1 つのテストを含むすべてのテストが成功しています。
 
@@ -228,7 +314,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
 1. テスト ファイルに次のメソッドを追加します。
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/unittest2.cs#3)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/unittest2.cs" id="Snippet3":::
 
 1. 次の図に示すように、テストが実行されると、Live Unit Testing では `TestHasEmbeddedSpaces` メソッドが失敗したことが示されます。
 
@@ -275,7 +361,7 @@ Live Unit Testing は、重大な問題として不完全なコード カバレ�
 
 1. 等価比較を、<xref:System.Char.IsWhiteSpace%2A?displayProperty=fullName> メソッドへの呼び出しに置き換えます。
 
-    [!code-csharp[The TestHasEmbeddedSpaces test method](samples/snippets/csharp/lut-start/program2.cs#1)]
+   :::code language="csharp" source="../test/samples/snippets/csharp/lut-start/program2.cs" id="Snippet1":::
 
 1. 失敗したテスト メソッドは、Live Unit Testing によって自動的に再実行されます。
 
