@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 60e1aca5e0f561539f3e27cf36dac67bb92c4ddf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e4c432afb1a4341dbe30f023d95bfccb4689094
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082024"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913099"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 の新機能
 
@@ -146,7 +146,7 @@ Visual Studio 2019 を開いてまず気付くことは、新しいスタート 
 
 **16.8 の新機能**:Git が Visual Studio 2019 での既定のバージョン管理エクスペリエンスになりました。 過去 2 回のリリースにおけるフィードバックに基づいて機能セットを構築し、その反復処理を行いました。 新しいエクスペリエンスは、あらゆるユーザーに対して、既定でオンになっています。 新しい Git メニューから、リポジトリをクローンしたり、作成したり、開いたりできます。 統合された Git ツール ウィンドウを使用し、変更をコミットして自分のコードにプッシュしたり、ブランチを管理したり、リモート リポジトリで最新の状態を維持したり、マージ競合を解決したりします。
 
-詳細については、「[Visual Studio での Git エクスペリエンス](git-with-visual-studio.md)」ページを参照してください。
+詳細については、「[Visual Studio での Git エクスペリエンス](../version-control/git-with-visual-studio.md)」ページを参照してください。
 
 ### <a name="live-share"></a>Live Share
 
@@ -228,7 +228,7 @@ Visual Studio 2019 は、より優れた開発を可能にする新機能で頻�
 
    Visual Studio 2019 [バージョン 16.8](/visualstudio/releases/2019/release-notes/) で新しい Git バージョン管理エクスペリエンスが既定でオンになるようになりましたが、最新のプレビュー リリースでエクスペリエンスを向上させるため、機能が引き続き追加されます。
 
-   詳細については、「[Visual Studio での Git エクスペリエンス](git-with-visual-studio.md)」ページを参照してください。
+   詳細については、「[Visual Studio での Git エクスペリエンス](../version-control/git-with-visual-studio.md)」ページを参照してください。
 
 プレビュー リリースの詳細および試したい場合のダウンロード リンクについては、「 **[Visual Studio Preview](https://aka.ms/vspreview/)** 」ページを参照してください。
 

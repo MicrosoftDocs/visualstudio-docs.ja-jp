@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 05af4933569e988b35bea9763a27d8f68aae3627
-ms.sourcegitcommit: be14ae4b95e289f16e9444293bb2ec997d4b4d72
+ms.openlocfilehash: d29c8be82ba0461231d9cd02eb6799dd38a690ed
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107031594"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913034"
 ---
 # <a name="history-of-whats-new-in-visual-studio-docs"></a>Visual Studio ドキュメントの新機能に関する履歴
 
@@ -296,7 +296,7 @@ Visual Studio ドキュメントの新機能に関する履歴へようこそ。
 
 **更新された記事**
 
-- [Visual Studio での Git エクスペリエンス](./git-with-visual-studio.md)
+- [Visual Studio での Git エクスペリエンス](../version-control/git-with-visual-studio.md)
   - 代替テキストとメタデータを更新
   - 16.8 GA 用の新しい Git エクスペリエンス コンテンツに更新
 - [Visual Studio 2019 の新機能](./whats-new-visual-studio-2019.md)
@@ -482,7 +482,7 @@ Visual Studio ドキュメントの新機能に関する履歴へようこそ。
 
 **新しい記事**
 
-- [Visual Studio での新しい Git エクスペリエンス (プレビュー)](./git-with-visual-studio.md) - 新しい Git エクスペリエンス コンテンツの追加 (プレビュー)
+- [Visual Studio での新しい Git エクスペリエンス (プレビュー)](../version-control/git-with-visual-studio.md) - 新しい Git エクスペリエンス コンテンツの追加 (プレビュー)
 - [C++ EditorConfig の書式規則](./cpp-editorconfig-properties.md) - 新しい記事
 - [GitHub Codespaces とは (プレビュー)](./codespaces/codespaces-overview.md) - Codespaces コンテンツの追加 (プレビュー)
 - [codespace をカスタマイズする方法 (プレビュー)](./codespaces/customize-codespaces.md) - codespace の (プレビュー) コンテンツの追加
