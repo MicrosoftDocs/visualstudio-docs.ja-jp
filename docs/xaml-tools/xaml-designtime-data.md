@@ -7,12 +7,12 @@ author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 4bd059fa82f8a959d6e3b8a843f19cbec636fb7e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
+ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99880412"
+ms.lasthandoff: 04/23/2021
+ms.locfileid: "107913073"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio の XAML デザイナーでデザイン時のデータを使用する
 
@@ -66,7 +66,10 @@ mc:Ignorable="d"
 
 ## <a name="design-time-data-for-listviews"></a>ListView のデザイン時のデータ
 
-ListView は、デスクトップ アプリにデータを表示するための一般的な方法です。 ただし、データなしに視覚化することは困難です。 この機能を使用して、デザイン時のインライン データ ItemSource を作成できます。 XAML デザイナーには、デザイン時の ListView の配列の内容が表示されます。 WPF .NET Core の例を次に示します。 system:String 型を使用するには、XAML ヘッダーに `xmlns:system="clr-namespace:System;assembly=mscorlib` が含まれていることを確認してください。
+ListView は、デスクトップ アプリにデータを表示するための一般的な方法です。 ただし、データなしに視覚化することは困難です。 この機能を使用して、デザイン時のインライン データ ItemSource または項目を作成できます。 XAML デザイナーには、デザイン時の ListView の配列の内容が表示されます。
+
+### <a name="wpf-net-core--example"></a>WPF .NET Core の例
+system:String 型を使用するには、XAML ヘッダーに `xmlns:system="clr-namespace:System;assembly=mscorlib` が含まれていることを確認してください。
 
 ```xml
 <StackPanel>
@@ -135,6 +138,22 @@ xmlns:models="clr-namespace:Cities.Models"
 [![ListView を使用したデザイン時のデータの実際のモデル](media\xaml-design-time-listview-models.png "ListView を使用したデザイン時のデータの実際のモデル")](media\xaml-design-time-listview-models.png#lightbox)
 
 ここでのベネフィットは、コントロールをモデルのデザイン時の静的なバージョンにバインドできることです。
+
+### <a name="uwp-example"></a>UWP の例 
+
+UWP では x:Array がサポートされていません。 そのため、代わりに `<d:ListView.Items>` を使用できます。 system:String 型を使用するには、XAML ヘッダーに `http://schemas.microsoft.com/winfx/2009/xaml` が含まれていることを確認してください。
+
+```xml
+    <StackPanel>
+        <ListView>
+            <d:ListView.Items>
+                <system:String>Item One</system:String>
+                <system:String>Item Two</system:String>
+                <system:String>Item Three</system:String>
+            </d:ListView.Items>
+        </ListView>
+    </StackPanel>
+```
 
 ## <a name="use-design-time-data-with-custom-types-and-properties"></a>カスタム型とプロパティと共にデザイン時データを使用する
 
