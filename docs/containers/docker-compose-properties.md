@@ -4,15 +4,15 @@ author: ghogen
 description: Visual Studio による Docker Compose アプリケーションのビルドおよび実行方法をカスタマイズする目的で Docker Compose のビルド プロパティを編集する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.author: ghogen
-ms.date: 08/12/2019
+ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: 4478656af7fff4cfd3a0fdafefe623af5811154f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ed4b2a0dc1dc7a0520bf8e83ab1968a3815196e0
+ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068298"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "108025866"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose のビルド プロパティ
 
@@ -37,16 +37,17 @@ ms.locfileid: "105068298"
 | プロパティ名 | 場所 | 説明 | 既定値  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|すべてのコマンドで docker-compose.exe に追加の Compose ファイルがセミコロンで区切られたリストで送信されるように指定します。 docker-compose プロジェクト ファイル (dcproj) からの相対パスが許可されます。|-|
-|DockerComposeBaseFilePath|dcproj|docker-compose ファイルのファイル名の最初の部分を *.yml* 拡張子なしで指定します。 次に例を示します。 <br>1.DockerComposeBaseFilePath = null/undefined: 基本ファイル パス *docker-compose* を使用します。ファイル名は *docker-compose.yml* および *docker-compose.override.yml* になります<br>2. DockerComposeBaseFilePath = *mydockercompose*: ファイル名は *mydockercompose.yml* および *mydockercompose.override.yml* になります<br> 3.DockerComposeBaseFilePath = *..\mydockercompose*: ファイルが 1 レベル上に移動します。 |docker-compose|
-|DockerComposeBuildArguments|dcproj|`docker-compose build` コマンドに渡す追加のパラメーターを指定します。 たとえば、`--parallel --pull` |
-|DockerComposeDownArguments|dcproj|`docker-compose down` コマンドに渡す追加のパラメーターを指定します。 たとえば、`--timeout 500`|-|
+|DockerComposeBaseFilePath|dcproj|docker-compose ファイルのファイル名の最初の部分を *.yml* 拡張子なしで指定します。 次に例を示します。 <br>1. DockerComposeBaseFilePath = null または未定義: 基本ファイル パス *docker-compose* を使用し、ファイル名は *docker-compose.yml* と *docker-compose.override.yml* になります。<br>2. DockerComposeBaseFilePath = *mydockercompose*: ファイル名は *mydockercompose.yml* と *mydockercompose.override.yml* になります。<br> 3. DockerComposeBaseFilePath = *..\mydockercompose*: ファイルは 1 レベル上になります。 |docker-compose|
+|DockerComposeBuildArguments|dcproj|`docker-compose build` コマンドに渡す追加のパラメーターを指定します。 たとえば、「 `--parallel --pull` 」のように入力します。 |
+|DockerComposeDownArguments|dcproj|`docker-compose down` コマンドに渡す追加のパラメーターを指定します。 たとえば、「 `--timeout 500` 」のように入力します。|-|  
 |DockerComposeProjectName| dcproj | 指定した場合、docker-compose プロジェクトのプロジェクト名がオーバーライドされます。 | "dockercompose" + 自動生成されたハッシュ |
 |DockerComposeProjectPath|csproj または vbproj|docker-compose プロジェクト (dcproj) ファイルの相対パス。 docker-compose.yml ファイルに格納されている関連イメージ ビルド設定を見つける目的で、サービス プロジェクトの公開時にこのプロパティを設定します。|-|
-|DockerComposeUpArguments|dcproj|`docker-compose up` コマンドに渡す追加のパラメーターを指定します。 たとえば、`--timeout 500`|-|
-|DockerDevelopmentMode|dcproj| "ホスト上でビルド" の最適化 ("高速モード" のデバッグ) を有効にするかどうかを制御します。  指定できる値は、**Fast** と **Regular** です。 | Fast |
-|DockerLaunchAction| dcproj | F5 または Ctrl + F5 キーで実行する起動アクションを指定します。  指定できる値には、None、LaunchBrowser、LaunchWCFTestClient があります。|None|
+|DockerComposeProjectsToIgnore|dcproj| プロジェクトがデバッグ中に docker-compose ツールによって無視されるように指定します。 このプロパティは、任意のプロジェクトに使用できます。 ファイル パスは、次の 2 つの方法のどちらかで指定できます。 <br> 1. dcproj を基準として。 たとえば、「 `<DockerComposeProjectsToIgnore>path\to\AngularProject1.csproj</DockerComposeProjectsToIgnore>` 」のように入力します。 <br> 2. 絶対パス。<br> **注**: これらのパスは、区切り文字 `;` で区切る必要があります。|-|
+|DockerComposeUpArguments|dcproj|`docker-compose up` コマンドに渡す追加のパラメーターを指定します。 たとえば、「 `--timeout 500` 」のように入力します。|-|
+|DockerDevelopmentMode| dcproj | ユーザー プロジェクトをコンテナーにビルドするかどうかを制御します。 **Fast** または **Regular** の許可される値によって、Dockerfile で[どのステージがビルドされるか](https://aka.ms/containerfastmode)が制御されます。 デバッグ構成は、既定では Fast モードであり、それ以外の場合は Regular モードです。 | Fast |
+|DockerLaunchAction| dcproj | F5 または Ctrl + F5 キーで実行する起動アクションを指定します。  指定できる値には、None、LaunchBrowser、LaunchWCFTestClient があります。 | None |
 |DockerLaunchBrowser| dcproj | ブラウザーを起動するかどうかを示します。 DockerLaunchAction が指定されている場合は無視されます。 | False |
-|DockerServiceName| dcproj|DockerLaunchAction または DockerLaunchBrowser が指定されている場合、DockerServiceName は、起動する必要があるサービスの名前です。  docker-compose 構成ファイルで参照できるプロジェクトはたくさん存在する可能性があります。そのうちのどれを起動するかをこのプロパティを使用して決定します。|-|
+|DockerServiceName| dcproj| DockerLaunchAction または DockerLaunchBrowser が指定されている場合、DockerServiceName では、docker-compose ファイルで参照されているどのサービスが起動されるかを指定します。|-|
 |DockerServiceUrl| dcproj | ブラウザーを起動するときに使用される URL。  有効な置換トークンには、"{ServiceIPAddress}"、"{ServicePort}"、"{Scheme}" があります。  例: {Scheme}://{ServiceIPAddress}:{ServicePort}|-|
 |DockerTargetOS| dcproj | Docker イメージをビルドするときに使用されるターゲット OS。|-|
 
@@ -93,9 +94,16 @@ services:
 > [!NOTE]
 > Visual Studio 2019 バージョン 16.3 では、DockerComposeBuildArguments、DockerComposeDownArguments、DockerComposeUpArguments が新しく追加されています。
 
-## <a name="docker-compose-file-labels"></a>Docker Compose ファイル ラベル
+## <a name="overriding-visual-studios-docker-compose-configuration"></a>Visual Studio の Docker Compose 構成のオーバーライド
 
-*docker-compose.yml* ファイルと同じディレクトリに *docker-compose.vs.debug.yml* という名前のファイル (**デバッグ** 構成の場合) または *docker-compose.vs.release.yml* という名前のファイル (**リリース** 構成の場合) を置くことで一部の設定をオーバーライドすることもできます。  このファイルでは、次のように設定を指定できます。
+*docker-compose.yml* ファイルと同じディレクトリ内に *docker-compose.vs.debug.yml* (**Fast** モードの場合) または *docker-compose.vs.release.yml* (**Regular** モードの場合) という名前のファイルを置くことによって、特定の設定をオーバーライドできます。 
+
+>[!TIP] 
+>これらのいずれかの設定の既定値を見つけるには、*docker-compose.vs.debug.g.yml* または *docker-compose.vs.release.g.yml* 内を調べてください。
+
+### <a name="docker-compose-file-labels"></a>Docker Compose ファイル ラベル
+
+ *docker-compose.vs.debug.yml* または *docker-compose.vs.release.yml* で、オーバーライド固有のラベルを次のように定義できます。
 
 ```yml
 services:
@@ -109,13 +117,26 @@ services:
 |ラベル名|説明|
 |----------|-----------|
 |com.microsoft.visualstudio.debuggee.arguments|デバッグの開始時にプログラムに渡される引数。 .NET Core アプリの場合、通常、これらの引数は NuGet パッケージの追加検索パスであり、これにプロジェクトの出力アセンブリのパスが続きます。|
-|com.microsoft.visualstudio.debuggee.killprogram|このコマンドは、(必要なときに) コンテナー内で実行されているデバッグ対象プログラムを停止する目的で使用されます。|
 |com.microsoft.visualstudio.debuggee.program|デバッグの開始時に起動するプログラム。 .NET Core アプリの場合、この設定は通常、**dotnet** です。|
 |com.microsoft.visualstudio.debuggee.workingdirectory|デバッグの開始時に開始ディレクトリとして使用されるディレクトリ。 この設定は通常、Linux コンテナーの場合は */app*、Windows コンテナーの場合は *C:\app* になります。|
+|com.microsoft.visualstudio.debuggee.killprogram|このコマンドは、(必要なときに) コンテナー内で実行されているデバッグ対象プログラムを停止する目的で使用されます。|
 
-## <a name="customize-the-app-startup-process"></a>アプリのスタートアップ プロセスをカスタマイズする
+### <a name="customize-the-docker-build-process"></a>Docker ビルド プロセスをカスタマイズする
 
-`entrypoint` 設定を使用してアプリを起動する前に、コマンドまたはカスタム スクリプトを実行して、アプリを構成に依存させることができます。 たとえば、`update-ca-certificates` を実行して、証明書を **リリース** モードではなく **デバッグ** モードでのみ設定する必要がある場合、次のコードを *docker-compose.vs.debug.yml* にのみ追加できます。
+`build` プロパティの `target` 設定を使用して、Dockerfile でどのステージをビルドするかを宣言できます。 このオーバーライドは、*docker-compose.vs.debug.yml* または *docker-compose.vs.release.yml* でのみ使用できます。 
+
+```yml
+services:
+  webapplication1:
+    build:
+      target: customStage
+    labels:
+      ...
+```
+
+### <a name="customize-the-app-startup-process"></a>アプリのスタートアップ プロセスをカスタマイズする
+
+`entrypoint` 設定を使用し、それを `DockerDevelopmentMode` に依存させることによって、アプリの起動前にコマンドまたはカスタム スクリプトを実行できます。 たとえば、`update-ca-certificates` を実行することによって (**Regular** モードではなく) **Fast** モードでのみ証明書を設定する必要がある場合は、次のコードを *docker-compose.vs.debug.yml* に **のみ** 追加することができます。
 
 ```yml
 services:
@@ -124,8 +145,6 @@ services:
     labels:
       ...
 ```
-
-*docker-compose.vs.release.yml* または *docker-compose.vs.debug.yml* を省略した場合は、Visual Studio によって既定の設定に基づいてどちらかが生成されます。
 
 ## <a name="next-steps"></a>次の手順
 

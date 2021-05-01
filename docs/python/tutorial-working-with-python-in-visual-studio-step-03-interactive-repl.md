@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c4ae447976798372e049df46552f8383389f7b3e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e82073b77231f84452ba51402f407904142bbf8e
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920768"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941098"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>手順 3: 対話型 REPL ウィンドウを使用する
 
@@ -40,7 +40,7 @@ Visual Studio の Python 用 **対話型** ウィンドウによって機能豊�
 
     ![Python Interactive ウィンドウの即時の結果](media/vs-getting-started-python-12-interactive2.png)
 
-1. 関数の定義など、複数のステートメントの記述を開始すると、**対話型** ウィンドウに行の継続を表す Python の **...** プロンプトが表示されます。コマンド ライン REPL とは異なり、自動でインデントされます。
+1. 複数行ステートメント (関数の定義など) を記述し始めると、 **[インタラクティブ]** ウィンドウに行の継続を示す Python の **...** プロンプトが表示されます。これは、コマンド ライン REPL とは異なり、自動的にインデントされます。 新しい **...** 行を追加するには、`Shift+Enter` を押します。
 
     ![ステートメントの継続を示す Python Interactive ウィンドウ](media/vs-getting-started-python-13-interactive3.png)
 

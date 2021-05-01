@@ -10,26 +10,26 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e2c4cd4c110b55837009ea9d081a95180727d331
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8070bb93a1dd76ad29832afae15d83788300ae7a
+ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916527"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107941111"
 ---
 # <a name="install-python-interpreters"></a>Python インタープリターのインストール
 
 既定では、Visual Studio 2017 以降に Python 開発ワークロードをインストールすると、Python 3 (64 ビット) もインストールされます。 [インストール](installing-python-support-in-visual-studio.md)に関する記事で説明されているように、必要に応じて、32 ビットおよび 64 ビット版の Python 2 および Python 3 と共に、Miniconda (Visual Studio 2019) または Anaconda 2/Anaconda 3 (Visual Studio 2017) をインストールできます。
 
 ::: moniker range=">=vs-2019"
-または、標準の Python インタープリターを **[環境の追加]** ダイアログからインストールできます。 **[Python 環境]** ウィンドウまたは Python ツール バーで **[環境の追加]** コマンドを選択し、 **[Python インストール]** タブを選択して、インストールするインタープリターを指定し、 **[インストール]** を選択します。
+または、標準の Python インタープリターを **[環境の追加]** ダイアログからインストールできます。 **[Python 環境]** ウィンドウまたは Python ツール バーで **[環境の追加]** コマンドを選択し、**[Python インストール]** タブを選択して、インストールするインタープリターを指定し、**[インストール]** を選択します。
 ::: moniker-end
 
 以下の表のインタープリターは、Visual Studio インストーラーを使用せずに手動でインストールすることもできます。 たとえば、Visual Studio をインストールする前に Anaconda 3 がインストールされている場合、Visual Studio インストーラーでそれを再度インストールする必要はありません。 また、たとえば Visual Studio インストーラーに利用可能な新しいバージョンがまだ表示されていない場合なども、手動でインタープリターをインストールできます。
 
 ::: moniker range=">=vs-2019"
 > [!Note]
-> Visual Studio では、Python バージョン 2.7 だけでなくバージョン 3.5 以降もサポートされます。 Visual Studio を使って、他のバージョンの Python で記述されたコードを編集することはできますが、それらのバージョンは公式にはサポートされておらず、IntelliSense やデバッグなどの機能が動作しない可能性があります。
+> Visual Studio では、Python バージョン 2.7 のほか、バージョン 3.5 ～ 3.7 をサポートしています。 Visual Studio を使って、他のバージョンの Python で記述されたコードを編集することはできますが、それらのバージョンは公式にはサポートされておらず、IntelliSense やデバッグなどの機能が動作しない可能性があります。
 ::: moniker-end
 
 **Visual Studio 2015 以前** では、いずれかのインタープリターを手動でインストールする必要があります。
@@ -38,9 +38,9 @@ Visual Studio (すべてのバージョン) でレジストリ (「[PEP 514 - Py
 
 Visual Studio でインストール済みの環境が検出されない場合は、「[既存の環境を手動で識別する](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)」をご覧ください。
 
-Visual Studio の [ **[Python 環境]**](managing-python-environments-in-visual-studio.md#the-python-environments-window) ウィンドウには既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
+Visual Studio の [ **[Python 環境]** ](managing-python-environments-in-visual-studio.md#the-python-environments-window) ウィンドウには既知の環境がすべて表示され、既存のインタープリターの更新プログラムが自動的に検出されます。
 
-| インタープリター | [説明] |
+| インタープリター | Description |
 | --- | --- |
 | [CPython](https://www.python.org/) | "ネイティブ" で最もよく使われるインタープリターであり、32 ビット バージョンと 64 ビット バージョンがあります (32 ビットを推奨)。 最新の言語機能、Python パッケージの最大限の互換性、完全なデバッグ サポート、および [IPython](https://ipython.org/) との相互運用性が含まれています。 「[Should I use Python 2 or Python 3?](https://wiki.python.org/moin/Python2orPython3)」(Python 2 と Python 3 のどちらを使うか) もご覧ください。 Visual Studio 2015 以前では、Python 3.6 以降がサポートされていないため、**Python バージョン 3.6 はサポートされていません** というようなエラーが発生する場合があることに注意してください。 代わりに 3.5 以前の Python を使用します。 |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | Python の .NET の実装であり (32 ビット バージョンと 64 ビット バージョン)、C#/F#/Visual Basic の相互運用機能、.NET API へのアクセス、標準 Python デバッグ (ただし、C++ 混合モードのデバッグはありません)、IronPython/C# の混合デバッグが提供されます。 ただし、IronPython は仮想環境をサポートしていません。 |
@@ -65,7 +65,7 @@ Python 環境用に新しい検出形式を提供したい開発者は、「[PTV
 
 このプロセスを実行すると、Visual Studio が使用するインタープリターの場所を特定するレジストリ エントリが正しく更新されます。 インストーラーを使用すると、他にも存在する可能性のある副作用も処理されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
 - [Python 環境を管理する](managing-python-environments-in-visual-studio.md)
 - [プロジェクトのインタープリターの選択](selecting-a-python-environment-for-a-project.md)
