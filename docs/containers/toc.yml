@@ -52,3 +52,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Bridge to Kubernetes を構成する
       href: configure-bridge-to-kubernetes.md
+    - name: Bridge to Kubernetes を使った Azure AD マネージド ID の使用
+      href: managed-identity.md
