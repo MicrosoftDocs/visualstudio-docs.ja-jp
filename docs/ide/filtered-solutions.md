@@ -3,21 +3,20 @@ title: プロジェクトのサブセットを読み込む
 description: ソリューションのフィルター処理と、それによってプロジェクトのサブセットをソリューションにすばやく読み込む方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 04/22/2019
-ms.prod: visual-studio-dev16
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered solution
 - solution filtering
-author: jillre
+author: TerryGLee
 ms.author: stsu
 manager: jmartens
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: eae0d02e1fff3f9ad5b35384e6ccab599805372b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ea30edbaac7248af8e1a58b76aebd66cf44befba
+ms.sourcegitcommit: a667ce8394a800906d633737f4fcbc77f0fcba7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869389"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108298731"
 ---
 # <a name="filtered-solutions-in-visual-studio"></a>Visual Studio のフィルター処理済みソリューション
 
@@ -30,6 +29,9 @@ ms.locfileid: "99869389"
 - Visual Studio では前のセッションで読み込まれたプロジェクトを記憶しているため、ソリューションを再度開くと、これらのプロジェクトだけが読み込まれます。
 
 - ソリューション フィルター ファイルを作成して、1 つ以上のプロジェクトの読み込み構成を保存したり、他のチーム メンバーと構成を共有することができます。
+
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。
 
 ## <a name="open-a-filtered-solution"></a>フィルター処理されたソリューションを開く
 
