@@ -9,7 +9,7 @@ ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: e1c97670a91f2d90a01fef24f592e6ce2d5b05fd
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843814"
@@ -46,10 +46,10 @@ ms.locfileid: "99843814"
      ソリューション エクスプローラーの Azure プロジェクトからサービス構成ファイルが削除されます。
 
 ### <a name="to-rename-a-service-configuration"></a>サービス構成の名前を変更するには
-1. ソリューションエクスプローラーで、Azure プロジェクトのショートカットメニューを開き、[構成の **管理**] を選択します。
+1. ソリューション エクスプローラーで、Azure プロジェクトのショートカット メニューを開き、 **[構成の管理]** を選択します。
 
     **[サービス構成の管理]** ダイアログ ボックスが表示されます。
-2. サービス構成の名前を変更するには、**[名前]** ボックスの一覧から新しいサービス構成を選択し、**[名前の変更]** を選択します。 [ **名前** ] テキストボックスに、このサービス構成に使用する名前を入力し、[ **OK]** を選択します。
+2. サービス構成の名前を変更するには、**[名前]** ボックスの一覧から新しいサービス構成を選択し、**[名前の変更]** を選択します。 **[名前]** ボックスに、このサービス構成に使用する名前を入力し、 **[OK]** を選択します。
 
     ソリューション エクスプローラーの Azure プロジェクトでサービス構成ファイルの名前が変更されます。
 
@@ -93,5 +93,5 @@ ms.locfileid: "99843814"
 4. 設定の変更が完了したら、**[次へ]** を選択して **[設定]** ページに戻ります。
 5. (省略可能) **[発行]** を選択し、新しい設定を使用してクラウド サービスを発行します。 この時点でクラウド サービスを発行せずに発行ウィザードを閉じると、変更をプロファイルに保存するかどうかをたずねるメッセージが表示されます。
 
-## <a name="next-steps"></a>次の手順
-Visual Studio から Azure プロジェクトのその他の部分を構成する方法については、 [Azure プロジェクトの構成](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md)に関するページを参照してください。
+## <a name="next-steps"></a>次のステップ
+Visual Studio で Azure プロジェクトの他の部分を構成する方法については、[Azure プロジェクトの構成](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md)に関する記事をご覧ください。
