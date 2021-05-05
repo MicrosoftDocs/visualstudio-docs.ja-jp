@@ -13,7 +13,7 @@ ms.workload:
 - unity
 ms.openlocfilehash: 3697ac75eb608f6990cb7f8ca976e103f0df8454
 ms.sourcegitcommit: 18729d7c99c999865cc2defb17d3d956eb3fe35c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2021
 ms.locfileid: "98722985"

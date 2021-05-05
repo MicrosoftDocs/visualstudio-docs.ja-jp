@@ -9,7 +9,7 @@ ms.date: 11/18/2016
 ms.author: ghogen
 ms.openlocfilehash: cdfcacf38239e896687a236624bb167573f4bd1f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99846206"
@@ -23,7 +23,7 @@ WCF Data Services は、 [Open Data Protocol](https://www.odata.org/) (OData) �
 ## <a name="comparison-operators"></a>比較演算子
 次の論理演算子は、全種類のプロパティでサポートされます。
 
-| 論理演算子 | Description | フィルター文字列の例 |
+| 論理演算子 | 説明 | フィルター文字列の例 |
 | --- | --- | --- |
 | eq |等しい |City eq 'Redmond' |
 | gt |より大きい |Price gt 20 |
@@ -31,7 +31,7 @@ WCF Data Services は、 [Open Data Protocol](https://www.odata.org/) (OData) �
 | lt |より小さい |Price lt 20 |
 | le |以下 |Price le 100 |
 | ne |等しくない |City ne 'London' |
-| および |And |Price le 200 and Price gt 3.5 |
+| and |および |Price le 200 and Price gt 3.5 |
 | or |または |Price le 3.5 or Price gt 200 |
 | not |Not |not isAvailable |
 

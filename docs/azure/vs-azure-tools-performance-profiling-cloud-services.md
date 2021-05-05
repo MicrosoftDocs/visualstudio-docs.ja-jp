@@ -9,7 +9,7 @@ ms.date: 11/11/2016
 ms.author: mikejo
 ms.openlocfilehash: 83d7372fd6942f8f29e7244b1f57d40c2b64009b
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844022"
@@ -103,7 +103,7 @@ Visual Studio でのパフォーマンスのプロファイルの詳細につい
     レポートの .vsp ファイルが Azure からダウンロードされ、ダウンロードの状態が Azure のアクティビティ ログに表示されます。 ダウンロードが完了すると、<Role name\>*<Instance Number\>*<identifier\>.vsp という名前のプロファイル レポートが Visual Studio のエディターのタブに表示されます。 レポートの概要データが表示されます。
 4. [現在のビュー] の一覧にレポートの異なるビューを表示するには、表示するビューの種類を選択します。 詳細については、「 [プロファイル ツールのレポート ビュー](../profiling/performance-report-views.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [Cloud Services のデバッグ](vs-azure-tools-debug-cloud-services-virtual-machines.md)
 
 [Visual Studio から Azure クラウド サービスへの発行](vs-azure-tools-publishing-a-cloud-service.md)

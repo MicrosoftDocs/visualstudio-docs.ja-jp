@@ -9,7 +9,7 @@ ms.date: 03/05/2017
 ms.author: ghogen
 ms.openlocfilehash: b60e076c50c9465f54c3c05dda0318f56fa5e9ae
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844269"
@@ -29,5 +29,5 @@ MSBuild はコマンド ラインで実行することもできます。この�
 
 パッケージと構成ファイルの格納に別のディレクトリを使用する場合は、`/p:PublishDir=Directory\` オプションを使用してパスを設定します。その際、末尾に円記号の区切り記号を含めます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 パッケージは、ビルド後に Azure にデプロイできます。

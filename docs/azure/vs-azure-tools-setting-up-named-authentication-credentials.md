@@ -9,7 +9,7 @@ ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: bd4c1864539d915e34b286debb3f6b2f739049d5
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843801"
@@ -33,7 +33,7 @@ Visual Studio から Azure にアプリケーションを発行したり、既�
 
 証明書を自分で作成する場合は、[Azure の管理証明書の作成とアップロード](/azure/cloud-services/cloud-services-certs-create)に関する記事に記載された手順を参照し、[Azure Portal](https://portal.azure.com/) に証明書を手動でアップロードします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Web Apps の概要](/azure/app-service/)
 - [Azure App Service へのアプリのデプロイ](/azure/app-service/app-service-deploy-local-git)
