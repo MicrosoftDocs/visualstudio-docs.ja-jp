@@ -137,7 +137,7 @@
     - name: 構成と使用
       href: live-unit-testing.md
     - name: よくあるご質問
-      href: live-unit-testing-faq.md
+      href: live-unit-testing-faq.yml
 - name: Web パフォーマンスおよびロード テスト
   items:
     - name: 'クイック スタート: ロード テスト プロジェクトを作成する'

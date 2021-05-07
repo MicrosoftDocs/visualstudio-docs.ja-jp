@@ -49,7 +49,7 @@
             - name: コード分析の違反を抑制する
               href: in-source-suppression-overview.md
         - name: よく寄せられる質問
-          href: analyzers-faq.md
+          href: analyzers-faq.yml
     - name: レガシ分析
       items:
         - name: 概要
@@ -92,7 +92,7 @@
             - name: FxCop アナライザーから .NET アナライザーへの移行
               href: migrate-from-fxcop-analyzers-to-net-analyzers.md
             - name: よくあるご質問
-              href: net-analyzers-faq.md
+              href: net-analyzers-faq.yml
         - name: 規則セット
           items:
             - name: 概要

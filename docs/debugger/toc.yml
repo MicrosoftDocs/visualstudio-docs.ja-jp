@@ -415,7 +415,7 @@
         - name: ライブ Azure Kubernetes アプリをデバッグする
           href: debug-live-azure-kubernetes.md
         - name: スナップショットのデバッグに関する FAQ
-          href: debug-live-azure-apps-faq.md
+          href: debug-live-azure-apps-faq.yml
         - name: スナップショット デバッグのトラブルシューティング
           href: debug-live-azure-apps-troubleshooting.md
         - name: ライブ Azure 仮想マシン アプリの Time Travel Debugging
@@ -949,6 +949,6 @@
 - name: リソース
   items:
     - name: FAQ - デバッグ機能を見つける
-      href: find-your-debugging-task.md
+      href: find-your-debugging-task.yml
     - name: Visual Studio のデバッガーの新機能
       href: what-s-new-for-the-debugger-in-visual-studio.md
