@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jillfra
   ms.date: 09/20/2019
-  ms.openlocfilehash: dba9613de34b61222effe16b30078a1b6e54e09d
-  ms.sourcegitcommit: fcfd0fc7702a47c81832ea97cf721cca5173e930
+  ms.openlocfilehash: f607412b72f4fcf08dae33124349a77bfa873595
+  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/22/2020
-  ms.locfileid: "97727412"
+  ms.lasthandoff: 05/06/2021
+  ms.locfileid: "108798597"
 landingContent:
 - title: デバッグについて
   linkLists:
@@ -26,7 +26,7 @@ landingContent:
     - text: デバッガーでのはじめに
       url: debugger-feature-tour.md
     - text: FAQ - デバッグ機能を見つける
-      url: find-your-debugging-task.md
+      url: find-your-debugging-task.yml
 - title: 作業開始
   linkLists:
   - linkListType: tutorial
