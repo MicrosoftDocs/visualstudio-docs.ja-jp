@@ -10,12 +10,12 @@ metadata:
   author: Mikejo5000
   ms.author: mikejo
   ms.date: 10/15/2019
-  ms.openlocfilehash: b660af5dbe18c54a4b1871d2e00311bf31471662
-  ms.sourcegitcommit: 754133c68ad841f7d7962e0b7a575e133289d8a8
+  ms.openlocfilehash: fd843690d5eb2f792bb8e671162e7c150bea2750
+  ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/09/2020
-  ms.locfileid: "91928005"
+  ms.lasthandoff: 05/06/2021
+  ms.locfileid: "108798311"
 landingContent:
 - title: .NET コード分析の構成
   linkLists:
@@ -26,7 +26,7 @@ landingContent:
   - linkListType: concept
     links:
     - text: よく寄せられる質問
-      url: analyzers-faq.md
+      url: analyzers-faq.yml
   - linkListType: how-to-guide
     links:
     - text: .NET コード分析
