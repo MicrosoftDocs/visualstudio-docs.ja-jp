@@ -48,6 +48,8 @@
       href: subscription-expiration.md
     - name: サブスクリプション レベルの変更
       href: subscription-level-changes.md
+    - name: 削除されたサブスクリプション
+      href: subscription-removed.md
     - name: サブスクリプション管理者に連絡する
       href: contact-my-admin.md
     - name: 利点
