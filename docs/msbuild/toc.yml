@@ -492,12 +492,18 @@
               href: errors/msb3277.md
             - name: MSB3644
               href: errors/msb3644.md
+            - name: MSB3721
+              href: errors/msb3721.md
+            - name: MSB3821
+              href: errors/msb3821.md
             - name: MSB8036
               href: errors/msb8036.md
             - name: MSB8040
               href: errors/msb8040.md
             - name: MSB8041
               href: errors/msb8041.md
+            - name: MSB8066
+              href: errors/msb8066.md
     - name: MSBuild のプログラムでの使用
       items:
         - name: 概要
