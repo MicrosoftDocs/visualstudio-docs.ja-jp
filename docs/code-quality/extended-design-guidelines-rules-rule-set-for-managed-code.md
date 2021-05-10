@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "拡張デザイン ガイドライン規則" 規則セット
 ms.date: 11/04/2016
-description: Visual Studio の拡張デザインガイドライン規則規則セットについて説明します。これは、ユーザビリティと保守容易性に重点を置いています。 ルールの説明を参照してください。
+description: Visual Studio の "拡張デザイン ガイドライン規則" 規則セットについて説明します。これは、使いやすさと保守容易性に重点を置いています。 規則の説明を示します。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
@@ -12,18 +12,18 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 3555014113f84a5e21f21d1ab7d9a658e2c9aa6c
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99860335"
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>マネージド コードの "拡張デザイン ガイドライン規則" 規則セット
 
-Microsoft 拡張デザインガイドライン規則セットは、基本デザインガイドライン規則を拡張して、報告されるユーザビリティと保守容易性の問題を最大化します。 特に、命名に関するガイドラインに重点が置かれています。 プロジェクトにライブラリコードが含まれている場合、または保守しやすいコードを記述するために最高の基準を適用する場合は、この規則セットを含めることを検討してください。
+Microsoft "拡張デザイン ガイドライン規則" 規則セットは、基本デザイン ガイドライン規則を拡張して、使いやすさと保守容易性に関して報告される問題の検出範囲を最大化します。 特に、命名に関するガイドラインに重点が置かれています。 プロジェクトにライブラリ コードが含まれる場合や、最高レベルの基準を適用して、保守が容易なコードを記述する場合は、この規則セットの使用を検討してください。
 
-拡張デザインガイドライン規則には、" [基本デザインガイドライン規則](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md) " 規則セットのすべての規則が含まれます。これには、" [マネージ推奨規則](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) " 規則セット内の規則が含まれます。
+拡張デザイン ガイドライン規則には、"[基本デザイン ガイドライン規則](../code-quality/basic-design-guideline-rules-rule-set-for-managed-code.md)" 規則セットのすべての規則が含まれます。この規則セットには、"[推奨されるマネージド規則](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" 規則セットの規則が含まれます。
 
-次の表では、"Microsoft 拡張デザインガイドライン規則" 規則セット内のすべての規則について説明します。
+次の表では、Microsoft "拡張デザイン ガイドライン規則" 規則セットのすべての規則について説明します。
 
 |ルール|説明|
 |----------|-----------------|
@@ -67,7 +67,7 @@ Microsoft 拡張デザインガイドライン規則セットは、基本デザ�
 |[CA2137](../code-quality/ca2137.md)|透過的メソッドは、検証可能な IL のみを含まなければならない|
 |[CA2138](../code-quality/ca2138.md)|透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない|
 |[CA2140](../code-quality/ca2140.md)|透過的コードは、セキュリティ上重要な項目を参照してはならない|
-|[CA2141](../code-quality/ca2141.md)|透過的メソッドは Linkdemand を満たしてはならない|
+|[CA2141](../code-quality/ca2141.md)|透過的メソッドは LinkDemand を満たしてはならない|
 |[CA2146](../code-quality/ca2146.md)|型は、基本型およびインターフェイスと同程度以上、重要でなければならない|
 |[CA2147](../code-quality/ca2147.md)|透過コードは、セキュリティ アサートを使用してはならない|
 |[CA2149](../code-quality/ca2149.md)|透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない|
@@ -124,7 +124,7 @@ Microsoft 拡張デザインガイドライン規則セットは、基本デザ�
 |[CA1044](/dotnet/fundamentals/code-analysis/quality-rules/ca1044)|プロパティを書き込み専用にすることはできません|
 |[CA1046](/dotnet/fundamentals/code-analysis/quality-rules/ca1046)|参照型で、演算子 equals をオーバーロードしないでください|
 |[CA1047](/dotnet/fundamentals/code-analysis/quality-rules/ca1047)|シールド型の保護されたメンバーを宣言しません|
-|[CA1048: SEALED](../code-quality/ca1048.md)|シールド型の仮想メンバーを宣言しません|
+|[CA1048](../code-quality/ca1048.md)|シールド型の仮想メンバーを宣言しません|
 |[CA1050](/dotnet/fundamentals/code-analysis/quality-rules/ca1050)|名前空間で型を宣言します|
 |[CA1051](/dotnet/fundamentals/code-analysis/quality-rules/ca1051)|参照可能なインスタンス フィールドを宣言しません|
 |[CA1052](/dotnet/fundamentals/code-analysis/quality-rules/ca1052)|スタティック ホルダー型はシールドされていなければなりません|
