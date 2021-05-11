@@ -459,6 +459,10 @@
               href: code-metrics-maintainability-index-range-and-meaning.md
             - name: クラス結合
               href: code-metrics-class-coupling.md
+            - name: サイクロマティック複雑度
+              href: code-metrics-cyclomatic-complexity.md
+            - name: 継承の深さ
+              href: code-metrics-depth-of-inheritance.md
 - name: C++ コードの分析
   items:
     - name: C および C++ コードの分析
