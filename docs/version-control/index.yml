@@ -10,13 +10,13 @@ metadata:
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
-  ms.technology: vs-general-ide
-  ms.openlocfilehash: a377d39b0d8184dc7aca038238f2dacb0345627d
-  ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+  ms.technology: vs-ide-general
+  ms.openlocfilehash: 50226243cc698391d79a52371262ec6202b45ad9
+  ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/23/2021
-  ms.locfileid: "107917643"
+  ms.lasthandoff: 05/11/2021
+  ms.locfileid: "109729227"
 landingContent:
 - title: 概要
   linkLists:
