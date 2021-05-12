@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 55d6c5a4b9485051f8c0293ad72f78e5cdddca59
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aad883ac0c3f703b2d6a4e10d3a0ef2468cd8465
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873266"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798441"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio でのスナップショットのデバッグに関するトラブルシューティングと既知の問題
 
@@ -249,4 +249,4 @@ Visual Studio 2019 では、Azure App Service 上に新しいバージョンの�
 - [スナップショット デバッガーを使用してライブ ASP.NET アプリをデバッグする](../debugger/debug-live-azure-applications.md)
 - [スナップショット デバッガーを使用して、Azure Virtual Machines と Azure Virtual Machine Scale Sets 上のライブ ASP.NET アプリをデバッグする](../debugger/debug-live-azure-virtual-machines.md)
 - [スナップショット デバッガーを使用してライブ ASP.NET Azure Kubernetes をデバッグする](../debugger/debug-live-azure-kubernetes.md)
-- [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)
+- [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.yml)

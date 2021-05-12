@@ -14,12 +14,12 @@ ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6a295e4abc62a7591c98b92cad4c173c5ff507b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3a7192ac55dc4138746e3e1e1abe4eaa6928395
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859802"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798337"
 ---
 # <a name="overview-of-source-code-analysis"></a>ソース コード分析の概要
 
@@ -58,9 +58,9 @@ ms.locfileid: "99859802"
 
 ![アナライザーの違反とクイック アクションのコード修正](../code-quality/media/built-in-analyzer-code-fix.png)
 
-## <a name="configure-analyzer-severity-levels"></a>アナライザーの重要度レベルの構成
+## <a name="configure-analyzer-severity-levels&quot;></a>アナライザーの重要度レベルの構成
 
-アナライザー ルールの重要度 ("*診断*") は、[EditorConfig ファイル](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) で、または [電球メニュー](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)から構成できます。
+アナライザー ルールの重要度 (&quot;*診断*") は、[EditorConfig ファイル](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file) で、または [電球メニュー](../code-quality/use-roslyn-analyzers.md#set-rule-severity-from-the-light-bulb-menu)から構成できます。
 
 ビルド時にコードを検査し、入力と同時にライブにするようにアナライザーを構成することもできます。 現在のドキュメントのみで実行するか、開いているすべてのドキュメントで実行するか、またはソリューション全体で実行するようにライブ コード分析のスコープを構成できます。 「[方法:ライブ コード分析スコープを構成する](./configure-live-code-analysis-scope-managed-code.md)」をご覧ください。
 
@@ -101,6 +101,6 @@ Visual Studio 拡張機能としてインストールされたアナライザー
 
 ## <a name="see-also"></a>関連項目
 
-- [アナライザーに関する FAQ](analyzers-faq.md)
+- [アナライザーに関する FAQ](analyzers-faq.yml)
 - [独自のコード アナライザーを作成する](../extensibility/getting-started-with-roslyn-analyzers.md)
 - [.NET Compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)

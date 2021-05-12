@@ -6,13 +6,15 @@ ms.date: 04/01/2021
 ms.topic: overview
 ms.author: tglee
 author: TerryGLee
-ms.manager: jillfra
-ms.openlocfilehash: 96018a203a6a0e5d404a818817ea4e9fb7e18551
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.manager: jmartens
+ms.openlocfilehash: 7ca09edada7715b9e7be754dbec22e1654288df8
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107920947"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729313"
 ---
 # <a name="git-experience-in-visual-studio"></a>Visual Studio での Git エクスペリエンス
 

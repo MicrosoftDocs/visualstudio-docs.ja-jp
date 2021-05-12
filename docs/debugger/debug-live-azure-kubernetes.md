@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 823da6da0a842766739cb50c700bb723a47d0309
-ms.sourcegitcommit: d577818d3d8e365baa55c6108fa8159c46ed8b43
+ms.openlocfilehash: c1c8a593d147b8ba38393aabd89b293e0fbd5d26
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97846976"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798467"
 ---
 # <a name="debug-live-aspnet-azure-kubernetes-services-using-the-snapshot-debugger"></a>スナップショット デバッガーを使用してライブ ASP.NET Azure Kubernetes サービスをデバッグする
 
@@ -104,7 +104,7 @@ ms.locfileid: "97846976"
 
 アプリにスナップポイントを追加して **[コレクションの更新]** ボタンをクリックして有効にすることもできます。
 
-**ヘルプが必要ですか?** [トラブルシューティングと既知の問題](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md) のページを参照してください。
+**ヘルプが必要ですか?** [トラブルシューティングと既知の問題](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.yml) のページを参照してください。
 
 ## <a name="set-a-conditional-snappoint"></a>条件付きスナップポイントを設定する
 
@@ -147,4 +147,4 @@ ms.locfileid: "97846976"
 このチュートリアルでは、Azure Kubernetes 用のスナップショット デバッガーの使用方法を学習しました。 必要に応じて、この機能の詳細な記事を参照してください。
 
 > [!div class="nextstepaction"]
-> [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)
+> [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.yml)

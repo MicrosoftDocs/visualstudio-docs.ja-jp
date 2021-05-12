@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/21/2021
 ms.topic: how-to
 description: 一括追加機能または Microsoft Azure Active Directory グループのどちらかを使って、管理者が複数のサブスクライバーにライセンスを割り当てる方法について説明します
-ms.openlocfilehash: 4744f689e9b03e4a6cf8c804409abddfde16c527
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: 389eb3a578b0b025995c0cd60613d5bcce2e1a9f
+ms.sourcegitcommit: dd2fc6e03a789c044f8438096b8f112e4dba5557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776897"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108640999"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>複数のユーザーにサブスクリプションを割り当てる
 サブスクリプション管理ポータルでは、ユーザーを一度に 1 人ずつ追加することも、大きなグループ単位で追加することもできます。  ユーザーを個別に追加するには、[1 人のユーザーの追加](assign-license.md)に関する記事を参照してください。
@@ -84,7 +84,6 @@ ms.locfileid: "104776897"
 > サブスクライバーを追加する場合の Azure AD グループの使用には、次の制限事項が適用されます。
 > - 管理ポータルに最初にグループを追加するときに、管理者は AAD テナントのメンバーである必要があります。  グループを追加した後、グループのメンバーシップの変更には管理者の関与は必要ありません。 
 > - グループには、少なくとも 1 人のメンバーを含んでいる必要があります。  空のグループはサポートされていません。
-> - グループのユーザー数は 1,000 未満にする必要があります。 
 > - すべてのユーザーが、グループの最上位レベルにいる必要があります。  入れ子になったグループはサポートされていません。
 > - 信頼済みの契約のみがサポートされます。 (サブスクリプションを "超過割り当て" できる契約のみが信頼されます)
 > - グループのすべてのメンバーが、Azure AD アカウントに関連付けられた電子メール アドレスを保持している必要があります。

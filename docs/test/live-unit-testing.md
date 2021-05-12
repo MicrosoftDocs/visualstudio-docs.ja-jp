@@ -10,12 +10,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 82ed41514109887d32f38faf4f965c923864ae32
-ms.sourcegitcommit: 9ce13a961719afbb389fa033fbb1a93bea814aae
+ms.openlocfilehash: b9b78771c36dce26744ba74af63922cf1efa48e2
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96329355"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798623"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Live Unit Testing を構成して使用する方法
 
@@ -185,18 +185,18 @@ Live Unit Testing で自動的にテストを実行してテスト結果を更�
 
 そのダイアログでは、大規模なプロジェクトで大量のテストを動的に実行すると、パフォーマンスが著しく低下する可能性があることが警告されます。 **[OK]** を選択すると、Live Unit Testing はそのソリューション内のすべてのテストを実行します。 **[キャンセル]** を選択すると、実行するテストを選択できます。 次のセクションでは、これを行う方法について説明します。
 
-## <a name="include-and-exclude-test-projects-and-test-methods"></a>テスト プロジェクトとテスト メソッドを含めるか除外する
+## <a name="include-and-exclude-test-projects-and-test-methods&quot;></a>テスト プロジェクトとテスト メソッドを含めるか除外する
 
 多くのテスト プロジェクトが含まれるソリューションでは、Live Unit Testing に参加するプロジェクトおよびプロジェクト内の個別メソッドを制御できます。 たとえば、数百のテスト プロジェクトを含むソリューションがある場合、Live Unit Testing に参加する対象のテスト プロジェクト セットを選ぶことができます。 これを行う方法は多数あり、プロジェクトまたはソリューション内のすべてのテストを除外するか、大半のテストを含めるか除外するか、テストを個別に除外するかによって決まります。 Live Unit Testing は、包含/除外の状態をユーザー設定として保存し、ソリューションを閉じて再び開くときに記憶しています。
 
-### <a name="exclude-all-tests-in-a-project-or-solution"></a>プロジェクトまたはソリューション内のすべてのテストを除外する
+### <a name=&quot;exclude-all-tests-in-a-project-or-solution&quot;></a>プロジェクトまたはソリューション内のすべてのテストを除外する
 
 単体テストで個別のプロジェクトを選ぶには、Live Unit Testing を開始した後で次のようにします。
 
 1. ソリューション全体を除外するには、**ソリューション エクスプローラー** でソリューションを右クリックし、 **[Live Unit Testing]** 、 **[除外する]** の順に選択します。
 1. 個別のテスト プロジェクトをテストに含めるには、各テスト プロジェクトを右クリックし、 **[Live Unit Testing]** 、 **[含める]** の順に選択します。
 
-### <a name="exclude-individual-tests-from-the-code-editor-window"></a>コード エディター ウィンドウからテストを個別に除外する
+### <a name=&quot;exclude-individual-tests-from-the-code-editor-window&quot;></a>コード エディター ウィンドウからテストを個別に除外する
 
 テスト メソッドを個別に追加または除外する場合には、コード エディター ウィンドウを使います。 コード エディター ウィンドウでテスト メソッドのシグネチャを右クリックして、次のいずれかのオプションを選択します。
 
@@ -204,13 +204,13 @@ Live Unit Testing で自動的にテストを実行してテスト結果を更�
 - **Live Unit Testing** >  **\<selected method> を除外する**
 - **Live Unit Testing** >  **\<selected method> 以外のすべてを除外する**
 
-### <a name="exclude-tests-programmatically"></a>プログラムによってテストを除外する
+### <a name=&quot;exclude-tests-programmatically&quot;></a>プログラムによってテストを除外する
 
 Live Unit Testing でのカバレッジのレポートからメソッド、クラス、または構造体をプログラムによって除外する場合には、<xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> 属性を適用できます。
 
 Live Unit Testing から個別のメソッドを除外するには、次の属性を使用します。
 
-- xUnit の場合: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
+- xUnit の場合: `[Trait(&quot;Category&quot;, &quot;SkipWhenLiveUnitTesting")]`
 - NUnit の場合: `[Category("SkipWhenLiveUnitTesting")]`
 - MSTest の場合: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
@@ -224,5 +224,5 @@ Live Unit Testing からテストのアセンブリ全体を除外するには�
 
 - [コード テスト ツール](https://visualstudio.microsoft.com/vs/testing-tools/)
 - [Live Unit Testing のブログ](https://devblogs.microsoft.com/visualstudio/live-unit-testing-in-visual-studio-2017-enterprise/)
-- [ライブ単体テストに関する FAQ](live-unit-testing-faq.md)
+- [ライブ単体テストに関する FAQ](live-unit-testing-faq.yml)
 - [Channel 9 ビデオ: Visual Studio の Live Unit Testing](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105)

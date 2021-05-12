@@ -8,19 +8,19 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 35C7AB05-07D5-4B38-BCAC-AB88444E7368
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8360c48e9868f6ed5d81fffc748d050404211228
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 3504e866a7f89de8fa38f92a8bfea501ddd952c9
+ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547493"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "109666797"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する
 
@@ -82,7 +82,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
 **シナリオ 3: クライアントは元々Web からインストールされていましたが、現在はネットワーク レイアウトからの更新プログラムのみを受け取る必要があります**
 
-場合によっては、クライアント コンピューターに既に Web から Visual Studio がインストールされている可能性がありますが、管理者は、今後のすべての更新プログラムを管理されたレイアウトから取得することを希望しています。 これを行うためにサポートされている唯一の方法は、目的のバージョンの製品を使用してネットワーク レイアウトを作成し、クライアント コンピューター上で、"_レイアウトの場所から_" ブートストラップを実行することです (例: `\\network\share\vs_enterprise.exe`)。 理想的には、元のクライアントのインストールは、ChannelURI が正しく構成されたネットワーク レイアウトからブートストラップを使用して行われるべきですが、ネットワーク レイアウトの場所から更新されたブートストラップを実行することもできます。 どちらの操作でも、クライアント コンピューター上に特定のレイアウトの場所との接続が組み込まれます。 このシナリオが正しく機能するための唯一の注意点は、レイアウトの `response.json` ファイルの "ChannelURI" が、最初のインストールが行われたときにクライアントのマシンに設定された ChannelURI と同じである必要があることです。 ほとんどの場合、この値は元々インターネットの[リリース チャネル](https://aka.ms/vs/16/release/channel)に設定されていました。 
+場合によっては、クライアント コンピューターに既に Web から Visual Studio がインストールされている可能性がありますが、管理者は、今後のすべての更新プログラムを管理されたレイアウトから取得することを希望しています。 これを行うためにサポートされている唯一の方法は、目的のバージョンの製品を使用してネットワーク レイアウトを作成し、クライアント コンピューター上で、"_レイアウトの場所から_" ブートストラップを実行することです (例: `\\server\share\vs_enterprise.exe`)。 理想的には、元のクライアントのインストールは、ChannelURI が正しく構成されたネットワーク レイアウトからブートストラップを使用して行われるべきですが、ネットワーク レイアウトの場所から更新されたブートストラップを実行することもできます。 どちらの操作でも、クライアント コンピューター上に特定のレイアウトの場所との接続が組み込まれます。 このシナリオが正しく機能するための唯一の注意点は、レイアウトの `response.json` ファイルの "ChannelURI" が、最初のインストールが行われたときにクライアントのマシンに設定された ChannelURI と同じである必要があることです。 ほとんどの場合、この値は元々インターネットの[リリース チャネル](https://aka.ms/vs/16/release/channel)に設定されていました。 
 
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE の通知を制御する
