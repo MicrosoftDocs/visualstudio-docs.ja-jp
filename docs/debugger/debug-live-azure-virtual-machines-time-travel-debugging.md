@@ -13,12 +13,12 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: eb0db0bab5295925f71a81645e64fdeb5f2077df
-ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+ms.openlocfilehash: f8aabb109de02a1beec326407472a841fe16425a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90809571"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798454"
 ---
 # <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>スナップショット デバッガーを使用して Azure 仮想マシン上でライブ ASP.NET アプリを記録および再生する
 
@@ -37,7 +37,7 @@ TTD の記録をキャプチャしても、アプリケーションは停止し�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* Azure Virtual Machines (VM) 用のタイム トラベル デバッグは、**Azure 開発ワークロード**を備えた Visual Studio 2019 Enterprise 以降でのみ使用できます ( **[個別のコンポーネント]** タブの **[デバッグとテスト]**  >  **[スナップショット デバッガー]** にあります)。
+* Azure Virtual Machines (VM) 用のタイム トラベル デバッグは、**Azure 開発ワークロード** を備えた Visual Studio 2019 Enterprise 以降でのみ使用できます ( **[個別のコンポーネント]** タブの **[デバッグとテスト]**  >  **[スナップショット デバッガー]** にあります)。
 
     まだ [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/) がインストールされていない場合はインストールしてください。
 
@@ -105,7 +105,7 @@ TTD の記録をキャプチャしても、アプリケーションは停止し�
 
     Web サイト自体はまだ稼働中であり、エンド ユーザーが後続の TTD アクティビティの影響を受けることはありません。 既定では、スナップポイントごとに 1 つのスナップショットのみがキャプチャされます。スナップショットがキャプチャされると、スナップポイントは無効になります。 そのスナップポイントで別のスナップショットをキャプチャする場合は、 **[コレクションの更新]** をクリックしてスナップポイントを元に戻すことができます。
 
-**ヘルプが必要ですか?** [トラブルシューティングと既知の問題](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md) のページを参照してください。
+**ヘルプが必要ですか?** [トラブルシューティングと既知の問題](../debugger/debug-live-azure-apps-troubleshooting.md)と[スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.yml) のページを参照してください。
 
 ## <a name="set-a-conditional-snappoint"></a>条件付きスナップポイントを設定する
 
@@ -116,4 +116,4 @@ TTD の記録をキャプチャしても、アプリケーションは停止し�
 このチュートリアルでは、Azure Virtual Machines のタイム トラベル記録を収集する方法について学習しました。 必要に応じて、スナップショット デバッガーの詳細な記事を参照してください。
 
 > [!div class="nextstepaction"]
-> [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.md)
+> [スナップショットのデバッグに関する FAQ](../debugger/debug-live-azure-apps-faq.yml)

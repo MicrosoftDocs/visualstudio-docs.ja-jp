@@ -35,19 +35,19 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cdc0231b7c42dbdb4aca86040347ec5bfd57607d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0865c71d2893203ca3af925da1d76946d882c4c4
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99940671"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798584"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでブレークポイントを使用する
 
 ブレークポイントは、開発者が利用できる重要なデバッグ手法の 1 つです。 デバッガーの実行を一時停止したい任意の場所に、ブレークポイントを設定します。 たとえば、特定のブレークポイントで、コードの変数の状態を確認したり、呼び出し履歴を調べたりすることができます。  ブレークポイントを使用して警告または問題を解決しようとしている場合は、「[Visual Studio デバッガーでのブレークポイントのトラブルシューティング](../debugger/troubleshooting-breakpoints.md)」を参照してください。
 
 > [!NOTE]
-> 解決しようとしているタスクまたは問題はわかっていても、使用するブレークポイントの種類を知る必要がある場合は、[FAQ - デバッグ機能の検索](../debugger/find-your-debugging-task.md#pause-running-code)に関するページを参照してください。
+> 解決しようとしているタスクまたは問題はわかっていても、使用するブレークポイントの種類を知る必要がある場合は、[FAQ - デバッグ機能の検索](../debugger/find-your-debugging-task.yml#pause-running-code)に関するページを参照してください。
 
 ## <a name="set-breakpoints-in-source-code"></a><a name="BKMK_Overview"></a> ソース コードにブレークポイントを設定する
 

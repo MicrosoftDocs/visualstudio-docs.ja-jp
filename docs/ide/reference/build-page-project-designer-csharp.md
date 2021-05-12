@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95404beb5c2be5363c9ef91e770237b453970429
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91b254f4c075693e23d8f650356cd97e86a4c746
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836450"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798558"
 ---
 # <a name="build-page-project-designer-c"></a>[ビルド] ページ (プロジェクト デザイナー) (C#)
 
@@ -119,7 +119,7 @@ TRACE をアプリケーションのすべてのソース コード ファイル
 **[特定の警告]** - 指定した警告をエラーとして扱います。 警告番号が複数ある場合は、コンマまたはセミコロンで区切ります。
 
 > [!TIP]
-> コード分析の警告がエラーとして扱われないようにするには、「[Code analysis FAQ](../../code-quality/analyzers-faq.md#treat-warnings-as-errors)」(コード分析の FAQ) を参照してください。
+> コード分析の警告がエラーとして扱われないようにするには、「[Code analysis FAQ](/visualstudio/code-quality/analyzers-faq#treat-warnings-as-errors)」(コード分析の FAQ) を参照してください。
 
 ## <a name="output"></a>出力
 
