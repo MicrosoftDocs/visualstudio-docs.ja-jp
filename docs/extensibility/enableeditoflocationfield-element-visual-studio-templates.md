@@ -1,6 +1,6 @@
 ---
 title: EnableEditOfLocationField 要素 (Visual Studio テンプレート)
-description: EnableEditOfLocationField 要素と、ユーザーが [場所] フィールドを編集できるかどうかを指定する方法について説明します。
+description: EnableEditOfLocationField 要素について、さらに、ユーザーが場所フィールドを編集できるかどうかを、それによって指定する方法について説明します。
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,7 +16,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c3f2ca8799b0816ffe5c33d954d362183f330f25
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070194"
@@ -51,12 +51,12 @@ ms.locfileid: "105070194"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストはまたはである必要があります。これは、ユーザーが [ `true` `false` **新しいプロジェクト**] ダイアログボックスの [**場所**] テキストボックスを編集できるかどうかを示します。
+ テキストは、`true` または `false` のいずれかを指定する必要があります。これは、ユーザーが **[新しいプロジェクト]** ダイアログ ボックスの **[場所]** ボックスを編集できるかどうかを示します。
 
 ## <a name="remarks"></a>解説
- `EnableEditOfLocationField` は省略可能な要素です。 既定値は `true` で、ユーザーは [**新しいプロジェクト**] ダイアログボックスの [**場所**] テキストボックスで値を編集できます。
+ `EnableEditOfLocationField` は省略可能な要素です。 既定値は `true` で、ユーザーは **[新しいプロジェクト]** ダイアログ ボックスの **[場所]** ボックスの値を編集できます。
 
- [ **新しいプロジェクト** ] ダイアログボックスの [ **場所** ] テキストボックスで、新しいプロジェクトを保存するディレクトリを指定します。
+ **[新しいプロジェクト]** ダイアログ ボックスの **[場所]** ボックスで、新規プロジェクトを保存するディレクトリを指定します。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーションでのメタデータの例を次に示します。

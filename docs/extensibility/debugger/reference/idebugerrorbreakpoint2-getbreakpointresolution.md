@@ -1,6 +1,6 @@
 ---
-description: エラーを説明するブレークポイントエラーの解決方法を取得します。
-title: 'IDebugErrorBreakpoint2:: GetBreakpointResolution |Microsoft Docs'
+description: エラーについて記述しているブレークポイント エラー解決方法を取得します。
+title: IDebugErrorBreakpoint2::GetBreakpointResolution | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e326242b54702353fb47162c79ba6f59b537fbf0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065945"
 ---
 # <a name="idebugerrorbreakpoint2getbreakpointresolution"></a>IDebugErrorBreakpoint2::GetBreakpointResolution
-エラーを説明するブレークポイントエラーの解決方法を取得します。
+エラーについて記述しているブレークポイント エラー解決方法を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetBreakpointResolution(
 
 ## <a name="parameters"></a>パラメーター
 `ppErrorResolution`\
-入出力エラーを説明する [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) オブジェクトを返します。
+[出力] エラーについて記述している [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)
 - [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)

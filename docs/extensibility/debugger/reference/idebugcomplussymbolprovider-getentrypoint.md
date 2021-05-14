@@ -1,6 +1,6 @@
 ---
-description: アプリケーションのエントリポイントを取得します。
-title: 'IDebugComPlusSymbolProvider:: GetEntryPoint |Microsoft Docs'
+description: アプリケーション エントリ ポイントを取得します。
+title: IDebugComPlusSymbolProvider::GetEntryPoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 60c05683bae7845c852b954ed330b26557504fd6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058847"
 ---
 # <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
-アプリケーションのエントリポイントを取得します。
+アプリケーション エントリ ポイントを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,19 +45,19 @@ int GetEntryPoint(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[入力] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意の識別子。
+[入力] モジュールの一意識別子。
 
 `ppAddress`\
-入出力 [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるエントリポイントを返します。
+[出力] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるエントリ ポイントを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetEntryPoint(
@@ -91,5 +91,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,6 +1,6 @@
 ---
 description: 参照の親参照を取得します。
-title: 'IDebugReference2:: GetParent |Microsoft Docs'
+title: IDebugReference2::GetParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9abb7c6f1d020244c930a4e884fcce5fdf23f5f9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071410"
@@ -42,10 +42,10 @@ int GetParent (
 
 ## <a name="parameters"></a>パラメーター
 `ppParent`\
-入出力このプロパティの親を表す [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) オブジェクトを返します。
+[出力] このプロパティの親を表す [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
  常に `E_NOTIMPL` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

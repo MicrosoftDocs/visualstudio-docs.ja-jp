@@ -1,6 +1,6 @@
 ---
-title: ShowByDefault よる要素 (Visual Studio テンプレート)
-description: ShowByDefault 要素について説明し、false に設定した場合は、指定された TemplateGroupID の下にのみテンプレートが表示されることを指定します。
+title: ShowByDefault 要素 (Visual Studio テンプレート)
+description: ShowByDefault 要素と、それが false に設定されているとき、指定の TemplateGroupID の下でのみテンプレートが表示されるように指定されるしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 25ba91a6276615929fed9494000abbfde07ef2b8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056429"
 ---
-# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault よる要素 (Visual Studio テンプレート)
-の場合は `false` 、指定された [templategroupid](../extensibility/templategroupid-element-visual-studio-templates.md)の下にのみテンプレートが表示されることを指定します。
+# <a name="showbydefault-element-visual-studio-templates"></a>ShowByDefault 要素 (Visual Studio テンプレート)
+`false` の場合、指定された [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) にのみテンプレートが表示されることを指定します。
 
  \<VSTemplate> \<TemplateData>
  \<ShowByDefault>
@@ -55,7 +55,7 @@ ms.locfileid: "105056429"
 
  テキストは、`true` または `false` である必要があります。 true の場合、すべてのプロジェクトの種類のテンプレートが表示されることを指定します。 false の場合、指定された `TemplateGroupID` にのみテンプレートが表示されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `ShowByDefault` は省略可能な要素です。 既定値は `true` です。
 
 ## <a name="example"></a>例
@@ -86,7 +86,7 @@ ms.locfileid: "105056429"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>関連項目
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
 - [TemplateGroupID 要素 (Visual Studio テンプレート)](../extensibility/templategroupid-element-visual-studio-templates.md)

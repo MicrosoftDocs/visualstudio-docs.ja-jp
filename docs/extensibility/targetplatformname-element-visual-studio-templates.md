@@ -1,6 +1,6 @@
 ---
-title: TargetPlatformName 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: TargetPlatformName 要素について、およびプロジェクトテンプレートが対象とするプラットフォームをどのように指定するかについて説明します。
+title: TargetPlatformName 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: TargetPlatformName 要素について、また、プロジェクト テンプレートがターゲットとするプラットフォームを、それによって指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -13,7 +13,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5045a5fc2f29d00c08996fc71acedb228e4f98ae
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068402"
@@ -50,7 +50,7 @@ ms.locfileid: "105068402"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  テキストは、 **Windows** である必要があります。
 
 ## <a name="example"></a>例
@@ -66,6 +66,6 @@ ms.locfileid: "105068402"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>関連項目
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

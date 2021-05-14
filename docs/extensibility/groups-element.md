@@ -1,6 +1,6 @@
 ---
-title: Groups 要素 |Microsoft Docs
-description: Groups 要素には、VSPackage のコマンドグループを定義するエントリが含まれています。 この記事には例が含まれています。
+title: Groups 要素 | Microsoft Docs
+description: Groups 要素には、VSPackage のコマンド グループを定義するエントリが含まれています。 この記事には例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: ab9ca0a55d8d07aa2541e8884ee92c1c308cabe9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057573"
 ---
 # <a name="groups-element"></a>Groups 要素
-VSPackage のコマンドグループを定義するエントリが含まれています。
+VSPackage のコマンド グループを定義するエントリが含まれています。
 
 ## <a name="syntax"></a>構文
 
@@ -39,20 +39,20 @@ VSPackage のコマンドグループを定義するエントリが含まれて�
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Group 要素](../extensibility/group-element.md)|単一のコマンドグループを表します。|
-|[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンドグループを定義するエントリが含まれています。|
+|[Group 要素](../extensibility/group-element.md)|単一のコマンド グループを表します。|
+|[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンド グループを定義するエントリが含まれています。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツールバーのコマンドのコレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンド コレクションを表します。|
 
 ## <a name="example"></a>例
 
@@ -65,5 +65,5 @@ VSPackage のコマンドグループを定義するエントリが含まれて�
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)
