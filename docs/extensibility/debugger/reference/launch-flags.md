@@ -1,6 +1,6 @@
 ---
 description: デバッグ起動フラグを指定します。
-title: LAUNCH_FLAGS |Microsoft Docs
+title: LAUNCH_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3e12dc587a77e428d3d4c4740043ab5651b7897a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058002"
@@ -26,7 +26,7 @@ ms.locfileid: "105058002"
 # <a name="launch_flags"></a>LAUNCH_FLAGS
 デバッグ起動フラグを指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_LAUNCH_FLAGS {
@@ -52,23 +52,23 @@ public enum enum_LAUNCH_FLAGS {
 デバッグのプロセスを起動します。
 
 `LAUNCH_NODEBUG`\
-デバッグせずにプロセスを起動します。
+デバッグなしでプロセスを起動します。
 
 `LAUNCH_ENABLE_ENC`\
-非推奨です。使用しないでください。
+非推奨。使用しないでください。
 
 `LAUNCH_MERGE_ENV`\
-プロセスを起動し、環境を起動中のホストにマージします。
+プロセスを起動し、環境と起動元のホストをマージします。
 
-## <a name="remarks"></a>注釈
-これらの値は、 [Launchsuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+これらの値は、[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) メソッドに引数として渡されます。
 
-これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

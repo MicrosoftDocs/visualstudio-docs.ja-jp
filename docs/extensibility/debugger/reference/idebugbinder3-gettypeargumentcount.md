@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、このオブジェクトに関連付けられている引数の型の数を返します。
-title: 'IDebugBinder3:: GetTypeArgumentCount |Microsoft Docs'
+description: このメソッドからは、このオブジェクトに関連付けられている引数型の数を返します。
+title: IDebugBinder3::GetTypeArgumentCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: aa70a07273a0b4dfdf24219949b411f42b0ddc44
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054492"
 ---
 # <a name="idebugbinder3gettypeargumentcount"></a>IDebugBinder3::GetTypeArgumentCount
-このメソッドは、このオブジェクトに関連付けられている引数の型の数を返します。
+このメソッドからは、このオブジェクトに関連付けられている引数型の数を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int GetTypeArgumentCount(
 
 ## <a name="parameters"></a>パラメーター
 `uCount`\
-入出力このオブジェクトに関連付けられている引数の型の数。
+[出力] このオブジェクトに関連付けられている引数型の数。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドによって返される値を使用して、 [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) メソッドで使用する配列を割り当てることができます。
+## <a name="remarks"></a>解説
+ このメソッドによって返される値は、[GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md) メソッドと共に使用するため、配列を割り当てる目的で利用できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [GetTypeArguments](../../../extensibility/debugger/reference/idebugbinder3-gettypearguments.md)
