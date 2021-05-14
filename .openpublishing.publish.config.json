@@ -113,7 +113,7 @@
   ],
   "branches_to_filter": [
     "master",
-    "live"
+    "live-sxs"
   ],
   "git_repository_url_open_to_public_contributors": "",
   "git_repository_branch_open_to_public_contributors": "",

@@ -1,6 +1,6 @@
 ---
-description: 新しく作成されたデバッグエンジン (DE) を表すオブジェクトを取得します。
-title: 'IDebugEngineCreateEvent2:: GetEngine |Microsoft Docs'
+description: 新しく作成されたデバッグ エンジン (DE) を表すオブジェクトを取得します。
+title: IDebugEngineCreateEvent2::GetEngine | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 66e58c94f21eb29b7cb85066001e5c4472730f76
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066088"
 ---
 # <a name="idebugenginecreateevent2getengine"></a>IDebugEngineCreateEvent2::GetEngine
-新しく作成されたデバッグエンジン (DE) を表すオブジェクトを取得します。
+新しく作成されたデバッグ エンジン (DE) を表すオブジェクトを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetEngine(
 
 ## <a name="parameters"></a>パラメーター
 `pEngine`\
-入出力新しく作成された DE を表す [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) オブジェクトを返します。
+[出力] 新しく作成された DE を表す [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md)
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

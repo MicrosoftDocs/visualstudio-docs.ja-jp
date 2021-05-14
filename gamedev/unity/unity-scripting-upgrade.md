@@ -12,7 +12,7 @@ ms.workload:
 - unity
 ms.openlocfilehash: c1b745e4a1da85324b2dc73e30bebb873e2d0720
 ms.sourcegitcommit: bbed6a0b41ac4c4a24e8581ff3b34d96345ddb00
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/03/2020
 ms.locfileid: "96559811"
@@ -58,9 +58,9 @@ Unity には、Unity 2017.1 のリリースで、.NET 4.6 にアップグレー�
 
 ![アセンブリ参照がない](media/vs/vstu-missing-reference.png)
 
-Visual Studio では Unity のプロジェクトが開かれるたびに、.csproj と .sln のファイルが再生成されます。 そのため、プロジェクトを開くときに失われてしまうので、Visual Studio に直接アセンブリ参照を追加できません。 代わりに、 **csc.exe** という名前の特殊なテキストファイルを使用する必要があります。
+Visual Studio では Unity のプロジェクトが開かれるたびに、.csproj と .sln のファイルが再生成されます。 そのため、プロジェクトを開くときに失われてしまうので、Visual Studio に直接アセンブリ参照を追加できません。 代わりに、**csc.rsp** という特別なテキスト ファイルを使用する必要があります。
 
-1. Unity プロジェクトのルート **アセット** ディレクトリに、 **csc.exe** という名前の新しいテキストファイルを作成します。
+1. ご使用の Unity のプロジェクトのルートの **Assets** ディレクトリに **csc.rsp** という名前の新しいテキスト ファイルを作成します。
 
 1. 空のテキスト ファイルの最初の行に、`-r:System.Net.Http.dll` と入力しファイルを保存します。 "System.Net.Http.dll" は、参照が見つからない含まれているすべてのアセンブリに置き換えることができます。
 

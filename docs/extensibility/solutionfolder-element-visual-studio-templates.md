@@ -1,6 +1,6 @@
 ---
-title: SolutionFolder 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: SolutionFolder 要素について、および複数プロジェクトのテンプレートでプロジェクトをグループ化する方法について説明します。
+title: SolutionFolder 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: SolutionFolder 要素と、それによってマルチプロジェクト テンプレートでプロジェクトがグループ化されるしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,7 +18,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: f65607a5411270e7f21e6ec6cdac0c087824b32b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056338"
@@ -61,8 +61,8 @@ ms.locfileid: "105056338"
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|複数プロジェクトのテンプレートの構成と内容を指定します。|
 |`SolutionFolder`|複数プロジェクトのテンプレートをグループ化します。|
 
-## <a name="remarks"></a>注釈
- 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `SolutionFolder` 要素は、テンプレート内のプロジェクトをグループに編成するために使用されます。 `SolutionFolder` 要素で指定されたフォルダーは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内のプロジェクトのソリューション フォルダーとして作成されます。 複数プロジェクトのテンプレートの詳細については、「 [方法: 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)」を参照してください。
+## <a name="remarks"></a>解説
+ 複数プロジェクトのテンプレートは、2 つ以上のプロジェクトのコンテナーとして機能します。 `SolutionFolder` 要素は、テンプレート内のプロジェクトをグループに編成するために使用されます。 `SolutionFolder` 要素で指定されたフォルダーは、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 内のプロジェクトのソリューション フォルダーとして作成されます。 複数プロジェクトのテンプレートの詳細については、「[方法 : 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)」を参照してください。
 
 ## <a name="example"></a>例
  この例では、`SolutionFolder` 要素を使用して、複数のプロジェクトのテンプレートを 2 つのグループ、`Math Classes` と `Graphics Classes` に分割します。 テンプレートには 4 つのプロジェクトが含まれ、その 2 つは各ソリューション フォルダーに配置されます。
@@ -99,7 +99,7 @@ ms.locfileid: "105056338"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
-- [方法: 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)
+## <a name="see-also"></a>関連項目
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [方法 : 複数プロジェクトのテンプレートを作成する](../ide/how-to-create-multi-project-templates.md)

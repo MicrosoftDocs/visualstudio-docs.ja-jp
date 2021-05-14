@@ -1,6 +1,6 @@
 ---
-description: 列挙体を最初の DEBUG_PROPERTY_INFO 要素にリセットします。
-title: 'IEnumDebugPropertyInfo2:: Reset |Microsoft Docs'
+description: 最初の DEBUG_PROPERTY_INFO 要素に列挙をリセットします。
+title: IEnumDebugPropertyInfo2::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c94b12242c0b57b94c9c26b9f23d9d7577de293b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082882"
 ---
 # <a name="ienumdebugpropertyinfo2reset"></a>IEnumDebugPropertyInfo2::Reset
-列挙体を最初の要素にリセットします。
+列挙を最初の要素にリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -39,10 +39,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドが呼び出された後 [、次のメソッドを](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) 呼び出すと、列挙体の最初の要素が返されます。
+## <a name="remarks"></a>解説
+ このメソッドを呼び出した後、次に [Next](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) メソッドを呼び出すと、列挙の最初の要素が返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)

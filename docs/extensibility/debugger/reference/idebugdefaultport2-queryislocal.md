@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、このポートがローカルコンピューター上にあるかどうかを判断します。
-title: 'IDebugDefaultPort2:: QueryIsLocal |Microsoft Docs'
+description: このメソッドを実行すると、このポートがローカル コンピューター上にあるかどうかが判断されます。
+title: IDebugDefaultPort2::QueryIsLocal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: e678e1219bfc9c64fe33be545e82e7fbb596b2db
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067128"
 ---
 # <a name="idebugdefaultport2queryislocal"></a>IDebugDefaultPort2::QueryIsLocal
-このメソッドは、このポートがローカルコンピューター上にあるかどうかを判断します。
+このメソッドを実行すると、このポートがローカル コンピューター上にあるかどうかが判断されます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>戻り値
- `S_OK`このポートがローカルの場合 (呼び出し元と同じコンピューター上にある場合)、または `S_FALSE` ポートが別のコンピューター上にある場合は、を返します。
+ このポートがローカルである (呼び出し元と同じコンピューター上にある) 場合は `S_OK` を返し、そのポートが別のコンピューター上にある場合は、`S_FALSE` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

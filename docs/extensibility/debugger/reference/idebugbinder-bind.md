@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、シンボルの現在の値を格納しているメモリコンテキストまたはオブジェクトを取得します。
-title: 'IDebugBinder:: Bind |Microsoft Docs'
+description: このメソッドを実行すると、シンボルの現在の値を格納しているメモリ コンテキストまたはオブジェクトが取得されます。
+title: IDebugBinder::Bind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 859ee8d474b25533d990c92e4c4f038d2a62f987
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067434"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
-このメソッドは、シンボルの現在の値を格納しているメモリコンテキストまたはオブジェクトを取得します。
+このメソッドを実行すると、シンボルの現在の値を格納しているメモリ コンテキストまたはオブジェクトが取得されます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,18 +46,18 @@ int Bind(
 
 ## <a name="parameters"></a>パラメーター
 `pContainer`\
-からによって参照される子を含む [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) `pField` 。
+[入力] `pField` によって参照される子を含む [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)。
 
 `pField`\
-から記号を表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 。
+[入力] シンボルを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)。
 
 `ppObject`\
-入出力 `IDebugObject` シンボルのインスタンスを表すを返します。
+[出力] シンボルのインスタンスを表す `IDebugObject` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,24 +1,25 @@
-﻿---
-title: 'IDiaSymbol:: get_isOptimizedAway |Microsoft Docs'
+---
+description: この変数を最適化により削除するかどうかを指定します。
+title: IDiaSymbol::get_isOptimizedAway | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: c18b1e38-b152-4a13-aba0-59faded5b2e6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ab9598262ba8dd73d6c0725e7bc8450f6ec218
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 6612294caa40fd885690cce3f40f7d49ffa65c5c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740147"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634676"
 ---
 # <a name="idiasymbolget_isoptimizedaway"></a>IDiaSymbol::get_isOptimizedAway
-変数を最適化するかどうかを指定します。
+この変数を最適化により削除するかどうかを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,10 +31,10 @@ HRESULT get_isOptimizedAway(
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力変数が最適化されているかどうかを指定する `BOOL` へのポインター。
+[出力] この変数を最適化により削除するかどうかを指定する `BOOL` へのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

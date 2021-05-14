@@ -14,7 +14,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8b1d7e3b8cc67f839977eb1e53d80731e59c064e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068428"
@@ -23,11 +23,11 @@ ms.locfileid: "105068428"
 
 プロジェクト テンプレートが正しく動作するために必要なオペレーティング システムの最小バージョンを指定します。 この要素は [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] アプリを作成するプロジェクト テンプレートに使用されます。
 
- `RequiredPlatformVersion` の値は、オペレーティング システムのバージョンと直接比較されます。 `RequiredPlatformVersion`がオペレーティングシステムのバージョンよりも大きい場合、テンプレートは [**新しいプロジェクト**] ダイアログボックスに表示されません。 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 以上のテンプレートを指定するには、`RequiredPlatformVersion` を 6.2.0 に設定します。 以上のテンプレートを指定するに [!INCLUDE[win81](../debugger/includes/win81_md.md)] は、を `RequiredPlatformVersion` 6.3.0 に設定します。
+ `RequiredPlatformVersion` の値は、オペレーティング システムのバージョンと直接比較されます。 `RequiredPlatformVersion` がオペレーティング システムのバージョンよりも高い場合、テンプレートは **[新しいプロジェクト]** ダイアログ ボックスには表示されません。 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 以上のテンプレートを指定するには、`RequiredPlatformVersion` を 6.2.0 に設定します。 [!INCLUDE[win81](../debugger/includes/win81_md.md)] 以上のテンプレートを指定するには、`RequiredPlatformVersion` を 6.3.0 に設定します。
 
  `RequiredPlatformVersion`=8 を指定できるテンプレートは、顧客の以前の [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] テンプレートと互換性があります。
 
- .Vstemplate TemplateData....TargetPlatformName RequiredPlatformVersion
+ VSTemplate TemplateData .....TargetPlatformName RequiredPlatformVersion
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ ms.locfileid: "105068428"
 
 ## <a name="attributes-and-elements"></a>属性と要素
 
- [なし] :
+ なし。
 
 ### <a name="attributes"></a>属性
 
@@ -57,7 +57,7 @@ ms.locfileid: "105068428"
 
  テキスト値が必要です。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
  このテキストは、テンプレートで必要なオペレーティング システムの最小バージョンを指定します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "105068428"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [TargetPlatformName 要素 (Visual Studio テンプレート)](../extensibility/targetplatformname-element-visual-studio-templates.md)
 - [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

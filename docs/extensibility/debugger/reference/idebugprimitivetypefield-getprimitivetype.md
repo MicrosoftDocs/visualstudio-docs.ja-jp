@@ -1,6 +1,6 @@
 ---
 description: このフィールドに関連付けられているプリミティブ型を取得します。
-title: 'IDebugPrimitiveTypeField:: GetPrimitiveType |Microsoft Docs'
+title: IDebugPrimitiveTypeField::GetPrimitiveType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c731ff93dae4bf605933263ffc1ca6bbef45431b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071715"
@@ -41,10 +41,10 @@ int GetPrimitiveType (
 
 ## <a name="parameters"></a>パラメーター
 `pdwType`\
-入出力プリミティブ型を表す [Corelementtype 列挙子](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) の値。
+[出力] プリミティブ型を表す [CorElementType 列挙型](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration)の値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返します `S_OK` 。それ以外の場合はを返し `S_FALSE` ます。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

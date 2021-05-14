@@ -1,6 +1,6 @@
 ---
-description: 名前またはメトリックを指定して、式エバリュエーターのメトリックファイルを取得します。
-title: 'IDebugSettingsCallback2:: GetEEMetricFile |Microsoft Docs'
+description: 指定した名前またはメトリックの、式エバリュエーターのメトリック ファイルを取得します。
+title: IDebugSettingsCallback2::GetEEMetricFile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e9fdb578001ebb1999abb20f0f01861b7821175b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081374"
 ---
 # <a name="idebugsettingscallback2geteemetricfile"></a>IDebugSettingsCallback2::GetEEMetricFile
-名前またはメトリックを指定して、式エバリュエーターのメトリックファイルを取得します。
+指定した名前またはメトリックの、式エバリュエーターのメトリック ファイルを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,19 +46,19 @@ private int GetEEMetricFile(
 
 ## <a name="parameters"></a>パラメーター
 `guidLang`\
-からプログラミング言語の一意の識別子。
+[in] プログラミング言語の一意識別子。
 
 `guidVendor`\
-からベンダーの一意識別子。
+[in] ベンダーの一意識別子。
 
 `pszMetric`\
-からメトリックの名前。
+[in] メトリックの名前。
 
 `pbstrValue`\
-入出力メトリックファイルの内容を文字列として返します。
+[out] メトリック ファイルの内容を文字列として返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)
