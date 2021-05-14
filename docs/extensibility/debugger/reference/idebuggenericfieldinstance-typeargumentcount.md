@@ -1,6 +1,6 @@
 ---
 description: このインスタンスの型パラメーター引数の数を返します。
-title: 'IDebugGenericFieldInstance:: TypeArgumentCount |Microsoft Docs'
+title: IDebugGenericFieldInstance::TypeArgumentCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c7afd914b3880ca1004a319a66b3f4176e15789e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072872"
@@ -41,13 +41,13 @@ int TypeArgumentCount(
 
 ## <a name="parameters"></a>パラメーター
 `pcArgs`\
-[入力、出力]このインスタンスの型パラメーター引数の数。
+[入力、出力] このインスタンスの型パラメーター引数の数。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- たとえば、List の場合、このメソッドは \<int> 1 を返します。リストの場合、 \<int,float2> このメソッドは2を返します。 型引数がない場合、このメソッドは0を返します。
+## <a name="remarks"></a>解説
+ たとえば、List\<int> の場合、このメソッドは 1 を返し、List\<int,float2> の場合、このメソッドは 2 を返します。 型引数がない場合、このメソッドは 0 を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)
