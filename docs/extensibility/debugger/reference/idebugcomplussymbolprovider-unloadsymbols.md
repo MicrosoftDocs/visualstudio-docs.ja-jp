@@ -1,6 +1,6 @@
 ---
-description: 指定したモジュールのデバッグシンボルをメモリからアンロードします。
-title: 'IDebugComPlusSymbolProvider:: UnloadSymbols |Microsoft Docs'
+description: 指定されたモジュールのデバッグ シンボルをメモリからアンロードします。
+title: IDebugComPlusSymbolProvider::UnloadSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2684ff064ad1c69d71e2a64cec1526d50d7bfa47
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067232"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
-指定したモジュールのデバッグシンボルをメモリからアンロードします。
+指定されたモジュールのデバッグ シンボルをメモリからアンロードします。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int UnloadSymbols(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[入力] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[入力] モジュールの一意識別子。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::UnloadSymbols(
@@ -93,5 +93,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

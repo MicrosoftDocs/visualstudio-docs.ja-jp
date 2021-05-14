@@ -1,6 +1,6 @@
 ---
-description: 'IDebugEngineLaunch2:: TerminateProcess はプロセスを終了します。'
-title: 'IDebugEngineLaunch2:: TerminateProcess |Microsoft Docs'
+description: IDebugEngineLaunch2::TerminateProcess は、プロセスを終了するために使用されます。
+title: IDebugEngineLaunch2::TerminateProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ede981ee812c69654614cf828fc31a4ccf7849be
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065958"
@@ -42,15 +42,15 @@ int TerminateProcess (
 
 ## <a name="parameters"></a>パラメーター
 `pProcess`\
-から終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
+[入力] 終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドを呼び出す前に、 [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) メソッドを呼び出してください。
+## <a name="remarks"></a>解説
+ このメソッドを呼び出す前に、[CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) メソッドを呼び出してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md)

@@ -1,6 +1,6 @@
 ---
-title: ビットマップ要素 |Microsoft Docs
-description: ビットマップ要素は、1つまたは複数のビットマップ要素をグループ化します。 この記事には、ビットマップ要素の例が含まれています。
+title: Bitmaps 要素 | Microsoft Docs
+description: Bitmaps 要素を使用すると、1 つまたは複数のビットマップ要素をグループ化できます。 この記事には、Bitmaps 要素の例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: cc17162c8d66df99eefe721589863ee4221c8602
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068207"
 ---
-# <a name="bitmaps-element"></a>ビットマップ要素
+# <a name="bitmaps-element"></a>Bitmaps 要素
 [ビットマップ要素](../extensibility/bitmap-element.md)の要素をグループ化します。
 
 ## <a name="syntax"></a>構文
@@ -39,20 +39,20 @@ ms.locfileid: "105068207"
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[ビットマップ要素](../extensibility/bitmaps-element.md)|ビットマップ要素をグループ化します。|
-|[Bitmap 要素](../extensibility/bitmap-element.md)|ビットマップを定義します。|
+|[Bitmaps 要素](../extensibility/bitmaps-element.md)|ビットマップ要素をグループ化します。|
+|[ビットマップ要素](../extensibility/bitmap-element.md)|ビットマップを定義します。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツールバーのコマンドのコレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンド コレクションを表します。|
 
 ## <a name="example"></a>例
 
@@ -65,5 +65,5 @@ ms.locfileid: "105068207"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

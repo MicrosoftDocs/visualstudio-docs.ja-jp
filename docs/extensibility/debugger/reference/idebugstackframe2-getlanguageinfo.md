@@ -1,6 +1,6 @@
 ---
-description: このスタックフレームに関連付けられている言語を取得します。
-title: 'IDebugStackFrame2:: Get言語 Info |Microsoft Docs'
+description: スタック フレームに関連付けられている言語を取得します。
+title: IDebugStackFrame2::GetLanguageInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 78d518975ce343407c7acc733bbd094c3f00ab2a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105053426"
 ---
 # <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
 
-このスタックフレームに関連付けられている言語を取得します。
+スタック フレームに関連付けられている言語を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,10 +46,10 @@ int GetLanguageInfo (
 ## <a name="parameters"></a>パラメーター
 
 `pbstrLanguage`\
-入出力このスタックフレームに関連付けられているメソッドを実装する言語の名前を返します。
+[出力] このスタック フレームに関連付けられているメソッドを実装する言語の名前を返します。
 
 `pguidLanguage`\
-入出力 `GUID` 言語のを返します。 たとえば、言語の場合、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 次のような値を返すことができます。
+[出力] 言語の `GUID` を返します。 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 言語の場合、たとえば、次を返すことができます。
 
 - `guidVBScriptLang`\
 
@@ -65,8 +65,8 @@ int GetLanguageInfo (
 
 ## <a name="return-value"></a>戻り値
 
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)
