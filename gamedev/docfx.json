@@ -38,7 +38,7 @@
         "extendBreadcrumb": true,
         "feedback_system": "None",
         "feedback_github_repo": "",
-        "feedback_product_url": "https://developercommunity.visualstudio.com/",
+        "feedback_product_url": "",
         "zone_pivot_group_filename": "gamedev/zone-pivot-groups.json"
       },
       "fileMetadata": {},

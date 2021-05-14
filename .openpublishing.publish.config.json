@@ -115,8 +115,8 @@
     "master",
     "live-sxs"
   ],
-  "git_repository_url_open_to_public_contributors": "",
-  "git_repository_branch_open_to_public_contributors": "",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/visualstudio-docs.ja-jp",
+  "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
