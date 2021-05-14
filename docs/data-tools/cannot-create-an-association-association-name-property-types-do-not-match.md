@@ -1,6 +1,6 @@
 ---
 title: プロパティの型が一致しません
-description: 関連付けを作成できません-プロパティの型が一致しません。 この Visual Studio オブジェクトリレーショナルデザイナー (O/R デザイナー) メッセージに関する情報を表示します。
+description: 関連付けを作成できません - プロパティの型が一致しません。 この Visual Studio オブジェクト リレーショナル デザイナー (O/R デザイナー) メッセージに関する情報を表示してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,14 +12,14 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 0a75d16d79359db7fa2db2e68db23d693d7f2721
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99859230"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>関連付け &lt;association name&gt; を作成できません - プロパティの型が一致しません。
 
-関連付けを作成できません \<association name> -プロパティの型が一致しません。 プロパティに一致する型がありません: \<property names> 。
+関連付け \<association name> を作成できません - プロパティの型が一致しません。 プロパティに一致する型がありません: \<property names>。
 
 関連付けは、**[関連付けエディター]** ダイアログ ボックスで選択された **[関連付けのプロパティ]** によって定義されます。 関連付けの両側のプロパティは、同じデータ型である必要があります。
 

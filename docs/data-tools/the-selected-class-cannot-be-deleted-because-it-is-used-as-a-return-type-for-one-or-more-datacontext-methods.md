@@ -1,5 +1,5 @@
 ---
-title: 選択したクラスを削除できません
+title: 選択したクラスを削除できない
 description: 選択したクラスは、1 つ以上の DataContext メソッドで戻り値の型として使用されているため、削除できません
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -12,14 +12,14 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: a9948df37df4faf7cc5349b2729ca4f648d973cb
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99866386"
 ---
 # <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>選択したクラスは、1 つ以上の DataContext メソッドで戻り値の型として使用されているため、削除できません
 
-1 つ以上の <xref:System.Data.Linq.DataContext> メソッドの戻り値の型が、選択されたエンティティ クラスになっています。 メソッドの戻り値の型として使用されているエンティティクラスを削除 <xref:System.Data.Linq.DataContext> すると、プロジェクトのコンパイルが失敗します。 選択したエンティティ クラスを削除するには、そのエンティティ クラスを使用する <xref:System.Data.Linq.DataContext> メソッドを特定し、戻り値の型を別のエンティティ クラスに設定します。
+1 つ以上の <xref:System.Data.Linq.DataContext> メソッドの戻り値の型が、選択されたエンティティ クラスになっています。 <xref:System.Data.Linq.DataContext> メソッドの戻り値の型として使用されているエンティティ クラスを削除すると、プロジェクトのコンパイルに失敗する原因となります。 選択したエンティティ クラスを削除するには、そのエンティティ クラスを使用する <xref:System.Data.Linq.DataContext> メソッドを特定し、戻り値の型を別のエンティティ クラスに設定します。
 
 <xref:System.Data.Linq.DataContext> メソッドの戻り値の型を元の自動生成型に戻すには、まず **メソッド** ペインから <xref:System.Data.Linq.DataContext> メソッドを削除し、次に **サーバー エクスプローラー**/**データベース エクスプローラー** から、オブジェクトをもう一度 **O/R デザイナー** にドラッグします。
 

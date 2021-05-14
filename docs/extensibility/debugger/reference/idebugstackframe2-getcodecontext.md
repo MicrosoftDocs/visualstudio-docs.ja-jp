@@ -1,6 +1,6 @@
 ---
-description: このスタックフレームのコードコンテキストを取得します。
-title: 'IDebugStackFrame2:: GetCodeContext |Microsoft Docs'
+description: このスタック フレームのコード コンテキストを取得します。
+title: IDebugStackFrame2::GetCodeContext | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 006088129f9cb999bdfb046f0c2f5be1a06134fa
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071143"
 ---
 # <a name="idebugstackframe2getcodecontext"></a>IDebugStackFrame2::GetCodeContext
-このスタックフレームのコードコンテキストを取得します。
+このスタック フレームのコード コンテキストを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetCodeContext (
 
 ## <a name="parameters"></a>パラメーター
 `ppCodeCxt`\
-入出力このスタックフレーム内の現在の命令ポインターを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクトを返します。
+[出力] このスタック フレーム内の現在の命令ポインターを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

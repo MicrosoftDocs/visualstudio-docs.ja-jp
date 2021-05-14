@@ -1,6 +1,6 @@
 ---
 title: 図形とパスの描画
-description: Blend for Visual Studio の XAML デザイナーの機能を使用して、パスと図形を描画し、変更し、それらを結合します。
+description: Blend for Visual Studio で XAML デザイナーの機能を使用し、パスや図形を描画し、変更し、結合します。
 ms.custom: SEO-VS-2020
 titleSuffix: Blend for Visual Studio
 ms.date: 09/22/2020
@@ -13,7 +13,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2e815b3e4959727dab282fcbe0fcd1f82890bf8b
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99847350"
@@ -28,7 +28,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
 図形は **[アセット]** ウィンドウにあります。
 
-:::image type="content" source="media/blend-shapes.png" alt-text="Blend for Visual Studio の [アセット] ウィンドウの [図形] カテゴリのスクリーンショット":::
+:::image type="content" source="media/blend-shapes.png" alt-text="Blend for Visual Studio のスクリーンショット。[アセット] ウィンドウに [図形] カテゴリが表示されています":::
 
 目的の図形をアートボードにドラッグします。 次に、図形にあるハンドルを使用し、図形の拡大縮小、回転、移動、または傾斜を行います。
 
@@ -88,7 +88,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
 ## <a name="convert-a-shape-to-a-path"></a>図形のパスへの変換
 
-パスを変更するのと同じ方法で図形を変更するには、図形をパスに変換します。 図形を選択し、[**フォーマット**  >  **パス** パスに変換] を選択し  >  ます。
+パスを変更するのと同じ方法で図形を変更するには、図形をパスに変換します。 図形を選択し、 **[フォーマット]** 、 **[パス]** 、 **[パスに変換]** の順に選択します。
 
 **短いビデオを見る:** ![インストール済みフィーチャーの構成](../designers/media/bldadminconsoleinitialconfigicon.png) [パスの作業: 図形をパスに変換する](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147)。
 
@@ -101,7 +101,7 @@ XAML デザイナーでは、"*図形*" とはその名の示すとおりのも�
 
 ![パスの結合](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|数値|操作|
+|Number|アクション|
 |-|-|
 |![結合前の 2 つの図形](../designers/media/b1_1.png)|結合前の 2 つの図形|
 |![合算](../designers/media/b1_2.png)|合算|

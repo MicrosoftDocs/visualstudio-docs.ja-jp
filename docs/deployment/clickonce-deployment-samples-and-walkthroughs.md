@@ -1,6 +1,6 @@
 ---
-title: ClickOnce 配置のサンプルとチュートリアル |Microsoft Docs
-description: これらのサンプルアプリケーション、コード例、およびウォークスルーを使用して、Windows フォーム、WPF、およびコンソールアプリケーションのデプロイに使用される手法を理解します。
+title: ClickOnce 配置のサンプルとチュートリアル | Microsoft Docs
+description: Windows フォーム、WPF、コンソール アプリケーションの配置に利用されるテクニックを理解する目的で、これらのサンプル アプリケーション、サンプル コード、チュートリアルを利用してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,7 +21,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 5b8b3a1482a01f0fcef6a8a64fcb3ec0a0023850
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99918329"
@@ -37,7 +37,7 @@ ms.locfileid: "99918329"
 |-----------|-----------------|
 |[ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|.NET Framework ユーティリティを使用して ClickOnce アプリケーションを配置する方法を説明します。|
 |[ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api.md)|アプリケーション内の特定のアセンブリに "オプション" マークを付ける方法、および <xref:System.Deployment.Application> 名前空間にあるクラスを使用して、それらのアセンブリをダウンロードする方法について説明します。|
-|[デザイナーを使用して、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|アプリケーションで初めて使用するときにのみアプリケーション アセンブリをダウンロードする方法を説明します。|
+|[デザイナーを使用し、ClickOnce 配置 API で必要に応じてアセンブリをダウンロードする](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|アプリケーションで初めて使用するときにのみアプリケーション アセンブリをダウンロードする方法を説明します。|
 
 ## <a name="see-also"></a>関連項目
 

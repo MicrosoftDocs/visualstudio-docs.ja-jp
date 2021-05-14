@@ -1,6 +1,6 @@
 ---
 title: 概念モデルの使用 (WCF Data Services)
-description: WCF Data Services で概念モデルを操作します。 データベーススキーマとオブジェクトモデルを相互に変換するのではなく、オブジェクトを使用してデータを照会します。
+description: WCF Data Services で概念モデルを使用する データベース スキーマとオブジェクト モデルを双方向変換する代わりにオブジェクトを使用してデータを照会します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: ef5745f974848da75b4dcc0c42b59b38aa61cd0b
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99866113"
@@ -29,7 +29,7 @@ ms.locfileid: "99866113"
 
 | トピック | 説明 |
 | - | - |
-| [方法: データサービスクエリを実行する](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | .NET アプリケーションからデータサービスを照会する方法について説明します。 |
+| [方法: データ サービス クエリを実行する](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | .NET アプリケーションからデータ サービスを照会する方法について説明します。 |
 | [方法: クエリ結果を射影する](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | データ サービス クエリによって返されるデータの量を削減する方法について説明します。 |
 
 概念モデルを使用すると、ドメインに対応する言語で有効なデータの種類を定義できます。 モデルの有効なデータを定義したり、エンティティまたはデータ サービスで実行する操作に検証を追加したりできます。
@@ -38,14 +38,14 @@ ms.locfileid: "99866113"
 
 |トピック|説明|
 |-----------|-----------------|
-|[方法: データサービスメッセージを受け取る](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|
+|[方法: データ サービス メッセージを先に取得する](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|データ サービスの操作に検証を追加する方法について説明します。|
 
  以下のトピックでは、エンティティに対して操作を実行して、データを作成、更新、および削除する方法について説明します。
 
 |トピック|説明|
 |-----------|-----------------|
 |[方法: エンティティを追加、変更、および削除する](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|データ サービスでエンティティ データを作成、更新、および削除する方法について説明します。|
-|[方法: エンティティリレーションシップを定義する](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|
+|[方法: エンティティ リレーションシップを定義する](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|データ サービスでリレーションシップを作成または変更する方法について説明します。|
 
 ## <a name="see-also"></a>関連項目
 

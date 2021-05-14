@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、このポートがあるサーバーへのインターフェイスを取得します。
-title: 'IDebugDefaultPort2:: GetServer |Microsoft Docs'
+description: このメソッドを使用すると、このポートがあるサーバーへのインターフェイスを取得できます。
+title: IDebugDefaultPort2::GetServer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e26356b01a04d736f9131c2762c897b6ce258997
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077461"
 ---
 # <a name="idebugdefaultport2getserver"></a>IDebugDefaultPort2::GetServer
-このメソッドは、このポートがあるサーバーへのインターフェイスを取得します。
+このメソッドを使用すると、このポートがあるサーバーへのインターフェイスを取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int GetServer(
 
 ## <a name="parameters"></a>パラメーター
 `ppServer`\
-入出力 [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) インターフェイスを実装するオブジェクトを返します。
+[out] [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) インターフェイスを実装するオブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)は Visual Studio によって実装され、ポートが配置されているサーバーを表します。
+## <a name="remarks"></a>解説
+ [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md) は Visual Studio によって実装され、このポートがあるサーバーを表します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

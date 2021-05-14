@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、fields 列挙から次の要素のセットを返します。
-title: 'IEnumDebugFields:: Next |Microsoft Docs'
+description: このメソッドは、フィールド列挙型から次の要素セットを返します。
+title: IEnumDebugFields::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 6b1705c1f07ce17df0d09c8b3036c639b6fe829a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073470"
 ---
 # <a name="ienumdebugfieldsnext"></a>IEnumDebugFields::Next
-このメソッドは、列挙体から次の要素のセットを返します。
+このメソッドは、列挙型から次の要素セットを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,17 +46,17 @@ int Next(
 
 ## <a name="parameters"></a>パラメーター
 `celt`\
-から取得する要素の数。 配列の最大サイズも指定し `rgelt` ます。
+[入力] 取得する要素の数。 `rgelt` 配列の最大サイズも指定します。
 
 `rgelt`\
-[入力、出力]入力する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 要素の配列。
+[入力、出力] 入力された [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 要素の配列。
 
 `pceltFetched`\
-入出力で実際に返された要素の数を返し `rgelt` ます。
+[出力] `rgelt` に実際に返された要素の数を返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 要求された `S_FALSE` 数の要素を返すことができなかった場合は、を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 返すことができた要素の数が要求された数よりも少なかった場合は `S_FALSE`、それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

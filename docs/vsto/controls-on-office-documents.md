@@ -1,6 +1,6 @@
 ---
 title: Office ドキュメントのコントロール
-description: Visual Studio の Office 開発ツールを使用して、Windows フォームコントロールとホストコントロールを Word 文書や Excel ワークシートに追加する方法について説明します。
+description: Visual Studio の Office 開発ツールを使用し、Windows フォーム コントロールとホスト コントロールを Word 文書と Excel ワークシートに追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,7 +20,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 5e94f39f287055cc4812d85abe2a4bfc0d81eb2b
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99947946"
@@ -35,15 +35,15 @@ ms.locfileid: "99947946"
  Excel または Word のドキュメントレベル プロジェクトを開発するとき、実行時にこれらのコントロールをプログラミングで追加できます。あるいは、Visual Studio デザイナーを使用し、設計時にプロジェクトの文書またはブックにこれらのコントロールを追加できます。
 
 ## <a name="in-this-section"></a>このセクションの内容
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)
 
  イベントに対するプログラミング、データにコントロールをバインディングする方法、コントロールとネイティブ オブジェクトの違いなど、ホスト項目とホスト コントロールの機能について説明します。
 
-- [ホスト項目とホストコントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 
  コードでホスト項目とホスト コントロールを使用するときに発生する可能性のある問題について説明します。
 
-- [Office ドキュメントのコントロールの Windows フォームの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Office ドキュメントでの Windows フォーム コントロールの概要](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
  Excel と Word の文書で Windows フォーム コントロールを使用する方法と Windows フォーム コントロールと Windows フォームの違いについて説明します。
 
@@ -56,6 +56,6 @@ ms.locfileid: "99947946"
 
  Visual Studio を使用して Microsoft Office アプリケーションの UI をカスタマイズするさまざまな方法について説明します。
 
-- [Office ソリューションのコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office ソリューションでコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
 
  データを Word と Excel の文書にバインディングすることで文書にデータを表示する方法について説明します。

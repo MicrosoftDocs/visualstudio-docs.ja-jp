@@ -1,7 +1,7 @@
 ---
 title: オブジェクト スタイルを変更する
 titleSuffix: Blend for Visual Studio
-description: ブラシの適用、表示状態の設定、再利用可能なスタイルとテンプレートの適用によって Blend for Visual Studio のオブジェクトのスタイルを変更する方法について説明します。
+description: ブラシを適用すること、表示状態を設定すること、再利用可能なスタイルとテンプレートを適用することで Blend for Visual Studio でオブジェクトのスタイルを変更する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2b98f814e1f310c7d7f281457589a1a9f7d21653
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99966553"

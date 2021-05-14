@@ -1,6 +1,6 @@
 ---
-title: 検索式の論理演算子 (ヘルプビューアー)
-description: 論理演算子と高度な検索演算子を使用して Microsoft ヘルプビューアーの検索式を調整する方法について説明します。
+title: 検索式の論理演算子 (ヘルプ ビューアー)
+description: Microsoft ヘルプ ビューアーで、論理演算子と高度な演算子を使用し、検索式の効果を高める方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 37e2652d04df154a45ae5f87fd62c8f8dc2e0b3e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944083"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>検索式の論理演算子と高度な演算子
 
-論理演算子と高度な検索演算子を使用すると、 **ヘルプビューアー** でヘルプコンテンツの検索を絞り込むことができます。
+論理演算子と高度な検索演算子を使用して、**ヘルプ ビューアー** でヘルプ コンテンツの検索を絞り込むことができます。
 
 ## <a name="logical-operators"></a>論理演算子
 
@@ -31,7 +31,7 @@ ms.locfileid: "99944083"
 |検索対象|vmmblue_2|例|結果|
 |-------------------|---------|-------------|------------|
 |同じアーティクル内の両方の用語|AND|dib AND palette|"dib" と "palette" の両方を含むトピック。|
-|アーティクル内のいずれかの用語|または|raster OR vector|"raster" または "vector" を含むトピック。|
+|アーティクル内のいずれかの用語|OR|raster OR vector|"raster" または "vector" を含むトピック。|
 |同じアーティクル内の最初の用語 (2 番目の用語を含まない)|NOT|"operating system" NOT DOS|"operating system" を含むが、"DOS" を含まないトピック。|
 |アーティクル内で近接する両方の用語|NEAR|user NEAR kernel|"kernel" にきわめて近い "user" を含むトピック。|
 

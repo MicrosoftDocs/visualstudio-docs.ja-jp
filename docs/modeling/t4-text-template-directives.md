@@ -1,6 +1,6 @@
 ---
 title: T4 テキスト テンプレートのディレクティブ
-description: T4 テストテンプレートディレクティブについて、およびテキストテンプレート変換エンジンに指示を提供する方法について説明します。
+description: T4 テスト テンプレート ディレクティブと、それからテキスト テンプレート変換エンジンに命令が与えられるしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 3ba13cbd31d41e656533aa5b13cf2a09503e58e8
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99924596"
@@ -79,4 +79,4 @@ ms.locfileid: "99924596"
 <#@ CleanupBehavior processor="T4VSHost" CleanupAfterProcessingtemplate="true" #>
 ```
 
-独自のディレクティブを作成することもできます。 詳細については、「 [カスタム T4 テキストテンプレートディレクティブプロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)」を参照してください。 Visualization and Modeling SDK を使用してドメイン固有言語 (DSL) を作成すると、DSL の一部としてディレクティブ プロセッサが生成されます。
+独自のディレクティブを作成することもできます。 詳細については、[カスタム T4 テキスト テンプレート ディレクティブ プロセッサの作成](../modeling/creating-custom-t4-text-template-directive-processors.md)に関するページを参照してください。 Visualization and Modeling SDK を使用してドメイン固有言語 (DSL) を作成すると、DSL の一部としてディレクティブ プロセッサが生成されます。

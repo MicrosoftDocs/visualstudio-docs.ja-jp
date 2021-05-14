@@ -1,6 +1,6 @@
 ---
-title: '方法: アドインのユーザーインターフェイスエラーを表示する'
-description: Visual Studio を使用して、Microsoft Office アプリケーションでのアドインユーザーインターフェイスエラーをプログラムによって表示する方法について説明します。
+title: '方法: アドインのユーザー インターフェイス エラーを表示する'
+description: Visual Studio を使用し、Microsoft Office アプリケーションで VTSO アドイン ユーザー インターフェイス エラーをプログラムによって表示する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,13 +19,13 @@ ms.workload:
 - office
 ms.openlocfilehash: 29e07e49d901b44b534d9d274e5535be663e97ef
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99927679"
 ---
-# <a name="how-to-show-add-in-user-interface-errors"></a>方法: アドインのユーザーインターフェイスエラーを表示する
-  既定では、VSTO アドインが Microsoft Office ユーザーインターフェイス (UI) を操作しようとして失敗した場合、エラーメッセージは表示されません。 しかし、UI に関連するエラー メッセージを表示するように Microsoft Office アプリケーションを構成できます。 これらのメッセージを使用すると、カスタムリボンが表示されない理由や、リボンが表示されるのにコントロールが表示されない理由を判断するのに役立ちます。
+# <a name="how-to-show-add-in-user-interface-errors"></a>方法: アドインのユーザー インターフェイス エラーを表示する
+  既定では、VSTO アドインが Microsoft Office ユーザー インターフェイス (UI) の操作を試みて失敗しても、エラー メッセージは表示されません。 しかし、UI に関連するエラー メッセージを表示するように Microsoft Office アプリケーションを構成できます。 これらのメッセージを使用すると、カスタム リボンが表示されない原因や、リボンは表示されるもののコントロールが表示されない理由を判断するのに役立ちます。
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -46,6 +46,6 @@ ms.locfileid: "99927679"
 
 ## <a name="see-also"></a>関連項目
 - [Office UI のカスタマイズ](../vsto/office-ui-customization.md)
-- [Outlook フォーム領域の作成](../vsto/creating-outlook-form-regions.md)
+- [Outlook フォーム領域を作成する](../vsto/creating-outlook-form-regions.md)
 - [リボンの概要](../vsto/ribbon-overview.md)
 - [操作ウィンドウの概要](../vsto/actions-pane-overview.md)

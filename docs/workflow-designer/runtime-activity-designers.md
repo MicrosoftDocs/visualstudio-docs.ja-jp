@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナーランタイムアクティビティデザイナー
-description: ランタイムアクティビティデザイナーを使用して、ワークフローデザイナー内のワークフローアクティビティを永続化および終了する方法について説明します。
+title: ワークフロー デザイナー - ランタイム アクティビティ デザイナー
+description: ランタイム アクティビティ デザイナーを使用し、ワークフロー デザイナーでワークフロー アクティビティを保持したり、終了したりする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,13 +12,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 24e8ef89b6373808ac7eed0c7557e25968efcf3a
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99847311"
 ---
 # <a name="runtime-activity-designers"></a>ランタイム アクティビティ デザイナー
-ランタイム アクティビティ デザイナーは、ワークフロー アクティビティを保持および終了するために使用します。 このセクションに含まれるトピックでは、ワークフローデザイナーアクティビティデザイナーの使用方法について説明します。
+ランタイム アクティビティ デザイナーは、ワークフロー アクティビティを保持および終了するために使用します。 このセクションに含まれているトピックでは、ワークフロー デザイナーのアクティビティ デザイナーの使用方法についてのガイドラインを示します。
 
 ## <a name="related-sections"></a>関連項目
  [制御フロー](../workflow-designer/control-flow-activity-designers.md)

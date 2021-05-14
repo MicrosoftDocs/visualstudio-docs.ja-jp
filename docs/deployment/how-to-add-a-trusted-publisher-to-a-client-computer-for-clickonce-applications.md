@@ -1,6 +1,6 @@
 ---
-title: '[信頼された発行元をクライアントに追加] ボックス (ClickOnce)'
-description: クライアントコンピューターに証明書を追加して、ClickOnce アプリケーションがユーザーにプロンプトを表示せずに、より高い信頼レベルで実行されるようにする方法について説明します。
+title: 信頼された発行者をクライアント ボックスに追加する (ClickOnce)
+description: ユーザーに入力を求めることなく、高い信頼レベルで ClickOnce アプリケーションが実行されるよう、クライアント コンピューターに証明書を追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: c04b8d700d7739f0e4ef1fba259aab0595cea28c
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99947815"
@@ -50,7 +50,7 @@ ms.locfileid: "99947815"
 
 1. CA からデジタル証明書を取得します。
 
-2. 証明書を Base64 X.509 (*.cer*) 形式でエクスポートします。 証明書の形式の詳細については、「 [証明書のエクスポート](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))」を参照してください。
+2. 証明書を Base64 X.509 (*.cer*) 形式でエクスポートします。 証明書の形式の詳細については、「 [証明書をエクスポートする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))」を参照してください。
 
 3. クライアント コンピューターのコマンド プロンプトで、次のコマンドを実行します。
 
@@ -65,8 +65,8 @@ ms.locfileid: "99947815"
 - [ClickOnce と Authenticode](../deployment/clickonce-and-authenticode.md)
 - [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)
 - [方法: ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)
-- [方法: ClickOnce アプリケーションのセキュリティゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [方法: ClickOnce アプリケーションのカスタムアクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
 - [方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする](securing-clickonce-applications.md)
 - [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
 - [方法: アプリケーション マニフェストおよび配置マニフェストに再署名する](../deployment/how-to-re-sign-application-and-deployment-manifests.md)

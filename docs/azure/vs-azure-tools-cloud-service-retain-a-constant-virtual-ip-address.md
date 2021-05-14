@@ -1,5 +1,5 @@
 ---
-title: Azure クラウドサービスの固定仮想 IP を保持する
+title: Azure クラウド サービスの固定仮想 IP を保持する
 description: Azure クラウド サービスの仮想 IP アドレス (VIP) が変化しないようにする方法について説明します。
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -10,7 +10,7 @@ ms.date: 03/21/2017
 ms.author: ghogen
 ms.openlocfilehash: b879675a0cdc552255aa4b5f66d143a3b2aba5eb
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844360"
@@ -34,11 +34,11 @@ Azure でホストされているクラウド サービスを更新するとき�
 
     ![[Azure アプリケーションの公開] の [サインイン] ページ](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-signin.png)
 
-4. [ **共通設定** ] タブで、デプロイ先のクラウドサービスの名前、[ **環境**]、[ **ビルド構成**]、および [ **サービス構成** ] がすべて正しいことを確認します。
+4. **[共通設定]** タブで、デプロイ先のクラウド サービスの名前、 **[環境]** 、 **[ビルド構成]** 、 **[サービス構成]** がすべて正しいことを確認します。
 
     ![[Azure アプリケーションの公開] の [共通設定] タブ](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-common-settings.png)
 
-5. **[詳細設定]** タブで、**デプロイ ラベル** と **ストレージ アカウント** が正しいことを確認します。 **[失敗時に配置を削除]** チェック ボックスがオフになっていること、**[配置の更新]** チェック ボックスがオンになっていることを確認します。 **[失敗時に展開を削除** する] チェックボックスをオフにすることで、デプロイ中にエラーが発生した場合に VIP が失われないようにすることができます。 **[配置の更新]** チェック ボックスをオンにすると、アプリケーションを再発行したときに、デプロイが削除され、VIP が失われることはなくなります。
+5. **[詳細設定]** タブで、**デプロイ ラベル** と **ストレージ アカウント** が正しいことを確認します。 **[失敗時に配置を削除]** チェック ボックスがオフになっていること、**[配置の更新]** チェック ボックスがオンになっていることを確認します。 **[失敗時に配置を削除]** チェック ボックスをオフにすると、デプロイ中にエラーが発生した場合に、VIP が失われることがなくなります。 **[配置の更新]** チェック ボックスをオンにすると、アプリケーションを再発行したときに、デプロイが削除され、VIP が失われることはなくなります。
 
     ![[Azure アプリケーションの公開] の [詳細設定] タブ](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-advanced-settings.png)
 
@@ -50,5 +50,5 @@ Azure でホストされているクラウド サービスを更新するとき�
 
     ![[Azure アプリケーションの公開] の [概要] ページ](./media/vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address/azure-publish-summary.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [Visual Studio の Azure アプリケーションの公開ウィザードの使用](vs-azure-tools-publish-azure-application-wizard.md)

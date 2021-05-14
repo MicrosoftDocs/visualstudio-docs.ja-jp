@@ -1,6 +1,6 @@
 ---
-title: '方法: 無効になっている VSTO アドインを再度有効にする'
-description: Visual Studio を使用して、Microsoft Office アプリケーションで無効になっている VSTO アドインを再度有効にする方法について説明します。
+title: '方法: 無効にされた VSTO アドインを再度有効にする'
+description: Microsoft Office アプリケーションで無効になっている VSTO アドインを Visual Studio を使用して再度有効にする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,18 +20,18 @@ ms.workload:
 - office
 ms.openlocfilehash: de3e251c15699ce29b7986e4f0cc19a3f5c5798d
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99942191"
 ---
-# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効になっている VSTO アドインを再度有効にする
+# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>方法: 無効にされた VSTO アドインを再度有効にする
   Microsoft Office アプリケーションにより、予期しない動作をする VSTO アドインが無効にされる場合があります。 VSTO アドインをデバッグする際に、アプリケーションが VSTO アドインを読み込まない場合は、アプリケーションにより VSTO アドインがハードに無効化、またはソフトに無効化されている可能性があります。
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
-## <a name="hard-disabled-vsto-add-ins"></a>ハードに無効化済みの VSTO アドイン
- ハードな無効化は、VSTO アドインによってアプリケーションが予期せずに終了した場合に発生する可能性があります。 また、開発用コンピューターで VSTO アドインの <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中にデバッガーを停止した場合にも発生することがあります。
+## <a name="hard-disabled-vsto-add-ins"></a>ハードに無効化された VSTO アドイン
+ ハード的な無効化は、VSTO アドインによってアプリケーションが予期せずに終了した場合に発生する可能性があります。 また、開発用コンピューターで VSTO アドインの <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中にデバッガーを停止した場合にも発生することがあります。
 
 ### <a name="to-re-enable-a-vsto-add-in"></a>VSTO アドインを再度有効にするには
 
@@ -51,7 +51,7 @@ ms.locfileid: "99942191"
 
 7. **[閉じる]** をクリックします。
 
-## <a name="soft-disabled-vsto-add-ins"></a>ソフトに無効化済みの VSTO アドイン
+## <a name="soft-disabled-vsto-add-ins"></a>ソフトに無効化された VSTO アドイン
  ソフトな無効化は、VSTO アドインによってエラーが発生したが、アプリケーションが予期せずに終了するということがなかったという場合に発生する可能性があります。 たとえば、 <xref:Microsoft.Office.Tools.AddIn.Startup> イベント ハンドラーの実行中に VSTO アドインによってハンドルされない例外がスローされた場合に、アプリケーションによってそのアドインがソフトに無効化されることがあります。
 
 > [!NOTE]
@@ -78,4 +78,4 @@ ms.locfileid: "99942191"
 ## <a name="see-also"></a>関連項目
 - [Office ソリューションのビルド](../vsto/building-office-solutions.md)
 - [Office プロジェクトのデバッグ](../vsto/debugging-office-projects.md)
-- [プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)
+- [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)

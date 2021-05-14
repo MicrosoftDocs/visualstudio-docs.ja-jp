@@ -1,7 +1,7 @@
 ---
 title: FxCop アナライザーから .NET アナライザーへの移行
 ms.custom: SEO-VS-2020
-description: FxCop アナライザーから .NET analyzer に移行する方法について説明します
+description: FxCop アナライザーから .NET アナライザーに移行する方法について説明します
 ms.date: 03/06/2020
 ms.topic: conceptual
 f1_keywords:
@@ -15,31 +15,31 @@ ms.author: mikejo
 manager: jmartens
 ms.openlocfilehash: e435502587e65bd694567f4100516a91fa97cc0a
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867868"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>FxCop アナライザーから .NET アナライザーへの移行
 
-.NET Compiler Platform によるソース分析 ("Roslyn") アナライザーは、マネージコードの [従来の分析](code-analysis-for-managed-code-overview.md) に代わるものです。 従来の分析 (FxCop) ルールの多くは、既にソースアナライザーとして書き換えられています。
+.NET Compiler Platform ("Roslyn") アナライザーによるソース分析は、マネージド コードの[レガシ分析](code-analysis-for-managed-code-overview.md)に代わるものです。 レガシ分析 (FxCop) 規則の多くは、ソース アナライザーとして既に書き換えられています。
 
-Visual Studio 2019 16.8 と .NET 5.0 より前のリリースでは、これらのアナライザーは NuGet パッケージとして出荷さ `Microsoft.CodeAnalysis.FxCopAnalyzers` [](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)れています。
+Visual Studio 2019 16.8 および .NET 5.0 より前では、これらのアナライザーは `Microsoft.CodeAnalysis.FxCopAnalyzers` [NuGet パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)として出荷されていました。
 
-Visual Studio 2019 16.8 と .NET 5.0 以降、これらのアナライザーは [.NET SDK に含まれて](/dotnet/fundamentals/code-analysis/overview)います。 .NET 5 + SDK に移行しない場合、または NuGet パッケージベースのモデルを使用する場合は、nuget パッケージでアナライザーを使用することもでき `Microsoft.CodeAnalysis.NetAnalyzers` [](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)ます。 オンデマンドバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
+Visual Studio 2019 16.8 および .NET 5.0 以降では、これらのアナライザーは [.NET SDK に含まれています](/dotnet/fundamentals/code-analysis/overview)。 .NET 5 以降の SDK に移行しない場合、または NuGet パッケージベースのモデルを使用する場合は、`Microsoft.CodeAnalysis.NetAnalyzers` [NuGet パッケージ](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)でアナライザーを入手することもできます。 オンデマンドのバージョン更新には、パッケージベースのモデルを使用することをお勧めします。
 
 > [!NOTE]
-> ファーストパーティの .NET アナライザーは、ターゲットプラットフォームに依存しません。 つまり、プロジェクトは特定の .NET プラットフォームを対象にする必要がありません。 アナライザーは、、、など、以前のバージョンの .NET を対象とするプロジェクトに対して機能し `net5.0` `netcoreapp` `netstandard` `net472` ます。
+> ファーストパーティの .NET アナライザーは、ターゲットプラットフォームに依存しません。 つまり、プロジェクトで特定の .NET プラットフォームをターゲットにする必要はありません。 これらのアナライザーは、`net5.0` のほか、以前のバージョンの .NET (`netcoreapp`、`netstandard`、`net472` など) をターゲットとするプロジェクトで機能します。
 
 ## <a name="migration-steps"></a>移行の手順
 
-バージョン以降 `3.3.2` で `Microsoft.CodeAnalysis.FxCopAnalyzers` は、NuGet パッケージは非推奨となりました。 次の手順に従って、プロジェクトまたはソリューションをから .NET アナライザーに移行してください `Microsoft.CodeAnalysis.FxCopAnalyzers` 。
+バージョン `3.3.2` 以降では、`Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet パッケージは非推奨になりました。 次の手順に従って、プロジェクトまたはソリューションを `Microsoft.CodeAnalysis.FxCopAnalyzers` から .NET アナライザーに移行してください。
 
-1. `Microsoft.CodeAnalysis.FxCopAnalyzers`NuGet パッケージのアンインストール
+1. `Microsoft.CodeAnalysis.FxCopAnalyzers` NuGet パッケージをアンインストールします。
 
-2. [.Net アナライザーを有効またはインストール](install-net-analyzers.md)します。 プロジェクトのターゲットプラットフォームを変更する必要はないことに注意してください。
+2. [.NET アナライザーを有効にするか、インストールします](install-net-analyzers.md)。 プロジェクトのターゲット プラットフォームを変更する必要はありません。
 
-3. 追加のルールを有効に `Microsoft.CodeAnalysis.NetAnalyzers` する: よりもはるかに控えめです `Microsoft.CodeAnalysis.FxCopAnalyzers` 。 FxCopAnalyzers パッケージとは異なり、 [既定ではビルド警告として有効になっ](/dotnet/fundamentals/code-analysis/overview#enabled-rules)ているいくつかの正確性規則があります。 [AnalysisMode](/dotnet/core/project-sdk/msbuild-props#analysismode) MSBuild プロパティをカスタマイズすることで、[追加のルールを有効に](/dotnet/fundamentals/code-analysis/overview#enable-additional-rules)することができます。 たとえば、プロパティをに設定すると、 `AllEnabledByDefault` 既定では、適用可能なすべての CA 規則がビルド警告として有効になります。
+3. 追加のルールを有効にします。`Microsoft.CodeAnalysis.NetAnalyzers` は `Microsoft.CodeAnalysis.FxCopAnalyzers` に比べてはるかに保守的です。 FxCopAnalyzers パッケージとは異なり、[ビルドの警告として既定で有効になっている](/dotnet/fundamentals/code-analysis/overview#enabled-rules)正確性規則はごくわずかです。 [AnalysisMode](/dotnet/core/project-sdk/msbuild-props#analysismode) MSBuild プロパティをカスタマイズすることで、[追加のルールを有効にする](/dotnet/fundamentals/code-analysis/overview#enable-additional-rules)ことができます。 たとえば、このプロパティを `AllEnabledByDefault` に設定すると、適用可能なすべての CA ルールがビルドの警告として既定で有効になります。
 
    ```xml
    <PropertyGroup>
