@@ -1,6 +1,6 @@
 ---
 description: このオブジェクトが null 参照であるかどうかをテストします。
-title: 'IDebugObject:: IsNullReference |Microsoft Docs'
+title: IDebugObject::IsNullReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ba037f995c97a3bfbf059f51bfb4f8777803a172
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054076"
@@ -42,13 +42,13 @@ int IsNullReference(
 
 ## <a name="parameters"></a>パラメーター
 `pfIsNull`\
-入出力`TRUE`このオブジェクトが null 参照の場合は0以外 () を返します。それ以外の場合は 0 () を返し `FALSE` ます。
+[出力] このオブジェクトが null 参照の場合、ゼロ以外 (`TRUE`) を返します。それ以外の場合、ゼロ (`FALSE`) を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- Null 参照は、空のオブジェクト、またはに割り当てられていないオブジェクトを意味します。
+## <a name="remarks"></a>解説
+ null 参照は、空のオブジェクトまたは割り当てられていないオブジェクトを意味します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

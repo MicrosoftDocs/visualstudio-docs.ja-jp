@@ -1,6 +1,6 @@
 ---
-description: この非ジェネリックインスタンスがデリゲートするジェネリックビルダーオブジェクトを表します。
-title: AsyncTaskMethodBuilder.m_builder Field |Microsoft Docs
+description: この非ジェネリックのインスタンスがデリゲートするジェネリック ビルダー オブジェクトを表します。
+title: AsyncTaskMethodBuilder.m_builder フィールド | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 2f870b6c2544c57aeced28692d7be8728b641d9c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055558"
 ---
 # <a name="asynctaskmethodbuilderm_builder-field"></a>AsyncTaskMethodBuilder.m_builder フィールド
-この非ジェネリックインスタンスがデリゲートするジェネリックビルダーオブジェクトを表します。
+この非ジェネリックのインスタンスがデリゲートするジェネリック ビルダー オブジェクトを表します。
 
  **名前空間:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **アセンブリ:** mscorlib (mscorlib.dll)
+ **アセンブリ:** mscorlib (mscorlib.dll 内)
 
- .NET Framework からこの内部メンバーにアクセスすることはできないため、次の構文は、共通中間言語 (CIL) で提供されています。
+ この内部メンバーには、.NET Framework からはアクセスできないため、次の構文では共通中間言語 (CIL) を使用しています。
 
 ## <a name="syntax"></a>構文
 
@@ -35,6 +35,6 @@ ms.locfileid: "105055558"
 
 ## <a name="remarks"></a>解説
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>
-- [.NET Framework の並列拡張の内部構造](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework の並列拡張機能の内部](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

@@ -1,6 +1,6 @@
 ---
-description: このオブジェクトの一意の ID または別名を作成するか、既存のエイリアスを返します。
-title: 'IDebugObject2:: CreateAlias |Microsoft Docs'
+description: このオブジェクトの一意の ID またはエイリアスを作成するか、既存のエイリアスを返します。
+title: IDebugObject2::CreateAlias | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d7265187172d79eb59624edb9c2428b243aae540
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105053855"
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
-このオブジェクトの一意の ID または別名を作成するか、既存のエイリアスを返します。
+このオブジェクトの一意の ID またはエイリアスを作成するか、既存のエイリアスを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int CreateAlias(
 
 ## <a name="parameters"></a>パラメーター
 `ppAlias`\
-入出力新しい (または既存の) エイリアス。
+[出力] 新しい (または既存の) エイリアス。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- エイリアスは、オブジェクトがメモリ内にあるときに特定のオブジェクトを表すラベルです。
+## <a name="remarks"></a>解説
+ エイリアスは、オブジェクトがメモリ内にあるとき、特定のオブジェクトを表すラベルです。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

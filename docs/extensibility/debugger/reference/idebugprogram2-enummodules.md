@@ -1,6 +1,6 @@
 ---
 description: このプログラムによって読み込まれ、実行されているモジュールの一覧を取得します。
-title: 'IDebugProgram2:: EnumModules |Microsoft Docs'
+title: IDebugProgram2::EnumModules | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: af640cf7e76da0e6cf7bb202cda08792c783e0d5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076031"
@@ -42,14 +42,14 @@ int EnumModules(
 
 ## <a name="parameters"></a>パラメーター
 `ppEnum`\
-入出力モジュールの一覧を含む [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) オブジェクトを返します。
+[出力] モジュールの一覧を含む [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- モジュールは DLL またはアセンブリであり、通常は **モジュール** デバッグウィンドウに表示されます。
+## <a name="remarks"></a>解説
+ モジュールは DLL またはアセンブリであり、通常は **[モジュール]** デバッグ ウィンドウに表示されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

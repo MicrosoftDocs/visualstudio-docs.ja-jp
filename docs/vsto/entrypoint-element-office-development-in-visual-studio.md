@@ -1,6 +1,6 @@
 ---
-description: Vstav3 名前空間の各 entryPoint 要素は、この ClickOnce アプリケーションのインストール時に実行する必要があるカスタマイズアセンブリを識別します。
-title: '&lt;entryPoint &gt; 要素 (Visual Studio での Office 開発)'
+description: vstav3 名前空間の各 entryPoint 要素によって、この ClickOnce アプリケーションのインストール時に実行する必要のあるカスタマイズ アセンブリを指定します。
+title: '&lt;entryPoint&gt; 要素 (Visual Studio での Office 開発)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -19,12 +19,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 581274ea58dafa8021cb456a0c7cb1e6bf98da32
 ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102223720"
 ---
-# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint &gt; 要素 (Visual Studio での Office 開発)
+# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt; 要素 (Visual Studio での Office 開発)
   `entryPoint` 名前空間の各 `vstav3` 要素によって、この [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] アプリケーションのインストール時に実行する必要のあるカスタマイズ アセンブリを指定します。
 
 ## <a name="syntax"></a>構文
@@ -44,19 +44,19 @@ ms.locfileid: "102223720"
 
 |属性|説明|
 |---------------|-----------------|
-|`class`|必須です。 実行するカスタマイズ アセンブリを指定します。 この属性の構文は、 *NamespaceName.ClassName* です。|
+|`class`|必須。 実行するカスタマイズ アセンブリを指定します。 この属性の構文は、 *NamespaceName.ClassName* です。|
 
  `entryPoint` には、次の要素があります。
 
 ### <a name="assemblyidentity"></a>assemblyIdentity
- 必須です。 `assemblyIdentity` 名前空間の `vstav3` 要素は、 `assemblyIdentity` アプリケーション マニフェストで定義された既存の [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 要素を参照します。
+ 必須。 `assemblyIdentity` 名前空間の `vstav3` 要素は、 `assemblyIdentity` アプリケーション マニフェストで定義された既存の [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 要素を参照します。
 
- `assemblyIdentity`とその属性の役割は、 [ClickOnce アプリケーション&#41;&#40;&#60;assemblyIdentity&#62; 要素](../deployment/assemblyidentity-element-clickonce-application.md)で定義されています。
+ `assemblyIdentity` のロールとその属性は [&#60;assemblyIdentity&#62; element &#40;ClickOnce application&#41;](../deployment/assemblyidentity-element-clickonce-application.md) で定義されています。
 
-## <a name="document-level-customization-example"></a>ドキュメントレベルのカスタマイズの例
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例
 
 ### <a name="description"></a>説明
- 次のコード例は、 `entryPoint` を使用して配置するドキュメント レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例は、 `entryPoint` を使用して配置するドキュメント レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。
 
 ### <a name="code"></a>コード
 
@@ -98,7 +98,7 @@ ms.locfileid: "102223720"
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例
 
 ### <a name="description"></a>説明
- 次のコード例は、 `entryPoint` を使用して配置するアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例は、 `entryPoint` を使用して配置するアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。
 
 ### <a name="code"></a>コード
 
@@ -115,6 +115,6 @@ ms.locfileid: "102223720"
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューション用アプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)
-- [Office ソリューションの配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)
+- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

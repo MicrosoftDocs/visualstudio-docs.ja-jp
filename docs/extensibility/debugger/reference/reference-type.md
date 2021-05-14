@@ -1,6 +1,6 @@
 ---
-description: 参照の種類を指定します。
-title: REFERENCE_TYPE |Microsoft Docs
+description: 参照型を指定します。
+title: REFERENCE_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e38d23c855af098f2c32e60c1e3fa7d8fece5502
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079450"
 ---
 # <a name="reference_type"></a>REFERENCE_TYPE
-参照の種類を指定します。
+参照型を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_REFERENCE_TYPE { 
@@ -45,20 +45,20 @@ public enum enum_REFERENCE_TYPE {
 
 ## <a name="fields"></a>フィールド
  `REF_TYPE_WEAK`\
- 弱い参照を指定します。 をと組み合わせることはできません `REF_TYPE_STRONG` 。
+ 弱い参照を指定します。 `REF_TYPE_STRONG` と組み合わせて使用することはできません。
 
  `REF_TYPE_STRONG`\
- 強い参照を指定します。 をと組み合わせることはできません `REF_TYPE_WEAK` 。
+ 強い参照を指定します。 `REF_TYPE_WEAK` と組み合わせて使用することはできません。
 
-## <a name="remarks"></a>注釈
- `dwRefType` [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体のメンバーとして使用されます。
+## <a name="remarks"></a>解説
+ [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 構造体の `dwRefType` メンバーとして使用されます。
 
- [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md)メソッドにパラメーターとして渡されます。
+ [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) メソッドにパラメーターとして渡されます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
