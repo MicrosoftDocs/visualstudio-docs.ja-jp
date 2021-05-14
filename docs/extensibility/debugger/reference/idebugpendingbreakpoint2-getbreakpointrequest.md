@@ -1,6 +1,6 @@
 ---
 description: この保留中のブレークポイントを作成するために使用されたブレークポイント要求を取得します。
-title: 'IDebugPendingBreakpoint2:: GetBreakpointRequest |Microsoft Docs'
+title: IDebugPendingBreakpoint2::GetBreakpointRequest | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b6ead0a48147b999b83fa3ccc8062ff767920fa5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072677"
@@ -43,11 +43,11 @@ int GetBreakpointRequest(
 
 ## <a name="parameters"></a>パラメーター
 `ppBPRequest`\
-入出力この保留中のブレークポイントの作成に使用されたブレークポイント要求を表す [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) オブジェクトを返します。
+[出力] この保留中のブレークポイントの作成に使用されたブレークポイント要求を表す [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`ブレークポイントが削除されている場合は、を返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 ブレークポイントが削除されている場合は、`E_BP_DELETED` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)

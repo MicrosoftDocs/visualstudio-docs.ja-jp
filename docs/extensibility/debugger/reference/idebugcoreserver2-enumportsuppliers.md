@@ -1,6 +1,6 @@
 ---
-description: 使用可能なすべてのポートサプライヤーの一覧を取得します。
-title: 'IDebugCoreServer2:: EnumPortSuppliers |Microsoft Docs'
+description: 使用できるポート サプライヤーの一覧を取得します。
+title: IDebugCoreServer2::EnumPortSuppliers | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7e608bd2dd20de6ac8e519301e8502ee0dbec292
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077916"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
-使用可能なすべてのポートサプライヤーの一覧を取得します。
+使用できるポート サプライヤーの一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int EnumPortSuppliers(
 
 ## <a name="parameters"></a>パラメーター
 `ppEnum`\
-入出力すべてのポートサプライヤーのリストを含む [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) オブジェクトを返します。
+[out] すべてのポート サプライヤーの一覧を含む [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
 - [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

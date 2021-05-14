@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、フィールドのコンテナーを取得します。
-title: 'IDebugField:: GetContainer |Microsoft Docs'
+description: このメソッドを使用すると、フィールドのコンテナーを取得できます。
+title: IDebugField::GetContainer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c5e5f474a55291245cc1811e8f063f80e651b3a5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077084"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
-このメソッドは、フィールドのコンテナーを取得します。
+このメソッドを使用すると、フィールドのコンテナーを取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int GetContainer(
 
 ## <a name="parameters"></a>パラメーター
 `ppContainerField`\
-入出力 [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) インターフェイスによって表されるコンテナーを返します。
+[out] [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) インターフェイスで表されるコンテナーを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このフィールドにコンテナーがない場合、返されるは `ppContainerField` null 値になります。
+## <a name="remarks"></a>解説
+ このフィールドにコンテナーがない場合、返される `ppContainerField` は null 値になります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md)

@@ -1,6 +1,6 @@
 ---
 description: ステップ実行のステップの種類を指定します。
-title: STEPKIND |Microsoft Docs
+title: STEPKIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2363062ba8de362980a490133b77e374e9bc8507
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061499"
@@ -26,7 +26,7 @@ ms.locfileid: "105061499"
 # <a name="stepkind"></a>STEPKIND
 ステップ実行のステップの種類を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_STEPKIND { 
@@ -49,24 +49,24 @@ public enum enum_STEPKIND {
 
 ## <a name="fields"></a>フィールド
  `STEP_INTO`\
- 関数にステップインします。
+ 関数にステップ インします。
 
  `STEP_OVER`\
- 関数をステップオーバーします。
+ 関数をステップ オーバーします。
 
  `STEP_OUT`\
- 関数をステップアウトします。
+ 関数をステップ アウトします。
 
  `STEP_BACKWARDS`\
- 関数の前にステップインします。
+ 前の関数にステップ インします。
 
-## <a name="remarks"></a>注釈
- [ステップ](../../../extensibility/debugger/reference/idebugprocess3-step.md)メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+ [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) メソッドへの引数として渡されます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

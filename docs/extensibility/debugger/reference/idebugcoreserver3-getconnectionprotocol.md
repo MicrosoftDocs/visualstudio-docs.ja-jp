@@ -1,6 +1,6 @@
 ---
-description: サーバーとデバッグパッケージ間の通信に使用されているプロトコルを示す値を返します。
-title: 'IDebugCoreServer3:: GetConnectionProtocol |Microsoft Docs'
+description: サーバーとデバッグ パッケージ間の通信に使用されているプロトコルを示す値を返します。
+title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 18df64ad156c6eb81f51b0504b4d65514b168abe
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077656"
 ---
 # <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
-サーバーとデバッグパッケージ間の通信に使用されているプロトコルを示す値を返します。
+サーバーとデバッグ パッケージ間の通信に使用されているプロトコルを示す値を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetConnectionProtocol(
 
 ## <a name="parameters"></a>パラメーター
 `pProtocol`\
-入出力 [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) 列挙のいずれかの値を返します。
+[out] [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) 列挙型から値のいずれかを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 - [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md)

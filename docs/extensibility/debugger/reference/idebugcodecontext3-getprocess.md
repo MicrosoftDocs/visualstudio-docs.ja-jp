@@ -1,6 +1,6 @@
 ---
-description: デバッグプロセスのインターフェイスへの参照を取得します。
-title: 'IDebugCodeContext3:: GetProcess |Microsoft Docs'
+description: デバッグ プロセスのインターフェイスへの参照を取得します。
+title: IDebugCodeContext3::GetProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0479da6f61ae80de2b780af0ac932b0e607e3f29
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088329"
 ---
 # <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
-デバッグプロセスのインターフェイスへの参照を取得します。
+デバッグ プロセスのインターフェイスへの参照を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,13 +40,13 @@ public int GetProcess(
 
 ## <a name="parameters"></a>パラメーター
 `ppProcess`\
-入出力デバッグプロセスインターフェイスへの参照。
+[out] デバッグ プロセス インターフェイスへの参照。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md)インターフェイスを公開する **CDebugCodeContext** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) インターフェイスを公開する **CDebugCodeContext** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugCodeContext::GetProcess(IDebugProcess2** ppProcess)
@@ -68,5 +68,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCodeContext3](../../../extensibility/debugger/reference/idebugcodecontext3.md)

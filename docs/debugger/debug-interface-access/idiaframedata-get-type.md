@@ -1,7 +1,8 @@
 ---
-title: 'IDiaFrameData:: get_type |Microsoft Docs'
+description: コンパイラ固有のフレームの種類を取得します。
+title: IDiaFrameData::get_type | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: efca38b5-c479-4d0a-a164-f903f25c5509
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a4af060a4a0c36067a07a78166d1cf9cbc62e90e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7c362f6a781d7596c438a3fc2c8d0acfc47f070a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743475"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634897"
 ---
 # <a name="idiaframedataget_type"></a>IDiaFrameData::get_type
 コンパイラ固有のフレームの種類を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72743475"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_type ( 
+HRESULT get_type ( 
    DWORD* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_type ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力コンパイラ固有のフレームの種類を示す、 [stackframe Typeenum](../../debugger/debug-interface-access/stackframetypeenum.md)列挙型の値を返します。
+[出力] コンパイラ固有のフレームの種類を示す [StackFrameTypeEnum 列挙型](../../debugger/debug-interface-access/stackframetypeenum.md)の列挙の値を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

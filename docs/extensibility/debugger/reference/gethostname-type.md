@@ -1,6 +1,6 @@
 ---
-description: ホスト名の種類を指定します。
-title: GETHOSTNAME_TYPE |Microsoft Docs
+description: ホスト名の型を指定します。
+title: GETHOSTNAME_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a333c112db08935896b40e41389284436d7ec6a7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059224"
 ---
 # <a name="gethostname_type"></a>GETHOSTNAME_TYPE
-ホスト名の種類を指定します。
+ホスト名の型を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_GETHOSTNAME_TYPE {
@@ -50,13 +50,13 @@ public enum enum_GETHOSTNAME_TYPE {
 `GHN_FILE_NAME`\
 ホストのファイル名を指定します。
 
-## <a name="remarks"></a>注釈
-これらの値は、異なる形式でホスト名を取得するために、引数として [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) メソッドに渡されます。
+## <a name="remarks"></a>解説
+これらの値は、ホスト名の別形式を取得するために、[GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) メソッドに引数として渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

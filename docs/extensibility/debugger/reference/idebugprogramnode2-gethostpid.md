@@ -1,6 +1,6 @@
 ---
-description: プログラムをホストしているプロセスのシステムプロセス識別子を取得します。
-title: 'IDebugProgramNode2:: GetHostPid |Microsoft Docs'
+description: プログラムをホストしているプロセスのシステム プロセス識別子を取得します。
+title: IDebugProgramNode2::GetHostPid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4e3fa384bc22c864f6438fb3c54e044d9fff7368
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087250"
 ---
 # <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
-プログラムをホストしているプロセスのシステムプロセス識別子を取得します。
+プログラムをホストしているプロセスのシステム プロセス識別子を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int GetHostPid (
 
 ## <a name="parameters"></a>パラメーター
 `pdwHostPid`\
-入出力ホストプロセスのシステムプロセス識別子を返します。
+[out] ホスト プロセスのシステム プロセス識別子を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
- 次の例は、IDebugProgramNode2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CProgram` います。 [](../../../extensibility/debugger/reference/idebugprogramnode2.md)
+ 次の例は、[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスを実装するシンプルな `CProgram` オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {
@@ -63,5 +63,5 @@ HRESULT CProgram::GetHostPid(AD_PROCESS_ID* pdwHostPid) {
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

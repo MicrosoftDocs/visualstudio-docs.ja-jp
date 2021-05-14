@@ -1,6 +1,6 @@
 ---
 description: このオブジェクトの初期データを返します。
-title: 'IPropertyProxyEESide:: GetInitialData |Microsoft Docs'
+title: IPropertyProxyEESide::GetInitialData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 96129d254ad153b6a0ad754931cd18abba803849
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082531"
@@ -42,11 +42,11 @@ int GetInitialData(
 
 ## <a name="parameters"></a>パラメーター
 `dataOut`\
-入出力このオブジェクトの初期データを含む [Ieedatastorage](../../../extensibility/debugger/reference/ieedatastorage.md) オブジェクトを返します。
+[out] このオブジェクトの初期データが格納されている [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)
 - [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

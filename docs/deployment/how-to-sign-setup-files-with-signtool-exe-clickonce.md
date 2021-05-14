@@ -1,6 +1,6 @@
 ---
 title: SignTool.exe を使用してセットアップ ファイルに署名する (ClickOnce)
-description: SignTool.exe を使用して ClickOnce アプリケーションのセットアッププログラムに署名する方法について説明します。これにより、改ざんされたファイルがインストールされないようにすることができます。
+description: SignTool.exe を使用し、ClickOnce アプリケーションのセットアップ プログラムに署名する方法について説明します。これにより、改ざんされたファイルがインストールされないようにします。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -22,7 +22,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: fdfdabf66c48a875f3b4316ac22e1911c141275c
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99940528"

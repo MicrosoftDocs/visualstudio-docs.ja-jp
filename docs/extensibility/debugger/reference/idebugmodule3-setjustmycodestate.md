@@ -1,6 +1,6 @@
 ---
-description: モジュールをユーザーコードとしてマークします。
-title: 'IDebugModule3:: Setジャスト Mycodestate |Microsoft Docs'
+description: モジュールがユーザー コードであるかどうかをマークします。
+title: IDebugModule3::SetJustMyCodeState | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a6f93bce2e9554b390886129d548179e8ba6e3c8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065503"
 ---
 # <a name="idebugmodule3setjustmycodestate"></a>IDebugModule3::SetJustMyCodeState
-モジュールをユーザーコードとしてマークします。
+モジュールがユーザー コードであるかどうかをマークします。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int SetJustMyCodeState(
 
 ## <a name="parameters"></a>パラメーター
 `fIsUserCode`\
-からモジュールを `TRUE` ユーザーコードと見なす場合は0以外 ()。それ以外の場合は 0 ( `FALSE` )。
+[入力] モジュールをユーザー コードと見なす場合は 0 以外 (`TRUE`)。それ以外の場合は 0 (`FALSE`)。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

@@ -1,6 +1,6 @@
 ---
 description: 特定のポートを取得します。
-title: 'IDebugCoreServer2:: GetPort |Microsoft Docs'
+title: IDebugCoreServer2::GetPort | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 98737df16eda5d72f51f3b1f72c8bd7e0a2d3b6e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077812"
@@ -44,14 +44,14 @@ int GetPort(
 
 ## <a name="parameters"></a>パラメーター
 `guidPort`\
-から取得するポートの GUID。
+[in] 取得するポートの GUID。
 
 `ppPort`\
-入出力目的のポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクトを返します。
+[out] 目的のポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_PORTSUPPLIER_NO_PORT`指定された識別子を持つポートがない場合は、を返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 指定された識別子を持つポートがない場合は `E_PORTSUPPLIER_NO_PORT` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

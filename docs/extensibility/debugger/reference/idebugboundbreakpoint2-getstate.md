@@ -1,6 +1,6 @@
 ---
 description: このバインドされたブレークポイントの状態を取得します。
-title: 'IDebugBoundBreakpoint2:: GetState |Microsoft Docs'
+title: IDebugBoundBreakpoint2::GetState | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 834f0b35eb902d8e5bcea7c9ac7f3c6da5c895fb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088855"
@@ -43,13 +43,13 @@ int GetState(
 
 ## <a name="parameters"></a>パラメーター
 `pState`\
-入出力ブレークポイントの状態を示す値を [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) 列挙から返します。
+[out] ブレークポイントの状態を示す [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) 列挙からの値を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、IDebugBoundBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CBoundBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
+次の例は、[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを公開するシンプルな `CBoundBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CBoundBreakpoint::GetState(BP_STATE* pState)
@@ -71,6 +71,6 @@ HRESULT CBoundBreakpoint::GetState(BP_STATE* pState)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

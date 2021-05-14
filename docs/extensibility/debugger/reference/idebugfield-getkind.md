@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、フィールドの種類を取得します。
-title: 'IDebugField:: GetKind |Microsoft Docs'
+description: このメソッドを使用すると、フィールドの種類を取得できます。
+title: IDebugField::GetKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5e26f6850f8d0cdd1a197ec88a93ee1069d065bf
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077045"
 ---
 # <a name="idebugfieldgetkind"></a>IDebugField::GetKind
-このメソッドは、フィールドの種類を取得します。
+このメソッドを使用すると、フィールドの種類を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetKind(
 
 ## <a name="parameters"></a>パラメーター
 `pdwKind`\
-入出力 [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) 定数の組み合わせとしてフィールドの種類を返します。
+[out] フィールドの種類を [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) 定数の組み合わせとして返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md)

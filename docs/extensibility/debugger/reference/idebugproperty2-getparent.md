@@ -1,6 +1,6 @@
 ---
 description: プロパティの親プロパティを取得します。
-title: 'IDebugProperty2:: GetParent |Microsoft Docs'
+title: IDebugProperty2::GetParent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ef12171d338802b585818954858f5af4d723a34c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064840"
@@ -42,10 +42,10 @@ int GetParent (
 
 ## <a name="parameters"></a>パラメーター
 `ppParent`\
-入出力プロパティの親を表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
+[出力] プロパティの親を表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。 親が存在しない場合は `S_GETPARENT_NO_PARENT` を返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 親が存在しない場合は `S_GETPARENT_NO_PARENT` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

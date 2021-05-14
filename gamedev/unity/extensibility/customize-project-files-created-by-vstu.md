@@ -14,13 +14,13 @@ ms.workload:
 - unity
 ms.openlocfilehash: a4a5973863877db2d071f9be8d4689928b21a689
 ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/22/2021
 ms.locfileid: "107879318"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>VSTU によって作成されたプロジェクト ファイルのカスタマイズ
-Unity は、プロジェクトファイルの生成中にコールバックを提供します。 とメソッドを実装し、を使用して `OnGeneratedSlnSolution` `OnGeneratedCSProject` [`AssetPostprocessor`](https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html) プロジェクトまたはソリューションファイルを再生成するたびに変更します。
+Unity によって、プロジェクト ファイルの生成中にコールバックが提供されます。 [`AssetPostprocessor`](https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html) を使用して `OnGeneratedSlnSolution` および `OnGeneratedCSProject` メソッドを実装し、プロジェクトまたはソリューション ファイルが再生成されるたびにそれを変更します。
 
 ## <a name="demonstrates"></a>対象
 Visual Studio Tools for Unity によって生成された Visual Studio プロジェクト ファイルをカスタマイズする方法について示します。

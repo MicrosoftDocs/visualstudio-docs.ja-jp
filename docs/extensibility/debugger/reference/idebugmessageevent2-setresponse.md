@@ -1,6 +1,6 @@
 ---
-description: メッセージボックスから応答 (存在する場合) を設定します。
-title: 'IDebugMessageEvent2:: SetResponse |Microsoft Docs'
+description: 応答がある場合、メッセージ ボックスからそれを設定します。
+title: IDebugMessageEvent2::SetResponse | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ddba44f807d8b5f54008a8a67c9c5571cf316a32
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058444"
 ---
 # <a name="idebugmessageevent2setresponse"></a>IDebugMessageEvent2::SetResponse
-メッセージボックスから応答 (存在する場合) を設定します。
+応答がある場合、メッセージ ボックスからそれを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,11 +43,11 @@ int SetResponse(
 
 ## <a name="parameters"></a>パラメーター
 `dwResponse`\
-からWin32 関数の規則を使用して、応答を指定し `MessageBox` ます。 詳細については、 [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) 関数を参照してください。
+[入力] Win32 `MessageBox` 関数の規則を使用し、応答を指定します。 詳細については、[AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) 関数を参照してください。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)
 - [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)

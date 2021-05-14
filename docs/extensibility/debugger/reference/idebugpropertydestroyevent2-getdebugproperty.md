@@ -1,6 +1,6 @@
 ---
-description: 破棄されるプロパティを取得します。
-title: 'IDebugPropertyDestroyEvent2:: GetDebugProperty |Microsoft Docs'
+description: 破棄するプロパティを取得します。
+title: IDebugPropertyDestroyEvent2::GetDebugProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: cf3b4931fe6310add5242812c4e1170ec30433cf
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105083870"
 ---
 # <a name="idebugpropertydestroyevent2getdebugproperty"></a>IDebugPropertyDestroyEvent2::GetDebugProperty
-破棄されるプロパティを取得します。
+破棄するプロパティを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetDebugProperty (
 
 ## <a name="parameters"></a>パラメーター
 `ppProperty`\
-入出力破棄されるプロパティを表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
+[out] 破棄するプロパティの親を表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPropertyDestroyEvent2](../../../extensibility/debugger/reference/idebugpropertydestroyevent2.md)
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

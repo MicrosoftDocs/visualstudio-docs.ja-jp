@@ -1,6 +1,6 @@
 ---
 description: ポートを削除します。
-title: 'IDebugPortSupplier2:: RemovePort |Microsoft Docs'
+title: IDebugPortSupplier2::RemovePort | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0ff1cd6a165800f7a3acdaf69de2040d25d53b9c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071988"
@@ -42,14 +42,14 @@ int RemovePort(
 
 ## <a name="parameters"></a>パラメーター
 `pPort`\
-から削除するポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクト。
+[入力] 削除するポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、ポート供給元のアクティブなポートの内部リストからポートを削除します。
+## <a name="remarks"></a>解説
+ このメソッドは、ポート サプライヤーのアクティブなポートの内部リストからポートを削除します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

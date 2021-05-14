@@ -1,6 +1,6 @@
 ---
-description: このコンテキストのユーザーが指定可能な名前を取得します。
-title: 'IDebugMemoryContext2:: GetName |Microsoft Docs'
+description: このコンテキストに対して、ユーザーが表示できる名前を取得します。
+title: IDebugMemoryContext2::GetName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 89d5d3cb1d2bed36a9e15f99644a02bdc308e0ee
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058613"
 ---
 # <a name="idebugmemorycontext2getname"></a>IDebugMemoryContext2::GetName
-このコンテキストのユーザーが指定可能な名前を取得します。
+このコンテキストに対して、ユーザーが表示できる名前を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,13 +43,13 @@ int GetName(
 
 ## <a name="parameters"></a>パラメーター
 `pbstrName`\
-入出力メモリコンテキストの名前を返します。
+[出力] メモリ コンテキストの名前を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 通常、メモリコンテキストの名前は使用されません。
+## <a name="remarks"></a>解説
+ メモリ コンテキストの名前は通常使用されません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによってブックを閉じる'
-description: 作業中のブックを閉じる方法、またはプログラムによって閉じるブックを指定する方法について説明します。
+description: プログラムで作業中のブックを閉じたり、ブックを指定して閉じたりする方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.workload:
 - office
 ms.openlocfilehash: d09cbff06b1bb7048316629b7b958ee299029ec8
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825265"
@@ -44,7 +44,7 @@ ms.locfileid: "107825265"
 :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet1":::
 :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet1":::
 
-## <a name="close-a-workbook-that-you-specify-by-name"></a>名前で指定したブックを閉じる
+## <a name="close-a-workbook-that-you-specify-by-name"></a>名前を指定してブックを閉じる
  名前を指定してブックを閉じる方法は、VSTO アドインとドキュメント レベルのカスタマイズで同じです。
 
 ### <a name="to-close-a-workbook-that-you-specify-by-name"></a>名前を指定してブックを閉じるには
@@ -55,9 +55,9 @@ ms.locfileid: "107825265"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet2":::
 
 ## <a name="see-also"></a>関連項目
-- [ブックの操作](../vsto/working-with-workbooks.md)
+- [ブックを操作する](../vsto/working-with-workbooks.md)
 - [方法: プログラムによってブックを保存する](../vsto/how-to-programmatically-save-workbooks.md)
 - [方法: プログラムによってブックを開く](../vsto/how-to-programmatically-open-workbooks.md)
-- [ホスト項目とホストコントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)

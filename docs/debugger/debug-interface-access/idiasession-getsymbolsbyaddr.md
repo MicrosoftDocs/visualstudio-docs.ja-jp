@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: Getシンボル Byaddr |Microsoft Docs'
+description: アドレスの順序でシンボルを検索する列挙子を取得します。
+title: IDiaSession::getSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: eafcc757-b488-487d-a063-ad3703ff42e8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfe5c047876b6e23c24ad850900cb0c66a4819d2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 0b19b342a799cf0db2254795133bcf1ee6569a75
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741900"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634804"
 ---
 # <a name="idiasessiongetsymbolsbyaddr"></a>IDiaSession::getSymbolsByAddr
-アドレスの順序で記号を検索する列挙子を取得します。
+アドレスの順序でシンボルを検索する列挙子を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT getSymbolsByAddr( 
+HRESULT getSymbolsByAddr( 
    IDiaEnumSymbolsByAddr** ppEnumbyAddr
 );
 ```
@@ -33,10 +34,10 @@ HRESULT getSymbolsByAddr( 
 #### <a name="parameters"></a>パラメーター
  `ppEnumbyAddr`
 
-入出力[IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)オブジェクトを返します。 このインターフェイスを使用して、メモリ位置によってシンボルストア内のシンボルを検索します。
+[出力] [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) オブジェクトを返します。 このインターフェイスを使用して、メモリ位置でシンボル ストア内のシンボルを検索します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

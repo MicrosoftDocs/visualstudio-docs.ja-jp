@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: e435502587e65bd694567f4100516a91fa97cc0a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d6f9c36b1b64abe648c3aa9014c633e4e4949b1a
+ms.sourcegitcommit: d4887ef2ca97c55e2dad9f179eec2c9631d91c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867868"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108798259"
 ---
 # <a name="migrate-from-fxcop-analyzers-to-net-analyzers"></a>FxCop アナライザーから .NET アナライザーへの移行
 
@@ -47,10 +47,10 @@ Visual Studio 2019 16.8 および .NET 5.0 以降では、これらのアナラ�
    </PropertyGroup>
    ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-- [ソース コード分析と従来の分析](net-analyzers-faq.md#whats-the-difference-between-legacy-fxcop-and-net-analyzers)
+- [ソース コード分析と従来の分析](net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - [レガシ分析から .NET アナライザーへの移行](migrate-from-legacy-analysis-to-net-analyzers.md)
 - [.NET アナライザーの有効化またはインストール](install-net-analyzers.md)
-- [.NET アナライザーに関する FAQ](net-analyzers-faq.md)
+- [.NET アナライザーに関する FAQ](net-analyzers-faq.yml)
 - [.NET アナライザーの構成](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
