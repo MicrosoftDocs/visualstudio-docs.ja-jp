@@ -36,8 +36,8 @@
 	    "bilingual_type": "hover over",
         "breadcrumb_path": "/gamedev/breadcrumb/toc.json",
         "extendBreadcrumb": true,
-        "feedback_system": "None",
-        "feedback_github_repo": "",
+        "feedback_system": "GitHub",
+        "feedback_github_repo": "MicrosoftDocs/visualstudio-docs",
         "feedback_product_url": "https://developercommunity.visualstudio.com/",
         "zone_pivot_group_filename": "gamedev/zone-pivot-groups.json"
       },

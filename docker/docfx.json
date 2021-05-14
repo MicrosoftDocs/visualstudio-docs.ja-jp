@@ -40,8 +40,8 @@
     "externalReference": [],
     "globalMetadata": {
       "bilingual_type": "hover_over",
-      "feedback_system": "None",
-      "feedback_github_repo": "",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/visualstudio-docs",
       "breadcrumb_path": "/visualstudio/docker/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "ms.prod": "visual-studio-windows",
