@@ -1,6 +1,6 @@
 ---
-description: 'IDebugPortEx2:: TerminateProcess はプロセスを終了します。'
-title: 'IDebugPortEx2:: TerminateProcess |Microsoft Docs'
+description: IDebugPortEx2::TerminateProcess はプロセスを終了します。
+title: IDebugPortEx2::TerminateProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: fb783615ae50f8a3bb346e7d6aa281124104253e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072469"
@@ -42,11 +42,11 @@ int TerminateProcess(
 
 ## <a name="parameters"></a>パラメーター
 `pPortProcess`\
-から終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
+[入力] 終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

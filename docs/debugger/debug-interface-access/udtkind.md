@@ -1,7 +1,8 @@
-﻿---
-title: UdtKind |Microsoft Docs
+---
+description: さまざまなユーザー定義型 (UDT) について説明します。
+title: UdtKind | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 400b59b9-373c-42cb-aae1-570494214328
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 45ed43bf65c38890ca7ebda1a6b1719532697eae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: dbda75e668309318c4c4fe61c5c72f27629ea2cc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738447"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634555"
 ---
 # <a name="udtkind"></a>UdtKind
 さまざまなユーザー定義型 (UDT) について説明します。
@@ -33,7 +34,7 @@ enum UdtKind {
 };
 ```
 
-## <a name="elements"></a>Elements
+## <a name="elements"></a>要素
 UdtStruct UDT は構造体です。
 
 UdtClass UDT はクラスです。
@@ -42,10 +43,10 @@ UdtUnion UDT は共用体です。
 
 UdtInterface UDT はインターフェイスです。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaSymbol:: get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)メソッドによって返されます。
+## <a name="remarks"></a>解説
+この列挙型の値は、[IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) メソッドによって返されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 ヘッダー: cvconst. h
 
 ## <a name="see-also"></a>関連項目

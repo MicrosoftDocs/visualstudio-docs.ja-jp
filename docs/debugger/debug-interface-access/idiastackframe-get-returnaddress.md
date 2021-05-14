@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackFrame:: get_returnAddress |Microsoft Docs'
+description: フレームの返信先アドレスを取得します。
+title: IDiaStackFrame::get_returnAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0df91981-919f-48ed-9c70-4121567d645b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5312eb455de8ce187bf4ae2acc2fc5b4b57a07bc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c8a491f2b76457479f765c4387571d2524d26a78
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741604"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635184"
 ---
 # <a name="idiastackframeget_returnaddress"></a>IDiaStackFrame::get_returnAddress
 フレームの返信先アドレスを取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72741604"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_returnAddress ( 
+HRESULT get_returnAddress ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -33,10 +34,10 @@ HRESULT get_returnAddress ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力フレームの戻り先アドレスを返します。
+[出力] フレームの返信先アドレスを返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

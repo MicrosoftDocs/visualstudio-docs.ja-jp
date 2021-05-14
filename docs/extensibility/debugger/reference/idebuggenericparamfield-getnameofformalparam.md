@@ -1,6 +1,6 @@
 ---
-description: このジェネリックパラメーターの名前を取得します。
-title: 'IDebugGenericParamField:: GetNameOfFormalParam |Microsoft Docs'
+description: このジェネリック パラメーターの名前を取得します。
+title: IDebugGenericParamField::GetNameOfFormalParam | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7b151d2964c011d775215b1455dc59a12a86db70
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084715"
 ---
 # <a name="idebuggenericparamfieldgetnameofformalparam"></a>IDebugGenericParamField::GetNameOfFormalParam
-このジェネリックパラメーターの名前を取得します。
+このジェネリック パラメーターの名前を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,13 +41,13 @@ int GetNameOfFormalParam (
 
 ## <a name="parameters"></a>パラメーター
 `pbstrName`\
-入出力このジェネリックパラメーターの名前。
+[out] このジェネリック パラメーターの名前。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetNameOfFormalParam(BSTR *pbstrName)
@@ -68,5 +68,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

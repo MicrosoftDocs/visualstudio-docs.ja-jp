@@ -1,6 +1,6 @@
 ---
-description: ロケール固有のリソースに使用するロケールを設定します。
-title: 'IDebugProgramProvider2:: SetLocale |Microsoft Docs'
+description: 任意のロケール固有のリソースに使用するロケールを設定します。
+title: IDebugProgramProvider2::SetLocale | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ed6d504bb3a270feeb02ad2542991442a6d2471b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065269"
 ---
 # <a name="idebugprogramprovider2setlocale"></a>IDebugProgramProvider2::SetLocale
-ロケール固有のリソースに使用するロケールを設定します。
+任意のロケール固有のリソースに使用するロケールを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int SetLocale(
 
 ## <a name="parameters"></a>パラメーター
 `wLangID`\
-から確立する言語 ID。 たとえば、英語の場合は1033です。
+[入力] 設定する言語 ID。 たとえば、英語の場合は 1033 です。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)

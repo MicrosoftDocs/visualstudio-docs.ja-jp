@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって会議出席依頼を作成する'
-description: プログラムを使用して Microsoft Outlook で会議出席依頼を作成し、必要な出席者に要求を送信する方法について説明します。
+description: Microsoft Outlook でプログラムを使用して会議出席依頼を作成し、必須出席者にその依頼を送信する方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 74479f68f763822f4f80fa6bb33cb708d4db26da
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828723"
@@ -33,5 +33,5 @@ ms.locfileid: "107828723"
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_MeetingRequest/thisaddin.vb" id="Snippet1":::
 
 ## <a name="see-also"></a>関連項目
-- [予定表アイテムの操作](../vsto/working-with-calendar-items.md)
+- [予定表アイテムを操作する](../vsto/working-with-calendar-items.md)
 - [VSTO アドインのプログラミングの概要](../vsto/getting-started-programming-vsto-add-ins.md)

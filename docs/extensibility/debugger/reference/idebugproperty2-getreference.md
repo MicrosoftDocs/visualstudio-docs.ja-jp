@@ -1,6 +1,6 @@
 ---
 description: プロパティの値への参照を返します。
-title: 'IDebugProperty2:: GetReference |Microsoft Docs'
+title: IDebugProperty2::GetReference | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: cc8a922ad29b7f6b3ecff57ee5df7ad0e7dded1d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064762"
@@ -42,11 +42,11 @@ int GetReference(
 
 ## <a name="parameters"></a>パラメーター
 `ppRererence`\
-入出力プロパティの値への参照を表す [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) オブジェクトを返します。
+[出力] そのプロパティの値への参照を表す [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返し `S_OK` ます。それ以外の場合は、エラーコード (通常はまたは) を返します `E_NOTIMPL` `E_GETREFERENCE_NO_REFERENCE` 。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コード (通常は `E_NOTIMPL` または `E_GETREFERENCE_NO_REFERENCE`) を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

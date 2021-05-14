@@ -1,6 +1,6 @@
 ---
-description: プログラムからデバッグエンジンをデタッチします。
-title: IDebugProgram2::D etach |Microsoft Docs
+description: プログラムからデバッグ エンジンをデタッチします。
+title: IDebugProgram2::Detach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2e9e7527ee13c703bbf7e1ba5a15ae225cf87c0b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076096"
 ---
 # <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
-プログラムからデバッグエンジンをデタッチします。
+プログラムからデバッグ エンジンをデタッチします。
 
 ## <a name="syntax"></a>構文
 
@@ -39,10 +39,10 @@ int Detach();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- デタッチされたプログラムは実行を継続しますが、デバッグセッションの一部ではなくなりました。 デバッグエンジンがデタッチされると、それ以上のプログラムデバッグイベントは送信されません。
+## <a name="remarks"></a>解説
+ デタッチされたプログラムは引き続き実行されますが、デバッグ セッションの一部ではなくなります。 デバッグ エンジンがデタッチされると、プログラム デバッグ イベントは送信されなくなります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

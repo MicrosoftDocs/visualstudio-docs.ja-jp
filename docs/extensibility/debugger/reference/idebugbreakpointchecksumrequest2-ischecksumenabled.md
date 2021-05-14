@@ -1,6 +1,6 @@
 ---
 description: このドキュメントに対してチェックサムが有効になっているかどうかを判断します。
-title: 'IDebugBreakpointChecksumRequest2:: IsChecksumEnabledMicrosoft Docs'
+title: IDebugBreakpointChecksumRequest2::IsChecksumEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,7 +16,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 1c09d28309eeeab77f95c8a33f19cd8cf47e9acc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067219"
@@ -40,10 +40,10 @@ public int IsChecksumEnabled(
 
 ## <a name="parameters"></a>パラメーター
 `pfChecksumEnabled`\
-入出力チェックサムが有効な場合は TRUE を返します。それ以外の場合は FALSE を返します。
+[出力] チェックサムが有効な場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

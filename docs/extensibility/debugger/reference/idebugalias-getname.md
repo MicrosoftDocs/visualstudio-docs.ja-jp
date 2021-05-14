@@ -1,6 +1,6 @@
 ---
-description: このエイリアスの名前を取得します。
-title: 'IDebugAlias:: GetName |Microsoft Docs'
+description: この別名の名前を取得します。
+title: IDebugAlias::GetName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 51deb460e5ce30bfea076af9a1f0c1efd2df9673
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059159"
 ---
 # <a name="idebugaliasgetname"></a>IDebugAlias::GetName
-このエイリアスの名前を取得します。
+この別名の名前を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int GetName(
 
 ## <a name="parameters"></a>パラメーター
 `pbstrName`\
-入出力エイリアスの名前。
+[出力] この別名の名前。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合はエラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

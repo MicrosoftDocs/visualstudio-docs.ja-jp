@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって文書を閉じる'
-description: 作業中の文書を閉じる方法、または閉じる Microsoft Office Word 文書を指定する方法について説明します。
+description: 作業中の文書を閉じたり、閉じる Microsoft Office Word 文書を指定したりする方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 1b31a35ac1fa452f526d109dd93ca8264f78947b
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825356"
@@ -50,7 +50,7 @@ ms.locfileid: "107825356"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet3":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet3":::
 
-## <a name="close-a-document-that-you-specify-by-name"></a>名前で指定したドキュメントを閉じる
+## <a name="close-a-document-that-you-specify-by-name"></a>名前を指定して文書を閉じる
  名前を指定して文書を閉じる方法は、VSTO アドインとドキュメント レベルのカスタマイズで同じです。
 
 ### <a name="to-close-a-document-that-you-specify-by-name"></a>名前を指定して文書を閉じるには
@@ -64,8 +64,8 @@ ms.locfileid: "107825356"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet4":::
 
 ## <a name="see-also"></a>関連項目
-- [方法: プログラムによって既存のドキュメントを開く](../vsto/how-to-programmatically-open-existing-documents.md)
+- [方法: プログラムによって既存文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)
 - [方法: プログラムによって文書を保存する](../vsto/how-to-programmatically-save-documents.md)
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
-- [ホスト項目とホストコントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)

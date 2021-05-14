@@ -1,5 +1,5 @@
 ---
-title: PowerShell を使用して開発環境とテスト環境に発行する
+title: PowerShell を使用し、開発およびテスト環境に発行する
 description: Visual Studio から Windows PowerShell スクリプトを使用して、開発環境とテスト環境に発行する方法について説明します。
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -10,7 +10,7 @@ ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: e0486e3a13b1c6b6ba421c5c0a97788f514413e1
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843957"
@@ -21,7 +21,7 @@ Visual Studio で Web アプリケーションを作成するときに、Azure �
 
 これらのスクリプトを使用すると、サイトのカスタマイズされたバージョン (開発およびテスト環境とも呼ばれます) を、一時的に使用するためにプロビジョニングできます。 たとえば、テスト スイートの実行、バグの再現、バグ修正のテスト、提案された変更の試験的な適用を行うために、Azure 仮想マシンまたは Web サイトのステージング スロットで Web サイトの特定のバージョンをセットアップしたり、デモまたはプレゼンテーション用にカスタム環境をセットアップしたりできます。 プロジェクトを発行するスクリプトを作成したら、必要に応じてそのスクリプトを再実行することで、同一の環境を再作成できます。また、Web アプリケーションの独自のビルドでスクリプトを実行して、テスト用のカスタム環境を作成することもできます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * **Azure ワークロード** がインストールされた Visual Studio 2015 以降、または Visual Studio 2013 と Azure SDK 2.3 以降。 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページをご覧ください。 (Web プロジェクトのスクリプトの生成に Azure SDK は不要です。 この機能は、クラウド サービスの Web ロールではなく、Web プロジェクトを対象としています。)
 * Azure PowerShell 0.7.4 以降。 「 [Azure PowerShell のインストールと構成の方法](/powershell/azure/overview)」を参照してください。
@@ -249,7 +249,7 @@ Azure に運用サイトが 1 つだけ存在するのでなく、複数のデ�
         #Write a function to build and package your web application
     ```
 
-    Web アプリケーションをビルドするには、MsBuild.exe を使用します。 詳細については、「 [MSBuild Command-Line リファレンス](../msbuild/msbuild-command-line-reference.md)」を参照してください。
+    Web アプリケーションをビルドするには、MsBuild.exe を使用します。 詳細については、[MSBuild コマンドライン リファレンス](../msbuild/msbuild-command-line-reference.md)を参照してください
 
     ```powershell
     Write-VerboseWithTime 'Build-WebDeployPackage: Start'
@@ -305,7 +305,7 @@ return $WebDeployPackage
     アプリケーションのテストを自動化するには、 `Test-WebApplication`にコードを追加します。 **Publish-WebApplication.ps1** で、これらの関数が呼び出されている行のコメントを必ず解除してください。 これを実装しない場合は、Visual Studio でプロジェクトを手動でビルドし、発行スクリプトを実行して Azure に発行できます。
 
 ## <a name="publishing-function-summary"></a>発行関数の概要
-Windows PowerShell コマンド プロンプトで使用できる関数のヘルプを取得するには、 `Get-Help function-name`コマンドを使用します。 ヘルプには、パラメーターのヘルプと例が含まれています。 同じヘルプテキストが、スクリプトソースファイル **azurewebapppublishmodule.psm1 hbase-runner.psm1** と **Publish-WebApplication.ps1** にも含まれています。 スクリプトとヘルプは、Visual Studio の言語でローカライズされています。
+Windows PowerShell コマンド プロンプトで使用できる関数のヘルプを取得するには、 `Get-Help function-name`コマンドを使用します。 ヘルプには、パラメーターのヘルプと例が含まれています。 スクリプト ソース ファイル **AzureWebAppPublishModule.psm1** と **Publish-WebApplication.ps1** にも、同じヘルプ テキストが含まれています。 スクリプトとヘルプは、Visual Studio の言語でローカライズされています。
 
 **AzureWebAppPublishModule**
 
@@ -321,7 +321,7 @@ Windows PowerShell コマンド プロンプトで使用できる関数のヘル
 | Find-AzureVM |指定された Azure 仮想マシンを取得します。 |
 | Format-DevTestMessageWithTime |メッセージの先頭に日付と時刻を追加します。 この関数は、エラー ストリームと詳細ストリームに書き込まれるメッセージを対象としています。 |
 | Get-AzureSQLDatabaseConnectionString |Azure SQL データベースに接続するための接続文字列をアセンブルします。 |
-| Get-AzureVMStorage |*指定された場所またはアフィニティグループに、"devtest" (大文字と小文字を区別しない) という名前の最初のストレージアカウントの名前を返します。"Devtest*" ストレージアカウントが場所またはアフィニティグループと一致しない場合、関数はそれを無視します。 場所またはアフィニティ グループを指定します。 |
+| Get-AzureVMStorage |指定された場所またはアフィニティ グループの最初のストレージ アカウントの名前を "devtest *" という名前パターン (大文字と小文字を区別しない) で返します。"devtest*" ストレージ アカウントが場所またはアフィニティ グループと一致しない場合、そのアカウントは無視されます。 場所またはアフィニティ グループを指定します。 |
 | Get-MSDeployCmd |MsDeploy.exe ツールを実行するためのコマンドを返します。 |
 | New-AzureVMEnvironment |JSON 構成ファイル内の値と一致する、サブスクリプション内の仮想マシンを検出または作成します。 |
 | Publish-WebPackage |MsDeploy.exe と Web 発行パッケージの .ZIP ファイルを使用して、リソースを Web サイトにデプロイします。 この関数では出力は生成されません。 MSDeploy.exe の呼び出しに失敗した場合は、例外がスローされます。 さらに詳しい出力を取得するには、 **-Verbose** オプションを使用します。 |
@@ -346,5 +346,5 @@ Windows PowerShell コマンド プロンプトで使用できる関数のヘル
 | Publish-WebApplication |Visual Studio Web プロジェクト用の Web アプリ、仮想マシン、SQL データベース、ストレージ アカウントを作成し、デプロイします。 |
 | Test-WebApplication |この関数は実装されていません。 この関数にコマンドを追加すると、アプリケーションをテストできます。 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 PowerShell スクリプトの詳細については、「[Windows PowerShell を使用したスクリプト](/powershell/scripting/overview)」をお読みください。また、「[スクリプト センター](https://azure.microsoft.com/documentation/scripts/)」で他の Azure PowerShell スクリプトもご覧ください。

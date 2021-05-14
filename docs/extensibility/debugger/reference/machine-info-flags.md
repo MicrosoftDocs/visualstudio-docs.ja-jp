@@ -1,6 +1,6 @@
 ---
-description: コンピューターを説明するために使用されます。
-title: MACHINE_INFO_FLAGS |Microsoft Docs
+description: マシンを説明するために使用されます。
+title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9d7720b9a3ccb80b376ba2f6c4d2ec125b82030c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057911"
 ---
 # <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
-コンピューターを説明するために使用されます。
+マシンを説明するために使用されます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_MACHINE_INFO_FLAGS { 
@@ -43,15 +43,15 @@ public enum enum_MACHINE_INFO_FLAGS {
 
 ## <a name="fields"></a>フィールド
  `MCIFLAG_TERMINAL_SERVICES_AVAILABLE`\
- ターミナルサービスが使用可能であることを示します。
+ ターミナル サービスが利用できることを示します。
 
-## <a name="remarks"></a>注釈
- `Flags` [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)構造体のメンバーとして使用されます。
+## <a name="remarks"></a>解説
+ [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) 構造体の `Flags` メンバーとして使用されます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

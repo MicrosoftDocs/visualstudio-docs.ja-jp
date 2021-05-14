@@ -1,5 +1,5 @@
 ---
-description: 指定したモジュール内の指定した属性を持つクラスを取得します。
+description: 指定のモジュールの指定の属性を持つクラスを取得します。
 title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c972a96c360cc1de0aa3f14c8316c3e1f8c5c156
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058873"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesinmodule"></a>IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-指定したモジュール内の指定した属性を持つクラスを取得します。
+指定のモジュールの指定の属性を持つクラスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,22 +49,22 @@ int GetAttributedClassesinModule (
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[入力] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[入力] モジュールの一意識別子。
 
 `pstrAttribute`\
-から属性文字列。
+[入力] 属性文字列。
 
 `ppEnum`\
-入出力属性付きクラスの列挙体を返します。
+[出力] 属性付きクラスの列挙型を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAttributedClassesinModule(
@@ -154,5 +154,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

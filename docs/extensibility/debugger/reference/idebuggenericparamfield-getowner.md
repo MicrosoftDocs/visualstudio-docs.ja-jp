@@ -1,6 +1,6 @@
 ---
-description: このジェネリックパラメーターの型またはメソッドの所有者を取得します。
-title: 'IDebugGenericParamField:: GetOwner |Microsoft Docs'
+description: このジェネリック パラメーターの型またはメソッドの所有者を取得します。
+title: IDebugGenericParamField::GetOwner | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4278fdde2b660e722c92f95e076d47c004ebfc4b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091982"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-このジェネリックパラメーターの型またはメソッドの所有者を取得します。
+このジェネリック パラメーターの型またはメソッドの所有者を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,13 +40,13 @@ int GetOwner(
 
 ## <a name="parameters"></a>パラメーター
 `ppOwner`\
-入出力このジェネリックパラメーターを所有する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
+[out] このジェネリック パラメーターを所有する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)
@@ -96,5 +96,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

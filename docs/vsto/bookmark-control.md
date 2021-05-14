@@ -1,6 +1,6 @@
 ---
 title: Bookmark コントロール
-description: ブックマークコントロールが一意の名前を持ち、イベントを公開し、データにバインドできるブックマークであることについて説明します。
+description: Bookmark コントロールが一意の名前を持ち、イベントを公開し、データにバインドできるブックマークであることを説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,7 +21,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 1da30943eff228aad3c5413c5d8faea337634e9b
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99905265"
@@ -31,24 +31,24 @@ ms.locfileid: "99905265"
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- ドキュメント レベルのプロジェクトでは、デザイン時または実行時に、文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトでは、実行時に、開いている任意の文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 詳細については、「 [方法: Word 文書にブックマークコントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)する」を参照してください。
+ ドキュメント レベルのプロジェクトでは、デザイン時または実行時に、文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトでは、実行時に、開いている任意の文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 詳細については、「[方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)」を参照してください。
 
-## <a name="bind-data-to-the-control"></a>コントロールにデータをバインドする
+## <a name="bind-data-to-the-control"></a>データをコントロールにバインドする
  <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールでは、単純データ バインディングがサポートされます。 ブックマークは、 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> プロパティを使用してデータ ソースにバインドする必要があります。 ブックマークの既定のデータ バインディング プロパティは、 <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> プロパティです。
 
- バインドされたデータセット内のデータが更新されると、コントロールに変更が表示され <xref:Microsoft.Office.Tools.Word.Bookmark> ます。
+ バインドされたデータセット内のデータが更新されると、<xref:Microsoft.Office.Tools.Word.Bookmark> コントロールによってその変更が表示されます。
 
- ドキュメント レベルのプロジェクトでは、 **[データ ソース]** ウィンドウを使用してブックマークにデータをバインドすることもできます。 詳細については、「 [方法: オブジェクトのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)」を参照してください。
+ ドキュメント レベルのプロジェクトでは、 **[データ ソース]** ウィンドウを使用してブックマークにデータをバインドすることもできます。 詳細については、「[方法: オブジェクトのデータをドキュメントに読み込む](../vsto/how-to-populate-documents-with-data-from-objects.md)」を参照してください。
 
 ## <a name="formatting"></a>書式設定
  <xref:Microsoft.Office.Interop.Word.Bookmark> に適用できる書式設定は、 <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールに適用できます。 この書式設定には、フォント、インデント、間隔、番号付け、およびスタイルが含まれます。
 
-## <a name="assign-text-to-the-bookmark"></a>ブックマークにテキストを割り当てる
+## <a name="assign-text-to-the-bookmark"></a>テキストをブックマークに割り当てる
  <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> オブジェクトと <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> コントロールのもう 1 つの違いに、テキストをブックマークに割り当てる場合の動作があります。 長さゼロの <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType>にテキストを割り当てた場合、テキストはブックマークの右側に追加されるため、ブックマークの長さはゼロのままです。 しかし、長さゼロの <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>にテキストを割り当てた場合、テキストはブックマークに挿入されるため、ブックマークの長さは、挿入された文字の合計数に拡張されます。
 
- <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> コントロールには <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> プロパティもあります。 このプロパティは、 <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> コントロールのプロパティ <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> または <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> オブジェクトのプロパティで使用できるプロパティとは異なり <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> ます。
+ <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> コントロールには <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> プロパティもあります。 このプロパティは、<xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> コントロールの <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> プロパティ、または <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> オブジェクトの <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> プロパティで使用できる <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> プロパティとは異なります。
 
-|Text プロパティ|Description|
+|Text プロパティ|説明|
 |-------------------|-----------------|
 |<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|このプロパティは、ブックマーク内にテキストを表示し、そのブックマークを文書上に維持する場合に使用します。 ブックマークにテキストを割り当てると、ブックマークの範囲が拡張され、そのブックマークは削除されません。<br /><br /> たとえば、 `Bookmark1.Text = "Hello world"` の場合、テキストがブックマークに挿入され、ブックマークが失われることはありません。|
 |<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|このプロパティは、ブックマークの位置にテキストを表示し、そのブックマークを自動的に削除する場合に使用します。 たとえば、 `Bookmark1.Range.Text = "Hello world"` の場合、テキストがブックマークに挿入され、そのブックマークは削除されます。|
@@ -56,40 +56,40 @@ ms.locfileid: "99905265"
 ## <a name="rename-the-control-at-design-time"></a>デザイン時にコントロールの名前を変更する
  ドキュメント レベルのプロジェクトで、 <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを **[ツールボックス]** から文書にドラッグすると、Visual Studio によってコントロールの名前が自動的に生成されます。 コントロールの名前は **[プロパティ]** ウィンドウで変更できます。
 
-## <a name="overlapping-controls"></a>重なっているコントロール
- ブックマークコントロールは互いに重なり合う可能性があります。 同じテキストを複数のブックマークで共有できます。 重複しているブックマークの1つに新しいテキストを割り当てると、新しいテキストだけが含まれ、ブックマークは重複しなくなります。 もう一方のブックマークには、元の重複するブックマーク間で共有されていないテキストのみが含まれるようになりました。
+## <a name="overlapping-controls"></a>コントロールの重複
+ Bookmark コントロールは、重複させることができます。 同じテキストを複数のブックマークで共有できます。 重複しているブックマークの 1 つに新しいテキストを割り当てると、そのブックマークには新しいテキストだけが含まれるようになり、それらのブックマークは重複しなくなります。 他のブックマークには、元の重複していたブックマーク間で共有されていなかったテキストだけが含まれるようになります。
 
- 次の表では、「This is sample text.」という文が 次の2つの重複するブックマークによって共有されています:
+ 次の表では、「This is sample text.」という文が 2 つの重複するブックマークでどのように共有されるかが示されています。
 
-|ブックマーク|Text|
+|ブックマーク|テキスト|
 |--------------|----------|
 |重複するブックマーク|[this is {sample] text.}|
 |Bookmark1|This is sample|
 |Bookmark2|sample text.|
 
- Bookmark1 に新しいテキスト「This is replacement.」を割り当てると Bookmark1 の場合、ブックマークは重複せず、Bookmark2 はもともと Bookmark1 の一部ではないテキストのみを保持します。
+ Bookmark1 に新しいテキスト「This is replacement.」を割り当てると 、ブックマークは重複しなくなり、Bookmark2 にはもともと Bookmark1 の一部ではなかったテキストだけが維持されます。
 
-|ブックマーク|Text|
+|ブックマーク|テキスト|
 |--------------|----------|
 |2 つの別個のブックマーク|[this is replacement]{ text.}|
 |Bookmark1|This is replacement|
 |Bookmark2|text.|
 
-別のブックマークを含むブックマークのテキストを変更しても、内部ブックマークは削除されません。 ただし、内部ブックマークは空のブックマークになり、外側のブックマークの末尾に移動します。
+別のブックマークを含むブックマークのテキストを変更しても、内部ブックマークは削除されません。 ただし、内部ブックマークは空のブックマークになり、外側のブックマークの末尾に移動されます。
 
-次の表では、「This is sample text.」という文が は、別のブックマーク内に含まれるブックマークによって共有されます。
+次の表では、「This is sample text.」という文が 別のブックマーク内に含まれているブックマークによってどのように共有されるかが示されています。
 
-|ブックマーク|Text|
+|ブックマーク|テキスト|
 |--------------|----------|
 |重複するブックマーク|[this is {sample} text.]|
 |Bookmark1|This is sample text.|
-|Bookmark2|サンプル|
+|Bookmark2|sample|
 
  Bookmark1 に新しいテキスト「This is replacement.」を割り当てると 、これらの 2 つのブックマークは重複しなくなり、Bookmark2 は Bookmark1 の末尾にある空のブックマークになります。
 
-|ブックマーク|Text|
+|ブックマーク|テキスト|
 |--------------|----------|
-|2 つの別個のブックマーク|[これは代替です。]{}|
+|2 つの別個のブックマーク|[this is replacement.]{}|
 |Bookmark1|This is replacement.|
 |Bookmark2|*\<empty>*|
 
@@ -115,6 +115,6 @@ ms.locfileid: "99905265"
 
 - [拡張オブジェクトを使用して Word を自動化する](../vsto/automating-word-by-using-extended-objects.md)
 - [方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
-- [チュートリアル: ブックマークのショートカットメニューを作成する](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
-- [Office ソリューションのコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [ホスト項目とホストコントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [チュートリアル: ブックマークのショートカット メニューを作成する](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Office ソリューションでコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [ホスト項目とホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

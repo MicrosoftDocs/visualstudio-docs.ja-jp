@@ -1,7 +1,8 @@
-﻿---
-title: MemoryTypeEnum |Microsoft Docs
+---
+description: アクセスするメモリの種類を指定します。
+title: MemoryTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8778c047-edeb-4495-8f9f-3f8bbb297099
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e0710ec5cdfcfcb59407d18b43b885603f017fdb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 557991a66f7e70dedcd7dad2a05d7e25fd0cd6b2
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738630"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634565"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 アクセスするメモリの種類を指定します。
@@ -34,18 +35,18 @@ enum MemoryTypeEnum {
 ```
 
 #### <a name="parameters"></a>パラメーター
-`MemTypeCode` は、コードメモリにのみアクセスします。
+`MemTypeCode`: コード メモリにのみアクセスします。
 
-`MemTypeData` は、データまたはスタックメモリにアクセスします。
+`MemTypeData`: データまたはスタック メモリにアクセスします。
 
-`MemTypeStack` は、スタックメモリにのみアクセスします。
+`MemTypeStack`: スタック メモリにのみアクセスします。
 
-`MemTypeAny` は、あらゆる種類のメモリにアクセスします。
+`MemTypeAny`: 任意の種類のメモリにアクセスします。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、さまざまな種類のメモリへのアクセスを制限するために、 [IDiaStackWalkHelper:: readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)メソッドに渡されます。
+## <a name="remarks"></a>解説
+この列挙型の値は、さまざまな種類のメモリへのアクセスを制限するために [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) メソッドに渡されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 ヘッダー: cvconst. h
 
 ## <a name="see-also"></a>関連項目

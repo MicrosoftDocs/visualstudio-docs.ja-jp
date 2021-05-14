@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、フィールドの型を取得します。
-title: 'IDebugField:: GetType |Microsoft Docs'
+description: このメソッドを使用すると、フィールドの型を取得できます。
+title: IDebugField::GetType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: fe4873286cebcb48d085a173d6be04d5123df80d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076954"
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
-このメソッドは、フィールドの型を取得します。
+このメソッドを使用すると、フィールドの型を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int GetType(
 
 ## <a name="parameters"></a>パラメーター
 `ppType`\
-入出力フィールド型を別の [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトとして返します。
+[out] フィールドの型を別の [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトとして返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

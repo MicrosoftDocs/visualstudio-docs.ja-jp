@@ -1,6 +1,6 @@
 ---
 description: デバッガーが実行されているコンピューターに関する情報を取得します。
-title: 'IDebugWindowsComputerPort2:: GetComputerInfo |Microsoft Docs'
+title: IDebugWindowsComputerPort2::GetComputerInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2afc91ee00137889a22763c024b10d5d7788d49c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105083467"
@@ -41,11 +41,11 @@ public int GetComputerInfo(
 
 ## <a name="parameters"></a>パラメーター
 `pInfo`\
-入出力コンピューター情報を格納する構造体への参照。
+[out] コンピューターの情報が格納されている構造体への参照。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugWindowsComputerPort2](../../../extensibility/debugger/reference/idebugwindowscomputerport2.md)
 - [COMPUTER_INFO](../../../extensibility/debugger/reference/computer-info.md)

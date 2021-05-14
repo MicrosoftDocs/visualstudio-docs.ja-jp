@@ -1,6 +1,6 @@
 ---
-description: 配列のランク (次元数) を取得します。
-title: 'IDebugArrayObject:: Ge/k |Microsoft Docs'
+description: 配列のランク (つまり、次元数) を取得します。
+title: IDebugArrayObject::GetRank | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 1440ff2fa82c8296bf54b106b622556a8eebb611
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094329"
 ---
 # <a name="idebugarrayobjectgetrank"></a>IDebugArrayObject::GetRank
-配列のランク (次元数) を取得します。
+配列のランク (つまり、次元数) を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int GetRank(
 
 ## <a name="parameters"></a>パラメーター
 `pdwRank`\
-入出力ランクを返します。
+[out] ランクを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [Getdimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md)メソッドを使用して、配列オブジェクトの各次元のサイズを取得します。
+## <a name="remarks"></a>解説
+ [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) メソッドを使用して、配列オブジェクトの各次元のサイズを取得します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

@@ -1,6 +1,6 @@
 ---
-title: プロパティが関連付けに参加
-description: プロパティは関連付けに参加しているため、削除できません。 このオブジェクトリレーショナルデザイナー (O/R デザイナー) メッセージに関する情報を表示します。
+title: プロパティが関連付けに関与している
+description: プロパティが関連付けに関与しているため、削除できません。 このオブジェクト リレーショナル デザイナー (O/R デザイナー) メッセージに関する情報を表示してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,7 +12,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 99115a3c04aec71e7d000dfa4e707eacb0e28cf3
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99866399"
@@ -25,7 +25,7 @@ ms.locfileid: "99866399"
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. **O/R デザイナー** で、エラーメッセージに示されているデータクラスを接続する関連行を選択します。
+1. **O/R デザイナー** で、エラー メッセージに示されているデータ クラスを接続する関連行を選択します。
 
 2. 行をダブルクリックして、**[関連付けエディター]** ダイアログ ボックスを開きます。
 

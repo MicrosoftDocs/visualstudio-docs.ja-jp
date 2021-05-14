@@ -1,6 +1,6 @@
 ---
-description: 指定したメッセージ文字列をデバッガーの出力ウィンドウに送信します。
-title: IDebugIDECallback::D isplayMessage |Microsoft Docs
+description: 指定されたメッセージ文字列をデバッガーの出力ウィンドウに送信します。
+title: IDebugIDECallback::DisplayMessage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 6968c524559280756014bb6b26f55f688bc38ab3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091943"
 ---
 # <a name="idebugidecallbackdisplaymessage"></a>IDebugIDECallback::DisplayMessage
-指定したメッセージ文字列をデバッガーの出力ウィンドウに送信します。
+指定されたメッセージ文字列をデバッガーの出力ウィンドウに送信します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,10 +40,10 @@ int DisplayMessage (
 
 ## <a name="parameters"></a>パラメーター
 `szMessage`\
-からデバッガーの出力ウィンドウに表示するメッセージ文字列。
+[入力] デバッガーの出力ウィンドウに表示するメッセージ文字列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugIDECallback](../../../extensibility/debugger/reference/idebugidecallback.md)

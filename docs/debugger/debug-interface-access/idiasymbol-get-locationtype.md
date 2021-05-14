@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_locationType |Microsoft Docs'
+---
+description: データ シンボルの場所の種類を取得します。
+title: IDiaSymbol::get_locationType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: fbb09c43-ebb7-4b4f-be53-ccff86eb183a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b10668a4767d411f48df213c79ae6508e7c0bf28
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 2a4ef7d60db3eacc7f87699e8c6e20b93e56bcd4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739856"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634658"
 ---
 # <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
-データシンボルの場所の種類を取得します。
+データ シンボルの場所の種類を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_locationType ( 
+HRESULT get_locationType ( 
    DWORD* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_locationType ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力@No__t_1 や `local` など、データシンボルの場所の種類を指定する[LocationType enumeration](../../debugger/debug-interface-access/locationtype.md)列挙体の値を返します。
+[出力] `static` や `local` など、データ シンボルの場所の種類を指定する [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)からの値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

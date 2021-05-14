@@ -1,6 +1,6 @@
 ---
 title: ドメイン パス構文
-description: ドメインパスの構文、および DSL 定義で XPath に似た構文を使用してモデル内の特定の要素を検索する方法について説明します。
+description: ドメイン パス構文と、DSL 定義で XPath に似た構文を使用してモデル内の特定の要素を見つけるしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: c11776576d00306e4b0f3de5e7ff830037c1fefd
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99935158"
@@ -29,9 +29,9 @@ DSL 定義は XPath に似た構文を使用して、モデル内の特定の要
 
  ![CommentReferencesSubjects 参照リレーションシップ](../modeling/media/dsl_reference.png)
 
- 構文はモデルのツリーを走査します。 たとえば、上の図のように、ドメインリレーションシップに関する **コメント** を示すトピックには、 **サブジェクト** ロールがあります。 パスセグメント **/!Subjectt** は、 **サブジェクト** ロールを介してアクセスされる要素でパスが終了することを指定します。
+ 構文はモデルのツリーを走査します。 たとえば、上の図のドメイン リレーションシップ **CommentReferencesSubjects** には **Subjects** ロールがあります。 パス セグメント **/!Subjectt** は、パスが **Subjects** ロールによりアクセスされる要素で終わることを示します。
 
- 各セグメントの先頭はドメイン リレーションシップの名前になっています。 要素からリレーションシップへの走査の場合、パスセグメントは *relationship. PropertyName* として表示されます。 ホップが要素へのリンクからのものである場合、パスセグメントは Relationship/! として表示されます *。RoleName*。
+ 各セグメントの先頭はドメイン リレーションシップの名前になっています。 走査対象が要素からリレーションシップの場合、パス セグメントは *Relationship.PropertyName* となります。 ホップがリンクから要素の場合、パス セグメントは *Relationship/!RoleName* となります。
 
  スラッシュはパスの構文を区切ります。 各パス セグメントは要素からリンク (リレーションシップのインスタンス) へのホップか、リンクから要素へのホップのどちらかです。 パス セグメントは多くの場合、ペアで表示されます。 1 つのパス セグメントは要素からリンクへのホップを表し、次のセグメントはリンクから他端の要素へのホップを表します。 (どのリンクもリレーションシップ自体のソースまたはターゲットになりえます)。
 

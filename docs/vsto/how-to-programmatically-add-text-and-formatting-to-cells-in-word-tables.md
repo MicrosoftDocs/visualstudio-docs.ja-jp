@@ -1,6 +1,6 @@
 ---
-title: プログラムによって Word の表のセルにテキスト & 書式設定を追加する
-description: Microsoft Office Word の表のセルにテキストと書式設定をプログラムで追加する方法について説明します。
+title: プログラムで Word の表のセルにテキストと書式設定を追加する
+description: Microsoft Office Word の表のセルにテキストと書式設定をプログラムで追加する方法について学習します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -20,7 +20,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 58c9e7f7d5537e4b052a732a85ad9d1c7298afa0
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828398"
@@ -47,4 +47,4 @@ ms.locfileid: "107828398"
 ## <a name="see-also"></a>関連項目
 - [方法: プログラムによって Word の表を作成する](../vsto/how-to-programmatically-create-word-tables.md)
 - [方法: プログラムによって Word の表に行と列を追加する](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
-- [方法: プログラムによって document プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)
+- [方法: プログラムによってドキュメント プロパティを Word の表に読み込む](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)

@@ -1,6 +1,6 @@
 ---
-description: モジュールがユーザーコードを表しているかどうかに関する情報を取得します。
-title: 'IDebugModule3:: IsUserCode |Microsoft Docs'
+description: モジュールがユーザー コードを表しているかどうかの情報を取得します。
+title: IDebugModule3::IsUserCode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: cbc56943574cc5549e96e3281b4398df7d486f7d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065607"
 ---
 # <a name="idebugmodule3isusercode"></a>IDebugModule3::IsUserCode
-モジュールがユーザーコードを表しているかどうかに関する情報を取得します。
+モジュールがユーザー コードを表しているかどうかの情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int IsUserCode(
 
 ## <a name="parameters"></a>パラメーター
 `pfUser`\
-入出力`TRUE`モジュールがユーザーコードを表す場合は0以外 ()。それ以外の場合は 0 ( `FALSE` )。
+[出力] モジュールがユーザー コードを表す場合は 0 以外 (`TRUE`)。それ以外の場合は 0 (`FALSE`)。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

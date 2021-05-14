@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって予定を削除する'
-description: Microsoft Outlook でプログラムを使用して apppointments 削除する方法について説明します。 この例では、定期的な予定の 1 つのインスタンスを削除します。
+description: Microsoft Outlook でプログラムによって予定を削除する方法について学習します。 この例では、定期的な予定の 1 つのインスタンスを削除します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 9a8c86917392859afe323deb01916b2b6bf12452
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828684"
@@ -33,8 +33,8 @@ ms.locfileid: "107828684"
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_Outlook_RL_DeleteAppointment/thisaddin.cs" id="Snippet1":::
 
 ## <a name="see-also"></a>関連項目
-- [予定表アイテムの操作](../vsto/working-with-calendar-items.md)
+- [予定表アイテムを操作する](../vsto/working-with-calendar-items.md)
 - [VSTO アドインのプログラミングの概要](../vsto/getting-started-programming-vsto-add-ins.md)
 - [方法: プログラムによって予定を作成する](../vsto/how-to-programmatically-create-appointments.md)
-- [方法: プログラムによってカスタムカレンダーを作成する](../vsto/how-to-programmatically-create-a-custom-calendar.md)
+- [方法: プログラムによってカスタムの予定表を作成する](../vsto/how-to-programmatically-create-a-custom-calendar.md)
 - [方法: プログラムによって会議出席依頼を作成する](../vsto/how-to-programmatically-create-a-meeting-request.md)
