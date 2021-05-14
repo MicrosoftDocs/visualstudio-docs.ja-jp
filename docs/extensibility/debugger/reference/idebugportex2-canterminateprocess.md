@@ -1,6 +1,6 @@
 ---
 description: プロセスを終了できるかどうかを判断します。
-title: 'IDebugPortEx2:: CanTerminateProcess |Microsoft Docs'
+title: IDebugPortEx2::CanTerminateProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c1cfd7ab17e9af6def3639ec2127411a80b69385
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072599"
@@ -42,11 +42,11 @@ HRESULT CanTerminateProcess(
 
 ## <a name="parameters"></a>パラメーター
 `pPortProcess`\
-から終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
+[入力] 終了するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- プロセスを終了できる場合はを返します `S_OK` 。それ以外の場合はを返し `S_FALSE` ます。
+ プロセスを終了できる場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

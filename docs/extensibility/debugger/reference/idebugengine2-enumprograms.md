@@ -1,6 +1,6 @@
 ---
-description: デバッグエンジン (DE) によってデバッグされているすべてのプログラムの一覧を取得します。
-title: 'IDebugEngine2:: EnumPrograms |Microsoft Docs'
+description: デバッグ エンジン (DE) によってデバッグされているすべてのプログラムの一覧を取得します。
+title: IDebugEngine2::EnumPrograms | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9ee1dfeebb92bc4a0215e5e09ed8786a81ad6167
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088043"
 ---
 # <a name="idebugengine2enumprograms"></a>IDebugEngine2::EnumPrograms
-デバッグエンジン (DE) によってデバッグされているすべてのプログラムの一覧を取得します。
+デバッグ エンジン (DE) によってデバッグされているすべてのプログラムの一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int EnumPrograms(
 
 ## <a name="parameters"></a>パラメーター
 `ppEnum`\
-入出力DE によってデバッグされているすべてのプログラムの一覧を含む [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) オブジェクトを返します。
+[out] DE によってデバッグされているすべてのプログラムの一覧を含む [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

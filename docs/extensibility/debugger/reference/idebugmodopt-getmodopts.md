@@ -1,6 +1,6 @@
 ---
 description: 省略可能な修飾子のリストを取得します。
-title: 'IDebugModOpt:: GetModOpts |Microsoft Docs'
+title: IDebugModOpt::GetModOpts | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 614ecb456b6f644dfd389020bbffb23691cfbf43
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081907"
@@ -45,16 +45,16 @@ int GetModOpts(
 
 ## <a name="parameters"></a>パラメーター
 `celt`\
-から返される要素の数。
+[in] 取得する要素の数。
 
 `rgelt`\
-入出力オプションを格納している配列を返します。
+[out] オプションが格納されている配列を返します。
 
 `pceltFetched`\
-[入力、出力]配列で返される要素の数 `rgelt` 。
+[in、out] `rgelt` 配列で返される要素の数。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

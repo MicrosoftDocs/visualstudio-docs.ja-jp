@@ -1,6 +1,6 @@
 ---
 description: プロセスの説明を取得します。
-title: 'IDebugProcess2:: GetInfo |Microsoft Docs'
+title: IDebugProcess2::GetInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 01771f011df4e40b2323ef9cc44027f9456c2fbf
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081842"
@@ -44,15 +44,15 @@ int GetInfo(
 
 ## <a name="parameters"></a>パラメーター
 `Fields`\
-からパラメーターのどのフィールドを入力するかを指定する、 [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) 列挙型の値の組み合わせ `pProcessInfo` 。
+[in] `pProcessInfo` パラメーターで設定するフィールドを指定する、[PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) 列挙型の値の組み合わせ。
 
 `pProcessInfo`\
-入出力プロセスの説明が入力されている [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 構造体。
+[out] プロセスの説明が格納されている [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

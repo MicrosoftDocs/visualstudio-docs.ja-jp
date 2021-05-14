@@ -1,6 +1,6 @@
 ---
-description: このジェネリックパラメーターのフラグを取得します。
-title: 'IDebugGenericParamField:: GetFlags |Microsoft Docs'
+description: このジェネリック パラメーターのフラグを取得します。
+title: IDebugGenericParamField::GetFlags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 8dc6360819c1a8ec49a58896a2042d35884ed4a0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105063306"
 ---
 # <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
-このジェネリックパラメーターのフラグを取得します。
+このジェネリック パラメーターのフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,16 +41,16 @@ int GetFlags(
 
 ## <a name="parameters"></a>パラメーター
 `pdwFlags`\
-入出力このジェネリックパラメーターのフラグを返します。
+[出力] このジェネリック パラメーターのフラグを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-これらのフラグには、さまざまな特殊な制約に関する情報が含まれています。
+## <a name="remarks"></a>解説
+これらのフラグには、さまざまな特殊な制約の情報が含まれています。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) インターフェイスを公開する **CDebugGenericParamFieldType** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetFlags(DWORD *pdwFlags)
@@ -70,5 +70,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

@@ -1,6 +1,6 @@
 ---
-title: CreateNewFolder 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: CreateNewFolder 要素について、およびプロジェクトが作成されるターゲットディレクトリが存在しないかどうかを確認する方法について説明します。
+title: CreateNewFolder 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: CreateNewFolder 要素について、およびプロジェクトの作成先となるターゲット ディレクトリの有無をチェックするかどうかを決定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,7 +17,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3c2d8da615c350fc53b81532972cef65f6cd6ed7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089473"
@@ -59,7 +59,7 @@ ms.locfileid: "105089473"
 
  `true` または `false` のいずれかを設定する必要があります。これは、テンプレートからプロジェクトを作成するときに新規のコンテナー フォルダーを作成するかどうかを示します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `CreateNewFolder` は省略可能な要素です。 既定値は `true` です。
 
  `CreateNewFolder` は、基になるプロジェクト システムによってサポートされている場合のみ、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 要素に指定されている値に従います。
