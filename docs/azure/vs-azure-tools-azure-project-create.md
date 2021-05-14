@@ -9,14 +9,14 @@ ms.date: 03/19/2019
 ms.author: ghogen
 ms.openlocfilehash: d652172bde2ecd3aea4bb027e46173eaa5fe7b17
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844503"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Visual Studio での Azure クラウド サービス プロジェクトの作成
 
-Visual Studio には、 [azure クラウドサービス](/azure/cloud-services/cloud-services-choose-me)を作成するためのプロジェクトテンプレートが用意されています。これは、単純な汎用の azure サービスです。 プロジェクトを作成したら、Visual Studio でクラウド サービスを構成し、デバッグして、Azure にデプロイできます。
+Visual Studio には、シンプルな汎用 Azure サービスである [Azure クラウド サービス](/azure/cloud-services/cloud-services-choose-me)を作成できるプロジェクト テンプレートが用意されています。 プロジェクトを作成したら、Visual Studio でクラウド サービスを構成し、デバッグして、Azure にデプロイできます。
 
 ## <a name="steps-to-create-an-azure-cloud-service-project-in-visual-studio"></a>Visual Studio で Azure クラウド サービス プロジェクトを作成する手順
 このセクションでは、Visual Studio で 1 つ以上の Web ロールを追加して Azure クラウド サービス プロジェクトを作成する手順について説明します。
@@ -61,7 +61,7 @@ Visual Studio の Azure プロジェクトは、ソリューション内のロ�
 - **サービス定義ファイル** - 必要なロール、エンドポイント、仮想マシンのサイズなど、アプリケーションのランタイム設定を定義します。
 - **サービス構成ファイル** - 実行されるロールのインスタンス数とロールに定義されている設定の値を構成します。
 
-これらのファイルの詳細については、「 [Visual Studio を使用した Azure クラウドサービスのロールの構成](vs-azure-tools-configure-roles-for-cloud-service.md)」を参照してください。
+これらのファイルの詳細については、[Visual Studio を使用した Azure クラウド サービスのロールの構成](vs-azure-tools-configure-roles-for-cloud-service.md)に関する記事をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [Visual Studio での Azure クラウド サービス プロジェクトのロールの管理](./vs-azure-tools-cloud-service-project-managing-roles.md)

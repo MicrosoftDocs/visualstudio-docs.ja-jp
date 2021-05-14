@@ -1,6 +1,6 @@
 ---
 title: ヘルプ ビューアーのカスタマイズ
-description: ヘルプビューアーをカスタマイズする方法について説明します。 レイアウト、フォントサイズ、最大結果数、英語のコンテンツを含めるかどうかを構成します。
+description: ヘルプ ビューアーのカスタマイズ方法について説明します。 レイアウト、フォントのサイズ、結果の最大数、英語のコンテンツを含めるかどうかを構成します。
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -16,7 +16,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 0421a5cdb93c64093ae5b428260c78da44e71e3c
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944200"

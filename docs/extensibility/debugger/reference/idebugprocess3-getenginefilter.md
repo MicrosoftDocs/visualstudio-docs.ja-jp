@@ -1,6 +1,6 @@
 ---
-description: 使用可能なデバッグエンジンの一意の識別子の配列を取得します。
-title: 'IDebugProcess3:: GetEngineFilter |Microsoft Docs'
+description: 利用できるデバッグ エンジンの一意の識別子からなる配列を取得します。
+title: IDebugProcess3::GetEngineFilter | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7c2628424f4f5e9446c763324dfcf9ced4f1896e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076564"
 ---
 # <a name="idebugprocess3getenginefilter"></a>IDebugProcess3::GetEngineFilter
-使用可能なデバッグエンジンの一意の識別子の配列を取得します。
+利用できるデバッグ エンジンの一意の識別子からなる配列を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,11 +41,11 @@ public int GetEngineFilter(
 
 ## <a name="parameters"></a>パラメーター
 `pEngineArray`\
-入出力デバッグエンジンの一意の識別子を含む構造体への参照。
+[out] デバッグ エンジンの一意の識別子を含む構造体への参照。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
 - [GUID_ARRAY](../../../extensibility/debugger/reference/guid-array.md)

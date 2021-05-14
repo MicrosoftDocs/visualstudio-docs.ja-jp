@@ -1,6 +1,6 @@
 ---
-description: タスクの親である system.object のバッキングフィールドです。
-title: m_parent Field |Microsoft Docs
+description: タスクの親である System.Threading.Tasks.Task のバッキング フィールド。
+title: m_parent フィールド | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c48c7ae7392d6e9e32fb7683470e3582e61d7910
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059679"
 ---
 # <a name="m_parent-field"></a>m_parent フィールド
 
-タスクの親のバッキングフィールド <xref:System.Threading.Tasks.Task> です。
+タスクの親である <xref:System.Threading.Tasks.Task> のバッキング フィールド。
 
 **名前空間:** <xref:System.Threading.Tasks?displayProperty=fullName>
 
-**アセンブリ:** mscorlib ( *mscorlib.dll*)
+**アセンブリ:** mscorlib (*mscorlib.dll* 内)
 
-.NET Framework からこの内部メンバーにアクセスできないため、次の構文は、共通中間言語 (CIL) で提供されています。
+この内部メンバーには、.NET Framework からはアクセスできないため、次の構文では共通中間言語 (CIL) を使用しています。
 
 ## <a name="syntax"></a>構文
 

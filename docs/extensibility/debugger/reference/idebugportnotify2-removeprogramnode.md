@@ -1,6 +1,6 @@
 ---
 description: デバッグ可能なプログラムを、実行中のポートから登録解除します。
-title: 'IDebugPortNotify2:: RemoveProgramNode |Microsoft Docs'
+title: IDebugPortNotify2::RemoveProgramNode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 10208570237de10f9a6e682fc3a7478bd15ca24d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072417"
@@ -42,15 +42,15 @@ int RemoveProgramNode(
 
 ## <a name="parameters"></a>パラメーター
 `pProgramNode`\
-から登録を解除するプログラムを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) 。
+[入力] 登録解除するプログラムを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、 [Addprogramnode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) メソッドを呼び出すことによって追加されたプログラムノードを削除します。
+## <a name="remarks"></a>解説
+ このメソッドは、[AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) メソッドを呼び出して追加されたプログラム ノードを削除します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md)
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [AddProgramNode](../../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

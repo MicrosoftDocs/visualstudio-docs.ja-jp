@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、フィールドに関する情報を取得します。
-title: 'IDebugField:: GetInfo |Microsoft Docs'
+description: このメソッドを使用すると、フィールドに関する表示可能な情報を取得できます。
+title: IDebugField::GetInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: deebf0c8dafe64c8eb78ba5a1af0b8f96c70a18a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077058"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
-このメソッドは、フィールドに関する情報を取得します。
+このメソッドを使用すると、フィールドに関する表示可能な情報を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -44,14 +44,14 @@ int GetInfo(
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-から表示する情報を選択する [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) 定数の組み合わせ。 フィールドがシンボルを表す場合は、通常、シンボル名と型になります。
+[in] 表示する情報を選択する [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) 定数の組み合わせ。 フィールドがシンボルを表す場合、通常、これはシンボルの名前と型です。
 
 `pFieldInfo`\
-入出力指定された [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) 構造体の情報を返します。
+[out] 指定された [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) 構造体の情報を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
 - [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)

@@ -1,6 +1,6 @@
 ---
 title: オブジェクトのレイアウト コンテナーへの編成
-description: グリッド、キャンバス、罫線、Viewbox など、ページ上のオブジェクトの配置に使用される XAML デザイナーのレイアウトパネルとコントロールについて説明します。
+description: XAML デザイナーで、Grid、Canvas、Border、Viewbox など、ページ上のオブジェクトを配置するために使用されるレイアウトのパネルとコントロールについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 07/17/2020
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: tglee
 manager: jmartens
 ms.openlocfilehash: d42a7509ceef03d2e74f470d7d4ab0efb5913e13
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99900844"

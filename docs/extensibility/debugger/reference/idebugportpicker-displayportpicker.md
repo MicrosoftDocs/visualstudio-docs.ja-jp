@@ -1,6 +1,6 @@
 ---
-description: 指定されたダイアログボックスを表示し、ユーザーがポートを選択できるようにします。
-title: IDebugPortPicker::D isplayPortPicker |Microsoft Docs
+description: 指定されたダイアログ ボックスを表示し、ユーザーがポートを選択できるようにします。
+title: IDebugPortPicker::DisplayPortPicker | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a49c1379d2bb3946f75eddd9d80bdccdb370d3ab
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072313"
 ---
 # <a name="idebugportpickerdisplayportpicker"></a>IDebugPortPicker::DisplayPortPicker
-指定されたダイアログボックスを表示し、ユーザーがポートを選択できるようにします。
+指定されたダイアログ ボックスを表示し、ユーザーがポートを選択できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -43,13 +43,13 @@ public int DisplayPortPicker(
 
 ## <a name="parameters"></a>パラメーター
 `hwndParentDialog`\
-から親ダイアログボックスのハンドル。
+[入力] 親ダイアログ ボックスのハンドル。
 
 `pbstrPortId`\
-入出力ポート識別子文字列。
+[出力] ポート識別子文字列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 戻り値 `S_FALSE` (またはがに設定されたの戻り値) は、 `S_OK` `BSTR` `NULL` ユーザーが **[キャンセル]** をクリックしたことを示します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 戻り値が `S_FALSE` の場合 (または戻り値が `S_OK` で、`BSTR` が`NULL` に設定されている場合)、ユーザーが **[キャンセル]** をクリックしたことを示します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

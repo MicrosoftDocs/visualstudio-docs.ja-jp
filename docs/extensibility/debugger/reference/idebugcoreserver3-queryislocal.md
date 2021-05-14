@@ -1,6 +1,6 @@
 ---
 description: サーバーが呼び出し元に対してローカルかどうかを判断します。
-title: 'IDebugCoreServer3:: QueryIsLocal |Microsoft Docs'
+title: IDebugCoreServer3::QueryIsLocal | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e18074c92bdd63c1c378d71d3c84c4dde1745536
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054310"
@@ -39,7 +39,7 @@ int QueryIsLocal();
 ```
 
 ## <a name="return-value"></a>戻り値
- `S_OK`サーバーがローカルであることを示すには、を返します。 `S_FALSE`サーバーが msvsmon.exe のインスタンスから実行されている場合はを返します。これは通常、リモートデバッグに使用されます。
+ `S_OK` を返し、サーバーがローカルであることを示します。 リモート デバッグで一般的に使用される msvsmon.exe のインスタンスからサーバーが実行されている場合、`S_FALSE` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

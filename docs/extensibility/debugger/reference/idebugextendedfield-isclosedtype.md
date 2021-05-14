@@ -1,6 +1,6 @@
 ---
-description: フィールドが閉じられた型を表すかどうかを判断します。
-title: 'IDebugExtendedField:: IsClosedType |Microsoft Docs'
+description: フィールドが終了型を表すかどうかを決定します。
+title: IDebugExtendedField::IsClosedType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7ba4c55b53ebb1f1e5ad2000f31efc8a37f81eef
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077201"
 ---
 # <a name="idebugextendedfieldisclosedtype"></a>IDebugExtendedField::IsClosedType
-フィールドが閉じられた型を表すかどうかを判断します。
+フィールドが終了型を表すかどうかを決定します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +38,7 @@ int IsClosedType();
 ```
 
 ## <a name="return-value"></a>戻り値
- フィールドが閉じられた型の場合はを返します `S_OK` 。それ以外の場合はを返し `S_FALSE` ます。
+ フィールドが終了型の場合、`S_OK` 返します。それ以外の場合は、`S_FALSE` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

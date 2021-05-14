@@ -1,6 +1,6 @@
 ---
 title: テキスト テンプレートのコントロール ブロック
-description: テキストテンプレートのコントロールブロックと、コントロールブロックを使用して、出力を変更するためにテキストテンプレートにコードを記述する方法について説明します。
+description: テキスト テンプレートのコントロール ブロックと、テキスト テンプレートに出力を変更するコードをコントロール ブロックを利用して記述する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: ff6d09cae433cab0a5411350970325c6ec659184
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99924579"
@@ -64,7 +64,7 @@ Found another one!
 ```
 
 > [!WARNING]
-> 常に {...} を使用する 埋め込まれたプレーンテキストを含む入れ子になったステートメントを区切る。 次の例は正しく動作しません。
+> 入れ子になっており、プレーン テキストが埋め込まれているステートメントを区切るときは、 必ず {...} を使用します。 次の例は正しく動作しません。
 >
 > `<# if (ShouldPrint) #> Some text. -- WRONG`
 >
@@ -143,11 +143,11 @@ Some text.
 ```
 
 ## <a name="how-to-use-control-blocks"></a>コントロール ブロックの使用方法
- 1 つのテンプレート内の標準コントロール ブロックと式コントロール ブロックのコード (インクルードされたテンプレート内のコードも含む) はすべて結合され、生成されるコードの `TransformText()` メソッドを形成します  (ディレクティブを使用して他のテキストテンプレートを含める方法の詳細については `include` 、「 [T4 テキストテンプレートのディレクティブ](../modeling/t4-text-template-directives.md)」を参照してください)。
+ 1 つのテンプレート内の標準コントロール ブロックと式コントロール ブロックのコード (インクルードされたテンプレート内のコードも含む) はすべて結合され、生成されるコードの `TransformText()` メソッドを形成します  (`include` ディレクティブを使用して他のテキスト テンプレートをインクルードする方法の詳細については、「[T4 テキスト テンプレートのディレクティブ](../modeling/t4-text-template-directives.md)」を参照してください)。
 
  コントロール ブロックの使用時には、次の考慮事項に留意してください。
 
-- **言語**。 テキスト テンプレートでは、C# または Visual Basic のコードを使用できます。 既定の言語は C# ですが、`template` ディレクティブの `language` パラメーターで Visual Basic を指定できます。 (ディレクティブの詳細につい `template` ては、「 [T4 テキストテンプレートのディレクティブ](../modeling/t4-text-template-directives.md)」を参照してください)。
+- **言語**。 テキスト テンプレートでは、C# または Visual Basic のコードを使用できます。 既定の言語は C# ですが、`template` ディレクティブの `language` パラメーターで Visual Basic を指定できます。 (`template` ディレクティブの詳細については、「[T4 テキスト テンプレートのディレクティブ](../modeling/t4-text-template-directives.md)」を参照してください)。
 
      コントロール ブロックで使用する言語は、テキスト テンプレートで生成するテキストの言語または書式とは無関係です。 Visual Basic コードを使用して C# を生成することも、C# コードを使用して Visual Basic を生成することもできます。
 
@@ -169,4 +169,4 @@ Some text.
     <# } #>
     ```
 
-- **リファクタリング.** テキスト テンプレートを簡潔で理解しやすい状態に保つために、コードの繰り返しを避けることを強くお勧めします。そのためには、再利用できるコードをクラス機能ブロックのヘルパー関数にファクタリングするか、Microsoft.VisualStudio.TextTemplating.TextTransformation クラスを継承する独自のテキスト テンプレート クラスを作成します。
+- **リファクタリング。** テキスト テンプレートを簡潔で理解しやすい状態に保つために、コードの繰り返しを避けることを強くお勧めします。そのためには、再利用できるコードをクラス機能ブロックのヘルパー関数にファクタリングするか、Microsoft.VisualStudio.TextTemplating.TextTransformation クラスを継承する独自のテキスト テンプレート クラスを作成します。

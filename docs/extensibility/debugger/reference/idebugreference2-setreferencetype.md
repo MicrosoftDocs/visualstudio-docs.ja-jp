@@ -1,6 +1,6 @@
 ---
 description: 参照型を設定します。
-title: 'IDebugReference2:: SetReferenceType |Microsoft Docs'
+title: IDebugReference2::SetReferenceType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b3faaa31d277f2966a5975fe31f59fd12cd8c355
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105075810"
@@ -42,11 +42,11 @@ int SetReferenceType (
 
 ## <a name="parameters"></a>パラメーター
 `dwRefType`\
-から参照型を指定する [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) 列挙の値です。
+[入力] 参照型を指定する [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) 列挙型の値。
 
 ## <a name="return-value"></a>戻り値
  常に `E_NOTIMPL` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
 - [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)

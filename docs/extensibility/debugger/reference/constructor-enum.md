@@ -1,6 +1,6 @@
 ---
 description: さまざまな種類のコンストラクターを選択します。
-title: CONSTRUCTOR_ENUM |Microsoft Docs
+title: CONSTRUCTOR_ENUM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e7f58dd088b37d3f1a404677c6c76bb09160b438
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067596"
@@ -26,7 +26,7 @@ ms.locfileid: "105067596"
 # <a name="constructor_enum"></a>CONSTRUCTOR_ENUM
 さまざまな種類のコンストラクターを選択します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 typedef enum ConstructorMatchOptions {
@@ -54,13 +54,13 @@ public enum ConstructorMatchOptions {
 `crStatic`\
 静的コンストラクターを選択します。
 
-## <a name="remarks"></a>注釈
-[Enumconstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md)メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+[EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) メソッドに引数として渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

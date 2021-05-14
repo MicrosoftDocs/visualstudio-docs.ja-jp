@@ -1,6 +1,6 @@
 ---
-description: データブレークポイントをエミュレートするか、ハードウェアで実装するかを指定します。
-title: BP_RES_DATA_FLAGS |Microsoft Docs
+description: データ ブレークポイントをエミュレートするか、ハードウェアに実装するかを指定します。
+title: BP_RES_DATA_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 293b3635dd1a725f90ce63a0aa2f8568d5b324e3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105078176"
 ---
 # <a name="bp_res_data_flags"></a>BP_RES_DATA_FLAGS
-データブレークポイントをエミュレートするか、ハードウェアで実装するかを指定します。
+データ ブレークポイントをエミュレートするか、ハードウェアに実装するかを指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BP_RES_DATA_FLAGS {
@@ -43,15 +43,15 @@ public enum enum_BP_RES_DATA_FLAGS {
 
 ## <a name="fields"></a>フィールド
 `BP_RES_DATA_EMULATED`\
-データブレークポイントをエミュレートすることを指定します。
+データ ブレークポイントがエミュレートされていることを指定します。
 
-## <a name="remarks"></a>注釈
-`dwFlags` [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md)構造体のメンバーに使用されます。
+## <a name="remarks"></a>解説
+[BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) 構造体の `dwFlags` メンバーに使用されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

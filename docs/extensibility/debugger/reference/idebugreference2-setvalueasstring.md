@@ -1,6 +1,6 @@
 ---
 description: 文字列から参照の値を設定します。
-title: 'IDebugReference2:: SetValueAsString |Microsoft Docs'
+title: IDebugReference2::SetValueAsString | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9eb557adcd9748f559d0d0c27877b84343c8fc98
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105075771"
@@ -46,16 +46,16 @@ int SetValueAsString (
 
 ## <a name="parameters"></a>パラメーター
 `pszValue`\
-から文字列としての値。
+[入力] 文字列としての値。
 
 `dwRadix`\
-から数値情報の書式設定に使用される基数。
+[入力] 数値情報の書式設定に使用される基数。
 
 `dwTimeout`\
-からこのメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 `INFINITE`無期限に待機するには、を使用します。
+[入力] このメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 無期限に待機するには `INFINITE` を使用します。
 
 ## <a name="return-value"></a>戻り値
  常に `E_NOTIMPL` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

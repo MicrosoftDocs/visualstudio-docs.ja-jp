@@ -1,6 +1,6 @@
 ---
-title: ClickOnce アプリケーションのローカライズ |Microsoft Docs
-description: 特定のカルチャに適したバージョンに ClickOnce アプリケーションをローカライズする3つの方法について説明します。
+title: ClickOnce アプリケーションのローカライズ | Microsoft Docs
+description: ClickOnce アプリケーションをローカライズし、特定のカルチャに適したバージョンにする 3 つの方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -25,7 +25,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 8a8e1dea5fb3716d593ca9b28f52ca0cd59a054f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99938500"
@@ -53,14 +53,14 @@ ms.locfileid: "99938500"
  この方法の利点は、単一の配置が作成されるので、配置のローカライズが簡素化されることです。 実行時に、ユーザーが使用する Windows オペレーティング システムの既定のカルチャに応じて、適切なサテライト アセンブリが使用されます。 この方法の欠点は、クライアント コンピューターでアプリケーションをインストールまたは更新するたびに、すべてのサテライト アセンブリがダウンロードされることです。 このため、アプリケーションに大量の文字列が含まれている場合や顧客が使用するネットワーク接続の速度が遅い場合は、このプロセスがアプリケーション更新時のパフォーマンスに影響を与える可能性があります。
 
 > [!NOTE]
-> この方法では、それぞれのカルチャで異なるテキスト文字列のサイズに対応するために、コントロールの高さ、幅、および位置をアプリケーションが自動的に調整することを前提としています。 Windows フォームには、容易にローカライズできるフォームをデザインするためのさまざまなコントロールとテクノロジが用意されています。これには、<xref:System.Windows.Forms.FlowLayoutPanel> コントロールと <xref:System.Windows.Forms.TableLayoutPanel> コントロール、および <xref:System.Windows.Forms.Control.AutoSize%2A> プロパティが含まれます。  「 [方法: AutoSize と TableLayoutPanel コントロールを使用して Windows フォームでローカライズをサポートする](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))」も参照してください。
+> この方法では、それぞれのカルチャで異なるテキスト文字列のサイズに対応するために、コントロールの高さ、幅、および位置をアプリケーションが自動的に調整することを前提としています。 Windows フォームには、容易にローカライズできるフォームをデザインするためのさまざまなコントロールとテクノロジが用意されています。これには、<xref:System.Windows.Forms.FlowLayoutPanel> コントロールと <xref:System.Windows.Forms.TableLayoutPanel> コントロール、および <xref:System.Windows.Forms.Control.AutoSize%2A> プロパティが含まれます。  「[方法: AutoSize と TableLayoutPanel コントロールを使用して Windows フォームのローカリゼーションをサポートする](/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))」も参照してください。
 
 ## <a name="generate-one-deployment-for-each-culture"></a>カルチャごとに 1 つの配置を生成する
  この配置ストラテジでは、複数の配置を生成します。 各配置には特定のカルチャに必要なサテライト アセンブリのみを含め、その配置をそのカルチャ固有としてマークします。
 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でこのメソッドを使用するには、**[発行]** タブの **[発行の言語]** プロパティを目的の地域に設定します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] は、選択した地域に必要なサテライト アセンブリを自動的に組み込み、それ以外のすべてのサテライト アセンブリを配置から除外します。
 
- Microsoft の *MageUI.exe* ツールを使用すると、同じことを実現でき [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] ます。 *MageUI.exe* で、アプリケーション マニフェストの **[ファイル]** タブで **[作成]** ボタンを使用してその他すべてのサテライト アセンブリをアプリケーション ディレクトリから除外し、さらに配置マニフェストの **[名前]** タブで **[カルチャ]** フィールドを設定します。 この手順によって、正しいサテライト アセンブリが組み込まれるだけでなく、配置マニフェストに含まれる `assemblyIdentity` 要素の `language` 属性が、対応するカルチャに設定されます。
+ この作業は、Microsoft [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] の *MageUI.exe* ツールを使用して同じ処理を行うこともできます。 *MageUI.exe* で、アプリケーション マニフェストの **[ファイル]** タブで **[作成]** ボタンを使用してその他すべてのサテライト アセンブリをアプリケーション ディレクトリから除外し、さらに配置マニフェストの **[名前]** タブで **[カルチャ]** フィールドを設定します。 この手順によって、正しいサテライト アセンブリが組み込まれるだけでなく、配置マニフェストに含まれる `assemblyIdentity` 要素の `language` 属性が、対応するカルチャに設定されます。
 
  アプリケーションを発行した後、アプリケーションがサポートする追加のカルチャごとにこの手順を繰り返す必要があります。 毎回、異なる Web サーバー ディレクトリまたはファイル共有ディレクトリに発行するようにする必要があります。これは、各アプリケーション マニフェストで異なるサテライト アセンブリを参照し、各配置マニフェストで `language` 属性に異なる値を使用するためです。
 
@@ -83,4 +83,4 @@ ms.locfileid: "99938500"
 ## <a name="see-also"></a>関連項目
 - [\<assemblyIdentity> 要素](../deployment/assemblyidentity-element-clickonce-deployment.md)
 - [ClickOnce のセキュリティと配置](../deployment/clickonce-security-and-deployment.md)
-- [Windows フォームのグローバライズ](/dotnet/framework/winforms/advanced/globalizing-windows-forms)
+- [Windows フォームをグローバル化する](/dotnet/framework/winforms/advanced/globalizing-windows-forms)

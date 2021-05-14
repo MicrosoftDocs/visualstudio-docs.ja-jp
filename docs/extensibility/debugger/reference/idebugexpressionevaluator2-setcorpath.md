@@ -1,6 +1,6 @@
 ---
-description: デバッガーに読み込まれている共通言語ランタイム (CLR) へのパスを設定します。
-title: 'IDebugExpressionEvaluator2:: SetCorPath |Microsoft Docs'
+description: デバッガーに読み込まれた共通言語ランタイム (CLR) へのパスを設定します。
+title: IDebugExpressionEvaluator2::SetCorPath | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: bd81d9dd5df086fcab3f401d4b3e14f65e9ce24c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077344"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
-デバッガーに読み込まれている共通言語ランタイム (CLR) へのパスを設定します。
+デバッガーに読み込まれた共通言語ランタイム (CLR) へのパスを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,13 +41,13 @@ int SetCorPath(
 
 ## <a name="parameters"></a>パラメーター
 `pcstrCorPath`\
-からデバッガーに読み込まれた CLR へのパス。
+[in] デバッガーに読み込まれた CLR へのパス。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
- 次の例は、 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)インターフェイスを公開する **式 evaluatorpackage** オブジェクトに対してこのメソッドを実装する方法を示しています。
+ 次の例は、[IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) インターフェイスを公開する **ExpressionEvaluatorPackage** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)
@@ -127,5 +127,5 @@ STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

@@ -1,6 +1,6 @@
 ---
 description: サーバーの名前を取得します。
-title: 'IDebugCoreServer3:: GetServerName |Microsoft Docs'
+title: IDebugCoreServer3::GetServerName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c052e4995498c5b134126ceff39ac4ce3176311d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054336"
@@ -42,17 +42,17 @@ int GetServerName(
 
 ## <a name="parameters"></a>パラメーター
 `pbstrName`\
-入出力サーバーの名前を返します。
+[出力] サーバーの名前を返します。
 
 > [!NOTE]
-> 呼び出し元は、文字列を解放する必要があります。
+> 呼び出し元は、文字列の解放を担当します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- わかりやすいサーバー名を表示するには、 [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) メソッドを呼び出します。
+## <a name="remarks"></a>解説
+ サーバーのフレンドリ名を知るには、[GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md) メソッドを呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 - [GetServerFriendlyName](../../../extensibility/debugger/reference/idebugcoreserver3-getserverfriendlyname.md)

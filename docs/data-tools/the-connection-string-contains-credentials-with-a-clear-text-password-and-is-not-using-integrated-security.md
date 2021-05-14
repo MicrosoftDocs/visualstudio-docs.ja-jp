@@ -1,5 +1,5 @@
 ---
-title: 接続文字列にパスワードが含まれています
+title: 接続文字列にパスワードが含まれる
 description: 接続文字列にはクリア テキスト パスワード付きの資格情報が含まれていて、統合セキュリティは使用されていません
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -12,7 +12,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 1ce11b59ad7f38de4c71fa13371da16225b5b843
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99858411"
@@ -28,11 +28,11 @@ ms.locfileid: "99858411"
 
 ## <a name="save-options"></a>保存オプション
 
-- 接続文字列を機密情報と共に保存するには、[ **はい]** を選択します。
+- 重要情報を含めて接続文字列を保存する場合、 **[はい]** を選択します。
 
    接続文字列がアプリケーション設定として格納されます。 接続文字列には、プレーンテキストの機密情報が含まれます。 DBML ファイルには機密情報は含まれません。
 
-- 機密情報を使用せずに接続文字列を保存するには、[ **いいえ**] を選択します。
+- 重要情報を含めずに接続文字列を保存する場合、 **[いいえ]** を選択します。
 
    接続文字列がアプリケーション設定として格納されますが、パスワードは含まれません。
 

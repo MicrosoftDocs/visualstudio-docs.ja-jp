@@ -1,5 +1,5 @@
 ---
-title: PowerShell スクリプトを使用した web アプリの発行
+title: PowerShell スクリプトを使用して Web アプリを発行する
 description: Web プロジェクトを Azure Web サイトに発行する方法について説明します。 このスクリプトは、必要なリソースが Azure サブスクリプションに存在しない場合にそれらを作成します。
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -10,7 +10,7 @@ ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 858ed37d6530900e7474748e1443badc1843e199
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843970"
@@ -120,5 +120,5 @@ JSON 構成ファイルではデプロイ対象の詳細が指定されます。
 
 JSON 構成ファイルは、デプロイ対象を変更するように編集できます。 webSite のセクションは必須ですが、データベースのセクションは省略可能です。
 
-## <a name="next-steps"></a>次の手順
-詳細については、「 [Publish-WebApplicationVM (Windows PowerShell スクリプト)](vs-azure-tools-publish-webapplicationvm.md)」を参照してください。
+## <a name="next-steps"></a>次のステップ
+詳しくは、「[Publish-WebApplicationVM (Windows PowerShell スクリプト)](vs-azure-tools-publish-webapplicationvm.md)」をご覧ください。

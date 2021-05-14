@@ -1,6 +1,6 @@
 ---
 description: 言語およびベンダー識別子を指定して、使用可能な式エバリュエーターを列挙します。
-title: 'IDebugSettingsCallback2:: EnumEEs |Microsoft Docs'
+title: IDebugSettingsCallback2::EnumEEs | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,7 +16,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7606bd46587c7141bddea0c822f08459f2d262d9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105075667"
@@ -46,19 +46,19 @@ public int EnumEEs(
 
 ## <a name="parameters"></a>パラメーター
 `celtBuffer`\
-からバッファー内の要素の数 `pceltEEs` 。
+[入力] `pceltEEs` バッファー内の要素の数。
 
 `rgguidLang`\
-[入力、出力]プログラミング言語の一意の識別子。
+[入力、出力] プログラミング言語の一意識別子。
 
 `rgguidVendor`\
-[入力、出力]ベンダーの一意識別子。
+[入力、出力] ベンダーの一意識別子。
 
 `pceltEEs`\
-[入力、出力]式エバリュエーターの配列。
+[入力、出力] 式エバリュエーターの配列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

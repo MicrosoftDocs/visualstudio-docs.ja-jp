@@ -1,6 +1,6 @@
 ---
 title: スキーマ情報を取得できませんでした
-description: データベースオブジェクトのスキーマ情報を取得できませんでした。 この Visual Studio オブジェクトリレーショナルデザイナー (O/R デザイナー) メッセージに関する情報を表示します。
+description: データベース オブジェクトのスキーマ情報を取得できませんでした。 この Visual Studio オブジェクト リレーショナル デザイナー (O/R デザイナー) メッセージに関する情報を表示してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,7 +12,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: b4b285c98eba118a6e87513cf71bed6ce9b35d11
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99859152"
