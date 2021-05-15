@@ -1,6 +1,6 @@
 ---
 description: このプロセスが実行されているサーバーを取得します。
-title: 'IDebugProcess2:: GetServer |Microsoft Docs'
+title: IDebugProcess2::GetServer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a2bf0528526e20fc3eae7acf46dfc2b706be94eb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081634"
@@ -42,14 +42,14 @@ int GetServer(
 
 ## <a name="parameters"></a>パラメーター
 `ppServer`\
-入出力このプロセスが実行されているサーバーを表す [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) オブジェクトを返します。
+[out] このプロセスが実行されているサーバーを表す [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 1台のコンピューターで複数のサーバーを実行できます。
+## <a name="remarks"></a>解説
+ 1 台のコンピューターで複数のサーバーが実行されている可能性があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

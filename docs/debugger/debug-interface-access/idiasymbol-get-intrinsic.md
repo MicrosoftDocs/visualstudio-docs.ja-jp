@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_intrinsic |Microsoft Docs'
+---
+description: クラスが組み込み型であるかどうかを指定するフラグを取得します。
+title: IDiaSymbol::get_intrinsic | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f969f595-d9f9-48b9-adaa-63a6e4e09575
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a300cd39e85e84ee3a008f3dc011ddcccb6ce5e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: bddec7880c69ccc9f4ce0ff20490ef355a71cfbd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740365"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634256"
 ---
 # <a name="idiasymbolget_intrinsic"></a>IDiaSymbol::get_intrinsic
 クラスが組み込み型であるかどうかを指定するフラグを取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72740365"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_intrinsic( 
+HRESULT get_intrinsic( 
    BOOL* pRetVal)
 );
 ```
@@ -33,22 +34,22 @@ HRESULT get_intrinsic( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力クラスが組み込み型である場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[out] クラスが組み込み型の場合は、`TRUE` を返します。それ以外の場合は、`FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティがシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

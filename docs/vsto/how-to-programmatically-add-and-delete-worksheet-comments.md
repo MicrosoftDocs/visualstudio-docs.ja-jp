@@ -1,6 +1,6 @@
 ---
 title: '方法: ワークシートのコメントをプログラムによって追加および削除する'
-description: Microsoft Office Excel ワークシートでコメントをプログラムによって追加および削除する方法について説明します。 コメントは、複数のセルの範囲ではなく、1つのセルにのみ追加できます。
+description: Microsoft Office Excel ワークシート内のコメントをプログラムで追加および削除する方法について学習します。 コメントは、1 つのセルにのみ追加でき、複数のセル範囲には追加できません。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -19,7 +19,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 20b718be3bec6cac3ee6c0b0985fa6efca867189
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826942"
@@ -29,7 +29,7 @@ ms.locfileid: "107826942"
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="add-and-delete-a-comment-in-a-document-level-project"></a>ドキュメントレベルのプロジェクトでコメントを追加および削除する
+## <a name="add-and-delete-a-comment-in-a-document-level-project"></a>ドキュメント レベルのプロジェクトでコメントを追加および削除する
  次の例では、 <xref:Microsoft.Office.Tools.Excel.NamedRange> という名前のワークシートに、 `dateComment` というシングルセル `Sheet1`コントロールがあることを想定しています。
 
 ### <a name="to-add-a-new-comment-to-a-named-range"></a>名前付き範囲に新しいコメントを追加するには
@@ -46,7 +46,7 @@ ms.locfileid: "107826942"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet29":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet29":::
 
-## <a name="add-and-delete-a-comment-in-a-vsto-add-in-project"></a>VSTO アドインプロジェクトでのコメントの追加と削除
+## <a name="add-and-delete-a-comment-in-a-vsto-add-in-project"></a>VSTO アドイン プロジェクト内でコメントを追加および削除する
  次の例では、作業中のワークシートに、 <xref:Microsoft.Office.Interop.Excel.Range> というシングルセル `dateComment` コントロールがあることを想定しています。
 
 ### <a name="to-add-a-new-comment-to-an-excel-range"></a>Excel 範囲に新しいコメントを追加するには

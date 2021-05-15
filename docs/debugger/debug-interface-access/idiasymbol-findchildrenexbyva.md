@@ -1,7 +1,8 @@
 ---
+description: 指定の仮想アドレスで有効なシンボルの子を取得します。
 title: IDiaSymbol::findChildrenExByVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 29080009-36e4-4697-acd7-50f2e3e1bf1b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9cc9f540b200ff6fdf4736b6a0bf64175a5ee3e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ff9ed80ebd63baa8733fc3bab7d3d74ed3d4cc99
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741239"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635176"
 ---
 # <a name="idiasymbolfindchildrenexbyva"></a>IDiaSymbol::findChildrenExByVA
-指定した仮想アドレスで有効なシンボルの子を取得します。
+指定の仮想アドレスで有効なシンボルの子を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findChildrenExByVA ( 
+HRESULT findChildrenExByVA ( 
    enum SymTagEnum   symtag,
    LPCOLESTR         name,
    DWORD             compareFlags,
@@ -37,36 +38,36 @@ HRESULT findChildrenExByVA ( 
 #### <a name="parameters"></a>パラメーター
  `symtag`
 
-から[Symtagenum 列挙体](../../debugger/debug-interface-access/symtagenum.md)で定義されている、取得する子のシンボルタグを指定します。 すべての子を取得するには、を `SymTagNull` に設定します。
+[入力] [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)に関するページでの定義に基づき、取得する子のシンボル タグを指定します。 すべての子を取得するには、`SymTagNull` に設定します。
 
  `name`
 
-から取得する子の名前を指定します。 すべての子を取得するには、を `NULL` に設定します。
+[入力] 取得する子の名前を指定します。 すべての子を取得するには、`NULL` に設定します。
 
  `compareFlags`
 
-から名前の一致に適用する比較オプションを指定します。 [Namesearchoptions 列挙](../../debugger/debug-interface-access/namesearchoptions.md)列挙の値は、単独で、または組み合わせて使用できます。
+[入力] 名前の照合に適用する比較オプションを指定します。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)に関するページの列挙型の値は、単独で使用することも、組み合わせて使用することもできます。
 
  `address`
 
-から仮想アドレスを指定します。
+[入力] 仮想アドレスを指定します。
 
  `ppResult`
 
-入出力取得した子シンボルのリストを格納している[IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)オブジェクトを返します。
+[出力] 取得された子シンボルの一覧を含む [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- シンボルの少なくとも1つの子が見つかった場合は `S_OK` を返し、子が見つからなかった場合は `S_FALSE` を返します。それ以外の場合は、エラーコードを返します。
+ シンボルの子が少なくとも 1 つ見つかった場合は `S_OK` を返し、子が見つからなかった場合は `S_FALSE` を返します。それ以外の場合、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- 返されるローカルシンボルには、live range 情報が含まれます。
+## <a name="remarks"></a>解説
+ 返されるローカル シンボルには、有効範囲の情報が含まれます。
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

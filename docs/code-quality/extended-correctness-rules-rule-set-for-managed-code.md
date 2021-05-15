@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "拡張正確性規則" 規則セット
 ms.date: 11/04/2016
-description: COM 相互運用性とモバイルアプリケーションに便利な、Visual Studio の拡張正確性規則の規則セットについて説明します。 ルールの説明を参照してください。
+description: COM 相互運用性とモバイル アプリケーションに役立つ、Visual Studio の "拡張正確性規則" ルール セットについて説明します。 ルールの説明を示します。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
@@ -12,18 +12,18 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: a70a0315d596e4490d40db1846d7be0b6f3bf448
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99860374"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>マネージド コードの "拡張正確性規則" 規則セット
 
-Microsoft 拡張正確性規則の規則セットは、コード分析によって報告されるロジックおよびフレームワークの使用エラーを最大化します。 COM 相互運用性やモバイルアプリケーションなど、特定のシナリオに重点が置かれています。 これらのシナリオのいずれかがプロジェクトに適用される場合、またはプロジェクトの追加の問題を検出する場合は、この規則セットを含めることを検討してください。
+"Microsoft 拡張正確性規則" ルール セットでは、コード分析によってレポートされるロジックおよびフレームワークの使用に関するエラーを最大限に活用します。 COM 相互運用性やモバイル アプリケーションなどの特定のシナリオに特に重点が置かれています。 プロジェクトがこれらのシナリオのいずれかに該当する場合や、プロジェクトの他の問題も見つける必要がある場合は、このルール セットを含めることを検討してください。
 
-"Microsoft 拡張正確性規則" 規則セットには、" [基本正確性規則](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md) " 規則セットに含まれる規則が含まれます。この規則には、"管理されている [推奨規則](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) " 規則セットに含まれる規則が含まれています。
+"Microsoft 拡張正確性規則" ルール セットには、"[基本正確性規則](../code-quality/basic-correctness-rules-rule-set-for-managed-code.md)" ルール セットのルールが含まれています。このルール セットには、"[マネージド推奨規則](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md)" ルール セットのルールが含まれています。
 
-次の表では、Microsoft 拡張正確性規則の規則セットに含まれるすべての規則について説明します。
+次の表に、"Microsoft 拡張正確性規則" ルール セットのすべてのルールを示します。
 
 |ルール|説明|
 |----------|-----------------|
@@ -67,7 +67,7 @@ Microsoft 拡張正確性規則の規則セットは、コード分析によっ�
 |[CA2137](../code-quality/ca2137.md)|透過的メソッドは、検証可能な IL のみを含まなければならない|
 |[CA2138](../code-quality/ca2138.md)|透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない|
 |[CA2140](../code-quality/ca2140.md)|透過的コードは、セキュリティ上重要な項目を参照してはならない|
-|[CA2141](../code-quality/ca2141.md)|透過的メソッドは Linkdemand を満たしてはならない|
+|[CA2141](../code-quality/ca2141.md)|透過的メソッドは LinkDemand を満たしてはならない|
 |[CA2146](../code-quality/ca2146.md)|型は、基本型およびインターフェイスと同程度以上、重要でなければならない|
 |[CA2147](../code-quality/ca2147.md)|透過コードは、セキュリティ アサートを使用してはならない|
 |[CA2149](../code-quality/ca2149.md)|透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない|

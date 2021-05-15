@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、デバッグプロセスの指定されたプロパティ値を照会します。
-title: 'IDebugProcessQueryProperties:: QueryProperty |Microsoft Docs'
+description: このメソッドは、デバッグ プロセスで指定したプロパティ値を照会します。
+title: IDebugProcessQueryProperties::QueryProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9814ff2dd377d1a10895f6ec5ba0818f480bfcf3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081400"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
-このメソッドは、デバッグプロセスの指定されたプロパティ値を照会します。
+このメソッドは、デバッグ プロセスで指定したプロパティ値を照会します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ int QueryProperty(
 
 ## <a name="parameters"></a>パラメーター
 `dwPropType`\
-からクエリ対象のプロパティの定義。 値は次のとおりです。
+[in] クエリ対象のプロパティの定義。 値は次のとおりです。
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -49,13 +49,13 @@ int QueryProperty(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3
 
 `pvarPropValue`\
-入出力プロパティの値。
+[out] プロパティの値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドはほとんど使用されません。
+## <a name="remarks"></a>解説
+ このメソッドは、ほとんど使用されません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

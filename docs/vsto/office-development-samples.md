@@ -1,6 +1,6 @@
 ---
 title: Office 開発のサンプル
-description: Microsoft Office 開発者ツールを使用して Office ソリューションを作成する方法を示す、Visual Studio のサンプルアプリケーションについて説明します。
+description: Microsoft Office 開発者ツールを使用して Office ソリューションを作成する方法を示す Visual Studio サンプル アプリケーションについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.workload:
 - office
 ms.openlocfilehash: caf3178355697b8dba997dbcb66dfa8ef5569e36
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99926574"
@@ -24,7 +24,7 @@ ms.locfileid: "99926574"
 # <a name="office-development-samples"></a>Office 開発のサンプル
   Visual Studio には、Microsoft Office 開発者ツールを使用して Office ソリューションを作成する方法を示すサンプル アプリケーションが含まれています。 これらのサンプルのコードでは、Office ソリューションのビルドに使用される構文、構造体、および手法を示します。
 
- 最新のサンプルについては、Microsoft web サイトの「 [MSDN 開発者向けサンプル: コードを使用](https://code.msdn.microsoft.com/site/search?query=vsto&f%5B1%5D.Value=vsto&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=11.0&f%5B0%5D.Type=VisualStudioVersion&f%5B0%5D.Text=Visual%20Studio%2011&ac=8) した学習」を参照してください。
+ 最新のサンプルについては、Microsoft Web サイトの「[コード サンプルを参照](https://code.msdn.microsoft.com/site/search?query=vsto&f%5B1%5D.Value=vsto&f%5B1%5D.Type=SearchText&f%5B0%5D.Value=11.0&f%5B0%5D.Type=VisualStudioVersion&f%5B0%5D.Text=Visual%20Studio%2011&ac=8)」を参照してください。
 
  [!INCLUDE[note_security_multiplesample](../vsto/includes/note-security-multiplesample-md.md)]
 
@@ -43,4 +43,4 @@ ms.locfileid: "99926574"
 |VBA および VSTO の相互運用性サンプル|ブック内の Visual Basic for Applications (VBA) コードから Excel 用のドキュメント レベルのカスタマイズ内のメソッドを呼び出す方法を示します。<br /><br /> このサンプルは、オンラインでのみ使用できます。|
 
 ## <a name="see-also"></a>関連項目
-- [Office プログラミングにおける一般的なタスク](../vsto/common-tasks-in-office-programming.md)
+- [Office プログラミングの共通タスク](../vsto/common-tasks-in-office-programming.md)

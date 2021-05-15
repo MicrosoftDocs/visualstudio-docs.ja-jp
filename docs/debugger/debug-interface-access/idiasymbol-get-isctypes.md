@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_isCTypes |Microsoft Docs'
+---
+description: シンボル ファイルに C 型が含まれているかどうかを示すフラグを取得します。
+title: IDiaSymbol::get_isCTypes | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 00c73cf9-2933-472e-bc1d-d041f4d7e412
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 64be123de60608aa82e2e271b1f14d0de7be2cb4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 0931223f8932a379a8db9aba6d1dea41a31b50f1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740287"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634684"
 ---
 # <a name="idiasymbolget_isctypes"></a>IDiaSymbol::get_isCTypes
-シンボルファイルに C 型が含まれているかどうかを示すフラグを取得します。
+シンボル ファイルに C 型が含まれているかどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,23 +34,23 @@ HRESULT get_isCTypes(
 #### <a name="parameters"></a>パラメーター
  `pFlag`
 
-入出力シンボルファイルに C 型が含まれている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] シンボル ファイルに C 型が含まれている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
- このプロパティは、シンボルの種類 `SymTagExe` から使用できます (「 [Exe](../../debugger/debug-interface-access/exe.md)」を参照してください)。
+## <a name="remarks"></a>解説
+ このプロパティは、`SymTagExe` のシンボルの種類で使用できます (「[Exe](../../debugger/debug-interface-access/exe.md)」を参照してください)。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|必要条件|説明|
+|要件|説明|
 |-----------------|-----------------|
-|ヘッダー:|dia2|
-|バージョン:|DIA SDK v1.0|
+|ヘッダー:|dia2.h|
+|バージョン:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

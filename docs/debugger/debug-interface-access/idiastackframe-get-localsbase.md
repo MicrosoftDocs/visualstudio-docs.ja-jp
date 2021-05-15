@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackFrame:: get_localsBase |Microsoft Docs'
+description: フレームのローカル変数のベース アドレスを取得します。
+title: IDiaStackFrame::get_localsBase | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: eb0bd73e-d92d-468e-a0b1-fbc279919f54
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae3f83469e14e826802ca82d3d58686a340d9e0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 2efe2d85f46ef18927be3c8667808ce51c761c90
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741656"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634276"
 ---
 # <a name="idiastackframeget_localsbase"></a>IDiaStackFrame::get_localsBase
-フレームのローカル変数のベースアドレスを取得します。
+フレームのローカル変数のベース アドレスを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_localsBase ( 
+HRESULT get_localsBase ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -33,10 +34,10 @@ HRESULT get_localsBase ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ローカル変数のベースアドレスを返します。
+[out] ローカル変数のベース アドレスを返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

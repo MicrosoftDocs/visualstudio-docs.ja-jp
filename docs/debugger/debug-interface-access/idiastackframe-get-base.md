@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackFrame:: get_base |Microsoft Docs'
+description: フレームのベース アドレスを取得します。
+title: IDiaStackFrame::get_base | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f27477d7-26fe-4c1c-a08a-c52cb20c8293
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6802737a69467fb823fb2df8df8160f459e739f1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: d62e6ce291b8f45768c6e533278496bb36e53b8d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741731"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634790"
 ---
 # <a name="idiastackframeget_base"></a>IDiaStackFrame::get_base
-フレームのベースアドレスを取得します。
+フレームのベース アドレスを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_base ( 
+HRESULT get_base ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -33,10 +34,10 @@ HRESULT get_base ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ベースアドレスを返します。
+[出力] ベース アドレスを返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 プロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

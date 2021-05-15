@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumSymbols:: get_Count |Microsoft Docs'
+description: シンボルの数を取得します。
+title: IDiaEnumSymbols::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: fdaae6d7-e67b-4262-84c9-fbae381e8297
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c91f1e60b3cd003464f61942119828b1e64c222
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: b3859524adce48fb504c09c4b0bcacf8ac97a875
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743972"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635034"
 ---
 # <a name="idiaenumsymbolsget_count"></a>IDiaEnumSymbols::get_Count
 シンボルの数を取得します。
@@ -25,18 +26,18 @@ ms.locfileid: "72743972"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_Count ( 
+HRESULT get_Count ( 
    LONG* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力シンボルの数を返します。
+[出力] シンボルの数を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

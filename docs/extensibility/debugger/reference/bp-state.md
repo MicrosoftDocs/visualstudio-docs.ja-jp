@@ -1,6 +1,6 @@
 ---
-description: バインドされたブレークポイントが存在することを指定し、有効になっているかどうかも指定します。
-title: BP_STATE |Microsoft Docs
+description: バインドされたブレークポイントが存在することを明示し、それが有効になっているかどうかも明示します。
+title: BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 886469727e9a20802f375faac12abbdd0d2b1ff2
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089109"
 ---
 # <a name="bp_state"></a>BP_STATE
-バインドされたブレークポイントが存在することを指定し、有効になっているかどうかも指定します。
+バインドされたブレークポイントが存在することを明示し、それが有効になっているかどうかも明示します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BP_STATE {
@@ -49,24 +49,24 @@ public enum enum_BP_STATE {
 
 ## <a name="fields"></a>フィールド
 `BPS_NONE`\
-ブレークポイントが存在しないことを指定します。
+ブレークポイントが存在しないことを明示します。
 
 `BPS_DELETED`\
-ブレークポイントが削除されたことを示します。
+ブレークポイントが削除されたことを明示します。
 
 `BPS_DISABLED`\
-ブレークポイントが無効であることを指定します。
+ブレークポイントが無効になっていることを明示します。
 
 `BPS_ENABLED`\
-ブレークポイントが有効であることを指定します。
+ブレークポイントが有効になっていることを明示します。
 
-## <a name="remarks"></a>注釈
-[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md)メソッドから返されます。
+## <a name="remarks"></a>解説
+[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) メソッドから返されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

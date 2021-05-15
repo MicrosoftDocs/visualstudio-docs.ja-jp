@@ -1,6 +1,6 @@
 ---
 title: T4 CleanUpBehavior ディレクティブ
-description: CleanUpBehavior ディレクティブと、テキストテンプレートの処理後に appDomain を削除する方法について説明します。
+description: CleanUpBehavior ディレクティブと、テキスト テンプレートの処理後に appDomain を削除する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 49609dd13e2e322f88f265d27e55c49154f4c5c5
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99899656"

@@ -1,6 +1,6 @@
 ---
 description: カスタム属性がアタッチされているフィールドを取得します。
-title: 'IDebugCustomAttribute:: GetParentField |Microsoft Docs'
+title: IDebugCustomAttribute::GetParentField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7aaa3ea38e5ed0691b8e335a3d39a8a82b7576ef
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088056"
@@ -42,14 +42,14 @@ int GetParentField(
 
 ## <a name="parameters"></a>パラメーター
 `ppField`\
-入出力カスタム属性がアタッチされているフィールドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
+[out] カスタム属性がアタッチされているフィールドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 返された[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトに対して[getkind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドを呼び出し、親のフィールドの種類を判別します。
+## <a name="remarks"></a>解説
+ 親のフィールドの種類を判別するには、返された[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトに対して [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) メソッドを呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

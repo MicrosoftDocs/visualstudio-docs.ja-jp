@@ -1,7 +1,8 @@
 ---
-title: 'IDiaInjectedSource:: get_virtualFilename |Microsoft Docs'
+description: ファイル以外のソース コード、つまり挿入されたコードに付けられた名前を取得します。
+title: IDiaInjectedSource::get_virtualFilename | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: b9977075-8fd1-4b11-bfff-d87e9f2586dc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d60a8c46c4a9e6f17e0123554ac25cb14bbf430b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c57f354b250710f5ec5d5fe6c6a29aa7e0938c4a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743300"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634401"
 ---
 # <a name="idiainjectedsourceget_virtualfilename"></a>IDiaInjectedSource::get_virtualFilename
-ファイル以外のソースコードに指定された名前を取得します。つまり、挿入されたコードです。
+ファイル以外のソース コード、つまり挿入されたコードに付けられた名前を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_virtualFilename ( 
+HRESULT get_virtualFilename ( 
    BSTR* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_virtualFilename ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力挿入されたファイル以外のソースコードに指定された名前を返します。
+[out] 挿入された、ファイル以外のソース コードに付けられた名前を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

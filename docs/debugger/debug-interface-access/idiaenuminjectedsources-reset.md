@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumInjectedSources:: Reset |Microsoft Docs'
+description: 挿入されたソースの列挙型シーケンスを先頭にリセットします。
+title: IDiaEnumInjectedSources::Reset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c28e8820-1c67-4658-821d-b5879f90cce5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 25cfc11bb0a7d44a36071c4eb7b4ca68c6d5603d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 2676eafff75677804c39e7d1058b6c4274e1ab9a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744482"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635066"
 ---
 # <a name="idiaenuminjectedsourcesreset"></a>IDiaEnumInjectedSources::Reset
-列挙シーケンスを先頭にリセットします。
+列挙型シーケンスを先頭にリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>戻り値
- `S_OK`を返します。
+ `S_OK` を返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

@@ -1,24 +1,25 @@
-﻿---
-title: 'IDiaSymbol:: get_uavSlot |Microsoft Docs'
+---
+description: uav スロットを取得します。
+title: IDiaSymbol::get_uavSlot | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a70648f2-3b25-439f-8099-239ac602515a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 077a0a7895e93714bfe7b64b658c59f4d38ead4e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ad1d526952f7f09ebc1d186f8833f1d0b07ae678
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739046"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634598"
 ---
 # <a name="idiasymbolget_uavslot"></a>IDiaSymbol::get_uavSlot
-Uav スロットを取得します。
+uav スロットを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,10 +31,10 @@ HRESULT get_uavSlot(
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力Uav スロットを保持する `DWORD` へのポインター。
+[出力] uav スロットを保持する `DWORD` へのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

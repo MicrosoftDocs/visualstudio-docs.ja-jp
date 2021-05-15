@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackWalkHelper:: フレームMicrosoft Docs'
+description: 指定された仮想アドレスを含むスタック フレームを取得します。
+title: IDiaStackWalkHelper::frameForVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f35fc61b-f8dd-473a-b583-82c304059422
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d9a7762cac1a63b40fa34118d4076403120763
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: a6e4771f899615eb308163c1bc560212a2b4e3cd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741426"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635003"
 ---
 # <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
-指定した仮想アドレスを格納しているスタックフレームを取得します。
+指定された仮想アドレスを含むスタック フレームを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT frameForVA( 
+HRESULT frameForVA( 
    ULONGLONG        va,
    IDiaFrameData**  ppFrame
 );
@@ -34,14 +35,14 @@ HRESULT frameForVA( 
 #### <a name="parameters"></a>パラメーター
  `va`
 
-からフレームデータの仮想アドレス。
+[入力] フレーム データの仮想アドレス。
 
  `ppFrame`
 
-入出力指定したアドレスにあるスタックフレームを表す[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)オブジェクト。
+[出力] 指定されたアドレスにあるスタック フレームを表す [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

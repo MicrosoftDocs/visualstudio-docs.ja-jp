@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLoadCallback:: NotifyOpenPDB |Microsoft Docs'
+description: 候補の .pdb ファイルが開かれたときに呼び出されます。
+title: IDiaLoadCallback::NotifyOpenPDB | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: c0547f99-8468-4e57-82ca-9ef7d6707c8a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbcf8aff8dc18776cbcb09a5fa3f13edca4cd7a7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ab1f72c6f22f70bb94262c57327ab91f96a02183
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743064"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634394"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
-対象の .pdb ファイルが開かれたときに呼び出されます。
+候補の .pdb ファイルが開かれたときに呼び出されます。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT NotifyOpenPDB ( 
+HRESULT NotifyOpenPDB ( 
    LPCOLESTR pdbPath,
    HRESULT   resultCode
 );
@@ -34,14 +35,14 @@ HRESULT NotifyOpenPDB ( 
 #### <a name="parameters"></a>パラメーター
  `pdbPath`
 
-から.Pdb ファイルの完全パス。
+[in] .pdb ファイルの完全なパス。
 
  `resultCode`
 
-からこのファイルに適用されている読み込みの成功 (`S_OK`) または失敗を示すコード。
+[in] このファイルに適用された読み込みの成功 (`S_OK`) または失敗を示すコード。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 通常、リターンコードは無視されます。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 リターン コードは、通常無視されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

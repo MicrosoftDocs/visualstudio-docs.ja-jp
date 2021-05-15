@@ -1,7 +1,8 @@
 ---
-title: 'IDiaInjectedSource:: get_filename |Microsoft Docs'
+description: ソースのファイル名を取得します。
+title: IDiaInjectedSource::get_filename | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 20f4fc68-335a-4971-b3a6-76501f0e8b19
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa2929ac592d475896eff0c1969115f971a8572
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: e41b7d3b80f2e0f63a53fb9a0d6d63627af59d75
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743370"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634416"
 ---
 # <a name="idiainjectedsourceget_filename"></a>IDiaInjectedSource::get_filename
 ソースのファイル名を取得します。
@@ -25,15 +26,15 @@ ms.locfileid: "72743370"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_filename ( 
+HRESULT get_filename ( 
    BSTR* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力ソースのファイル名を返します。
+[out] ソースのファイル名を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

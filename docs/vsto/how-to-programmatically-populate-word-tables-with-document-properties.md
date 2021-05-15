@@ -1,6 +1,6 @@
 ---
-title: プログラムによる Word の表のドキュメントプロパティの設定
-description: Visual Studio を使用して、Microsoft Word 文書のドキュメントプロパティを含むテーブルにプログラムでデータを設定する方法について説明します。
+title: プログラムでドキュメント プロパティを Word の表に読み込む
+description: Visual Studio を使用して、Microsoft Word 文書の表にドキュメント プロパティをプログラムで読み込む方法について学習します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -18,17 +18,17 @@ ms.workload:
 - office
 ms.openlocfilehash: a5cb9303e7891ec6657d0fa599921d37a184073f
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107827254"
 ---
-# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>方法: プログラムによって document プロパティを Word の表に読み込む
+# <a name="how-to-programmatically-populate-word-tables-with-document-properties"></a>方法: プログラムによってドキュメント プロパティを Word の表に読み込む
   次の例ではドキュメントの先頭に Microsoft Office Word の表を作成し、ホスト ドキュメントのプロパティのデータをそこに読み込みます。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="populate-tables-in-a-document-level-customization"></a>ドキュメントレベルのカスタマイズでのテーブルの設定
+## <a name="populate-tables-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで表にデータを読み込む
 
 ### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには
 
@@ -62,7 +62,7 @@ ms.locfileid: "107827254"
    :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet89":::
    :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet89":::
 
-## <a name="populate-tables-in-a-vsto-add-in"></a>VSTO アドインでのテーブルの設定
+## <a name="populate-tables-in-a-vsto-add-in"></a>VSTO アドインで表にデータを読み込む
 
 ### <a name="to-create-a-table-and-populate-it-with-document-properties"></a>表を作成し、ドキュメントのプロパティ データをそこに読み込むには
 

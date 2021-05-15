@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumLineNumbers:: get_Count |Microsoft Docs'
+description: 行番号の数を取得します。
+title: IDiaEnumLineNumbers::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: dbb55936-b754-4a27-8b82-9537a7adb664
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 45e062f8ad2842634eabcb2c71ed69fd9ce35673
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 33b87762d1112d1f84e3e49bdbc1d2d555d723fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744424"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634493"
 ---
 # <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
 行番号の数を取得します。
@@ -25,18 +26,18 @@ ms.locfileid: "72744424"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_Count ( 
+HRESULT get_Count ( 
    LONG* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力行番号の数を返します。
+[out] 行番号の数を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

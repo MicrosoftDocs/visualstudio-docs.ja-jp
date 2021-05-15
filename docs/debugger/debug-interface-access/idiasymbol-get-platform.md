@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_platform |Microsoft Docs'
+---
+description: コンパイル単位がコンパイルされたプラットフォームの種類を取得します。
+title: IDiaSymbol::get_platform | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: dff1c1eb-bcb2-4275-bb07-f2fdc076d6fb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a86e7b6b75e0689ccd98a2cab2ed9ef93188312
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 268fdb3d3e54518a05d2e8f0fe49da86dc08f114
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739505"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635245"
 ---
 # <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
 コンパイル単位がコンパイルされたプラットフォームの種類を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72739505"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_platform ( 
+HRESULT get_platform ( 
    DWORD* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_platform ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力コンパイル単位がコンパイルされたプラットフォームの種類を指定する[CV_CPU_TYPE_e enumeration](../../debugger/debug-interface-access/cv-cpu-type-e.md)列挙体から値を返します。
+[出力] [CV_CPU_TYPE_e 列挙型](../../debugger/debug-interface-access/cv-cpu-type-e.md)に関するページにある列挙型から、コンパイル単位がコンパイルされたプラットフォームの種類を指定する値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_virtualBaseDispIndex |Microsoft Docs'
+---
+description: 仮想ベースの変位テーブル内のシンボルのインデックスを取得します。
+title: IDiaSymbol::get_virtualBaseDispIndex | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 5561a3cb-2c82-41cf-9217-3ee2b1e1d1d1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b42c735c110208d563f908baef90a3bd0699fbe8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 63d68610e2b1e78e340141cc03fc147ab9c915cf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738874"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635095"
 ---
 # <a name="idiasymbolget_virtualbasedispindex"></a>IDiaSymbol::get_virtualBaseDispIndex
-仮想ベースのディスプレイスメントテーブル内の記号のインデックスを取得します。
+仮想ベースの変位テーブル内のシンボルのインデックスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,13 +34,13 @@ HRESULT get_virtualBaseDispIndex (
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力仮想ベースのディスプレイスメントテーブルのインデックスを返します。
+[出力] 仮想ベースの変位テーブルにインデックスを戻します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

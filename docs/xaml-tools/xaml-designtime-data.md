@@ -1,18 +1,18 @@
 ---
 title: Visual Studio の XAML デザイナーでデザイン時のデータを使用する
 description: XAML でデザイン時のデータを使用する方法について説明します。
-ms.date: 11/17/2020
+ms.date: 04/22/2021
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jmartens
 monikerRange: vs-2019
-ms.openlocfilehash: 915fe38da63f0b3994a809b20515fdc18e0790ce
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: a9f7f23625bb01c227158f720260f14347d39f9d
+ms.sourcegitcommit: 60b7a6159045a44293043a519c8ea6d915bf2c31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913073"
+ms.lasthandoff: 05/01/2021
+ms.locfileid: "108334942"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Visual Studio の XAML デザイナーでデザイン時のデータを使用する
 
@@ -68,7 +68,7 @@ mc:Ignorable="d"
 
 ListView は、デスクトップ アプリにデータを表示するための一般的な方法です。 ただし、データなしに視覚化することは困難です。 この機能を使用して、デザイン時のインライン データ ItemSource または項目を作成できます。 XAML デザイナーには、デザイン時の ListView の配列の内容が表示されます。
 
-### <a name="wpf-net-core--example"></a>WPF .NET Core の例
+### <a name="wpf-net-core-example"></a>WPF .NET Core の例
 system:String 型を使用するには、XAML ヘッダーに `xmlns:system="clr-namespace:System;assembly=mscorlib` が含まれていることを確認してください。
 
 ```xml
@@ -139,7 +139,7 @@ xmlns:models="clr-namespace:Cities.Models"
 
 ここでのベネフィットは、コントロールをモデルのデザイン時の静的なバージョンにバインドできることです。
 
-### <a name="uwp-example"></a>UWP の例 
+### <a name="uwp-example"></a>UWP の例
 
 UWP では x:Array がサポートされていません。 そのため、代わりに `<d:ListView.Items>` を使用できます。 system:String 型を使用するには、XAML ヘッダーに `http://schemas.microsoft.com/winfx/2009/xaml` が含まれていることを確認してください。
 

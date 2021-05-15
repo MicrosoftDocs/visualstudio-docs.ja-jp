@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSegment:: get_read |Microsoft Docs'
+description: セグメントが読み取り可能かどうかを示すフラグを取得します。
+title: IDiaSegment::get_read | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: aafbc86d-352c-4e1a-911a-1472d2d59212
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: faa616709015afb74db93e5a12ae8c684d93e88f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 9a1ed49889432d29b8058dcf269549dd31d6f9cf
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742383"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634825"
 ---
 # <a name="idiasegmentget_read"></a>IDiaSegment::get_read
-セグメントを読み取ることができるかどうかを示すフラグを取得します。
+セグメントが読み取り可能かどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_read ( 
+HRESULT get_read ( 
    BOOL* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_read ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力セグメントを読み取ることができる場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] セグメントが読み取リ可能である場合は、`TRUE` を返します。それ以外の場合は、`FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

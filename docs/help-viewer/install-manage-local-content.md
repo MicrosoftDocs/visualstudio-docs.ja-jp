@@ -1,6 +1,6 @@
 ---
 title: ローカルのヘルプ ドキュメントのインストール
-description: Microsoft ヘルプビューアーを使用して、ローカルヘルプドキュメントをインストールし、管理します。 コンピューターにインストールされているヘルプコンテンツを追加、削除、更新、移動します。
+description: Microsoft ヘルプ ビューアーを使用し、ローカルのヘルプ ドキュメントをインストールし、管理します。 コンピューターにインストールされるヘルプ コンテンツの追加、削除、更新、移動を行います。
 ms.date: 11/04/2016
 ms.topic: how-to
 f1_keywords:
@@ -26,7 +26,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 14091ecd5adc76762901c02c582c845aa0dbd513
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944122"
@@ -52,7 +52,7 @@ Microsoft ヘルプ ビューアーを使用すると、ソフトウェア開発
 
     - *.msha* ファイルのパスまたはサービス エンドポイントの URL を入力します。
 
-    - 参照ボタン ([.**..**]) をクリックして、 *msha* ファイルに移動します。
+    - 参照 **[…]** ボタンを選択して *.msha* ファイルに移動します。
 
     - 一覧で、最後に使用されたエントリを選択します。
 

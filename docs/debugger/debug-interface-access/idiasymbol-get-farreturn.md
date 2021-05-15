@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSymbol:: get_farReturn |Microsoft Docs'
+description: 関数に farreturn が含まれているかどうかを指定するフラグを取得します。
+title: IDiaSymbol::get_farReturn | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 141df0e9-f4d9-4330-a043-5d9ea865257f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7185498f351b8f69c926b7247ea348d5674ce6a2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 6bebf0d1f61c6cf1dc21528e44703de049d247c1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740685"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634703"
 ---
 # <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
-関数に far の戻り値が含まれているかどうかを指定するフラグを取得します。
+関数に farreturn が含まれているかどうかを指定するフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,20 +34,20 @@ HRESULT get_farReturn(
 #### <a name="parameters"></a>パラメーター
  `pFlag`
 
-から関数が遠方を使用している場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[入力] 関数が farreturn を使用する場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|必要条件|説明|
+|要件|説明|
 |-----------------|-----------------|
-|ヘッダー:|dia2|
-|バージョン:|DIA SDK v1.0|
+|ヘッダー:|dia2.h|
+|バージョン:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

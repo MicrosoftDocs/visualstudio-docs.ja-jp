@@ -1,6 +1,6 @@
 ---
-description: 一連のメソッドのローカル変数のレイアウトを取得します。
-title: 'IDebugComPlusSymbolProvider:: GetLocalVariablelayout |Microsoft Docs'
+description: メソッド セットのローカル変数のレイアウトを取得します。
+title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e78556b7187072f72930767c6b718a87998f5995
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095720"
 ---
 # <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
-一連のメソッドのローカル変数のレイアウトを取得します。
+メソッド セットのローカル変数のレイアウトを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,25 +49,25 @@ int GetLocalVariablelayout(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[in] モジュールの一意識別子。
 
 `cMethods`\
-から配列内のメソッドトークンの数 `rgMethodTokens` 。
+[in] `rgMethodTokens` 配列内のメソッド トークンの数。
 
 `rgMethodTokens`\
-からメソッドトークンの配列。
+[in] メソッド トークンの配列。
 
 `pStreamLayout`\
-入出力変数レイアウトを格納しているテキストストリーム。
+[out] 変数レイアウトを含むテキスト ストリーム。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetLocalVariablelayout(
@@ -114,5 +114,5 @@ HRESULT CDebugSymbolProvider::GetLocalVariablelayout(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

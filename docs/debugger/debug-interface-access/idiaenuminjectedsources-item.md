@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumInjectedSources:: Item |Microsoft Docs'
+description: インデックスを使って挿入されたソースを取得します。
+title: IDiaEnumInjectedSources::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 14846955-7270-451d-91d2-9cb34bb65187
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 91be2f4f437cfeed30b0741d10bf719ba0ed2b71
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1d1ab3a9ce19705a4d9ff22f33a1275efc0e8b02
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744502"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634496"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 インデックスを使って挿入されたソースを取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72744502"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD                index,
    IDiaInjectedSource** injectedSource
 );
@@ -34,14 +35,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>パラメーター
  インデックス
 
-から取得する[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)オブジェクトのインデックス。 インデックスは、0 ~ `count`-1 の範囲です。この場合、`count` は[IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md)メソッドによって返されます。
+[in] 取得する [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) オブジェクトのインデックス。 インデックスの範囲は、0 から `count`-1 です。ここで、`count` は、[IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) によって返されます。
 
  injectedSource
 
-入出力挿入されたソースを表す[IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)オブジェクトを返します。
+[out] 挿入されたソースを表す [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

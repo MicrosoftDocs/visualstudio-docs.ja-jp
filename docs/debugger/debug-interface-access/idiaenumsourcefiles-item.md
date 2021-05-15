@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumSourceFiles:: Item |Microsoft Docs'
+description: インデックスを使ってソース ファイルを取得します。
+title: IDiaEnumSourceFiles::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 3c19d7ed-0232-4b0e-9b10-f33ed9e0c93b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 352c9516180c0ee0021fca4e0913f154f3b8d46f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 6a592c715e066059a2f1d3840ae6959e2fe2751c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744095"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634472"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
-インデックスを使ってソースファイルを取得します。
+インデックスを使ってソース ファイルを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD            index,
    IDiaSourceFile** sourceFile
 );
@@ -34,14 +35,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>パラメーター
  インデックス
 
-から取得する[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)オブジェクトのインデックス。 インデックスは 0 ~ `count`-1 の範囲にあり、`count` は[IDiaEnumSourceFiles:: get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)メソッドによって返されます。
+[in] 取得する [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) オブジェクトのインデックス。 インデックスの範囲は、0 から `count`-1 です。ここで、`count` は、[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md) によって返されます。
 
  sourceFile
 
-入出力目的のソースファイルを表す[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)オブジェクトを返します。
+[out] 目的のソース ファイルを表す [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

@@ -1,6 +1,6 @@
 ---
 description: 特定のカスタム属性が定義されているかどうかを判断します。
-title: 'IDebugMethodField:: IsCustomAttributeDefined |Microsoft Docs'
+title: IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: f7cd9e1ae31e893639b41537bb5b09323cc70ff9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081894"
@@ -42,10 +42,10 @@ int IsCustomAttributeDefined(
 
 ## <a name="parameters"></a>パラメーター
 `pszCustomAttributeName`\
-から検索するカスタム属性の名前を格納している文字列。
+[in] 検索するカスタム属性の名前が格納されている文字列。
 
 ## <a name="return-value"></a>戻り値
- このメソッドでカスタム属性が定義されている場合は S_OK を返し、それ以外の場合は S_FALSE を返します。
+ このメソッドでカスタム属性が定義されている場合は、S_OK を返します。それ以外の場合は、S_FALSE を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

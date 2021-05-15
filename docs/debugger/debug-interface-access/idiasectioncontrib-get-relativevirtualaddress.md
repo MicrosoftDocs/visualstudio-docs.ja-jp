@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSectionContrib:: get_relativeVirtualAddress |Microsoft Docs'
+description: コントリビューションのイメージ相対仮想アドレス (RVA) を取得します。
+title: IDiaSectionContrib::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 32f9674d-94f1-4590-99de-a2eb60da4af8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 933bdba22b3f8456d96d11de9a809622028bf5b1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 4bd7e1271ed163e9efe4971ca4af08858e79c7ff
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742550"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634354"
 ---
 # <a name="idiasectioncontribget_relativevirtualaddress"></a>IDiaSectionContrib::get_relativeVirtualAddress
-貢献度のイメージ相対仮想アドレス (RVA) を取得します。
+コントリビューションのイメージ相対仮想アドレス (RVA) を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_relativeVirtualAddress ( 
+HRESULT get_relativeVirtualAddress ( 
    DWORD* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力貢献度のイメージ RVA を返します。
+[out] コントリビューションのイメージ相対仮想アドレス (RVA) を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

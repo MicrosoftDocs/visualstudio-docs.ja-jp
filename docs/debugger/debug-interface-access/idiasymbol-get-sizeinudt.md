@@ -1,21 +1,22 @@
-﻿---
-title: 'IDiaSymbol:: get_sizeInUdt |Microsoft Docs'
+---
+description: ユーザー定義型のメンバーのサイズを取得します。
+title: IDiaSymbol::get_sizeInUdt | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a82ab896-0185-46a4-b4d5-babfcc660fe1
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a87f6e6ea3118aa7c278bc83a69a290176b267c9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 5f60952220f22bcf7b67534905f8bd56da520d99
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739333"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634622"
 ---
 # <a name="idiasymbolget_sizeinudt"></a>IDiaSymbol::get_sizeInUdt
 ユーザー定義型のメンバーのサイズを取得します。
@@ -30,10 +31,10 @@ HRESULT get_sizeInUdt(
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力メンバーのサイズを指定する `DWORD` へのポインター。
+[出力] メンバーのサイズを指定する `DWORD` へのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

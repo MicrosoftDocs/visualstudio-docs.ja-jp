@@ -1,6 +1,6 @@
 ---
-title: カスタムアクセス許可の設定 (ClickOnce アプリ)
-description: 既定のアクセス許可を使用する ClickOnce アプリケーションを配置する方法、またはアプリケーションに必要な特定のアクセス許可のカスタムゾーンを作成する方法について説明します。
+title: カスタムのアクセス許可を設定する (ClickOnce アプリ)
+description: 既定のアクセス許可を使用する ClickOnce アプリケーションを配置する方法と、アプリケーションで必要とされる特定のアクセス許可向けにカスタム ゾーンを作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2050f3534caba8aba12fa8550eb6e573a3d0db08
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99885041"

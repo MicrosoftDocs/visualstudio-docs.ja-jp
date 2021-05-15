@@ -12,7 +12,7 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 71c3dd4e30b30c2e71e11ec8159aa805306f0e4f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99860270"
@@ -21,9 +21,9 @@ ms.locfileid: "99860270"
 
 ## <a name="overview"></a>概要
 
-Roslyn アナライザーとして実装されていない FxCop レガシ分析規則のセットは、次の2つのバケットで構成されています。
-- まだ移植されていないが、まだ [移植さ](fxcop-unported-rules-may-get-ported.md)れている可能性のあるルール。
-- 非推奨とされた規則。 [移植されません](fxcop-unported-deprecated-rules.md)。
+Roslyn アナライザーとして実装されていない一連の FxCop レガシ分析規則は、次の 2 つのバケットから構成されています。
+- まだ移植されていないが、[移植される可能性がある](fxcop-unported-rules-may-get-ported.md)規則。
+- 非推奨であり、[移植されることはない](fxcop-unported-deprecated-rules.md)規則。
 
 ## <a name="see-also"></a>関連項目
 

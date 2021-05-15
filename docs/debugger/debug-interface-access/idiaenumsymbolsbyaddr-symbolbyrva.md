@@ -1,7 +1,8 @@
-﻿---
+---
+description: 相対仮想アドレス (RVA) で検索を実行することにより、列挙子を配置します。
 title: IDiaEnumSymbolsByAddr::symbolByRVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f7828029-f2ee-4ccd-afac-785adc60a4c8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b4c34ce4105da6d50dc2bc9a0554f9539c1b2177
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 0101411b6b497ac8c9b83eec844719d067041c29
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743827"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634439"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-相対仮想アドレス (RVA) による検索を実行して、列挙子を配置します。
+相対仮想アドレス (RVA) で検索を実行することにより、列挙子を配置します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT symbolByRVA ( 
+HRESULT symbolByRVA ( 
    DWORD**      relativeVirtualAddress,
    IDiaSymbol** ppsymbol
 );
@@ -34,14 +35,14 @@ HRESULT symbolByRVA ( 
 #### <a name="parameters"></a>パラメーター
  relativeVirtualAddress
 
-からイメージの先頭に対するアドレス。
+[in] イメージの先頭に対して相対的なアドレス。
 
  ppsymbol
 
-入出力見つかったシンボルを表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[out] 見つかったシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 シンボルが見つからなかった場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 シンボルが見つからなかった場合は、`S_FALSE` 返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

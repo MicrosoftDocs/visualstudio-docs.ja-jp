@@ -1,6 +1,6 @@
 ---
 title: ヘルプ ビューアーのユーザー補助機能
-description: Microsoft ヘルプビューアーのユーザー補助機能の一覧で、キーボードアクセス、フォントサイズ、ウィンドウサイズ、およびヘルプビューアーの位置を確認します。
+description: Microsoft ヘルプ ビューアーのユーザー補助機能の一覧をご覧ください。キーボード アクセス、フォントのサイズ、ウィンドウのサイズ、ヘルプ ビューアーの位置が含まれています。
 ms.date: 11/02/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 7ada860eb82b6c391e04e7431d6625c876174654
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944356"

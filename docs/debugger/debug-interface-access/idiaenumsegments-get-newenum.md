@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumSegments:: get__NewEnum |Microsoft Docs'
+description: セグメントの列挙子の System.Runtime.InteropServices.ComTypes.IEnumVARIANT バージョンを取得します。
+title: IDiaEnumSegments::get__NewEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 504505fa-b35c-402f-a440-8972c589cc5b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cca94c078bb2b2598ffbe8e8098ac635cb698288
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ea354ae25c1dc822640d3f9cf2c7d0c9c7f3a8fd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744209"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634476"
 ---
 # <a name="idiaenumsegmentsget__newenum"></a>IDiaEnumSegments::get__NewEnum
 この列挙子の <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> バージョンを取得します。
@@ -25,18 +26,18 @@ ms.locfileid: "72744209"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get__NewEnum ( 
+HRESULT get__NewEnum ( 
    IUnknown** pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力この列挙子の <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> バージョンを表す `IUnknown` インターフェイスを返します。
+[out] この列挙子の <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> バージョンを表す `IUnknown` インターフェイスを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

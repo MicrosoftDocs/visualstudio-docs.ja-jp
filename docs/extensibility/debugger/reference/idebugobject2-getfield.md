@@ -1,6 +1,6 @@
 ---
 description: このオブジェクトの型を取得します。
-title: 'IDebugObject2:: GetField |Microsoft Docs'
+title: IDebugObject2::GetField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 051c92b55b8fbd937abc20235d708f72f9c27078
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087861"
@@ -42,14 +42,14 @@ int GetField(
 
 ## <a name="parameters"></a>パラメーター
 `ppField`\
-入出力Null 値でない場合は、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
+[out] null 値でなければ、[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- オブジェクトの種類を示すフィールドです。
+## <a name="remarks"></a>解説
+ オブジェクトの型はフィールドに記述されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

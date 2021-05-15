@@ -1,6 +1,6 @@
 ---
-description: 列挙子内のカスタム属性の数を取得します。
-title: 'IEnumDebugCustomAttributes:: GetCount |Microsoft Docs'
+description: 列挙内のカスタム属性の数を取得します。
+title: IEnumDebugCustomAttributes::GetCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4d0d61565d57b7e025d67689420dcbf82c93707a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105083116"
 ---
 # <a name="ienumdebugcustomattributesgetcount"></a>IEnumDebugCustomAttributes::GetCount
-列挙子内のカスタム属性の数を取得します。
+列挙内のカスタム属性の数を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int GetCount(
 
 ## <a name="parameters"></a>パラメーター
 `pcelt`\
-入出力列挙体の要素の数を返します。
+[out] 列挙内の要素の数を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは `Next` 、、、、およびのみを実装する必要があることを指定する、慣例的な COM 列挙インターフェイスの一部ではありません `Clone` `Skip` `Reset` 。
+## <a name="remarks"></a>解説
+ このメソッドは、`Next`、`Clone`、`Skip`、および `Reset` のみを実装する必要があることを指定する、通常の COM 列挙型インターフェイスには含まれません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

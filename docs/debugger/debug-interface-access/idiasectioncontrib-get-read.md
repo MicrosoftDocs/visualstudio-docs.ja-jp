@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSectionContrib:: get_read |Microsoft Docs'
+description: セクションが読み取り可能であるかどうかを示すフラグを取得します。
+title: IDiaSectionContrib::get_read | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 68bfb35c-eabd-412a-bc8f-3094703b98c4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 206415f45c4f4f087b99064f772a679f15eb1506
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 563e216ad7c97b9e3b448d3cdf658667039072b3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742574"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634830"
 ---
 # <a name="idiasectioncontribget_read"></a>IDiaSectionContrib::get_read
-セクションを読み取ることができるかどうかを示すフラグを取得します。
+セクションが読み取り可能であるかどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_read ( 
+HRESULT get_read ( 
    BOOL* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_read ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力セクションを読み取ることができる場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] セクションが読み取り可能である場合は、`TRUE` を返します。それ以外の場合は、`FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

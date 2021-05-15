@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_upperBound |Microsoft Docs'
+---
+description: FORTRAN 配列次元の上限を表すシンボルを取得します。
+title: IDiaSymbol::get_upperBound | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: a77dcafa-ea3f-45da-826d-8f9b4489a03f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3528780e80e8afc5076446f16b1a64ef1700ee30
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 8e07eed5400b49adc38bff878207cf4d9f38eada
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738952"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635225"
 ---
 # <a name="idiasymbolget_upperbound"></a>IDiaSymbol::get_upperBound
-FORTRAN 配列次元の上限を表す記号を取得します。
+FORTRAN 配列次元の上限を表すシンボルを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_upperBound ( 
+HRESULT get_upperBound ( 
    IDiaSymbol** pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_upperBound ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力FORTRAN 配列次元の上限を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[出力] FORTRAN 配列次元の上限を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaFrameData:: get_functionParent |Microsoft Docs'
+description: 外側の関数のフレーム データ インターフェイスを取得します。
+title: IDiaFrameData::get_functionParent | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f00b9ab1-d4da-4818-973a-58f8f0e66769
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 809de8589302ddc35a14e2ea0663248a163176e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c03eb86e7575652fd260aa9a7018081992b78010
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743621"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634909"
 ---
 # <a name="idiaframedataget_functionparent"></a>IDiaFrameData::get_functionParent
-外側の関数のフレームデータインターフェイスを取得します。
+外側の関数のフレーム データ インターフェイスを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_functionParent ( 
+HRESULT get_functionParent ( 
    IDiaFrameData** pRetVal
 );
 ```
@@ -33,10 +34,10 @@ HRESULT get_functionParent ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力外側の関数の[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)オブジェクトを返します。
+[出力] 外側の関数の [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

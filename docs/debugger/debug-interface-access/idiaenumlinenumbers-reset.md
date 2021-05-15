@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumLineNumbers:: Reset |Microsoft Docs'
+description: 行番号の列挙型シーケンスを先頭にリセットします。
+title: IDiaEnumLineNumbers::Reset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: d50e73aa-11a1-4813-ba23-d5861090ee12
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d13040c3a35b1a41d3d03641194e563abc80e6de
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ae2c47d80008c45c9fec013a69cf3d955314316d
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744382"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634934"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
-列挙シーケンスを先頭にリセットします。
+列挙型シーケンスを先頭にリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>戻り値
- `S_OK`を返します。
+ `S_OK` を返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

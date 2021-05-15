@@ -1,6 +1,6 @@
 ---
-description: この保留中のブレークポイントと、それにバインドされているすべてのブレークポイントを削除します。
-title: IDebugPendingBreakpoint2::D e) |Microsoft Docs
+description: この保留中のブレークポイントと、それとバインドされているすべてのブレークポイントを削除します。
+title: IDebugPendingBreakpoint2::Delete | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 25152c5a49ccef84f44d8c3fde3217367c0e334b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087770"
 ---
 # <a name="idebugpendingbreakpoint2delete"></a>IDebugPendingBreakpoint2::Delete
-この保留中のブレークポイントと、それにバインドされているすべてのブレークポイントを削除します。
+この保留中のブレークポイントと、それとバインドされているすべてのブレークポイントを削除します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,10 +40,10 @@ int Delete();
 ```
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`ブレークポイントが削除されている場合は、を返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 ブレークポイントが削除されている場合は、`E_BP_DELETED` を返します。
 
 ## <a name="example"></a>例
-次の例は、IDebugPendingBreakpoint2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CPendingBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
+次の例は、[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスを実装するシンプルな `CPendingBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CPendingBreakpoint::Delete(void)
@@ -85,5 +85,5 @@ HRESULT CPendingBreakpoint::Delete(void)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

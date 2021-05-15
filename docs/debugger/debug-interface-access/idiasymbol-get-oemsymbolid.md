@@ -1,7 +1,8 @@
-﻿---
+---
+description: OEM (相手先ブランド供給) のシンボルの ID 値を取得します。
 title: IDiaSymbol::get_oemSymbolId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 187801f0-bd82-4c5b-9fae-8eeb1a4ac0ce
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 60d1486ba654ddba9fdd1dae6439cafbb1f81f29
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: bd7ce01dea21a8d9fe2886fb5fe7b4277f458636
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739595"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634641"
 ---
 # <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
-相手先ブランド供給 (OEM) シンボルの ID 値を取得します。
+OEM (相手先ブランド供給) のシンボルの ID 値を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_oemSymbolId ( 
+HRESULT get_oemSymbolId ( 
    DWORD* pRetVal
 );
 ```
@@ -33,18 +34,18 @@ HRESULT get_oemSymbolId ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力OEM の内部的に割り当てられたシンボル ID を返します。
+[出力] OEM が内部で割り当てたシンボルの ID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  識別子は、すべてのシンボルを一意としてマークするために DIA SDK によって作成される一意の値です。
 
- このプロパティは、 [Symtagenum 列挙](../../debugger/debug-interface-access/symtagenum.md)型が `SymTagCustomType` のシンボルにのみ適用されます。
+ このプロパティは、[Symtagenum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の型が `SymTagCustomType` のシンボルにのみ適用されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

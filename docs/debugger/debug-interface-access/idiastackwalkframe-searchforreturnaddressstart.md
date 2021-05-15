@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackWalkFrame:: searchForReturnAddressStart |Microsoft Docs'
+description: 指定されたスタック フレーム内で、指定されたアドレスまたはその近くのリターン アドレスを検索します。
+title: IDiaStackWalkFrame::searchForReturnAddressStart | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 47660b9b-6e4f-4dfa-88ab-63dce28f7412
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ad1c42a39b9c35cc1436488e19481f2b286b6f5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 49beac1d7f7c998b5ad3a73222903830a934bc9c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741447"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635004"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
-指定したスタックフレーム内で、指定したアドレスまたはその近くの戻りアドレスを検索します。
+指定されたスタック フレーム内で、指定されたアドレスまたはその近くのリターン アドレスを検索します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT searchForReturnAddressStart ( 
+HRESULT searchForReturnAddressStart ( 
    IDiaFrameData* frame,
    ULONGLONG      startAddress,
    ULONGLONG*     returnAddress
@@ -35,18 +36,18 @@ HRESULT searchForReturnAddressStart ( 
 #### <a name="parameters"></a>パラメーター
  `frame`
 
-から現在のスタックフレームを表す[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)オブジェクト。
+[入力] 現在のスタック フレームを表す [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) オブジェクト。
 
  `startAddress`
 
-から検索を開始する仮想メモリアドレス。
+[入力] 検索を開始する仮想メモリ アドレス。
 
  `returnAddress`
 
-入出力@No__t_0 に最も近い関数の戻り先アドレスを返します。
+[出力] `startAddress` に最も近い関数のリターン アドレスを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

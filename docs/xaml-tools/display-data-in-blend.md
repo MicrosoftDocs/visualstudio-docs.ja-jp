@@ -1,7 +1,7 @@
 ---
 title: XAML UI でサンプル データを視覚化する
 titleSuffix: Blend for Visual Studio
-description: Blend for Visual Studio で、一から、または既存のクラスからサンプルデータを生成する方法について説明します。
+description: Blend for Visual Studio でサンプル データを一から生成する方法と既存のクラスから生成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 03/06/2018
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 7b8025f7212d28d2cfce482f67ef672a472993bf
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99920110"
@@ -23,7 +23,7 @@ ms.locfileid: "99920110"
 ページのレイアウトをカスタマイズする際、デザイナーでサンプル データを表示できます。 サンプル データは最初から、または既存のクラスを使用して生成できます。 また、アプリの実行時にアプリに表示される *ライブ データ* にも接続できます。
 
 > [!NOTE]
-> Blend の [ **データ** ] パネルは、.NET Framework を対象とするプロジェクトでのみサポートされます。 これは、.NET Core を対象とする UWP プロジェクトまたはプロジェクトではサポートされていません。
+> Blend の **[データ]** パネルは、.NET Framework を対象とするプロジェクトでのみサポートされています。 UWP プロジェクトまたは .NET Core を対象とするプロジェクトではサポートされていません。
 
 ## <a name="generate-sample-data"></a>サンプル データを作成する
 
