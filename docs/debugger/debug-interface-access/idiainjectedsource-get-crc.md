@@ -1,7 +1,8 @@
 ---
-title: 'IDiaInjectedSource:: get_crc |Microsoft Docs'
+description: ソース コードのバイトから計算された巡回冗長検査 (CRC) を取得します。
+title: IDiaInjectedSource::get_crc | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 2ecdda93-950e-40d6-b79b-4ae3c55b6cfc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e20cdf82af3b36c589879c81c492a3f58b67f90
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 74fec4428af13e3e3410cf8cb526c8b5b1dbebf6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743387"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634890"
 ---
 # <a name="idiainjectedsourceget_crc"></a>IDiaInjectedSource::get_crc
-ソースコードのバイトから計算された巡回冗長検査 (CRC) を取得します。
+ソース コードのバイトから計算された巡回冗長検査 (CRC) を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_crc ( 
+HRESULT get_crc ( 
    DWORD* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_crc ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ソースコードのバイトから計算された CRC を返します。
+[出力] ソース コードのバイトから計算された CRC を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

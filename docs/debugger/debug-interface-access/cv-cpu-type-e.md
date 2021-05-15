@@ -1,7 +1,9 @@
 ---
-title: CV_CPU_TYPE_e |Microsoft Docs
+title: CV_CPU_TYPE_e | Microsoft Docs
+description: Debug Interface Access SDK でターゲット プロセッサを指定する CV_CPU_TYPE_e 列挙型に関する参照情報を取得します。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: df470a7e-1d04-448e-b920-c731189514fa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ccc83062427ac2ecd3f340d6e1dbbe4d988ab0af
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: e0574814d15f981647283afa0d42320088652532
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745319"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634214"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
-ターゲットプロセッサを指定します。
+ターゲット プロセッサを指定します。
 
 > [!NOTE]
-> プロセッサは、`CV_CFL_*` プレフィックスの後の列挙要素で識別されます。
+> そのプロセッサは、`CV_CFL_*` プレフィックスの後の列挙要素で識別されます。
 
 ## <a name="syntax"></a>構文
 
@@ -95,10 +97,10 @@ typedef enum CV_CPU_TYPE_e {
 } CV_CPU_TYPE_e;
 ```
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaSymbol:: get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)メソッドの呼び出しによって返されます。
+## <a name="remarks"></a>解説
+この列挙の値は、[IDiaSymbol:: get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) メソッドへの呼び出しによって返されます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 ヘッダー: cvconst. h
 
 ## <a name="see-also"></a>関連項目

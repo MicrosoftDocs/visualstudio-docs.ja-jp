@@ -1,7 +1,7 @@
 ---
 title: XAML デザイナーでのオブジェクトのアニメーション化
 titleSuffix: Blend for Visual Studio
-description: タイムラインを含むストーリーボードと、XAML デザイナーのオブジェクトをアニメーション化するためのキーフレームを使用して Blend for Visual Studio でアニメーションを作成する方法について説明します。
+description: Blend for Visual Studio でアニメーションを作成する方法について説明します。ストーリーボードとタイムラインを使用し、XAML デザイナーでオブジェクトをアニメーション化します。
 ms.custom: SEO-VS-2020
 ms.date: 07/31/2019
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.author: tglee
 manager: jmartens
 ms.openlocfilehash: 162ed3ddb7e8f71a14c9dd8415500cc845316e82
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99889253"

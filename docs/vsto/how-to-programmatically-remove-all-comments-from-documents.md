@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって文書からすべてのコメントを削除する'
-description: Visual Studio を使用して、Microsoft Word 文書からすべてのコメントをプログラムで削除する方法について説明します。
+description: Visual Studio を使用して、Microsoft Word 文書からすべてのコメントをプログラムで削除する方法について学習します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 5d51f44537c4e9564162d458c564dd428e57d154
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107827046"
@@ -35,7 +35,7 @@ ms.locfileid: "107827046"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet119":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet119":::
 
-## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>VSTO アドインを使用してドキュメントからすべてのコメントを削除するには
+## <a name="to-remove-all-comments-from-a-document-by-using-a-vsto-add-in"></a>VSTO アドインを使用して、文書からすべてのコメントを削除するには
 
 1. コメントを削除する <xref:Microsoft.Office.Interop.Word._Document.DeleteAllComments%2A> から <xref:Microsoft.Office.Interop.Word.Document> メソッドを呼び出します。
 
@@ -46,4 +46,4 @@ ms.locfileid: "107827046"
 
 ## <a name="see-also"></a>関連項目
 - [方法: プログラムによって文書内のテキストにコメントを追加する](../vsto/how-to-programmatically-add-comments-to-text-in-documents.md)
-- [ドキュメントホスト項目](../vsto/document-host-item.md)
+- [ドキュメント ホスト項目](../vsto/document-host-item.md)

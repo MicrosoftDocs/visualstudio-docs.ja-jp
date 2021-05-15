@@ -1,6 +1,6 @@
 ---
-title: 戻り値の型の変更を元に戻すことはできません
-description: DataContext メソッドの戻り値の型を変更すると、元に戻せなくなります。 この Visual Studio オブジェクトリレーショナルデザイナー (O/R デザイナー) メッセージに関する情報を表示します。
+title: 戻り値の型の変更を元に戻せない
+description: DataContext メソッドの戻り値の型を変更すると、元に戻せなくなります。 この Visual Studio オブジェクト リレーショナル デザイナー (O/R デザイナー) メッセージに関する情報を表示してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,7 +12,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 71112b90f45fbc2b86aeb3f7e1935c38974a3694
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867309"

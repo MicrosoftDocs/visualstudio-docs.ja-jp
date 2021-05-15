@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_undecoratedName |Microsoft Docs'
+---
+description: C++ の修飾 (リンケージ) 名の非装飾名を取得します。
+title: IDiaSymbol::get_undecoratedName | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: e49edf25-a51d-4787-bd5b-2bf5af827c8c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 533fc28da8cdd500234e07d2294a9d503476568e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1744b2c75d8bbe3b4e3664beb7a091c6d10b9bb9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739009"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635102"
 ---
 # <a name="idiasymbolget_undecoratedname"></a>IDiaSymbol::get_undecoratedName
-C++修飾された名前 (リンケージ) の装飾されていない名前を取得します。
+C++ の修飾 (リンケージ) 名の非装飾名を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_undecoratedName ( 
+HRESULT get_undecoratedName ( 
    BSTR* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_undecoratedName ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力C++装飾名の装飾されていない名前を返します。
+[out] C++ の装飾名の非装飾名を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

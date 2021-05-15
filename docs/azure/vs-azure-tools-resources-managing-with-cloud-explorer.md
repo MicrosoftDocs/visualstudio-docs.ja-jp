@@ -9,7 +9,7 @@ ms.date: 03/25/2017
 ms.author: ghogen
 ms.openlocfilehash: 532195bad81fc9162b854493d5aca9bb2fa7f600
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843944"
@@ -20,23 +20,23 @@ Cloud Explorer を使用すると、Azure リソースやリソース グルー�
 
 [Azure Portal](https://portal.azure.com) と同様に、Cloud Explorer は Azure Resource Manager スタックを基盤としています。 そのため、Cloud Explorer はリソース (Azure リソース グループなど) と Azure サービス (Logic Apps や API Apps など) を認識し、[ロールベースのアクセス制御](/azure/role-based-access-control/role-assignments-portal) (RBAC) をサポートします。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * **Azure ワークロード** を選択した Visual Studio 2017 以降 ([Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads)を参照)。 [Microsoft Azure SDK for .NET 2.9](https://www.microsoft.com/download/details.aspx?id=51657) を含む Visual Studio の以前のバージョンを使用することもできます。
 * Microsoft Azure アカウント - アカウントがない場合は、[無料試用版にサインアップ](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)するか、[Visual Studio サブスクライバー特典を有効](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)にします。
 
 > [!NOTE]
-> Cloud Explorer を表示するには、 **Ctrl** Q キーを押して検索ボックスをアクティブにし、 +  「 **Cloud Explorer**」と入力します。
+> Cloud Explorer を表示するには、**Ctrl**+**Q** を押し、検索ボックスを有効にし、次いで「**Cloud Explorer**」と入力します。
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Cloud Explorer に Azure アカウントを追加する
 
-Azure アカウントに関連付けられているリソースを表示するには、最初にアカウントを **Cloud Explorer** に追加する必要があります。
+Azure アカウントに関連付けられているリソースを表示するには、まず、**Cloud Explorer** にアカウントを追加する必要があります。
 
-1. **Cloud Explorer** で、[**アカウント管理**] ボタンを選択します。
+1. **Cloud Explorer** で **[アカウント管理]** ボタンを選択します。
 
    ![Cloud Explorer の [Azure アカウントの設定] アイコン](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
-1. [ **アカウントの管理**] を選択します。
+1. **[アカウントの管理]** を選択します。
 
    ![Cloud Explorer のアカウントの追加リンク](./media/vs-azure-tools-resources-managing-with-cloud-explorer/manage-accounts-link.png)
 
@@ -46,13 +46,13 @@ Azure アカウントに関連付けられているリソースを表示する�
 
    ![Cloud Explorer: 表示する Azure サブスクリプションを選択する](./media/vs-azure-tools-resources-managing-with-cloud-explorer/select-subscriptions.png)
 
-1. 参照するリソースを含むサブスクリプションを選択すると、それらのサブスクリプションとリソースが **Cloud Explorer** に表示されます。
+1. 参照するリソースを含むサブスクリプションを選択すると、**Cloud Explorer** にそれらのサブスクリプションとリソースが表示されます。
 
    ![Cloud Explorer に一覧表示された Azure アカウントのリソース](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-listed.png)
 
 ## <a name="remove-an-azure-account-from-cloud-explorer"></a>Cloud Explorer から Azure アカウントを削除する
 
-1. **Cloud Explorer** で、[**アカウント管理**] を選択します。
+1. **Cloud Explorer** で **[アカウント管理]** を選択します。
 
    ![[Azure アカウントの設定]](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
@@ -99,7 +99,7 @@ Cloud Explorer で Azure リソースに移動してその情報を表示する�
 
 ## <a name="find-resources-in-cloud-explorer"></a>Cloud Explorer でリソースを検索する
 
-Azure アカウントのサブスクリプションで特定の名前のリソースを検索するには、 **Cloud Explorer** の [**検索**] ボックスに名前を入力します。
+Azure アカウント サブスクリプションで特定の名前のリソースを検索するには、**Cloud Explorer** の **[検索]** ボックスに名前を入力します。
 
   ![Finding resources in Cloud Explorer](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 

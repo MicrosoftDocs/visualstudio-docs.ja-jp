@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumInjectedSources:: Clone |Microsoft Docs'
+description: 現在の挿入されたソース列挙子と同じ列挙状態を含む列挙子を作成します。
+title: IDiaEnumInjectedSources::Clone | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 18038691-c140-426a-8617-27f0360650f3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9baba1709e3e89a982c0347cb744950a14cbb0b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7752f3b98ff6f4739f92f501297b72501ce0352b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744542"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634947"
 ---
 # <a name="idiaenuminjectedsourcesclone"></a>IDiaEnumInjectedSources::Clone
 現在の列挙子と同じ列挙状態を含む列挙子を作成します。
@@ -25,7 +26,7 @@ ms.locfileid: "72744542"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Clone ( 
+HRESULT Clone ( 
    IDiaEnumInjectedSources** ppenum
 );
 ```
@@ -33,10 +34,10 @@ HRESULT Clone ( 
 #### <a name="parameters"></a>パラメーター
  `ppenum`
 
-入出力列挙子の複製を含む[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)オブジェクトを返します。 挿入されたソースは重複しておらず、列挙子のみです。
+[出力] 列挙子の複製を含む [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) オブジェクトを返します。 挿入されたソースは複製されず、列挙子のみが複製されます。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

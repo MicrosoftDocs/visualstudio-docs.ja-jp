@@ -1,6 +1,6 @@
 ---
 description: 文字列の配列を記述する構造体。
-title: BSTR_ARRAY |Microsoft Docs
+title: BSTR_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5af4c0efe53625063d4bb714f3d323bef28c5954
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096617"
@@ -44,23 +44,23 @@ struct BSTR_ARRAY {
 
 ## <a name="members"></a>メンバー
 `dwCount`\
-配列内の文字列の数 `Members` 。
+`Members` 配列内の文字列の数。
 
 `Members`\
 文字列の配列。
 
-## <a name="remarks"></a>注釈
-この構造体は、 [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) メソッドから返されます。
+## <a name="remarks"></a>解説
+この構造体は [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md) メソッドから返されます。
 
- [C++ のみ]個々の文字列は、を使用して解放する必要があり、 `SysFreeString` `Members` 配列はで解放する必要があり `CoTaskMemFree` ます。
+ [C++ のみ] 個々の文字列は `SysFreeString` を使用して解放する必要があり、`Members` 配列は `CoTaskMemFree` で解放する必要があります。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)

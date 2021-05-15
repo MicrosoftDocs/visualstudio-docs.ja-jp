@@ -1,7 +1,8 @@
 ---
-title: 'IDiaInjectedSource:: get_objectFilename |Microsoft Docs'
+description: ソースのコンパイル先のオブジェクト ファイル名を取得します。
+title: IDiaInjectedSource::get_objectFilename | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 7c42847a-f0df-443a-a9fe-c495c1271ea8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c35a0f6473e2cc71079f8c453215d51494632c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 576539b278b353facf5d8d946ed4aacd73678a53
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743347"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634414"
 ---
 # <a name="idiainjectedsourceget_objectfilename"></a>IDiaInjectedSource::get_objectFilename
-ソースがコンパイルされたオブジェクトファイルの名前を取得します。
+ソースのコンパイル先のオブジェクト ファイル名を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_objectFilename ( 
+HRESULT get_objectFilename ( 
    BSTR* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_objectFilename ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ソースがコンパイルされたオブジェクトファイル名を返します。
+[out] ソースのコンパイル先のオブジェクト ファイル名を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

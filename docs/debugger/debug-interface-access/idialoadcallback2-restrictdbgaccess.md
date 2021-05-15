@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLoadCallback2:: RestrictDBGAccess |Microsoft Docs'
+description: .dbg ファイルからデバッグ情報を検索できるかどうかを判断します。
+title: IDiaLoadCallback2::RestrictDBGAccess | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 63b67a93-2910-4fff-aa70-6b2eaa08e5c8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 79756c2f9ab9e69fa45041e2ddaa2ff2119c27c5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 529d617b833a6dc3013a71f5c132ca5654c89d08
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743016"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634393"
 ---
 # <a name="idialoadcallback2restrictdbgaccess"></a>IDiaLoadCallback2::RestrictDBGAccess
-Dbg ファイルからデバッグ情報を検索できるかどうかを決定します。
+.dbg ファイルからデバッグ情報を検索できるかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,10 +30,10 @@ HRESULT RestrictDBGAccess();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- @No__t_0 以外の戻り値は、dbg ファイルからデバッグ情報が検索されないようにします。
+## <a name="remarks"></a>解説
+ `S_OK` 以外のリターン コードの場合、.dbg ファイルからデバッグ情報を検索できません。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

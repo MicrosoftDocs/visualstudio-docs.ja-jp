@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: symsAreEquiv |Microsoft Docs'
+description: 2 つのシンボルが等しいかどうかを確認します。
+title: IDiaSession::symsAreEquiv | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 9941d520-e203-46c0-83c3-b3a967f4fc59
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61cfc582f11670af8c956c3334681284ce5172a6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c5f887b13195bdde133c4bca845291b1255b99ea
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741862"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634801"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
-2つの記号が等しいかどうかを確認します。
+2 つのシンボルが等しいかどうかを確認します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT symsAreEquiv ( 
+HRESULT symsAreEquiv ( 
    IDiaSymbol* symbolA,
    IDiaSymbol* symbolB
 );
@@ -34,14 +35,14 @@ HRESULT symsAreEquiv ( 
 #### <a name="parameters"></a>パラメーター
  `symbolA`
 
-から比較で使用される最初の[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。
+[入力] 比較で使用される最初の [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクト。
 
  `symbolB`
 
-から比較で使用される2番目の `IDiaSymbol` オブジェクト。
+[入力] 比較で使用される 2 番目の `IDiaSymbol` オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- シンボルが等しい場合は、`S_OK` を返します。それ以外の場合、`S_FALSE` を返します。シンボルは等価ではありません。 それ以外の場合は、エラーコードを返します。
+ シンボルが等しい場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` を返します。その場合、シンボルは等しくありません。 それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

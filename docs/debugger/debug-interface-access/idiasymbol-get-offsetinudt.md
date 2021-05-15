@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_offsetInUdt |Microsoft Docs'
+---
+description: UDT 内のメンバーのユーザー定義型 (UDT) の先頭へのオフセットを取得します。
+title: IDiaSymbol::get_offsetInUdt | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 442f20d9-9d6a-44a1-83fb-c3f8c14b6c97
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eeffba743d7fae1d473c45eb350fbfc8bcd0b9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 2f02c684ad4a21c64ca45aefa8a9da765e5549fe
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739569"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634639"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 UDT 内のメンバーのユーザー定義型 (UDT) の先頭へのオフセットを取得します。
@@ -25,7 +26,7 @@ UDT 内のメンバーのユーザー定義型 (UDT) の先頭へのオフセッ
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_offsetInUdt( 
+HRESULT get_offsetInUdt( 
    DWORD* pRetVal)
 );
 ```
@@ -33,23 +34,23 @@ HRESULT get_offsetInUdt( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力シンボルの場所のオフセット (バイト単位) を返します。
+[出力] シンボルの位置のオフセットをバイト単位で返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
- この関数は、最適化されたビルドのローカルレコードでのみ使用されます。
+## <a name="remarks"></a>解説
+ この関数は、最適化されたビルドのローカル レコードでのみ使用します。
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

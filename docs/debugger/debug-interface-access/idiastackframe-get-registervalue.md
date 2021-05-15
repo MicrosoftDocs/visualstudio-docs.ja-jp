@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackFrame:: get_registerValue |Microsoft Docs'
+description: スタック フレームに格納されている、指定されたレジスタの値を取得します。
+title: IDiaStackFrame::get_registerValue | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: cbe3d8ac-319a-40ac-bc3e-4eb81b2d7807
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d270b9b177367c9a15c2b64f6f8bc5607c5a459d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 92ada384d6e231a33dc2b1bbccfafa1e790f1c9c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741621"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634273"
 ---
 # <a name="idiastackframeget_registervalue"></a>IDiaStackFrame::get_registerValue
-スタックフレームに格納されている、指定したレジスタの値を取得します。
+スタック フレームに格納されている、指定されたレジスタの値を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +35,14 @@ HRESULT get_registerValue(
 #### <a name="parameters"></a>パラメーター
  `registerIndex`
 
-から[CV_HREG_e 列挙](../../debugger/debug-interface-access/cv-hreg-e.md)型の列挙値のいずれか。
+[in] [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)の列挙値の 1 つ。
 
  `pRetVal`
 
-入出力レジスタに格納されている値。
+[out] レジスタに格納されている値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

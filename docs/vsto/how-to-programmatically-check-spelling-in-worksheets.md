@@ -1,6 +1,6 @@
 ---
-title: '方法: プログラムによってワークシートでスペルチェックを行う'
-description: Microsoft Excel ワークシート内の単語のスペルをプログラムで確認する方法について説明します。
+title: '方法: プログラムを使用してワークシートでスペル チェックを行う'
+description: Microsoft Excel ワークシート内の単語のスペルをプログラムでチェックする方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -19,12 +19,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 1bf35e225def686ae2424a89b7e5d6b77207ccee
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826058"
 ---
-# <a name="how-to-programmatically-check-spelling-in-worksheets"></a>方法: プログラムによってワークシートでスペルチェックを行う
+# <a name="how-to-programmatically-check-spelling-in-worksheets"></a>方法: プログラムを使用してワークシートでスペル チェックを行う
   ワークシート内の単語のスペルをプログラムでチェックすることができます。 ワークシート内の単語のスペルが正しくないと、 **[スペル チェック]** ダイアログ ボックスが自動的に表示されます。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]

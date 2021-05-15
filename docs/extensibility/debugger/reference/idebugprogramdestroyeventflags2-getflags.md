@@ -1,6 +1,6 @@
 ---
 description: プログラムの破棄フラグを取得します。
-title: 'IDebugProgramDestroyEventFlags2:: GetFlags |Microsoft Docs'
+title: IDebugProgramDestroyEventFlags2::GetFlags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5ef148fbde9bcedb733c5d05eaecc61f794769a0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084247"
@@ -41,11 +41,11 @@ public int GetFlags(
 
 ## <a name="parameters"></a>パラメーター
 `pdwFlags`\
-入出力プログラム破棄フラグを表します。
+[out] プログラムの破棄フラグを表します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramDestroyEventFlags2](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2.md)
 - [PROGRAM_DESTROY_FLAGS](../../../extensibility/debugger/reference/program-destroy-flags.md)

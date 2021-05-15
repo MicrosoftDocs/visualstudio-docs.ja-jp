@@ -1,6 +1,6 @@
 ---
-description: カスタム属性の列挙シーケンスを先頭にリセットします。
-title: 'IEnumDebugCustomAttributes:: Reset |Microsoft Docs'
+description: カスタム属性の列挙のシーケンスを先頭にリセットします。
+title: IEnumDebugCustomAttributes::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b48e541f1f75f3ce7f0ef69e1e838cd54ffa19fa
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105080126"
@@ -37,11 +37,11 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドが呼び出された後 [、次のメソッドを](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) 呼び出すと、列挙体の最初の要素が返されます。
+## <a name="remarks"></a>解説
+ このメソッドを呼び出した後、次に [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) メソッドを呼び出すと、列挙の最初の要素が返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)
 - [次へ](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)

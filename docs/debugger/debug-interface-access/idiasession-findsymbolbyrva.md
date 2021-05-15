@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: Findシンボル Byrva |Microsoft Docs'
+description: 指定された相対仮想アドレス (RVA) を含む、またはそれに最も近い、指定されたシンボルの種類を取得します。
+title: IDiaSession::findSymbolByRVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 14fb2903-b771-44d6-b0a8-44e0097c58ce
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af9915498182338a1b0ffa463f19d9867e76402
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 12e9bfbc1a774f435efc52f5ea1aaf5aff9d4340
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742053"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634301"
 ---
 # <a name="idiasessionfindsymbolbyrva"></a>IDiaSession::findSymbolByRVA
-指定した相対仮想アドレス (RVA) を含む、またはそれに最も近いシンボルの種類を取得します。
+指定された相対仮想アドレス (RVA) を含む、またはそれに最も近い、指定されたシンボルの種類を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findSymbolByRVA ( 
+HRESULT findSymbolByRVA ( 
    DWORD        rva,
    SymTagEnum   symtag,
    IDiaSymbol** ppSymbol
@@ -35,18 +36,18 @@ HRESULT findSymbolByRVA ( 
 #### <a name="parameters"></a>パラメーター
  `rva`
 
-からRVA を指定します。
+[in] RVA を指定します。
 
  `symtag`
 
-から検索するシンボルの種類。 値は[Symtagenum](../../debugger/debug-interface-access/symtagenum.md)列挙型から取得されます。
+[in] 検出するシンボルの種類。 値は、[SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の列挙体から取得されます。
 
  `ppSymbol`
 
-入出力取得されたシンボルを表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[out] 取得されたシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
 

@@ -1,6 +1,6 @@
 ---
 description: このプロセスの GUID を取得します。
-title: 'IDebugProcess2:: GetProcessId |Microsoft Docs'
+title: IDebugProcess2::GetProcessId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0b42b6f029ee6bbffdb1c59c55a2781d87d450d9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081751"
@@ -42,13 +42,13 @@ int GetProcessId(
 
 ## <a name="parameters"></a>パラメーター
 `pguidProcessId`\
-入出力このプロセスの GUID を返します。
+[out] このプロセスの GUID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  グローバル一意識別子 (GUID) は、システムで実行されている他のすべてのプロセスからこのプロセスを識別します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

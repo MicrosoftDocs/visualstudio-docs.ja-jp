@@ -1,7 +1,8 @@
 ---
+description: セクションの再配置情報の巡回冗長検査 (CRC) を取得します。
 title: IDiaSectionContrib::get_relocationsCrc | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 8c29c91a-062d-4566-a9b7-49251036a15a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b8602cfefbd414561ebfbaee979e6af5711b879
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 353344b93806bdf4cb000ed5b2307969f7e74bb6
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742542"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634352"
 ---
 # <a name="idiasectioncontribget_relocationscrc"></a>IDiaSectionContrib::get_relocationsCrc
 セクションの再配置情報の巡回冗長検査 (CRC) を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72742542"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_relocationsCrc ( 
+HRESULT get_relocationsCrc ( 
    DWORD* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_relocationsCrc ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力セクションの再配置情報の CRC を返します。
+[out] セクションの再配置情報の CRC を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

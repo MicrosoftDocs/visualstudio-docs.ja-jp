@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_localBasePointerRegisterId |Microsoft Docs'
+---
+description: スタック上のローカル変数を指す基本ポインターを保持するレジスタの ID を取得します。
+title: IDiaSymbol::get_localBasePointerRegisterId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 9cbcaf00-9ace-45e1-b164-7a9439e08083
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f9ad47a37c2d9306cc4f087719bfef7a52be308
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 779f88d2199819d9854d9678b9704e90782e3e32
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739882"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634253"
 ---
 # <a name="idiasymbolget_localbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
-スタック上のローカル変数への基本ポインターを保持するレジスタの ID を取得します。 [Symtagenum 列挙型](../../debugger/debug-interface-access/symtagenum.md)が `SymTagFunction` に設定されている場合は、を使用します。
+スタック上のローカル変数を指す基本ポインターを保持するレジスタの ID を取得します。 [SymTagEnum 列挙体](../../debugger/debug-interface-access/symtagenum.md)が `SymTagFunction` に設定されている場合に使用します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_localBasePointerRegisterId ( 
+HRESULT get_localBasePointerRegisterId ( 
    DWORD* pRetVal
 );
 ```
@@ -33,22 +34,22 @@ HRESULT get_localBasePointerRegisterId ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力スタック上のローカル変数への基本ポインターを保持するレジスタの ID を返します。
+[out] スタック上のローカル変数を指す基本ポインターを保持するレジスタの ID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティがシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackWalkFrame:: searchForReturnAddress |Microsoft Docs'
+description: IDiaStackWalkFrame::searchForReturnAddress では、指定されたスタック フレーム内で最も近い関数のリターン アドレスを検索します。
+title: IDiaStackWalkFrame::searchForReturnAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 1a54c50d-94af-4a43-ac4e-d80c5df156c3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f1060d5ffce3abc8596b896ef227f72993219f57
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 3fa964f5b91185b75d9d10f1be225084cb9253da
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741462"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634784"
 ---
 # <a name="idiastackwalkframesearchforreturnaddress"></a>IDiaStackWalkFrame::searchForReturnAddress
-指定したスタックフレーム内で、最も近い関数の戻り先アドレスを検索します。
+指定されたスタック フレーム内で、最も近い関数のリターン アドレスを検索します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT searchForReturnAddress ( 
+HRESULT searchForReturnAddress ( 
    IDiaFrameData* frame,
    ULONGLONG*     returnAddress
 );
@@ -34,14 +35,14 @@ HRESULT searchForReturnAddress ( 
 #### <a name="parameters"></a>パラメーター
  `frame`
 
-から現在のスタックフレームを表す[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)オブジェクト。
+[入力] 現在のスタック フレームを表す [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) オブジェクト。
 
  `returnAddress`
 
-入出力最も近い関数の戻り先アドレスを返します。
+[出力] 最も近い関数のリターン アドレスを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

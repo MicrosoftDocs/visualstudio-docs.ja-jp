@@ -1,6 +1,6 @@
 ---
-title: ツールウィンドウへの検索の追加 |Microsoft Docs
-description: 検索ボックス、フィルター処理、進行状況インジケーターなどの検索機能を Visual Studio のツールウィンドウに追加する方法について説明します。
+title: ツール ウィンドウへの検索の追加 |Microsoft Docs
+description: Visual Studio のツール ウィンドウに、検索ボックス、フィルター処理、進行状況インジケーターなどの検索機能を追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,49 +14,49 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: ca1998b5ca3ad78b269c50244ddf51796c9e4005
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106215527"
 ---
-# <a name="add-search-to-a-tool-window"></a>ツールウィンドウへの検索の追加
-拡張機能でツールウィンドウを作成または更新するときに、Visual Studio の他の場所に表示されるのと同じ検索機能を追加できます。 この機能には、次の機能があります。
+# <a name="add-search-to-a-tool-window"></a>ツール ウィンドウへの検索の追加
+拡張機能でツール ウィンドウを作成または更新する際には、Visual Studio の他の場所に表示されるのと同じ検索機能を追加できます。 この機能には、次の機能が含まれます。
 
-- ツールバーのカスタム領域に常に配置されている検索ボックス。
+- ツールバーのカスタム領域に常に配置される検索ボックス。
 
-- 検索ボックス自体に重なっている進行状況インジケーター。
+- 検索ボックス自体に重ねて表示される進行状況インジケーター。
 
-- 各文字を入力するとすぐに結果を表示する機能 (クイック検索)、または **enter** キー (要求時に検索) を選択した後にのみ結果を表示する機能。
+- 各文字を入力するとすぐに結果が表示される機能 (クイック検索)、または **Enter** キーを押した後にのみ結果が表示される機能 (オンデマンド検索)。
 
 - 最近検索した用語を示す一覧。
 
 - 検索対象の特定のフィールドまたは要素によって検索をフィルター処理する機能。
 
-このチュートリアルでは、次のタスクを実行する方法について説明します。
+このチュートリアルでは、次のタスクを実行する方法を学習します。
 
-1. VSPackage プロジェクトを作成します。
+1. VSPackage プロジェクトを作成する。
 
-2. 読み取り専用のテキストボックスを持つ UserControl を含むツールウィンドウを作成します。
+2. 読み取り専用の TextBox を使った UserControl が含まれるツール ウィンドウを作成する。
 
-3. ツールウィンドウに検索ボックスを追加します。
+3. ツール ウィンドウに検索ボックスを追加する。
 
-4. 検索の実装を追加します。
+4. 検索の実装を追加する。
 
-5. クイック検索を有効にし、進行状況バーを表示します。
+5. クイック検索を有効にし、進行状況バーを表示する。
 
-6. [ **大文字と小文字を区別** する] オプションを追加します。
+6. **[大文字と小文字を区別する]** オプションを追加する。
 
-7. [ **偶数行のみを検索** するフィルターを追加します。
+7. **[偶数行のみを検索する]** フィルターを追加する。
 
 ## <a name="to-create-a-vsix-project"></a>VSIX プロジェクトを作成するには
 
-1. という名前の VSIX プロジェクトを、 `TestToolWindowSearch` **testsearch** という名前のツールウィンドウで作成します。 この操作について支援が必要な場合は、「 [ツールウィンドウを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)」を参照してください。
+1. **TestSearch** という名前のツール ウィンドウを使って、`TestToolWindowSearch` という名前の VSIX プロジェクトを作成します。 この作業の説明が必要な場合は、「[ツール ウィンドウでの拡張機能の作成](../extensibility/creating-an-extension-with-a-tool-window.md)」を参照してください。
 
-## <a name="to-create-a-tool-window"></a>ツールウィンドウを作成するには
+## <a name="to-create-a-tool-window"></a>ツール ウィンドウを作成するには
 
-1. プロジェクトで、 `TestToolWindowSearch` *Testsearchcontrol .xaml* ファイルを開きます。
+1. `TestToolWindowSearch` プロジェクトで、*TestSearchControl.xaml* ファイルを開きます。
 
-2. 既存の `<StackPanel>` ブロックを次のブロックに置き換えます。これにより、ツールウィンドウのに読み取り専用のが追加され <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.UserControl> ます。
+2. 既存の `<StackPanel>` ブロックを次のブロックに置き換えます。これにより、ツール ウィンドウの <xref:System.Windows.Controls.UserControl> に読み取り専用の <xref:System.Windows.Controls.TextBox> が追加されます。
 
     ```xaml
     <StackPanel Orientation="Vertical">
@@ -67,32 +67,32 @@ ms.locfileid: "106215527"
     </StackPanel>
     ```
 
-3. *Testsearchcontrol .xaml .cs* ファイルで、次の using ディレクティブを追加します。
+3. *TestSearchControl.xaml.cs* ファイルで、次の using ディレクティブを追加します。
 
     ```csharp
     using System.Text;
     ```
 
-4. メソッドを削除 `button1_Click()` します。
+4. `button1_Click()` メソッドを削除します。
 
-     **Testsearchcontrol** クラスに次のコードを追加します。
+     **TestSearchControl** クラスで、次のコードを追加します。
 
-     このコードは、 <xref:System.Windows.Controls.TextBox> **Searchresultstextbox** という名前のパブリックプロパティと、 **searchcontent** という名前のパブリック文字列プロパティを追加します。 コンストラクターでは、SearchResultsTextBox がテキストボックスに設定され、SearchContent は、改行で区切られた一連の文字列に初期化されます。 テキストボックスの内容は、文字列のセットにも初期化されます。
+     このコードにより、**SearchResultsTextBox** という名前のパブリック <xref:System.Windows.Controls.TextBox> プロパティと、**SearchContent** という名前のパブリック文字列プロパティが追加されます。 コンストラクターでは、SearchResultsTextBox がテキスト ボックスに設定され、SearchContent は、改行で区切られた一連の文字列に初期化されます。 テキスト ボックスの内容も、一連の文字列に初期化されます。
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/toolwindowsearch/cs/mycontrol.xaml.cs" id="Snippet1":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/toolwindowsearch/vb/mycontrol.xaml.vb" id="Snippet1":::
 
 5. プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスが表示されます。
 
-6. メニューバーで、[   >  **その他の Windows**  >  **testsearch** の表示] を選択します。
+6. メニュー バーで、 **[表示]**  >  **[その他のウィンドウ]**  >  **[TestSearch]** の順に選択します。
 
-     ツールウィンドウが表示されますが、検索コントロールはまだ表示されていません。
+     ツール ウィンドウが表示されますが、検索コントロールはまだ表示されません。
 
-## <a name="to-add-a-search-box-to-the-tool-window"></a>ツールウィンドウに検索ボックスを追加するには
+## <a name="to-add-a-search-box-to-the-tool-window"></a>ツール ウィンドウに検索ボックスを追加するには
 
-1. *Testsearch .cs* ファイルで、次のコードをクラスに追加します `TestSearch` 。 このコードは、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> get アクセサーがを返すようにプロパティをオーバーライドし `true` ます。
+1. *TestSearch.cs* ファイルで、`TestSearch` クラスに次のコードを追加します。 このコードにより、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> プロパティがオーバーライドされ、get アクセサーによって `true` が返されるようになります。
 
-     検索を有効にするには、プロパティをオーバーライドする必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> ます。 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane>クラスは <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> を実装し、検索を有効にしない既定の実装を提供します。
+     検索を有効にするには、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.SearchEnabled%2A> プロパティをオーバーライドする必要があります。 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> クラスでは <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch> が実装され、検索を有効にしない既定の実装が提供されます。
 
     ```csharp
     public override bool SearchEnabled
@@ -103,14 +103,14 @@ ms.locfileid: "106215527"
 
 2. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。
 
-3. Visual Studio の実験用インスタンスで、 **Testsearch** を開きます。
+3. Visual Studio の実験用インスタンスで、**TestSearch** を開きます。
 
-     ツールウィンドウの上部に **は、検索ウォーターマーク** と虫眼鏡アイコンが表示されます。 ただし、検索プロセスが実装されていないため、検索はまだ機能しません。
+     ツール ウィンドウの上部に検索コントロールが表示され、**Search** という透かしと虫眼鏡アイコンが表示されます。 ただし、検索プロセスが実装されていないため、検索はまだ機能しません。
 
 ## <a name="to-add-the-search-implementation"></a>検索の実装を追加するには
- 上の検索を有効にすると <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> 、前の手順と同様に、ツールウィンドウによって検索ホストが作成されます。 このホストは、常にバックグラウンドスレッドで実行される検索プロセスを設定および管理します。 クラスは検索 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> ホストの作成と検索の設定を管理するため、検索タスクを作成し、検索方法を指定するだけで済みます。 検索プロセスはバックグラウンドスレッドで実行され、ツールウィンドウコントロールの呼び出しは UI スレッド上で発生します。 そのため、コントロールを処理するときに行う呼び出しを管理するには、 [Threadhelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) メソッドを使用する必要があります。
+ <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> での検索を (前述の手順と同様の方法で) 有効にすると、ツール ウィンドウによって検索ホストが作成されます。 このホストにより、検索プロセスが設定および管理されます。これらのプロセスは、常にバックグラウンド スレッドで実行されます。 検索ホストの作成と検索の設定は <xref:Microsoft.VisualStudio.Shell.ToolWindowPane> クラスによって管理されるため、必要な操作は、検索タスクを作成し、検索メソッドを提供するだけです。 検索プロセスはバックグラウンド スレッドで実行され、ツール ウィンドウ コントロールの呼び出しは UI スレッド上で発生します。 そのため、コントロールを操作するうえで行う一切の呼び出しは、[ThreadHelper.Invoke*](https://msdn.microsoft.com/data/ee197798(v=vs.85)) メソッドを使って管理する必要があります。
 
-1. *Testsearch .cs* ファイルで、次のディレクティブを追加し `using` ます。
+1. *TestSearch.cs* ファイルで、次の `using` ディレクティブを追加します。
 
     ```csharp
     using System;
@@ -125,15 +125,15 @@ ms.locfileid: "106215527"
     using Microsoft.VisualStudio.Shell.Interop;
     ```
 
-2. クラスに `TestSearch` 次のコードを追加します。これにより、次のアクションが実行されます。
+2. `TestSearch` クラスで、次のコードを追加します。これにより、次のアクションが実行されます。
 
-    - メソッドをオーバーライドして <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> 検索タスクを作成します。
+    - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> メソッドをオーバーライドして検索タスクを作成する。
 
-    - メソッドをオーバーライドして、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> テキストボックスの状態を復元します。 このメソッドは、ユーザーが検索タスクをキャンセルしたときと、ユーザーがオプションやフィルターを設定または解除したときに呼び出されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A>とはどちらも <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> UI スレッドで呼び出されます。 したがって、 [Threadhelper. Invoke *](https://msdn.microsoft.com/data/ee197798(v=vs.85)) メソッドを使用してテキストボックスにアクセスする必要はありません。
+    - <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> メソッドをオーバーライドして、テキスト ボックスの状態を復元する。 このメソッドは、ユーザーが検索タスクをキャンセルしたときと、ユーザーがオプションやフィルターを設定または設定解除したときに呼び出されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.CreateSearch%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowSearch.ClearSearch%2A> はどちらも UI スレッドで呼び出されます。 したがって、[ThreadHelper.Invoke*](https://msdn.microsoft.com/data/ee197798(v=vs.85)) メソッドを使用してテキスト ボックスにアクセスする必要はありません。
 
-    - を継承するという名前のクラスを作成し `TestSearchTask` <xref:Microsoft.VisualStudio.Shell.VsSearchTask> ます。これにより、の既定の実装が提供され <xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask> ます。
+    - <xref:Microsoft.VisualStudio.Shell.VsSearchTask> を継承する、`TestSearchTask` という名前のクラスを作成する。これにより、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSearchTask> の既定の実装が提供されます。
 
-         では、 `TestSearchTask` コンストラクターは、ツールウィンドウを参照するプライベートフィールドを設定します。 検索メソッドを提供するには、 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> メソッドとメソッドをオーバーライドし <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> ます。 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A>メソッドは、検索プロセスを実装する場所です。 このプロセスでは、検索の実行、テキストボックスへの検索結果の表示、およびこのメソッドの基本クラスの実装を呼び出して、検索が完了したことを報告します。
+         `TestSearchTask` では、コンストラクターによって、ツール ウィンドウを参照するプライベート フィールドが設定されます。 検索メソッドを提供するには、<xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> メソッドと <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStopSearch%2A> メソッドをオーバーライドします。 <xref:Microsoft.VisualStudio.Shell.VsSearchTask.OnStartSearch%2A> メソッドは、検索プロセスを実装する場所です。 このプロセスでは、検索を実行し、テキスト ボックスに検索結果を表示し、このメソッドの基本クラスの実装を呼び出して、検索が完了したことを報告します。
 
     ```csharp
     public override IVsSearchTask CreateSearch(uint dwCookie, IVsSearchQuery pSearchQuery, IVsSearchCallback pSearchCallback)
@@ -234,14 +234,14 @@ ms.locfileid: "106215527"
 
     1. プロジェクトをリビルドし、デバッグを開始します。
 
-    2. Visual Studio の実験用インスタンスで、ツールウィンドウをもう一度開き、[検索] ウィンドウに検索テキストを入力して、 **Enter キー** を押します。
+    2. Visual Studio の実験用インスタンスで、ツール ウィンドウをもう一度開き、[検索] ウィンドウに検索テキストを入力して、**Enter キー** を押します。
 
          正しい結果が表示されます。
 
 ## <a name="to-customize-the-search-behavior"></a>検索動作をカスタマイズするには
- 検索設定を変更することで、検索コントロールの表示方法と検索方法にさまざまな変更を加えることができます。たとえば、透かし (検索ボックスに表示される既定のテキスト)、検索コントロールの最小および最大の幅、および進行状況バーを表示するかどうかを変更できます。 また、検索結果が表示される位置 (要求時またはクイック検索) と、最近検索した用語の一覧を表示するかどうかを変更することもできます。 設定の完全な一覧については、クラスを参照して <xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> ください。
+ 検索設定を変更することで、検索コントロールの表示方法と検索方法にさまざまな変更を加えることができます。たとえば、透かし (検索ボックスに表示される既定のテキスト)、検索コントロールの最小幅と最大幅、進行状況バーを表示するかどうかなどを変更できます。 また、検索結果が表示されるタイミング (オンデマンド検索かクイック検索か) や、最近検索した用語の一覧を表示するかどうかを変更することもできます。 すべての設定の一覧は、<xref:Microsoft.VisualStudio.PlatformUI.SearchSettingsDataSource> クラスで確認できます。
 
-1. * TestSearch .cs * ファイルで、次のコードをクラスに追加し `TestSearch` ます。 このコードは、オンデマンド検索ではなく、インスタント検索を有効にします (つまり、ユーザーは **ENTER キー** をクリックする必要はありません)。 このコードは、 `ProvideSearchSettings` 既定の設定を変更するために必要なクラスのメソッドをオーバーライドし `TestSearch` ます。
+1. \* TestSearch.cs* ファイルで、`TestSearch` クラスに次のコードを追加します。 このコードでは、オンデマンド検索ではなく、インスタント検索が有効になります (つまり、ユーザーが **ENTER キー** を押す必要はありません)。 このコードにより、`TestSearch` クラスの `ProvideSearchSettings` メソッドがオーバーライドされます。これは、既定の設定を変更するために必要です。
 
     ```csharp
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
@@ -253,9 +253,9 @@ ms.locfileid: "106215527"
 
 2. ソリューションをリビルドし、デバッガーを再起動して、新しい設定をテストします。
 
-     検索ボックスに文字を入力するたびに検索結果が表示されます。
+     検索ボックスに文字を入力するたびに、検索結果が表示されます。
 
-3. メソッドに `ProvideSearchSettings` 次の行を追加します。これにより、進行状況バーが表示されます。
+3. `ProvideSearchSettings` メソッドに次の行を追加します。これにより、進行状況バーの表示が有効になります。
 
     ```csharp
     public override void ProvideSearchSettings(IVsUIDataSource pSearchSettings)
@@ -269,13 +269,13 @@ ms.locfileid: "106215527"
     }
     ```
 
-     進行状況バーが表示されるようにするには、進行状況を報告する必要があります。 進行状況を報告するには、クラスのメソッドで次のコードをコメント解除し `OnStartSearch` `TestSearchTask` ます。
+     進行状況バーを表示させるには、進行状況を報告する必要があります。 進行状況を報告するには、`TestSearchTask` クラスの `OnStartSearch` メソッドで次のコードをコメント解除します。
 
     ```csharp
     SearchCallback.ReportProgress(this, progress++, (uint)contentArr.GetLength(0));
     ```
 
-4. 処理速度が低下して進行状況バーが表示されるようにするには、クラスのメソッドで次の行のコメントを解除し `OnStartSearch` `TestSearchTask` ます。
+4. 処理速度を落として進行状況バーが見えるようにするには、`TestSearchTask` クラスの `OnStartSearch` メソッドで次の行のコメントを解除します。
 
     ```csharp
     System.Threading.Thread.Sleep(100);
@@ -283,12 +283,12 @@ ms.locfileid: "106215527"
 
 5. ソリューションをリビルドし、デバッグを開始して、新しい設定をテストします。
 
-     検索を実行するたびに、進行状況バーが検索ウィンドウ ([検索] テキストボックスの下にある青い線) で表示されます。
+     検索を実行するたびに、進行状況バー ([検索] テキスト ボックスの下の青い線) が検索ウィンドウに表示されます。
 
-## <a name="to-enable-users-to-refine-their-searches"></a>ユーザーが検索を絞り込むことができるようにするには
- **大文字と小文字の区別** や **単語単位の一致** などのオプションを使用して、ユーザーが検索を絞り込むことができるようにすることができます。 オプションは、チェックボックスとして表示されるブール値、またはボタンとして表示されるコマンドです。 このチュートリアルでは、ブール型のオプションを作成します。
+## <a name="to-enable-users-to-refine-their-searches"></a>ユーザーが検索を絞り込めるようにするには
+ **[大文字と小文字を区別する]** や **[単語単位での検索]** などのオプションを使用して、ユーザーが検索を絞り込めるようにすることもできます。 オプションは、ブール値またはコマンドで提供できます。前者はチェック ボックスとして、後者はボタンとして表示されます。 このチュートリアルでは、ブール値によるオプションを作成します。
 
-1. *Testsearch .cs* ファイルで、次のコードをクラスに追加します `TestSearch` 。 このコードはメソッドをオーバーライドします `SearchOptionsEnum` 。これにより、検索実装は、指定されたオプションがオンかオフかを検出できます。 のコードでは、 `SearchOptionsEnum` case と列挙子を一致させるオプションが追加されて <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> います。 Case を一致させるオプションは、プロパティとしても使用でき `MatchCaseOption` ます。
+1. *TestSearch.cs* ファイルで、`TestSearch` クラスに次のコードを追加します。 このコードにより、`SearchOptionsEnum` メソッドがオーバーライドされます。これにより、指定されたオプションがオンかオフかを検索実装で検出できるようになります。 `SearchOptionsEnum` のコードでは、大文字と小文字を区別するオプションが <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumWindowSearchOptions> 列挙子に追加されています。 大文字と小文字を区別するオプションは、`MatchCaseOption` プロパティとして提供することもできます。
 
     ```csharp
     private IVsEnumWindowSearchOptions m_optionsEnum;
@@ -322,7 +322,7 @@ ms.locfileid: "106215527"
     }
     ```
 
-2. クラスで、メソッドの次の行をコメント解除し `TestSearchTask` `OnStartSearch` ます。
+2. `TestSearchTask` クラスで、`OnStartSearch` メソッドの次の行をコメント解除します。
 
     ```csharp
     matchCase = m_toolWindow.MatchCaseOption.Value;
@@ -332,16 +332,16 @@ ms.locfileid: "106215527"
 
     1. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。
 
-    2. ツールウィンドウで、テキストボックスの右側にある下向きの矢印をクリックします。
+    2. ツール ウィンドウで、テキスト ボックスの右側にある下向きの矢印をクリックします。
 
-         [ **大文字と小文字を区別** する] チェックボックスが表示されます。
+         **[Match case]\(大文字と小文字を区別する\)** チェック ボックスが表示されます。
 
-    3. [ **大文字と小文字を区別** する] チェックボックスをオンにし、いくつかの検索を実行します。
+    3. **[Match case]\(大文字と小文字を区別する\)** チェック ボックスをオンにし、いくつかの検索を実行します。
 
 ## <a name="to-add-a-search-filter"></a>検索フィルターを追加するには
- 検索対象のセットをユーザーが絞り込むことができる検索フィルターを追加できます。 たとえば、ファイルエクスプローラーで、最近変更された日付とファイル名拡張子を使用してファイルをフィルター処理できます。 このチュートリアルでは、偶数行に対してのみフィルターを追加します。 ユーザーがそのフィルターを選択すると、検索ホストによって、検索クエリに指定した文字列が追加されます。 検索メソッド内でこれらの文字列を識別し、それに応じて検索ターゲットをフィルター処理できます。
+ 検索フィルターを追加して、ユーザーが検索対象を絞り込めるようにすることができます。 たとえば、エクスプローラーで、直近の変更日とファイル名拡張子を使用してファイルをフィルター処理することもできます。 このチュートリアルでは、対象を偶数行のみに絞り込むフィルターを追加します。 このフィルターをユーザーが選択すると、指定された文字列が検索ホストによって検索クエリに追加されます。 その後、検索メソッド内でそれらの文字列を識別し、状況に応じて検索ターゲットをフィルター処理することができます。
 
-1. *Testsearch .cs* ファイルで、次のコードをクラスに追加します `TestSearch` 。 コードはを `SearchFiltersEnum` 追加することによってを実装し <xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> ます。これにより、検索結果をフィルター処理して、偶数行だけが表示されるようにします。
+1. *TestSearch.cs* ファイルで、`TestSearch` クラスに次のコードを追加します。 このコードでは、<xref:Microsoft.VisualStudio.PlatformUI.WindowSearchSimpleFilter> を追加することによって `SearchFiltersEnum` を実装します。これにより、検索結果がフィルター処理され、偶数行だけが表示されるようになります。
 
     ```csharp
     public override IVsEnumWindowSearchFilters SearchFiltersEnum
@@ -356,9 +356,9 @@ ms.locfileid: "106215527"
 
     ```
 
-     検索コントロールに検索フィルターが表示されるようになりました `Search even lines only` 。 ユーザーがフィルターを選択すると、文字列が `lines:"even"` 検索ボックスに表示されます。 他の検索条件は、フィルターと同時に表示できます。 検索文字列は、フィルターの前、フィルターの後、またはその両方に表示される場合があります。
+     これで、検索コントロールに検索フィルター `Search even lines only` が表示されるようになりました。 ユーザーがこのフィルターを選択すると、`lines:"even"` という文字列が検索ボックスに表示されます。 このフィルターと同時に、他の検索条件を表示することもできます。 検索文字列が表示される場所は、フィルターの前でも、フィルターの後でも、またはその両方でもかまいません。
 
-2. *Testsearch .cs* ファイルで、クラスのクラスに次のメソッドを追加します。 `TestSearchTask` `TestSearch` これらのメソッドは、 `OnStartSearch` 次の手順で変更するメソッドをサポートしています。
+2. *TestSearch.cs* ファイルで、`TestSearchTask` クラス (`TestSearch` クラス内にあります) に、次のメソッドを追加します。 これらのメソッドは、次の手順で変更する `OnStartSearch` メソッドをサポートしています。
 
     ```csharp
     private string RemoveFromString(string origString, string stringToRemove)
@@ -386,7 +386,7 @@ ms.locfileid: "106215527"
     }
     ```
 
-3. クラスで、 `TestSearchTask` 次のコードを使用してメソッドを更新し `OnStartSearch` ます。 この変更により、フィルターをサポートするようにコードが更新されます。
+3. `TestSearchTask` クラスで、`OnStartSearch` メソッドを次のコードで更新します。 この変更により、コードがフィルターをサポートするように更新されます。
 
     ```csharp
     protected override void OnStartSearch()
@@ -467,30 +467,30 @@ ms.locfileid: "106215527"
 
 4. コードをテストします。
 
-5. プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスで、ツールウィンドウを開き、検索コントロールの下矢印をクリックします。
+5. プロジェクトをビルドし、デバッグを開始します。 Visual Studio の実験用インスタンスで、ツール ウィンドウを開き、検索コントロールの下矢印をクリックします。
 
-     [ **大文字と小文字を区別** する] チェックボックスと [ **偶数行のみ検索** ] フィルターが表示されます。
+     **[Match case]\(大文字と小文字を区別する\)** チェック ボックスと **[Search even lines only]\(偶数行のみを検索する\)** フィルターが表示されます。
 
 6. フィルターを選択します。
 
-     検索ボックスには、 **"偶数"** という行が含まれ、次の結果が表示されます。
+     検索ボックスに **lines:"even"** が含められ、次の結果が表示されます。
 
-     2つ良好
+     2 good
 
-     4良好
+     4 Good
 
-     6.
+     6 Goodbye
 
-7. `lines:"even"`検索ボックスからを削除し、[**大文字と小文字を区別** する] チェックボックスをオンにして、検索ボックスに「」と入力し `g` ます。
+7. 検索ボックスから `lines:"even"` を削除し、 **[Match case]\(大文字と小文字を区別する\)** チェック ボックスをオンにして、検索ボックスに「`g`」と入力します。
 
      次の結果が表示されます。
 
-     1つ進む
+     1 go
 
-     2つ良好
+     2 good
 
-     5.
+     5 goodbye
 
-8. 検索ボックスの右側にある [X] を選択します。
+8. 検索ボックスの右側にある [X] をクリックします。
 
-     検索はクリアされ、元のコンテンツが表示されます。 ただし、[ **大文字と小文字を区別** する] チェックボックスはオンのままです。
+     検索がクリアされ、元のコンテンツが表示されます。 ただし、 **[Match case]\(大文字と小文字を区別する\)** チェック ボックスはオンのままになります。

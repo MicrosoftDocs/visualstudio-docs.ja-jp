@@ -1,6 +1,6 @@
 ---
-description: 特定の例外をデバッグエンジン (DE) でどのように処理するかを指定します。
-title: 'IDebugEngine2:: SetException |Microsoft Docs'
+description: 特定の例外をデバッグ エンジン (DE) で処理する方法を指定します。
+title: IDebugEngine2::SetException | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3a327620ed9eddbba71f84c9950185f7987e8a79
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087913"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
-特定の例外をデバッグエンジン (DE) でどのように処理するかを指定します。
+特定の例外をデバッグ エンジン (DE) で処理する方法を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int SetException(
 
 ## <a name="parameters"></a>パラメーター
 `pException`\
-から例外とそのデバッグ方法を説明する [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 構造体。
+[in] 例外と、そのデバッグ方法を示す [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 例外が発生した場合、初回の場合は例外を生成しないようにします。
+## <a name="remarks"></a>解説
+ DE に指示して、プログラムで初回または 2 回目の例外が生成されないようにすることも、例外が全く生成されないようにすることも可能です。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)

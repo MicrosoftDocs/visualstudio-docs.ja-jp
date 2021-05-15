@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_value |Microsoft Docs'
+---
+description: 定数の値を取得します。
+title: IDiaSymbol::get_value | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2e40174a-2a61-4e5f-bb32-9e0ceec2178a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0a0a2df1687d965437a8977eea649f77ea1ce4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 680ddd3dd90538e3e37991e890b61bc74220c8a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738931"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635224"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
 定数の値を取得します。
@@ -33,16 +34,16 @@ HRESULT get_value (
 #### <a name="parameters"></a>パラメーター
 `pRetVal`
 
-[入力、出力]定数の値を使用して入力される `VARIANT` オブジェクト。
+[入力、出力] 定数の値が入力される `VARIANT` オブジェクト。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
-このメソッドに渡す前に、指定されたバリアントを初期化する必要があります。 詳細については、例を参照してください。
+## <a name="remarks"></a>解説
+指定の VARIANT は、このメソッドに渡される前に初期化する必要があります。 詳細については、例を参照してください。
 
 ## <a name="example"></a>例
 

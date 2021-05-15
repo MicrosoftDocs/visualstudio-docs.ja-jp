@@ -1,6 +1,6 @@
 ---
-title: プロパティが2回表示されます
-description: 関連付けを作成できません-プロパティが2回表示されています。 この Visual Studio オブジェクトリレーショナルデザイナー (O/R デザイナー) メッセージに関する情報を表示します。
+title: プロパティが 2 回リストされる
+description: 関連付けを作成できません - プロパティが 2 回リストされています この Visual Studio オブジェクト リレーショナル デザイナー (O/R デザイナー) メッセージに関する情報を表示してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -13,14 +13,14 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 4466515f390db2ac3c03d302fd6ffb8da3a6176f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867348"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>関連付け &lt;関連付けの名前&gt; を作成できません - プロパティが 2 回リストされています
 
-関連付けを作成できません \<association name> 。 同じプロパティが複数回表示されて \<property name> います:。
+関連付け \<association name> を作成できません。 同じプロパティが複数、リストされています: \<property name>。
 
 関連付けは、**[関連付けエディター]** ダイアログ ボックスで選択された **[関連付けのプロパティ]** によって定義されます。 プロパティは、関連付けのクラスごとに 1 回のみリストできます。
 

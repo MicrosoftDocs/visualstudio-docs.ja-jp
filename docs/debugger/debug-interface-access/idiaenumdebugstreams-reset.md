@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumDebugStreams:: Reset |Microsoft Docs'
+description: デバッグ ストリームの列挙型シーケンスを先頭にリセットします。
+title: IDiaEnumDebugStreams::Reset | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: ee40989b-f754-4c10-80d3-7faa16f52ce3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 56bc5efdc7141b3364633fce07eff1ed251d6175
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 838b740b85992a5d703571f142116dbe427b2489
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744713"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635079"
 ---
 # <a name="idiaenumdebugstreamsreset"></a>IDiaEnumDebugStreams::Reset
-列挙シーケンスを先頭にリセットします。
+列挙型シーケンスを先頭にリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ HRESULT Reset ();
 ```
 
 ## <a name="return-value"></a>戻り値
- `S_OK`を返します。
+ `S_OK` を返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

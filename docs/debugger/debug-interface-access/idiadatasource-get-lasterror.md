@@ -1,7 +1,8 @@
 ---
-title: 'IDiaDataSource:: get_lastError |Microsoft Docs'
+description: 最後の読み込みエラーのファイル名を取得します。
+title: IDiaDataSource::get_lastError | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: cf08850b-8b75-4e8c-90bd-bd0214756f99
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 48595dda70560f555533a1857f73db4d7bd20a86
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7edce9a2af6c849371360526d617d20738973cba
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744974"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634986"
 ---
 # <a name="idiadatasourceget_lasterror"></a>IDiaDataSource::get_lastError
-前回の読み込みエラーのファイル名を取得します。
+最後の読み込みエラーのファイル名を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,12 +32,12 @@ HRESULT get_lastError (
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力最後の読み込みエラーに関連付けられた .pdb ファイル名を含む文字列を返します。
+[出力] 最後の読み込みエラーに関連付けられた .pdb ファイル名を含む文字列を返します。
 
 ## <a name="return-value"></a>戻り値
- 読み込み操作によって発生した最後のエラーコードを返します。 @No__t_1 パラメーターが `NULL` 場合は `E_INVALIDARG` を返します。
+ 読み込み操作によって発生した最後のエラー コードを返します。 `pRetVal` パラメーターが `NULL` の場合は、`E_INVALIDARG` を返します。
 
 ## <a name="example"></a>例
 

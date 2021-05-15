@@ -1,6 +1,6 @@
 ---
-title: '方法: プログラムによって文書にヘッダーとフッターを追加する'
-description: セクションの Headers プロパティとフッタープロパティを使用して、ドキュメント内のヘッダーおよびフッターにテキストを追加する方法について説明します。
+title: '方法: プログラムによって文書にヘッダーおよびフッターを追加する'
+description: Section の Headers プロパティおよび Footers プロパティを使用することで、文書のヘッダーおよびフッターにテキストを追加する方法について学習します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -20,12 +20,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 73844d19ef6bb85c623706ab0d359836e42a3b14
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828746"
 ---
-# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>方法: プログラムによって文書にヘッダーとフッターを追加する
+# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>方法: プログラムによって文書にヘッダーおよびフッターを追加する
   文書のヘッダーおよびフッターにテキストを追加するには、<xref:Microsoft.Office.Interop.Word.Section> の <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> プロパティおよび <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> プロパティを使用します。 文書の各セクションには、次の 3 つのヘッダーとフッターが含まれています。
 
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary>
@@ -73,6 +73,6 @@ ms.locfileid: "107828746"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet116":::
 
 ## <a name="see-also"></a>関連項目
-- [方法: プログラムによって新しいドキュメントを作成する](../vsto/how-to-programmatically-create-new-documents.md)
-- [方法: プログラムによって文書内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [方法: ドキュメント内の見つかった項目をプログラムによってループする](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+- [方法: プログラムによって新しい文書を作成する](../vsto/how-to-programmatically-create-new-documents.md)
+- [方法: プログラムによってドキュメント内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [方法: 文書で見つかった項目をプログラムによってループする](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)

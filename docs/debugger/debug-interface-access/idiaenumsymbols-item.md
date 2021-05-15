@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumSymbols:: Item |Microsoft Docs'
+description: インデックスを使ってシンボルを取得します。
+title: IDiaEnumSymbols::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2bd1ec04-e677-4e32-8e32-33334f1eed77
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 12766fe52f7f515b7ca411b17d58117e4e56cc9f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7d7223c19df1df3c73d976ede97a2fab98b7da91
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743949"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634455"
 ---
 # <a name="idiaenumsymbolsitem"></a>IDiaEnumSymbols::Item
 インデックスを使ってシンボルを取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72743949"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD        index,
    IDiaSymbol** symbol
 );
@@ -34,14 +35,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>パラメーター
  インデックス
 
-から取得する[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトのインデックス。 インデックスは 0 ~ `count`-1 の範囲にあり、`count` は[IDiaEnumSymbols:: get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)メソッドによって返されます。
+[in] 取得する [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトのインデックス。 インデックスの範囲は、0 から `count`-1 です。ここで、`count` は、[IDiaEnumSymbols::get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md) によって返されます。
 
- シンボル
+ 記号
 
-入出力目的のシンボルを表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[out] 目的のシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

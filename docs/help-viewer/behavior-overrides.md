@@ -1,6 +1,6 @@
 ---
 title: ヘルプ コンテンツ マネージャーのオーバーライド
-description: ヘルプコンテンツマネージャーのオーバーライドについて説明します。これにより、Visual Studio IDE のヘルプビューアーとヘルプ関連の機能の既定の動作が変更されます。
+description: Visual Studio IDE のヘルプ ビューアーとヘルプ関連機能の既定の動作を変更する、ヘルプ コンテンツ マネージャーのオーバーライドについて説明します。
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
@@ -11,7 +11,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: f9c9a950156f29bda68a134af2eb299b3431445f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944291"
@@ -22,11 +22,11 @@ Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既�
 
 ## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>.pkgdef ファイルを使用してヘルプ ビューアーの動作を制御する方法
 
-1. として最初の行を含む、 *pkgdef* ファイルを作成します `[$RootKey$\Help]` 。
+1. 最初の行に `[$RootKey$\Help]` として *.pkgdef* ファイルを作成します。
 
 2. 次の表で説明するレジストリ キー値のいずれかまたはすべてを別の行に追加します。例: `"UseOnlineHelp"=dword:00000001`
 
-3. ファイルを *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\<edition \> \Common7\IDE\CommonExtensions* にコピーします。
+3. ファイルを *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<エディション\>\Common7\IDE\CommonExtensions* にコピーします。
 
 4. 開発者コマンド プロンプトで `devenv /updateconfiguration` を実行します。
 
@@ -64,6 +64,6 @@ Visual Studio IDE のヘルプ ビューアーとヘルプ関連の機能の既�
 
 ## <a name="see-also"></a>関連項目
 
-- [ヘルプビューアーの管理者ガイド](../help-viewer/administrator-guide.md)
-- [ヘルプコンテンツマネージャーのコマンドライン引数](../help-viewer/command-line-arguments.md)
+- [ヘルプ ビューアーの管理者ガイド](../help-viewer/administrator-guide.md)
+- [ヘルプ コンテンツ マネージャーのコマンド ライン引数](../help-viewer/command-line-arguments.md)
 - [Microsoft ヘルプ ビューアー](../help-viewer/overview.md)

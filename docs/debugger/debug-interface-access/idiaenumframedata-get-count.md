@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumFrameData:: get_Count |Microsoft Docs'
+description: フレーム データ要素の数を取得します。
+title: IDiaEnumFrameData::get_Count | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,34 +10,34 @@ helpviewer_keywords:
 ms.assetid: 94374d27-e335-4e90-a442-233181ab8e58
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ec182918cccb42cf4d1c3cfdb3ae816aeef97a73
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 71f261525debc0459ff5dbce513603e2caa1f17e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744641"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635068"
 ---
 # <a name="idiaenumframedataget_count"></a>IDiaEnumFrameData::get_Count
-フレームデータ要素の数を取得します。
+フレーム データ要素の数を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_Count ( 
+HRESULT get_Count ( 
    LONG* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力フレームデータ要素の数を返します。
+[出力] フレーム データ要素の数を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

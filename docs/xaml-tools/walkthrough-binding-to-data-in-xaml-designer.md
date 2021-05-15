@@ -1,6 +1,6 @@
 ---
 title: XAML デザイナーでデータにバインドする
-description: アートボードとプロパティウィンドウを使用してデータバインディングプロパティを設定することにより、XAMl デザイナーでコントロールにデータをバインドする方法について説明します。
+description: アートボードと [プロパティ] ウィンドウを使用してデータ バインディング プロパティを設定することで XAMI デザイナーでコントロールにデータをバインドする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.author: tglee
 manager: jmartens
 ms.openlocfilehash: 6bf3bd24b4a232899c64f6c0ecd819b0fe0f83a1
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99961314"
@@ -93,7 +93,7 @@ XAML デザイナーで、アートボードと [プロパティ] ウィンド�
 
      ![[データ バインディングの作成] ダイアログ ボックス](../designers/media/xaml_create_data_binding.png)
 
-1. **F5** キーを押してアプリを実行します。
+1. **F5 キー** を押してアプリを実行します。
 
      `TextBlock` コントロールにより、既定値の 0 がテキストとして表示されます。
 

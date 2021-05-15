@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによってワークシートを印刷する'
-description: Visual Studio を使用して、Microsoft Excel ブックの任意のワークシートをプログラムで印刷する方法について説明します。
+description: Visual Studio を使用して、Microsoft Excel ブック内の任意のワークシートをプログラムで印刷する方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 129493f726967776aa669eb92f6e912ed9c1b11b
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107827150"
@@ -29,7 +29,7 @@ ms.locfileid: "107827150"
 
 [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="print-a-worksheet-in-a-document-level-customization"></a>ドキュメントレベルのカスタマイズでワークシートを印刷する
+## <a name="print-a-worksheet-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズでワークシートを印刷する
 
 ### <a name="to-print-a-worksheet"></a>ワークシートを印刷するには
 
@@ -38,7 +38,7 @@ ms.locfileid: "107827150"
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet22":::
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet22":::
 
-   <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A>メソッドを使用すると、指定したオブジェクトを [**印刷プレビュー** ] ウィンドウに表示できます。 次のコードでは、`Sheet1` という名前の <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目があることを前提としています。
+   <xref:Microsoft.Office.Tools.Excel.Worksheet.PrintPreview%2A> メソッドを使用すると、指定されたオブジェクトを **[印刷プレビュー]** ウィンドウに表示できます。 次のコードでは、`Sheet1` という名前の <xref:Microsoft.Office.Tools.Excel.Worksheet> ホスト項目があることを前提としています。
 
 ### <a name="to-preview-a-page-before-printing"></a>印刷する前にページをプレビューするには
 
@@ -56,7 +56,7 @@ ms.locfileid: "107827150"
     :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs" id="Snippet14":::
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb" id="Snippet14":::
 
-   <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A>メソッドを使用すると、指定したオブジェクトを [**印刷プレビュー** ] ウィンドウに表示できます。
+   <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> メソッドを使用すると、指定されたオブジェクトを **[印刷プレビュー]** ウィンドウに表示できます。
 
 ### <a name="to-preview-a-page-before-printing"></a>印刷する前にページをプレビューするには
 
@@ -68,7 +68,7 @@ ms.locfileid: "107827150"
 ## <a name="see-also"></a>関連項目
 
 - [ワークシートを操作する](../vsto/working-with-worksheets.md)
-- [方法: プログラムによってワークシートでスペルチェックを行う](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
-- [ワークシートホスト項目](../vsto/worksheet-host-item.md)
-- [Office プロジェクト内のオブジェクトへのグローバルアクセス](../vsto/global-access-to-objects-in-office-projects.md)
+- [方法: プログラムを使用してワークシートでスペル チェックを行う](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
+- [ワークシート ホスト項目](../vsto/worksheet-host-item.md)
+- [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)
 - [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)

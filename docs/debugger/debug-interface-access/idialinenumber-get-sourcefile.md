@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLineNumber:: get_sourceFile |Microsoft Docs'
+description: ソース ファイルへの参照を取得します。
+title: IDiaLineNumber::get_sourceFile | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 86fc4411-375e-4b99-8f96-4da2c3f68190
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f0041ef4d83003d1b42e0c95b1412262d08458c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 56a2456bb5071502faf3b79f494b0b0f30cde40e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743160"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634873"
 ---
 # <a name="idialinenumberget_sourcefile"></a>IDiaLineNumber::get_sourceFile
-ソースファイルへの参照を取得します。
+ソース ファイルへの参照を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_sourceFile ( 
+HRESULT get_sourceFile ( 
    IDiaSourceFile** pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_sourceFile ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ソースファイルを表す[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)オブジェクトを返します。
+[入力] ソース ファイルを表す [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。

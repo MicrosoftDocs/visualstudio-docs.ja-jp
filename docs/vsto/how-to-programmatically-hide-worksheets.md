@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによってワークシートを非表示にする'
-description: ワークシートホスト項目を使用して Microsoft Excel ブックのワークシートをプログラムで表示または非表示にする方法について説明します。
+description: ワークシート ホスト項目を使用して、Microsoft Excel ブック内のワークシートをプログラムで表示または非表示にする方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.workload:
 - office
 ms.openlocfilehash: b859ea468db86d57347553f9fd10b44fea99026b
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826474"
@@ -27,7 +27,7 @@ ms.locfileid: "107826474"
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="use-the-worksheet-host-item"></a>ワークシートのホスト項目を使用する
+## <a name="use-the-worksheet-host-item"></a>ワークシート ホスト項目を使用する
  デザイン時にドキュメント レベルのカスタマイズでワークシートが追加された場合は、 <xref:Microsoft.Office.Tools.Excel.Worksheet.Visible%2A> プロパティを使用して特定のワークシートを非表示にします。
 
 ### <a name="to-hide-a-worksheet-using-a-worksheet-host-item"></a>Worksheet ホスト項目を使用してワークシートを非表示にするには
@@ -54,7 +54,7 @@ ms.locfileid: "107826474"
 ## <a name="see-also"></a>関連項目
 - [ワークシートを操作する](../vsto/working-with-worksheets.md)
 - [方法: プログラムによってブックからワークシートを削除する](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
-- [方法: プログラムによってブック内のワークシートを移動する](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
+- [方法: ブック内のワークシートをプログラムによって移動する](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
 - [方法: プログラムによってワークシートを保護する](../vsto/how-to-programmatically-protect-worksheets.md)
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
-- [Office プロジェクト内のオブジェクトへのグローバルアクセス](../vsto/global-access-to-objects-in-office-projects.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)

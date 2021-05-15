@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_liveRangeLength |Microsoft Docs'
+---
+description: ローカル シンボルが有効となるアドレス範囲の長さを返します。
+title: IDiaSymbol::get_liveRangeLength | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: ffcce3cc-085c-44eb-8145-46e3819c54f9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b663ef54959544764016fe59e4b0fb41607854b1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 44c4871915ca32dfde0b04d30ada8ce2721cb7de
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739930"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635248"
 ---
 # <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
-ローカルシンボルが有効なアドレス範囲の長さを返します。
+ローカル シンボルが有効となるアドレス範囲の長さを返します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_liveRangeLength ( 
+HRESULT get_liveRangeLength ( 
    ULONGLONG* length
 );
 ```
@@ -33,22 +34,22 @@ HRESULT get_liveRangeLength ( 
 #### <a name="parameters"></a>パラメーター
  `length`
 
-入出力アドレス範囲の長さを返します。
+[出力] アドレス範囲の長さを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 > [!NOTE]
-> 返されるエラーコードは、シンボルにライブ範囲情報が含まれていないことを意味します。
+> エラー コードが返された場合、シンボルに有効範囲の情報が含まれていないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
