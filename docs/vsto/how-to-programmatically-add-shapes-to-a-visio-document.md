@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって Visio 図面に図形を追加する'
-description: ステンシルからマスターを取得し、アクティブなページに図形をドロップして、Microsoft Office Visio 図面に図形を追加する方法について説明します。
+description: ステンシルからマスターを取得し、図形をアクティブ ページにドロップすることで、Microsoft Office Visio 図面に図形を追加する方法について学習します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: f5eabd18ac915e6cc10ff05de3d13d0263fa1eee
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828411"
@@ -28,7 +28,7 @@ ms.locfileid: "107828411"
 
  詳しくは、 [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) メソッド、 [Microsoft.Office.Interop.Visio.Application.ActivePage](/office/vba/api/Visio.Application.ActivePage) プロパティ、 [Microsoft.Office.Interop.Visio.Page.Drop](/office/vba/api/Visio.Page.Drop) メソッドの VBA リファレンス ドキュメントをご覧ください。
 
-## <a name="add-shapes-to-a-visio-document"></a>Visio 図面への図形の追加
+## <a name="add-shapes-to-a-visio-document"></a>Visio 図面に図形を追加する
 
 ### <a name="to-add-shapes-to-a-visio-document"></a>Visio 図面に図形を追加するには
 
@@ -41,6 +41,6 @@ ms.locfileid: "107828411"
 
 ## <a name="see-also"></a>関連項目
 - [Visio ソリューション](../vsto/visio-solutions.md)
-- [Visio オブジェクトモデルの概要](../vsto/visio-object-model-overview.md)
+- [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)
 - [Visio 図形を操作する](../vsto/working-with-visio-shapes.md)
 - [方法: Visio 図面の図形をプログラムによってコピーして貼り付ける](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)

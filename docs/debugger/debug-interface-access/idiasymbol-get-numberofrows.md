@@ -1,24 +1,25 @@
-﻿---
-title: 'IDiaSymbol:: get_numberOfRows |Microsoft Docs'
+---
+description: マトリックス内の行の数を取得します。
+title: IDiaSymbol::get_numberOfRows | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: cf3eb110-d07f-4995-b68b-08290aa67d6f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 257a667d8c2347394abaaa3282b37201d443ed97
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 5d597b7a6089f07a1a7233fc780398358c2ad7d4
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739646"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635119"
 ---
 # <a name="idiasymbolget_numberofrows"></a>IDiaSymbol::get_numberOfRows
-行列内の行の数を取得します。
+マトリックス内の行の数を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,10 +31,10 @@ HRESULT get_numberOfRows(
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力行列内の行の数を保持する `DWORD` へのポインター。
+[out] マトリックス内の行の数を保持する `DWORD` へのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,6 +1,6 @@
 ---
-description: ポートで実行されている指定されたプロセスを取得します。
-title: 'IDebugPort2:: GetProcess |Microsoft Docs'
+description: ポート上で実行されている指定されたプロセスを取得します。
+title: IDebugPort2::GetProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b2ae7031a747ac31b2ec56b78de52dbc156973e5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087354"
 ---
 # <a name="idebugport2getprocess"></a>IDebugPort2::GetProcess
-ポートで実行されている指定されたプロセスを取得します。
+ポート上で実行されている指定されたプロセスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,15 +44,15 @@ int GetProcess(
 
 ## <a name="parameters"></a>パラメーター
 `ProcessId`\
-からプロセス識別子を指定する [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
+[in] プロセス識別子を指定する [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
 
 `ppProcess`\
-入出力プロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクトを返します。
+[out] 該当するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

@@ -1,6 +1,6 @@
 ---
 description: IDebugField オブジェクトから取得してユーザーに表示する情報の種類を表す有効な値を列挙します。
-title: DisplayKind |Microsoft Docs
+title: DisplayKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b8c474c9295ceedbdffd286e99975c375ea69fc4
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096032"
 ---
 # <a name="displaykind"></a>DisplayKind
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトから取得してユーザーに表示する情報の種類を表す有効な値を列挙します。
+[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトから取得してユーザーに表示する情報の種類を表す有効な値を列挙します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_DisplayKind
@@ -55,10 +55,10 @@ public enum enum_DisplayKind
 `DisplayKind_Type`\
 フィールドの種類。
 
-## <a name="requirements"></a>要件
-ヘッダー: Ee
+## <a name="requirements"></a>必要条件
+ヘッダー: Ee.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

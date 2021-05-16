@@ -1,6 +1,6 @@
 ---
 title: ヘルプ ビューアーの管理者ガイド
-description: Microsoft ヘルプビューアー管理者ガイドを参照してください。 インターネットからローカルヘルプコンテンツを展開するか、事前にインストールされたローカルヘルプコンテンツをクライアントコンピューターに展開します。
+description: Microsoft ヘルプ ビューアーの管理者ガイドをお読みください。 ローカルのヘルプ コンテンツをインターネットから展開するか、クライアント コンピューターに事前にインストールされているローカルのヘルプ コンテンツを展開します。
 ms.date: 11/01/2017
 ms.topic: conceptual
 ms.assetid: 4340c69f-b96b-4932-bb82-38b16a5ab149
@@ -11,7 +11,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: e52b03b01f53a8064dc6ec691f751c86266af6a4
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99944304"
@@ -20,7 +20,7 @@ ms.locfileid: "99944304"
 
 ヘルプ ビューアーを使用すると、インターネット アクセスの有無に関係なく、ネットワーク環境のローカル ヘルプのインストールを管理できます。 ローカル ヘルプ コンテンツは、コンピューターごとに構成されます。 既定では、ユーザーがローカル ヘルプのインストールを更新するには、そのユーザーに管理者権限が必要です。
 
-ネットワーク環境でクライアントがインターネットにアクセスできるようにする場合は、 **ヘルプコンテンツマネージャー** の実行可能ファイルを使用して、インターネットからローカルヘルプコンテンツを展開できます。 *HlpCtntMgr.exe* のコマンドライン構文の詳細については、「[ヘルプコンテンツマネージャーのコマンドライン引数](../help-viewer/command-line-arguments.md)」を参照してください。
+ご利用のネットワーク環境でクライアントがインターネットにアクセスできる場合、**ヘルプ コンテンツ マネージャー** の実行可能ファイルを利用し、インターネットからローカル ヘルプ コンテンツを配置できます。 *HlpCtntMgr.exe* のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../help-viewer/command-line-arguments.md)」を参照してください。
 
 コンテンツの作成、イントラネット サービスのエンドポイントの作成、類似した種類のアクティビティの詳細については、[ヘルプ ビューアー SDK](../extensibility/internals/microsoft-help-viewer-sdk.md) を参照してください。
 
@@ -36,13 +36,13 @@ ms.locfileid: "99944304"
 
 ## <a name="deploy-local-help-content-from-the-internet"></a>インターネットからローカル ヘルプ コンテンツを配置する
 
-**ヘルプ コンテンツ マネージャー** (*HlpCtntMgr.exe*) を利用し、インターネットからクライアント コンピューターにローカル ヘルプ コンテンツを配置できます。 次の構文を使用します。
+**ヘルプ コンテンツ マネージャー** (*HlpCtntMgr.exe*) を利用し、インターネットからクライアント コンピューターにローカル ヘルプ コンテンツを配置できます。 使用する構文は以下のとおりです。
 
 ```cmd
 \\%ProgramFiles(x86)%\Microsoft Help Viewer\v2.3\HlpCtntmgr.exe /operation \<*name*> /catalogname \<*catalog name*> /locale \<*locale*>
 ```
 
-*HlpCtntMgr.exe* のコマンドライン構文の詳細については、「[ヘルプコンテンツマネージャーのコマンドライン引数](../help-viewer/command-line-arguments.md)」を参照してください。
+*HlpCtntMgr.exe* のコマンド ライン構文の詳細については、「[ヘルプ コンテンツ マネージャーのコマンド ライン引数](../help-viewer/command-line-arguments.md)」を参照してください。
 
 要件:
 
@@ -60,7 +60,7 @@ ms.locfileid: "99944304"
 
 #### <a name="to-install-english-content-from-the-internet"></a>インターネットから英語のコンテンツをインストールするには
 
-1. [ **スタート** ] をクリックし、[ **実行**] を選択します。
+1. **[スタート]** を選択し、 **[ファイル名を指定して実行]** を選択します。
 
 2. 次のように入力します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "99944304"
 - インストール後にユーザーがローカル ヘルプ コンテンツを更新、追加、または削除するには、そのユーザーに管理者権限が必要です。
 
     > [!TIP]
-    > ユーザーに管理者権限がない場合は、ヘルプ ビューアーで **[コンテンツの管理]** タブを無効にすることをお勧めします。 詳細については、「 [ヘルプコンテンツマネージャーのオーバーライド](../help-viewer/behavior-overrides.md)」を参照してください。
+    > ユーザーに管理者権限がない場合は、ヘルプ ビューアーで **[コンテンツの管理]** タブを無効にすることをお勧めします。 詳細については、「[ヘルプ コンテンツ マネージャーのオーバーライド](../help-viewer/behavior-overrides.md)」を参照してください。
 
 注意事項:
 
@@ -99,7 +99,7 @@ ms.locfileid: "99944304"
 
 4. **[更新]** を選択し、アンインストールします。
 
-5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* を参照し、フォルダーにファイル *catalogType.xml* のみが含まれていることを確認します。
+5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* に移動し、フォルダーに *catalogType.xml* ファイルだけが含まれていることを確認します。
 
    前にインストールされた Visual Studio のローカル ヘルプ コンテンツをすべて削除したら、基本コンテンツ セットをダウンロードする準備が整いました。
 
@@ -115,7 +115,7 @@ ms.locfileid: "99944304"
 
 #### <a name="to-package-the-content"></a>コンテンツをパッケージ化するには
 
-1. 後の配置でコンテンツをコピーするフォルダーを作成します。 例: *\myserver\vshelp*。
+1. 後の配置でコンテンツをコピーするフォルダーを作成します。 たとえば、*C:\VSHelp* とします。
 
 2. 管理者のアクセス許可で *cmd.exe* を開きます。
 
@@ -131,7 +131,7 @@ ms.locfileid: "99944304"
 
 1. ネットワーク共有を作成し、その場所にヘルプ コンテンツをコピーします。
 
-     たとえば、 *\myserver\vshelp* の内容を *\\ \myserver\VSHelp* にコピーします。
+     たとえば、*C:\VSHelp* のコンテンツを *\\\myserver\VSHelp* にコピーします。
 
 2. ヘルプ コンテンツの配置スクリプトを含める *.bat* ファイルを作成します。 クライアントがプッシュの一部として、削除されるファイルのいずれかに読み取りロックを設定している可能性があるため、更新をプッシュする前にクライアントをシャットダウンする必要があります。 次に例を示します。
 
@@ -141,11 +141,11 @@ ms.locfileid: "99944304"
     if ERRORLEVEL 1 ECHO *** ERROR COPYING Help Library files to ProgramData (%ERRORLEVEL%)
     ```
 
-3. ヘルプコンテンツをインストールするローカルコンピューターで *.bat* ファイルを実行します。
+3. ヘルプ コンテンツをインストールするローカル コンピューターで *.bat* ファイルを実行します。
 
 ## <a name="see-also"></a>関連項目
 
-- [ヘルプコンテンツマネージャーのコマンドライン引数](../help-viewer/command-line-arguments.md)
-- [ヘルプコンテンツマネージャーのオーバーライド](../help-viewer/behavior-overrides.md)
+- [ヘルプ コンテンツ マネージャーのコマンド ライン引数](../help-viewer/command-line-arguments.md)
+- [ヘルプ コンテンツ マネージャーのオーバーライド](../help-viewer/behavior-overrides.md)
 - [Microsoft ヘルプ ビューアー](../help-viewer/overview.md)
 - [ヘルプ ビューアー SDK](../extensibility/internals/microsoft-help-viewer-sdk.md)

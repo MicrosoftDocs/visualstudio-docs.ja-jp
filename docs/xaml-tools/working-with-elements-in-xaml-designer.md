@@ -1,6 +1,6 @@
 ---
 title: XAML デザイナーでの要素の操作
-description: Visual Studio または Blend for Visual Studio の XAML デザイナーで要素を操作する方法について説明します。
+description: Visual Studio または Blend for Visual Studio で XAML デザイナーを使用して要素を操作する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 05/14/2018
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: tglee
 manager: jmartens
 ms.openlocfilehash: ef09f181176bbab961b0caa97ccfb9910c5a281d
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99961249"
@@ -109,7 +109,7 @@ XAML デザイナーの複数の要素をグループ化すると、新しいレ
 
 要素の特定のレイアウト プロパティを既定値に戻すには、レイアウトのリセットのコマンドを使用します。 このコマンドを使用すると、要素の余白、配置、幅、高さ、およびサイズを、個別に、またはまとめてリセットできます。
 
-要素のレイアウトをリセットするには、[ドキュメントアウトライン] ウィンドウまたはアートボードで要素を右クリックし、[**レイアウト**]  >  **reset** *PropertyName* を選択します。ここで、 *PropertyName* はリセットするプロパティです (または、[**レイアウト** のリセット] を選択して  >  要素のすべてのレイアウトプロパティをリセットします)。
+要素のレイアウトをリセットするには、[ドキュメント アウトライン] ウィンドウまたはアートボードで要素を右クリックし、 **[レイアウト]** 、 **[リセット]** 、"*プロパティ名*" の順に選択します。"*プロパティ名*" は、リセットするプロパティです。あるいは、 **[レイアウト]** 、 **[すべてリセット]** の順に選択し、要素のすべてのレイアウト プロパティをリセットします。
 
 ## <a name="see-also"></a>関連項目
 

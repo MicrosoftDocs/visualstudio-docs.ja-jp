@@ -1,6 +1,6 @@
 ---
-title: ClickOnce アプリケーションのコードアクセスセキュリティ |Microsoft Docs
-description: ClickOnce アプリケーションのコードアクセスセキュリティについて、およびコードアクセスセキュリティのアクセス許可を構成する方法について説明します。
+title: ClickOnce アプリケーションのコード アクセス セキュリティ | Microsoft Docs
+description: ClickOnce アプリケーションのコード アクセス セキュリティと、コード アクセス セキュリティのアクセス許可を構成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -27,7 +27,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 4bf2977b3b6875a7dc38711b235f5848aa78559e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99889162"
@@ -52,13 +52,13 @@ ClickOnce アプリケーションは、.NET Framework に基づいており、�
 ## <a name="configure-security-permissions"></a>セキュリティのアクセス許可を構成する
  必ずコード アクセス セキュリティのアクセス許可を制限する適切なゾーンを要求するよう ClickOnce アプリケーションを構成する必要があります。 セキュリティのアクセス許可は、 **プロジェクト デザイナー** の **セキュリティ** ページで構成できます。
 
- **プロジェクト デザイナー** の **セキュリティ** ページには、 **[ClickOnce セキュリティ設定を有効にする]** チェック ボックスがあります。 このチェック ボッスクを選択すると、アプリケーションの配置マニフェストにセキュリティのアクセス許可要求が追加されます。 インストール時に、要求されたアクセス許可がアプリケーションの配置元ゾーンの既定のアクセス許可を超えると、ユーザーにはアクセス許可を付与するよう求るプロンプトが表示されます。 詳細については、「 [方法: ClickOnce のセキュリティ設定を有効](../deployment/how-to-enable-clickonce-security-settings.md)にする」を参照してください。
+ **プロジェクト デザイナー** の **セキュリティ** ページには、 **[ClickOnce セキュリティ設定を有効にする]** チェック ボックスがあります。 このチェック ボッスクを選択すると、アプリケーションの配置マニフェストにセキュリティのアクセス許可要求が追加されます。 インストール時に、要求されたアクセス許可がアプリケーションの配置元ゾーンの既定のアクセス許可を超えると、ユーザーにはアクセス許可を付与するよう求るプロンプトが表示されます。 詳しくは、「[方法: ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)」をご覧ください。
 
  異なる場所から配置されたアプリケーションには、プロンプトが表示されることなく異なるレベルのアクセス許可が付与されます。 たとえば、アプリケーションがインターネットから配置される場合は、一連のアクセス許可が高度に厳しく制限されます。 ローカル イントラネットからインストールされる場合には、より多くのアクセス許可が付与され、CD-ROM からインストールされる場合は、完全な信頼アクセス許可が与えられます。
 
- まず最初にアクセス許可を構成する手順として、 **セキュリティ** ページの **ゾーン** リストからセキュリティ ゾーンを選択します。 アプリケーションが複数のゾーンから配置される可能性がある場合には、最もアクセス許可の少ないゾーンを選択します。 詳細については、「 [方法: ClickOnce アプリケーションのセキュリティゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)」を参照してください。
+ まず最初にアクセス許可を構成する手順として、 **セキュリティ** ページの **ゾーン** リストからセキュリティ ゾーンを選択します。 アプリケーションが複数のゾーンから配置される可能性がある場合には、最もアクセス許可の少ないゾーンを選択します。 詳しくは、「[方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)」をご覧ください。
 
- 設定できるプロパティはアクセス許可設定によって異なります。すべてのアクセス許可設定に構成可能なプロパティがあるわけではありません。 アプリケーションが要求できるアクセス許可の全リストについては、 <xref:System.Security.Permissions>を参照してください。 カスタムゾーンのアクセス許可を設定する方法の詳細については、「 [方法: ClickOnce アプリケーションのカスタムアクセス許可を設定](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)する」を参照してください。
+ 設定できるプロパティはアクセス許可設定によって異なります。すべてのアクセス許可設定に構成可能なプロパティがあるわけではありません。 アプリケーションが要求できるアクセス許可の全リストについては、 <xref:System.Security.Permissions>を参照してください。 カスタムのゾーンのアクセス許可を設定する方法の詳細については、「[方法: ClickOnce アプリケーションのカスタムアクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)」を参照してください。
 
 ## <a name="debug-an-application-that-has-restricted-permissions"></a>アクセス許可が制限されているアプリケーションをデバッグする
  開発者の場合、完全な信頼アクセス許可で開発コンピュータを実行しがちです。 そのため、開発者がアプリケーションのデバッグを行う際には、ユーザーが制限されたアクセス許可でアプリケーションを実行する際に表示されるセキュリティ例外と同じものは表示されません。
@@ -95,8 +95,8 @@ ClickOnce アプリケーションは、.NET Framework に基づいており、�
 ## <a name="see-also"></a>関連項目
 - [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)
 - [方法: ClickOnce のセキュリティ設定を有効にする](../deployment/how-to-enable-clickonce-security-settings.md)
-- [方法: ClickOnce アプリケーションのセキュリティゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [方法: ClickOnce アプリケーションのカスタムアクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションのセキュリティ ゾーンを設定する](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションのカスタム アクセス許可を設定する](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
 - [方法: アクセス許可が制限された ClickOnce アプリケーションをデバッグする](securing-clickonce-applications.md)
 - [信頼されたアプリケーションの配置の概要](../deployment/trusted-application-deployment-overview.md)
 - [[セキュリティ] ページ (プロジェクト デザイナー)](../ide/reference/security-page-project-designer.md)

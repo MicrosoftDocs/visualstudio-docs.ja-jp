@@ -1,6 +1,6 @@
 ---
 description: バインド解除されたブレークポイントを取得します。
-title: 'IDebugBreakpointUnboundEvent2:: GetBreakpoint ポイント |Microsoft Docs'
+title: IDebugBreakpointUnboundEvent2::GetBreakpoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5e9b51efa96616b03ef529d5731cddc4893a7ca7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095733"
@@ -42,13 +42,13 @@ int GetBreakpoint(
 
 ## <a name="parameters"></a>パラメーター
 `ppBP`\
-入出力バインド解除されたブレークポイントを表す [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) オブジェクトを返します。
+[out] バインド解除されたブレークポイントを表す [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)インターフェイスを公開する **Cbreakpointunbounddebugeventbase** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) インターフェイスを公開する **CBreakpointUnboundDebugEventBase** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(
@@ -77,6 +77,6 @@ STDMETHODIMP CBreakpointUnboundDebugEventBase::GetBreakpoint(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

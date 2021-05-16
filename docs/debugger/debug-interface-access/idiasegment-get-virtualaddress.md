@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSegment:: get_virtualAddress |Microsoft Docs'
+description: セクションの先頭の仮想アドレス (VA) を取得します。
+title: IDiaSegment::get_virtualAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 30073dd0-c864-4c4a-8863-80f243419f6c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 94958fb51f6742bf07cc5a4cd34da059c05adc23
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1f1410a34bce0e9ca7705e61af98f71a154988ff
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742359"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634339"
 ---
 # <a name="idiasegmentget_virtualaddress"></a>IDiaSegment::get_virtualAddress
 セクションの先頭の仮想アドレス (VA) を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72742359"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_virtualAddress ( 
+HRESULT get_virtualAddress ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -33,7 +34,7 @@ HRESULT get_virtualAddress ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力セクションの先頭の VA を返します。
+[out] セクションの先頭の VA を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
