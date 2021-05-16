@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによってブック内の範囲にスタイルを適用する'
-description: ブック内の領域に名前付きスタイルを適用する方法について説明します。 Excel には、定義済みのスタイルがいくつか用意されています。
+description: ブック内の領域に名前付きスタイルを適用する方法について学習します。 Excel には、定義済みのスタイルがいくつか用意されています。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -19,7 +19,7 @@ ms.workload:
 - office
 ms.openlocfilehash: b1ce30c9a0e21bd4b8860f7a4d17191c48cd2ad9
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828307"
@@ -72,5 +72,5 @@ ms.locfileid: "107828307"
 ## <a name="see-also"></a>関連項目
 - [範囲の操作](../vsto/working-with-ranges.md)
 - [NamedRange コントロール](../vsto/namedrange-control.md)
-- [Office プロジェクト内のオブジェクトへのグローバルアクセス](../vsto/global-access-to-objects-in-office-projects.md)
+- [Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)
 - [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)

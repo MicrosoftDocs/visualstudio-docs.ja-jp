@@ -1,5 +1,5 @@
 ---
-title: 複数の構成を使用したクラウドサービスの構成
+title: 複数の構成でクラウド サービスを構成する
 description: ServiceDefinition.csdef、ServiceConfiguration.Local.cscfg および ServiceConfiguration.Cloud.cscfg ファイルを変更して、Azure クラウド サービス プロジェクトを構成する方法について説明します。
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -10,7 +10,7 @@ ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: b5b4a5bedd77855aa41c4bf5e565738fc8fb4f0e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844100"
@@ -19,7 +19,7 @@ ms.locfileid: "99844100"
 
 Visual Studio の Azure クラウド サービス プロジェクトには、`ServiceDefinition.csdef`、`ServiceConfiguration.Local.cscfg` および `ServiceConfiguration.Cloud.cscfg` の 3 つの構成ファイルが含まれています。
 
-- `ServiceDefinition.csdef` はクラウド サービスとそのロールの要件を説明し、すべてのインスタンスに適用される設定を提供するために Azure にデプロイされます。 設定は、実行時に Azure サービスホスティングランタイム API を使用して読み取ることができます。 クラウド サービスが停止しているときにのみ、このファイルを Azure 上で更新できます。
+- `ServiceDefinition.csdef` はクラウド サービスとそのロールの要件を説明し、すべてのインスタンスに適用される設定を提供するために Azure にデプロイされます。 設定は Azure サービス ホスト ランタイム API を使用して実行時に読み込むことができます。 クラウド サービスが停止しているときにのみ、このファイルを Azure 上で更新できます。
 - `ServiceConfiguration.Local.cscfg` および `ServiceConfiguration.Cloud.cscfg` は、定義ファイル内の設定の値を指定し、各ロールが実行するインスタンスの数を指定します。 "ローカル" ファイルにはローカルでのデバッグで使用される値が含まれています。"クラウド" ファイルは Azure に `ServiceConfiguration.cscfg` としてデプロイされ、サーバー環境の設定を指定します。 このファイルは、Azure でクラウド サービスを実行しているときに更新できます。
 
 構成設定の管理と変更は、Visual Studio の適用可能なロールのプロパティ ページを使用して行われます (ロールを右クリックして **[プロパティ]** を選択するか、ロールをダブルクリックします)。 **[サービス構成]** ボックスでどの構成が選択されても、変更は適用できます。 次のセクションで説明する点を除けば、Web ロールと worker ロールのプロパティはほぼ同じです。
@@ -38,13 +38,13 @@ Visual Studio の Azure クラウド サービス プロジェクトには、`Se
 
 **[インスタンス数]** プロパティに、このロールに対してサービスが実行するインスタンスの数を設定します。
 
-**[VM サイズ]** プロパティには、**[極小]**、**[小]**、**[中]**、**[大]**、**[特大]** のいずれかを設定します。  詳細については、「 [Cloud Services のサイズ](/azure/cloud-services/cloud-services-sizes-specs)」を参照してください。
+**[VM サイズ]** プロパティには、**[極小]**、**[小]**、**[中]**、**[大]**、**[特大]** のいずれかを設定します。  詳細については、「[クラウド サービスのサイズを構成する](/azure/cloud-services/cloud-services-sizes-specs)」を参照してください。
 
 ### <a name="startup-action-web-role-only"></a>スタートアップ アクション (Web ロールのみ)
 
 このプロパティを設定して、デバッグの開始時に Visual Studio が HTTP エンドポイントと HTTPS エンドポイントのいずれか、または両方のエンドポイント用に Web ブラウザーを起動するように指定します。
 
-[ **Https エンドポイント** ] オプションは、ロールに対して https エンドポイントを既に定義している場合にのみ使用できます。 HTTPS エンドポイントは、 **[エンドポイント]** プロパティ ページで定義できます。
+**[HTTPS エンドポイント]** オプションは、ロールの HTTPS エンドポイントを既に定義している場合にのみ使用できます。 HTTPS エンドポイントは、 **[エンドポイント]** プロパティ ページで定義できます。
 
 HTTPS エンドポイントを既に追加している場合は、既定で [HTTPS エンドポイント] オプションが有効になり、Visual Studio はデバッグ開始時にこのエンドポイント用のブラウザーと HTTP エンドポイント用のブラウザーを起動します (どちらのスタート アップ オプションも有効であることが前提です)。
 
@@ -54,7 +54,7 @@ HTTPS エンドポイントを既に追加している場合は、既定で [HTT
 
 ## <a name="settings-page"></a>[設定] ページ
 
-**[設定]** ページで、名前と値のペアからなる設定を構成に追加できます。 ロールで実行されているコードは、 [Azure マネージライブラリ](/previous-versions/azure/dn602775(v=azure.11))によって提供されるクラス (具体的には [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) メソッド) を使用して、実行時に構成設定の値を読み取ることができます。
+**[設定]** ページで、名前と値のペアからなる設定を構成に追加できます。 ロール内でコードを実行すると、[Azure マネージド ライブラリ](/previous-versions/azure/dn602775(v=azure.11))で提供されるクラス (具体的には [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) メソッド) を使用して、実行時に構成設定の値を読み取ることができます。
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>ストレージ アカウントの接続文字列の構成
 
@@ -67,7 +67,7 @@ HTTPS エンドポイントを既に追加している場合は、既定で [HTT
 
 接続文字列を作成するには、**[設定の追加]** を選択し、**[型]** を "接続文字列" に設定します。
 
-新規または既存の接続文字列の場合は、[.. **.** ] を選択します。_ *Value** フィールドの右側にある _ を選択すると、[ **ストレージ接続文字列の作成** ] ダイアログボックスが開きます。
+新規または既存の接続文字列については、"*値*" フィールドの右側にある **[...]** を選択して **[ストレージ接続文字列の作成]** ダイアログを開きます。
 
 1. **[接続方法]** で **[サブスクリプション]** オプションを選択して、サブスクリプションからストレージ アカウントを選択します。 そうすると Visual Studio が、`.publishsettings` ファイルからストレージ アカウントの資格情報を自動的に取得します。
 1. **[手動で入力された資格情報]** を選択すると、Azure Portal の情報を使用してアカウント名とキーを直接指定できます。 アカウント キーをコピーするには:

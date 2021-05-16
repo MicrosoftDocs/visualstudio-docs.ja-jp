@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0853b807d3287eb584e76d9640ac98f930edb1a7
-ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
+ms.openlocfilehash: f8320c460faf7532887364693080d38c0ff6baa6
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "109666810"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99860517"
 ---
 # <a name="code-metrics---class-coupling"></a>コード メトリック - クラス結合
 
@@ -70,6 +70,8 @@ Microsoft のドキュメントによると、クラス結合では、"パラメ
 ![クラス結合規則](media/class-coupling-maintainability-area-rules.png)
 
 この規則では、クラス結合が過剰な場合に警告が表示されます。 詳細については、「[CA1506: クラス結合度を大きくしすぎないでください](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)」を参照してください。
+
+この規則の詳細については、コード分析に関するアーカイブされたブログ記事「[チェックイン ポリシーとしてのコード メトリック](/archive/blogs/codeanalysis/code-metrics-as-check-in-policy)」、および "*クラスの場合は 80、メソッドの場合は 30 を超えた時点で警告を表示*" というしきい値の説明を参照してください。  これらの値は異常に高いように見えますが、少なくとも極端な上限を示しています。 この警告が表示された場合、何か問題があることはほぼ間違いありません。
 
 ## <a name="citations"></a>引用
 

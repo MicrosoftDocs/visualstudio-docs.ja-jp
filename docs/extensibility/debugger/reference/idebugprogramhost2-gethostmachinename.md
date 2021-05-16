@@ -1,6 +1,6 @@
 ---
 description: このプログラムをホストしているプロセスが実行されているコンピューターの名前を取得します。
-title: 'IDebugProgramHost2:: GetHostMachineName |Microsoft Docs'
+title: IDebugProgramHost2::GetHostMachineName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5e81d0a371e79b54e49ebd1e9550b595678c80dd
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084000"
@@ -42,10 +42,10 @@ int GetHostMachineName(
 
 ## <a name="parameters"></a>パラメーター
 `pbstrHostMachineName`\
-入出力コンピューターの名前を返します。
+[out] コンピューターの名前を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

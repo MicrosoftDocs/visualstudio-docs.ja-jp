@@ -1,7 +1,8 @@
 ---
-title: 'IDiaFrameData:: get_systemExceptionHandling |Microsoft Docs'
+description: IDiaFrameData::get_systemExceptionHandling では、システム例外処理が有効かどうかを示すフラグを取得します。
+title: IDiaFrameData::get_systemExceptionHandling | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e8df1972-913c-446c-9779-775575b0caa9
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e73ed8ae4aacf739463b1c6ab1f8f30c51a7fb2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 130afc2a52f848749d7c46f643e1b552975e894c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743493"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634904"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 システム例外処理が有効かどうかを示すフラグを取得します。
@@ -25,23 +26,23 @@ ms.locfileid: "72743493"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_systemExceptionHandling ( 
+HRESULT get_systemExceptionHandling ( 
    BOOL* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
- の場合は、
+ pRetVal
 
-入出力システム例外処理が有効な場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] システム例外処理が有効な場合は、`TRUE` を返します。それ以外の場合は、`FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
  正常に終了した場合は、`S_OK` を返します。 このプロパティがサポートされていない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- システム例外処理は、構造化例外処理としてよく知られています。
+## <a name="remarks"></a>解説
+ システム例外処理は、構造化例外処理としてより一般的に知られています。
 
- C++例外処理が有効かどうかを判断するには、 [IDiaFrameData:: get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)メソッドを呼び出します。
+ C++ 例外処理が有効かどうかを判断するには、[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) メソッドを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

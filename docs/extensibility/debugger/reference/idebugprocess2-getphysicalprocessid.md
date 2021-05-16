@@ -1,6 +1,6 @@
 ---
-description: システムプロセス識別子を取得します。
-title: 'IDebugProcess2:: GetPhysicalProcessId |Microsoft Docs'
+description: システム プロセス識別子を取得します。
+title: IDebugProcess2::GetPhysicalProcessId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4ec1f2340b744efe5620bd2876c5dbe8539e786f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081816"
 ---
 # <a name="idebugprocess2getphysicalprocessid"></a>IDebugProcess2::GetPhysicalProcessId
-システムプロセス識別子を取得します。
+システム プロセス識別子を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetPhysicalProcessId(
 
 ## <a name="parameters"></a>パラメーター
 `pdwProcessId`\
-入出力システムプロセス識別子情報を格納する [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
+[out] システム プロセス識別子の情報が格納された [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

@@ -20,7 +20,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: f2685283d30c4c748bbf3f740b94b203f33520d6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092255"
@@ -44,15 +44,15 @@ int GetExpression(
 
 ## <a name="parameters"></a>パラメーター
 `ppExpr`\
-入出力解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) オブジェクトを返します。
+[out] 解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、 [Parsetext](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) メソッドの呼び出しで作成されたオブジェクトを返します。
+## <a name="remarks"></a>解説
+ このメソッドからは、[ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) メソッドの呼び出しで作成されたオブジェクトが返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)
