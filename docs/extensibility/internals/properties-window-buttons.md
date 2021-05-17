@@ -1,6 +1,6 @@
 ---
-title: プロパティウィンドウのボタン |Microsoft Docs
-description: プロパティウィンドウのツールバーに既定で表示されるボタンと、ボタンの実装について説明します。
+title: プロパティ ウィンドウのボタン | Microsoft Docs
+description: プロパティ ウィンドウのツールバーに既定で表示されるボタンと、それらのボタンの実装について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,29 +14,29 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 88eacbdbcc50dc843769cdcf4701ba1a2bfe895a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061070"
 ---
 # <a name="properties-window-buttons"></a>プロパティ ウィンドウのボタン
-開発言語と製品の種類によっては、[ **プロパティ** ] ウィンドウのツールバーに、既定で特定のボタンが表示されます。 どのような場合でも、[ **分類** 済み]、[ **アルファベット**]、[ **プロパティ**]、[ **プロパティページ** ] の各ボタンが表示されます。 Visual C# と Visual Basic では、[ **イベント** ] ボタンも表示されます。 特定の Visual C++ プロジェクトでは、[ **vc + + メッセージ** ] ボタンと [ **vc 上書き** ] ボタンが表示されます。 他のプロジェクトの種類では、追加のボタンが表示される場合があります。 [ **プロパティ** ] ウィンドウのボタンの詳細については、「 [プロパティウィンドウ](../../ide/reference/properties-window.md)」を参照してください。
+開発言語や製品の種類に応じて、 **[プロパティ]** ウィンドウのツールバーには特定のボタンが既定で表示されます。 どの場合でも、 **[項目別]** 、 **[アルファベット順]** 、 **[プロパティ]** 、 **[プロパティ ページ]** ボタンが表示されます。 Visual C# と Visual Basic では、 **[イベント]** ボタンも表示されます。 特定の Visual C++ プロジェクトでは、 **[VC++ メッセージ]** および **[VC オーバーライド]** ボタンが表示されます。 他のプロジェクトの種類では、追加のボタンが表示される可能性があります。 **[プロパティ]** ウィンドウのボタンの詳細については、「[プロパティ ウィンドウ](../../ide/reference/properties-window.md)」を参照してください。
 
-## <a name="implementation-of-properties-window-buttons"></a>プロパティウィンドウボタンの実装
- [項目 **別** ] ボタンをクリックすると、Visual Studio は、 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> プロパティをカテゴリ別に並べ替えるためにフォーカスがあるオブジェクトのインターフェイスを呼び出します。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> は `IDispatch` 、[ **プロパティ** ] ウィンドウに表示されるオブジェクトに実装されます。
+## <a name="implementation-of-properties-window-buttons"></a>プロパティ ウィンドウのボタンの実装
+ **[項目別]** ボタンをクリックすると、Visual Studio では、フォーカスのあるオブジェクトの <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> インターフェイスを呼び出して、そのプロパティをカテゴリ別に並べ替えます。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> は、 **[プロパティ]** ウィンドウに表示される `IDispatch` オブジェクトに実装されます。
 
- 11個の定義済みプロパティカテゴリがあり、これらには負の値が含まれています。 カスタムカテゴリを定義することもできますが、定義済みのカテゴリと区別するために、正の値を割り当てることをお勧めします。
+ 定義済みのプロパティ カテゴリが 11 個あり、これらは負の値を持っています。 カスタム カテゴリを定義できますが、定義済みのカテゴリと区別するために、これには正の値を割り当てることをお勧めします。
 
- メソッドは、 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A> 指定されたプロパティの適切なプロパティカテゴリの値を返します。 メソッドは、 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A> カテゴリ名を含む文字列を返します。 Visual Studio では、標準のプロパティカテゴリの値が認識されるため、カスタムカテゴリ値のサポートのみを提供する必要があります。
+ <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.MapPropertyToCategory%2A> メソッドは、指定されたプロパティの適切なプロパティ カテゴリ値を返します。 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties.GetCategoryName%2A> メソッドは、カテゴリ名を含む文字列を返します。 標準のプロパティ カテゴリ値は Visual Studio によって認識されているため、ユーザーは、カスタム カテゴリ値のサポートを提供するだけで済みます。
 
- [ **アルファベット** 順] ボタンをクリックすると、プロパティは名前順にアルファベット順に表示されます。 名前は、ローカライズされた並べ替えアルゴリズムに従ってによって取得され `IDispatch` ます。
+ **[アルファベット順]** ボタンをクリックすると、プロパティが名前のアルファベット順に表示されます。 これらの名前は、ローカライズされた並べ替えアルゴリズムに従って `IDispatch` によって取得されます。
 
- [ **プロパティ** ] ウィンドウが開いている場合は、[ **プロパティ** ] ボタンが自動的に選択された状態で表示されます。 環境の他の部分では、同じボタンが表示され、クリックして [ **プロパティ** ] ウィンドウを表示できます。
+ **[プロパティ]** ウィンドウが開いているとき、 **[プロパティ]** ボタンは自動的に選択済みとして表示されます。 環境の他の部分にも同じボタンが表示されるため、それをクリックして **[プロパティ]** ウィンドウを表示できます。
 
- 選択したオブジェクトにが実装されていない場合、[ **プロパティページ** ] ボタンは使用できません `ISpecifyPropertyPages` 。 プロパティページには、通常はソリューションとプロジェクトに関連付けられている構成に依存するプロパティが表示されますが、プロジェクト項目に関連付けることもできます (たとえば、Visual C++)。
+ 選択されたオブジェクトに対して `ISpecifyPropertyPages` が実装されていない場合、 **[プロパティ ページ]** ボタンは使用できません。 プロパティ ページには、通常はソリューションやプロジェクトに関連付けられている、構成に依存するプロパティが表示されますが、これらのプロパティを (たとえば、Visual C++ の) プロジェクト項目に関連付けることもできます。
 
 > [!NOTE]
-> アンマネージコードを使用して、[ **プロパティ** ] ウィンドウにツールバーボタンを追加することはできません。 ツールバーボタンを追加するには、から派生するマネージオブジェクトを作成する必要があり <xref:System.Windows.Forms.Design.PropertyTab> ます。
+> アンマネージド コードを使用して **[プロパティ]** ウィンドウにツールバー ボタンを追加することはできません。 ツールバー ボタンを追加するには、<xref:System.Windows.Forms.Design.PropertyTab> から派生するマネージド オブジェクトを作成する必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [プロパティの拡張](../../extensibility/internals/extending-properties.md)

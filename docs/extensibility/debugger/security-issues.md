@@ -1,6 +1,6 @@
 ---
-title: セキュリティの問題 |Microsoft Docs
-description: リモートデバッグや他のサービスが関係する状況など、Visual Studio を使用してプログラムをデバッグするために必要なアクセス許可について説明します。
+title: セキュリティの問題 | Microsoft Docs
+description: リモート デバッグや、他のサービスが関係する状況など、Visual Studio を使用してプログラムをデバッグするために必要なアクセス許可について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,19 +15,19 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 1994a4a95d005edf4a71df3a1bb899522ecec137
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070428"
 ---
 # <a name="security-issues"></a>セキュリティの問題
-Visual Studio を使用してプログラムをデバッグするために必要なアクセス許可は、開発者がプログラムを実行するために必要とするものと同じです。 これには、ほとんどの状況でのリモートデバッグが含まれます。 インターネットインフォメーションサービスなど、他のサービスを含む状況によっては、より高いレベルの権限が必要になる場合があります。
+Visual Studio を使用してプログラムをデバッグするには、開発者がプログラムを実行する場合と同じアクセス許可が必要です。 これには、ほとんどの状況でのリモート デバッグが含まれます。 インターネット インフォメーション サービスなど、他のサービスが関係する状況の中には、より高いレベルの権限が必要なものがあります。
 
- Visual Studio の実行中、プロセスデバッグマネージャー (PDM) はローカルコンピューター上のデバッグプロセスを追跡します。 リモートデバッグを処理し、PDM を利用できるようにするために、開発者が *msvsmon.exe* と呼ばれるプログラムをリモートで起動します。 (*msvsmon.exe* はサービスではないため、そのコンピューターでリモートデバッグを有効にするには、手動で開始する必要があります。)Visual Studio (または *msvsmon.exe*) が実行されていない場合、デバッグのためにプロセスは追跡されません。
+ Visual Studio の実行中にプロセス デバッグ マネージャー (PDM) は、ローカル コンピューター上のデバッグ プロセスを追跡します。 リモートデバッグを処理し、PDM を使用できるようにするために開発者は、*msvsmon.exe* と呼ばれるプログラムをリモートで起動します (*msvsmon.exe* はサービスではないため、手動で起動して、そのコンピューターでリモート デバッグを有効にする必要があります)。Visual Studio (または *msvsmon.exe*) が実行されていない場合は、プロセスがデバッグのために追跡されません。
 
- 開発者は、特別なアクセス許可なしで開始したプログラムをデバッグできます。 開発者は、他のユーザーが同じセキュリティグループのメンバーである場合に、他のユーザーによって開始されたプロセスをデバッグすることもできます。 また、リモートデバッグを有効にするには、必要なファイルをリモートコンピューターにコピーして *msvsmon.exe* を開始するだけです。 詳細については、「[リモート デバッグ](../../debugger/remote-debugging.md)」を参照してください。
+ 開発者は、特別なアクセス許可なしで開始したプログラムをデバッグできます。 他のユーザーによって開始されたプロセスも、そのユーザーが、同じセキュリティ グループのメンバーである場合にはデバッグできます。 また、必要なファイルをリモート コンピューターにコピーして *msvsmon.exe* を開始するだけで、リモート デバッグを有効にすることができます。 詳細については、「[リモート デバッグ](../../debugger/remote-debugging.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [デバッグタスク](../../extensibility/debugger/debugging-tasks.md)
-- [プロセスデバッグマネージャー](../../extensibility/debugger/process-debug-manager.md)
+## <a name="see-also"></a>関連項目
+- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)
+- [プロセス デバッグ マネージャー](../../extensibility/debugger/process-debug-manager.md)
 - [リモート デバッグ](../../debugger/remote-debugging.md)

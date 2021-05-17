@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSourceFile:: get_checksum |Microsoft Docs'
+description: チェックサムのバイトを取得します。
+title: IDiaSourceFile::get_checksum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: aad63a7e-4e22-44e4-8a5b-81b5174ced1e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f4367a7862dabe248dfbe08e64c45598abe3679
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 8aac5b35c98b8bb5b11bc623a274949ee32d9229
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741847"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634296"
 ---
 # <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
-チェックサムのバイト数を取得します。
+チェックサムのバイトを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_checksum ( 
+HRESULT get_checksum ( 
    DWORD  cbData,
    DWORD* pcbData,
    BYTE   data[]
@@ -35,25 +36,25 @@ HRESULT get_checksum ( 
 #### <a name="parameters"></a>パラメーター
  `cbData`
 
-からデータバッファーのサイズ (バイト単位)。
+[入力] データ バッファーのサイズ (バイト単位)。
 
  `pcbData`
 
-入出力チェックサムのバイト数を返します。 このパラメーターを `NULL` とすることはできません。
+[出力] チェックサムのバイト数を返します。 このパラメーターを `NULL` とすることはできません。
 
  `data`
 
-[入力、出力]チェックサムのバイトを格納するバッファー。 このパラメーターが `NULL` 場合、`pcbData` は必要なバイト数を返します。
+[入力、出力] チェックサムのバイトを格納するバッファー。 このパラメーターが `NULL` の場合、`pcbData` は必要なバイト数を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- チェックサムバイトの生成に使用されたチェックサムアルゴリズムの種類を確認するには、 [IDiaSourceFile:: get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md)メソッドを呼び出します。
+## <a name="remarks"></a>解説
+ チェックサム バイトの生成に使用されたチェックサム アルゴリズムの種類を特定するには、[IDiaSourceFile::get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) メソッドを呼び出します。
 
- チェックサムは通常、ソースファイルのイメージから生成されるため、ソースファイルの変更はチェックサムバイトの変更に反映されます。 チェックサムのバイトが、ファイルの読み込み済みイメージから生成されたチェックサムと一致しない場合は、ファイルが破損しているか、改ざんされていると見なされます。
+ チェックサムは通常、ソース ファイルのイメージから生成されるため、ソース ファイルの変更はチェックサム バイトの変更に反映されます。 チェックサム バイトが、読み込まれたファイル イメージから生成されたチェックサムと一致しない場合は、ファイルが破損しているか、改ざんされていると見なす必要があります。
 
- 一般的なチェックサムは、サイズが32バイトを超えることはありませんが、がチェックサムの最大サイズであるとは限りません。 @No__t_0 パラメーターを `NULL` に設定して、チェックサムを取得するために必要なバイト数を取得します。 次に、適切なサイズのバッファーを割り当て、このメソッドを新しいバッファーでもう一度呼び出します。
+ 一般的なチェックサムでは、サイズが 32 バイトを超えることはありませんが、これがチェックサムの最大サイズであるとは限りません。 チェックサムの取得に必要なバイト数を取得するには、`data` パラメーターを `NULL` に設定します。 次に、適切なサイズのバッファーを割り当て、このメソッドを新しいバッファーでもう一度呼び出します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

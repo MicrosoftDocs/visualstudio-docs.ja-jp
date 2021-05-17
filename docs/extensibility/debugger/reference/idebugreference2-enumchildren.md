@@ -1,6 +1,6 @@
 ---
-description: 参照の選択された子のリストを取得します。
-title: 'IDebugReference2:: EnumChildren |Microsoft Docs'
+description: 参照の選択された子の一覧を取得します。
+title: IDebugReference2::EnumChildren | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 92f55f511a68cca6685579eeb6d686108bf70799
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071455"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
-参照の選択された子のリストを取得します。 将来使用するために予約されています。
+参照の選択された子の一覧を取得します。 将来使用するために予約されています。
 
 ## <a name="syntax"></a>構文
 
@@ -52,27 +52,27 @@ int EnumChildren (
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-から列挙された[DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)構造体に格納されるフィールドを指定する、 [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)列挙のフラグの組み合わせ。
+[入力] [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) 列挙型からのフラグの組み合わせ。列挙された [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 構造体のどのフィールドに格納されるかを指定します。
 
 `dwRadix`\
-から数値情報の書式設定に使用される基数。
+[入力] 数値情報の書式設定に使用される基数。
 
 `dwAttribFilter`\
-から列挙する構造を選択するためのパラメーターと組み合わせてフィルターとして使用される、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 列挙のフラグの組み合わせ `pszNameFilter` 。
+[入力] 列挙する構造体を選択するために `pszNameFilter` パラメーターと組み合わせてフィルターとして使用される、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 列挙型のフラグの組み合わせ。
 
 `pszNameFilter`\
-から `dwAttribFilter` 列挙する構造体を選択するためにパラメーターと組み合わせて使用される、"MyX" などのフィルターを指定する文字列。
+[入力] 列挙する構造体を選択するために `dwAttribFilter` パラメーターと組み合わせて使用される、"MyX" などのフィルターを指定する文字列。
 
 `dwTimeout`\
-からこのメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 `INFINITE`無期限に待機するには、を使用します。
+[入力] このメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 待機時間を指定しない場合は `INFINITE` を使用します。
 
 `ppEnum`\
-入出力要求された子プロパティのリストを格納している [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) オブジェクトを返します。
+[出力] 要求された子プロパティの一覧を含む [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
  常に `E_NOTIMPL` を返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)
 - [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md)
 - [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md)

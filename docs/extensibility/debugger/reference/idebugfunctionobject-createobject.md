@@ -1,6 +1,6 @@
 ---
 description: コンストラクターを使用してオブジェクトを作成します。
-title: 'IDebugFunctionObject:: CreateObject |Microsoft Docs'
+title: IDebugFunctionObject::CreateObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 27608634859ae96a8fb9461076397bb6df53570d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073561"
@@ -48,25 +48,25 @@ int CreateObject(
 
 ## <a name="parameters"></a>パラメーター
 `pConstructor`\
-から作成されるオブジェクトのコンストラクターを表す [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) オブジェクト。
+[入力] 作成されるオブジェクトのコンストラクターを表す [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) オブジェクト。
 
 `dwArgs`\
-から配列内のパラメーターの数 `pArg` 。 コンストラクターに渡されるパラメーターの数を表します。
+[入力] `pArg` 配列内のパラメーターの数。 コンストラクターに渡されるパラメーターの数を表します。
 
 `pArg`\
-からコンストラクターに渡されたパラメーターを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトの配列。
+[入力] コンストラクターに渡されるパラメーターを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトの配列。
 
 `ppObject`\
-入出力 `IDebugObject` 新しく作成されたオブジェクトを表すを返します。
+[出力] 新しく作成されたオブジェクトを表す `IDebugObject` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK が返されます。それ以外の場合は、エラー コードが返されます。
 
-## <a name="remarks"></a>注釈
- このメソッドを呼び出して、 [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) インターフェイスによって表される関数のパラメーターであるクラス (または、コンストラクターを必要とする他の複合型) のインスタンスを表すオブジェクトを作成します。
+## <a name="remarks"></a>解説
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) インターフェイスによって表される関数のパラメーターであるクラス (または、コンストラクターを必要とする他の複合型) のインスタンスを表すオブジェクトを作成するには、このメソッドを呼び出します。
 
- オブジェクトパラメーターがコンストラクターを必要としない場合は、 [Createobjectnoconstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) メソッドを呼び出します。
+ オブジェクト パラメーターでコンストラクターを必要としない場合は、[CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md) メソッドを呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)
 - [CreateObjectNoConstructor](../../../extensibility/debugger/reference/idebugfunctionobject-createobjectnoconstructor.md)

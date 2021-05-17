@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: findChildren |Microsoft Docs'
+description: 指定された親識別子の子で、名前とシンボルの種類に一致するものをすべて取得します。
+title: IDiaSession::findChildren | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 5d19046f-f668-4aa9-8788-95cda9a98997
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cca6778e5697c5f8821322c19d706d733d7f2b9f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ea45a427b00d7627eaba21bdd628f2cff2cefbf0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742298"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634333"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
-名前と記号の種類に一致する指定された親識別子のすべての子を取得します。
+指定された親識別子の子で、名前とシンボルの種類に一致するものをすべて取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findChildren ( 
+HRESULT findChildren ( 
    IDiaSymbol*       parent,
    SymTagEnum        symtag,
    LPCOLESTR         name,
@@ -37,29 +38,29 @@ HRESULT findChildren ( 
 #### <a name="parameters"></a>パラメーター
  `parent`
 
-から親を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。 この親シンボルが関数、モジュール、またはブロックの場合、その構文の子が `ppResult` に返されます。 親シンボルが型の場合は、その子クラスが返されます。 このパラメーターが `NULL` 場合、`symtag` は `SymTagExe` または `SymTagNull` に設定する必要があります。これにより、グローバルスコープ (.exe ファイル) が返されます。
+[入力] 親を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクト。 この親シンボルが関数、モジュール、またはブロックの場合、その構文上の子が `ppResult` で返されます。 親シンボルが型の場合は、そのクラスの子が返されます。 このパラメーターが `NULL` の場合は、`symtag` を `SymTagExe` または `SymTagNull` に設定する必要があります。これにより、グローバル スコープ (.exe ファイル) が返されます。
 
  `symtag`
 
-から取得する子のシンボルタグを指定します。 値は[Symtagenum](../../debugger/debug-interface-access/symtagenum.md)列挙型から取得されます。 すべての子を取得するには、を `SymTagNull` に設定します。
+[入力] 取得する子のシンボル タグを指定します。 値は、[SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の列挙体から取得されます。 すべての子を取得するには、`SymTagNull` に設定します。
 
  `name`
 
-から取得する子の名前を指定します。 すべての子を取得するには、を `NULL` に設定します。
+[入力] 取得する子の名前を指定します。 すべての子を取得するには、`NULL` に設定します。
 
  `compareFlags`
 
-から名前の一致に適用される比較オプションを指定します。 [Namesearchoptions 列挙](../../debugger/debug-interface-access/namesearchoptions.md)列挙の値は、単独で、または組み合わせて使用できます。
+[入力] 名前の照合に適用する比較オプションを指定します。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)の列挙体の値は、単独で使用することも、組み合わせて使用することもできます。
 
  `ppResult`
 
-入出力取得した子シンボルのリストを格納している[IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)オブジェクトを返します。
+[出力] 取得された子シンボルの一覧を含む [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
- 次の例では、`szVarName` 名前に一致する関数 `pFunc` のローカル変数を検索する方法を示します。
+ 次の例では、名前 `szVarName` に一致する関数 `pFunc` のローカル変数を検索する方法を示します。
 
 ```C++
 IDiaEnumSymbols* pEnum;

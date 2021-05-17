@@ -1,6 +1,6 @@
 ---
-title: ポート |Microsoft Docs
-description: この記事では、Visual Studio のデバッガーアーキテクチャにおけるポートの定義とロールについて説明します。
+title: ポート | Microsoft Docs
+description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるポートの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,27 +15,27 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: a9629a27931fad9e0a7f753caad1c21893700d42
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067778"
 ---
 # <a name="ports"></a>Port
-デバッガーアーキテクチャでは、 *ポート* は次のようになります。
+デバッガー アーキテクチャでは、"*ポート*" は次のようなものです。
 
-- は、サーバーで実行されている一連のプロセスのコンテナーです。 たとえば、ポートは、シリアルケーブルまたはネットワークに接続されていない非 DCOM マシンへの、Windows CE ベースのデバイスへの接続を表します。 ローカルポートと呼ばれる1つの特殊なポートには、ローカルコンピューター上で実行されているすべてのプロセスが含まれます。
+- サーバー上で実行されている一連のプロセスのコンテナー。 たとえば、ポートは、Windows CE ベースのデバイスへのシリアル ケーブル接続や、非 DCOM コンピューターへのネットワーク接続を表す場合があります。 ローカル ポートと呼ばれる 1 つの特殊なポートには、ローカル コンピューター上で実行されているすべてのプロセスが含まれます。
 
-- では、名前または識別子を使用して自身を識別できます。
+- 名前または識別子によって自分自身を識別できます。
 
-- では、ポートで実行されているすべてのプロセスを列挙し、それらのプロセスを起動して終了できます。
+- ポートで実行されているすべてのプロセスを列挙し、これらのプロセスを起動および終了することができます。
 
-- は、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)インターフェイスによって表されます。これは、 [Addport](../../extensibility/debugger/reference/idebugportsupplier2-addport.md)に[IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)引数を渡すことによって作成されます。
+- [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) 引数を [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) に渡して作成される [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) インターフェイスによって表されます。
 
-  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ネイティブとマネージの両方の Windows ベースのプロセスを処理する既定のポートを提供します。 Windows ベースではない外部デバイスとの接続には、カスタムポートを設定する必要があります。 このようなカスタムポートを指定するには、カスタムポート供給業者もセットアップする必要があります。
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、すべての Windows ベースのプロセス (ネイティブとマネージドの両方) を処理する既定のポートを提供します。 Windows ベースでない外部デバイスとの接続用には、カスタム ポートを設定する必要があります。 このようなカスタム ポートを指定するには、カスタム ポート サプライヤーも設定する必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)
-- [プロセス](../../extensibility/debugger/processes.md)
+- [処理](../../extensibility/debugger/processes.md)
 - [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)
 - [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md)

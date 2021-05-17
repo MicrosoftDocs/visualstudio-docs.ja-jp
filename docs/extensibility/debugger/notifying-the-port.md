@@ -1,6 +1,6 @@
 ---
-title: ポートへの通知 |Microsoft Docs
-description: プログラムを起動した後、ポートに通知する方法について説明します。 この記事には、詳細な説明が含まれています。
+title: ポートへの通知 | Microsoft Docs
+description: プログラムを起動した後でポートに通知する方法について説明します。 この記事には、詳しい説明が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 7793dddb1a6bdd448b2b5a912f59b625bdca733e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054752"
@@ -22,31 +22,31 @@ ms.locfileid: "105054752"
 # <a name="notify-the-port"></a>ポートに通知する
 プログラムを起動した後、次のようにポートに通知する必要があります。
 
-1. ポートは、新しいプログラムノードを受け取ると、デバッグセッションにプログラム作成イベントを送り返します。 このイベントには、プログラムを表すインターフェイスが含まれています。
+1. ポートでは、新しいプログラム ノードを受け取ったときに、デバッグ セッションにプログラム作成イベントを送り返します。 このイベントには、プログラムを表すインターフェイスが含まれています。
 
-2. デバッグセッションは、にアタッチできるデバッグエンジン (DE) の識別子をプログラムに対して照会します。
+2. デバッグ セッションでは、アタッチできるデバッグ エンジン (DE) の識別子をプログラムに対して照会します。
 
-3. デバッグセッションは、そのプログラムの使用可能な DEs の一覧に DE があるかどうかを確認します。 デバッグセッションでは、ソリューションのアクティブなプログラム設定からこのリストを取得します。この設定は、最初はデバッグパッケージによって渡されます。
+3. デバッグ セッションでは、そのプログラムで使用可能な DE のリストにその DE があるかどうかを確認します。 デバッグ セッションでは、最初にデバッグ パッケージによって渡されたソリューションのアクティブなプログラム設定から、このリストを取得します。
 
-    DE は許可リストに存在する必要があります。そうでない場合、DE はプログラムにアタッチされません。
+    この使用可能リストに DE が存在する必要があります。そうでない場合、DE はプログラムにアタッチされません。
 
-   プログラムによって、ポートが最初に新しいプログラムノードを受け取ると、プログラムを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスが作成されます。
-
-> [!NOTE]
-> これは、 `IDebugProgram2` 後でデバッグエンジン (DE) によって作成されたインターフェイスと混同しないようにしてください。
-
- ポートは、COM インターフェイスを介して [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) プログラム作成イベントをセッションデバッグマネージャー (SDM) に送り返し `IConnectionPoint` ます。
+   プログラムを使用して、ポートで最初に新しいプログラム ノードを受け取ると、そのプログラムを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスが作成されます。
 
 > [!NOTE]
-> これは、 `IDebugProgramCreateEvent2` 後で DE によって送信されるインターフェイスと混同しないようにしてください。
+> これを、後でデバッグ エンジン (DE) によって作成される `IDebugProgram2` インターフェイスと混同しないようにしてください。
 
- ポートは、イベントインターフェイス自体と共に、 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)、 [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)、および [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) の各インターフェイスを送信します。これらのインターフェイスは、それぞれポート、プロセス、およびプログラムを表します。 SDM は [IDebugProgram2:: GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) を呼び出して、プログラムをデバッグできる DE の GUID を取得します。 GUID はもともと、 [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスから取得されています。
+ ポートでは、COM の `IConnectionPoint` インターフェイスを介して [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) プログラム作成イベントをセッション デバッグ マネージャー (SDM) に送り返します。
 
- SDM は、DE が許可されている DEs の一覧にあるかどうかを確認します。 SDM は、ソリューションのアクティブなプログラム設定からこのリストを取得します。この設定は、最初はデバッグパッケージによって渡されます。 DE は許可リストに存在する必要があります。そうでない場合は、プログラムにアタッチされません。
+> [!NOTE]
+> これを、後で DE によって送信される `IDebugProgramCreateEvent2` インターフェイスと混同しないようにしてください。
 
- DE の id がわかったら、SDM はプログラムにアタッチする準備ができています。
+ ポートでは、イベント インターフェイス自体と共に、[IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)、[IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)、[IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスを送信します。これらは、それぞれポート、プロセス、プログラムを表します。 SDM では、[IDebugProgram2:: GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) を呼び出して、プログラムをデバッグできる DE の GUID を取得します。 この GUID は、最初に [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスから取得されています。
 
-## <a name="see-also"></a>こちらもご覧ください
+ SDM では、DE が使用可能な DE のリストにあるかどうかを確認します。 SDM では、最初にデバッグ パッケージによって渡されたソリューションのアクティブなプログラム設定から、このリストを取得します。 この使用可能リストに DE が存在する必要があります。そうでない場合、それはプログラムにアタッチされません。
+
+ DE の ID が判明すると、SDM でプログラムにアタッチする準備が完了します。
+
+## <a name="see-also"></a>関連項目
 - [プログラムの起動](../../extensibility/debugger/launching-a-program.md)
-- [起動後のアタッチ](../../extensibility/debugger/attaching-after-a-launch.md)
-- [デバッグタスク](../../extensibility/debugger/debugging-tasks.md)
+- [起動後にアタッチする](../../extensibility/debugger/attaching-after-a-launch.md)
+- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

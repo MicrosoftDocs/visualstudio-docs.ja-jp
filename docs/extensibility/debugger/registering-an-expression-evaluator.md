@@ -1,6 +1,6 @@
 ---
 title: 式エバリュエーターの登録 |Microsoft Docs
-description: 式エバリュエーターが、Windows COM 環境と Visual Studio の両方を備えたクラスファクトリとして自身を登録する方法について説明します。
+description: 式エバリュエーターが、Windows COM 環境と Visual Studio の両方を備えたクラス ファクトリとして自身を登録する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,25 +15,25 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3cf6998a9dd8bc521d8d5c7b8bd3e598e9a4e3bc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070649"
 ---
-# <a name="register-an-expression-evaluator"></a>式エバリュエーターの登録
+# <a name="register-an-expression-evaluator"></a>式エバリュエーターを登録する
 > [!IMPORTANT]
-> Visual Studio 2015 では、式エバリュエーターを実装するこの方法は非推奨とされます。 CLR 式エバリュエーターの実装の詳細については、「 [clr 式](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) エバリュエーターと [マネージ式エバリュエーターサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)」を参照してください。
+> Visual Studio 2015 では、この方法での式エバリュエーターの実装は非推奨です。 CLR 式エバリュエーターの実装については、[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)に関する記事と[マネージド式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)に関する記事をご覧ください。
 
- 式エバリュエーター (EE) は、それ自体を Windows COM 環境と Visual Studio の両方を備えたクラスファクトリとして登録する必要があります。 EE は DLL として設定されるため、EE をインスタンス化するエンティティに応じて、デバッグエンジン (DE) アドレス空間または Visual Studio アドレス空間のいずれかに挿入されます。
+ 式エバリュエーター (EE) は、Windows COM 環境と Visual Studio の両方を備えたクラス ファクトリとして自身を登録する必要があります。 EE は DLL として設定されるため、どちらのエンティティによって EE がインスタンス化されるかに応じて、デバッグエンジン (DE) アドレス空間または Visual Studio アドレス空間に挿入されます。
 
-## <a name="managed-code-expression-evaluator"></a>マネージコード式エバリュエーター
- マネージコード EE はクラスライブラリとして実装されます。これは、通常は VSIP プログラムの呼び出しによって開始される COM 環境にそれ自体を登録する DLL です。 *regpkg.exe* です。 COM 環境のレジストリキーを書き込む実際のプロセスは、自動的に処理されます。
+## <a name="managed-code-expression-evaluator"></a>マネージド コード式エバリュエーター
+ マネージド コード EE はクラス ライブラリとして実装されます。このライブラリは、COM 環境にそれ自体を登録する DLL、*regpkg.exe* であり、通常、VSIP プログラムの呼び出しによって開始されます。 COM 環境のレジストリ キーを書き込む実際のプロセスは、自動的に処理されます。
 
- Main クラスのメソッドはでマークされ <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> ます。これは、DLL が COM に登録されているときにメソッドが呼び出されることを示します。 この登録方法は、多く `RegisterClass` の場合、Visual Studio に DLL を登録するタスクを実行します。 対応する `UnregisterClass` (でマークされた <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> ) `RegisterClass` 。 DLL がアンインストールされたときの効果を元に戻します。
-アンマネージコードで記述された EE の場合と同じレジストリエントリが作成されます。唯一の違いは、作業を行うためのなどのヘルパー関数がないことです `SetEEMetric` 。 登録と登録解除のプロセスの例を次に示します。
+ メイン クラスのメソッドは <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> でマークされます。これは、DLL が COM に登録されているときにメソッドが呼び出されることを示します。 この登録方法は、多くの場合、`RegisterClass` と呼ばれ、Visual Studio に DLL を登録するタスクを実行します。 対応する `UnregisterClass` (<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> でマークされた) は、DLL がアンインストールされると、`RegisterClass` の効果を元に戻します。
+同じレジストリ エントリが、アンマネージド コードで記述された EE に対して作成されます。唯一の違いは、`SetEEMetric` など、作業を行うためのヘルパー関数がないことです。 登録と登録解除のプロセスの例を次に示します。
 
 ### <a name="example"></a>例
- 次の関数は、マネージコード EE が Visual Studio を使用して自身を登録および登録解除する方法を示しています。
+ 次の関数は、マネージド コード EE が Visual Studio に自身を登録および登録解除する方法を示しています。
 
 ```csharp
 namespace EEMC
@@ -99,33 +99,33 @@ namespace EEMC
 }
 ```
 
-## <a name="unmanaged-code-expression-evaluator"></a>アンマネージコード式エバリュエーター
- EE DLL は、 `DllRegisterServer` Visual Studio だけでなく COM 環境にも登録する関数を実装しています。
+## <a name="unmanaged-code-expression-evaluator"></a>アンマネージド コード式エバリュエーター
+ EE DLL は、Visual Studio だけでなく、COM 環境にも自身を登録する `DllRegisterServer` 関数を実装しています。
 
 > [!NOTE]
-> MyCEE コードサンプルレジストリコードは、EnVSDK\MyCPkgs\MyCEE. の下にある VSIP インストールにあるファイル *dllentry. .cpp で見つかります。*
+> MyCEE コード サンプル レジストリ コードは、EnVSDK\MyCPkgs\MyCEE の下にインストールされた VSIP 内にあるファイル *dllentry.cpp* にあります。
 
-### <a name="dll-server-process"></a>DLL サーバープロセス
- EE を登録すると、DLL サーバーは次のようになります。
+### <a name="dll-server-process"></a>DLL サーバー プロセス
+ EE を登録すると、DLL サーバーは以下を行います。
 
-1. 通常の COM 規約に従って、クラスファクトリ `CLSID` を登録します。
+1. 通常の COM 規約に従って、自身のクラス ファクトリ `CLSID` を登録します。
 
-2. ヘルパー関数を呼び出して、 `SetEEMetric` 次の表に示す EE メトリックを Visual Studio に登録します。 次のように `SetEEMetric` 指定された関数とメトリックは、 *dbgmetric .lib* ライブラリの一部です。 詳細については、「 [デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 」を参照してください。
+2. ヘルパー関数 `SetEEMetric` を呼び出して、次の表に示す EE メトリックを Visual Studio に登録します。 次のように指定された関数 `SetEEMetric` とメトリックは、*dbgmetric.lib* ライブラリの一部です。 詳細については、「[デバッグ用 SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)」を参照してください。
 
     |メトリック|説明|
     |------------|-----------------|
-    |`metricCLSID`|`CLSID` (EE クラスファクトリの)|
-    |`metricName`|EE の名前を、任意の文字列として指定します。|
-    |`metricLanguage`|EE が評価するように設計されている言語の名前|
-    |`metricEngine`|`GUID`この EE で動作するデバッグエンジン (DE) の s|
+    |`metricCLSID`|EE クラス ファクトリの `CLSID`|
+    |`metricName`|表示可能な文字列としての EE の名前|
+    |`metricLanguage`|EE による評価の対象となる言語の名前|
+    |`metricEngine`|この EE で動作するデバッグ エンジン (DE) の `GUID`|
 
     > [!NOTE]
-    > では、 `metricLanguage``GUID` 言語が名前で識別されますが、の引数によって言語が選択され `guidLang` `SetEEMetric` ます。 コンパイラは、デバッグ情報ファイルを生成するときに、 `guidLang` 使用する EE を認識しないように適切なを記述する必要があります。 通常、DE はシンボルプロバイダーにこの言語を要求します。この言語は `GUID` デバッグ情報ファイルに格納されます。
+    > `metricLanguage``GUID` は、言語を名前で識別しますが、言語を選択するのは、`SetEEMetric` への `guidLang` 引数です。 コンパイラは、デバッグ情報ファイルを生成するときに、適切な `guidLang` を記述して、どの EE を使用するかを DE に認識させる必要があります。 通常、DE はシンボル プロバイダーにこの言語 `GUID` を要求します。この言語は、デバッグ情報ファイルに格納されます。
 
-3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudioの x. Y の下にキーを作成して Visual Studio に登録 \\ します。ここで、 *x.y* は、に登録する Visual Studio のバージョンです。
+3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y* の下にキーを作成して Visual Studio に登録 します。ここで、*X.Y* は、登録先の Visual Studio のバージョンです。
 
 ### <a name="example"></a>例
- 次の関数は、アンマネージコード (C++) EE が Visual Studio でそれ自体を登録および登録解除する方法を示しています。
+ 次の関数は、アンマネージド コード (C++) EE が Visual Studio に自身を登録および登録解除する方法を示しています。
 
 ```cpp
 /*---------------------------------------------------------
@@ -213,4 +213,4 @@ static HRESULT RegisterMetric( bool registerIt )
 
 ## <a name="see-also"></a>関連項目
 - [CLR 式エバリュエーターの記述](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
-- [デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [デバッグ用 SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

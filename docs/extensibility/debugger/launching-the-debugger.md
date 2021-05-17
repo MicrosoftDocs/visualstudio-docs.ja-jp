@@ -1,6 +1,6 @@
 ---
-title: デバッガーを起動しています |Microsoft Docs
-description: メソッドとイベントのシーケンスと、デバッガーを起動するために必要な適切な属性について説明します。
+title: デバッガーの起動 |Microsoft Docs
+description: デバッガーを起動するために必要な、適切な属性を持つメソッドとイベントのシーケンスについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,44 +15,44 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 67764a7f59c1b44e7e8cbc7a81befb120c541461
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094667"
 ---
 # <a name="launch-the-debugger"></a>デバッガーを起動します
-デバッガーを起動するには、適切な属性を使用してメソッドとイベントの正しいシーケンスを送信する必要があります。
+デバッガーを起動するには、適切な属性を持つメソッドとイベントの正しいシーケンスを送信する必要があります。
 
 ## <a name="sequences-of-methods-and-events"></a>メソッドとイベントのシーケンス
 
-1. セッションデバッグマネージャー (SDM) を呼び出すには、[ **デバッグ** ] メニューを選択し、[ **開始**] をクリックします。 詳細については、「 [プログラムの起動](../../extensibility/debugger/launching-a-program.md)」を参照してください。
+1. セッション デバッグ マネージャー (SDM) は、 **[デバッグ]** メニューを選択し、 **[開始]** をクリックすることで呼び出されます。 詳細については、[プログラムの起動](../../extensibility/debugger/launching-a-program.md)に関するページを参照してください。
 
-2. SDM は [Onattach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。
+2. SDM が [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。
 
-3. デバッグエンジン (DE) プロセスモデルに基づいて、 `IDebugProgramNodeAttach2::OnAttach` メソッドは次のいずれかのメソッドを返します。これにより次の処理が決定されます。
+3. デバッグ エンジン (DE) のプロセス モデルに基づいて、`IDebugProgramNodeAttach2::OnAttach` メソッドから次のいずれかのメソッドが返され、次に実行する処理が決まります。
 
-     が `S_FALSE` を返した場合、デバッグエンジン (DE) は仮想マシンのプロセスで読み込まれます。
+     `S_FALSE` が返される場合、デバッグ エンジン (DE) は仮想マシンのプロセスで読み込まれます。
 
      または
 
-     が `S_OK` を返した場合、DE は SDM のインプロセスで読み込まれます。 その後、SDM は次のタスクを実行します。
+     `S_OK` が返される場合、DE は SDM のプロセスで読み込まれます。 その後、SDM は次のタスクを実行します。
 
-    1. [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)を呼び出して、DE のエンジン情報を取得します。
+    1. [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) を呼び出して、DE のエンジン情報を取得します。
 
     2. DE を共同作成します。
 
-    3. [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)を呼び出します。
+    3. [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) を呼び出します。
 
-4. DE は、属性を使用して [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+4. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) を送信します。
 
-5. DE は、属性を使用して [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+5. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) を送信します。
 
-6. DE は、属性を使用して [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+6. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) を送信します。
 
-7. DE は、属性を使用して [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+7. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) を送信します。
 
-8. DE は、属性を使用して [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+8. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) を送信します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [呼び出し (デバッガーイベントを)](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目
+- [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)
 - [プログラムの起動](../../extensibility/debugger/launching-a-program.md)

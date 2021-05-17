@@ -1,6 +1,6 @@
 ---
-description: このプロパティの一意の ID を作成して、他のすべてのプロパティ間で一意であることを確認します。
-title: 'IDebugProperty3:: CreateObjectID |Microsoft Docs'
+description: 他のすべてのプロパティとの間で一意性を保証するために、このプロパティの一意の ID を作成します。
+title: IDebugProperty3::CreateObjectID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: af90f360e59e04cc5d55017c5d986e6682bab2ed
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064814"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
-このプロパティの一意の ID を作成して、他のすべてのプロパティ間で一意であることを確認します。
+他のすべてのプロパティとの間で一意性を保証するために、このプロパティの一意の ID を作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,16 +39,16 @@ int CreateObjectID();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、セッションデバッグマネージャーが、このプロパティが他のすべてのプロパティで一意に識別されるようにする必要があるときに呼び出されます。 デバッグエンジン (DE) は、対応するプロパティが既に一意に識別されている場合を除き、このメソッドをサポートします。 DE がこのメソッドをサポートしていない場合は、を返し `E_NOTIMPL` ます。
+## <a name="remarks"></a>解説
+ このメソッドは、このプロパティが他のすべてのプロパティとは異なるものとして一意に識別されていることをセッション デバッグ マネージャーで確認したい場合に呼び出されます。 デバッグ エンジン (DE) では、DE で扱うプロパティが既に一意に識別されている場合を除いて、このメソッドをサポートします。 このメソッドをサポートしていない場合、DE は `E_NOTIMPL` を返します。
 
- で作成された一意の ID `CreateObjectID` は、 [destroyobjectid](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) メソッドが呼び出されたときに破棄されます。これにより、このプロパティを一意に識別する必要があることが通知されます。
+ `CreateObjectID` を使用して作成された一意の ID は、[DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) メソッドが呼び出されると破棄されます。これは、このプロパティを一意に識別する必要がなくなったというシグナルでもあります。
 
 > [!NOTE]
-> この一意の ID を取得する方法はありません。そのため、メソッドが呼び出されたときに、DE は一意の Id に必要な操作を実行でき `CreateObjectID` ます。
+> この一意の ID を取得するメソッドはありません。したがって DE では、`CreateObjectID` メソッドが呼び出されたときに一意の ID をどのように処理してもかまいません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)
 - [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md)

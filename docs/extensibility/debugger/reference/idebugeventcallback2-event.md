@@ -1,6 +1,6 @@
 ---
-description: デバッグイベントの通知を送信します。
-title: 'IDebugEventCallback2:: Event |Microsoft Docs'
+description: デバッグ イベントの通知を送信します。
+title: IDebugEventCallback2::Event | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0fec6984ffc30c3c368193079fdabc1752f63a65
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065802"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
-デバッグイベントの通知を送信します。
+デバッグ イベントの通知を送信します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,35 +54,35 @@ int Event(
 
 ## <a name="parameters"></a>パラメーター
 `pEngine`\
-からこのイベントを送信しているデバッグエンジン (DE) を表す [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) オブジェクト。 このパラメーターを入力するには、DE が必要です。
+[入力] このイベントを送信しているデバッグ エンジン (DE) を表す [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) オブジェクト。 このパラメーターを入力するには、DE が必要です。
 
 `pProcess`\
-からイベントが発生するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。 このパラメーターは、セッションデバッグマネージャー (SDM) によって入力されます。 DE は、常にこのパラメーターに null 値を渡します。
+[入力] イベントが発生するプロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクト。 このパラメーターは、セッション デバッグ マネージャー (SDM) によって入力されます。 DE は、常にこのパラメーターに null 値を渡します。
 
 `pProgram`\
-からこのイベントが発生するプログラムを表す [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) オブジェクト。 ほとんどのイベントでは、このパラメーターは null 値ではありません。
+[入力] このイベントが発生するプログラムを表す [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) オブジェクト。 ほとんどのイベントについて、このパラメーターは null 値ではありません。
 
 `pThread`\
-からこのイベントが発生したスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。 イベントを停止する場合、このパラメーターからスタックフレームが取得されるため、このパラメーターに null 値を指定することはできません。
+[入力] このイベントが発生するスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。 停止イベントについては、このパラメーターからスタック フレームが取得されるため、このパラメーターを null 値にすることはできません。
 
 `pEvent`\
-からデバッグイベントを表す [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) オブジェクト。
+[入力] デバッグ イベントを表す [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) オブジェクト。
 
 `riidEvent`\
-からパラメーターから取得するイベントインターフェイスを識別する GUID `pEvent` 。
+[入力] `pEvent` パラメーターから取得するイベント インターフェイスを識別する GUID。
 
 `dwAttrib`\
-から [Eventattributes](../../../extensibility/debugger/reference/eventattributes.md) 列挙のフラグの組み合わせ。
+[入力] [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) 列挙型のフラグの組み合わせ。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドを呼び出す場合、パラメーターは、 `dwAttrib` パラメーターで渡されるイベントオブジェクトで呼び出される [getattributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) メソッドから返される値と一致する必要があり `pEvent` ます。
+## <a name="remarks"></a>解説
+ このメソッドを呼び出す場合、`dwAttrib` パラメーターは、`pEvent` パラメーターで渡されたイベント オブジェクトに対して [GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md) メソッドを呼び出したときの戻り値に一致する必要があります。
 
- すべてのデバッグイベントは、イベント自体が非同期であるかどうかに関係なく、非同期的にポストされます。 DE がこのメソッドを呼び出すと、戻り値は、イベントが処理されたかどうかを示すのではなく、イベントが受信されたかどうかのみを示します。 実際、ほとんどの状況では、このメソッドから制御が戻ったときにイベントは処理されていません。
+ イベント自体が非同期であるかどうかに関係なく、すべてのデバッグ イベントは非同期で POST されます。 DE でこのメソッドを呼び出すと、戻り値はイベントが処理されたかどうかは示さず、イベントが受信されたかどうかのみを示します。 実際、ほとんどの状況下で、このメソッドから制御が戻った時点ではイベントは処理されていません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

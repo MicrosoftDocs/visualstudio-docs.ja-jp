@@ -1,6 +1,6 @@
 ---
 description: IDebugField オブジェクトに含まれるフィールドの種類を指定します。
-title: FIELD_KIND |Microsoft Docs
+title: FIELD_KIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2476b819d940b5fb6014d00e1bdf920f02a46696
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085209"
 ---
 # <a name="field_kind"></a>FIELD_KIND
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトに含まれるフィールドの種類を指定します。
+[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトに含まれるフィールドの種類を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_FIELD_KIND {
@@ -130,10 +130,10 @@ public enum enum_FIELD_KIND {
 フィールドが型のみであることを示します。
 
 `FIELD_KIND_SYMBOL`\
-フィールドが、型、名前、およびその他の情報を含むシンボルであることを示します。
+フィールドが、型、名前、その他の情報を持つシンボルであることを示します。
 
 `FIELD_TYPE_PRIMITIVE`\
-フィールドがプリミティブデータ型であることを示します。
+フィールドがプリミティブ データ型であることを示します。
 
 `FIELD_TYPE_STRUCT`\
 フィールドが構造体であることを示します。
@@ -166,7 +166,7 @@ public enum enum_FIELD_KIND {
 フィールドがラベルであることを示します。
 
 `FIELD_TYPE_TYPEDEF`\
-フィールドが typedef であることを示します。
+フィールドが Typedef であることを示します。
 
 `FIELD_TYPE_BITFIELD`\
 フィールドがビットフィールドであることを示します。
@@ -208,10 +208,10 @@ public enum enum_FIELD_KIND {
 フィールドがグローバルであることを示します。
 
 `FIELD_SYM_PROP_GETTER`\
-フィールドがプロパティを取得することを示します。
+フィールドでプロパティが取得されることを示します。
 
 `FIELD_SYM_PROP_SETTER`\
-フィールドがプロパティを設定することを示します。
+フィールドでプロパティが設定されることを示します。
 
 `FIELD_SYM_EXTENDED`\
 将来使用するために予約されています。
@@ -220,20 +220,20 @@ public enum enum_FIELD_KIND {
 フィールドの種類のマスクを示します。
 
 `FIELD_TYPE_MASK`\
-フィールドの種類のマスクを示します。
+フィールドの型のマスクを示します。
 
 `FIELD_SYM_MASK`\
 シンボル情報のマスクを示します。
 
-## <a name="remarks"></a>注釈
-[Getkind](../../../extensibility/debugger/reference/idebugfield-getkind.md)メソッドの呼び出しから返されます。
+## <a name="remarks"></a>解説
+[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) メソッドへの呼び出しから返されます。
 
-フィールドの種類に応じて、 [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)インターフェイスで[QueryInterface](/cpp/atl/queryinterface)を呼び出して、より具体的な形式のインターフェイスを作成できます。 たとえば、 [Getkind](../../../extensibility/debugger/reference/idebugfield-getkind.md) がを返す場合は、 `FIELD_TYPE_METHOD` `QueryInterface` I でを呼び出して `DebugField` [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) インターフェイスを取得できます。
+フィールドの種類に応じて、より具体的な形式のインターフェイスを得るために、[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) インターフェイスで [QueryInterface](/cpp/atl/queryinterface) を呼び出すことができます。 たとえば、[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) で `FIELD_TYPE_METHOD` が返される場合は、I`DebugField` で `QueryInterface` を呼び出して [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) インターフェイスを取得できます。
 
-## <a name="requirements"></a>要件
-ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

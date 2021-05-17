@@ -1,6 +1,6 @@
 ---
 description: このメソッドは、式を非同期的に評価します。
-title: 'IDebugExpression2:: EvaluateAsync |Microsoft Docs'
+title: IDebugExpression2::EvaluateAsync | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: bea7a5a05dc5277e693d033452f0b4e7342ea946
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092424"
@@ -44,23 +44,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>パラメーター
 `dwFlags`\
-から式の評価を制御する [Evalflags](../../../extensibility/debugger/reference/evalflags.md) 列挙のフラグの組み合わせ。
+[入力] 式の評価を制御する [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 列挙型のフラグの組み合わせ。
 
 `pExprCallback`\
-からこのパラメーターは常に null 値です。
+[入力] このパラメーターは常に null 値です。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。 一般的なエラーコードは次のとおりです。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 一般的なエラー コードは次のとおりです。
 
 |エラー|説明|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|現在、別の式が評価されていますが、同時式の評価はサポートされていません。|
+|E_EVALUATE_BUSY_WITH_EVALUATION|現在、別の式が評価中であり、式の同時評価はサポートされていません。|
 
-## <a name="remarks"></a>注釈
-このメソッドは、式の評価を開始した直後にを返します。 式が正常に評価された場合は、 [attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md)または[attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)によって提供される[IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)イベントコールバックに[IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)を送信する必要があります。
+## <a name="remarks"></a>解説
+このメソッドは、式の評価を開始した直後に返される必要があります。 式が正常に評価された場合は、[Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) または [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) によって指定される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) イベント コールバックに [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) を送信する必要があります。
 
 ## <a name="example"></a>例
-次の例は、IDebugExpression2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CExpression` います。 [](../../../extensibility/debugger/reference/idebugexpression2.md)
+次の例は、[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) インターフェイスを実装する単純な `CExpression` オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
@@ -76,7 +76,7 @@ HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)

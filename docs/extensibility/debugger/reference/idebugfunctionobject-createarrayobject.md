@@ -1,6 +1,6 @@
 ---
 description: 配列オブジェクトを作成します。
-title: 'IDebugFunctionObject:: CreateArrayObject |Microsoft Docs'
+title: IDebugFunctionObject::CreateArrayObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 94216521f0a57a76f83c68f168ed1afcac199a0e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073548"
 ---
 # <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
-配列オブジェクトを作成します。 この配列には、プリミティブまたはオブジェクトのインスタンス値を含めることができます。
+配列オブジェクトを作成します。 この配列には、プリミティブまたはオブジェクト インスタンス値を含めることができます。
 
 ## <a name="syntax"></a>構文
 
@@ -52,28 +52,28 @@ int CreateArrayObject(
 
 ## <a name="parameters"></a>パラメーター
 `ot`\
-から新しい配列オブジェクトの型を示す [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) 列挙体の値を指定します。
+[入力] 新しい配列オブジェクトの型を示す [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) 列挙からの値を指定します。
 
 `pClassField`\
-からオブジェクトインスタンス値の配列を作成する場合は、オブジェクトのクラスを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクト。 プリミティブオブジェクトの配列を作成する場合、このパラメーターは null 値になります。
+[入力] オブジェクト インスタンス値の配列を作成する場合は、オブジェクトのクラスを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクト。 プリミティブ オブジェクトの配列を作成する場合、このパラメーターは null 値です。
 
 `dwRank`\
-から配列の次元のランクまたは数。
+[in] 配列のランク、つまり次元数。
 
 `dwDims`\
-から配列の各次元のサイズ。
+[in] 配列の各次元のサイズ。
 
 `dwLowBounds`\
-から各次元の原点 (通常は0または 1)。
+[入力] 各次元の原点 (通常は 0 または 1)。
 
 `ppObject`\
-入出力新しく作成された配列を表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトを返します。 これは、実際には [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) オブジェクトです。
+[出力] 新しく作成された配列を表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトを返します。 これは、実際には [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md) オブジェクトです。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK が返されます。それ以外の場合は、エラー コードが返されます。
 
-## <a name="remarks"></a>注釈
- [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスによって表される関数に対する配列パラメーターを表すオブジェクトを作成するには、このメソッドを呼び出します。
+## <a name="remarks"></a>解説
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスによって表される関数の配列パラメーターを表すオブジェクトを作成するには、このメソッドを呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

@@ -1,6 +1,6 @@
 ---
-title: カスタムデバッグエンジンの登録 |Microsoft Docs
-description: デバッグエンジンが自身をクラスファクトリとして登録する方法、COM 規則に従う方法、およびレジストリを使用して Visual Studio に登録する方法について説明します。
+title: カスタム デバッグ エンジンのデバッグ | Microsoft Docs
+description: デバッグ エンジンが COM 規則に従って自身をクラス ファクトリとして登録する方法と、レジストリを介して Visual Studio に登録する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,27 +14,27 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 04e4e8de875cb66ed285e610950baa1c5bf4ef3f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070662"
 ---
-# <a name="register-a-custom-debug-engine"></a>カスタムデバッグエンジンを登録する
-デバッグエンジンは、それ自体をクラスファクトリとして登録する必要があります。 COM の規則に従うだけでなく、visual studio のレジストリサブキーを使用して Visual Studio に登録する必要があります。
+# <a name="register-a-custom-debug-engine"></a>カスタム デバッグ エンジンを登録する
+デバッグ エンジンは、COM 規則に従って自身をクラス ファクトリとして登録し、Visual Studio レジストリ サブキーを使用して Visual Studio に登録する必要があります。
 
 > [!NOTE]
-> デバッグエンジンの登録方法の例については、 [「チュートリアル: ATL COM を使用したデバッグエンジンの構築](/previous-versions/bb147024(v=vs.90))」の一部として作成されている textinterpreter サンプルを参照してください。
+> デバッグ エンジンの登録方法の例は、TextInterpreter サンプルにあります。このサンプルは、「[チュートリアル: ATL COM を使用したデバッグ エンジンの構築](/previous-versions/bb147024(v=vs.90))」の一部として作成されています。
 
-## <a name="dll-server-process"></a>DLL サーバープロセス
- デバッグエンジンは、通常、独自の DLL で COM サーバーとして設定されます。 そのため、Visual Studio がアクセスできるようにするには、デバッグエンジンがそのクラスファクトリの CLSID を COM に登録する必要があります。 次に、デバッグエンジンは、デバッグエンジンがサポートしているすべてのプロパティ (メトリックとも呼ばれます) を確立するために、それ自体を Visual Studio に登録する必要があります。 Visual Studio レジストリサブキーに書き込まれるメトリックの選択は、デバッグエンジンがサポートする機能によって異なります。
+## <a name="dll-server-process"></a>DLL サーバー プロセス
+ デバッグ エンジンは、通常、それ自体の DLL で COM サーバーとして設定されます。 そのため、デバッグ エンジンは、そのクラス ファクトリの CLSID を COM に登録して、Visual Studio がアクセスできるようにする必要があります。 次に、デバッグ エンジンは、それ自体を Visual Studio に登録して、デバッグ エンジンがサポートするすべてのプロパティ (メトリックとも呼ばれます) を確立する必要があります。 Visual Studio レジストリ サブキーに書き込まれるメトリックの選択は、デバッグ エンジンがサポートする機能によって異なります。
 
- [デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) については、デバッグエンジンの登録に必要なレジストリの場所だけでなく、また、 *dbgmetric .lib* ライブラリについても説明します。これには、レジストリの操作を容易にする C++ 開発者向けの便利な関数と宣言が多数含まれています。
+ [デバッグ用 SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) は、デバッグ エンジンの登録に必要なレジストリの場所だけでなく、*dbgmetric.lib* ライブラリについても説明します。このライブラリには、レジストリ操作を容易にする、C++ 開発者向けの便利な関数と宣言が数多く含まれています。
 
 ### <a name="example"></a>例
- (TextInterpreter サンプルの) 次の例では、 `SetMetric` 関数 ( *dbgmetric*) を使用して、デバッグエンジンを Visual Studio に登録する方法を示しています。 渡されるメトリックは、 *dbgmetric. lib* でも定義されています。
+ 次の例 (TextInterpreter サンプルの) では、`SetMetric` 関数 (*dbgmetric.lib* の) を使用してデバッグ エンジンを Visual Studio に登録する方法を示しています。 渡されているメトリックは、*dbgmetric.lib* でも定義されています。
 
 > [!NOTE]
-> TextInterpreter は基本的なデバッグエンジンです。その他の機能は設定されないため、登録されません。 デバッグエンジンの完全な一覧に `SetMetric` は、デバッグエンジンがサポートしている機能ごとに1つずつ、呼び出しのリスト全体が含まれます。
+> TextInterpreter は、基本的なデバッグ エンジンです。その他の機能を設定しないため、その登録も行いません。 より完全なデバッグ エンジンには、デバッグ エンジンがサポートしている機能ごとに 1 つずつ、すべての `SetMetric` 呼び出しまたはそれに相当する機能が含まれています。
 
 ```
 // Define base registry subkey to Visual Studio.
@@ -51,6 +51,6 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 ```
 
 ## <a name="see-also"></a>関連項目
-- [カスタムデバッグエンジンの作成](../../extensibility/debugger/creating-a-custom-debug-engine.md)
-- [デバッグ用の SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [チュートリアル: ATL COM を使用したデバッグエンジンの構築](/previous-versions/bb147024(v=vs.90))
+- [カスタム デバッグ エンジンの作成](../../extensibility/debugger/creating-a-custom-debug-engine.md)
+- [デバッグ用 SDK ヘルパー](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [チュートリアル: ATL COM を使用したデバッグ エンジンの構築](/previous-versions/bb147024(v=vs.90))

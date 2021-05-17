@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、式文字列を解析された式に変換します。
-title: IDebugExpressionEvaluator::P arse |Microsoft Docs
+description: このメソッドは、式の文字列を解析された式に変換します。
+title: IDebugExpressionEvaluator::Parse | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 560274fa9364e86cbb689af2234f72397f0560fc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092164"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
-このメソッドは、式文字列を解析された式に変換します。
+このメソッドは、式の文字列を解析された式に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,30 +52,30 @@ int Parse(
 
 ## <a name="parameters"></a>パラメーター
 `upstrExpression`\
-から解析する式文字列。
+[入力] 解析する式の文字列。
 
 `dwFlags`\
-から式の解析方法を決定する [Parseflags](../../../extensibility/debugger/reference/parseflags.md) 定数のコレクション。
+[入力] 式の解析方法を決定する [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 定数のコレクション。
 
 `nRadix`\
-から数値情報を解釈するために使用される基数。
+[入力] 数値情報を解釈するために使用される基数。
 
 `pbstrError`\
-入出力エラーを人間が判読できるテキストとして返します。
+[出力] エラーを人間が判読できるテキストとして返します。
 
 `pichError`\
-入出力式文字列内のエラーの先頭の文字位置を返します。
+[出力] 式の文字列内のエラーの先頭の文字位置を返します。
 
 `ppParsedExpression`\
-入出力 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) オブジェクト内の解析された式を返します。
+[出力] 解析された式を [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) オブジェクトで返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、実際の値ではなく、解析された式を生成します。 解析された式を評価する準備ができました。つまり、値に変換されます。
+## <a name="remarks"></a>解説
+ このメソッドでは、実際の値ではなく、解析された式が生成されます。 解析された式を評価する (つまり、値に変換する) 準備ができました。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)
 - [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md)
 - [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)

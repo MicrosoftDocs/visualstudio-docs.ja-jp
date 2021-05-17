@@ -1,6 +1,6 @@
 ---
-title: Windows インストーラー | を使用した VSPackage のアンインストールMicrosoft Docs
-description: VSPackage をアンインストールするには、インストールを逆にします。 Windows インストーラー Windows インストーラーパッケージでカスタムアクションを処理する方法について説明します。
+title: Windows インストーラーによる VSPackage のアンインストール | Microsoft Docs
+description: Windows インストーラーでは、インストールを逆にすることで VSPackage をアンインストールできます。 Windows インストーラー パッケージでカスタム アクションを処理する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,30 +16,30 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: bb5d0fe0e4812d66f6981ea58dfb51f19336d98b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090721"
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows インストーラーによる VSPackage のアンインストール
-ほとんどの場合 Windows インストーラー、VSPackage をアンインストールするには、VSPackage をインストールしたことを "元に戻す" だけで済みます。 「 [インストール後に実行する必要](../../extensibility/internals/commands-that-must-be-run-after-installation.md) のあるコマンド」で説明されているカスタムアクションもアンインストール後に実行する必要があります。 devenv.exe の呼び出しは、インストールとアンインストールの両方について InstallFinalize 標準アクションの直前に発生するため、CustomAction と InstallExecuteSequence テーブルエントリは両方のケースに対応します。
+ほとんどの場合、Windows インストーラーでは、VSPackage をインストールするために実行したことを "元に戻す" だけで、VSPackage をアンインストールできます。 [インストール後に実行する必要のあるコマンド](../../extensibility/internals/commands-that-must-be-run-after-installation.md)に関するページで説明されているカスタム アクションは、アンインストール後にも実行する必要があります。 devenv.exe の呼び出しは、インストールとアンインストールの両方の InstallFinalize 標準アクションの直前に行われるため、CustomAction と InstallExecuteSequence テーブル エントリは両方のケースに対応します。
 
 > [!NOTE]
-> `devenv /setup`MSI パッケージをアンインストールした後で、を実行します。
+> MSI パッケージをアンインストールした後で、`devenv /setup` を実行します。
 
- 一般的なルールとして、Windows インストーラーパッケージにカスタムアクションを追加する場合は、アンインストール時およびロールバック時にそれらのアクションを処理する必要があります。 たとえば、VSPackage を自己登録するカスタムアクションを追加する場合は、カスタムアクションを追加して、登録を解除する必要があります。
+ 一般的なルールとして、Windows インストーラー パッケージにカスタム アクションを追加する場合は、アンインストールおよびロールバック時にそれらのアクションを処理する必要があります。 たとえば、VSPackage を自己登録するカスタム アクションを追加する場合は、それを登録解除するカスタム アクションも追加する必要があります。
 
 > [!NOTE]
-> ユーザーは、VSPackage をインストールしてから、統合されているのバージョンをアンインストールすることができ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 の依存関係があるコードを実行するカスタムアクションを排除することで、そのシナリオで VSPackage のアンインストールが確実に機能するようにすることができ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。
+> ユーザーは、VSPackage をインストールしてから、統合されている [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のバージョンをアンインストールすることができます。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の依存関係があるコードを実行するカスタム アクションを排除することで、そのシナリオで VSPackage のアンインストールが確実に機能するようにすることができます。
 
 ## <a name="handling-launch-conditions-at-uninstall-time"></a>アンインストール時に起動条件を処理する
- Launchconditions 標準アクションは、条件が満たされていない場合にエラーメッセージを表示するために、Launchconditions テーブルの行を読み取ります。 システム要件が満たされていることを確認するために一般的に使用される起動条件では、通常、 `NOT Installed` launchconditions テーブルの launchconditions 行に条件を追加することによって、アンインストール中に起動条件をスキップできます。
+ LaunchConditions 標準アクションは、LaunchCondition テーブルの行を読み取って、条件が満たされていない場合はエラー メッセージを表示します。 起動条件は、一般的にシステム要件が満たされていることを確認するために使用されるため、通常、LaunchCondition テーブルの LaunchConditions 行に条件 `NOT Installed` を追加することによって、アンインストール中に起動条件をスキップできます。
 
- 別の方法とし `OR Installed` て、アンインストール中に重要でない起動条件を追加することもできます。 これにより、アンインストール中に条件が常に true になるため、起動条件エラーメッセージは表示されません。
+ 別の方法は、アンインストール中に重要でない起動条件に `OR Installed` を追加することです。 これにより、アンインストール中に条件が常に true になるため、起動条件のエラー メッセージは表示されません。
 
 > [!NOTE]
-> `Installed` は、VSPackage が既にシステムにインストールされていることを検出したときに設定 Windows インストーラープロパティです。
+> `Installed` は、VSPackage がシステムに既にインストールされていることを検出したときに Windows インストーラーが設定するプロパティです。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [Windows インストーラー](/previous-versions/ee231230(v=vs.100))
 - [システム要件の検出](../../extensibility/internals/detecting-system-requirements.md)

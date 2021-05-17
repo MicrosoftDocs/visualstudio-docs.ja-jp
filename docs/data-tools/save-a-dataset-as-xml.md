@@ -20,29 +20,29 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 42974852a3051fd3473b6b23d880eeb38b966b95
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106216203"
 ---
 # <a name="save-a-dataset-as-xml"></a>データセットを XML として保存する
 
-データセットの使用可能な XML メソッドを呼び出すことによって、データセット内の XML データにアクセスします。 XML 形式でデータを保存するには、のメソッドまたはメソッドのいずれかを呼び出すことができ <xref:System.Data.DataSet.GetXml%2A> <xref:System.Data.DataSet.WriteXml%2A> <xref:System.Data.DataSet> ます。
+データセットの使用可能な XML メソッドを呼び出すことによって、データセット内の XML データにアクセスします。 XML 形式でデータを保存するには、<xref:System.Data.DataSet> の <xref:System.Data.DataSet.GetXml%2A> メソッドまたは <xref:System.Data.DataSet.WriteXml%2A> メソッドのいずれかを呼び出します。
 
-メソッドを呼び出すと、 <xref:System.Data.DataSet.GetXml%2A> XML として書式設定されたデータセット内のすべてのデータテーブルのデータを含む文字列が返されます。
+<xref:System.Data.DataSet.GetXml%2A> メソッドを呼び出すと、XML として書式設定された、データセット内のすべてのデータ テーブルのデータを含む文字列が返されます。
 
-メソッドを呼び出すと、指定した <xref:System.Data.DataSet.WriteXml%2A> ファイルに XML 形式のデータが送信されます。
+<xref:System.Data.DataSet.WriteXml%2A> メソッドを呼び出すと、指定したファイルに XML 形式のデータが送信されます。
 
 ## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-variable"></a>データセットのデータを XML として変数に保存するには
 
-- <xref:System.Data.DataSet.GetXml%2A> メソッドが <xref:System.String> を返します。 型の変数を宣言 <xref:System.String> し、メソッドの結果を代入し <xref:System.Data.DataSet.GetXml%2A> ます。
+- <xref:System.Data.DataSet.GetXml%2A> メソッドが <xref:System.String> を返します。 <xref:System.String> 型の変数を宣言し、<xref:System.Data.DataSet.GetXml%2A> メソッドの結果を代入します。
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet12":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet12":::
 
 ## <a name="to-save-the-data-in-a-dataset-as-xml-to-a-file"></a>データセットのデータを XML としてファイルに保存するには
 
-- <xref:System.Data.DataSet.WriteXml%2A>メソッドには複数のオーバーロードがあります。 変数を宣言し、ファイルを保存する有効なパスを割り当てます。 次のコードは、データをファイルに保存する方法を示しています。
+- <xref:System.Data.DataSet.WriteXml%2A> メソッドには複数のオーバーロードがあります。 変数を宣言し、ファイルを保存する有効なパスを代入します。 次のコードでは、データをファイルに保存する方法を示します。
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet13":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet13":::

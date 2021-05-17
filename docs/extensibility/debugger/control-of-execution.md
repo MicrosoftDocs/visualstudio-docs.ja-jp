@@ -1,6 +1,6 @@
 ---
-title: 実行の制御 |Microsoft Docs
-description: イベントの停止について説明します。これは、ユーザーからの応答を IDE で待機することを意味します。
+title: 実行の制御 | Microsoft Docs
+description: イベントの停止について説明します。これは、DE がユーザーからの応答を IDE で待機することを意味します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,52 +14,52 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 55edea88c5983920b382672d160498b9901ba5ca
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068025"
 ---
 # <a name="control-of-execution"></a>実行の制御
-デバッグエンジン (DE) は、通常、次のいずれかのイベントを最後のスタートアップイベントとして送信します。
+デバッグ エンジン (DE) では通常、次のいずれかのイベントを最後の起動イベントとして送信します。
 
-- エントリポイントイベント (新しく起動したプログラムにアタッチする場合)
+- エントリ ポイント イベント (新しく起動したプログラムにアタッチする場合)
 
-- 既に実行されているプログラムにアタッチする場合は、読み込み完了イベント
+- 読み込み完了イベント (既に実行されているプログラムにアタッチする場合)
 
-  これらのイベントはいずれも、イベントを停止しています。つまり、IDE を使用してユーザーからの応答を除外することを意味します。 詳細については、「 [操作モード](../../extensibility/debugger/operational-modes.md)」を参照してください。
+  これらのイベントはどちらも停止イベントです。これは、DE がユーザーからの応答を IDE で待機するという意味です。 詳細については、「[操作モード](../../extensibility/debugger/operational-modes.md)」を参照してください。
 
-## <a name="stopping-event"></a>イベントの停止
- 停止イベントがデバッグセッションに送信されると、次のようになります。
+## <a name="stopping-event"></a>停止イベント
+ 停止イベントがデバッグ セッションに送信されると、次のようになります。
 
-1. 現在の命令ポインターを含むプログラムとスレッドは、イベントインターフェイスから取得できます。
+1. 現在の命令ポインターを含むプログラムとスレッドは、イベント インターフェイスから取得できます。
 
-2. IDE では、現在のソースコードファイルと位置が決定され、エディターで強調表示されています。
+2. IDE によって、現在のソース コード ファイルと位置が決定され、エディターで強調表示されます。
 
-3. 通常、デバッグセッションでは、プログラムの **Continue** メソッドを呼び出すことによって、この最初の停止イベントに応答します。
+3. デバッグ セッションでは通常、プログラムの **Continue** メソッドを呼び出して、この最初の停止イベントに応答します。
 
-4. ブレークポイントにヒットするなど、停止状態が発生するまでプログラムが実行されます。 この場合、DE はデバッグセッションにブレークポイントイベントを送信します。 ブレークポイントイベントは停止イベントで、もう一度ユーザーの応答を待機します。
+4. プログラムはその後、ブレークポイントにヒットするなどの停止条件が発生するまで実行されます。 この場合、DE はブレークポイント イベントをデバッグ セッションに送信します。 ブレークポイント イベントは停止イベントであり、DE はもう一度ユーザー応答を待機します。
 
-5. 関数のステップイン、ステップオーバー、またはその一部を実行することをユーザーが決めた場合、IDE はデバッグセッションに対してプログラムのメソッドの呼び出しを求め `Step` ます。 次に、IDE はステップの単位 (命令、ステートメント、または行) とステップの種類 (関数のステップイン、ステップオーバー、またはアウトするかどうか) を渡します。 ステップが完了すると、DE はデバッグセッションにステップ完了イベントを送信します。これは停止イベントです。
-
-    または
-
-    ユーザーが現在の命令ポインターからの実行を続行することにした場合、IDE はプログラムの **Execute** メソッドを呼び出すようにデバッグセッションに要求します。 プログラムは、次の停止条件に到達するまで実行を再開します。
+5. ユーザーが関数のステップ イン、ステップ オーバー、またはステップ アウトを選択した場合、IDE は、プログラムの `Step` メソッドを呼び出すようデバッグ セッションに求めます。 IDE はその後、ステップの単位 (命令、ステートメント、または行) とステップの種類 (関数のステップ イン、ステップ オーバー、またはステップ アウト) を渡します。 ステップが完了すると、DE はステップ完了イベントをデバッグ セッションに送信しますが、これが停止イベントです。
 
     または
 
-    デバッグセッションが特定の停止イベントを無視するようになっている場合、デバッグセッションはプログラムの **Continue** メソッドを呼び出します。 プログラムが停止条件を検出したときに関数のステップイン、ステップオーバー、またはログアウトを行っていた場合は、手順を続行します。
+    ユーザーが現在の命令ポインターから実行を継続することを選択した場合、IDE は、プログラムの **Execute** メソッドを呼び出すようデバッグ セッションに求めます。 プログラムは、次の停止条件に遭遇するまで実行を再開します。
 
-   プログラムによって、DE が停止条件を検出すると、そのような停止イベントを [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) または [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) として、 [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) インターフェイスを介してセッションデバッグマネージャー (SDM) に送信します。 DE は、プログラムと現在の命令ポインターを含むスレッドを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスと [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) インターフェイスを渡します。 SDM は [IDebugThread2:: enumframe info](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) を呼び出して、一番上のスタックフレームを取得し、 [IDebugStackFrame2:: getdocumentcontext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) を呼び出して、現在の命令ポインターに関連付けられているドキュメントコンテキストを取得します。 このドキュメントコンテキストは、通常、ソースコードファイルの名前、行、および列番号です。 IDE はこれらを使用して、現在の命令ポインターを含むソースコードを強調表示します。
+    または
 
-   通常、SDM は、 [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)を呼び出すことによって、この最初の停止イベントに応答します。 次にプログラムは、ブレークポイントにヒットするなどの停止状態が発生するまで実行されます。この場合、DE は [IDebugBreakpointEvent2 インターフェイス](../../extensibility/debugger/reference/idebugbreakpointevent2.md) を SDM に送信します。 ブレークポイントイベントは停止イベントで、もう一度ユーザーの応答を待機します。
+    デバッグ セッションで特定の停止イベントを無視することにした場合、デバッグ セッションはプログラムの **Continue** メソッドを呼び出します。 停止条件が発生したときにプログラムで関数のステップ イン、ステップ オーバー、またはステップ アウト中だった場合、プログラムはステップを継続します。
 
-   ユーザーが関数のステップイン、ステップオーバー、またはその一部を実行しようとすると、IDE は [IDebugProgram2:: step](../../extensibility/debugger/reference/idebugprogram2-step.md)を呼び出すように SDM に要求します。 次に、IDE は [Stepunit](../../extensibility/debugger/reference/stepunit.md) (命令、ステートメント、または行) と [stepunit](../../extensibility/debugger/reference/stepkind.md)(関数のステップイン、ステップオーバー、またはステップアウトを実行するかどうか) を渡します。 ステップが完了すると、DE は [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) インターフェイスを SDM に送信します。これは停止イベントです。
+   停止条件が発生すると、DE ではプログラムによって、[IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) や [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) などの停止イベントを、[IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) インターフェイスを使用してセッション デバッグ マネージャー (SDM) に送信します。 DE は、現在の命令ポインターを含むプログラムとスレッドを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) および [IDebugThread2](../../extensibility/debugger/reference/idebugthread2.md) インターフェイスを渡します。 SDM は、[IDebugThread2::EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) を呼び出して一番上のスタック フレームを取得し、[IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) を呼び出して、現在の命令ポインターに関連付けられているドキュメント コンテキストを取得します。 このドキュメント コンテキストは通常、ソース コード ファイルの名前、行、および列番号です。 IDE ではこれらを使用して、現在の命令ポインターを含むソース コードを強調表示します。
 
-   ユーザーが現在の命令ポインターからの実行を続行することにした場合、IDE は [IDebugProgram2:: Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md)を呼び出すように SDM に要求します。 プログラムは、次の停止条件に到達するまで実行を再開します。
+   SDM では通常、[IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md) を呼び出して、この最初の停止イベントに応答します。 プログラムはその後、ブレークポイントにヒットするなどの停止条件が発生するまで実行されます。この場合、DE は [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) インターフェイスを SDM に送信します。 ブレークポイント イベントは停止イベントであり、DE はもう一度ユーザー応答を待機します。
 
-   デバッグパッケージが特定の停止イベントを無視する場合、デバッグパッケージは SDM を呼び出します。これは [IDebugProgram2:: Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md)を呼び出します。 停止条件が発生したときに、プログラムが関数にステップイン、ステップオーバー、またはアウトした場合は、手順を続行します。 これは、プログラムがステップ実行状態を維持し、続行する方法がわかっていることを意味します。
+   関数のステップ イン、ステップ オーバー、またはステップ アウトをユーザーが選択した場合、IDE は、[IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md) を呼び出すよう SDM に求めます。 IDE はその後、[STEPUNIT](../../extensibility/debugger/reference/stepunit.md) (命令、ステートメント、または行) と [STEPKIND](../../extensibility/debugger/reference/stepkind.md) (関数のステップ イン、ステップ オーバー、またはステップ アウト) を渡します。 ステップが完了すると、DE は [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) インターフェイスを SDM に送信しますが、これが停止イベントです。
 
-   SDM による呼び出しが非同期に行われます `Step` 。これは、sdm が呼び出しを迅速に返すことを期待することを意味します。   DE が、実行前、または続行する前に、同じスレッド上で SDM を停止イベントを送信すると、 `Step` sdm は応答を停止します。  
+   現在の命令ポインターから実行を継続することをユーザーが選択した場合、IDE は、[IDebugProgram2::Execute](../../extensibility/debugger/reference/idebugprogram2-execute.md) を呼び出すよう SDM に求めます。 プログラムは、次の停止条件に遭遇するまで実行を再開します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [タスクをデバッグする](../../extensibility/debugger/debugging-tasks.md)
+   デバッグ パッケージで特定の停止イベントを無視することにした場合、デバッグ パッケージは SDM を呼び出し、SDM は [IDebugProgram2::Continue](../../extensibility/debugger/reference/idebugprogram2-continue.md) を呼び出します。 停止条件が発生したときにプログラムで関数のステップ イン、ステップ オーバー、またはステップ アウト中だった場合、プログラムはステップを継続します。 これは、プログラムはステッピング状態を維持しているので継続方法を知っていることを暗示します。
+
+   SDM による `Step`、**Execute**、および **Continue** の呼び出しは非同期です。つまり、SDM は呼び出しからすぐに制御が戻ることを期待しています。 `Step`、**Execute**、または **Continue** から制御が戻る前に DE が同じスレッドで停止イベントを SDM に送信した場合、SDM は応答を停止します。
+
+## <a name="see-also"></a>関連項目
+- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

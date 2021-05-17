@@ -1,5 +1,5 @@
 ---
-title: ローカル & リモートデータにアクセスする (ClickOnce アプリ)
+title: ローカル データおよびリモート データへのアクセス (ClickOnce アプリ)
 description: ローカルとリモートの両方で、データの読み取りと書き込みを行うために ClickOnce が提供するさまざまなオプションについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: cbffa062e1115264f9496081cdcf63d17d2a36c7
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106217490"
@@ -44,11 +44,11 @@ ms.locfileid: "106217490"
 > [!NOTE]
 > [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをアンインストールすると、そのアプリケーションのデータ ディレクトリも削除されます。 文書ファイルなど、エンド ユーザーが管理するデータを格納するためには、データ ディレクトリを使用しないでください。
 
-#### <a name="mark-data-files-in-a-clickonce-distribution"></a>ClickOnce ディストリビューションでデータファイルをマークする
- 既存のファイルをデータ ディレクトリに格納するには、そのファイルを [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェスト ファイル内でデータ ファイルとしてマークする必要があります。 詳細については、「 [方法: ClickOnce アプリケーションにデータファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」を参照してください。
+#### <a name="mark-data-files-in-a-clickonce-distribution"></a>ClickOnce で配布するデータ ファイルのマーク付け
+ 既存のファイルをデータ ディレクトリに格納するには、そのファイルを [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションのアプリケーション マニフェスト ファイル内でデータ ファイルとしてマークする必要があります。 詳しくは、「[方法: ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)」をご覧ください。
 
-#### <a name="read-from-and-write-to-the-data-directory"></a>データディレクトリに対する読み取りと書き込み
- データ ディレクトリからデータを読み込むには、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションで読み取りアクセス許可を要求することが必要です。同じように、データ ディレクトリにデータを書き込むには、書き込みのアクセス許可が必要です。 完全な信頼を得て実行するようにアプリケーションが構成されている場合、これらのアクセス許可は自動的にアプリケーションに与えられます。 アクセス許可の昇格または信頼されたアプリケーションの配置を使用してアプリケーションのアクセス許可を昇格する方法の詳細については、「 [ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)」を参照してください。
+#### <a name="read-from-and-write-to-the-data-directory"></a>データ ディレクトリに対する読み取りと書き込み
+ データ ディレクトリからデータを読み込むには、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションで読み取りアクセス許可を要求することが必要です。同じように、データ ディレクトリにデータを書き込むには、書き込みのアクセス許可が必要です。 完全な信頼を得て実行するようにアプリケーションが構成されている場合、これらのアクセス許可は自動的にアプリケーションに与えられます。 アクセス許可の昇格機能または信頼されたアプリケーションの配置を使用してアプリケーションのアクセス許可を昇格する方法の詳細については、「[ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)」を参照してください。
 
 > [!NOTE]
 > 組織が信頼されたアプリケーションの配置を使用しておらず、アクセス許可の昇格機能をオフにしている場合は、アクセス許可のアサートは失敗します。
@@ -62,7 +62,7 @@ ms.locfileid: "106217490"
 
  <xref:System.Windows.Forms.Application> クラスにある <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A>など、関連する変数を使用してデータ ディレクトリのパスを取得することもできます。
 
- 他の種類のファイルを扱うには、アクセス許可の追加が必要になる場合があります。 たとえば、Access データベース (*.mdb*) ファイルを使用する場合、アプリケーションは、関連するクラスを使用するために完全な信頼をアサートする必要があり \<xref:System.Data> ます。
+ 他の種類のファイルを扱うには、アクセス許可の追加が必要になる場合があります。 たとえば、Access データベース ( *.mdb*) ファイルを使用するには、関連する \<xref:System.Data> クラスを使用するために、アプリケーションから完全な信頼をアサートする必要があります。
 
 #### <a name="data-directory-and-application-versions"></a>データ ディレクトリとアプリケーションのバージョン
  アプリケーションの各バージョンのデータはそれぞれ別のデータ ディレクトリに格納され、バージョンごとに分離されます。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、配置にデータ ファイルが含まれていてもいなくても、アプリケーションが実行時にデータ ファイルを新規作成する場所として使用できるように、このデータ ディレクトリが作成されます。 アプリケーションの新しいバージョンをインストールすると、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] により、前のバージョンのデータ ディレクトリから新しいバージョンのデータ ディレクトリに、既存のデータ ファイルがすべてコピーされます。このとき、そのデータ ファイルが元の配置に含まれていたデータ ファイルであるか、アプリケーションによって作成されたデータ ファイルであるかは区別されません。
@@ -85,7 +85,7 @@ ms.locfileid: "106217490"
  アプリケーションでは、実行時に、顧客データや市場情報などの情報をリモートの Web サイトから取得する必要が生じることがあります。 このセクションでは、リモート データを取得するための最も一般的な手法について説明します。
 
 ### <a name="access-files-with-http"></a>HTTP を使用したファイルへのアクセス
- <xref:System.Net.WebClient> 名前空間にある <xref:System.Net.HttpWebRequest> クラスまたは <xref:System.Net> クラスを使用すると、Web サーバー上のデータにアクセスできます。 アクセスできるデータは、静的なファイルか、未加工のテキストまたは XML データを返す [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのいずれかです。 データが XML 形式の場合には、 <xref:System.Xml.XmlDocument> クラスを使用してデータを取得すると、最も高速です。このクラスの <xref:System.Xml.XmlDocument.Load%2A> メソッドには引数として URL を渡します。 例については、「 [DOM への XML ドキュメントの読み取り](/dotnet/standard/data/xml/reading-an-xml-document-into-the-dom)」を参照してください。
+ <xref:System.Net.WebClient> 名前空間にある <xref:System.Net.HttpWebRequest> クラスまたは <xref:System.Net> クラスを使用すると、Web サーバー上のデータにアクセスできます。 アクセスできるデータは、静的なファイルか、未加工のテキストまたは XML データを返す [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] アプリケーションのいずれかです。 データが XML 形式の場合には、 <xref:System.Xml.XmlDocument> クラスを使用してデータを取得すると、最も高速です。このクラスの <xref:System.Xml.XmlDocument.Load%2A> メソッドには引数として URL を渡します。 例については、「[XML ドキュメントの DOM への読み取り](/dotnet/standard/data/xml/reading-an-xml-document-into-the-dom)」を参照してください。
 
  アプリケーションから HTTP 経由でリモート データにアクセスする場合は、セキュリティを考慮する必要があります。 既定では、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションによるネットワーク リソースへのアクセスは、アプリケーションが配置された方法に応じて制限される場合があります。 この制限は、悪意のあるプログラムが特権の必要なリモート データへのアクセスを取得したり、ユーザーのコンピューターを使用してネットワーク上の他のコンピューターを攻撃したりすることを防ぐ目的で適用されます。
 
@@ -97,18 +97,18 @@ ms.locfileid: "106217490"
 |ファイル共有インストール|どの Web サーバーにもアクセスできません。|
 |CD-ROM インストール|任意の Web サーバーにアクセスできます。|
 
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションがセキュリティ上の制限のために Web サーバーにアクセスできない場合は、アプリケーションから対象の Web サイトに <xref:System.Net.WebPermission> をアサートする必要があります。 アプリケーションのセキュリティアクセス許可を高める方法の詳細につい [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ては、「 [セキュリティで保護された ClickOnce アプリケーション](../deployment/securing-clickonce-applications.md)」を参照してください。
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションがセキュリティ上の制限のために Web サーバーにアクセスできない場合は、アプリケーションから対象の Web サイトに <xref:System.Net.WebPermission> をアサートする必要があります。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに与えるセキュリティ アクセス許可を高める方法の詳細については、「[ClickOnce アプリケーションのセキュリティ保護](../deployment/securing-clickonce-applications.md)」を参照してください。
 
-### <a name="access-data-through-an-xml-web-service"></a>XML Web サービスを使用したデータへのアクセス
- データを XML Web サービスとして公開する場合は、XML Web サービス プロキシを使用してデータにアクセスできます。 プロキシは、どちらかを使用して作成する .NET Framework クラスです [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 顧客の検索、注文の発注など、XML Web サービスを使用して実行する操作は、このプロキシのメソッドとして公開されます。 このため、Web サービスは未加工のテキスト ファイルや XML ファイルより簡単に使用できます。
+### <a name="access-data-through-an-xml-web-service"></a>XML Web サービス経由でのデータ アクセス
+ データを XML Web サービスとして公開する場合は、XML Web サービス プロキシを使用してデータにアクセスできます。 このプロキシは、どちらかの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用して作成した .NET Framework クラスです。 顧客の検索、注文の発注など、XML Web サービスを使用して実行する操作は、このプロキシのメソッドとして公開されます。 このため、Web サービスは未加工のテキスト ファイルや XML ファイルより簡単に使用できます。
 
  HTTP 経由で動作する XML Web サービスには、 <xref:System.Net.WebClient> および <xref:System.Net.HttpWebRequest> クラスと同じセキュリティ制限が課されます。
 
-### <a name="access-a-database-directly"></a>データベースに直接アクセスする
+### <a name="access-a-database-directly"></a>データベースへの直接アクセス
  <xref:System.Data> 名前空間にあるクラスを使用すると、SQL Server などネットワーク上のデータベース サーバーとの直接接続を確立できますが、セキュリティの問題を考慮する必要があります。 HTTP 要求とは異なり、部分的な信頼の場合、データベース接続要求は既定で常に禁止されています。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを CD-ROM からインストールした場合にだけ、既定でデータベース接続のアクセス許可を得ることができます。 これにより、アプリケーションには完全信頼が与えられます。 特定の SQL Server データベースへのアクセスを有効にするには、アプリケーションからデータベースに対して <xref:System.Data.SqlClient.SqlClientPermission> を要求する必要があります。SQL Server 以外のデータベースへのアクセスを有効にするには、 <xref:System.Data.OleDb.OleDbPermission>を要求する必要があります。
 
  ほとんどの場合、データベースに直接アクセスする必要はありません。代わりに、 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] で記述された Web サーバー アプリケーションまたは XML Web サービスを経由してデータベースにアクセスします。 Web サーバーから [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを配置した場合は、この方法でデータベースにアクセスするのが、多くの場合に最良の方法です。 部分的に信頼されたサーバーに、アプリケーションのアクセス許可を昇格せずにアクセスできます。
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: ClickOnce アプリケーションにデータファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)
+- [方法: ClickOnce アプリケーションにデータ ファイルを含める](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

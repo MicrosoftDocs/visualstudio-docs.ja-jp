@@ -1,6 +1,6 @@
 ---
-description: このインターフェイスを使用すると、セッションデバッグマネージャー (SDM) は、ポートで実行されているプログラムとプロセスを制御できます。
-title: IDebugPortEx2 |Microsoft Docs
+description: このインターフェイスを使用すると、ポートで実行中のプログラムとプロセスをセッション デバッグ マネージャー (SDM) で制御できます。
+title: IDebugPortEx2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,28 +15,28 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: e26fec4b47a301bfb266f40b41fd88216ccf671f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072430"
 ---
 # <a name="idebugportex2"></a>IDebugPortEx2
-このインターフェイスを使用すると、セッションデバッグマネージャー (SDM) は、ポートで実行されているプログラムとプロセスを制御できます。
+このインターフェイスを使用すると、ポートで実行中のプログラムとプロセスをセッション デバッグ マネージャー (SDM) で制御できます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```
 IDebugPortEx2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>実装側の注意
- カスタムポートサプライヤーは、 [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)を実装するのと同じオブジェクトにこのインターフェイスを実装します。
+ カスタム ポート サプライヤーでは、[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) を実装するのと同じオブジェクトにこのインターフェイスが実装されます。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
- SDM は、インターフェイスの [QueryInterface](/cpp/atl/queryinterface) を呼び出して、 `IDebugPort2` このインターフェイスを取得します。
+ SDM では、`IDebugPort2` インターフェイスの [QueryInterface](/cpp/atl/queryinterface) を呼び出してこのインターフェイスを取得します。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
- 次の表に、のメソッドを示し `IDebugPortEx2` ます。
+ 次の表に、`IDebugPortEx2` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
@@ -45,20 +45,20 @@ IDebugPortEx2 : IUnknown
 |[CanTerminateProcess](../../../extensibility/debugger/reference/idebugportex2-canterminateprocess.md)|プロセスを終了できるかどうかを判断します。|
 |[TerminateProcess](../../../extensibility/debugger/reference/idebugportex2-terminateprocess.md)|プロセスを終了します。|
 |[GetPortProcessId](../../../extensibility/debugger/reference/idebugportex2-getportprocessid.md)|ポート自体のプロセス ID を取得します。|
-|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|プログラムノードに関連付けられているプログラムを取得します。|
+|[GetProgram](../../../extensibility/debugger/reference/idebugportex2-getprogram.md)|プログラム ノードに関連付けられているプログラムを取得します。|
 
-## <a name="remarks"></a>注釈
- このインターフェイスは、通常、SDM とカスタムポート供給業者の間でプライベートです。
+## <a name="remarks"></a>解説
+ このインターフェイスは、通常、SDM とカスタム ポート サプライヤーの間でプライベートです。
 
- 必要に応じて、デバッグエンジン (DE) は、 [launchsuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)に渡された[IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)インターフェイスでこのインターフェイスを検索し、 [launchsuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md)を使用してプログラムを起動することができます。 ただし、これは必須ではありません。また、DE は、要求プログラムを起動するために必要な操作を行うことができます。
+ 必要に応じて、デバッグ エンジン (DE) では、[LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) に渡された [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) インターフェイスでこのインターフェイスを検索し、[LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) を使用してプログラムを起動できます。 ただし、これは必須ではありません。また、DE では、要求プログラムを起動するために必要な操作を実行できます。
 
-## <a name="requirements"></a>要件
- ヘッダー: portpriv. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: portpriv.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
-- [コアインターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

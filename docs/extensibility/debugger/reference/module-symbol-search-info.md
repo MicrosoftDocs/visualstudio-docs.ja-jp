@@ -1,6 +1,6 @@
 ---
 description: 検索されたシンボル検索パスに関する状態情報が含まれます。
-title: MODULE_SYMBOL_SEARCH_INFO |Microsoft Docs
+title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 266d786df422e5260e212a4005feb7d3167af099
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057898"
@@ -47,22 +47,22 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 ## <a name="members"></a>メンバー
 
 `dwValidFields`\
-この構造体で記述されている検索情報の種類を指定する、 [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) 列挙のフラグの組み合わせ。
+この構造体で記述されている検索情報の種類を指定する、[SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) 列挙型のフラグの組み合わせ。
 
 `bstrVerboseSearchInfo`\
-検索パスと結果が1つの文字列に連結されます。
+検索パスと結果が 1 つの文字列に連結されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この構造体は、 [Getシンボル情報](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) メソッドの呼び出しから返されます。
+この構造体は、[GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) メソッドの呼び出しから返されます。
 
-`bstrVerboseSearchInfo`フィールドが空でない場合は、検索したパスとその検索結果の一覧が含まれています。 リストはパスで書式設定され、その後に省略記号 ("...") が続き、その後に結果が続きます。 複数のパスの結果のペアがある場合、各ペアは "\r\n" (キャリッジリターン/ラインフィード) ペアで区切られます。 パターンは次のようになります。
+`bstrVerboseSearchInfo` フィールドが空でない場合は、検索したパスとその検索結果の一覧が含まれています。 リストはパス、その後に省略記号 ("...")、その後に結果が続く形で書式設定されています。 複数のパスの結果のペアがある場合、各ペアは "\r\n" (キャリッジリターン/ラインフィード) ペアで区切られます。 パターンは次のようになります。
 
-\<path>...\<result>\r\n \<path> . \<result> .\r\n \<path> ..\<result>
+\<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>
 
 最後のエントリには \r\n シーケンスがないことに注意してください。
 
-次に示すのは、 `bstrVerboseSearchInfo` 標準出力に送信された文字列です。
+次に示すのは、標準出力に送信された `bstrVerboseSearchInfo` 文字列です。
 
 `c:\symbols\user32.pdb... File not found.`
 
@@ -70,15 +70,15 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
 
 `\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Symbols loaded.`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-ヘッダー: msdbg. h
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

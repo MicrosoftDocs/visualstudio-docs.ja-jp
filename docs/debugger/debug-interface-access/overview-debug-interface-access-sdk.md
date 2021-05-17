@@ -1,7 +1,8 @@
-﻿---
-title: 概要 (Debug Interface Access SDK) |Microsoft Docs
+---
+description: Microsoft デバッグ情報にアクセスするには、DIA SDK を使用します。
+title: 概要 (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 720b4479-a8bc-4fec-860e-80c1a0780405
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e4269c620247f256d2cfae2e84b76ff60fcf9ba
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c505216cd38b5321f291515794fc07ff58e8d698
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738607"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634562"
 ---
 # <a name="overview-debug-interface-access-sdk"></a>概要 (Debug Interface Access SDK)
-Microsoft デバッグ情報にアクセスするには、DIA SDK を使用します。 DIA SDK には、Microsoft がデバッグ情報の形式を変更するたびにコードを書き直す必要がなくなり、COM ベースの API セットが用意されています。 DIA SDK では、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] バージョン5.0 以降で生成される .pdb ファイルと dbg ファイルにある、以前のバージョンのデバッグ情報のセットから読み取ることもできます。
+Microsoft デバッグ情報にアクセスするには、DIA SDK を使用します。 DIA SDK には COM ベースの API セットが用意されています。これを使用すると、Microsoft でデバッグ情報の形式が変更されても、そのたびにコードを書き直す必要がなくなります。 DIA SDK では、[!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] バージョン 5.0 以降で生成された .pdb ファイルと .dbg ファイルにある以前のバージョンのデバッグ情報を一部読み取ることもできます。
 
- DIA SDK 内の各インターフェイスは、特に指定されていない場合を除き、異なる COM オブジェクトを表します。 追加のインターフェイス (つまり、追加のオブジェクト) は、既存のインターフェイスポインターで `QueryInterface` を呼び出すことなく、 [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)や[IDiaSession:: findchildren](../../debugger/debug-interface-access/idiasession-findchildren.md)などの明示的なクエリによって作成されます。
+ 特に明記されていない限り、DIA SDK 内のインターフェイスはそれぞれ異なる COM オブジェクトを表します。 追加のインターフェイス (つまり、追加のオブジェクト) は、既存のインターフェイス ポインターで `QueryInterface` を呼び出すのではなく、明示的なクエリ ([IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) や [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md) など) によって作成されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)

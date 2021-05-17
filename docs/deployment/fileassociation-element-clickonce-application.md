@@ -1,6 +1,6 @@
 ---
-title: '&lt;fileAssociation &gt; 要素 (ClickOnce アプリケーション) |Microsoft Docs'
-description: FileAssociation 要素は、アプリケーションに関連付けられるファイル拡張子を識別します。 FileAssociation 要素は省略可能です。
+title: '&lt;fileAssociation&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs'
+description: fileAssociation 要素では、アプリケーションに関連付けられるファイル拡張子を識別します。 fileAssociation 要素は省略可能です。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,13 +19,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 7435a4e4973ee0a000555e9508328a76f7aa59a6
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99889149"
 ---
-# <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation &gt; 要素 (ClickOnce アプリケーション)
-アプリケーションに関連付けるファイル拡張子を識別します。
+# <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt; 要素 (ClickOnce アプリケーション)
+アプリケーションに関連付けられるファイル拡張子を識別します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,17 +45,17 @@ ms.locfileid: "99889149"
 |属性|説明|
 |---------------|-----------------|
 |`extension`|必須。 アプリケーションに関連付けられるファイル拡張子。|
-|`description`|必須。 シェルによって使用されるファイルの種類の説明。|
+|`description`|必須。 シェルで使用されるファイルの種類の説明。|
 |`progid`|必須。 ファイルの種類を一意に識別する名前。|
-|`defaultIcon`|必須。 この拡張子を持つファイルに使用するアイコンを指定します。 アイコンファイルは、この要素を含む[ \<assembly> 要素](../deployment/assembly-element-clickonce-application.md)内の[ \<file> 要素](../deployment/file-element-clickonce-application.md)を使用して指定する必要があります。|
+|`defaultIcon`|必須。 この拡張子を持つファイルで使用するアイコンを指定します。 アイコン ファイルは、この要素を含む [\<assembly> 要素](../deployment/assembly-element-clickonce-application.md)内の [\<file> 要素](../deployment/file-element-clickonce-application.md)を使用して指定する必要があります。|
 
 ## <a name="remarks"></a>解説
- この要素には、"urn: schema-microsoft-com: clickonce. v1" への XML 名前空間参照が含まれている必要があります。 要素を使用する場合は `<fileAssociation>` 、親要素の要素の後に指定する必要があり `<application>` [ \<assembly> ](../deployment/assembly-element-clickonce-application.md)ます。
+ この要素には、"urn:schemas-microsoft-com:clickonce.v1" への XML 名前空間参照が含まれている必要があります。 `<fileAssociation>` 要素を使用する場合は、親の [\<assembly> 要素](../deployment/assembly-element-clickonce-application.md)内の、`<application>` 要素の後に置く必要があります。
 
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 既存のファイルの関連付けは上書きされません。 ただし、ClickOnce アプリケーションでは、現在のユーザーのみのファイル拡張子をオーバーライドできます。 ClickOnce アプリケーションがアンインストールされると、ClickOnce によってユーザーのファイルの関連付けが削除され、コンピューターごとの関連付けが再びアクティブになります。
+ 既存のファイルの関連付けは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] によって上書きされません。 ただし、ClickOnce アプリケーションでは、現在のユーザーに対してのみ、ファイル拡張子をオーバーライドできます。 ClickOnce アプリケーションがアンインストールされた後は、ClickOnce によってこのユーザーのファイル関連付けが削除され、マシンごとの関連付けがもう一度アクティブになります。
 
 ## <a name="example"></a>例
- 次のコード例は、 `fileAssociation` を使用して配置されたテキストエディターアプリケーションのアプリケーションマニフェストの要素を示してい [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。 このコード例には、属性に必要な[ \<file> 要素](../deployment/file-element-clickonce-application.md)も含まれてい `defaultIcon` ます。
+ 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を使用して配置されるテキスト エディター アプリケーションのアプリケーション マニフェスト内にある `fileAssociation` 要素を示しています。 このコード例には、`defaultIcon` 属性では必須の [\<file> 要素](../deployment/file-element-clickonce-application.md)も含まれています。
 
 ```xml
 <file name="text.ico" size="4286">
@@ -81,4 +81,4 @@ ms.locfileid: "99889149"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

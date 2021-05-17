@@ -1,6 +1,6 @@
 ---
 description: 逆アセンブリのフラグを指定します。
-title: DISASSEMBLY_FLAGS |Microsoft Docs
+title: DISASSEMBLY_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 28335176a70213f61bfbb77bf6f91cc6155902e7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096201"
@@ -26,7 +26,7 @@ ms.locfileid: "105096201"
 # <a name="disassembly_flags"></a>DISASSEMBLY_FLAGS
 逆アセンブリのフラグを指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_DISASSEMBLY_FLAGS {
@@ -59,26 +59,26 @@ public enum enum_DISASSEMBLY_FLAGS {
 この命令が実行されないことを示します。
 
 `DF_INSTRUCTION_ACTIVE`\
-この命令が、次に実行される命令の1つであることを示します (複数存在する場合もあります)。
+この命令が、次に実行される命令の 1 つであることを示します (複数存在する場合もあります)。
 
 `DF_DATA`\
 この命令が (コードではなく) 実際のデータであることを示します。
 
 `DF_HASSOURCE`\
-この命令にソースがあることを示します。 プロファイルやガベージコレクションコードなどの一部の命令には、対応するソースがありません。
+この命令にソースがあることを示します。 プロファイリングやガベージ コレクションのコードなどの一部の命令には、対応するソースがありません。
 
 `DF_DOCUMENT_CHECKSUM`\
-フィールドに `bstrDocumentUrl` 、ドキュメントの URL の後にチェックサムデータが格納されていることを示します。 チェックサムデータの格納方法については、 [Disassemblydata](../../../extensibility/debugger/reference/disassemblydata.md) 構造体の「解説」を参照してください。
+`bstrDocumentUrl` フィールドに、ドキュメント URL の後にチェックサム データが含まれていることを示します。 チェックサム データの格納方法については、[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 構造体の「解説」を参照してください。
 
-## <a name="remarks"></a>注釈
-`dwFlags` [Disassemblydata](../../../extensibility/debugger/reference/disassemblydata.md)構造体のメンバーとして使用されます。
+## <a name="remarks"></a>解説
+[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 構造体の `dwFlags` メンバーとして使用されます。
 
-これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

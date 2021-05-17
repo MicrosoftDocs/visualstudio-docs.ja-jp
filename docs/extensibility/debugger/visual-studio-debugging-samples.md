@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のデバッグサンプル |Microsoft Docs
-description: デバッガーの式エバリュエーターのサンプルと Visual Studio のデバッグエンジンのサンプルは、visual studio SDK を使用して Visual Studio デバッガーを拡張する方法を示しています。
+title: Visual Studio のデバッグのサンプル | Microsoft Docs
+description: デバッガーの式エバリュエーターのサンプルと Visual Studio のデバッグ エンジンのサンプルは、Visual Studio SDK を使用して Visual Studio デバッガーを拡張する方法を示しています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,14 +16,14 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3fce37ed432e4adfe266490766050fe777809b74
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057703"
 ---
-# <a name="visual-studio-debugging-samples"></a>Visual Studio のデバッグサンプル
-2つのサンプルは、を使用して Visual Studio デバッガーを拡張する方法を示して [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] います。
+# <a name="visual-studio-debugging-samples"></a>Visual Studio のデバッグのサンプル
+2 つのサンプルは、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] を使用して Visual Studio デバッガーを拡張する方法を示しています。
 
-- マネージ言語のデバッガー式エバリュエーターのサンプルは、に含まれてい [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ます。 ウィンドウで、[ [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] **サンプル** ] タブをクリックし、言語の一覧で [ **すべて** ] または [ **C#** ] をクリックして、[ **デバッガー**] をクリックします。
+- マネージド言語のデバッガー式エバリュエーターのサンプルは、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] に含まれています。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ウィンドウで、 **[サンプル]** タブをクリックして、言語の一覧で **[すべて]** または **[C#]** をクリックし、次に **[デバッガー]** をクリックします。
 
-- ネイティブ言語の Visual Studio デバッグエンジンサンプルは、MSDN コードギャラリーから入手できます。 詳細については、Microsoft Web サイトの「 [Visual Studio デバッグエンジンのサンプル](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) 」を参照してください。
+- ネイティブ言語の Visual Studio デバッグ エンジン サンプルは、MSDN コード ギャラリーから入手できます。 詳細については、Microsoft Web サイトで[Visual Studio デバッグ エンジンのサンプル](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e)を参照してください。

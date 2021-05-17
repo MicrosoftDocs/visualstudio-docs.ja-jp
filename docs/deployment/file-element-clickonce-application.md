@@ -1,6 +1,6 @@
 ---
-title: '&lt;file &gt; 要素 (ClickOnce アプリケーション) |Microsoft Docs'
-description: File 要素は、アプリケーションによってダウンロードおよび使用されるアセンブリ以外のすべてのファイルを識別します。 File 要素は省略可能です。
+title: '&lt;file&gt; 要素 (ClickOnce アプリケーション) | Microsoft Docs'
+description: file 要素では、アプリケーションによってダウンロードされて使用される、アセンブリ以外のすべてのファイルを識別します。 file 要素は省略可能です。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -26,13 +26,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 8ad19de19176b7c8ee1d2c2872126a19abb93b67
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99895090"
 ---
-# <a name="ltfilegt-element-clickonce-application"></a>&lt;file &gt; 要素 (ClickOnce アプリケーション)
-アプリケーションによってダウンロードおよび使用されるアセンブリ以外のすべてのファイルを識別します。
+# <a name="ltfilegt-element-clickonce-application"></a>&lt;file&gt; 要素 (ClickOnce アプリケーション)
+アプリケーションによってダウンロードされて使用される、アセンブリ以外のすべてのファイルを識別します。
 
 ## <a name="syntax"></a>構文
 
@@ -91,102 +91,102 @@ ms.locfileid: "99895090"
 |属性|説明|
 |---------------|-----------------|
 |`name`|必須。 ファイルの名前を識別します。|
-|`size`|必須。 ファイルのサイズをバイト単位で指定します。|
-|`group`|属性が指定されていない場合、またはに設定されている場合は省略可能 `optional` `false` 。がの場合は必須。 `optional` `true` このファイルが属するグループの名前。 名前には、開発者が選択した任意の Unicode 文字列値を使用できます。また、クラスを使用して必要に応じてファイルをダウンロードするために使用され <xref:System.Deployment.Application.ApplicationDeployment> ます。|
-|`optional`|任意。 アプリケーションの初回実行時にこのファイルをダウンロードする必要があるかどうか、またはアプリケーションが要求時にファイルをサーバーにのみ配置するかどうかを指定します。 `false`または未定義の場合、アプリケーションを最初に実行またはインストールしたときに、ファイルがダウンロードされます。 の場合 `true` 、 `group` アプリケーションマニフェストが有効であるためにを指定する必要があります。 `optional``writeableType`が値と共に指定されている場合、を true にすることはできません `applicationData` 。|
-|`writeableType`|任意。 このファイルがデータファイルであることを指定します。 現在、有効値は `applicationData` のみです。|
+|`size`|必須。 ファイルのサイズを指定します (バイト単位)。|
+|`group`|`optional` 属性が指定されていないか、`false` に設定されている場合は省略可能で、`optional` が `true` である場合は必須です。 ファイルが所属するグループの名前。 名前には、開発者が選択した任意の Unicode 文字列値を使用できます。また、名前は、<xref:System.Deployment.Application.ApplicationDeployment> クラスを使用してオンデマンドでファイルをダウンロードするために使用されます。|
+|`optional`|省略可能。 アプリケーションの初回実行時にこのファイルをダウンロードする必要があるかどうかや、アプリケーションがオンデマンドで要求するまでそのファイルをサーバーにのみ配置する必要があるかどうかを指定します。 `false` または未定義の場合、アプリケーションが最初に実行またはインストールされるときに、ファイルがダウンロードされます。 `true` の場合、アプリケーション マニフェストを有効にするためには `group` を指定する必要があります。 値が `applicationData` である `writeableType` が指定されている場合は、`optional` を true にすることはできません。|
+|`writeableType`|省略可能。 このファイルがデータ ファイルであることを指定します。 現在、有効値は `applicationData` のみです。|
 
 ## <a name="typelib"></a>typelib
- 要素は、 `typelib` file 要素の省略可能な子です。 要素は、COM コンポーネントに属するタイプライブラリを記述します。 要素には、次の属性があります。
+ `typelib` 要素は、file 要素の省略可能な子です。 この要素では、COM コンポーネントに属するタイプ ライブラリについて記述します。 要素には、次の属性があります。
 
 |属性|説明|
 |---------------|-----------------|
-|`tlbid`|必須。 タイプライブラリに割り当てられた GUID。|
-|`version`|必須。 タイプライブラリのバージョン番号。|
-|`helpdir`|必須。 コンポーネントのヘルプファイルが格納されているディレクトリ。 長さをゼロにすることができます。|
-|`resourceid`|任意。 ロケール識別子 (LCID) の16進数文字列形式。 これは、0x プレフィックスのない 1 ~ 4 桁の16進数で、先頭に0を付けません。 LCID にニュートラルサブ言語識別子が含まれている場合があります。|
-|`flags`|任意。 このタイプライブラリのタイプライブラリフラグの文字列形式。 具体的には、"RESTRICTED"、"CONTROL"、"HIDDEN"、および "HASDISKIMAGE" のいずれかである必要があります。|
+|`tlbid`|必須。 タイプ ライブラリに割り当てられている GUID。|
+|`version`|必須。 タイプ ライブラリのバージョン番号。|
+|`helpdir`|必須。 コンポーネントのヘルプ ファイルが含まれるディレクトリ。 長さがゼロの場合があります。|
+|`resourceid`|省略可能。 ロケール識別子 (LCID) の 16 進文字列表現。 これは、0x プレフィックスがなく、先頭のゼロがない、1 ～ 4 桁の 16 進数です。 LCID には、中立の副言語識別子が含まれている場合があります。|
+|`flags`|省略可能。 このタイプ ライブラリのタイプ ライブラリ フラグの文字列表現。 具体的には、これは "RESTRICTED"、"CONTROL"、"HIDDEN"、"HASDISKIMAGE" のいずれかである必要があります。|
 
 ## <a name="comclass"></a>comClass
- 要素は、 `comClass` 要素の省略可能な子です `file` が、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 登録を必要としない com を使用して配置する com コンポーネントがアプリケーションに含まれている場合は必須です。 要素には、次の属性があります。
+ `comClass` 要素は、`file` 要素の省略可能な子ですが、登録を必要としない COM を使用して配置する予定の COM コンポーネントが [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに含まれている場合は必須です。 要素には、次の属性があります。
 
 |属性|説明|
 |---------------|-----------------|
-|`clsid`|必須。 GUID として表される COM コンポーネントのクラス ID。|
-|`description`|任意。 クラス名。|
-|`threadingModel`|任意。 インプロセス COM クラスによって使用されるスレッドモデル。 このプロパティが null の場合、スレッドモデルは使用されません。 コンポーネントはクライアントのメインスレッドで作成され、他のスレッドからの呼び出しはこのスレッドにマーシャリングされます。 有効な値を次の一覧に示します。<br /><br /> `Apartment`、`Free`、`Both`、`Neutral`。|
-|`tlbid`|任意。 この COM コンポーネントのタイプライブラリの GUID。|
-|`progid`|任意。 COM コンポーネントに関連付けられているバージョン依存のプログラム識別子。 の形式 `ProgID` は `<vendor>.<component>.<version>` です。|
-|`miscStatus`|任意。 レジストリキーによって提供される情報をアセンブリマニフェスト内で複製し `MiscStatus` ます。 `miscStatusIcon`、、 `miscStatusContent` 、または属性の値が見つからない場合は、 `miscStatusDocprint` `miscStatusThumbnail` に示されている対応する既定値が、不足している `miscStatus` 属性に使用されます。 値には、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスがレジストリキー値を必要とする OCX クラスの場合は、この属性を使用でき `MiscStatus` ます。|
-|`miscStatusIcon`|任意。 DVASPECT_ICON によって提供される情報をアセンブリマニフェスト内で複製します。 オブジェクトのアイコンが用意されています。 値には、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスがレジストリキー値を必要とする OCX クラスの場合は、この属性を使用でき `Miscstatus` ます。|
-|`miscStatusContent`|任意。 DVASPECT_CONTENT によって提供される情報をアセンブリマニフェスト内で複製します。 画面またはプリンターに表示される複合ドキュメントを提供できます。 値には、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスがレジストリキー値を必要とする OCX クラスの場合は、この属性を使用でき `MiscStatus` ます。|
-|`miscStatusDocPrint`|任意。 DVASPECT_DOCPRINT によって提供される情報をアセンブリマニフェスト内で複製します。 プリンターに印刷されるかのように、画面に表示されるオブジェクト表現を提供できます。 値には、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスがレジストリキー値を必要とする OCX クラスの場合は、この属性を使用でき `MiscStatus` ます。|
-|`miscStatusThumbnail`|任意。 DVASPECT_THUMBNAIL によって提供される情報をアセンブリマニフェスト内で複製します。 参照ツールで表示できるオブジェクトのサムネイルを提供できます。 値には、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスがレジストリキー値を必要とする OCX クラスの場合は、この属性を使用でき `MiscStatus` ます。|
+|`clsid`|必須。 GUID として表現された COM コンポーネントのクラス ID。|
+|`description`|省略可能。 クラス名。|
+|`threadingModel`|省略可能。 インプロセス COM クラスによって使用されるスレッド モデル。 このプロパティが null の場合、スレッド モデルは使用されません。 コンポーネントはクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しはこのスレッドにマーシャリングされます。 次の一覧に有効な値を示します。<br /><br /> `Apartment`、`Free`、`Both`、`Neutral`。|
+|`tlbid`|省略可能。 COM コンポーネントのタイプ ライブラリの GUID。|
+|`progid`|省略可能。 COM コンポーネントに関連付けられている、バージョン依存のプログラム識別子。 `ProgID` の形式は `<vendor>.<component>.<version>` です。|
+|`miscStatus`|省略可能。 `MiscStatus` レジストリ キーによって提供される情報を、アセンブリ マニフェスト内に複製します。 `miscStatusIcon`、`miscStatusContent`、`miscStatusDocprint`、`miscStatusThumbnail` 属性の値が見つからない場合、不足している属性には、`miscStatus` に示されている対応する既定値が使用されます。 値として、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスが、`MiscStatus` レジストリ キー値を必要とする OCX クラスである場合は、この属性を使用できます。|
+|`miscStatusIcon`|省略可能。 DVASPECT_ICON によって提供される情報を、アセンブリ マニフェスト内に複製します。 これにより、オブジェクトのアイコンを提供できます。 値として、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスが、`Miscstatus` レジストリ キー値を必要とする OCX クラスである場合は、この属性を使用できます。|
+|`miscStatusContent`|省略可能。 DVASPECT_CONTENT によって提供される情報を、アセンブリ マニフェスト内に複製します。 これにより、画面またはプリンターに表示できる複合ドキュメントを提供できます。 値として、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスが、`MiscStatus` レジストリ キー値を必要とする OCX クラスである場合は、この属性を使用できます。|
+|`miscStatusDocPrint`|省略可能。 DVASPECT_DOCPRINT によって提供される情報を、アセンブリ マニフェスト内に複製します。 プリンターに印刷されるかのように画面に表示できるオブジェクト表現を提供できます。 値として、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスが、`MiscStatus` レジストリ キー値を必要とする OCX クラスである場合は、この属性を使用できます。|
+|`miscStatusThumbnail`|省略可能。 DVASPECT_THUMBNAIL によって提供される情報を、アセンブリ マニフェスト内に複製します。 閲覧ツールで表示できるオブジェクトのサムネイルを提供できます。 値として、次の表に示す属性値のコンマ区切りの一覧を指定できます。 COM クラスが、`MiscStatus` レジストリ キー値を必要とする OCX クラスである場合は、この属性を使用できます。|
 
 ## <a name="cominterfaceexternalproxystub"></a>comInterfaceExternalProxyStub
- 要素は、 `comInterfaceExternalProxyStub` 要素の省略可能な子です `file` が、登録を必要としない [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] com を使用して配置する com コンポーネントがアプリケーションに含まれている場合に必要になることがあります。 要素には、次の属性が含まれています。
+ `comInterfaceExternalProxyStub` 要素は、`file` 要素の省略可能な子ですが、登録を必要としない COM を使用して配置する予定の COM コンポーネントが [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに含まれている場合は、必要とされる可能性があります。 この要素には、以下の属性が含まれています。
 
 |属性|説明|
 |---------------|-----------------|
-|`iid`|必須。 このプロキシによって提供されるインターフェイス ID (IID)。 IID の周囲には中かっこが必要です。|
-|`baseInterface`|任意。 によって参照されるインターフェイスの派生元であるインターフェイスの IID `iid` 。|
-|`numMethods`|任意。 インターフェイスによって実装されたメソッドの数。|
-|`name`|任意。 コードに表示されるインターフェイスの名前。|
-|`tlbid`|任意。 属性によって指定されたインターフェイスの説明を含むタイプライブラリ `iid` 。|
-|`proxyStubClass32`|任意。 IID を32ビットプロキシ Dll の CLSID にマップします。|
+|`iid`|必須。 このプロキシによってサービスが提供されるインターフェイスの ID (IID)。 IID は中かっこで囲む必要があります。|
+|`baseInterface`|省略可能。 `iid` によって参照されているインターフェイスの派生元であるインターフェイスの IID。|
+|`numMethods`|省略可能。 そのインターフェイスによって実装されているメソッドの数。|
+|`name`|省略可能。 コード内に記述されるインターフェイスの名前。|
+|`tlbid`|省略可能。 `iid` 属性によって指定されたインターフェイスの説明が含まれるタイプ ライブラリ。|
+|`proxyStubClass32`|省略可能。 IID を、32 ビット プロキシ DLL 内の CLSID にマップします。|
 
 ## <a name="cominterfaceproxystub"></a>comInterfaceProxyStub
- 要素は、 `comInterfaceProxyStub` 要素の省略可能な子です `file` が、登録を必要としない [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] com を使用して配置する com コンポーネントがアプリケーションに含まれている場合に必要になることがあります。 要素には、次の属性が含まれています。
+ `comInterfaceProxyStub` 要素は、`file` 要素の省略可能な子ですが、登録を必要としない COM を使用して配置する予定の COM コンポーネントが [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに含まれている場合は、必要とされる可能性があります。 この要素には、以下の属性が含まれています。
 
 |属性|説明|
 |---------------|-----------------|
-|`iid`|必須。 このプロキシによって提供されるインターフェイス ID (IID)。 IID の周囲には中かっこが必要です。|
-|`baseInterface`|任意。 によって参照されるインターフェイスの派生元であるインターフェイスの IID `iid` 。|
-|`numMethods`|任意。 インターフェイスによって実装されたメソッドの数。|
-|`Name`|任意。 コードに表示されるインターフェイスの名前。|
-|`Tlbid`|任意。 属性によって指定されたインターフェイスの説明を含むタイプライブラリ `iid` 。|
-|`proxyStubClass32`|任意。 IID を32ビットプロキシ Dll の CLSID にマップします。|
-|`threadingModel`|任意。 任意。 インプロセス COM クラスによって使用されるスレッドモデル。 このプロパティが null の場合、スレッドモデルは使用されません。 コンポーネントはクライアントのメインスレッドで作成され、他のスレッドからの呼び出しはこのスレッドにマーシャリングされます。 有効な値を次の一覧に示します。<br /><br /> `Apartment`、`Free`、`Both`、`Neutral`。|
+|`iid`|必須。 このプロキシによってサービスが提供されるインターフェイスの ID (IID)。 IID は中かっこで囲む必要があります。|
+|`baseInterface`|省略可能。 `iid` によって参照されているインターフェイスの派生元であるインターフェイスの IID。|
+|`numMethods`|省略可能。 そのインターフェイスによって実装されているメソッドの数。|
+|`Name`|省略可能。 コード内に記述されるインターフェイスの名前。|
+|`Tlbid`|省略可能。 `iid` 属性によって指定されたインターフェイスの説明が含まれるタイプ ライブラリ。|
+|`proxyStubClass32`|省略可能。 IID を、32 ビット プロキシ DLL 内の CLSID にマップします。|
+|`threadingModel`|省略可能。 省略可能。 インプロセス COM クラスによって使用されるスレッド モデル。 このプロパティが null の場合、スレッド モデルは使用されません。 コンポーネントはクライアントのメイン スレッドで作成され、他のスレッドからの呼び出しはこのスレッドにマーシャリングされます。 次の一覧に有効な値を示します。<br /><br /> `Apartment`、`Free`、`Both`、`Neutral`。|
 
 ## <a name="windowclass"></a>windowClass
- 要素は、 `windowClass` 要素の省略可能な子です `file` が、登録を必要としない [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] com を使用して配置する com コンポーネントがアプリケーションに含まれている場合に必要になることがあります。 要素は、バージョンが適用されている必要のある COM コンポーネントによって定義されたウィンドウクラスを参照します。 要素には、次の属性が含まれています。
+ `windowClass` 要素は、`file` 要素の省略可能な子ですが、登録を必要としない COM を使用して配置する予定の COM コンポーネントが [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションに含まれている場合は、必要とされる可能性があります。 この要素は、バージョンが適用されている必要のある COM コンポーネントによって定義されているウィンドウ クラスを参照します。 この要素には、以下の属性が含まれています。
 
 |属性|説明|
 |---------------|-----------------|
-|`versioned`|任意。 登録に使用される内部ウィンドウクラスの名前に、ウィンドウクラスを含むアセンブリのバージョンが含まれているかどうかを制御します。 この属性の値には、 `yes` またはを指定でき `no` ます。 既定値は、`yes` です。 値を `no` 使用できるのは、同じウィンドウクラスがサイドバイサイドコンポーネントと同等ではないコンポーネントによって定義されていて、それらを同じウィンドウクラスとして扱う場合だけです。 ウィンドウクラスの登録に関する通常の規則が適用されることに注意してください。ウィンドウクラスを登録する最初のコンポーネントのみが、バージョンが適用されていないため、登録できます。|
+|`versioned`|省略可能。 登録に使用される内部ウィンドウ クラスの名前に、そのウィンドウ クラスを含むアセンブリのバージョンを含めるかどうかを制御します。 この属性の値は `yes` または `no` にできます。 既定値は、`yes` です。 値 `no` は、同じウィンドウ クラスが、サイドバイサイド コンポーネントおよび同等の非サイドバイサイド コンポーネントによって定義されていて、それらを同じウィンドウ クラスとして扱う場合にのみ使用する必要があります。 ウィンドウ クラスの登録に関する通常の規則が適用されることに注意してください。ウィンドウ クラスを登録する最初のコンポーネントには、バージョンが適用されていないため、そのコンポーネントでのみ登録が可能です。|
 
 ## <a name="hash"></a>hash
- 要素は、 `hash` 要素の省略可能な子です `file` 。 `hash` 要素に属性はありません。
+ `hash` 要素は、`file` 要素の省略可能な子です。 `hash` 要素に属性はありません。
 
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] は、アプリケーション内のすべてのファイルのアルゴリズムハッシュをセキュリティチェックとして使用して、展開後にファイルが変更されていないことを確認します。 `hash`要素が含まれていない場合、このチェックは実行されません。 そのため、要素を省略する `hash` ことは推奨されません。
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、アプリケーション内のすべてのファイルのアルゴリズム ハッシュをセキュリティ チェックとして使用し、配置後にどのファイルも変更されていないことを確認します。 `hash` 要素が含まれていない場合、このチェックは実行されません。 そのため、`hash` 要素を省略することはお勧めできません。
 
- ハッシュされていないファイルがマニフェストに含まれている場合、ユーザーはハッシュされていないファイルの内容を確認できないため、そのマニフェストにデジタル署名することはできません。
+ マニフェストにハッシュされていないファイルが含まれている場合、ユーザーはハッシュされていないファイルの内容を検証できないため、そのマニフェストにはデジタル署名できません。
 
 ## <a name="dsigtransforms"></a>dsig:Transforms
- 要素は、 `dsig:Transforms` 要素の必須の子です `hash` 。 `dsig:Transforms` 要素に属性はありません。
+ `dsig:Transforms` 要素は、`hash` 要素の必須の子です。 `dsig:Transforms` 要素に属性はありません。
 
 ## <a name="dsigtransform"></a>dsig:Transform
- 要素は、 `dsig:Transform` 要素の必須の子です `dsig:Transforms` 。 `dsig:Transform` 要素には、次の属性があります。
+ `dsig:Transform` 要素は、`dsig:Transforms` 要素の必須の子です。 `dsig:Transform` 要素には、次の属性があります。
 
 | 属性 | 説明 |
 |-------------| - |
-| `Algorithm` | このファイルのダイジェストの計算に使用されるアルゴリズム。 現在、で使用されている値 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] はのみ `urn:schemas-microsoft-com:HashTransforms.Identity` です。 |
+| `Algorithm` | このファイルのダイジェストの計算に使用されるアルゴリズム。 現在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] によって使用されている値は `urn:schemas-microsoft-com:HashTransforms.Identity` のみです。 |
 
-## <a name="dsigdigestmethod"></a>dsig: DigestMethod
- 要素は、 `dsig:DigestMethod` 要素の必須の子です `hash` 。 `dsig:DigestMethod` 要素には、次の属性があります。
+## <a name="dsigdigestmethod"></a>dsig:DigestMethod
+ `dsig:DigestMethod` 要素は、`hash` 要素の必須の子です。 `dsig:DigestMethod` 要素には、次の属性があります。
 
 | 属性 | 説明 |
 |-------------| - |
-| `Algorithm` | このファイルのダイジェストの計算に使用されるアルゴリズム。 現在、で使用されている値 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] はのみ `http://www.w3.org/2000/09/xmldsig#sha1` です。 |
+| `Algorithm` | このファイルのダイジェストの計算に使用されるアルゴリズム。 現在 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] によって使用されている値は `http://www.w3.org/2000/09/xmldsig#sha1` のみです。 |
 
 ## <a name="dsigdigestvalue"></a>dsig:DigestValue
- 要素は、 `dsig:DigestValue` 要素の必須の子です `hash` 。 `dsig:DigestValue` 要素に属性はありません。 テキスト値は、指定されたファイルの計算済みハッシュです。
+ `dsig:DigestValue` 要素は、`hash` 要素の必須の子です。 `dsig:DigestValue` 要素に属性はありません。 そのテキスト値は、指定されたファイルについて計算されたハッシュです。
 
 ## <a name="remarks"></a>解説
- この要素は、アプリケーションを構成するすべての非アセンブリファイルと、特にファイル検証のハッシュ値を識別します。 この要素には、ファイルに関連付けられているコンポーネントオブジェクトモデル (COM) 分離データを含めることもできます。 ファイルが変更された場合は、アプリケーションマニフェストファイルを更新して変更を反映する必要もあります。
+ この要素では、アプリケーションを構成するすべての非アセンブリ ファイルと、特に、ファイル検証のためのハッシュ値が識別されます。 この要素には、ファイルに関連付けられているコンポーネント オブジェクト モデル (COM) 分離データを含めることもできます。 ファイルが変更された場合は、変更を反映するため、アプリケーション マニフェスト ファイルも更新する必要があります。
 
 ## <a name="example"></a>例
- 次のコード例は、 `file` を使用して配置されたアプリケーションのアプリケーションマニフェストの要素を示してい [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。
+ 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を使用して配置されるアプリケーションのアプリケーション マニフェスト内にある `file` 要素を示しています。
 
 ```xml
 <file name="Icon.ico" size="9216">
@@ -201,4 +201,4 @@ ms.locfileid: "99895090"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

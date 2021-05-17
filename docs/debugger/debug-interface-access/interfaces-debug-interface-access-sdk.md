@@ -1,7 +1,8 @@
-﻿---
-title: インターフェイス (Debug Interface Access SDK) |Microsoft Docs
+---
+description: メソッドは、目次ではインターフェイスごとにアルファベット順に、インターフェイス ページでは Vtable の順に一覧表示されています。
+title: インターフェイス (Debug Interface Access SDK) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -10,116 +11,116 @@ helpviewer_keywords:
 ms.assetid: 62aee7c3-d314-4272-a32b-b2818f32fab8
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a0aa48ae0d3c3b6b05ea469baea1a1e1aa106667
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 3d827e688e7618ebf66842eb4e633acdb483aa4f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738695"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634570"
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>インターフェイス (Debug Interface Access SDK)
-メソッドは、目次の各インターフェイスの下にアルファベット順に一覧表示され、Vtable の順序でインターフェイスページに表示されます。
+メソッドは、目次ではインターフェイスごとにアルファベット順に、インターフェイス ページでは Vtable の順に一覧表示されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 
-DIA SDK がデバッグオブジェクトの仮想および相対仮想アドレスを計算する方法を制御します。
+DIA SDK でデバッグ オブジェクトの仮想アドレスと相対仮想アドレスを計算する方法を制御します。
 
 [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)
 
-デバッグシンボルのソースへのアクセスを開始します。
+デバッグ シンボルのソースへのアクセスを開始します。
 
 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)
 
-デバッグデータストリーム内のレコードへのアクセスを提供します。
+デバッグ データ ストリーム内のレコードへのアクセスを提供します。
 
 [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)
 
-データソースに格納されているさまざまなデバッグストリームを列挙します。
+データ ソースに含まれているさまざまなデバッグ ストリームを列挙します。
 
 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
-データソースに格納されているさまざまなフレームデータ要素を列挙します。
+データ ソースに含まれているさまざまなフレームデータ要素を列挙します。
 
 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)
 
-データソースに格納されている、挿入されたさまざまなソースを列挙します。
+データ ソースに含まれているさまざまな挿入されたソースを列挙します。
 
 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
 
-データソースに格納されているさまざまな行番号を列挙します。
+データ ソースに含まれているさまざまな行番号を列挙します。
 
 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)
 
-データソースに格納されているさまざまなセクションの投稿を列挙します。
+データ ソースに含まれているさまざまなセクション コントリビューションを列挙します。
 
 [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)
 
-データソースに格納されているさまざまなセグメントを列挙します。
+データ ソースに含まれているさまざまなセグメントを列挙します。
 
 [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)
 
-データソースに格納されているさまざまなソースファイルを列挙します。
+データ ソースに含まれているさまざまなソース ファイルを列挙します。
 
 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)
 
-使用可能なさまざまなスタックフレームを列挙します。
+使用可能なさまざまなスタック フレームを列挙します。
 
 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
-データソースに格納されているさまざまなシンボルを列挙します。
+データ ソースに含まれているさまざまなシンボルを列挙します。
 
 [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)
 
-データソースに格納されているさまざまなシンボルをアドレスで列挙します。
+データ ソースに含まれているさまざまなシンボルをアドレスで列挙します。
 
 [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)
 
-データソースに格納されているさまざまなテーブルを列挙します。
+データ ソースに含まれているさまざまなテーブルを列挙します。
 
 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)
 
-スタックフレームの詳細を公開します。
+スタック フレームの詳細を公開します。
 
 [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)
 
-モジュールまたはイメージのベースの位置とメモリオフセットの詳細を公開します。
+モジュールまたはイメージの基本場所とメモリ オフセットの詳細を公開します。
 
 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)
 
-DIA データソースに格納されているプログラムのソースコードにアクセスします。
+DIA データ ソースに格納されているプログラム ソース コードにアクセスします。
 
 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)
 
-イメージテキストのバイトブロックからソースファイルの行番号へのマッピングプロセスを説明する情報にアクセスします。
+イメージ テキストのバイト ブロックをソース ファイルの行番号にマップするプロセスを記述する情報にアクセスします。
 
 [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md)
 
-DIA シンボル検索プロシージャからコールバックを受信します。これにより、ユーザーインターフェイスは、場所の試行の進行状況についてレポートすることができます。
+DIA シンボル検索プロシージャからコールバックを受け取ることにより、検索試行の進行状況についてユーザー インターフェイスで報告できるようにします。
 
 [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 
-DIA シンボル検索プロシージャからコールバックを受信し、特定のプロセスに制限を適用できるようにします。
+DIA シンボル検索プロシージャからコールバックを受け取ることにより、検索プロセスに制限を適用できるようにします。
 
 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
 
-DIA プロパティセットの永続的なプロパティを読み取ることができます。
+DIA プロパティ セットの永続的なプロパティを読み取ることができます。
 
 [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)
 
-クライアントアプリケーションが、ファイルの位置によって指定された実行可能ファイルのバイトを提供できるようにします。
+クライアント アプリケーションで、ファイル位置によって指定された実行可能ファイルのバイトを提供できるようにします。
 
 [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)
 
-クライアントアプリケーションが、相対仮想アドレスによって指定された実行可能ファイルのバイトを提供できるようにします。
+クライアント アプリケーションで、相対仮想アドレスによって指定された実行可能ファイルのバイトを提供できるようにします。
 
 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)
 
-セクションの貢献度、つまりコンパイル単位によってイメージに対して提供される連続するメモリブロックを記述するデータを取得します。
+セクション コントリビューション (つまり、コンパイル単位がイメージに寄与している連続するメモリ ブロック) を記述するデータを取得します。
 
 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)
 
@@ -127,40 +128,40 @@ DIA プロパティセットの永続的なプロパティを読み取ること�
 
 [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 
-デバッグシンボルのクエリコンテキストを提供します。
+デバッグ シンボルのクエリ コンテキストを提供します。
 
 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)
 
-ソースファイルを表します。
+ソース ファイルを表します。
 
 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)
 
-スタックフレームのプロパティを公開します。
+スタック フレームのプロパティを公開します。
 
 [IDiaStackWalker](../../debugger/debug-interface-access/idiastackwalker.md)
 
-PDB ファイルを使用してスタックウォークを実行するメソッドを提供します。
+PDB ファイルを使用してスタック ウォークを実行するメソッドを提供します。
 
 [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)
 
-[IDiaFrameData:: execute](../../debugger/debug-interface-access/idiaframedata-execute.md)メソッドの呼び出し間でスタックコンテキストを保持します。
+[IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md) メソッドの呼び出し間でスタック コンテキストを保持します。
 
 [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
 
-プログラムデバッグデータベース (PDB) ファイルを使用して、スタックのウォークを容易にします。
+プログラム デバッグ データベース (PDB) ファイルを使用してスタック ウォークを容易にします。
 
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 
-シンボルインスタンスのプロパティについて説明します。
+シンボル インスタンスのプロパティを記述します。
 
 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)
 
-DIA データソーステーブルを列挙します。
+DIA データ ソース テーブルを列挙します。
 
 ## <a name="related-sections"></a>関連項目
 [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)
 
-DIA SDK のさまざまなインターフェイスによって使用される列挙体と構造体について説明します。
+DIA SDK のさまざまなインターフェイスで使用される列挙型と構造体について説明します。
 
 [定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 

@@ -1,6 +1,6 @@
 ---
 title: オブジェクトからデータベースにデータを保存する
-description: Visual Studio のデータセットツールを使用して、オブジェクトのデータをデータベースに保存します。 「新しいレコードを保存する方法」、「既存のレコードを更新する」、および「既存のレコードを削除する」を参照してください。
+description: Visual Studio の DataSet ツールを使用して、オブジェクトのデータをデータベースに保存します。 新しいレコードを保存する、既存のレコードを更新する、および既存のレコードを削除する方法を参照してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,64 +19,64 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 50debf24fa691ba74d082543b1c0bb1a27b5786e
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106215787"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>オブジェクトからデータベースにデータを保存する
 
-オブジェクトの値を TableAdapter の DBDirect メソッドの1つ (たとえば、) に渡すことによって、オブジェクトのデータをデータベースに保存でき `TableAdapter.Insert` ます。 詳細については、「 [TableAdapter](../data-tools/create-and-configure-tableadapters.md)」を参照してください。
+オブジェクト内のデータをデータベースに保存するには、オブジェクトから TableAdapter のいずれかの DBDirect メソッド (`TableAdapter.Insert` など) に値を渡します。 詳細については、[TableAdapter](../data-tools/create-and-configure-tableadapters.md) に関するページを参照してください。
 
-オブジェクトのコレクションからデータを保存するには、オブジェクトのコレクションをループ処理し (たとえば、for-next ループ)、TableAdapter のメソッドのいずれかを使用して、各オブジェクトの値をデータベースに送信し `DBDirect` ます。
+オブジェクトのコレクションのデータを保存するには、オブジェクトのコレクションをループ処理し (for-next ループなど)、TableAdapter のいずれかの `DBDirect` メソッドを使用して、各オブジェクトの値をデータベースに送信します。
 
-既定で `DBDirect` は、データベースに対して直接実行できる TableAdapter にメソッドが作成されます。 これらのメソッドは直接呼び出すことができ <xref:System.Data.DataSet> 、 <xref:System.Data.DataTable> 更新をデータベースに送信するために、またはオブジェクトによる変更の調整を必要としません。
+既定で `DBDirect` メソッドは、データベースに対して直接実行できる TableAdapter に作成されます。 これらのメソッドは直接呼び出すことができ、更新をデータベースに送信するために、変更を調整する <xref:System.Data.DataSet> または <xref:System.Data.DataTable> オブジェクトを必要としません。
 
 > [!NOTE]
-> TableAdapter を構成する場合、メインクエリでは、メソッドを作成するための十分な情報を提供する必要があり `DBDirect` ます。 たとえば、主キー列が定義されていないテーブルのデータをクエリするように TableAdapter が構成されている場合、メソッドは生成されません `DBDirect` 。
+> TableAdapter を構成する場合、メイン クエリでは、`DBDirect` メソッドを作成するための十分な情報を提供する必要があります。 たとえば、主キー列が定義されていないテーブルのデータをクエリするように TableAdapter が構成されている場合、`DBDirect` メソッドは生成されません。
 
 |TableAdapter DBDirect メソッド|説明|
 | - |-----------------|
-|`TableAdapter.Insert`|データベースに新しいレコードを追加し、個々の列の値をメソッドのパラメーターとして渡すことができるようにします。|
-|`TableAdapter.Update`|データベース内の既存のレコードを更新します。 メソッドは、 `Update` 元の列と新しい列の値をメソッドのパラメーターとして受け取ります。 元の値は元のレコードを検索するために使用され、新しい値はそのレコードを更新するために使用されます。<br /><br /> `TableAdapter.Update`メソッドは、 <xref:System.Data.DataSet> <xref:System.Data.DataTable> <xref:System.Data.DataRow> <xref:System.Data.DataRow> メソッドパラメーターとして、、、またはの配列を取得することによって、データセットの変更をデータベースに戻すためにも使用されます。|
-|`TableAdapter.Delete`|メソッドパラメーターとして渡された元の列の値に基づいて、データベースから既存のレコードを削除します。|
+|`TableAdapter.Insert`|データベースに新しいレコードを追加し、個々の列の値をメソッド パラメーターとして渡せるようにします。|
+|`TableAdapter.Update`|データベースの既存のレコードを更新します。 `Update` メソッドは、元の列と新しい列の値をメソッドのパラメーターとして受け取ります。 元の値は元のレコードを検索するために使用され、新しい値はそのレコードを更新するために使用されます。<br /><br /> `TableAdapter.Update` メソッドは、<xref:System.Data.DataSet>、<xref:System.Data.DataTable>、<xref:System.Data.DataRow>、または <xref:System.Data.DataRow> の配列をメソッド パラメーターとして受け取り、データベースに戻されるデータセット内の変更を調整するためにも使用されます。|
+|`TableAdapter.Delete`|メソッド パラメーターとして渡された元の列の値に基づいて、データベースから既存のレコードを削除します。|
 
-## <a name="to-save-new-records-from-an-object-to-a-database"></a>オブジェクトからデータベースに新しいレコードを保存するには
+## <a name="to-save-new-records-from-an-object-to-a-database"></a>オブジェクトの新しいレコードをデータベースに保存するには
 
-- 値をメソッドに渡すことで、レコードを作成し `TableAdapter.Insert` ます。
+- 値を `TableAdapter.Insert` メソッドに渡して、レコードを作成します。
 
-     次の例では、オブジェクトの値を `Customers` メソッドに渡すことによって、テーブルに新しい顧客レコードを作成し `currentCustomer` `TableAdapter.Insert` ます。
+     次の例では、`currentCustomer` オブジェクトの値を `TableAdapter.Insert` メソッドに渡すことによって、`Customers` テーブルに新しい顧客レコードを作成し ます。
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet23":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet23":::
 
 ## <a name="to-update-existing-records-from-an-object-to-a-database"></a>オブジェクトの既存のレコードをデータベースに更新するには
 
-- メソッドを呼び出してレコードを変更 `TableAdapter.Update` し、新しい値を渡してレコードを更新し、元の値を渡してレコードを検索します。
+- `TableAdapter.Update` メソッドを呼び出し、レコードを更新するための新しい値を渡し、レコードを検索するための元の値を渡して、レコードを変更します。
 
     > [!NOTE]
-    > オブジェクトは、メソッドに渡すために元の値を保持する必要があり `Update` ます。 この例では、プレフィックスを持つプロパティを使用して `orig` 、元の値を格納します。
+    > オブジェクトでは、`Update` メソッドに渡すために元の値を保持する必要があります。 この例では、`orig` プレフィックスを持つプロパティを使用して、元の値を格納しています。
 
-     次の例では、 `Customers` オブジェクトの新しい値と元の値をメソッドに渡すことによって、テーブル内の既存のレコードを更新し `Customer` `TableAdapter.Update` ます。
+     次の例では、`Customer` オブジェクトの新しい値と元の値を `TableAdapter.Update` メソッドに渡すことによって、`Customers` テーブル内の既存のレコードを更新しています。
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet24":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet24":::
 
 ## <a name="to-delete-existing-records-from-a-database"></a>データベースから既存のレコードを削除するには
 
-- レコードを削除するには、メソッドを呼び出し、 `TableAdapter.Delete` 元の値を渡してレコードを検索します。
+- レコードを削除するには、`TableAdapter.Delete` メソッドを呼び出し、レコードを検索するための元の値を渡します。
 
     > [!NOTE]
-    > オブジェクトは、メソッドに渡すために元の値を保持する必要があり `Delete` ます。 この例では、プレフィックスを持つプロパティを使用して `orig` 、元の値を格納します。
+    > オブジェクトでは、`Delete` メソッドに渡すために元の値を保持する必要があります。 この例では、`orig` プレフィックスを持つプロパティを使用して、元の値を格納しています。
 
-     次の例では、オブジェクトの `Customers` 元の値をメソッドに渡して、テーブルからレコードを削除し `Customer` `TableAdapter.Delete` ます。
+     次の例では、`Customer` オブジェクトの元の値を `TableAdapter.Delete` メソッドに渡すことによって、`Customers` テーブルからレコードを削除しています。
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form3.cs" id="Snippet25":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form3.vb" id="Snippet25":::
 
 ## <a name="net-security"></a>.NET セキュリティ
 
-データベースのテーブルで、選択した `INSERT` 、、またはを実行する権限が必要 `UPDATE` `DELETE` です。
+データベースのテーブルに対して、選択した `INSERT`、`UPDATE`、または `DELETE` を実行するアクセス許可が必要です。
 
 ## <a name="see-also"></a>関連項目
 

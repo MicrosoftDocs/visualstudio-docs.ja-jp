@@ -1,6 +1,6 @@
 ---
-description: には、ブレークポイントを設定するときに追加情報を指定するために使用できるオプションのフラグが用意されています。
-title: BP_FLAGS |Microsoft Docs
+description: ブレークポイントを設定するときに追加情報を指定するために使用できるオプションのフラグを指定します。
+title: BP_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 8e35e0b219bb77ce722f2e06a260de7ecc837dfb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085326"
 ---
 # <a name="bp_flags"></a>BP_FLAGS
-には、ブレークポイントを設定するときに追加情報を指定するために使用できるオプションのフラグが用意されています。
+ブレークポイントを設定するときに追加情報を指定するために使用できるオプションのフラグを指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BP_FLAGS {
@@ -47,23 +47,23 @@ public enum enum_BP_FLAGS {
 
 ## <a name="fields"></a>フィールド
 `BP_FLAG_NONE`\
-ブレークポイントフラグを指定しません。
+ブレークポイントのフラグを指定しません。
 
 `BP_FLAG_MAP_DOCPOSITION`\
-デバッグエンジン (DE) がドキュメントの位置を使用してブレークポイントをマップするように指定します。 これは、Active Server ページ (ASP) などのスクリプト指向のソースファイルに設定されているブレークポイントにのみ適用できます。
+デバッグ エンジン (DE) でドキュメントの位置を使用してブレークポイントをマップするように指定します。 これは、Active Server Pages (ASP) などのスクリプト指向のソース ファイルに設定されているブレークポイントにのみ適用できます。
 
 `BP_FLAG_DONT_STOP`\
-ブレークポイントがデバッグエンジンによって処理される必要があることを指定します。ただし、デバッグエンジンは、最終的にはそれを停止しないようにする必要があります (つまり、 [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) イベントオブジェクトを送信することはできません)。 このフラグは、主にトレースポイントで使用されるように設計されています。
+デバッグ エンジンによってブレークポイントが処理されるように指定するが、デバッグ エンジンが最終的にそこで停止しないようにします (つまり、[IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) イベント オブジェクトを送信することはできません)。 このフラグは、主にトレースポイントで使用されるように設計されています。
 
-## <a name="remarks"></a>注釈
-`dwFlags` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)および[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造体のメンバーに使用されます。
+## <a name="remarks"></a>解説
+[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) および [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体の `dwFlags` メンバーに使用されます。
 
-これらの値は、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらの値は、ビットごとの `OR` で組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

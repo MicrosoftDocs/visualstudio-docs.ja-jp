@@ -1,7 +1,8 @@
 ---
-title: IDiaEnumFrameData |Microsoft Docs
+description: データ ソースに含まれているさまざまなフレームデータ要素を列挙します。
+title: IDiaEnumFrameData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,47 +10,47 @@ helpviewer_keywords:
 ms.assetid: 2ca7fd5a-b2fa-4b3a-9492-0263eafc435b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e20fa21d739c79dad94a8445f6d0fe811337fd40
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 0bd1ca95e2f7377c00548658634cbf1e2993e3d8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744564"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634949"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
-データソースに格納されているさまざまなフレームデータ要素を列挙します。
+データ ソースに含まれているさまざまなフレームデータ要素を列挙します。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaEnumFrameData : IUnknown
+IDiaEnumFrameData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaEnumFrameData` のメソッドを示しています。
+次の表に、`IDiaEnumFrameData` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
 |[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|この列挙子の `IEnumVARIANT Interface` バージョンを取得します。|
-|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|フレームデータ要素の数を取得します。|
-|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|インデックスを使って、フレームデータ要素を取得します。|
-|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|列挙シーケンス内の指定された数のフレームデータ要素を取得します。|
-|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|列挙シーケンス内の指定された数のフレームデータ要素をスキップします。|
-|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|列挙シーケンスを先頭にリセットします。|
+|[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|フレーム データ要素の数を取得します。|
+|[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|インデックスを使ってフレーム データ要素を取得します。|
+|[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|列挙シーケンス内の指定された数のフレーム データ要素を取得します。|
+|[IDiaEnumFrameData::Skip](../../debugger/debug-interface-access/idiaenumframedata-skip.md)|列挙シーケンス内の指定された数のフレーム データ要素をスキップします。|
+|[IDiaEnumFrameData::Reset](../../debugger/debug-interface-access/idiaenumframedata-reset.md)|列挙型シーケンスを先頭にリセットします。|
 |[IDiaEnumFrameData::Clone](../../debugger/debug-interface-access/idiaenumframedata-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|
 |[IDiaEnumFrameData::frameByRVA](../../debugger/debug-interface-access/idiaenumframedata-framebyrva.md)|相対仮想アドレス (RVA) でフレームを返します。|
 |[IDiaEnumFrameData::frameByVA](../../debugger/debug-interface-access/idiaenumframedata-framebyva.md)|仮想アドレス (VA) でフレームを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-[IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)メソッドからこのインターフェイスを取得します。 詳細については、例を参照してください。
+このインターフェイスは [IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) メソッドから取得します。 詳細についての例を参照してください。
 
 ## <a name="example"></a>例
-この例では、(`GetEnumFrameData` 関数) を取得し、`IDiaEnumFrameData` インターフェイスで (`ShowFrameData` 関数) を使用する方法を示します。 @No__t_1 関数の例については、 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)インターフェイスを参照してください。
+この例では、`IDiaEnumFrameData` インターフェイスを取得する方法 (`GetEnumFrameData` 関数) と使用する方法 (`ShowFrameData` 関数) を示します。 `PrintFrameData` 関数の例については、[IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) インターフェイスを参照してください。
 
 ```C++
 
@@ -100,12 +101,12 @@ void ShowFrameData(IDiaSession *pSession)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-**ヘッダー:** Dia2
+## <a name="requirements"></a>必要条件
+**ヘッダー:** Dia2.h
 
-**ライブラリ:** diaguids
+**ライブラリ:** diaguids.lib
 
-**Dll:** msdia80
+**DLL:** msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

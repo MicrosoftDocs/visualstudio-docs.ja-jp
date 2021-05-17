@@ -1,6 +1,6 @@
 ---
 title: ADO.NET を使用した単純なデータ アプリケーションの作成
-description: Visual Studio で Windows フォームと ADO.NET を使用して、簡単なフォーム対データアプリケーションを作成する方法について説明します。
+description: Visual Studio で Windows フォームと ADO.NET を使用して、単純なフォーム ツー データ アプリケーションを作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
@@ -15,53 +15,53 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: c499e36b7ee6bb15980fe89c6185a105681d4d05
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106216502"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET を使用した単純なデータ アプリケーションの作成
 
-データベースのデータを処理するアプリケーションの作成では、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual C# または Visual Basic と ADO.NET を使用して、単純な Windows フォーム "フォームオーバーデータ" アプリケーション内からデータベースと対話する方法について説明します。  データセット、LINQ to SQL、Entity Framework を含むすべての .NET データテクノロジは、最終的にこの記事に記載されている手順とよく似た手順を実行します。
+データベースのデータを処理するアプリケーションの作成では、接続文字列の定義、データの挿入、ストアド プロシージャの実行などの基本的なタスクを実行します。 このトピックでは、Visual C# または Visual Basic と ADO.NET を使用して、単純な Windows フォームの "フォーム オーバー データ" アプリケーション内からデータベースと対話する方法について説明します。  データセット、LINQ to SQL、Entity Framework を含むすべての .NET データ テクノロジでは、最終的にこの記事に記載されている手順とよく似た手順を実行します。
 
-この記事では、迅速な方法でデータベースからデータを取得する簡単な方法を示します。 アプリケーションで単純な方法でデータを変更し、データベースを更新する必要がある場合は、Entity Framework を使用し、データバインディングを使用して、基になるデータの変更にユーザーインターフェイスコントロールを自動的に同期することを検討してください。
+この記事では、迅速な方法でデータベースからデータを取得する簡単な方法を示します。 アプリケーションで複雑な方法でデータを変更し、データベースを更新する必要がある場合は、Entity Framework の使用や、データ バインディングを使用して、基になるデータの変更にユーザー インターフェイス コントロールを自動的に同期することを検討してください。
 
 > [!IMPORTANT]
 > コードをシンプルにするため、運用環境で使用する例外処理は含まれていません。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 アプリケーションの作成には、次が必要です:
 
 - 見ることができます。
 
-- SQL Server Express LocalDB。 SQL Server Express LocalDB をお持ちでない場合は、 [SQL Server Express ダウンロードページ](https://www.microsoft.com/sql-server/sql-server-editions-express)からインストールできます。
+- SQL Server Express LocalDB。 SQL Server Express LocalDB がない場合は、[SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)からインストールできます。
 
-このトピックでは、Visual Studio IDE の基本的な機能について理解していること、Windows フォームアプリケーションを作成する方法、プロジェクトにフォームを追加する方法、フォームにボタンやその他のコントロールを配置する方法、コントロールのプロパティを設定する方法、およびコード単純なイベントを使用する方法について説明します。 これらのタスクに慣れていない場合は、このチュートリアルを開始する前に、「 [Visual C# の概要と Visual Basic](../ide/quickstart-visual-basic-console.md) 」のトピックを完了することをお勧めします。
+このトピックは、Visual Studio IDE の基本的な機能を理解していて、Windows フォーム アプリケーションの作成、そのプロジェクトへのフォームの追加、フォームへのボタンなどのコントロールの追加、コントロールのプロパティの設定、およびシンプルなイベントのコード記述ができることを前提としています。 これらのタスクに慣れていない場合は、このチュートリアルを開始する前に、[Visual C# と Visual Basic の概要](../ide/quickstart-visual-basic-console.md)に関するトピックを完了することをお勧めします。
 
 ## <a name="set-up-the-sample-database"></a>サンプル データベースを設定する
 
-次の手順に従って、サンプルデータベースを作成します。
+次の手順に従ってサンプル データベースを作成します。
 
-1. Visual Studio で、[ **サーバーエクスプローラー** ] ウィンドウを開きます。
+1. Visual Studio で、 **[サーバー エクスプローラー]** ウィンドウを開きます。
 
-2. [ **データ接続** ] を右クリックし、[ **新しい SQL Server データベースの作成**] を選択します。
+2. **[データ接続]** を右クリックし、 **[新しい SQL Server データベースの作成]** を選択します。
 
-3. [ **サーバー名** ] ボックスに「 **(localdb) \mssqllocaldb**」と入力します。
+3. **[サーバー名]** テキスト ボックスに「 **(localdb)\mssqllocaldb**」と入力します。
 
-4. [ **新しいデータベース名** ] ボックスに「 **Sales**」と入力し、[ **OK]** を選択します。
+4. **[新しいデータベース名]** テキスト ボックスに「**Sales**」と入力し、 **[OK]** を選択します。
 
-     空の **Sales** データベースが作成され、サーバーエクスプローラーの [データ接続] ノードに追加されます。
+     空の **Sales** データベースが作成され、サーバー エクスプローラーの [データ接続] ノードに追加されます。
 
-5. **Sales** data 接続を右クリックし、[**新しいクエリ**] を選択します。
+5. **Sales** データ接続を右クリックし、 **[新しいクエリ]** を選択します。
 
-     クエリエディターウィンドウが開きます。
+     クエリ エディター ウィンドウが開きます。
 
-6. [Sales transact-sql スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql)をクリップボードにコピーします。
+6. [Sales Transact-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql)をクリップボードにコピーします。
 
-7. T-sql スクリプトをクエリエディターに貼り付け、[ **実行** ] ボタンをクリックします。
+7. T-SQL スクリプトをクエリ エディターに貼り付け、 **[実行]** ボタンを選択します。
 
-     しばらくすると、クエリの実行が完了し、データベースオブジェクトが作成されます。 データベースには、Customer と Orders という2つのテーブルが含まれています。 これらのテーブルにはデータが含まれていませんが、作成するアプリケーションを実行するときにデータを追加できます。 データベースには、4つの単純なストアドプロシージャも含まれています。
+     しばらくすると、クエリの実行が完了し、データベース オブジェクトが作成されます。 データベースには、Customer と Orders という 2 つのテーブルが含まれています。 最初はテーブルにデータはありませんが、作成したアプリケーションを実行してデータを追加できます。 データベースには、4 種類のシンプルなストアド プロシージャもあります。
 
 ## <a name="create-the-forms-and-add-controls"></a>フォームを作成してコントロールを追加する
 
@@ -86,63 +86,63 @@ ms.locfileid: "106216502"
 
    ![ナビゲーション ダイアログ ボックス](../data-tools/media/simpleappnav.png)
 
-|Navigation フォームのコントロール|Properties|
+|Navigation フォームのコントロール|プロパティ|
 | - |----------------|
-|Button|Name = btnGoToAdd|
-|Button|Name = btnGoToFillOrCancel|
-|Button|Name = btnExit|
+|ボタン|Name = btnGoToAdd|
+|ボタン|Name = btnGoToFillOrCancel|
+|ボタン|Name = btnExit|
 
 **NewCustomer フォーム**
 
 ![新しい顧客を追加して注文を作成する](../data-tools/media/simpleappnewcust.png)
 
-|NewCustomer フォームのコントロール|Properties|
+|NewCustomer フォームのコントロール|プロパティ|
 | - |----------------|
 |TextBox|Name = txtCustomerName|
 |TextBox|Name = txtCustomerID<br /><br /> Readonly = True|
-|Button|Name = btnCreateAccount|
+|ボタン|Name = btnCreateAccount|
 |NumericUpdown|DecimalPlaces = 0<br /><br /> Maximum = 5000<br /><br /> Name = numOrderAmount|
 |DateTimePicker|Format = Short<br /><br /> Name = dtpOrderDate|
-|Button|Name = btnPlaceOrder|
-|Button|Name = btnAddAnotherAccount|
-|Button|Name = btnAddFinish|
+|ボタン|Name = btnPlaceOrder|
+|ボタン|Name = btnAddAnotherAccount|
+|ボタン|Name = btnAddFinish|
 
 **FillOrCancel フォーム**
 
 ![注文の入力または取り消し](../data-tools/media/simpleappcancelfill.png)
 
-|FillOrCancel フォームのコントロール|Properties|
+|FillOrCancel フォームのコントロール|プロパティ|
 | - |----------------|
 |TextBox|Name = txtOrderID|
-|Button|Name = btnFindByOrderID|
+|ボタン|Name = btnFindByOrderID|
 |DateTimePicker|Format = Short<br /><br /> Name = dtpFillDate|
 |DataGridView|Name = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|
-|Button|Name = btnCancelOrder|
-|Button|Name = btnFillOrder|
-|Button|Name = btnFinishUpdates|
+|ボタン|Name = btnCancelOrder|
+|ボタン|Name = btnFillOrder|
+|ボタン|Name = btnFinishUpdates|
 
 ## <a name="store-the-connection-string"></a>接続文字列を保存する
-アプリケーションがデータベースの接続を開くとき、アプリケーションは接続文字列にアクセスする必要があります。 各フォームに文字列を手動で入力しないようにするには、プロジェクトの *App.config* ファイルに文字列を格納し、アプリケーションの任意の形式からメソッドが呼び出されたときに文字列を返すメソッドを作成します。
+アプリケーションがデータベースの接続を開くとき、アプリケーションは接続文字列にアクセスする必要があります。 各フォームで文字列を手動で入力することを回避するため、プロジェクトの *App.config* ファイルに文字列を保存し、アプリケーションの任意のフォームから呼び出された場合にこの文字列を返すメソッドを作成します。
 
-接続文字列を見つけるには、**サーバーエクスプローラー** で **Sales** データ接続を右クリックし、[**プロパティ**] を選択します。 **ConnectionString** プロパティを見つけ、 **ctrl** + **A** キー、 **ctrl** + **C** キーを使用して、文字列を選択してクリップボードにコピーします。
+接続文字列を見つけるには、**サーバー エクスプローラー** で **Sales** データ接続を右クリックし、 **[プロパティ]** を選択します。 **ConnectionString** プロパティを見つけ、**Ctrl**+**A** キーを使用して文字列を選択し、**Ctrl**+**C** キーを使用してクリップボードにコピーします。
 
-1. C# を使用している場合は、 **ソリューションエクスプローラー** で、プロジェクトの [ **プロパティ** ] ノードを展開し、 **設定** ファイルを開きます。
-    Visual Basic を使用している場合は、 **ソリューションエクスプローラー** で [ **すべてのファイルを表示**] をクリックし、[ **マイプロジェクト** ] ノードを展開して、 **設定の設定** ファイルを開きます。
+1. C# を使用している場合は、**ソリューション エクスプローラー** で、プロジェクトの **[プロパティ]** ノードを展開し、**Settings.settings** ファイルを開きます。
+    Visual Basic を使用している場合は、**ソリューション エクスプローラー** で **[すべてのファイルを表示]** をクリックし、 **[My Project]** ノードを展開して、**Settings.settings** ファイルを開きます。
 
-2. [ **名前** ] 列に「」と入力し `connString` ます。
+2. **[名前]** 列に、「`connString`」と入力します。
 
-3. [ **種類** ] ボックスの一覧で [ **(接続文字列)**] を選択します。
+3. **[種類]** ボックスの一覧にある **[(接続文字列)]** を選択します。
 
-4. [ **スコープ** ] ボックスの一覧で [ **アプリケーション**] を選択します。
+4. **[スコープ]** ボックスの一覧にある **[アプリケーション]** を選択します。
 
-5. [ **値** ] 列に、(引用符を除く) 接続文字列を入力し、変更を保存します。
+5. **[値]** 列に、(引用符を除く) 接続文字列を入力し、変更を保存します。
 
 > [!NOTE]
-> 実際のアプリケーションでは、「 [接続文字列と構成ファイル](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)」で説明されているように、接続文字列を安全に保存する必要があります。
+> 実際のアプリケーションでは、「[接続文字列と構成ファイル](/dotnet/framework/data/adonet/connection-strings-and-configuration-files)」で説明されているように、接続文字列を安全に保存する必要があります。
 
 ## <a name="write-the-code-for-the-forms"></a>フォームのコードを記述する
 
-ここでは、各フォームの機能の概要について説明します。 また、フォーム上のボタンがクリックされたときに、基になるロジックを定義するコードも提供します。
+このセクションでは、各フォームの動作の概要を簡単に説明します。 また、フォーム上のボタンをクリックしたときの内部ロジックを定義するコードも提供します。
 
 ### <a name="navigation-form"></a>Navigation フォーム
 
@@ -152,32 +152,32 @@ Navigation フォームはアプリケーションを実行すると開きます
 
 C# を使用している場合、**ソリューション エクスプローラー** で **Program.cs** を開き、`Application.Run` の行を `Application.Run(new Navigation());` に変更します。
 
-Visual Basic を使用している場合は **ソリューションエクスプローラー** で [**プロパティ**] ウィンドウを開いて [**アプリケーション**] タブを選択し、[**スタートアップフォーム**] の一覧で [ **simpledataapp. ナビゲーション**] を選択します。
+Visual Basic を使用している場合、**ソリューション エクスプローラー** で、 **[プロパティ]** ウィンドウを開き、 **[アプリケーション]** タブを選択して、 **[スタートアップ フォーム]** の一覧から **SimpleDataApp.Navigation** を選択します。
 
-#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベントハンドラーを作成する
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成する
 
-ナビゲーションフォームの3つのボタンをダブルクリックして、空のイベントハンドラーメソッドを作成します。 また、ボタンをダブルクリックすると、デザイナーのコードファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
+Navigation フォームの 3 つのボタンをダブルクリックして、空のイベント ハンドラー メソッドを作成します。 また、ボタンをダブルクリックすると、デザイナーのコード ファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
 
-#### <a name="add-code-for-the-navigation-form-logic"></a>ナビゲーションフォームロジックのコードを追加する
+#### <a name="add-code-for-the-navigation-form-logic"></a>Navigation フォーム ロジックのコードを追加する
 
-ナビゲーションフォームのコードページで、次のコードに示すように、3つのボタンクリックイベントハンドラーのメソッド本体を完成させます。
+Navigation フォームのコード ページで、次のコードに示すように、3 つのボタン クリック イベント ハンドラーのメソッド本体を完成させます。
 
 :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/Navigation.cs" id="Snippet1":::
 :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/Navigation.vb" id="Snippet1":::
 
 ### <a name="newcustomer-form"></a>NewCustomer フォーム
 
-顧客名を入力して [ **アカウントの作成** ] ボタンを選択すると、newcustomer フォームによって顧客アカウントが作成され、SQL Server によって新しい顧客 ID として id 値が返されます。 次に、金額と注文日を指定し、[ **場所の順序** ] ボタンを選択して、新しいアカウントの注文を配置できます。
+顧客名を入力し **[Create Account]** ボタンを選択すると、NewCustomer フォームは、顧客アカウントを作成し、SQL Server は新しい顧客 ID として IDENTITY 値を返します。 数量と注文日を指定して **[Place Order]** ボタンを選択すると、この新しいアカウントの注文を設定できます。
 
-#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベントハンドラーを作成する
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成する
 
-4つの各ボタンをダブルクリックして、NewCustomer フォームの各ボタンに空のクリックイベントハンドラーを作成します。 また、ボタンをダブルクリックすると、デザイナーのコードファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
+4 つのボタンをそれぞれダブルクリックして、NewCustomer フォームの各ボタンに空のクリック イベント ハンドラーを作成します。 また、ボタンをダブルクリックすると、デザイナーのコード ファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
 
-#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer フォームロジックのコードを追加する
+#### <a name="add-code-for-the-newcustomer-form-logic"></a>NewCustomer フォーム ロジックのコードを追加する
 
-NewCustomer フォームロジックを完了するには、次の手順を実行します。
+NewCustomer フォーム ロジックを完成させるには、次の手順を実行します。
 
-1. `System.Data.SqlClient`名前空間をスコープにして、メンバーの名前を完全修飾する必要がないようにします。
+1. `System.Data.SqlClient` 名前空間をスコープ内に入れて、メンバーの名前を完全修飾する必要がないようにします。
 
      ```csharp
      using System.Data.SqlClient;
@@ -187,29 +187,29 @@ NewCustomer フォームロジックを完了するには、次の手順を実�
      Imports System.Data.SqlClient
      ```
 
-2. 次のコードに示すように、クラスにいくつかの変数とヘルパーメソッドを追加します。
+2. 次のコードに示すように、クラスにいくつかの変数とヘルパー メソッドを追加します。
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet1":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet1":::
 
-3. 次のコードに示すように、4つのボタンクリックイベントハンドラーのメソッド本体を完成させます。
+3. 次のコードに示すように、4 つのボタン クリック イベント ハンドラーのメソッド本体を完成させます。
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/NewCustomer.cs" id="Snippet2":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/NewCustomer.vb" id="Snippet2":::
 
 ### <a name="fillorcancel-form"></a>FillOrCancel フォーム
 
-FillOrCancel フォームは、注文 ID を入力し、[ **検索順序** ] ボタンをクリックしたときに、注文を返すクエリを実行します。 戻された行は読み取り専用なデータ グリッドに表示されます。 [ **キャンセル順序** ] ボタンを選択した場合、注文をキャンセル (X) としてマークできます。または、[ **フィルの順序** ] ボタンを選択した場合は、注文を塗りつぶしとしてマークできます (F)。 [ **検索順序** ] ボタンをもう一度選択すると、更新された行が表示されます。
+FillOrCancel フォームは、Order ID (注文 ID) を入力して **[Find Order]** のボタンをクリックしたときに、Order (注文) を戻すクエリを実行します。 戻された行は読み取り専用なデータ グリッドに表示されます。 **[Cancel Order]** ボタンを選択すると、注文をキャンセル (X) としてマークできます。また **[Fill Order]** ボタンを選択すると、注文を満たした (F) としてマークできます。 **[Find Order]** ボタンをもう一度選択すると、更新された行が表示されます。
 
-#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベントハンドラーを作成する
+#### <a name="create-auto-generated-event-handlers"></a>自動生成されたイベント ハンドラーを作成する
 
-ボタンをダブルクリックして、FillOrCancel フォーム上の4つのボタンに対して空のクリックイベントハンドラーを作成します。 また、ボタンをダブルクリックすると、デザイナーのコードファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
+ボタンをダブルクリックして、FillOrCancel フォームの 4 つのボタンに空のクリック イベント ハンドラーを作成します。 また、ボタンをダブルクリックすると、デザイナーのコード ファイルに自動生成されたコードが追加され、ボタンをクリックしてイベントを発生させることができます。
 
-#### <a name="add-code-for-the-fillorcancel-form-logic"></a>FillOrCancel フォームロジックのコードを追加する
+#### <a name="add-code-for-the-fillorcancel-form-logic"></a>FillOrCancel フォーム ロジックのコードを追加する
 
-FillOrCancel フォームロジックを完了するには、次の手順を実行します。
+FillOrCancel フォーム ロジックを完成させるには、次の手順を実行します。
 
-1. 次の2つの名前空間をスコープに取り込み、メンバーの名前を完全修飾する必要がないようにします。
+1. 次の 2 つの名前空間をスコープ内に入れて、メンバーの名前を完全修飾する必要がないようにします。
 
      ```csharp
      using System.Data.SqlClient;
@@ -221,12 +221,12 @@ FillOrCancel フォームロジックを完了するには、次の手順を実�
      Imports System.Text.RegularExpressions
      ```
 
-2. 次のコードに示すように、クラスに変数とヘルパーメソッドを追加します。
+2. 次のコードに示すように、クラスに変数とヘルパー メソッドを追加します。
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet1":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet1":::
 
-3. 次のコードに示すように、4つのボタンクリックイベントハンドラーのメソッド本体を完成させます。
+3. 次のコードに示すように、4 つのボタン クリック イベント ハンドラーのメソッド本体を完成させます。
 
      :::code language="csharp" source="../data-tools/codesnippet/CSharp/SimpleDataApp/FillOrCancel.cs" id="Snippet2":::
      :::code language="vb" source="../data-tools/codesnippet/VisualBasic/SimpleDataApp/FillOrCancel.vb" id="Snippet2":::

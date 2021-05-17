@@ -1,6 +1,6 @@
 ---
-title: プログラム | を登録していますMicrosoft Docs
-description: デバッグエンジンがポートを取得した後に、デバッグ対象のプログラムをポートに登録する方法について説明します。
+title: プログラムの登録 | Microsoft Docs
+description: デバッグ エンジンがポートを取得した後に、デバッグ対象のプログラムがどのようにポートに登録されるかを説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,32 +15,32 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 4fda27bd0572713e16311e6feae8ff74870cb006
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070636"
 ---
 # <a name="register-the-program"></a>プログラムを登録する
-デバッグエンジンが [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) インターフェイスによって表されるポートを取得した後、デバッグ対象のプログラムを有効にするための次の手順として、そのポートをポートに登録します。 登録されると、プログラムは次のいずれかの方法でデバッグできるようになります。
+デバッグ エンジンが [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) インターフェイスによって表されるポートを取得した後、デバッグ対象のプログラムを有効にするための次の手順は、そのプログラムをポートに登録することです。 登録すると、プログラムが、次のいずれかの方法でデバッグ可能になります。
 
-- をアタッチするプロセス。これにより、デバッガーは実行中のアプリケーションの完全なデバッグ制御を取得できます。
+- アタッチするプロセス。これにより、デバッガーは、実行中のアプリケーションの完全なデバッグ制御を取得できます。
 
-- Just-in-time (JIT) デバッグ。これにより、デバッガーとは別に実行されるプログラムの、後でのデバッグが可能になります。 ランタイムアーキテクチャでエラーがキャッチされると、オペレーティングシステムまたはランタイム環境でエラーが発生したプログラムのメモリとリソースが解放される前に、デバッガーに通知されます。
+- Just-In-Time (JIT) デバッグ。これにより、デバッガーに影響されずに実行されるプログラムの実行後のデバッグが可能になります。 ランタイム アーキテクチャでエラーがキャッチされると、オペレーティング システムまたはランタイム環境で、エラーが発生したプログラムのメモリとリソースが解放される前にデバッガーに通知されます。
 
-## <a name="registering-procedure"></a>登録 (プロシージャを)
+## <a name="registering-procedure"></a>プロシージャの登録
 
 ### <a name="to-register-your-program"></a>プログラムを登録するには
 
 1. ポートによって実装されている [Addprogramnode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) メソッドを呼び出します。
 
-     `IDebugPortNotify2::AddProgramNode`[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)インターフェイスへのポインターが必要です。
+     `IDebugPortNotify2::AddProgramNode` には、[IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスへのポインターが必要です。
 
-     通常、オペレーティングシステムまたはランタイム環境でプログラムが読み込まれると、プログラムノードが作成されます。 デバッグエンジン (DE) からプログラムの読み込みが求められた場合、DE はプログラムノードを作成し、登録します。
+     通常、オペレーティング システムまたはランタイム環境にプログラムが読み込まれると、プログラム ノードが作成されます。 デバッグ エンジン (DE) によりプログラムの読み込みを求められた場合、DE はプログラム ノードを作成し、登録します。
 
-     次の例は、デバッグエンジンがプログラムを起動し、ポートに登録する方法を示しています。
+     次の例は、デバッグ エンジンによるプログラムの起動と、ポートへのプログラムの登録を示しています。
 
     > [!NOTE]
-    > このコードサンプルは、プロセスを起動して再開する唯一の方法ではありません。このコードは、主に、プログラムをポートに登録する例です。
+    > このコード サンプルは、プロセスを起動して再開する唯一の方法ではありません。このコードは主に、ポートへのプログラムの登録の例です。
 
     ```cpp
     // This is an IDebugEngineLaunch2 method.
@@ -106,6 +106,6 @@ ms.locfileid: "105070636"
 
     ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ポートを取得する](../../extensibility/debugger/getting-a-port.md)
-- [プログラムのデバッグを有効にする](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+## <a name="see-also"></a>関連項目
+- [ポートの取得](../../extensibility/debugger/getting-a-port.md)
+- [デバッグされるプログラムの有効化](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

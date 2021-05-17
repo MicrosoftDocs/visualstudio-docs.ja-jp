@@ -1,6 +1,6 @@
 ---
-title: プロパティウィンドウのフィールドとインターフェイス |Microsoft Docs
-description: Visual Studio IDE にフォーカスがあるウィンドウに基づいて、プロパティウィンドウに表示される情報を決定する選択について説明します。
+title: プロパティ ウィンドウのフィールドとインターフェイス | Microsoft Docs
+description: Visual Studio IDE 内でフォーカスのあるウィンドウに基づいて、プロパティ ウィンドウにどのような情報を表示するかを決定する選択について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,38 +14,38 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9f445d31fe995321ad6ec334a5b6eb93570b8875
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061031"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>プロパティ ウィンドウのフィールドとインターフェイス
-[ **プロパティ** ] ウィンドウに表示される情報を決定するために選択するモデルは、IDE にフォーカスがあるウィンドウに基づいています。 すべてのウィンドウおよび選択したウィンドウ内のオブジェクトは、選択コンテキストオブジェクトをグローバル選択コンテキストにプッシュできます。 環境では、ウィンドウにフォーカスがあるときに、ウィンドウフレームの値を使用してグローバル選択コンテキストを更新します。 フォーカスが変更されると、選択コンテキストが変わります。
+**[プロパティ]** ウィンドウにどのような情報を表示するかを決定する選択のモデルは、IDE 内でフォーカスのあるウィンドウに基づいています。 すべてのウィンドウと、選択されたウィンドウ内のオブジェクトでは、その選択コンテキスト オブジェクトをグローバル選択コンテキストにプッシュできます。 環境では、あるウィンドウにフォーカスがあるときに、そのウィンドウ フレームの値でグローバル選択コンテキストを更新します。 フォーカスが変更されると、選択コンテキストも変更されます。
 
 ## <a name="tracking-selection-in-the-ide"></a>IDE での選択の追跡
- IDE によって所有されているウィンドウフレームまたはサイトには、という名前のサービスがあり <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> ます。 次の手順では、[**プロパティ**] ウィンドウに表示される内容を変更するために、ユーザーが別の開いているウィンドウにフォーカスを変更したり、**ソリューションエクスプローラー** で別のプロジェクト項目を選択したりすることによって発生する、選択項目の変更について説明します。
+ IDE によって所有されるウィンドウ フレームまたはサイトには、<xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> という名前のサービスがあります。 次の手順は、ユーザーがフォーカスを別の開いているウィンドウに変更するか、または **ソリューション エクスプローラー** で別のプロジェクト項目を選択することによって発生する選択の変更が、 **[プロパティ]** ウィンドウに表示される内容を変更するためにどのように実装されるかを示しています。
 
-1. 選択したウィンドウに配置されている VSPackage によって作成されたオブジェクトは、 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> を呼び出すためにを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> ます。
+1. 選択されたウィンドウに配置されている VSPackage によって作成されたオブジェクトが、<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> を呼び出して <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> で <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> を呼び出すようにします。
 
-2. 選択したウィンドウによって提供される選択コンテナーによって、独自のオブジェクトが作成され <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> ます。 選択が変更されると、VSPackage はを呼び出して、 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> 変更の **プロパティ** ウィンドウを含む、環境内のリスナーに通知します。 また、新しい選択に関連する階層と項目情報へのアクセスも提供されます。
+2. 選択されたウィンドウによって提供される選択コンテナーによって、独自の <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> オブジェクトが作成されます。 選択が変更されると、VSPackage は <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> を呼び出して、環境内のすべてのリスナー ( **[プロパティ]** ウィンドウを含む) にその変更を通知します。 また、新しい選択に関連した階層と項目に関する情報へのアクセスも提供します。
 
-3. <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A>を呼び出し、パラメーターに選択した階層項目を渡すと、オブジェクトが設定され `VSHPROPID_BrowseObject` <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> ます。
+3. <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> を呼び出し、`VSHPROPID_BrowseObject` パラメーターで選択された階層項目を渡すと、<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> オブジェクトが設定されます。
 
-4. __VSHPROPID に対して、 [IDispatch インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) から派生したオブジェクトが返され [ます。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) 要求された項目の VSHPROPID_BrowseObject し、環境がそれをにラップし <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> ます (次の手順を参照)。 呼び出しが失敗した場合、環境はの2回目の呼び出しを行い `IVsHierarchy::GetProperty` 、選択コンテナー __VSHPROPID を渡し [ます。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) 階層項目が提供する VSHPROPID_SelContainer ます。
+4. 要求された項目の [__VSHPROPID.VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) に対して [IDispatch インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)から派生したオブジェクトが返されると、環境では、それを <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> にラップします (次の手順を参照)。 この呼び出しが失敗した場合、環境では `IVsHierarchy::GetProperty` への 2 番目の呼び出しを行い、それを 1 つまたは複数の階層項目によって提供される選択コンテナー [__VSHPROPID.VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) に渡します。
 
-    プロジェクト VSPackage は、 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> それを実装する環境指定のウィンドウ VSPackage ( **ソリューションエクスプローラー** など) が <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> その代わりに構築されるため、作成されません。
+    プロジェクト VSPackage では <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> を作成しません。それを実装している、環境によって提供されるウィンドウ VSPackage (**ソリューション エクスプローラー** など) が、代わりに <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> を構築するためです。
 
-5. 環境では、のメソッドを呼び出して、 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> インターフェイスに基づいてオブジェクトを取得し、[ `IDispatch` **プロパティ** ] ウィンドウに入力します。
+5. 環境では、<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> のメソッドを呼び出して、 **[プロパティ]** ウィンドウに入力するための `IDispatch` インターフェイスに基づいたオブジェクトを取得します。
 
-   [ **プロパティ** ] ウィンドウの値が変更された場合、vspackage は `IVsTrackSelectionEx::OnElementValueChangeEx` を実装し、 `IVsTrackSelectionEx::OnSelectionChangeEx` 要素の値に変更を報告します。 次に、またはを呼び出して、[ <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> **プロパティ** ] ウィンドウに表示されている情報をプロパティ値と同期させます。 詳細については、「 [プロパティウィンドウでのプロパティ値の更新](#updating-property-values-in-the-properties-window)」を参照してください。
+   **[プロパティ]** ウィンドウ内の値が変更されると、VSPackage では、その変更を要素の値に報告するために `IVsTrackSelectionEx::OnElementValueChangeEx` と `IVsTrackSelectionEx::OnSelectionChangeEx` を実装します。 その後、環境では <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> または <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> を呼び出して **[プロパティ]** ウィンドウに表示される情報をプロパティ値と同期された状態に維持します。 詳細については、「[プロパティ ウィンドウでのプロパティ値の更新](#updating-property-values-in-the-properties-window)」を参照してください。
 
-   **ソリューションエクスプローラー** で別のプロジェクトアイテムを選択してそのアイテムに関連するプロパティを表示することに加えて、[**プロパティ**] ウィンドウのドロップダウンリストを使用して、フォームまたはドキュメントウィンドウ内から別のオブジェクトを選択することもできます。 詳細については、「[ [プロパティ] ウィンドウオブジェクトリスト](../../extensibility/internals/properties-window-object-list.md)」を参照してください。
+   ある項目に関連したプロパティを表示するために **ソリューション エクスプローラー** でその別のプロジェクト項目を選択することに加えて、 **[プロパティ]** ウィンドウで使用可能なドロップダウン リストを使用して、フォームまたはドキュメント ウィンドウ内から別のオブジェクトを選択することもできます。 詳細については、「[プロパティ ウィンドウのオブジェクト一覧](../../extensibility/internals/properties-window-object-list.md)」を参照してください。
 
-   [ **プロパティ** ] ウィンドウのグリッドでの情報の表示方法をアルファベット順からカテゴリ別に変更できます。また、使用可能な場合は、[ **プロパティ** ] ウィンドウの該当するボタンをクリックして、選択したオブジェクトのプロパティページを開くこともできます。 詳細については、「 [プロパティウィンドウのボタン](../../extensibility/internals/properties-window-buttons.md) と [プロパティページ](../../extensibility/internals/property-pages.md)」を参照してください。
+   情報が **[プロパティ]** ウィンドウ グリッドに表示される方法をアルファベット順からカテゴリ別に変更できるほか、可能な場合は、 **[プロパティ]** ウィンドウの適切なボタンをクリックすることによって、選択されたオブジェクトのプロパティ ページを開くこともできます。 詳細については、「[プロパティ ウィンドウのボタン](../../extensibility/internals/properties-window-buttons.md)」および「[プロパティ ページ](../../extensibility/internals/property-pages.md)」を参照してください。
 
-   最後に、 **[プロパティ]** ウィンドウの下部には、[ **プロパティ** ] ウィンドウのグリッドで選択したフィールドの説明も表示されます。 詳細については、「 [プロパティウィンドウからのフィールドの説明の取得](#getting-field-descriptions-from-the-properties-window)」を参照してください。
+   最後に、 **[プロパティ]** ウィンドウの下部には、 **[プロパティ]** ウィンドウ グリッドで選択されたフィールドの説明も表示されています。 詳細については、「[プロパティ ウィンドウからのフィールドの説明の取得](#getting-field-descriptions-from-the-properties-window)」を参照してください。
 
-## <a name="updating-property-values-in-the-properties-window"></a><a name="updating-property-values-in-the-properties-window"></a> プロパティウィンドウでのプロパティ値の更新
+## <a name="updating-property-values-in-the-properties-window"></a><a name="updating-property-values-in-the-properties-window"></a> プロパティ ウィンドウでのプロパティ値の更新
 **[プロパティ]** ウィンドウをプロパティ値の変更と同期するには、2 つの方法があります。 1 番目の方法は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> インターフェイスを呼び出すことです。このインターフェイスは、環境によって用意されているツール ウィンドウやドキュメント ウィンドウのアクセスや作成を含む、基本的なウィンドウ操作機能へのアクセスを提供します。 次の手順は、この同期プロセスを説明したものです。
 
 ### <a name="updating-property-values-using-ivsuishell"></a>IVsUIShell を使ってプロパティ値を更新する
@@ -54,7 +54,7 @@ ms.locfileid: "105061031"
 
 1. VSPackage、プロジェクト、エディターがツール ウィンドウまたはドキュメント ウィンドウを作成したり列挙したりする必要が生じた時点で、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> を (<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> サービスを通じて) 呼び出します。
 
-2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.RefreshPropertyBrowser%2A>を実装して、イベントを実装および実行せずに、プロジェクト (または [**プロパティ**] ウィンドウによって参照される他の選択されたオブジェクト) のプロパティの変更とプロパティウィンドウの同期を維持し <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink.OnChanged%2A> ます。
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.RefreshPropertyBrowser%2A> を実装することにより、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> を実装したり <xref:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink.OnChanged%2A> イベントを起動したりすることなく、 **[プロパティ]** ウィンドウをプロジェクト (または、 **[プロパティ]** ウィンドウによって参照されている他の任意の選択されたオブジェクト) のプロパティ変更と同期された状態に維持します。
 
 3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> のメソッド <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.AdviseHierarchyEvents%2A> および <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.UnadviseHierarchyEvents%2A> を実装します。この 2 つのメソッドは、それぞれ、階層イベントのクライアント通知を設定および無効化します。これにより、階層で <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer> を実装する必要がなくなります。
 
@@ -71,12 +71,12 @@ ms.locfileid: "105061031"
 
 4. クライアントは、`IConnection` インターフェイスを呼び出すことにより、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> インターフェイスを持つ列挙子サブオブジェクトへのアクセスを取得できます。 その後、<xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints> インターフェイスを呼び出すと、各発信インターフェイス ID (IID) の接続ポイントを列挙することができます。
 
-5. また、`IConnection` を呼び出すことにより、各発信 IID への <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> インターフェイスを持つ接続ポイント サブオブジェクトへのアクセスを取得することもできます。 クライアントは、インターフェイスを介して、 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> 接続可能オブジェクトとクライアント独自の同期を使用して、アドバイザリループを開始または終了します。クライアントは、インターフェイスを呼び出して、 <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections> 認識している接続を列挙するためのインターフェイスを持つ列挙子オブジェクトを取得することもできます。
+5. また、`IConnection` を呼び出すことにより、各発信 IID への <xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> インターフェイスを持つ接続ポイント サブオブジェクトへのアクセスを取得することもできます。 クライアントは、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> インターフェイス経由で、接続可能なオブジェクトとそのクライアント独自の同期によるアドバイザリ ループを開始または終了します。クライアントはまた、<xref:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint> インターフェイスを呼び出して、認識している接続を列挙するための <xref:Microsoft.VisualStudio.OLE.Interop.IEnumConnections> インターフェイスを含む列挙子オブジェクトを取得することもできます。
 
-## <a name="getting-field-descriptions-from-the-properties-window"></a><a name="getting-field-descriptions-from-the-properties-window"></a> [プロパティ] ウィンドウからのフィールドの説明の取得
+## <a name="getting-field-descriptions-from-the-properties-window"></a><a name="getting-field-descriptions-from-the-properties-window"></a> プロパティ ウィンドウからのフィールドの説明の取得
 **[プロパティ]** ウィンドウの下部にある説明領域に、選択したプロパティ フィールドに関連する情報が表示されます。 この機能は既定で有効になっています。 説明フィールドを非表示にするには、 **[プロパティ]** ウィンドウを右クリックし、 **[説明]** をクリックします。 これにより、メニュー ウィンドウの **[説明]** タイトルの横のチェック マークが削除されます。 同じ手順を行って **[説明]** の表示をオンに戻すことにより、フィールドを再度表示できます。
 
- 説明フィールド内の情報は <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> から取得されます。 それぞれのメソッド、インターフェイス、コクラスなどには、タイプ ライブラリのローカライズされていない `helpstring` 属性を適用できます。 [ **プロパティ** ] ウィンドウで、から文字列を取得し <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A> ます。
+ 説明フィールド内の情報は <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> から取得されます。 それぞれのメソッド、インターフェイス、コクラスなどには、タイプ ライブラリのローカライズされていない `helpstring` 属性を適用できます。 **[プロパティ]** ウィンドウでは、<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A> から文字列を取得します。
 
 ### <a name="to-specify-localized-help-strings"></a>ローカライズされたヘルプ文字列を指定するには
 
@@ -89,7 +89,7 @@ ms.locfileid: "105061031"
 
     これらの属性は、実際の.chm ファイルのヘルプ トピックに含まれる `helpfile` 属性と `helpcontext` 属性とは異なります。
 
-   強調表示されているプロパティ名に表示される説明情報を取得するために、[ **プロパティ** ] ウィンドウは、選択されて <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> いるプロパティに対してを呼び出し、出力文字列に必要な属性を指定し `lcid` ます。 内部的には、<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> は `helpstringdll` 属性で指定された .dll ファイルを検索し、指定されたコンテキストと `lcid` 属性を使ってその .dll ファイル上に `DLLGetDocumentation` を呼び出します。
+   強調表示されているプロパティ名に対して表示される説明情報を取得するために、 **[プロパティ]** ウィンドウでは、選択されているプロパティの <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> を呼び出し、出力文字列のための目的の `lcid` 属性を指定します。 内部的には、<xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> は `helpstringdll` 属性で指定された .dll ファイルを検索し、指定されたコンテキストと `lcid` 属性を使ってその .dll ファイル上に `DLLGetDocumentation` を呼び出します。
 
    `DLLGetDocumentation` の署名と実装は次のとおりです。
 
@@ -116,6 +116,6 @@ STDAPI DLLGetDocumentation
 
  別の方法でプロパティのローカライズされた名前と説明の取得には、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A> を実装します。 このメソッドの実装に関する詳細については、「 [Properties Window Fields and Interfaces](../../extensibility/internals/properties-window-fields-and-interfaces.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [プロパティの拡張](../../extensibility/internals/extending-properties.md)

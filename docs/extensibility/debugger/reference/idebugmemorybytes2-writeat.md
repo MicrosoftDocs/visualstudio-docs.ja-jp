@@ -1,6 +1,6 @@
 ---
 description: 指定したアドレスを開始位置として、指定したバイト数のメモリを書き込みます。
-title: 'IDebugMemoryBytes2:: WriteAt |Microsoft Docs'
+title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 64e8aed5586dc6e2abf33b540654dcd24437e746
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076811"
@@ -47,20 +47,20 @@ int WriteAt(
 
 ## <a name="parameters"></a>パラメーター
 `pStartContext`\
-からバイトの書き込みを開始する位置を指定する [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) オブジェクト。
+[入力] バイトの書き込みの開始位置を指定する [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) オブジェクト。
 
 `dwCount`\
-から書き込むバイト数。
+[入力] 書き込むバイト数。
 
 `rgbMemory`\
-から書き込むバイト。 この配列のサイズは、少なくともバイトであると見なされ `dwCount` ます。
+[入力] 書き込むバイト。 この配列のサイズは、少なくとも `dwCount` バイトあると見なされます。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はを返し `S_FALSE` ます。すべてのバイトが書き込まれなかった場合、またはエラーコード (通常は) が返された場合はを返し `E_FAIL` ます
+ 成功した場合は、`S_OK` を返します。すべてのバイトが書き込まれなかったかエラー コード (通常は `E_FAIL`) が返された場合は、`S_FALSE` を返します。
 
-## <a name="remarks"></a>注釈
- 開始アドレスがこの [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) オブジェクトによって表されるメモリウィンドウ内にない場合、 `E_FAIL` 書き込みの量がメモリ空間に重複する場合でも、書き込みは行われず、のエラーコードが返されます。
+## <a name="remarks"></a>解説
+ 開始アドレスがこの [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) オブジェクトによって表されるメモリ ウィンドウ内にない場合、書き込みの量がメモリ領域と重複する場合でも、書き込みは行われず、エラー コード `E_FAIL` が返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

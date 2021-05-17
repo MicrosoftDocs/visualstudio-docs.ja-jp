@@ -1,6 +1,6 @@
 ---
-title: プログラムへのアタッチとデタッチ |Microsoft Docs
-description: デバッガーをアタッチするための適切な属性を使用して、メソッドとイベントの正しいシーケンスを送信する方法について説明します。
+title: プログラムへのアタッチとデタッチ | Microsoft Docs
+description: デバッガーをアタッチするために適切な属性を使用してメソッドとイベントの正しいシーケンスを送信する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,41 +15,41 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: fb51cb3e6c16916e3778dde06fb2ac274608ed70
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055311"
 ---
 # <a name="attaching-and-detaching-to-a-program"></a>プログラムへのアタッチとデタッチ
-デバッガーをアタッチするには、適切な属性を持つメソッドとイベントの正しいシーケンスを送信する必要があります。
+デバッガーをアタッチするには、適切な属性を使用してメソッドとイベントの正しいシーケンスを送信する必要があります。
 
 ## <a name="sequence-of-methods-and-events"></a>メソッドとイベントのシーケンス
 
-1. セッションデバッグマネージャー (SDM) は、 [Onattach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。
+1. セッション デバッグ マネージャー (SDM) で、[OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。
 
-    デバッグエンジン (DE) プロセスモデルに基づいて、 `IDebugProgramNodeAttach2::OnAttach` メソッドは次のいずれかのメソッドを返します。これにより次の処理が決定されます。
+    デバッグ エンジン (DE) のプロセス モデルに基づいて、`IDebugProgramNodeAttach2::OnAttach` メソッドから次のいずれかのメソッドが返され、次に実行する処理が決まります。
 
-    が返された場合は、 `S_FALSE` デバッグエンジンがプログラムに正常にアタッチされています。 それ以外の場合は、 [attach メソッドを呼び出してアタッチ](../../extensibility/debugger/reference/idebugengine2-attach.md) プロセスを完了します。
+    `S_FALSE` が返された場合、デバッグ エンジンはプログラムに正常にアタッチされています。 それ以外の場合は、アタッチ プロセスを完了させるために [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) メソッドが呼び出されます。
 
-    が返された場合 `S_OK` 、DE は SDM と同じプロセスに読み込まれます。 SDM は、次のタスクを実行します。
+    `S_OK` が返された場合、DE は SDM と同じプロセスに読み込まれます。 SDM で次のタスクを実行します。
 
-   1. [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)を呼び出して、DE のエンジン情報を取得します。
+   1. [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) を呼び出して、DE のエンジン情報を取得します。
 
    2. DE を共同作成します。
 
-   3. [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)を呼び出します。
+   3. [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) を呼び出します。
 
-2. DE は、属性を使用して [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+2. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) を送信します。
 
-3. DE は、属性を使用して [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) を SDM に送信し `EVENT_SYNC` ます。
+3. DE が、`EVENT_SYNC` 属性を使用して SDM に [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) を送信します。
 
-4. DE は、属性を使用して [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) を SDM に送信し `EVENT_SYNC_STOP` ます。
+4. DE が、`EVENT_SYNC_STOP` 属性を使用して SDM に [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) を送信します。
 
-   プログラムからのデタッチは、次のように、簡単な2段階のプロセスです。
+   プログラムからのデタッチは、次のように簡単な 2 段階のプロセスです。
 
-5. SDM は [デタッチ](../../extensibility/debugger/reference/idebugprogram2-detach.md)を呼び出します。
+5. SDM で、[Detach](../../extensibility/debugger/reference/idebugprogram2-detach.md) を呼び出します。
 
-6. DE は [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)を送信します。
+6. DE で、[IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) を送信します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [呼び出し (デバッガーイベントを)](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目
+- [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

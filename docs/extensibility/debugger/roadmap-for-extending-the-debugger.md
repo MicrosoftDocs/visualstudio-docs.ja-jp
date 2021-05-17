@@ -1,6 +1,6 @@
 ---
 title: デバッガーを拡張するためのロードマップ |Microsoft Docs
-description: Visual Studio のデバッグに関するドキュメントには、サンプル、リファレンス、およびデバッガーをカスタマイズするための一般的な方法を示すいくつかのシナリオが含まれています。
+description: デバッグに関する Visual Studio ドキュメントには、サンプル、リファレンス、およびデバッガーをカスタマイズする一般的な方法を示すいくつかのシナリオが含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,39 +15,39 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 69beed934764defe7e3926ba46e5e70f87a031ea
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070623"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>デバッガーを拡張するためのロードマップ
-このドキュメントでは、を使用してデバッガーを拡張するためのガイドとリファレンス情報を提供し [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] ます。
+このドキュメントでは、[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] で [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] デバッガーを拡張するためのガイドとリファレンス情報を提供します。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] デバッグドキュメントには、サンプル、包括的なリファレンス、デバッガーをカスタマイズする一般的な方法を示すいくつかの代表的なシナリオが含まれています。
+ デバッグに関する [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ドキュメントには、サンプル、包括的なリファレンス、およびデバッガーをカスタマイズする一般的な方法を示すいくつかの代表的なシナリオが含まれています。
 
- コンパイラとその出力によって、製品のデバッグを設定するために必要なものが決まります。 コンパイラの場合:
+ コンパイラとその出力によって、製品のデバッグを設定するために必要なものが決まります。 コンパイラの機能に応じて、次のようになります。
 
-- Windows ネイティブオペレーティングシステムを対象とし、を書き込み *ます。PDB* ファイルは、に統合されているネイティブコードデバッグエンジン (DE) を使用してプログラムをデバッグでき [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 DE または式エバリュエーターを実装する必要はありません。 式エバリュエーターは、C++ プログラミング言語の構文用に記述されています。
+- コンパイラが、Windows ネイティブ オペレーティング システムを対象とし、 *.PDB* ファイルを記述する場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に統合されているネイティブ コード デバッグ エンジン (DE) でプログラムをデバッグできます。 DE と式エバリュエーターのいずれも実装する必要はありません。 式エバリュエーターは、C++ プログラミング言語の構文用に作成されています。
 
-- Microsoft 中間言語 (MSIL) 出力を生成します。マネージコードデバッグエンジン DE を使用してプログラムをデバッグできます。これは、にも統合されてい [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 したがって、式エバリュエーターだけを実装する必要があります。 サンプル式エバリュエーターが用意されています。 詳細については、次のトピックを参照してください。
+- コンパイラが Microsoft 中間言語 (MSIL) 出力を生成する場合は、マネージド コード デバッグ エンジン DE でプログラムをデバッグできます。この DE も [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に統合されています。 したがって、実装する必要があるのは、式エバリュエーターのみです。 サンプル式エバリュエーターが用意されています。 詳細については、次のトピックを参照してください。
 
    [式の評価](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)
 
-   [式の評価](../../extensibility/debugger/evaluating-expressions.md)
+   [評価式](../../extensibility/debugger/evaluating-expressions.md)
 
-   [式の評価コンテキスト](../../extensibility/debugger/expression-evaluation-context.md)
+   [式の評価のコンテキスト](../../extensibility/debugger/expression-evaluation-context.md)
 
    [中断モードでの式の評価](../../extensibility/debugger/expression-evaluation-in-break-mode.md)
 
-   [共通言語ランタイムの式エバリュエーターを記述する](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+   [共通言語ランタイム式エバリュエーターの作成](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
 
-- 独自のオペレーティングシステムまたはその他の実行時環境を対象とする場合は、独自の DE を作成する必要があります。 ATL COM を使用して単純な DE を作成するチュートリアルが用意されています。 詳細については、次のトピックを参照してください。
+- コンパイラが、独自のオペレーティング システムまたはその他の実行時環境を対象とする場合は、自分で DE を作成する必要があります。 ATL COM を使用して単純な DE を作成するチュートリアルが用意されています。 詳細については、次のトピックを参照してください。
 
-   [カスタムデバッグエンジンを作成する](../../extensibility/debugger/creating-a-custom-debug-engine.md)
+   [カスタム デバッグ エンジンを作成する](../../extensibility/debugger/creating-a-custom-debug-engine.md)
 
-   [チュートリアル: ATL COM を使用してデバッグエンジンをビルドする](/previous-versions/bb147024(v=vs.90))
+   [チュートリアル: ATL COM を使用してデバッグ エンジンを構築する](/previous-versions/bb147024(v=vs.90))
 
-   [ポートサプライヤーを実装する](../../extensibility/debugger/implementing-a-port-supplier.md)
+   [ポート サプライヤーを実装する](../../extensibility/debugger/implementing-a-port-supplier.md)
 
    [サンプル](../../extensibility/debugger/visual-studio-debugging-samples.md)
 

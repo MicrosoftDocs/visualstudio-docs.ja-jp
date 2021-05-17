@@ -1,7 +1,8 @@
 ---
-title: 列挙型と構造体 |Microsoft Docs
+description: これらは、DIA SDK で使用される列挙型と構造体です。
+title: 列挙型と構造体 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: d17eed2d-d8fd-4a47-82d3-8125c0624010
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6769af8a417c111de6c8dfc68cd7cda548eaa24c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: aa7fa04080596a5d54297557c33238826450830e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745227"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634545"
 ---
 # <a name="enumerations-and-structures"></a>列挙型と構造体
 
-これらは、DIA SDK によって使用される列挙型と構造体です。
+これらは、DIA SDK で使用される列挙型と構造体です。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
 - [BasicType 列挙型](../../debugger/debug-interface-access/basictype.md)
 
@@ -36,23 +37,23 @@ ms.locfileid: "72745227"
 
 - [CV_access_e 列挙型](../../debugger/debug-interface-access/cv-access-e.md)
 
- メンバー関数と変数の可視性 (アクセスレベル) のスコープを指定します。
+ メンバー関数と変数の可視性のスコープ (アクセス レベル) を指定します。
 
 - [CV_call_e 列挙型](../../debugger/debug-interface-access/cv-call-e.md)
 
- 関数の呼び出し規約を指定します。
+ 関数の呼び出し規則を指定します。
 
 - [CV_CFL_LANG 列挙型](../../debugger/debug-interface-access/cv-cfl-lang.md)
 
- アプリケーションまたはリンクされたモジュールのソースコード言語を指定します。
+ アプリケーションまたはリンクされたモジュールのソース コード言語を指定します。
 
 - [CV_CPU_TYPE_e 列挙型](../../debugger/debug-interface-access/cv-cpu-type-e.md)
 
- ターゲットプロセッサを指定します。
+ ターゲット プロセッサを指定します。
 
 - [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)
 
- ターゲットレジスタを指定します。
+ ターゲット レジスタを指定します。
 
 - [DataKind 列挙型](../../debugger/debug-interface-access/datakind.md)
 
@@ -60,7 +61,7 @@ ms.locfileid: "72745227"
 
 - [LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)
 
- シンボルに含まれる位置情報の種類を示します。
+ シンボルに含まれる場所情報の種類を示します。
 
 - [MemoryTypeEnum 列挙型](../../debugger/debug-interface-access/memorytypeenum.md)
 
@@ -68,11 +69,11 @@ ms.locfileid: "72745227"
 
 - [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)
 
- シンボルとファイル名の検索オプションを指定します。
+ シンボルおよびファイルの名前の検索オプションを指定します。
 
 - [StackFrameTypeEnum 列挙型](../../debugger/debug-interface-access/stackframetypeenum.md)
 
- スタックフレームの種類を指定します。
+ スタック フレームの種類を指定します。
 
 - [SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)
 
@@ -84,13 +85,13 @@ ms.locfileid: "72745227"
 
 - [UdtKind 列挙型](../../debugger/debug-interface-access/udtkind.md)
 
- さまざまなユーザー定義型 (UDT) について説明します。
+ さまざまなユーザー定義型 (UDT) を記述します。
 
 ### <a name="structures"></a>構造体
 
 [DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md)
 
-アドレスマップのエントリを記述します。
+アドレス マップのエントリを記述します。
 
 ### <a name="related-sections"></a>関連項目
 

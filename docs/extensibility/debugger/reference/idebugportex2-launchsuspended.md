@@ -1,6 +1,6 @@
 ---
 description: 実行可能ファイルを起動します。
-title: 'IDebugPortEx2:: LaunchSuspended |Microsoft Docs'
+title: IDebugPortEx2::LaunchSuspended | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: fdffb6f87285e9f33d6abaf864b4d45345a304ca
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072495"
@@ -56,38 +56,38 @@ int LaunchSuspended(
 
 ## <a name="parameters"></a>パラメーター
 `pszExe`\
-から起動する実行可能ファイルの名前。 これは、パラメーターに指定されている作業ディレクトリに対する完全なパスまたは相対パスにすることができ `pszDir` ます。
+[入力] 起動する実行可能ファイルの名前。 これは、`pszDir` パラメーターに指定されている作業ディレクトリに対する完全なパスまたは相対パスにすることができます。
 
 `pszArgs`\
-から実行可能ファイルに渡す引数。 引数がない場合は、null 値を指定できます。
+[入力] 実行可能ファイルに渡す引数。 引数がない場合は、null 値にすることができます。
 
 `pszDir`\
-から実行可能ファイルによって使用される作業ディレクトリの名前。 作業ディレクトリが不要な場合は、null 値を指定できます。
+[入力] 実行可能ファイルによって使用される作業ディレクトリの名前。 作業ディレクトリが不要な場合は、null 値にすることができます。
 
 `bstrEnv`\
-からNull で終わる文字列の環境ブロックの後に、追加の NULL ターミネータが続きます。
+[入力] null で終わる文字列の環境ブロックと、それに続く追加の NULL ターミネータ。
 
 `hStdInput`\
-から代替入力ストリームを処理します。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替入力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `hStdOutput`\
-から代替出力ストリームへのハンドル。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替出力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `hStdError`\
-から代替エラー出力ストリームへのハンドル。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替エラー出力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `ppPortProcess`\
-入出力起動されたプロセスを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) オブジェクトを返します。
+[出力] 起動されたプロセスを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドはプロセスを起動して、中断され、コードが実行されないようにする必要があります。 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)メソッドが呼び出され、プロセスが再開されます。
+## <a name="remarks"></a>解説
+ このメソッドでは、プロセスを起動し、一時中止にしてコードが実行されないようにします。 [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) メソッドが呼び出されて、プロセスが再開します。
 
- プログラムは、デバッグエンジンから起動することもできます。 詳細については、「 [プログラムの起動](../../../extensibility/debugger/launching-a-program.md)」を参照してください。
+ プログラムは、デバッグ エンジンから起動することもできます。 詳細については、「[プログラムの起動](../../../extensibility/debugger/launching-a-program.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md)

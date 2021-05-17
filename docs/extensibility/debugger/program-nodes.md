@@ -1,6 +1,6 @@
 ---
-title: プログラムノード |Microsoft Docs
-description: この記事では、Visual Studio のデバッガーアーキテクチャにおけるプログラムノードの定義とロールについて説明します。
+title: プログラム ノード | Microsoft Docs
+description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるプログラム ノードの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,28 +17,28 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5658026b60006a58ba168ca713028b9876a3c57d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094628"
 ---
-# <a name="program-nodes"></a>プログラムノード
-デバッガーアーキテクチャでは、 *プログラムノード* は次のようになります。
+# <a name="program-nodes"></a>プログラム ノード
+デバッガー アーキテクチャでは、"*プログラム ノード*" は次のようなものです。
 
-- は、プログラムの簡易な説明です。
+- プログラムの簡易な説明です。
 
-- は、自身と、それが実行されているプロセスを識別できます。 プログラムノードをアタッチしてからデタッチし、それを作成したデバッグエンジン (DE) を記述することができます (存在する場合)。
+- それ自体と、それが実行されているプロセスを識別できます。 プログラム ノードは、それを作成したデバッグ エンジン (DE) (存在する場合) にアタッチしたり、デタッチしたり、それについて説明したりできます。
 
-- は、通常、DE またはポートによって作成される [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスによって表されます。 プログラムノードは、 [Addprogramnode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)を呼び出すことによってポートに追加されます。 プログラムノードがポートに追加されると、このプログラムノードが表すプログラムを含むプロセスに追加されます。
+- 通常は DE またはポートによって作成される [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスによって表されます。 プログラム ノードは、[AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) を呼び出すことによってポートに追加されます。 プログラム ノードがポートに追加されると、このプログラム ノードが表すプログラムが含まれているプロセスに追加されます。
 
-  デバッグセッションの開始後、デバッグパッケージの実装によっては、プログラムノードを使用して対応するプログラムが作成されます。 プログラムのプロセスが照会されると、プログラムが列挙されます。プログラムノードごとに1つのプログラムが列挙されます。
+  デバッグ セッションの開始後、デバッグ パッケージの実装によっては、プログラム ノードを使用して対応するプログラムが作成される場合があります。 プログラムのプロセスが照会されると、プログラムはプログラム ノードごとに 1 つずつ列挙されます。
 
-  プログラムをにアタッチする前に、IDE には、プログラムの簡易記述のみが必要です。 この情報は、プログラムノードから取得できます。 プログラムがにアタッチされると、IDE では、プログラムで実行されているすべてのスレッドの一覧など、より詳細な情報が表示されます。 この情報は、プログラム自体から取得されます。
+  プログラムがアタッチされる前は、IDE にはプログラムの簡易な説明のみが必要です。 この情報はプログラム ノードから取得できます。 プログラムがアタッチされると、IDE には、プログラムで実行されているすべてのスレッドの一覧など、より詳細な情報が表示されます。 この情報は、プログラム自体から取得されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [Programs](../../extensibility/debugger/programs.md)
-- [プロセス](../../extensibility/debugger/processes.md)
-- [デバッグエンジン](../../extensibility/debugger/debug-engine.md)
+- [処理](../../extensibility/debugger/processes.md)
+- [デバッグ エンジン](../../extensibility/debugger/debug-engine.md)
 - [デバッガーの概念](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

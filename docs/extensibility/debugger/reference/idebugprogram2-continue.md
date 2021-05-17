@@ -1,6 +1,6 @@
 ---
-description: 'IDebugProgram2:: Continue は、このプログラムの実行を停止状態から続行します。 前の実行状態 (ステップなど) はすべて保持され、プログラムは再度実行を開始します。'
-title: 'IDebugProgram2:: Continue |Microsoft Docs'
+description: IDebugProgram2::Continue では、このプログラムの実行を停止状態から続行します。 前の実行状態 (ステップなど) がすべて保持され、プログラムの実行が再度開始されます。
+title: IDebugProgram2::Continue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 60f3cb4764a53d359e971020df8261d064c62e81
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076122"
 ---
 # <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
-このプログラムの実行を停止状態から続行します。 前の実行状態 (ステップなど) はすべて保持され、プログラムは再度実行を開始します。
+停止された状態からこのプログラムの実行を続行します。 前の実行状態 (ステップなど) がすべて保持され、プログラムの実行が再度開始されます。
 
 > [!NOTE]
 > このメソッドは非推奨とされます。 代わりに [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) メソッドを使用してください。
@@ -44,17 +44,17 @@ int Continue(
 ```
 
 ## <a name="parameters"></a>パラメーター
-`pThread` からスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。
+`pThread` [入力] スレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、デバッグされているプログラムの数や、停止イベントを生成したプログラムに関係なく、このプログラムで呼び出されます。 の実装では、前の実行状態 (ステップなど) を保持し、以前の実行を完了する前に停止していないかのように実行を継続する必要があります。 つまり、このプログラムのスレッドがステップオーバー操作を行っていて、他のプログラムが停止したために停止された場合、このメソッドが呼び出されたときには、プログラムは元のステップオーバー操作を完了する必要があります。
+## <a name="remarks"></a>解説
+ このメソッドは、デバッグされているプログラムの数や停止イベントを生成したプログラムに関係なく、このプログラムで呼び出されます。 実装では、前の実行状態 (ステップなど) が保持され、以前の実行を完了するまで停止していなかったかのように実行が継続される必要があります。 つまり、このプログラムのスレッドでステップオーバー操作を実行していて、他のプログラムが停止したために停止された場合、このメソッドが呼び出されると、プログラムで元のステップオーバー操作を完了する必要があります。
 
 > [!WARNING]
-> この呼び出しの処理中に、停止イベントまたは即時 (同期) イベントを [イベント](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) に送信しないでください。それ以外の場合、デバッガーは応答を停止する可能性があります。
+> この呼び出しの処理中に、停止イベントまたは即時 (同期) イベントを [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) に送信しないでください。送信した場合、デバッガーが応答しなくなる可能性があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)
 - [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
