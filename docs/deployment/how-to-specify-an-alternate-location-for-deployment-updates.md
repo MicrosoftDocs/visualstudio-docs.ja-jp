@@ -1,6 +1,6 @@
 ---
-title: 展開の更新の代替の場所を指定する
-description: 配置マニフェストで ClickOnce アプリケーションの更新プログラムの別の場所を指定する方法について説明します。
+title: 配置の更新用に別の場所を指定する
+description: 配置マニフェストで ClickOnce アプリケーションの更新プログラム用に別の場所を指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -19,48 +19,48 @@ ms.workload:
 - multiple
 ms.openlocfilehash: f0832105ccc203dd046461e40d27f8d50efc3009
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99940372"
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>方法: 配置の更新用に別の場所を指定する
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]最初に CD またはファイル共有からアプリケーションをインストールできますが、アプリケーションでは Web 上の定期的な更新プログラムを確認する必要があります。 配置マニフェストで更新プログラムの別の場所を指定して、アプリケーションが最初のインストール後に Web から自身を更新できるようにすることができます。
+最初に CD またはファイル共有から [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをインストールできますが、アプリケーションでは Web で定期的な更新プログラムを確認する必要があります。 配置マニフェストで更新プログラム用に別の場所を指定して、アプリケーションが最初のインストール後に Web から自身を更新できるようにすることができます。
 
 > [!NOTE]
-> この機能を使用するには、アプリケーションをローカルにインストールするように構成する必要があります。 詳細については、「 [チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」を参照してください。 さらに、ネットワークからアプリケーションをインストールする場合 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 、別の場所を設定すると、では、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 初期インストールとそれ以降のすべての更新で、その場所が使用されます。 アプリケーションをローカルに (たとえば CD から) インストールする場合、最初のインストールは元のメディアを使用して実行され、それ以降のすべての更新では代替の場所が使用されます。
+> この機能を使用するには、アプリケーションをローカルにインストールするように構成する必要があります。 詳細については、「[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」を参照してください。 さらに、ネットワークから [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションをインストールする場合、別の場所を設定すると、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では初回インストールとそれ以降のすべての更新プログラムに対してその場所が使用されます。 アプリケーションをローカルにインストールする場合 (たとえば CD から)、初回インストールは元のメディアを使用して実行され、それ以降のすべての更新プログラムでは代替の場所が使用されます。
 
-### <a name="specify-an-alternate-location-for-updates-by-using-mageuiexe-windows-forms-based-utility"></a>MageUI.exe (Windows フォームベースのユーティリティ) を使用して、更新プログラムの別の場所を指定する
+### <a name="specify-an-alternate-location-for-updates-by-using-mageuiexe-windows-forms-based-utility"></a>MageUI.exe (Windows フォームベースのユーティリティ) を使用して、更新プログラム用に別の場所を指定する
 
-1. .NET Framework コマンドプロンプトを開き、次のように入力します。
+1. .NET Framework コマンド プロンプトを開き、以下を入力します。
 
      **mageui.exe**
 
-2. [ **ファイル** ] メニューの [ **開く** ] をクリックして、アプリケーションの配置マニフェストを開きます。
+2. **[ファイル]** メニューの **[開く]** をクリックして、アプリケーションの配置マニフェストを開きます。
 
 3. **[配置オプション]** タブを選択します。
 
-4. [ **Launch Location**] という名前のテキストボックスに、アプリケーションの更新の配置マニフェストが格納されるディレクトリの URL を入力します。
+4. **[起動場所]** という名前のテキスト ボックスに、アプリケーションの更新プログラムの配置マニフェストが格納されるディレクトリの URL を入力します。
 
 5. 配置マニフェストを保存します。
 
-### <a name="specify-an-alternate-location-for-updates-by-using-mageexe"></a>Mage.exe を使用して、更新プログラムの別の場所を指定します
+### <a name="specify-an-alternate-location-for-updates-by-using-mageexe"></a>Mage.exe を使用して、更新プログラム用に別の場所を指定する
 
-1. .NET Framework コマンドプロンプトを開きます。
+1. .NET Framework コマンド プロンプトを開きます。
 
-2. 次のコマンドを使用して、更新プログラムの場所を設定します。 この例では、 *HelloWorld.exe* アプリケーションマニフェストへのパスを指定します。このパスは [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 常にアプリケーションの拡張子を持ち、 `http://adatum.com/Update/Path` は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの更新プログラムをチェックする URL です。
+2. 次のコマンドを使用して、更新プログラムの場所を設定します。 この例で、*HelloWorld.exe.application* は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーション マニフェストのパスで、常にアプリケーション拡張子を持ちます。`http://adatum.com/Update/Path` は [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] がアプリケーションの更新プログラムをチェックする URL です。
 
-    **Mage.exe-ProviderUrl http:/adatum.com/Update/Path を HelloWorld.exe 更新します。 \/**
+    **Mage -Update HelloWorld.exe.application -ProviderUrl http:\//adatum.com/Update/Path**
 
 3. ファイルを保存します。
 
    > [!NOTE]
-   > 次に、 *Mage.exe* を使用してファイルに再署名する必要があります。 詳細については、「 [チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」を参照してください。
+   > 次に、*Mage.exe* を使用してファイルに署名し直す必要があります。 詳細については、「[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」を参照してください。
 
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ
- CD などのオフラインメディアからアプリケーションをインストールし、コンピューターがオンラインの場合、はまず、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストのタグで指定された URL を確認して、 `<deploymentProvider>` 更新プログラムの場所により新しいバージョンのアプリケーションが含まれているかどうかを確認します。 存在する場合は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 最初のインストールディレクトリからではなく、そこからアプリケーションを直接インストールします。また、を使用して、共通言語ランタイム (CLR) によってアプリケーションの信頼レベルが決定され `<deploymentProvider>` ます。 コンピューターがオフラインである場合、また `<deploymentProvider>` はアクセスできない場合は、が cd からインストールされます。また、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] この CLR は、インストールポイントに基づいて信頼を付与します。 CD のインストールの場合は、アプリケーションが完全な信頼を受け取ることを意味します。 それ以降のすべての更新は、その信頼レベルを継承します。
+ CD などのオフライン メディアからアプリケーションをインストールし、コンピューターがオンラインの場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ではまず、配置マニフェストの `<deploymentProvider>` タグで指定された URL を確認して、更新プログラムの場所により新しいバージョンのアプリケーションが含まれているかどうかを判断します。 含まれている場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、初回インストール ディレクトリからではなく、そこからアプリケーションを直接インストールします。また、共通言語ランタイム (CLR) によって、`<deploymentProvider>` を使用してアプリケーションの信頼レベルが決定されます。 コンピューターがオフラインである場合、または `<deploymentProvider>` にアクセスできない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では CD からインストールし、CLR ではインストール場所に基づいて信頼を付与します。CD からのインストールの場合、アプリケーションが完全な信頼を付与されることを意味します。 それ以降のすべての更新プログラムは、その信頼レベルを継承します。
 
- を使用するすべてのアプリケーションは、アプリケーション [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `<deploymentProvider>` マニフェストで必要なアクセス許可を明示的に宣言する必要があります。これにより、アプリケーションが異なるコンピューター上で異なる信頼レベルを受け取ることはありません。
+ `<deploymentProvider>` を使用するすべての [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションで、必要なアクセス許可をアプリケーション マニフェストで明示的に宣言して、アプリケーションが異なるコンピューターで異なる信頼レベルを付与されないようにする必要があります。
 
 ## <a name="see-also"></a>関連項目
 - [チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)

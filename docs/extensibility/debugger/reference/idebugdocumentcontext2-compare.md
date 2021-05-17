@@ -1,6 +1,6 @@
 ---
-description: このドキュメントコンテキストと、指定されたドキュメントコンテキストの配列を比較します。
-title: 'IDebugDocumentContext2:: Compare |Microsoft Docs'
+description: このドキュメント コンテキストを、指定されたドキュメント コンテキストの配列と比較します。
+title: IDebugDocumentContext2::Compare | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a680da6f33d3da37995eb26071c0ea5f1ddc2283
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066712"
 ---
 # <a name="idebugdocumentcontext2compare"></a>IDebugDocumentContext2::Compare
-このドキュメントコンテキストと、指定されたドキュメントコンテキストの配列を比較します。
+このドキュメント コンテキストを、指定されたドキュメント コンテキストの配列と比較します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,23 +48,23 @@ int Compare(
 
 ## <a name="parameters"></a>パラメーター
 `compare`\
-から比較の種類を指定する [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) 列挙の値です。
+[入力] 比較の種類を指定する [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md) 列挙型の値。
 
 `rgpDocContextSet`\
-から比較対象のドキュメントコンテキストを表す [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) オブジェクトの配列。
+[入力] 比較対象のドキュメント コンテキストを表す [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) オブジェクトの配列。
 
 `dwDocContextSetLen`\
-から比較するドキュメントコンテキストの配列の長さ。
+[入力] 比較するドキュメント コンテキストの配列の長さ。
 
 `pdwDocContext`\
-入出力 `rgpDocContextSet` 比較を満たす最初のドキュメントコンテキストの配列内のインデックスを返します。
+[出力] 比較を満たす最初のドキュメント コンテキストの `rgpDocContextSet` 配列のインデックスを返します。
 
 ## <a name="return-value"></a>戻り値
- `S_OK`一致が見つかった場合は、を返します。 一致が見つからなかった `S_FALSE` 場合は、を返します。 それ以外の場合はエラー コードを返します。
+ 一致が見つかった場合は、`S_OK` を返します。 一致が見つからなかった場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 配列で渡される [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) オブジェクトは、呼び出されるオブジェクトを実装する同じデバッグエンジンによって実装される必要があります。 `IDebugDocumentContext2` そうでない場合、比較は無効になります。
+## <a name="remarks"></a>解説
+ 配列で渡される [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) オブジェクトは、呼び出し中の `IDebugDocumentContext2` オブジェクトを実装するものと同じデバッグ エンジンによって実装されている必要があります。そうでない場合、比較は無効になります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [DOCCONTEXT_COMPARE](../../../extensibility/debugger/reference/doccontext-compare.md)

@@ -1,6 +1,6 @@
 ---
 title: データセットのツール
-description: Visual Studio で使用可能なデータセットツールを確認します。 データセットワークフロー、データセット、N 層アーキテクチャ、およびデータセットと XML について説明します。
+description: Visual Studio で提供されているデータセット ツールについて確認します。 データセット ワークフロー、データセットと N 層アーキテクチャ、データセットと XML について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
 ms.topic: conceptual
@@ -51,7 +51,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 4e711d60010117f3a5081470ab8e6e656a7e6e90
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99866997"
@@ -59,23 +59,23 @@ ms.locfileid: "99866997"
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio のデータセット ツール
 
 > [!NOTE]
-> データセットと関連クラスは、アプリケーションがデータベースから切断されている間に、アプリケーションがメモリ内のデータを処理できるようにする、2000年より前のレガシ .NET テクノロジです。 これらは、ユーザーがデータを変更し、変更をデータベースに保存できるようにするアプリケーションに特に役立ちます。 データセットは非常に優れたテクノロジであることが実証されていますが、新しい .NET アプリケーションでは Entity Framework を使用することをお勧めします。 Entity Framework では、オブジェクトモデルとして表形式データを操作するためのより自然な方法が提供されます。これにより、プログラミングインターフェイスがより簡単になります。
+> データセットと関連クラスは、アプリケーションがデータベースから切断されている間にアプリケーションがメモリ内のデータを操作できるようにする、2000 年代初期のレガシ .NET テクノロジです。 これらが特に役立つのは、ユーザーがデータを変更し、変更をデータベースに戻して保持できるようにするアプリケーションです。 データセットは非常に優れたテクノロジであることが証明されていますが、新しい .NET アプリケーションでは Entity Framework を使用することをお勧めします。 Entity Framework には、オブジェクト モデルとして表形式データを操作する、より自然な方法が用意されており、よりシンプルなプログラミング インターフェイスが備わっています。
 
-`DataSet`オブジェクトは、実質的にはミニデータベースであるメモリ内オブジェクトです。 このファイル `DataTable` には、、、およびオブジェクトが含まれており、 `DataColumn` `DataRow` 開いている接続を維持しなくても、1つまたは複数のデータベースのデータを格納および変更できます。 データセットは、データへの変更に関する情報を保持するため、アプリケーションが再接続されると、更新プログラムを追跡してデータベースに送り返すことができます。
+`DataSet` オブジェクトは、本質的に小型データベースである、メモリ内オブジェクトです。 これには、開いた接続を維持しなくても 1 つ以上のデータベースのデータを格納し、変更することができるオブジェクトの `DataTable`、`DataColumn`、`DataRow` が含まれてます。 データセットではデータに対する変更についての情報が保持されるため、更新内容を追跡し、アプリケーションが再接続した状態になったときにデータベースに送り返すことができます。
 
-データセットと関連クラスは、.NET API の名前空間で定義されてい <xref:System.Data?displayProperty=fullName> ます。 ADO.NET を使用して、コード内でデータセットを動的に作成および変更できます。 このセクションのドキュメントでは、Visual Studio デザイナーを使用してデータセットを操作する方法について説明します。 デザイナーで作成されたデータセットは、 **TableAdapter** オブジェクトを使用してデータベースとやり取りします。 プログラムによって作成されるデータセットは、 **DataAdapter** オブジェクトを使用します。 プログラムによるデータセットの作成の詳細については、「 [dataadapter And datareader](/dotnet/framework/data/adonet/dataadapters-and-datareaders)」を参照してください。
+データセットと関連クラスは、.NET API の <xref:System.Data?displayProperty=fullName> 名前空間で定義されています。 データセットは、ADO.NET を使用して、コード内で動的に作成したり変更したりすることができます。 このセクションのドキュメントでは、Visual Studio デザイナーを使用してデータセットを操作する方法を示しています。 デザイナーで作成されるデータセットでは、**TableAdapter** オブジェクトを使用してデータベースとやり取りします。 プログラムによって作成されるデータセットでは、**DataAdapter** オブジェクトを使用します。 プログラムによるデータセットの作成については、「[DataAdapters と DataReaders](/dotnet/framework/data/adonet/dataadapters-and-datareaders)」を参照してください。
 
-アプリケーションでデータベースからのデータの読み取りのみを行う必要があり、更新、追加、または削除を実行しない場合は、通常、オブジェクトを使用して `DataReader` 汎用 `List` オブジェクトまたは別のコレクションオブジェクトにデータを取得することで、パフォーマンスを向上させることができます。 データを表示している場合は、ユーザーインターフェイスをコレクションにデータバインドすることができます。
+アプリケーションで行う必要があるのはデータベースからのデータの読み取りのみで、更新、追加、削除を実行しない場合は、`DataReader` オブジェクトを使用して汎用の `List` オブジェクトまたは別のコレクション オブジェクト内にデータを取得すれば、通常はパフォーマンスを向上させることができます。 データを表示しようとしている場合は、ユーザー インターフェイスをそのコレクションにデータバインドすることができます。
 
-## <a name="dataset-workflow"></a>データセットワークフロー
+## <a name="dataset-workflow"></a>データセット ワークフロー
 
-Visual Studio には、データセットの操作を簡略化するツールが用意されています。 基本的なエンドツーエンドのワークフローは次のとおりです。
+Visual Studio には、データセットの操作を簡略化するためのツールが用意されています。 基本的なエンドツーエンドのワークフローは以下のとおりです。
 
-- [ [データソース] ウィンドウ](add-new-data-sources.md#data-sources-window) を使用すると、1つまたは複数のデータソースから新しいデータセットを作成できます。 **データセットデザイナー** を使用してデータセットを構成し、そのプロパティを設定します。 たとえば、含めるデータソースのテーブルと、各テーブルの列を指定する必要があります。 データセットに必要なメモリの量を節約するには、慎重に選択してください。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。
+- [[データ ソース]](add-new-data-sources.md#data-sources-window) ウィンドウを使用して、1 つ以上のデータ ソースから新しいデータセットを作成します。 **データセット デザイナー** を使用して、データセットを構成し、そのプロパティを設定します。 たとえば、データ ソースのどのテーブルを含めるかと、各テーブルのどの列を含めるかを指定する必要があります。 慎重に選択して、データセットに必要なメモリの量を節約します。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。
 
-- 外部キーが正しく処理されるように、テーブル間のリレーションシップを指定します。 詳細については、「 [tableadapter を使用したデータセットの読み込み](../data-tools/fill-datasets-by-using-tableadapters.md)」を参照してください。
+- 外部キーが正しく処理されるように、テーブル間のリレーションシップを指定します。 詳細については、「[TableAdapters を使用してデータセットを入力する](../data-tools/fill-datasets-by-using-tableadapters.md)」を参照してください。
 
-- **TableAdapter 構成ウィザード** を使用して、データセットを設定するクエリまたはストアドプロシージャと、実装するデータベース操作 (update、delete など) を指定します。 詳細については、以下のトピックを参照してください。
+- **TableAdapter 構成ウィザード** を使用して、データセットにデータを格納するクエリまたはストアド プロシージャと、どのデータベース操作 (更新、削除など) を実装するかを指定します。 詳細については、以下のトピックを参照してください。
 
   - [TableAdapters を使用してデータセットを入力する](../data-tools/fill-datasets-by-using-tableadapters.md)
 
@@ -85,17 +85,17 @@ Visual Studio には、データセットの操作を簡略化するツールが
 
   - [データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)
 
-- データセット内のデータを照会して検索します。 詳細については、「 [クエリデータセット](../data-tools/query-datasets.md)」を参照してください。 [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] オブジェクト内のデータに対して [LINQ (統合言語クエリ)](/dotnet/csharp/linq/) を有効に <xref:System.Data.DataSet> します。 詳細については、「[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)」を参照してください。
+- データセット内のデータのクエリを行って検索します。 詳細については、「[データセットのクエリ](../data-tools/query-datasets.md)」を参照してください。 [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] を使用すると、[ オブジェクト内のデータに対して <xref:System.Data.DataSet>LINQ (統合言語クエリ)](/dotnet/csharp/linq/) が有効になります。 詳細については、「[LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)」を参照してください。
 
-- [ **データソース** ] ウィンドウを使用すると、ユーザーインターフェイスコントロールをデータセットまたはその個々の列にバインドしたり、ユーザーが編集できる列を指定したりできます。 詳細については、「 [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)」を参照してください。
+- **[データ ソース]** ウィンドウを使用して、ユーザー インターフェイス コントロールをデータセットまたはその個々の列にバインドし、どの列はユーザーが編集可能であるかを指定します。 詳細については、「[Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)」を参照してください。
 
 ## <a name="datasets-and-n-tier-architecture"></a>データセットと N 層アーキテクチャ
 
-N 層アプリケーションのデータセットの詳細については、「 [n 層アプリケーションでのデータセットの操作](../data-tools/work-with-datasets-in-n-tier-applications.md)」を参照してください。
+N 層データ アプリケーションでのデータセットの詳細については、「[n 層アプリケーションでのデータセットの操作](../data-tools/work-with-datasets-in-n-tier-applications.md)」を参照してください。
 
 ## <a name="datasets-and-xml"></a>データセットと XML
 
-XML との間でデータセットを変換する方法については、「データ [セットへの xml データの読み込み](../data-tools/read-xml-data-into-a-dataset.md) 」と「 [xml としてのデータセットの保存](../data-tools/save-a-dataset-as-xml.md)」を参照してください。
+XML に対するデータセットの変換については、「[XML データのデータセットへの読み込み](../data-tools/read-xml-data-into-a-dataset.md)」と「[データセットを XML として保存する](../data-tools/save-a-dataset-as-xml.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

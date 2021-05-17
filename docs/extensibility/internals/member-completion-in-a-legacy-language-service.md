@@ -1,6 +1,6 @@
 ---
-title: 従来の言語サービスでのメンバーの完了 |Microsoft Docs
-description: 従来の言語サービスでの IntelliSense メンバーの完了ツールのヒントと、それが managed package framework (MPF) によってどのようにサポートされるかについて説明します。
+title: 従来の言語サービスでのメンバー補完 | Microsoft Docs
+description: 従来の言語サービスにおける IntelliSense メンバー補完ツールヒントの動作、およびそれが Managed Package Framework (MPF) によってどのようにサポートされているかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,57 +16,57 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5279b3a96cb9658b968a5d51bbd8b1c2a41862b6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095135"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>従来の言語サービスでのメンバー補完
 
-IntelliSense メンバー補完は、クラス、構造体、列挙型、名前空間など、特定のスコープの使用可能なメンバーの一覧を表示するツールヒントです。 たとえば、C# では、ユーザーが "this" に続けてピリオドを入力すると、現在のスコープのクラスまたは構造体のすべてのメンバーのリストが、ユーザーが選択できる一覧に表示されます。
+IntelliSense メンバー補完は、クラス、構造体、列挙型、名前空間など、特定のスコープの使用可能なメンバーのリストを表示するツールヒントです。 たとえば、C# では、ユーザーが "this" に続けてピリオドを入力すると、現在のスコープのクラスまたは構造体のすべてのメンバーのリストが、ユーザーが選択できるリストに表示されます。
 
-Managed package framework (MPF) では、ツールヒントをサポートし、ツールヒントの一覧を管理します。必要なのは、一覧に表示されるデータを提供するためにパーサーから協力することだけです。
+Managed Package Framework (MPF) ではツールヒントがサポートされており、ツールヒントでリストを管理できます。ここでは、パーサーを使用して、リストに表示されるデータを提供するだけで済みます。
 
-従来の言語サービスは VSPackage の一部として実装されていますが、言語サービス機能を実装するための新しい方法として、MEF 拡張機能を使用することをお勧めします。 詳細については、「 [エディターと言語サービスの拡張](../../extensibility/extending-the-editor-and-language-services.md)」を参照してください。
+従来の言語サービスは VSPackage の一部として実装されていますが、言語サービス機能の新しい実装方法では MEF 拡張機能が使用されます。 詳細については、「[エディターと言語サービスの拡張](../../extensibility/extending-the-editor-and-language-services.md)」を参照してください。
 
 > [!NOTE]
-> できるだけ早く新しいエディター API の使用を開始することをお勧めします。 これにより、言語サービスのパフォーマンスが向上し、エディターの新機能を利用できるようになります。
+> 新しいエディターの API をできるだけ早く使い始めることをお勧めします。 これにより、言語サービスのパフォーマンスが向上し、新しいエディター機能を利用できるようになります。
 
 ## <a name="how-it-works"></a>動作のしくみ
 
-MPF クラスを使用してメンバーリストを表示するには、次の2つの方法があります。
+MPF のクラスを使用してメンバー リストを表示するには、次の 2 つの方法があります。
 
-- 識別子にカレットを配置するか、メンバーの完了文字の後にカーソルを置いて、 **IntelliSense** メニューから [**メンバーの一覧表示**] を選択します。
+- 識別子の上、またはメンバーの補完文字の後にキャレットを置いて、**IntelliSense** メニューの **[メンバーの一覧]** を選択します。
 
-- スキャナーは、 <xref:Microsoft.VisualStudio.Package.IScanner> メンバーの完了文字を検出し、その文字に対して [TokenTriggers](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) のトークントリガーを設定します。
+- <xref:Microsoft.VisualStudio.Package.IScanner> スキャナーではメンバー補完文字が検出され、その文字に対して [TokenTriggers.MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) のトークン トリガーが設定されます。
 
-メンバーの完了文字は、クラス、構造体、または列挙体のメンバーが従うことを示します。 たとえば、C# または Visual Basic メンバーの完了文字はです `.` 。 C++ では、文字は `.` または `->` です。 トリガーの値は、メンバーの選択文字がスキャンされるときに設定されます。
+メンバー補完文字は、クラス、構造体、または列挙型のメンバーが後に続くことを示しています。 たとえば、C# または Visual Basic ではメンバー補完文字は `.` です。また、C++ では、文字は `.` または `->` です。 トリガーの値は、メンバーの選択文字がスキャンされるときに設定されます。
 
-### <a name="the-intellisense-member-list-command"></a>IntelliSense メンバーリストコマンド
+### <a name="the-intellisense-member-list-command"></a>IntelliSense メンバー リスト コマンド
 
-この <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> コマンドは、クラスのメソッドへの呼び出しを開始します。 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.Source> メソッドは、 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> [ParseReason](<xref:Microsoft.VisualStudio.Package.ParseReason.DisplayMemberList>)の解析理由でメソッドパーサーを呼び出します。
+<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> コマンドを指定すると、<xref:Microsoft.VisualStudio.Package.Source> クラスの <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドの呼び出しが開始されます。その後、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドによって <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> メソッド パーサーが [ParseReason.DisplayMemberList](<xref:Microsoft.VisualStudio.Package.ParseReason.DisplayMemberList>) という解析理由で呼び出されます。
 
-パーサーは、現在の位置のコンテキストと、現在の位置の前または直後のトークンを決定します。 このトークンに基づいて、宣言の一覧が表示されます。 たとえば、C# では、クラスメンバーにキャレットを配置し、[メンバーの **一覧**] を選択すると、クラスのすべてのメンバーの一覧が取得されます。 オブジェクト変数の後に続くピリオドの後にカレットを配置すると、そのオブジェクトが表すクラスのすべてのメンバーのリストが取得されます。 メンバーリストが表示されているときに、カレットがメンバーに配置されている場合は、一覧からメンバーを選択すると、カレットがあるメンバーがリスト内のメンバーと置き換えられます。
+パーサーにより、現在の位置のコンテキストと、現在の位置またはその直前のトークンが確認されます。 このトークンに基づいて、宣言のリストが表示されます。 たとえば、C# では、クラス メンバーの上にキャレットを配置し、 **[メンバーの一覧]** を選択すると、クラスのすべてのメンバーのリストが表示されます。 オブジェクト変数に続くピリオドの後にキャレットを配置すると、そのオブジェクトが表すクラスの全メンバーのリストが表示されます。 メンバー リストが表示されているときに、メンバーの上にキャレットを配置した場合、リストからメンバーを選択すると、キャレットが置かれているメンバーがリスト内のメンバーと置き換えられます。
 
-### <a name="the-token-trigger"></a>トークントリガー
+### <a name="the-token-trigger"></a>トークン トリガー
 
-[TokenTriggers](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>)トリガーはクラスに対してメソッドの呼び出しを開始 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> し、 <xref:Microsoft.VisualStudio.Package.Source> メソッドは、 <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> 解析の理由として[ParseReason を](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelect>)使用してパーサーを呼び出します。 トークントリガーにも [TokenTriggers](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MatchBraces>) フラグが含まれている場合、解析の理由は、メンバーの選択と中かっこの強調表示を組み合わせた [ParseReason. MemberSelectAndHighlightBraces](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelectAndHighlightBraces>)です。
+[TokenTriggers.MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) トリガーでは、<xref:Microsoft.VisualStudio.Package.Source> クラスの <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドの呼び出しが開始されます。その後、<xref:Microsoft.VisualStudio.Package.Source.Completion%2A> メソッドによってパーサーが [ParseReason.MemberSelect](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelect>) という解析理由で呼び出されます。 トークン トリガーにも [TokenTriggers.MatchBraces](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MatchBraces>) フラグが含まれている場合、解析理由は、メンバーの選択とかっこの強調表示を組み合わせた [ParseReason. MemberSelectAndHighlightBraces](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelectAndHighlightBraces>) になります。
 
-パーサーは、現在の位置のコンテキストと、メンバーの選択文字の前に入力されたものを決定します。 この情報から、パーサーによって、要求されたスコープのすべてのメンバーの一覧が作成されます。 この宣言の一覧は、 <xref:Microsoft.VisualStudio.Package.AuthoringScope> メソッドから返されるオブジェクトに格納され <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ます。 宣言が返されると、メンバーの完了ツールヒントが表示されます。 ツールヒントは、クラスのインスタンスによって管理され <xref:Microsoft.VisualStudio.Package.CompletionSet> ます。
+パーサーにより、現在の位置のコンテキストと、メンバー選択文字の前に入力された文字が確認されます。 この情報から、要求されたスコープのすべてのメンバーのリストがパーサーによって作成されます。 この宣言の一覧は、<xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> メソッドから返される <xref:Microsoft.VisualStudio.Package.AuthoringScope> オブジェクトに格納されます。 宣言が返された場合、メンバー補完ツールヒントが表示されます。 ツールヒントは、<xref:Microsoft.VisualStudio.Package.CompletionSet> クラスのインスタンスによって管理されます。
 
-## <a name="enable-support-for-member-completion"></a>メンバーの完了のサポートを有効にする
+## <a name="enable-support-for-member-completion"></a>メンバー補完のサポートを有効にする
 
-`CodeSense`IntelliSense 操作をサポートするには、レジストリエントリを1に設定する必要があります。 このレジストリエントリは、 <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> 言語パッケージに関連付けられている user 属性に渡される名前付きパラメーターを使用して設定できます。 言語サービスクラスは、クラスのプロパティからこのレジストリエントリの値を読み取り <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ます。
+IntelliSense の操作をサポートするには、`CodeSense` レジストリ エントリを 1 に設定する必要があります。 このレジストリ エントリは、言語パッケージに関連付けられている <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> ユーザー属性に渡される名前付きパラメーターを使用して設定できます。 言語サービスのクラスでは、<xref:Microsoft.VisualStudio.Package.LanguagePreferences> クラスの <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> プロパティからこのレジストリ エントリの値が読み取られます。
 
-スキャナーから [TokenTriggers](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>)のトークントリガーが返され、パーサーが宣言の一覧を返すと、メンバーのコンプリートリストが表示されます。
+スキャナーから [TokenTriggers.MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) のトークン トリガーが返され、パーサーから宣言のリストが返された場合、メンバー入力候補一覧が表示されます。
 
-## <a name="support-member-completion-in-the-scanner"></a>スキャナーのメンバーの完了をサポートする
+## <a name="support-member-completion-in-the-scanner"></a>スキャナーでメンバー補完をサポートする
 
-スキャナーは、メンバーの完了文字を検出し、その文字が解析されたときに TokenTriggers のトークントリガーを設定できる必要があります[。](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>)
+スキャナーでは、メンバー補完文字を検出し、その文字が解析されたときに [TokenTriggers.MemberSelect](<xref:Microsoft.VisualStudio.Package.TokenTriggers.MemberSelect>) のトークン トリガーが設定されるようにする必要があります。
 
 ### <a name="scanner-example"></a>スキャナーの例
 
-メンバーの完了文字を検出し、適切なフラグを設定する簡単な例を次に示し <xref:Microsoft.VisualStudio.Package.TokenTriggers> ます。 この例は、説明を目的としたものです。 スキャナーには、 `GetNextToken` テキスト行からトークンを識別して返すメソッドが含まれていることを前提としています。 このコード例では、単純に、正しい種類の文字が表示されるたびにトリガーを設定します。
+メンバー補完文字を検出し、適切な <xref:Microsoft.VisualStudio.Package.TokenTriggers> フラグを設定する簡単な例を次に示します。 この例は、説明のみを目的としています。 テキスト行でトークンを識別して返すメソッド `GetNextToken` がスキャナーに含まれていることを想定しています。 このコード例では、単純に、正しい種類の文字が確認されるたびにトリガーが設定されます。
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -99,17 +99,17 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="support-member-completion-in-the-parser"></a>パーサーでのメンバーの完了のサポート
+## <a name="support-member-completion-in-the-parser"></a>パーサーでメンバー補完をサポートする
 
-メンバーの完了のために、 <xref:Microsoft.VisualStudio.Package.Source> クラスはメソッドを呼び出し <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> ます。 クラスから派生したクラスにリストを実装する必要があり <xref:Microsoft.VisualStudio.Package.Declarations> ます。 実装する <xref:Microsoft.VisualStudio.Package.Declarations> 必要のあるメソッドの詳細については、クラスを参照してください。
+メンバー補完のためには、<xref:Microsoft.VisualStudio.Package.Source> クラスで <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> メソッドを呼び出します。 <xref:Microsoft.VisualStudio.Package.Declarations> クラスから派生したクラスでこの一覧を実装する必要があります。 実装する必要があるメソッドの詳細については、<xref:Microsoft.VisualStudio.Package.Declarations> クラスを参照してください。
 
-メンバー選択文字が型指定されている場合、パーサーは [ParseReason](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelect>) または [ParseReason](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelectAndHighlightBraces>) を使用して呼び出されます。 オブジェクトで指定された場所 <xref:Microsoft.VisualStudio.Package.ParseRequest> は、メンバーの選択文字の直後にあります。 パーサーは、ソースコード内の特定のポイントにあるメンバーリストに表示できるすべてのメンバーの名前を収集する必要があります。 次に、パーサーは、現在の行を解析して、メンバーの選択文字に関連付けられているスコープを判断する必要があります。
+メンバー選択文字が入力されると、パーサーは [ParseReason.MemberSelect](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelect>) または [ParseReason.MemberSelectAndHighlightBraces](<xref:Microsoft.VisualStudio.Package.ParseReason.MemberSelectAndHighlightBraces>) を使用して呼び出されます。 <xref:Microsoft.VisualStudio.Package.ParseRequest> オブジェクトで指定された場所は、メンバー選択文字の直後です。 パーサーでは、ソース コード内の特定の位置にある、メンバー リストに表示できるすべてのメンバーの名前を収集する必要があります。 次に、パーサーでは現在の行を解析して、ユーザーがメンバー選択文字に関連付けるスコープを確認する必要があります。
 
-このスコープは、メンバーが文字を選択する前の識別子の型に基づいています。 たとえば、C# で、型がのメンバー変数を指定する場合は、「 `languageService` `LanguageService` languageService」と入力し **ます。** クラスのすべてのメンバーの一覧を生成 `LanguageService` します。 また、C# では、これを入力 **します。** 現在のスコープ内のクラスのすべてのメンバーの一覧を生成します。
+このスコープは、メンバー選択文字の前にある識別子の種類に基づいています。 たとえば、C# では、メンバー変数 `languageService` の型が `LanguageService` である場合、「**languageService.** 」と入力すると、 `LanguageService` クラスのすべてのメンバーのリストが生成されます。 また、C# では、「**this.** 」と入力すると、 現在のスコープ内のクラスの全メンバーを含むリストが生成されます。
 
 ### <a name="parser-example"></a>パーサーの例
 
-次の例は、リストを設定する方法の1つを示して <xref:Microsoft.VisualStudio.Package.Declarations> います。 このコードは、クラスのメソッドを呼び出すことによって、パーサーが宣言を作成し、リストに追加することを前提としてい `AddDeclaration` `TestAuthoringScope` ます。
+次の例は、<xref:Microsoft.VisualStudio.Package.Declarations> リストに入力する方法の 1 つを示しています。 このコードでは、`TestAuthoringScope` クラスの `AddDeclaration` メソッドを呼び出すことによって、パーサーで宣言が作成され、それがリストに追加されることを前提としています。
 
 ```csharp
 using System.Collections;

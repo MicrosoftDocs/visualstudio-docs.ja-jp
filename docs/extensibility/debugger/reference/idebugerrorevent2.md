@@ -1,6 +1,6 @@
 ---
-description: このインターフェイスは、ユーザーに報告されるエラーメッセージを指定します。
-title: IDebugErrorEvent2 |Microsoft Docs
+description: このインターフェイスでは、ユーザーに報告されるエラー メッセージを指定します。
+title: IDebugErrorEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,43 +15,43 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d531180ca2fad9a6605837105c4ec5d626584a19
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054232"
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
-このインターフェイスは、ユーザーに報告されるエラーメッセージを指定します。
+このインターフェイスでは、ユーザーに報告されるエラー メッセージを指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```
 IDebugErrorEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>実装側の注意
- デバッグエンジン (DE) は、このインターフェイスを実装して、エラーを人間が判読できるメッセージとして報告します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)インターフェイスは、このインターフェイスと同じオブジェクトに実装する必要があります。 SDM は、 [QueryInterface](/cpp/atl/queryinterface) を使用してインターフェイスにアクセスし `IDebugEvent2` ます。
+ デバッグ エンジン (DE) では、エラーを人間が判読できるメッセージとして報告するために、このインターフェイスを実装します。 [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) インターフェイスは、このインターフェイスと同じオブジェクトに実装する必要があります。 `IDebugEvent2` インターフェイスにアクセスするために SDM によって [QueryInterface](/cpp/atl/queryinterface) が使用されます。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
- DE は、このイベントオブジェクトを作成して送信し、エラーを報告します。 イベントは、デバッグ対象のプログラムにアタッチされたときに SDM によって提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback 関数を使用して送信されます。
+ DE では、エラーを報告するために、このイベント オブジェクトを作成して送信します。 このイベントは、SDM がデバッグ対象のプログラムにアタッチされたときに提供される [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) コールバック関数を使用して送信されます。
 
 ## <a name="methods-in-vtable-order"></a>Vtable の順序でのメソッド
- このインターフェイスは、次のメソッドを実装します。
+ このインターフェイスには、次のメソッドが実装されています。
 
 |メソッド|説明|
 |------------|-----------------|
-|`GetErrorMessage`|人間が判読できる文字列としてエラーを返します。|
+|`GetErrorMessage`|エラーを人間が判読できる文字列として返します。|
 
-## <a name="remarks"></a>注釈
- デバッグエンジンがエラーを検出した場合、このインターフェイスを使用して、Visual Studio を通じてユーザーにメッセージを報告できます。
+## <a name="remarks"></a>解説
+ デバッグ エンジンでエラーが検出された場合、このインターフェイスを使用して、Visual Studio を介してユーザーにメッセージを報告できます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

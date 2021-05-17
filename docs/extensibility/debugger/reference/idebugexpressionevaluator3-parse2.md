@@ -1,6 +1,6 @@
 ---
-description: シンボルプロバイダーおよび評価フレームのアドレスを指定して、式文字列を解析済みの式に変換します。
-title: IDebugExpressionEvaluator3::P arse2 |Microsoft Docs
+description: シンボル プロバイダーおよび評価フレームのアドレスを指定して、式の文字列を解析済みの式に変換します。
+title: IDebugExpressionEvaluator3::Parse2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d80b7613b85e07b83b34ebd0d13cc6f6ec182d81
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084728"
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
-シンボルプロバイダーおよび評価フレームのアドレスを指定して、式文字列を解析済みの式に変換します。
+シンボル プロバイダーおよび評価フレームのアドレスを指定して、式の文字列を解析済みの式に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,37 +54,37 @@ HRESULT Parse2 (
 
 ## <a name="parameters"></a>パラメーター
 `upstrExpression`\
-から解析する式文字列。
+[入力] 解析する式の文字列。
 
 `dwFlags`\
-から式の解析方法を決定する [Parseflags](../../../extensibility/debugger/reference/parseflags.md) 定数のコレクション。
+[入力] 式の解析方法を決定する [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 定数のコレクション。
 
 `nRadix`\
-から数値情報を解釈するために使用される基数。
+[入力] 数値情報を解釈するために使用される基数。
 
 `pSymbolProvider`\
-からシンボルプロバイダーのインターフェイスです。
+[入力] シンボル プロバイダーのインターフェイス。
 
 `pAddress`\
-から評価フレームのアドレス。
+[入力] 評価フレームのアドレス。
 
 `pbstrError`\
-入出力エラーを人間が判読できるテキストとして返します。
+[出力] エラーを人間が判読できるテキストとして返します。
 
 `pichError`\
-入出力式文字列内のエラーの先頭の文字位置を返します。
+[出力] 式の文字列内のエラーの先頭の文字位置を返します。
 
 `ppParsedExpression`\
-入出力 [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) オブジェクト内の解析された式を返します。
+[出力] 解析された式を [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) オブジェクトで返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-このメソッドは、実際の値ではなく、解析された式を生成します。 解析された式を評価する準備ができました。つまり、値に変換されます。
+## <a name="remarks"></a>解説
+このメソッドでは、実際の値ではなく、解析された式が生成されます。 解析された式を評価する (つまり、値に変換する) 準備ができました。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)インターフェイスを公開する **CEE** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) インターフェイスを公開する **CEE** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
@@ -138,5 +138,5 @@ HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)

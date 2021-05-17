@@ -1,7 +1,8 @@
 ---
-title: IDiaEnumSymbolsByAddr |Microsoft Docs
+description: データ ソースに含まれているさまざまなシンボルをアドレスで列挙します。
+title: IDiaEnumSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,45 +10,45 @@ helpviewer_keywords:
 ms.assetid: 37d3dcdf-e4fa-4354-b5e1-8843566b52ac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d8cddaa39635be534e2247b48a370ed88b29ab4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c1c0e20b6b148f41781f9962f961128aa2d342fc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743814"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634437"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
-データソースに格納されているさまざまなシンボルをアドレスで列挙します。
+データ ソースに含まれているさまざまなシンボルをアドレスで列挙します。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaEnumSymbolsByAddr : IUnknown
+IDiaEnumSymbolsByAddr : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaEnumSymbolsByAddr` のメソッドを示しています。
+次の表に、`IDiaEnumSymbolsByAddr` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
-|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|セクションとオフセットで参照を実行して、列挙子を配置します。|
-|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|相対仮想アドレス (RVA) による検索を実行して、列挙子を配置します。|
-|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|仮想アドレス (VA) による検索を実行して、列挙子を配置します。|
-|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|Order by アドレスの次のシンボルを取得します。 フェッチされた要素の数で列挙子の位置を更新します。|
-|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|前の記号を order by アドレスで取得します。 フェッチされた要素の数で列挙子の位置を更新します。|
+|[IDiaEnumSymbolsByAddr::symbolByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyaddr.md)|セクションとオフセットで検索を実行することにより、列挙子を配置します。|
+|[IDiaEnumSymbolsByAddr::symbolByRVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyrva.md)|相対仮想アドレス (RVA) で検索を実行することにより、列挙子を配置します。|
+|[IDiaEnumSymbolsByAddr::symbolByVA](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-symbolbyva.md)|仮想アドレス (VA) で検索を実行することにより、列挙子を配置します。|
+|[IDiaEnumSymbolsByAddr::Next](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-next.md)|アドレス順に、次のシンボルを取得します。 取り込まれた要素の数だけ列挙子の位置を更新します。|
+|[IDiaEnumSymbolsByAddr::Prev](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-prev.md)|アドレス順に、前のシンボルを取得します。 取り込まれた要素の数だけ列挙子の位置を更新します。|
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|オブジェクトのコピーを作成します。|
 
-## <a name="remarks"></a>Remarks
-このインターフェイスは、アドレスによってグループ化されたシンボルを提供します。 種類別にグループ化されたシンボル (`SymTagUDT` (ユーザー定義型) や `SymTagBaseClass` など) を操作するには、 [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)インターフェイスを使用します。
+## <a name="remarks"></a>解説
+このインターフェイスは、アドレスによってグループ化されたシンボルを提供します。 `SymTagUDT` (ユーザー定義型) や `SymTagBaseClass` など、型によってグループ化されたシンボルを操作するには、[IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) インターフェイスを使用します。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaSession:: Getシンボル Byaddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)メソッドを呼び出します。
+このインターフェイスを取得するには、[IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) メソッドを呼び出します。
 
 ## <a name="example"></a>例
-この関数は、相対仮想アドレスによって並べ替えられたすべての記号の名前とアドレスを表示します。
+この関数は、すべてのシンボルの名前とアドレスを相対仮想アドレス順に表示します。
 
 ```C++
 void ShowSymbolsByAddress(IDiaSession *pSession)
@@ -93,12 +94,12 @@ void ShowSymbolsByAddress(IDiaSession *pSession)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

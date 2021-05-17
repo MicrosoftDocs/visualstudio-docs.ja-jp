@@ -1,6 +1,6 @@
 ---
 description: メソッドのパラメーターの列挙子を作成します。
-title: 'IDebugMethodField:: EnumParameters |Microsoft Docs'
+title: IDebugMethodField::EnumParameters | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0f2085b6a2aff6b41456f47a01c446b1c646f353
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058392"
@@ -42,19 +42,19 @@ int EnumParameters(
 
 ## <a name="parameters"></a>パラメーター
 `ppParams`\
-入出力メソッドに対するパラメーターのリストを表す [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) オブジェクトを返します。それ以外の場合は、パラメーターがない場合は null 値を返します。
+[out] メソッドに対するパラメーターのリストを表す [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) オブジェクトを返します。それ以外の場合、パラメーターがない場合は null 値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。パラメーターがない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。
+ 成功した場合は、S_OK を返します。パラメーターがない場合は、S_FALSE を返します。 それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 各要素は、さまざまな種類のパラメーターを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトです。 各オブジェクトの [Getkind](../../../extensibility/debugger/reference/idebugfield-getkind.md) メソッドを呼び出して、オブジェクトが表すパラメーターの種類を正確に特定します。
+## <a name="remarks"></a>解説
+ 各要素は、さまざまな型のパラメーターを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトです。 各オブジェクトの [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) メソッドを呼び出して、オブジェクトが表すパラメーターの型を正確に特定します。
 
- パラメーターには、変数名とその型の両方が含まれます。 クラスメソッドの最初のパラメーターは、通常、"this" ポインターです。
+ パラメーターには、変数名とその型の両方が含まれます。 クラス メソッドへの最初のパラメーターは、通常、"this" ポインターです。
 
- パラメーターの型のみが必要な場合は、 [Enumarguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) メソッドを呼び出します。
+ パラメーターの型のみが必要な場合は、 [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) メソッドを呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

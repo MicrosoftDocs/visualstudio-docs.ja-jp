@@ -1,6 +1,6 @@
 ---
 description: プログラムを終了します。
-title: 'IDebugProgram2:: Terminate |Microsoft Docs'
+title: IDebugProgram2::Terminate | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 404df2be6718ab691ec47081b6fd400a1ddc8891
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084468"
@@ -39,13 +39,13 @@ int Terminate();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 可能であれば、プログラムは終了し、プロセスからアンロードされます。それ以外の場合は、デバッグエンジン (DE) によって必要なクリーンアップが実行されます。
+## <a name="remarks"></a>解説
+ 可能な場合は、プログラムが終了し、プロセスからアンロードされます。それ以外の場合は、デバッグ エンジン (DE) によって必要なクリーンアップが実行されます。
 
- このメソッドまたは [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) メソッドは、通常、ユーザーがすべてのデバッグを停止した場合に、IDE によって呼び出されます。 このメソッドを実装する場合は、プロセス内でプログラムを終了するのが理想的です。 これが不可能な場合は、このプロセスでプログラムが実行されないようにする必要があります (必要なクリーンアップを実行します)。 メソッドが `IDebugProcess2::Terminate` IDE によって呼び出された場合、メソッドが呼び出された後、プロセス全体が終了し `IDebugProgram2::Terminate` ます。
+ このメソッド ([Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md) メソッド) は、通常、ユーザーがすべてのデバッグを停止したときに、IDE によって呼び出されます。 このメソッドを実装した場合、プロセス内でプログラムが終了するのが理想的です。 これが可能ではない場合は、DE で、このプロセスでプログラムがそれ以上実行されないようにする (および必要なクリーンアップを実行する) 必要があります。 `IDebugProcess2::Terminate` メソッドが IDE によって呼び出された場合は、`IDebugProgram2::Terminate` メソッドが呼び出された後にプロセス全体が終了し ます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [Terminate](../../../extensibility/debugger/reference/idebugprocess2-terminate.md)

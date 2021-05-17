@@ -1,6 +1,6 @@
 ---
-description: 逆アセンブリストリームの現在位置から指示を読み取ります。
-title: 'IDebugDisassemblyStream2:: Read |Microsoft Docs'
+description: 逆アセンブリ ストリーム内の現在位置から始まる命令を読み取ります。
+title: IDebugDisassemblyStream2::Read | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: bcabd0cc42f013b579ee32deeb33d68cd9d45f5d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066920"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-逆アセンブリストリームの現在位置から指示を読み取ります。
+逆アセンブリ ストリーム内の現在位置から始まる命令を読み取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -48,28 +48,28 @@ int Read(
 
 ## <a name="parameters"></a>パラメーター
 `dwInstructions`\
-から逆アセンブルする命令の数。 この値は、配列の最大長でも `prgDisassembly` あります。
+[入力] 逆アセンブルする命令の数。 この値は、`prgDisassembly` 配列の最大長でもあります。
 
 `dwFields`\
-からどのフィールドを入力するかを示す、 [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) 列挙のフラグの組み合わせ `prgDisassembly` 。
+[入力] `prgDisassembly` のどのフィールドが入力されるかを示す [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) 列挙型のフラグの組み合わせ。
 
 `pdwInstructionsRead`\
-入出力実際に逆アセンブルされた命令の数を返します。
+[出力] 実際に逆アセンブルされた命令の数を返します。
 
 `prgDisassembly`\
-入出力逆アセンブルされたコードで埋め込まれる [Disassemblydata](../../../extensibility/debugger/reference/disassemblydata.md) 構造体の配列。逆アセンブル命令ごとに1つの構造体。 この配列の長さは、パラメーターによって指定され `dwInstructions` ます。
+[出力] 逆アセンブルされたコードが入力される [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 構造体の配列。逆アセンブルされた命令ごとに 1 つの構造体になります。 この配列の長さは、`dwInstructions` パラメーターによって決定されます。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 現在のスコープで使用可能な命令の最大数は、 [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) メソッドを呼び出すことによって取得できます。
+## <a name="remarks"></a>解説
+ 現在のスコープで使用可能な命令の最大数は、[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) メソッドを呼び出して取得できます。
 
- 次の命令が読み込まれる現在位置は、 [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) メソッドを呼び出すことによって変更できます。
+ 次の命令が読み取られる現在位置は、[Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) メソッドを呼び出して変更できます。
 
- フラグは、 `DSF_OPERANDS_SYMBOLS` `DSF_OPERANDS` 命令を `dwFields` 逆アセンブルするときにシンボル名を使用することを示すために、パラメーターのフラグに追加できます。
+ `dwFields` パラメーターで `DSF_OPERANDS_SYMBOLS` フラグを `DSF_OPERANDS` フラグに追加して、命令を逆アセンブルするときはシンボル名を使用する必要があることを示すことができます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)
 - [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md)
 - [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

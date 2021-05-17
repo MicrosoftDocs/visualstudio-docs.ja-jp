@@ -1,6 +1,6 @@
 ---
-title: ウォッチ式の評価 |Microsoft Docs
-description: ウォッチ式の値を表示する準備ができたときに Visual Studio が EvaluateSync を使用する方法について説明します。
+title: ウォッチ式の評価 | Microsoft Docs
+description: Visual Studio によって、ウォッチ式の値を表示する準備ができたときに、EvaluateSync がどのように使用されるかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,27 +15,27 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 21a173a8c041bbaf12cb67bf90e1c4407ac5e4a7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105097059"
 ---
 # <a name="evaluate-a-watch-expression"></a>ウォッチ式の評価
 > [!IMPORTANT]
-> Visual Studio 2015 では、式エバリュエーターを実装するこの方法は非推奨とされます。 CLR 式エバリュエーターの実装の詳細については、「 [clr 式](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) エバリュエーターと [マネージ式エバリュエーターサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)」を参照してください。
+> Visual Studio 2015 では、この方法での式エバリュエーターの実装は非推奨です。 CLR 式エバリュエーターの実装については、[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)に関する記事と[マネージド式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)に関する記事をご覧ください。
 
-Visual Studio でウォッチ式の値を表示する準備が整うと、 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md)が呼び出され、その後、 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md)が呼び出されます。 このプロセスでは、式の値と型を含む [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトが生成されます。
+Visual Studio でウォッチ式の値を表示する準備が整うと、[EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) が呼び出され、次に、[EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) が呼び出されます。 このプロセスでは、式の値と型を含む [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトが生成されます。
 
-のこの実装では、 `IDebugParsedExpression::EvaluateSync` 式が解析され、同時に評価されます。 この実装では、次のタスクを実行します。
+`IDebugParsedExpression::EvaluateSync` のこの実装では、式が解析され、同時に評価されます。 この実装では、次のタスクが実行されます。
 
-1. 式を解析して評価し、値とその型を保持する汎用オブジェクトを生成します。 C# では、これは C++ では while として表され、これはとして `object` 表され `VARIANT` ます。
+1. 式を解析して評価し、値とその型を保持するジェネリック オブジェクトを生成します。 C# では、これは `object` として表され、C++ では `VARIANT` として表されます。
 
-2. `CValueProperty`インターフェイスを実装 `IDebugProperty2` し、返される値をクラスに格納するクラス (この例ではと呼ばれる) をインスタンス化します。
+2. `IDebugProperty2` インターフェイスを実行し、返される値をクラスに格納するクラス (この例では `CValueProperty` と呼ばれている) をインスタンス化します。
 
-3. `IDebugProperty2`オブジェクトからインターフェイスを返し `CValueProperty` ます。
+3. `CValueProperty` オブジェクトから `IDebugProperty2` インターフェイスを返します。
 
 ## <a name="managed-code"></a>マネージド コード
-これは、マネージコードでのの実装です `IDebugParsedExpression::EvaluateSync` 。 ヘルパーメソッドは、 `Tokenize` 式を解析ツリーに解析します。 ヘルパー関数は、 `EvalToken` トークンを値に変換します。 ヘルパー関数は、 `FindTerm` 解析ツリーを再帰的に走査し、 `EvalToken` 値を表す各ノードに対してを呼び出し、式に任意の操作 (加算または減算) を適用します。
+これは、マネージド コードでの `IDebugParsedExpression::EvaluateSync` の実装です。 ヘルパー メソッド `Tokenize` では、式が解析ツリーに解析されます。 ヘルパー関数 `EvalToken` では、トークンが値に変換されます。 ヘルパー関数 `FindTerm` では、解析ツリーが再帰的に走査され、各ノードに対して `EvalToken` が呼び出され、値が表され、式で任意の演算 (加算や減算) が適用されます。
 
 ```csharp
 namespace EEMC
@@ -81,8 +81,8 @@ namespace EEMC
 }
 ```
 
-## <a name="unmanaged-code"></a>アンマネージコード
-これは、 `IDebugParsedExpression::EvaluateSync` アンマネージコードでのの実装です。 ヘルパー関数は、 `Evaluate` 式を解析して評価し、 `VARIANT` 結果の値を保持するを返します。 ヘルパー関数は `VariantValueToProperty` 、を `VARIANT` オブジェクトにバンドルし `CValueProperty` ます。
+## <a name="unmanaged-code"></a>アンマネージド コード
+これは、アンマネージド コードでの `IDebugParsedExpression::EvaluateSync` の実装です。 ヘルパー関数 `Evaluate` では、式が解析され、評価されて、結果の値を保持する `VARIANT` が返されます。 ヘルパー関数 `VariantValueToProperty` では、`VARIANT` が `CValueProperty` オブジェクトにバンドルされます。
 
 ```cpp
 STDMETHODIMP CParsedExpression::EvaluateSync(
@@ -173,6 +173,6 @@ STDMETHODIMP CParsedExpression::EvaluateSync(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ウォッチウィンドウの式の評価](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
-- [式の評価の実装例](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)
+## <a name="see-also"></a>関連項目
+- [ウォッチ ウィンドウ式の評価](../../extensibility/debugger/evaluating-a-watch-window-expression.md)
+- [式の評価の実装のサンプル](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)

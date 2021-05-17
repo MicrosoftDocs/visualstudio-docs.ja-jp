@@ -1,6 +1,6 @@
 ---
-title: '&lt;互換フレームワーク &gt; 要素 (ClickOnce 配置) |Microsoft Docs'
-description: 互換フレームワーク要素は、このアプリケーションをインストールして実行できる .NET Framework のバージョンを識別します。
+title: '&lt;compatibleFrameworks&gt; 要素 (ClickOnce 配置) | Microsoft Docs'
+description: compatibleFrameworks 要素では、このアプリケーションをインストールして実行できる .NET Framework のバージョンを識別します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 6b0a87e36a176a01b8f243c4646e2711220f807f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99881179"
 ---
-# <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;互換フレームワーク &gt; 要素 (ClickOnce 配置)
+# <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; 要素 (ClickOnce 配置)
 このアプリケーションをインストールして実行できる .NET Framework のバージョンを指定します。
 
 > [!NOTE]
-> [](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) `compatibleFrameworks` [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)を使用して証明書で既に署名されているアプリケーションマニフェストを保存する場合、MageUI.exeは要素をサポートしません。 代わりに、 [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)を使用する必要があります。
+> [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) では、[*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) を使用して証明書で既に署名されているアプリケーション マニフェストを保存するときには、`compatibleFrameworks` 要素がサポートされません。 代わりに [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) を使用する必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ ms.locfileid: "99881179"
 ```
 
 ## <a name="elements-and-attributes"></a>要素と属性
- `compatibleFrameworks`要素は、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 4 以降で提供されるランタイムを対象とする配置マニフェストに必要です。 `compatibleFrameworks`要素には `framework` 、このアプリケーションを実行できる .NET Framework バージョンを指定する1つ以上の要素が含まれています。 ランタイムは、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] この一覧で使用可能な最初のでアプリケーションを実行し `framework` ます。
+ `compatibleFrameworks` 要素は、.NET Framework 4 以降で提供されている [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ランタイムをターゲットとしている配置マニフェストでは必須です。 `compatibleFrameworks` 要素には、このアプリケーションを実行できる .NET Framework バージョンを指定する `framework` 要素が 1 つ以上含まれています。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ランタイムは、この一覧で使用可能な最初の `framework` でアプリケーションを実行します。
 
- 次の表に、要素がサポートする属性を示し `compatibleFrameworks` ます。
+ 次の表は、`compatibleFrameworks` 要素でサポートされている属性の一覧です。
 
 |属性|説明|
 |---------------|-----------------|
-|`S` `upportUrl`|任意。 互換性のある適切な .NET Framework バージョンをダウンロードできる URL を指定します。|
+|`S` `upportUrl`|省略可能。 優先される、互換性のある .NET Framework バージョンをダウンロードできる URL を指定します。|
 
 ## <a name="framework"></a>フレームワーク
- 必須。 次の表に、要素がサポートする属性を示し `framework` ます。
+ 必須。 次の表に、`framework` 要素でサポートされている属性の一覧を示します。
 
 |属性|説明|
 |---------------|-----------------|
@@ -63,7 +63,7 @@ ms.locfileid: "99881179"
 ## <a name="remarks"></a>解説
 
 ## <a name="example"></a>例
- 次のコード例は、 `compatibleFrameworks` 配置マニフェストの要素を示して [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] います。 このデプロイは、で実行でき [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] ます。 また、.NET Framework 4 でも実行できます。これは、のスーパーセットであるため [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] です。
+ 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの `compatibleFrameworks` 要素を示しています。 この配置は、[!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] で実行できます。 これは [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] のスーパーセットであるため、.NET Framework 4 で実行することもできます。
 
 ```xml
 <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">

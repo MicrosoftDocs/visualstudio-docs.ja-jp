@@ -1,6 +1,6 @@
 ---
 title: フォーム間でデータを渡す
-description: この Windows フォームコントロールのチュートリアルでは、フォーム間でデータを渡す手順について説明します。
+description: この Windows フォーム コントロールのチュートリアルでは、フォーム間でデータを渡す手順について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -21,25 +21,25 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: b22c555b961809d84778df5996455f186efc01f1
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106216216"
 ---
 # <a name="pass-data-between-forms"></a>フォーム間でデータを渡す
 
-このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 Northwind の customers テーブルと orders テーブルを使用すると、1つのフォームで顧客を選択できます。2番目のフォームでは、選択した顧客の注文が表示されます。 このチュートリアルでは、最初のフォームからデータを受け取る2番目のフォームでメソッドを作成する方法について説明します。
+このチュートリアルでは、フォーム間でデータを渡す手順について説明します。 Northwind の Customers テーブルと Orders テーブルを使用して、1 つのフォームで顧客を選択し、選択した顧客の注文が 2 番目のフォームで表示されるようにします。 このチュートリアルでは、最初のフォームからデータを受け取る 2 番目のフォームにメソッドを作成する方法を示します。
 
 > [!NOTE]
-> このチュートリアルでは、フォーム間でデータを渡す 1 つの方法についてのみ説明します。 データを受信するための2番目のコンストラクターの作成や、最初のフォームのデータを使用して設定できるパブリックプロパティの作成など、データをフォームに渡すためのオプションは他にもあります。
+> このチュートリアルでは、フォーム間でデータを渡す 1 つの方法についてのみ説明します。 フォームにデータを渡す他の方法として、データを受け取る 2 番目のコンストラクターを作成する方法や、最初のフォームからのデータで設定できるパブリック プロパティを作成する方法もあります。
 
 このチュートリアルでは、以下のタスクを行います。
 
 - 新しい **Windows フォーム アプリケーション** プロジェクトを作成します。
 
-- [データソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用したデータセットの作成と構成
+- [データ ソース構成ウィザード](../data-tools/media/data-source-configuration-wizard.png)を使用してデータセットの作成と構成を行います。
 
-- **[データ ソース]** ウィンドウから項目をドラッグしたときにフォーム上に作成するコントロールを選択します。 詳細については、「[ [データソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)」を参照してください。
+- **[データ ソース]** ウィンドウから項目をドラッグしたときにフォーム上に作成するコントロールを選択します。 詳細については、「[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)」をご覧ください。
 
 - **[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
@@ -49,39 +49,39 @@ ms.locfileid: "106216216"
 
 - フォーム間でデータを渡します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルでは SQL Server Express LocalDB と Northwind サンプルデータベースを使用します。
+このチュートリアルでは SQL Server Express LocalDB と Northwind サンプル データベースを使用します。
 
-1. LocalDB SQL Server Express ない場合は、 [SQL Server Express ダウンロードページ](https://www.microsoft.com/sql-server/sql-server-editions-express)からインストールするか、 **Visual Studio インストーラー** を使用してインストールします。 Visual Studio インストーラーでは、SQL Server Express LocalDB は、 **データストレージと処理** ワークロードの一部として、または個々のコンポーネントとしてインストールできます。
+1. SQL Server Express LocalDB がない場合は、[SQL Server Express のダウンロード ページ](https://www.microsoft.com/sql-server/sql-server-editions-express)からインストールするか、**Visual Studio インストーラー** を使用してインストールします。 Visual Studio インストーラーでは、**データ ストレージとデータ処理** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
 
-2. 次の手順に従って、Northwind サンプルデータベースをインストールします。
+2. 次の手順に従って、Northwind サンプル データベースをインストールします。
 
-    1. Visual Studio で、[ **SQL Server オブジェクトエクスプローラー** ] ウィンドウを開きます。 (SQL Server オブジェクトエクスプローラーは、Visual Studio インストーラーの **データストレージと処理** ワークロードの一部としてインストールされます)。[ **SQL Server** ] ノードを展開します。 LocalDB インスタンスを右クリックし、[ **新しいクエリ**] をクリックします。
+    1. Visual Studio で、 **[SQL Server オブジェクト エクスプローラー]** ウィンドウを開きます。 (SQL Server オブジェクト エクスプローラーは、Visual Studio インストーラーの **データ ストレージとデータ処理** ワークロードの一部としてインストールされます)。 **[SQL Server]** ノードを展開します。 LocalDB インスタンスを右クリックし、 **[新しいクエリ]** を選択します。
 
-       クエリエディターウィンドウが開きます。
+       クエリ エディター ウィンドウが開きます。
 
-    2. [Northwind transact-sql スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにコピーします。 この T-sql スクリプトでは、Northwind データベースを最初から作成し、データを設定します。
+    2. [Northwind Transact-SQL スクリプト](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true)をクリップボードにコピーします。 この T-SQL スクリプトを使用すると、Northwind データベースが新規作成され、データが設定されます。
 
-    3. T-sql スクリプトをクエリエディターに貼り付け、[ **実行** ] ボタンをクリックします。
+    3. T-SQL スクリプトをクエリ エディターに貼り付け、 **[実行]** ボタンを選択します。
 
        しばらくすると、クエリの実行が完了し、Northwind データベースが作成されます。
 
-## <a name="create-the-windows-forms-app-project"></a>Windows フォームアプリプロジェクトを作成する
+## <a name="create-the-windows-forms-app-project"></a>Windows フォーム アプリ プロジェクトを作成する
 
 1. Visual Studio の **[ファイル]** メニューで､ **[新規作成]**  >  **[プロジェクト]** を選択します。
 
-2. 左側のペインで [ **Visual C#** ] または [ **Visual Basic** を展開し、[ **Windows デスクトップ**] を選択します。
+2. 左側のペインで **[Visual C#]** または **[Visual Basic]** を展開し、 **[Windows デスクトップ]** を選択します。
 
-3. 中央のウィンドウで、[ **Windows フォーム App** ] プロジェクトの種類を選択します。
+3. 中央のペインで、 **[Windows フォーム アプリ]** プロジェクト タイプを選択します。
 
-4. プロジェクトに「」という名前を入力し、[ **OK]****をクリック** します。
+4. プロジェクトに **PassingDataBetweenForms** という名前を付け、 **[OK]** を選択します。
 
      **PassingDataBetweenForms** プロジェクトが作成され、**ソリューション エクスプローラー** に追加されます。
 
 ## <a name="create-the-data-source"></a>データ ソースを作成する
 
-1. [データ **ソース** ] ウィンドウを開くには、[ **データ** ] メニューの [ **データソースの表示**] をクリックします。
+1. **[データ ソース]** ウィンドウを開くには、 **[データ]** メニューの **[データ ソースの表示]** をクリックします。
 
 2. **[データ ソース]** ウィンドウで、**[新しいデータ ソースの追加]** をクリックして **データ ソース構成** ウィザードを起動します。
 
@@ -89,7 +89,7 @@ ms.locfileid: "106216216"
 
 4. **[データベース モデルの選択]** ページで、**[データセット]** が指定されていることを確認し、**[次へ]** をクリックします。
 
-5. [ **データ接続の選択** ] ページで、次のいずれかの操作を行います。
+5. **[データ接続の選択]** ページで、次のいずれかの操作を行います。
 
     - Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。
 
@@ -105,7 +105,7 @@ ms.locfileid: "106216216"
 
      プロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウに **Customers** テーブルと **Orders** テーブルが表示されます。
 
-## <a name="create-the-first-form-form1"></a>最初のフォームを作成する (Form1)
+## <a name="create-the-first-form-form1"></a>最初のフォーム (Form1) を作成する
 
 **[データ ソース]** ウィンドウから **Customers** ノードをフォームにドラッグして、データ バインド グリッド (<xref:System.Windows.Forms.DataGridView> コントロール) を作成します。
 
@@ -115,9 +115,9 @@ ms.locfileid: "106216216"
 
      <xref:System.Windows.Forms.DataGridView> と、レコード間を移動するためのツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) が **Form1** 上に表示されます。 [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource>、<xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。
 
-## <a name="create-the-second-form"></a>2番目のフォームを作成する
+## <a name="create-the-second-form"></a>2 番目のフォームを作成する
 
-データを渡す2番目のフォームを作成します。
+データの渡し先となる 2 番目のフォームを作成します。
 
 1. **[プロジェクト]** メニューの **[Windows フォームの追加]** を選択します。
 
@@ -131,9 +131,9 @@ ms.locfileid: "106216216"
 
      **Form2** から **OrdersBindingNavigator** が消えます。
 
-## <a name="add-a-tableadapter-query"></a>TableAdapter クエリの追加
+## <a name="add-a-tableadapter-query"></a>TableAdapter クエリを追加する
 
-Form1 に、選択した顧客の注文を読み込む TableAdapter クエリを Form2 に追加します。
+Form1 で選択した顧客の注文を読み込む TableAdapter クエリを Form2 に追加します。
 
 1. **ソリューション エクスプローラー** で、**NorthwindDataSet.xsd** ファイルをダブルクリックします。
 
@@ -156,13 +156,13 @@ Form1 に、選択した顧客の注文を読み込む TableAdapter クエリを
 
 6. **[次へ]** をクリックします。
 
-7. [ **DataTableMethod 名を** 入力してください] に、「」と入力 `FillByCustomerID` します。
+7. **[DataTableMethod 名を入力してください]** に、`FillByCustomerID` と入力します。
 
 8. **[DataTable を返す]** オプションをオフにして、**[次へ]** をクリックします。
 
 9. **[完了]** をクリックします。
 
-## <a name="create-a-method-on-form2-to-pass-data-to"></a>Form2 にデータを渡すメソッドを作成します。
+## <a name="create-a-method-on-form2-to-pass-data-to"></a>データの渡し先となる Form2 のメソッドを作成する
 
 1. **Form2** を右クリックし、**[コードの表示]** を選択して **コード エディター** で **Form2** を開きます。
 
@@ -171,7 +171,7 @@ Form1 に、選択した顧客の注文を読み込む TableAdapter クエリを
 :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataDisplaying/VB/Form2.vb" id="Snippet1":::
 :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataDisplaying/CS/Form2.cs" id="Snippet1":::
 
-## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>Form1 にデータを渡して Form2 を表示するメソッドを作成する
+## <a name="create-a-method-on-form1-to-pass-data-and-display-form2"></a>データを渡し Form2 を表示する Form1 のメソッドを作成する
 
 1. **Form1** の Customer データ グリッドを右クリックし、**[プロパティ]** をクリックします。
 
@@ -198,7 +198,7 @@ Form1 に、選択した顧客の注文を読み込む TableAdapter クエリを
 
 - データセットを編集し、データベース オブジェクトの追加または削除を行います。 詳細については、[データセットの作成と構成](../data-tools/create-and-configure-datasets-in-visual-studio.md)に関するページを参照してください。
 
-- データベースにデータを戻して保存する機能を追加します。 詳細については、「 [データベースにデータを保存する](../data-tools/save-data-back-to-the-database.md)」を参照してください。
+- データベースにデータを戻して保存する機能を追加します。 詳細については、「[データをデータベースに保存する](../data-tools/save-data-back-to-the-database.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

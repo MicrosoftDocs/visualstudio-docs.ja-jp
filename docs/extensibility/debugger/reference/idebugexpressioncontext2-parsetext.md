@@ -1,6 +1,6 @@
 ---
 description: 後で評価するために、テキスト形式の式を解析します。
-title: IDebugExpressionContext2::P arseText |Microsoft Docs
+title: IDebugExpressionContext2::ParseText | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 72cb26cf71b2994b25033d61adea52e8439d2fbd
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092307"
@@ -52,33 +52,33 @@ int ParseText(
 
 ## <a name="parameters"></a>パラメーター
 `pszCode`\
-から解析する式。
+[入力] 解析する式。
 
 `dwFlags`\
-から解析を制御する [parseflags](../../../extensibility/debugger/reference/parseflags.md) 列挙のフラグの組み合わせ。
+[入力] 解析を制御する [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) 列挙型のフラグの組み合わせ。
 
 `nRadix`\
-からの数値情報の解析に使用される基数 `pszCode` 。
+[入力] `pszCode` の数値情報の解析に使用される基数。
 
 `ppExpr`\
-入出力解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) オブジェクトを返します。このオブジェクトは、バインドおよび評価の準備ができています。
+[出力] バインドと評価の準備ができている、解析された式を表す [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) オブジェクトを返します。
 
 `pbstrError`\
-入出力式にエラーが含まれている場合は、エラーメッセージを返します。
+[出力] 式にエラーが含まれている場合は、エラー メッセージを返します。
 
 `pichError`\
-入出力 `pszCode` 式にエラーが含まれている場合は、エラーの文字インデックスを返します。
+[出力] 式にエラーが含まれている場合は、`pszCode` のエラーの文字インデックスを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-このメソッドが呼び出されると、デバッグエンジン (DE) は、式を解析して、正しいかどうかを検証する必要があります。 `pbstrError` `pichError` 式が無効な場合は、パラメーターとパラメーターを入力できます。
+## <a name="remarks"></a>解説
+このメソッドが呼び出されると、デバッグ エンジン (DE) は、式を解析して、正しいかどうかを検証する必要があります。 式が無効な場合は、`pbstrError` および `pichError` パラメーターを設定できます。
 
-式は評価されず、解析のみが行われることに注意してください。 後で [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) または [evaluateasync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) メソッドを呼び出すと、解析された式が評価されます。
+式は評価されず、解析のみが行われることに注意してください。 後で [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) または [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) メソッドを呼び出すと、解析された式が評価されます。
 
 ## <a name="example"></a>例
-次の例は、IDebugExpressionContext2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CEnvBlock` います。 [](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) この例では、式を環境変数の名前として解析し、その変数から値を取得します。
+次の例は、[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) インターフェイスを公開する単純な `CEnvBlock` オブジェクトに対してこのメソッドを実装する方法を示しています。 この例では、解析される式を環境変数の名前と見なし、その変数から値を取得します。
 
 ```cpp
 HRESULT CEnvBlock::ParseText(
@@ -126,7 +126,7 @@ HRESULT CEnvBlock::ParseText(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)
 - [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md)
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)

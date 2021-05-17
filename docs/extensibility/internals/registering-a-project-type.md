@@ -1,6 +1,6 @@
 ---
-title: プロジェクトの種類を登録する |Microsoft Docs
-description: 新しいプロジェクトの種類を Visual Studio が認識して使用できるようにするレジストリエントリの作成について説明します。
+title: プロジェクト タイプの登録 | Microsoft Docs
+description: 新しいプロジェクト タイプを Visual Studio で認識して使用できるようにするレジストリ エントリの作成について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,20 +16,20 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: e54f62a90ece61fc2dd8f3cc2b242957f249ed33
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062773"
 ---
 # <a name="registering-a-project-type"></a>プロジェクト タイプの登録
-新しいプロジェクトの種類を作成する場合は、がプロジェクトの種類を認識して使用できるようにするレジストリエントリを作成する必要があり [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 通常、これらのレジストリエントリを作成するには、レジストリスクリプト (.rgs) ファイルを使用します。
+新しいプロジェクト タイプを作成する場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] でプロジェクト タイプを認識して使用できるようにするレジストリ エントリを作成する必要があります。 通常、これらのレジストリ エントリを作成するには、レジストリ スクリプト (.rgs) ファイルを使用します。
 
- 次の例では、レジストリのステートメントによって、既定のパスとデータが適用されます。その後、各ステートメントのレジストリスクリプトのエントリを含むテーブルが指定されます。 これらのテーブルには、ステートメントに関するスクリプトエントリと追加情報が記載されています。
+ 次の例では、レジストリのステートメントによって、該当する場合は既定のパスとデータが指定され、それに続いて各ステートメントのレジストリ スクリプトのエントリを含むテーブルが指定されます。 これらのテーブルには、ステートメントに関するスクリプト エントリと追加情報が記載されます。
 
 > [!NOTE]
-> 次のレジストリ情報は、プロジェクトの種類を登録するために記述するレジストリスクリプトのエントリの種類と目的の例として使用することを目的としています。 実際のエントリとその使用は、プロジェクトの種類の特定の要件によって異なる場合があります。 開発しているプロジェクトの種類によく似たサンプルを見つけて、そのサンプルのレジストリスクリプトを確認するには、使用可能なサンプルを確認する必要があります。
+> 次のレジストリ情報は、プロジェクト タイプを登録するために記述するレジストリ スクリプトのエントリの種類と目的の例となるように意図されています。 実際のエントリとその使用は、プロジェクト タイプの特定の要件によって異なる場合があります。 開発しているプロジェクト タイプによく似たものを見つけるために使用可能なサンプルを調べ、そのサンプルのレジストリ スクリプトを確認する必要があります。
 
- 次の例は、HKEY_CLASSES_ROOT からのものです。
+ 次に HKEY_CLASSES_ROOT の例を示します。
 
 ## <a name="example-1"></a>例 1
 
@@ -49,16 +49,16 @@ ms.locfileid: "105062773"
    @="devenv.exe \"%1\""
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`FigPrjFile`|拡張子が figp であるプロジェクトの種類のファイルの名前と説明。|
-|`Content Type`|REG_SZ|`Text/plain`|プロジェクトファイルのコンテンツの種類。|
+|`@`|REG_SZ|`FigPrjFile`|拡張子が .figp であるプロジェクト タイプ ファイルの名前と説明。|
+|`Content Type`|REG_SZ|`Text/plain`|プロジェクト ファイルのコンテンツ タイプ。|
 |`NullFile`|REG_SZ|`Null`||
-|`@`|REG_SZ|`%MODULE%,-206`|この種類のプロジェクトに使用される既定のアイコン。 % MODULE% ステートメントは、プロジェクトの種類の DLL の既定の場所にレジストリで完了します。|
-|`@`|REG_SZ|`&Open in Visual Studio`|このプロジェクトの種類を開く既定のアプリケーション。|
-|`@`|REG_SZ|`devenv.exe "%1"`|この種類のプロジェクトが開かれたときに実行される既定のコマンドです。|
+|`@`|REG_SZ|`%MODULE%,-206`|この種類のプロジェクトに使用される既定のアイコン。 %MODULE% ステートメントは、プロジェクト タイプ DLL の既定の場所に対してレジストリ内で完了されます。|
+|`@`|REG_SZ|`&Open in Visual Studio`|このプロジェクト タイプが開かれる既定のアプリケーション。|
+|`@`|REG_SZ|`devenv.exe "%1"`|この種類のプロジェクトが開かれたときに実行される既定のコマンド。|
 
- 次の例は HKEY_LOCAL_MACHINE からのものであり、レジストリのキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] の下にあります。
+ 次の例は HKEY_LOCAL_MACHINE からのものであり、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] の下にあります。
 
 ## <a name="example-2"></a>例 2
 
@@ -81,21 +81,21 @@ ms.locfileid: "105062773"
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|`@` (既定値)|REG_SZ|`FigPrj Project VSPackage`|この登録された VSPackage のローカライズ可能な名前 (プロジェクトの種類)。|
-|`InprocServer32`|REG_SZ|`%MODULE%`|プロジェクトの種類の DLL のパス。 IDE はこの DLL を読み込み、VSPackage CLSID をに渡して `DllGetClassObject` <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> 、オブジェクトを構築し <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> ます。|
-|`CompanyName`|REG_SZ|`Microsoft`|プロジェクトの種類を開発した会社の名前。|
-|`ProductName`|REG_SZ|`Figure Project Sample`|プロジェクトの種類の名前。|
-|`ProductVersion`|REG_SZ|`9.0`|プロジェクトの種類のリリースのバージョン番号。|
+|`@` (既定値)|REG_SZ|`FigPrj Project VSPackage`|この登録された VSPackage のローカライズ可能な名前 (プロジェクト タイプ)。|
+|`InprocServer32`|REG_SZ|`%MODULE%`|プロジェクト タイプ DLL のパス。 IDE ではこの DLL を読み込み、VSPackage CLSID を `DllGetClassObject` に渡し、<xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> を取得して、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> オブジェクトを構築します。|
+|`CompanyName`|REG_SZ|`Microsoft`|プロジェクト タイプを開発した会社の名前。|
+|`ProductName`|REG_SZ|`Figure Project Sample`|プロジェクト タイプの名前。|
+|`ProductVersion`|REG_SZ|`9.0`|プロジェクト タイプ リリースのバージョン番号。|
 |`MinEdition`|REG_SZ|`professional`|登録されている VSPackage のエディション。|
-|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|プロジェクト VSPackage のパッケージ読み込みキー。 このキーは、環境が開始された後にプロジェクトが読み込まれるときに検証されます。|
-|`DllName`|REG_SZ|`%RESOURCE_DLL%`|プロジェクトの種類のローカライズされたリソースを含むサテライト DLL のファイル名。|
+|`ID`|REG_DWORD|`%IDS_PACKAGE_LOAD_KEY%`|プロジェクト VSPackage のパッケージ読み込みキー。 このキーは、環境が起動してからプロジェクトが読み込まれるときに検証されます。|
+|`DllName`|REG_SZ|`%RESOURCE_DLL%`|プロジェクト タイプのローカライズされたリソースを含むサテライト DLL のファイル名。|
 |`Path`|REG_SZ|`%RESOURCE_PATH%`|サテライト DLL のパス。|
-|`FigProjectsEvents`|REG_SZ|値については、「ステートメント」を参照してください。|このオートメーションイベントに対して返されるテキスト文字列を決定します。|
-|`FigProjectItemsEvents`|REG_SZ|値については、「ステートメント」を参照してください。|このオートメーションイベントに対して返されるテキスト文字列を決定します。|
+|`FigProjectsEvents`|REG_SZ|値についてはステートメントを参照してください。|このオートメーション イベントに対して返されるテキスト文字列を決定します。|
+|`FigProjectItemsEvents`|REG_SZ|値についてはステートメントを参照してください。|このオートメーション イベントに対して返されるテキスト文字列を決定します。|
 
- 次のすべての例は、レジストリの [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
+ 次の例はすべて、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
 
 ## <a name="example-3"></a>例 3
 
@@ -132,34 +132,34 @@ ms.locfileid: "105062773"
    "SortPriority"=dword:00000064
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
 |`@`|REG_SZ|`FigPrj Project`|この種類のプロジェクトの既定の名前。|
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|パッケージに登録されているサテライト DLL から取得する名前のリソース ID。|
 |`Package`|REG_SZ|`%CLSID_Package%`|パッケージに登録されている VSPackage のクラス ID。|
-|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|プロジェクトテンプレートファイルの既定のパス。 これらのファイルは、新しいプロジェクトテンプレートによって表示されます。|
-|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|プロジェクト項目テンプレートファイルの既定のパス。 これらのファイルは、[新しい項目の追加] テンプレートによって表示されます。|
-|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|IDE で [ **開く** ] ダイアログボックスを実装できるようにします。|
-|`PossibleProjectExtensions`|REG_SZ|`figp`|IDE で、開いているプロジェクトがこのプロジェクトの種類 (プロジェクトファクトリ) によって処理されるかどうかを判断するために使用されます。 複数のエントリの形式は、セミコロンで区切られたリストです。 たとえば、".vdproj; vdp" のようにします。|
-|`DefaultProjectExtension`|REG_SZ|`.figp`|名前を付けて保存操作の既定のファイル名拡張子として IDE によって使用されます。|
-|`Filter Settings`|REG_DWORD|詳細については、次の表のステートメントとコメントを参照してください。|これらの設定は、UI ダイアログボックスでファイルを表示するためのさまざまなフィルターを設定するために使用されます。|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|項目テンプレートの追加用のリソース ID。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|[ **新しい項目の追加** ] テンプレートのダイアログボックスに表示されるプロジェクト項目のパス。|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|[ **新しい項目の追加** ] ダイアログボックスに表示されるファイルのツリーノード内の並べ替え順序を決定します。|
+|`ProjectTemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|プロジェクト テンプレート ファイルの既定のパス。 これらのファイルは、[新しいプロジェクト] テンプレートによって表示されます。|
+|`ItemTemplatesDir`|REG_SZ|`%TEMPLATE_PATH% \FigPrjProjectItems`|プロジェクト項目テンプレート ファイルの既定のパス。 これらのファイルは、[新しい項目の追加] テンプレートによって表示されます。|
+|`DisplayProjectFileExtensions`|REG_SZ|`#%IDS_DISPLAY_PROJ_FILE_EXT%`|IDE で **[開く]** ダイアログ ボックスを実装できるようにします。|
+|`PossibleProjectExtensions`|REG_SZ|`figp`|開いているプロジェクトがこのプロジェクト タイプ (プロジェクト ファクトリ) で処理されるかどうかを判断するために IDE で使用されます。 複数のエントリは、セミコロンで区切られたリストの形式で指定します。 たとえば、"vdproj;vdp" のようになります。|
+|`DefaultProjectExtension`|REG_SZ|`.figp`|[名前を付けて保存] 操作の既定のファイル名拡張子として IDE で使用されます。|
+|`Filter Settings`|REG_DWORD|さまざま。表に続くステートメントとコメントを参照してください。|これらの設定は、UI ダイアログ ボックスでファイルを表示するためのさまざまなフィルターを設定するために使用されます。|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|[項目の追加] テンプレートのリソース ID。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**[新しい項目の追加]** テンプレートのダイアログ ボックスに表示されるプロジェクト項目のパス。|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|**[新しい項目の追加]** ダイアログ ボックスに表示されるファイルのツリー ノード内の並べ替え順序を決定します。|
 
- 次の表は、前のコードセグメントで使用できるフィルターオプションを示しています。
+ 次の表は、前のコード セグメントで使用できるフィルター オプションを示しています。
 
-|フィルターオプション|Description|
+|フィルター オプション|説明|
 |-------------------|-----------------|
-|`CommonFindFilesFilter`|フィルターが [ **フォルダーを** 指定して検索] ダイアログボックスの一般的なフィルターの1つであることを示します。 共通フィルターが [共通] としてマークされていない場合は、フィルター一覧に共通のフィルターが一覧表示されます。|
-|`CommonOpenFilesFilter`|フィルターが [ **ファイルを開く** ] ダイアログボックスの一般的なフィルターの1つであることを示します。 共通フィルターが [共通] としてマークされていない場合は、フィルター一覧に共通のフィルターが一覧表示されます。|
-|`FindInFilesFilter`|フィルターが [ **フォルダーを** 指定して検索] ダイアログボックスのフィルターの1つであり、共通のフィルターの後に一覧表示されることを示します。|
-|`NotOpenFileFilter`|[ **ファイルを開く** ] ダイアログボックスでフィルターを使用しないことを示します。|
-|`NotAddExistingItemFilter`|[ **既存項目** の追加] ダイアログボックスでフィルターを使用しないことを示します。|
+|`CommonFindFilesFilter`|フィルターが **[フォルダーを指定して検索]** ダイアログ ボックスの共通フィルターの 1 つであることを示します。 共通フィルターは、フィルター一覧で、共通としてマークが付けられていないフィルターの前に一覧表示されます。|
+|`CommonOpenFilesFilter`|フィルターが **[ファイルを開く]** ダイアログ ボックスの共通フィルターの 1 つであることを示します。 共通フィルターは、フィルター一覧で、共通としてマークが付けられていないフィルターの前に一覧表示されます。|
+|`FindInFilesFilter`|フィルターが **[フォルダーを指定して検索]** ダイアログ ボックスのフィルターの 1 つであり、共通フィルターの後に一覧表示されることを示します。|
+|`NotOpenFileFilter`|フィルターが **[ファイルを開く]** ダイアログ ボックスで使用されないことを示します。|
+|`NotAddExistingItemFilter`|フィルターが **[既存項目の追加]** ダイアログ ボックスで使用されないことを示します。|
 
- 既定では、フィルターにこれらのフラグが設定されていない場合、[ **既存項目の追加** ] ダイアログボックスと [ファイルを **開く** ] ダイアログボックスで、共通フィルターが一覧表示された後にフィルターが使用されます。 フィルターは、[ **フォルダーを** 選択して検索] ダイアログボックスでは使用されません。
+ 既定では、フィルターにこれらのフラグの 1 つ以上が設定されていない場合、このフィルターは、共通フィルターが一覧表示された後で、 **[既存項目の追加]** ダイアログ ボックスと **[ファイルを開く]** ダイアログ ボックスで使用されます。 フィルターは、 **[フォルダーを指定して検索]** ダイアログ ボックスでは使用されません。
 
- 次のすべての例は、レジストリの [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
+ 次の例はすべて、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
 
 ## <a name="example-4"></a>例 4
 
@@ -172,14 +172,14 @@ ms.locfileid: "105062773"
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|新しいプロジェクトテンプレートのリソース ID。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|登録されているプロジェクトの種類のプロジェクトの既定のパス。|
-|`SortPriority`|REG_DWORD|`41 (x29)`|[新しいプロジェクトウィザード] ダイアログボックスに表示されるプロジェクトの並べ替え順序を設定します。|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0は、この種類のプロジェクトが [新しいプロジェクト] ダイアログボックスにのみ表示されることを示します。|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|新しいプロジェクト テンプレートのリソース ID。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|登録されているプロジェクト タイプのプロジェクトの既定のパス。|
+|`SortPriority`|REG_DWORD|`41 (x29)`|[新しいプロジェクト ウィザード] ダイアログ ボックスに表示されるプロジェクトの並べ替え順序を設定します。|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0 は、この種類のプロジェクトが [新しいプロジェクト] ダイアログ ボックスにのみ表示されることを示します。|
 
- 次のすべての例は、レジストリの [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
+ 次の例はすべて、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] の下にあります。
 
 ## <a name="example-5"></a>例 5
 
@@ -193,14 +193,14 @@ ms.locfileid: "105062773"
    "SortPriority"=dword:00000064
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|なし|次のエントリがその他のファイルプロジェクトエントリ用であることを示す既定値。|
-|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|新しい項目の追加テンプレートファイルのリソース ID 値。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|[ **新しい項目の追加** ] ダイアログボックスに表示される項目の既定のパス。|
-|`SortPriority`|REG_DWORD|`100 (vcprx64)`|[ **新しい項目の追加** ] ダイアログボックスのツリーノードに表示される並べ替え順序を設定します。|
+|`@`|REG_SZ|なし|次のエントリが [その他のファイル] プロジェクト エントリ用であることを示す既定値。|
+|`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|[新しい項目の追加] テンプレート ファイルのリソース ID 値。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjectItems`|**[新しい項目の追加]** ダイアログ ボックスに表示される項目の既定のパス。|
+|`SortPriority`|REG_DWORD|`100 (vcprx64)`|**[新しい項目の追加]** ダイアログ ボックスのツリー ノードに表示される並べ替え順序を設定します。|
 
- 次の例は、レジストリのキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] の下にあります。
+ 次の例は、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] の下にあります。
 
 ## <a name="example-6"></a>例 6
 
@@ -208,25 +208,25 @@ ms.locfileid: "105062773"
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"
 ```
 
- メニューエントリは、メニュー情報の取得に使用されたリソースを IDE で参照します。 このデータがメニューデータベースにマージされると、レジストリの MenusMerged セクションに同じキーが追加されます。 VSPackage は、MenusMerged セクションの下にあるものを直接変更することはできません。 次の表のデータフィールドには、3つのコンマ区切りのフィールドがあります。 最初のフィールドは、メニューリソースファイルの完全パスを示します。
+ メニュー エントリにより、メニュー情報の取得に使用されたリソースが IDE で参照されます。 このデータがメニュー データベースにマージされると、レジストリの MenusMerged セクションに同じキーが追加されます。 MenusMerged セクションの下にあるものを直接、VSPackage で変更することはできません。 次の表のデータ フィールドには、3 つのコンマ区切りのフィールドがあります。 最初のフィールドは、メニュー リソース ファイルの完全パスを示します。
 
-- 最初のフィールドを省略した場合、メニューリソースは VSPackage GUID で識別されるサテライト DLL から読み込まれます。
+- 最初のフィールドを省略した場合、メニュー リソースは VSPackage GUID で識別されるサテライト DLL から読み込まれます。
 
-  2番目のフィールドは、型 CTMENU のメニューリソース ID を識別します。
+  2 番目のフィールドは、型 CTMENU のメニュー リソース ID を識別します。
 
-- リソース ID が指定されていて、ファイルパスが最初のパラメーターによって指定されている場合、メニューリソースは完全なファイルパスから読み込まれます。
+- リソース ID が指定されていて、ファイル パスが最初のパラメーターで指定されている場合、メニュー リソースは完全なファイル パスから読み込まれます。
 
-- リソース ID が指定されていても、ファイルパスがではない場合、メニューリソースはサテライト DLL から読み込まれます。
+- リソース ID が指定されていても、ファイル パスが指定されていない場合、メニュー リソースはサテライト DLL から読み込まれます。
 
-- 完全なファイルパスが指定されていて、リソース ID が省略されている場合は、読み込まれるファイルが CTO ファイルであることが必要です。
+- 完全なファイル パスが指定されていて、リソース ID が省略されている場合は、読み込まれるファイルは CTO ファイルである必要があります。
 
-  最後のフィールドは、CTMENU リソースのバージョン番号を示します。 バージョン番号を変更することによって、もう一度メニューをマージできます。
+  最後のフィールドは、CTMENU リソースのバージョン番号を識別します。 バージョン番号を変更して、もう一度メニューをマージできます。
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|% CLSID_Package%|REG_SZ|`,1000,1`|メニュー情報を取得するリソース。|
+|%CLSID_Package%|REG_SZ|`,1000,1`|メニュー情報を取得するリソース。|
 
- 次のすべての例は、レジストリの [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] の下にあります。
+ 次の例はすべて、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\NewProjectTemplates] の下にあります。
 
 ```
 \TemplateDirs\{ACEF4EB2-57CF-11D2-96F4-000000000000}\1                (CLSID for Figures Project projects)
@@ -236,14 +236,14 @@ ms.locfileid: "105062773"
    "NewProjectDialogOnly"=dword:00000000
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
-|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|図プロジェクトの新しいプロジェクトテンプレートのリソース ID 値。|
-|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|新しいプロジェクトディレクトリの既定のパス。 このディレクトリ内の項目は、[ **新しいプロジェクトウィザード** ] ダイアログボックスに表示されます。|
-|`SortPriority`|REG_DWORD|`41 (x29)`|[ **新しいプロジェクト** ] ダイアログボックスのツリーノードにプロジェクトを表示する順序を設定します。|
-|`NewProjectDialogOnly`|REG_DWORD|`0`|0は、この種類のプロジェクトが [ **新しいプロジェクト** ] ダイアログボックスにのみ表示されることを示します。|
+|`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|[図プロジェクトの新しいプロジェクト] テンプレートのリソース ID 値。|
+|`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|[新しいプロジェクト] ディレクトリの既定のパス。 このディレクトリ内の項目は、 **[新規プロジェクト ウィザード]** ダイアログ ボックスに表示されます。|
+|`SortPriority`|REG_DWORD|`41 (x29)`|**[新しいプロジェクト]** ダイアログ ボックスのツリー ノードにプロジェクトを表示する順序を設定します。|
+|`NewProjectDialogOnly`|REG_DWORD|`0`|0 は、この種類のプロジェクトが **[新しいプロジェクト]** ダイアログ ボックスにのみ表示されることを示します。|
 
- 次の例は、レジストリのキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] の下にあります。
+ 次の例は、レジストリ内でキー [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\InstalledProducts] の下にあります。
 
 ```
 \FiguresProductSample
@@ -251,22 +251,22 @@ ms.locfileid: "105062773"
    "UseInterface"=dword:00000001
 ```
 
-|Name|種類|Data|説明|
+|名前|種類|データ|説明|
 |----------|----------|----------|-----------------|
 |`Package`|REG_SZ|`%CLSID_Package%`|登録されている VSPackage のクラス ID。|
-|`UseInterface`|REG_DWORD|`1`|1は、このプロジェクトとの対話に UI が使用されることを示します。 0は、UI インターフェイスがないことを示します。|
+|`UseInterface`|REG_DWORD|`1`|1 は、このプロジェクトとの対話に UI が使用されることを示します。 0 は、UI インターフェイスがないことを示します。|
 
- 新しいプロジェクトの種類を制御する .vsz ファイルには、多くの場合 RELATIVE_PATH エントリが含まれています。 このパスは、次のセットアップキーで、プロジェクトの種類の \ productdir エントリの下に指定されたパスに対する相対パスです。
+ 新しいプロジェクト タイプを制御する .vsz ファイルには、多くの場合 RELATIVE_PATH エントリが含まれています。 このパスは、次のセットアップ キーで、プロジェクト タイプの \ProductDir エントリの下で指定されたパスに対する相対パスです。
 
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup
 
- たとえば、エンタープライズフレームワークプロジェクトテンプレートでは、次のレジストリエントリが追加されます。
+ たとえば、エンタープライズ フレームワーク プロジェクト テンプレートでは、次のレジストリ エントリが追加されます。
 
- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Studio\EnterpriseFrameworks\ Visual
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\7.0Exp\Setup\EF\ProductDir = C:\Program Files\Microsoft Visual Studio\EnterpriseFrameworks\
 
- つまり、.vsz ファイルに PROJECT_TYPE = EF エントリを含めると、環境では、前に指定した ProductDir ディレクトリにある .vsz ファイルが検索されます。
+ つまり、.vsz ファイルに PROJECT_TYPE=EF エントリを含めると、環境では、前に指定した ProductDir ディレクトリにある .vsz ファイルが検索されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [チェックリスト: 新しいプロジェクト タイプの作成](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [プロジェクト モデルの要素](../../extensibility/internals/elements-of-a-project-model.md)
 - [プロジェクト ファクトリを使用したプロジェクト インスタンスの作成](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)

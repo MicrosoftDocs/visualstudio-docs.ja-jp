@@ -1,6 +1,6 @@
 ---
 description: 特定のモジュール (DLL、EXE、またはアセンブリ) を記述します。
-title: MODULE_INFO |Microsoft Docs
+title: MODULE_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0b432e0373e81124d18e3bf9cc5f8ed3a4707ab6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079723"
@@ -64,7 +64,7 @@ public struct MODULE_INFO {
 
 ## <a name="members"></a>メンバー
  `dwValidFields`\
- 入力するフィールドを指定する、 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 列挙のフラグの組み合わせ。
+ 入力するフィールドを指定する [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 列挙体からのフラグの組み合わせ。
 
  `m_bstrName`\
  モジュール名。
@@ -91,27 +91,27 @@ public struct MODULE_INFO {
  モジュールの読み込み順序。
 
  `m_TimeStamp`\
- シンボルファイルが最後に変更された時刻。
+ シンボル ファイルが最後に変更された時刻。
 
  `m_bstrUrlSymbolLocation`\
- モジュールで指定されたシンボルファイルの場所 (". \\ " など)。 モジュールのシンボルを検索するための開始位置として使用されます。
+ モジュールで指定されたシンボル ファイル (".\\" など) の場所。 モジュールのシンボルを検索するための開始位置として使用されます。
 
  `m_dwModuleFlags`\
- モジュールを記述する [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) 列挙のフラグの組み合わせ。
+ モジュールを記述する [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) 列挙体からのフラグの組み合わせ。
 
-## <a name="remarks"></a>注釈
- この構造体は、入力されている [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) メソッドに渡されます。
+## <a name="remarks"></a>解説
+ この構造体は、入力する [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) メソッドに渡されます。
 
- この構造は、[ **モジュール** ] ウィンドウに一覧表示されている各モジュールに対応しています。
+ この構造体は、 **[モジュール]** ウィンドウに一覧表示される各モジュールに対応します。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)
 - [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md)

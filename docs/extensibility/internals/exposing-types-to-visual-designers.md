@@ -1,6 +1,6 @@
 ---
-title: ビジュアルデザイナーへの型の公開 |Microsoft Docs
-description: Visual Studio がビジュアルデザイナーで使用できるようにするために、カスタムツールに含まれるクラスと型の定義を公開する方法について説明します。
+title: ビジュアル デザイナーへの型の公開 | Microsoft Docs
+description: クラスと型の定義を、カスタム ツールでの定義を含めて公開し、Visual Studio のビジュアル デザイナーで利用できるようにする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,36 +16,36 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5208de3af52e4dad5fb9bb59b16f7b59efb72340
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105069674"
 ---
-# <a name="expose-types-to-visual-designers"></a>ビジュアルデザイナーに型を公開する
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ビジュアルデザイナーを表示するには、デザイン時にクラスと型の定義にアクセスできる必要があります。 クラスは、現在のプロジェクト (参照とその依存関係) の完全な依存関係セットを含む、定義済みのアセンブリセットから読み込まれます。 また、カスタムツールによって生成されるファイルで定義されているクラスや型にビジュアルデザイナーがアクセスする場合にも必要になることがあります。
+# <a name="expose-types-to-visual-designers"></a>ビジュアル デザイナーに型を公開する
+ビジュアル デザイナーを表示するために、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、デザイン時にクラスと型の定義にアクセスできる必要があります。 クラスは、現在のプロジェクトの完全な依存関係セット (参照に加えてその依存関係) を含む、事前定義されたアセンブリのセットから読み込まれます。 カスタム ツールによって生成されたファイルで定義されているクラスと型にビジュアル デザイナーがアクセスすることが必要な場合もあります。
 
- [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]およびプロジェクトシステムでは、 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 一時移植可能な実行可能ファイル (一時的な pe) を使用して、生成されたクラスと型にアクセスするためのサポートを提供しています。 カスタムツールによって生成されたすべてのファイルを一時アセンブリにコンパイルして、それらのアセンブリから型を読み込んでデザイナーに公開することができます。 各カスタムツールの出力は個別の一時 PE にコンパイルされ、この一時的なコンパイルの成功または失敗は、生成されたファイルをコンパイルできるかどうかによってのみ異なります。 プロジェクトが全体としてビルドされない場合でも、個々の一時 Pe は引き続きデザイナーで使用できる可能性があります。
+ [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] および [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクト システムでは、一時的なポータブル実行可能ファイル (一時的 PE) を通じて、生成されたクラスと型にアクセスするためのサポートを提供しています。 カスタム ツールによって生成されたファイルなら何でも一時的なアセンブリにコンパイルできるため、それらのアセンブリから型を読み込んでデザイナーに公開できます。 各カスタム ツールの出力は個別の一時的 PE にコンパイルされ、この一時的なコンパイルの成否は、生成されたファイルのコンパイル可否のみによって決まります。 プロジェクトが全体としてビルドされない場合でも、デザイナーは個々の一時的 PE を利用できる場合があります。
 
- これらの変更がカスタムツールを実行した結果である場合、プロジェクトシステムは、カスタムツールの出力ファイルに対する変更の追跡を完全にサポートしています。 カスタムツールが実行されるたびに、新しい一時的な PE が生成され、適切な通知がデザイナーに送信されます。
+ プロジェクト システムは、カスタム ツールの出力ファイルへの変更を追跡するための完全なサポートを提供しますが、これらの変更がカスタム ツールの実行の結果であることが条件です。 カスタム ツールが実行されるたびに、新しい一時的 PE が生成され、適切な通知がデザイナーに送信されます。
 
 > [!NOTE]
-> プログラム実行可能ファイルの一時生成ファイルはバックグラウンドで発生するため、コンパイルが失敗した場合、エラーはユーザーに報告されません。
+> 一時的なプログラム実行可能ファイルの生成ファイルはバックグラウンドで行われるため、コンパイルが失敗した場合でも、ユーザーにエラーは報告されません。
 
- 一時的な PE サポートを利用するカスタムツールは、次の規則に従う必要があります。
+ 一時的 PE のサポートを利用するカスタム ツールでは、次の規則に従う必要があります。
 
-- レジストリで **GeneratesDesignTimeSource** を1に設定する必要があります。
+- レジストリで **GeneratesDesignTimeSource** を 1 に設定する必要があります。
 
      この設定がないと、プログラムの実行可能ファイルのコンパイルは行われません。
 
-- 生成されたコードは、グローバルプロジェクト設定と同じ言語である必要があります。
+- 生成されるコードは、グローバル プロジェクト設定と同じ言語である必要があります。
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>レジストリで **GeneratesDesignTimeSource** が1に設定されている場合、カスタムツールが要求された拡張機能として報告する内容に関係なく、一時 PE がコンパイルされます。 拡張子は *.vb*、 *.cs*、または *. jsl*; である必要はありません。任意の拡張機能を使用できます。
+     レジストリで **GeneratesDesignTimeSource** が 1 に設定されている場合、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> で要求された拡張機能としてカスタム ツールが報告する内容にかかわらず、一時的 PE はコンパイルされます。 拡張子は *.vb*、 *.cs*、または *.jsl* である必要はありません。任意の拡張子にすることができます。
 
-- カスタムツールによって生成されるコードは有効である必要があり、実行の完了時にプロジェクト内に存在する参照のセットだけを使用して、独自のコードをコンパイルする必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> ます。
+- カスタム ツールによって生成されるコードは有効である必要があり、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> が実行を終了した時点でプロジェクトに存在する参照のセットのみを使用して独力でコンパイル可能である必要があります。
 
-     一時 PE がコンパイルされると、コンパイラに提供されるソースファイルは、カスタムツールの出力だけになります。 そのため、一時 PE を使用するカスタムツールでは、プロジェクト内の他のファイルとは別にコンパイルできる出力ファイルを生成する必要があります。
+     一時的 PE がコンパイルされるとき、コンパイラに提供される唯一のソース ファイルはカスタム ツールの出力です。 そのため、一時的 PE を使用するカスタム ツールでは、プロジェクト内の他のファイルに依存せずにコンパイル可能な出力ファイルを生成する必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [BuildManager オブジェクトの概要](/previous-versions/8f9kffa8(v=vs.140))
-- [単一ファイルジェネレーターを実装する](../../extensibility/internals/implementing-single-file-generators.md)
-- [単一ファイルジェネレーターの登録](../../extensibility/internals/registering-single-file-generators.md)
+- [単一ファイル ジェネレーターの実装](../../extensibility/internals/implementing-single-file-generators.md)
+- [単一ファイル ジェネレーターの登録](../../extensibility/internals/registering-single-file-generators.md)

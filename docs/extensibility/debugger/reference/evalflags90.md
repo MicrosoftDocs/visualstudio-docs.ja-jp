@@ -1,6 +1,6 @@
 ---
 description: 式の評価を制御するフラグの有効な値を列挙します。
-title: EVALFLAGS90 |Microsoft Docs
+title: EVALFLAGS90 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 32e75b938f45df5d4fa91bec4b59964dfc6a54e5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095928"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
-式の評価を制御するフラグの有効な値を列挙します。 この列挙体は、 [Evalflags](../../../extensibility/debugger/reference/evalflags.md) 列挙体を拡張します。
+式の評価を制御するフラグの有効な値を列挙します。 この列挙によって [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 列挙型が拡張されます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_EVALFLAGS90
@@ -76,16 +76,16 @@ public enum enum_EVALFLAGS90
 ブレークポイントでの停止を指定します。
 
 `EVAL90_ALLOWERRORREPORT`\
-ホストへのエラー報告を許可することを指定します。 Internet Explorer のスクリプトでの式の評価に主に使用されます。
+ホストへのエラー報告を許可することを指定します。 主に、Internet Explorer のスクリプトでの式の評価に使用されます。
 
 `EVAL90_FUNCTION_AS_ADDRESS`\
 関数を呼び出す代わりに、関数をアドレスとして強制的に評価します。
 
 `EVAL90_NOFUNCEVAL`\
-関数が評価されないようにします。 たとえば、式に含まれるトークンを考えてみ `int` `myExpression(int) + 10` ます。 この関数は、アドレスとして正しく評価されますが、値としては評価できません。
+関数が評価されないようにします。 たとえば、式 `myExpression(int) + 10` の `int` トークンついて考えてみましょう。 この関数は、アドレスとして正しく評価できますが、値としては評価できません。
 
 `EVAL90_NOEVENTS`\
-式の評価中に発生したイベントをセッションデバッグマネージャー (SDM) または IDE に送信しないことを示すフラグ。
+式の評価中に発生したイベントをセッション デバッグ マネージャー (SDM) または IDE に送信しないことを示すフラグ。
 
 `EVAL90_DESIGN_TIME_EXPR_EVAL`\
 デザイン時の式の評価を有効にします。
@@ -94,12 +94,12 @@ public enum enum_EVALFLAGS90
 暗黙的な変数の作成を許可します。
 
 `EVAL90_FORCE_EVALUATION_NOW`\
-強制的に評価を直ちに実行します。 これは、ユーザー要求などの要求を処理する場合に便利です。
+直ちに評価を強制的に実行します。 これは、ユーザー要求などの要求を処理する場合に便利です。
 
-## <a name="requirements"></a>要件
-ヘッダー: Msdbg90
+## <a name="requirements"></a>必要条件
+ヘッダー: Msdbg90.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

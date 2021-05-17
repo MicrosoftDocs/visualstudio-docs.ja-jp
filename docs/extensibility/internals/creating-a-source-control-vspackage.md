@@ -1,6 +1,6 @@
 ---
-title: ソース管理を作成する VSPackage |Microsoft Docs
-description: Visual Studio と統合するソース管理の詳細な統合パスを作成するソース管理 VSPackage を作成する方法について説明します。
+title: ソース管理 VSPackage の作成 | Microsoft Docs
+description: Visual Studio への統合のための、ソース管理の深い統合パスを作成するソース管理 VSPackage の作成方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,38 +15,38 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 1085275427aeb02a767a66088ee58ced890dcb05
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056858"
 ---
-# <a name="create-a-source-control-vspackage"></a>ソース管理 VSPackage を作成する
-このドキュメントには、に統合されているソース管理パッケージのアーキテクチャの概要、実装するインターフェイスによって定義されている API、および使用 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] されるサービスと、単純なソース管理パッケージの実装を示すサンプルへのリンクが含まれています。
+# <a name="create-a-source-control-vspackage"></a>ソース管理 VSPackage の作成
+このドキュメントには、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に統合されるソース管理パッケージのアーキテクチャの概要、実装されるインターフェイスと使用されるサービスによって定義される API、および単純なソース管理パッケージの実装を示すサンプルへのリンクが含まれています。
 
- ソース管理 VSPackage を使用すると、と統合するソース管理の詳細な統合パスを作成でき [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 これにより、パッケージは、でホストされている既定のソース管理 UI をバイパスし、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクトシステムからのソース管理要求に応答して、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **ソリューションエクスプローラー** などのコンポーネントと対話できます。 は [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] サービスモデルを使用してと統合できる VSPackage を作成するメカニズムをパートナーに提供します。
+ ソース管理 VSPackage を使用すると、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] への統合のための、ソース管理の深い統合パスを作成できます。 これにより、パッケージでは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] でホストされている既定のソース管理 UI のバイパス、プロジェクト システムからのソース管理要求への応答、**ソリューション エクスプローラー** などの [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] コンポーネントとの対話ができるようになります。 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] では、サービス モデルを使用して [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に統合できる VSPackage を作成するメカニズムによって、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] パートナーが強化されます。
 
 ## <a name="in-this-section"></a>このセクションの内容
 - [開始するには](../../extensibility/internals/getting-started-with-source-control-vspackages.md)
 
- ソース管理パッケージについて説明します。これは、のソース管理機能を実装するためのソース管理プラグインに代わる、より高度な代替手段です [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] にソース管理機能を実装するための、ソース管理プラグインに代わる、より高度な手段である、ソース管理パッケージについて説明します。
 
 - [アーキテクチャ](../../extensibility/internals/source-control-vspackage-architecture.md)
 
- 図を紹介し、ソース管理パッケージのコンポーネントについて説明します。
+ 図を示し、ソース管理パッケージのコンポーネントについて説明します。
 
 - [機能](../../extensibility/internals/source-control-vspackage-features.md)
 
  ソース管理パッケージのさまざまな機能について説明します。
 
-- [要素のデザイン](../../extensibility/internals/source-control-vspackage-design-elements.md)
+- [デザイン要素](../../extensibility/internals/source-control-vspackage-design-elements.md)
 
- ソース管理パッケージがディープインテグレーションのために実装する必要がある VSPackage の構造について説明します。
+ 深い統合のために、ソース管理パッケージによって実装される必要がある VSPackage の構造について説明します。
 
 ## <a name="related-sections"></a>関連項目
-- [ソース管理プラグインを作成する](../../extensibility/internals/creating-a-source-control-plug-in.md)
+- [ソース管理プラグインの作成](../../extensibility/internals/creating-a-source-control-plug-in.md)
 
- ソース管理の [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ユーザーインターフェイス (UI) でソース管理機能を提供するソース管理プラグインを作成する方法について説明します。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース管理ユーザー インターフェイス (UI) でソース管理機能を提供するソース管理プラグインを作成する方法について説明します。
 
 - [ソース管理](../../extensibility/internals/source-control.md)
 
- の統合機能としてソース管理を実装するためのオプションについて説明し [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の統合機能としてソース管理を実装するためのオプションについて説明します。

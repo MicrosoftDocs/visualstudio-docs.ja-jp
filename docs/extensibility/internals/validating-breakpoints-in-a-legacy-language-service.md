@@ -1,5 +1,5 @@
 ---
-title: 従来の言語サービスでブレークポイントを検証する |Microsoft Docs
+title: 従来の言語サービスでのブレークポイントの検証 | Microsoft Docs
 description: 従来の言語サービスで ValidateBreakpointLocation メソッドをオーバーライドして、デバッガーが起動する前にブレークポイントを検証する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -15,30 +15,30 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 86029300c34e111344157bf39a15dceab8c1b77a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085794"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>従来の言語サービスでのブレークポイントの検証
-ブレークポイントは、デバッガーで実行されている特定の時点でプログラムの実行を停止する必要があることを示します。 ブレークポイントの有効な場所を構成する内容についての情報がエディターに含まれていないため、ソースファイル内の任意の行にブレークポイントを設定できます。 デバッガーを起動すると、マークされているすべてのブレークポイント (保留中のブレークポイントと呼ばれます) が、実行中のプログラム内の適切な場所にバインドされます。 同時に、有効なコードの場所をマークするようにブレークポイントが検証されます。 たとえば、コメントのブレークポイントは無効です。これは、ソースコード内のその場所にコードがないためです。 デバッガーは無効なブレークポイントを無効にします。
+ブレークポイントは、デバッガーでの実行中に特定の位置でプログラムの実行を停止する必要があることを示します。 エディターではブレークポイントの位置が有効であるかどうかを判断できないため、ソース ファイル内の任意の行にブレークポイントを設定できます。 デバッガーを起動すると、マークされているすべてのブレークポイント (保留中のブレークポイントと呼ばれます) が、実行されているプログラム内の適切な位置にバインドされます。 同時に、有効なコードの位置がマークされていることを確認するために、ブレークポイントが検証されます。 たとえば、コメントに対するブレークポイントは無効です。これは、ソースコード内のその位置にはコードがないためです。 デバッガーによって、無効なブレークポイントが無効にされます。
 
- 言語サービスは表示されているソースコードを認識しているため、デバッガーを起動する前にブレークポイントを検証できます。 メソッドをオーバーライドして、 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> ブレークポイントの有効な位置を指定するスパンを返すことができます。 デバッガーが起動されてもブレークポイントの位置は検証されますが、ユーザーにはデバッガーが読み込まれるのを待たずに無効なブレークポイントが通知されます。
+ 言語サービスでは表示されているソース コードを認識しているため、デバッガーを起動する前にブレークポイントを検証できます。 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> メソッドをオーバーライドして、ブレークポイントの有効な位置を指定する範囲を返すことができます。 デバッガーが起動されるときにもブレークポイントの位置が検証されますが、デバッガーが読み込まれるのを待つことなく、無効なブレークポイントがユーザーに通知されます。
 
 ## <a name="implementing-support-for-validating-breakpoints"></a>ブレークポイントの検証のサポートの実装
 
-- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A>メソッドには、ブレークポイントの位置が指定されます。 実装では、位置が有効であるかどうかを判断し、ブレークポイントの位置に関連付けられているコードを識別するテキスト範囲を返すことによってこれを示す必要があります。
+- <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> メソッドには、ブレークポイントの位置が指定されます。 実装では、位置が有効であるかどうかを判断し、ブレークポイントの行の位置に関連付けられているコードを識別するテキスト範囲を返すことによってこれを示す必要があります。
 
-- <xref:Microsoft.VisualStudio.VSConstants.S_OK>位置が有効である場合はを返し、有効でない場合はを返し <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> ます。
+- 位置が有効である場合は <xref:Microsoft.VisualStudio.VSConstants.S_OK> を返し、有効でない場合は <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> を返します。
 
-- ブレークポイントが有効な場合、テキスト範囲はブレークポイントと共に強調表示されます。
+- ブレークポイントが有効な場合は、テキスト範囲がブレークポイントと共に強調表示されます。
 
-- ブレークポイントが無効である場合は、エラーメッセージがステータスバーに表示されます。
+- ブレークポイントが無効な場合は、エラー メッセージがステータス バーに表示されます。
 
 ### <a name="example"></a>例
- この例では、パーサーを <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 呼び出して、指定した位置にあるコード (存在する場合) の範囲を取得するメソッドの実装を示します。
+ この例は、パーサーを呼び出して、指定した位置にあるコード (存在する場合) の範囲を取得する <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> メソッドの実装を示しています。
 
- この例では、 `GetCodeSpan` <xref:Microsoft.VisualStudio.Package.AuthoringSink> テキスト範囲を検証するクラスにメソッドを追加し、 `true` それが有効なブレークポイントの位置である場合はを返すことを前提としています。
+ この例では、テキスト範囲を検証する <xref:Microsoft.VisualStudio.Package.AuthoringSink> クラスに `GetCodeSpan` メソッドを追加し、有効なブレークポイントの位置である場合は `true` が返されることを想定しています。
 
 ```csharp
 using Microsoft VisualStudio;
@@ -100,5 +100,5 @@ namespace TestLanguagePackage
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [従来の言語サービスの特徴](../../extensibility/internals/legacy-language-service-features1.md)
+## <a name="see-also"></a>関連項目
+- [従来の言語サービスの機能](../../extensibility/internals/legacy-language-service-features1.md)

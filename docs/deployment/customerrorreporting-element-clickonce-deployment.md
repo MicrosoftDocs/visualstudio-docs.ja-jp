@@ -1,6 +1,6 @@
 ---
-title: '&lt;customErrorReporting &gt; 要素 (ClickOnce 配置) |Microsoft Docs'
-description: CustomErrorReporting 要素は、例外スタックを示すエラーダイアログボックスの代わりに、エラーが発生した場合に表示する URI を指定します。
+title: '&lt;customErrorReporting&gt; 要素 (ClickOnce 配置) | Microsoft Docs'
+description: customErrorReporting 要素では、例外スタックを示すエラー ダイアログ ボックスの代わりに、いつエラーが発生したかを表示する URI を指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: b168b3bcb90ae758609698de306928eb7e13d909
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99888486"
 ---
-# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting &gt; 要素 (ClickOnce 配置)
+# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting&gt; 要素 (ClickOnce 配置)
 エラー発生時に表示する URI を指定します。
 
 ## <a name="syntax"></a>構文
@@ -35,12 +35,12 @@ ms.locfileid: "99888486"
 ```
 
 ## <a name="remarks"></a>解説
- この要素は省略可能です。 このプロパティを指定しないと、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 例外スタックを示すエラーダイアログボックスが表示されます。 `customErrorReporting`要素が存在する場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] はパラメーターで示された URI を代わりに表示し `uri` ます。 ターゲット URI には、外部例外クラス、内部例外クラス、および内部例外メッセージがパラメーターとして含まれます。
+ この要素は省略可能です。 これがないと、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では例外スタックを示すエラー ダイアログ ボックスが表示されます。 `customErrorReporting` 要素が存在する場合は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] により、`uri` パラメーターによって指定された URI が代わりに表示されます。 ターゲット URI には、パラメーターとして、外部例外クラス、内部例外クラス、内部例外メッセージが含められます。
 
- この要素を使用して、エラー報告機能をアプリケーションに追加します。 生成された URI にはエラーの種類に関する情報が含まれているため、Web サイトはその情報を解析して、適切なトラブルシューティング画面などの表示を行うことができます。
+ この要素を使用して、アプリケーションにエラー報告機能を追加します。 生成される URI にはエラーの種類に関する情報が含まれているため、Web サイトでは、その情報を解析して、適切なトラブルシューティング画面などを表示することができます。
 
 ## <a name="example"></a>例
- 次のスニペットは、生成 `customErrorReporting` される可能性のある、生成される URI と共に要素を示しています。
+ 次のスニペットには、`customErrorReporting` 要素と、それによって生成される可能性のある、生成後の URI が一緒と示されています。
 
 ```xml
 <customErrorReporting uri=http://www.contoso.com/applications/error.asp />

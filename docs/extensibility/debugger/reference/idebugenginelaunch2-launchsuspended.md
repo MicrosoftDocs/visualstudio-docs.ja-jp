@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、デバッグエンジン (DE) を介してプロセスを起動します。
-title: 'IDebugEngineLaunch2:: LaunchSuspended |Microsoft Docs'
+description: このメソッドは、デバッグ エンジン (DE) によってプロセスを起動します。
+title: IDebugEngineLaunch2::LaunchSuspended | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2db2ce2a35cd8be6599fca3e01bc69a6680012b2
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066023"
 ---
 # <a name="idebugenginelaunch2launchsuspended"></a>IDebugEngineLaunch2::LaunchSuspended
-このメソッドは、デバッグエンジン (DE) を介してプロセスを起動します。
+このメソッドは、デバッグ エンジン (DE) によってプロセスを起動します。
 
 ## <a name="syntax"></a>構文
 
@@ -66,53 +66,53 @@ int LaunchSuspended(
 
 ## <a name="parameters"></a>パラメーター
 `pszMachine`\
-からプロセスを起動するコンピューターの名前。 ローカルコンピューターを指定するには、null 値を使用します。
+[入力] プロセスを起動するコンピューターの名前。 ローカル コンピューターを指定するには、null 値を使用します。
 
 `pPort`\
-からプログラムが実行されるポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) インターフェイス。
+[入力] プログラムが実行されるポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) インターフェイス。
 
 `pszExe`\
-から起動する実行可能ファイルの名前。
+[入力] 起動する実行可能ファイルの名前。
 
 `pszArgs`\
-から実行可能ファイルに渡す引数。 引数がない場合は、null 値を指定できます。
+[入力] 実行可能ファイルに渡す引数。 引数がない場合は、null 値にすることができます。
 
 `pszDir`\
-から実行可能ファイルによって使用される作業ディレクトリの名前。 作業ディレクトリが不要な場合は、null 値を指定できます。
+[入力] 実行可能ファイルによって使用される作業ディレクトリの名前。 作業ディレクトリが不要な場合は、null 値にすることができます。
 
 `bstrEnv`\
-からNULL で終わる文字列の環境ブロックの後に、追加の NULL ターミネータが続きます。
+[入力] NULL で終わる文字列の環境ブロックと、それに続く追加の NULL ターミネータ。
 
 `pszOptions`\
-から実行可能ファイルのオプションです。
+[入力] 実行可能ファイルのオプション。
 
 `dwLaunchFlags`\
-からセッションの [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) を指定します。
+[入力] セッションの [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) を指定します。
 
 `hStdInput`\
-から代替入力ストリームを処理します。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替入力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `hStdOutput`\
-から代替出力ストリームへのハンドル。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替出力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `hStdError`\
-から代替エラー出力ストリームへのハンドル。 リダイレクトが不要な場合は0を指定できます。
+[入力] 代替エラー出力ストリームへのハンドル。 リダイレクトが不要な場合は 0 にすることができます。
 
 `pCallback`\
-からデバッガーイベントを受け取る [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクト。
+[入力] デバッガー イベントを受け取る [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクト。
 
 `ppDebugProcess`\
-入出力起動されたプロセスを表す結果の [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクトを返します。
+[出力] 起動されたプロセスを表す、結果の [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 通常、は、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] [launchsuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) メソッドを使用してプログラムを起動し、中断されたプログラムにデバッガーをアタッチします。 ただし、デバッグエンジンでプログラムの起動が必要になる状況があります (たとえば、デバッグエンジンがインタープリターの一部であり、デバッグ中のプログラムが解釈された言語である場合など)。この場合は、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] メソッドを使用し `IDebugEngineLaunch2::LaunchSuspended` ます。
+## <a name="remarks"></a>解説
+ 通常、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] は [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) メソッドを使用してプログラムを起動してから、一時停止されたプログラムにデバッガーをアタッチします。 ただし、状況によっては、デバッグ エンジンがプログラムを起動することが必要な場合があります (たとえば、デバッグ エンジンがインタープリターの一部であり、デバッグ中のプログラムがインタープリター言語である場合)。そのような場合、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] は `IDebugEngineLaunch2::LaunchSuspended` メソッドを使用します。
 
- [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)メソッドは、プロセスが中断状態で正常に起動された後にプロセスを開始するために呼び出されます。
+ [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) メソッドは、プロセスが一時停止状態で正常に起動された後にプロセスを開始するために呼び出されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)
 - [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md)

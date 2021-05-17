@@ -1,6 +1,6 @@
 ---
-title: プロジェクト構成オブジェクト |Microsoft Docs
-description: プロジェクト構成オブジェクトが UI への構成情報の表示をどのように管理するかについて説明します。
+title: プロジェクト構成オブジェクト | Microsoft Docs
+description: プロジェクト構成オブジェクトで UI への構成情報の表示を管理する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,43 +15,43 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: a17d5ed54e74b5632d02f8f8013a9098aaab0a49
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062903"
 ---
 # <a name="project-configuration-object"></a>プロジェクト構成オブジェクト
-プロジェクト構成オブジェクトは、UI への構成情報の表示を管理します。
+プロジェクト構成オブジェクトでは、UI への構成情報の表示を管理します。
 
- ![Visual Studio プロジェクトの構成](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg") プロジェクト構成のプロパティページ
+ ![Visual Studio プロジェクト構成](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")プロジェクト構成プロパティ ページ
 
- プロジェクト構成プロバイダーは、プロジェクト構成を管理します。 環境およびその他のパッケージは、プロジェクトの構成に関する情報にアクセスして取得するために、プロジェクト構成プロバイダーオブジェクトにアタッチされているインターフェイスを呼び出します。
-
-> [!NOTE]
-> プログラムによってソリューション構成ファイルを作成または編集することはできません。 `DTE.SolutionBuilder` を使用する必要があります。 詳細については、「 [ソリューションの構成](../../extensibility/internals/solution-configuration.md) 」を参照してください。
-
- 構成 UI で使用する表示名を発行するには、プロジェクトでを実装する必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A> ます。 環境はを呼び出します <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> 。これは、 `IVsCfg` 環境の UI に表示される構成およびプラットフォームの情報の表示名を取得するために使用できるポインターのリストを返します。 アクティブな構成とプラットフォームは、アクティブなソリューション構成に格納されているプロジェクトの構成によって決まります。 メソッドを使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager.FindActiveProjectCfg%2A> 、アクティブなプロジェクト構成を取得できます。
-
- オブジェクトをオブジェクトと共にオブジェクトに実装して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> 正規の <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper> `IVsProjectCfg2` プロジェクト構成名に基づいてオブジェクトを取得できるようにすることもできます。
-
- プロジェクト構成へのアクセス権を持つ環境や他のプロジェクトを提供するもう1つの方法は、プロジェクトで `IVsCfgProvider2::GetCfgs` 1 つ以上の構成オブジェクトを返すメソッドの実装を提供することです。 プロジェクトは <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 、を継承するを実装し `IVsProjectCfg` て、 `IVsCfg` 構成固有の情報を提供することもできます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> では、プロジェクト構成を追加、削除、および名前変更するためのプラットフォームと機能がサポートされています。
+ プロジェクト構成プロバイダーでは、プロジェクト構成を管理します。 プロジェクトの構成に関する情報にアクセスして取得するために、環境およびその他のパッケージにより、プロジェクト構成プロバイダー オブジェクトにアタッチされているインターフェイスが呼び出されます。
 
 > [!NOTE]
-> Visual Studio は2つの構成の種類に制限されなくなったため、構成を処理するコードは、構成の数についての前提を考慮して記述する必要はありません。また、構成を1つだけ持つプロジェクトは、必ずデバッグまたはリテールのいずれかであるという前提で記述する必要もありません。 これにより、との使用が <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A> 廃止されます。
+> プログラムで、ソリューション構成ファイルを作成または編集することはできません。 `DTE.SolutionBuilder` を使用する必要があります。 詳細については、「[ソリューション構成](../../extensibility/internals/solution-configuration.md)」を参照してください。
 
- `QueryInterface`から返されたオブジェクトに対してを呼び出すと、が取得され `IVsGetCfgProvider::GetCfgProvider` `IVsCfgProvider2` ます。 `IVsGetCfgProvider`プロジェクトオブジェクトでを呼び出すことによってが見つからない場合は、に対して返された `QueryInterface` `IVsProject3` `QueryInterface` オブジェクトの階層ルートブラウザーオブジェクトでを呼び出す `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)` か、に対して返された構成プロバイダーへのポインターを介して、構成プロバイダーオブジェクトにアクセスでき `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)` ます。
+ 構成 UI で使用する表示名を発行するには、プロジェクトで <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A> を実装する必要があります。 環境により <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> が呼び出され、これにより、環境の UI に一覧表示される構成およびプラットフォーム情報の表示名を取得するために使用できる `IVsCfg` ポインターの一覧が返されます。 アクティブな構成とプラットフォームは、アクティブなソリューション構成に格納されているプロジェクトの構成によって決まります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager.FindActiveProjectCfg%2A> メソッドを使用すると、アクティブなプロジェクトの構成を取得できます。
 
- `IVsProjectCfg2` は、主にビルド、デバッグ、および配置管理オブジェクトへのアクセスを提供し、プロジェクトが自由に出力をグループ化できるようにします。 とのメソッドを使用すると、を実装して `IVsProjectCfg` `IVsProjectCfg2` <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> ビルドプロセスを管理でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> ます。また、構成の出力グループへのポインターを実装することもできます。
+ 必要に応じて、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> オブジェクトを <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper> オブジェクトと共に <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> オブジェクトに実装して、正規のプロジェクト構成名に基づいて `IVsProjectCfg2` オブジェクトを取得できます。
 
- グループ内に含まれている出力の数が構成ごとに異なる場合でも、プロジェクトはサポートする構成ごとに同じ数のグループを返す必要があります。 また、グループは、プロジェクト内の構成から構成まで、同じ識別子情報 (正規名、表示名、およびグループ情報) を持っている必要があります。 詳細については、「 [出力のプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)」を参照してください。
+ 環境や他のプロジェクトでプロジェクト構成にアクセスできるようにするもう 1 つの方法は、プロジェクトで `IVsCfgProvider2::GetCfgs` メソッドを実装して、1 つ以上の構成オブジェクトを返すというものです。 プロジェクトでは、構成固有の情報を提供するために、`IVsProjectCfg` から継承され、したがって `IVsCfg` からも継承される <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> を実装することもできます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> では、プロジェクト構成を追加、削除、名前変更するためのプラットフォームと機能がサポートされています。
 
- デバッグを有効にするには、構成でを実装する必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> ます。 `IVsDebuggableProjectCfg` は、プロジェクトによって実装される省略可能なインターフェイスであり、デバッガーが構成を起動し、とを使用して構成オブジェクトに実装されるようにし `IVsCfg` `IVsProjectCfg` ます。 ユーザーが F5 キーを押してデバッガーを起動することにした場合、環境はこれを呼び出します。
+> [!NOTE]
+> Visual Studio は 2 種類の構成に制限されなくなったため、構成を処理するコードを、構成の数を想定して記述する必要も、1 つだけの構成を持つプロジェクが必ずデバッグかリテールのどちらかであるという想定で記述する必要もありません。 これにより、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A> の使用が廃止されます。
 
- `ISpecifyPropertyPages` と `IDispatch` は、構成に依存する情報を取得してユーザーに表示するために、プロパティページと組み合わせて使用されます。 詳細については、「 [プロパティページ](../../extensibility/internals/property-pages.md)」を参照してください。
+ `IVsGetCfgProvider::GetCfgProvider` から返されたオブジェクトに対して `QueryInterface` を呼び出すと、`IVsCfgProvider2` が取得されます。 `IVsProject3` プロジェクト オブジェクトで `QueryInterface` を呼び出しても `IVsGetCfgProvider` が見つからない場合は、`IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)` に対して返されたオブジェクトについて階層ルート ブラウザー オブジェクトで `QueryInterface` を呼び出すか、`IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)` に対して返された構成ブラウザーへのポインターを通じて、構成プロバイダー オブジェクトにアクセスできます。
 
-## <a name="see-also"></a>こちらもご覧ください
+ `IVsProjectCfg2` を使用すると、主にビルド、デバッグ、デプロイ管理オブジェクトにアクセスでき、プロジェクトで出力を自由にグループ化できるようになります。 `IVsProjectCfg` と `IVsProjectCfg2` のメソッドを使用すると、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> を実装して、ビルド プロセスと、構成の出力グループへの <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> ポインターを管理できます。
+
+ グループ内に含まれる出力の数が構成ごとに異なる場合でも、プロジェクトでは、サポートする構成ごとに同じ数のグループを返す必要があります。 また、グループには、プロジェクト内のそれぞれの構成で同じ識別子情報 (正規名、表示名、グループ情報) が保有されている必要もあります。 詳細については、「[出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)」を参照してください。
+
+ デバッグを有効にするには、構成で <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> を実装する必要があります。 `IVsDebuggableProjectCfg` は、デバッガーで構成を起動できるようにするためにプロジェクトによって実装される省略可能なインターフェイスであり、`IVsCfg` と `IVsProjectCfg` を使用して構成オブジェクト上に実装されます。 ユーザーが F5 キーを押してデバッガーの起動を選択したときに、環境によってこれが呼び出されます。
+
+ `ISpecifyPropertyPages` と `IDispatch` は、プロパティ ページと組み合わせて使用され、構成に依存する情報を取得してユーザーに表示します。 詳細については、「[プロパティ ページ](../../extensibility/internals/property-pages.md)」を参照してください。
+
+## <a name="see-also"></a>関連項目
 - [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)
 - [ビルドのためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)
 - [出力のためのプロジェクト構成](../../extensibility/internals/project-configuration-for-output.md)
 - [[プロパティ ページ]](../../extensibility/internals/property-pages.md)
-- [ソリューションの構成](../../extensibility/internals/solution-configuration.md)
+- [ソリューション構成](../../extensibility/internals/solution-configuration.md)

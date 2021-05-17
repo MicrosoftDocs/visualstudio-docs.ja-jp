@@ -1,6 +1,6 @@
 ---
 description: プログラムにセッションをアタッチします。
-title: 'IDebugProgramEx2:: Attach |Microsoft Docs'
+title: IDebugProgramEx2::Attach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: f4f7f6a083c37ece73be488ab0c4f6d4c25ce24c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084156"
@@ -46,22 +46,22 @@ int Attach(
 
 ## <a name="parameters"></a>パラメーター
 `pCallback`\
-からアタッチされたデバッグエンジンがイベントを送信するコールバック関数を表す [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクト。
+[入力] アタッチされたデバッグ エンジンでイベントを送信する先のコールバック関数を表す [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクト。
 
 `dwReason`\
-からアタッチ操作の理由を説明する [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) 列挙の値。
+[入力] アタッチ操作の理由を説明する [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) 列挙型の値。
 
 `pSession`\
-からプログラムにアタッチしているセッションを一意に識別する値。
+[入力] プログラムにアタッチしているセッションを一意に識別する値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。 `E_ATTACH_DEBUGGER_ALREADY_ATTACHED`プログラムが既にアタッチされている場合、このメソッドはを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 プログラムが既にアタッチされている場合、このメソッドでは `E_ATTACH_DEBUGGER_ALREADY_ATTACHED` を返す必要があります。
 
-## <a name="remarks"></a>注釈
- プログラムを含むポートは、の値を使用して、 `pSession` どのセッションがプログラムにアタッチしようとしているかを判断できます。 たとえば、ポートで一度に1つのデバッグセッションだけをプロセスにアタッチできる場合、ポートでは、同じセッションがプロセス内の他のプログラムに既にアタッチされているかどうかを判断できます。
+## <a name="remarks"></a>解説
+ プログラムを含むポートでは、`pSession` の値を使用して、どのセッションがプログラムにアタッチしようとしているかを判断できます。 たとえば、ポートで一度に 1 つのデバッグ セッションだけをプロセスにアタッチできる場合、ポートでは、同じセッションがプロセス内の他のプログラムに既にアタッチされているかどうかを判断できます。
 
 > [!NOTE]
-> 渡されるインターフェイスは、 `pSession` クッキーとしてのみ扱われます。これは、このプログラムにアタッチするセッションデバッグマネージャーを一意に識別する値です。指定されたインターフェイスのメソッドは機能しません。
+> 渡されるインターフェイス `pSession` は、Cookie としてのみ扱われます。これは、このプログラムにアタッチするセッション デバッグ マネージャーを一意に識別する値です。指定されたインターフェイスのメソッドは機能しません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)

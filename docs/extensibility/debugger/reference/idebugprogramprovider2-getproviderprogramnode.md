@@ -1,6 +1,6 @@
 ---
-description: 特定のプログラムのプログラムノードを取得します。
-title: 'IDebugProgramProvider2:: GetProviderProgramNode |Microsoft Docs'
+description: 特定のプログラムのプログラム ノードを取得します。
+title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 07e7184c189d501b2fcb604590eeb121bae8ccdc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065282"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
-特定のプログラムのプログラムノードを取得します。
+特定のプログラムのプログラム ノードを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,33 +52,33 @@ int GetProviderProgramNode(
 
 ## <a name="parameters"></a>パラメーター
 `Flags`\
-から [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) 列挙型のフラグの組み合わせ。 この呼び出しでは、次のフラグが一般的に使用されます。
+[入力] [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) 列挙型のフラグの組み合わせ。 この呼び出しで一般的なフラグは、次のとおりです。
 
 |フラグ|説明|
 |----------|-----------------|
-|`PFLAG_REMOTE_PORT`|リモートコンピューターで呼び出し元が実行されています。|
-|`PFLAG_DEBUGGEE`|呼び出し元は現在デバッグ中です (各ノードに対してマーシャリングに関する追加情報が返されます)。|
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元はにアタッチされましたが、デバッガーによって起動されませんでした。|
+|`PFLAG_REMOTE_PORT`|呼び出し元はリモート コンピューターで実行されています。|
+|`PFLAG_DEBUGGEE`|呼び出し元は現在、デバッグ中です (マーシャリングに関する追加情報がノードごとに返されます)。|
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|呼び出し元はアタッチされましたが、デバッガーによって起動されませんでした。|
 
 `pPort`\
-から呼び出しプロセスが実行されているポート。
+[入力] 呼び出しプロセスが実行されているポート。
 
 `processId`\
-から対象のプログラムを含むプロセスの ID を保持する [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
+[入力] 対象のプログラムを含むプロセスの ID を保持している [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 構造体。
 
 `guidEngine`\
-からプログラムがアタッチされているデバッグエンジンの GUID (存在する場合)。
+[入力] プログラムがアタッチされているデバッグ エンジンがある場合、その GUID。
 
 `programId`\
-からプログラムノードを取得するプログラムの ID。
+[入力] プログラム ノードを取得する対象のプログラムの ID。
 
 `ppProgramNode`\
-入出力要求されたプログラムノードを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクト。
+[出力] 要求されたプログラム ノードを表す [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)
 - [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

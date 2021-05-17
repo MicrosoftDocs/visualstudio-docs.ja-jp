@@ -1,6 +1,6 @@
 ---
 description: このメソッドは、式を同期的に評価します。
-title: 'IDebugExpression2:: EvaluateSync |Microsoft Docs'
+title: IDebugExpression2::EvaluateSync | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 85e0dd1c334ce57b5e466ab66a74db4b29a40adc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092437"
@@ -48,30 +48,30 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>パラメーター
 `dwFlags`\
-から式の評価を制御する [Evalflags](../../../extensibility/debugger/reference/evalflags.md) 列挙のフラグの組み合わせ。
+[入力] 式の評価を制御する [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 列挙型のフラグの組み合わせ。
 
 `dwTimeout`\
-からこのメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 `INFINITE`無期限に待機するには、を使用します。
+[入力] このメソッドから戻る前に待機する最大時間 (ミリ秒単位)。 待機時間を指定しない場合は `INFINITE` を使用します。
 
 `pExprCallback`\
-からこのパラメーターは常に null 値です。
+[入力] このパラメーターは常に null 値です。
 
 `ppResult`\
-入出力式の評価結果を含む [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
+[出力] 式の評価結果を格納している [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。 一般的なエラーコードは次のとおりです。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 一般的なエラー コードは次のとおりです。
 
 |エラー|説明|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|現在、別の式が評価されていますが、同時式の評価はサポートされていません。|
-|E_EVALUATE_TIMEOUT|評価がタイムアウトしました。|
+|E_EVALUATE_BUSY_WITH_EVALUATION|現在、別の式が評価中であり、式の同時評価はサポートされていません。|
+|E_EVALUATE_TIMEOUT|評価がタイムアウトになりました。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 同期評価の場合、評価の完了時にイベントを Visual Studio に返信する必要はありません。
 
 ## <a name="example"></a>例
-次の例は、IDebugExpression2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CExpression` います。 [](../../../extensibility/debugger/reference/idebugexpression2.md)
+次の例は、[IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) インターフェイスを実装する単純な `CExpression` オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,
@@ -118,7 +118,7 @@ HRESULT CExpression::EvalExpression(BOOL bSynchronous,
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)
 - [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)
 - [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

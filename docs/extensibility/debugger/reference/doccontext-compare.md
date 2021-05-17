@@ -1,6 +1,6 @@
 ---
-description: 2つのドキュメントコンテキストを比較するための条件を指定します。
-title: DOCCONTEXT_COMPARE |Microsoft Docs
+description: 2 つのドキュメント コンテキストを比較するための条件を指定します。
+title: DOCCONTEXT_COMPARE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 6eeee3e31c898660930b676df716fe25769bbb8b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096006"
 ---
 # <a name="doccontext_compare"></a>DOCCONTEXT_COMPARE
-2つのドキュメントコンテキストを比較するための条件を指定します。
+2 つのドキュメント コンテキストを比較するための条件を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_DOCCONTEXT_COMPARE {
@@ -49,26 +49,26 @@ enum enum_DOCCONTEXT_COMPARE {
 
 ## <a name="fields"></a>フィールド
 `DOCCONTEXT_EQUAL`\
-リスト内でターゲットドキュメントコンテキストと同じ最初のドキュメントコンテキストを検索します。
+リスト内でターゲット ドキュメント コンテキストと等しい最初のドキュメント コンテキストを検索します。
 
 `DOCCONTEXT_LESS_THAN`\
-リスト内でターゲットドキュメントコンテキストより小さい最初のドキュメントコンテキストを検索します。
+リスト内でターゲット ドキュメント コンテキストより小さい最初のドキュメント コンテキストを検索します。
 
 `DOCCONTEXT_GREATER_THAN`\
-リスト内でターゲットドキュメントコンテキストよりも大きい最初のドキュメントコンテキストを検索します。
+リスト内でターゲット ドキュメント コンテキストより大きい最初のドキュメント コンテキストを検索します。
 
 `DOCCONTEXT_SAME_DOCUMENT`\
-リスト内で、ターゲットドキュメントコンテキストと同じドキュメント内にある最初のドキュメントコンテキストを検索します。
+リスト内で、ターゲット ドキュメント コンテキストと同じドキュメント内にある最初のドキュメント コンテキストを検索します。
 
-## <a name="remarks"></a>注釈
-[Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md)メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+[Compare](../../../extensibility/debugger/reference/idebugdocumentcontext2-compare.md) メソッドに引数として渡されます。
 
-これらの値は、リスト内の最初のドキュメントコンテキストを検索するための比較条件を指定するために使用されます。 ドキュメントコンテキストには、メソッドを通じて比較するドキュメントコンテキストのリストが与えられ `IDebugDocumentContext2::Compare` ます。 次に、比較演算子があるリスト内の最初のドキュメントコンテキスト `true` が返されます。
+これらの値は、リスト内の最初のドキュメント コンテキストを検索するための比較条件を指定するために使用されます。 ドキュメント コンテキストには、`IDebugDocumentContext2::Compare` メソッドを通じて、それ自体を比較するドキュメント コンテキストのリストが与えられ ます。 比較演算子が `true` であるリスト内の最初のドキュメント コンテキストが返されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

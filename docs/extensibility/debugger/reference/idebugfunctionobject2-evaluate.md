@@ -1,6 +1,6 @@
 ---
-description: 'IDebugFunctionObject2:: Evaluate は関数を呼び出し、結果の値をオブジェクトとして返します。'
-title: 'IDebugFunctionObject2:: Evaluate |Microsoft Docs'
+description: IDebugFunctionObject2::Evaluate は、関数を呼び出して、結果の値をオブジェクトとして返します。
+title: IDebugFunctionObject2::Evaluate | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,7 +16,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 35b6acb64ffd894b1cff03badcf2cdea831c7260
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105063579"
@@ -48,22 +48,22 @@ int Evaluate (
 
 ## <a name="parameters"></a>パラメーター
 `ppParams`\
-から入力パラメーターを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトの配列。 これらの各パラメーターは、このインターフェイスのいずれかの Create メソッドを使用して作成されています。
+[入力] 入力パラメーターを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトの配列。 これらの各パラメーターは、このインターフェイスの Create メソッドのいずれかを使用して作成されたものです。
 
 `dwParams`\
-から配列内のパラメーターの数 `ppParams` 。
+[入力] `ppParams` 配列内のパラメーターの数。
 
 `dwEvalFlags`\
-から評価を実行する方法を指定する、 [Evalflags](../../../extensibility/debugger/reference/evalflags.md) 列挙のフラグの組み合わせ。
+[入力] 評価の実行方法を指定する [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) 列挙型のフラグの組み合わせ。
 
 `dwTimeout`\
-からこのメソッドから制御が戻るまでに待機する最大時間をミリ秒単位で指定します。 無期限に待機するには、 **無制限** を使用します。
+[入力] このメソッドから戻る前に待機する最大時間 (ミリ秒単位) を指定します。 無期限に待機するには **INFINITE** を使用します。
 
 `ppResult`\
-入出力関数の値をオブジェクトとして表す **IDebugObject** を返します。
+[出力] 関数の値をオブジェクトとして表す **IDebugObject** を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

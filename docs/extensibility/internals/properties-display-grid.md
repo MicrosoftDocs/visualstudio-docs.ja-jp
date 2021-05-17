@@ -1,6 +1,6 @@
 ---
-title: プロパティを表示する Grid |Microsoft Docs
-description: プロパティウィンドウのグリッドにプロパティ名とプロパティ値のフィールドがある場所と、プロパティの拡張でグリッドを操作する方法について説明します。
+title: プロパティ表示グリッド | Microsoft Docs
+description: プロパティ ウィンドウのグリッド内のどこにプロパティ名とプロパティ値のフィールドがあるか、またプロパティの拡張でグリッドをどのように操作するかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,49 +14,49 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9ccf8afd293c47a1eb55b0b57b8190c11492cfa8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061122"
 ---
 # <a name="properties-display-grid"></a>プロパティ表示グリッド
 
-[ **プロパティ** ] ウィンドウには、グリッド内のフィールドが表示されます。 左側の列には、プロパティ名が含まれています。右側の列には、プロパティ値が含まれています。
+**[プロパティ]** ウィンドウでは、グリッド内にフィールドが表示されます。 左の列にはプロパティ名が含まれ、右の列にはプロパティ値が含まれています。
 
 ## <a name="work-with-the-grid"></a>グリッドを操作する
 
-2列の一覧には、構成に依存しないプロパティが表示されます。これらのプロパティは、デザイン時およびその現在の設定で変更できます。 すべてのプロパティが表示されない場合があることに注意してください。 たとえば、メソッドを実装することによって、プロパティを非表示に設定でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> ます。 特に、子プロパティを持つプロパティを非表示にするには、次のようにします。
+2 列の一覧には、デザイン時に変更することができる、構成に依存しないプロパティとその現在の設定が表示されます。 すべてのプロパティは表示されていない可能性があることに注意してください。 たとえば、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> メソッドを実装することによって、プロパティを非表示として設定できます。 具体的には、子プロパティを持つプロパティを非表示にするには、次のようにします。
 
-1. パラメーターを `pfDisplay` に設定 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> `FALSE` します。
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> の `pfDisplay` パラメーターを `FALSE` に設定します。
 
-2. パラメーターを `pfHide` に設定 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> `TRUE` します。
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> の `pfHide` パラメーターを `TRUE` に設定します。
 
-情報を **プロパティ** ウィンドウにプッシュするには、IDE でを使用 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> します。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> は、[ **プロパティ** ] ウィンドウに表示される、関連するプロパティを持つ選択可能なオブジェクトを含むウィンドウごとに、vspackage によって呼び出されます。  <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> `GetProperty` __VSHPROPID を使用したソリューションエクスプローラーの呼び出しの実装[。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)階層内のすべてのオブジェクトを取得するために、プロジェクト階層内の VSHPROPID_BrowseObject します。
+**[プロパティ]** ウィンドウに情報をプッシュするために、IDE では <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> を使用します。 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> は、 **[プロパティ]** ウィンドウに表示される関連プロパティを持つ選択可能なオブジェクトが含まれているウィンドウごとに VSPackage によって呼び出されます。 **ソリューション エクスプローラー** の実装の <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> では、階層内の参照可能なオブジェクトを取得するために、プロジェクト階層内の [__VSHPROPID.VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) を使用して `GetProperty` を呼び出します。
 
-VSPackage が __VSHPROPID をサポートしていない場合 [。VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>)、IDE は <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> __VSHPROPID の値を使用してを使用しようとし [ます。](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) 階層項目が提供する VSHPROPID_SelContainer ます。
+VSPackage で [__VSHPROPID.VSHPROPID_BrowseObject](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_BrowseObject>) がサポートされていない場合、IDE では、1 つまたは複数の階層項目によって提供される [__VSHPROPID.VSHPROPID_SelContainer](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_SelContainer>) の値を使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> を使用しようとします。
 
-プロジェクト VSPackage を作成する必要はありません <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 。これは、それを実装する IDE 提供のウィンドウパッケージ ( **ソリューションエクスプローラー** など) がその代わりに構築されるため <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> です。
+プロジェクト VSPackage で <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> を作成する必要はありません。それを実装している、IDE によって提供されるウィンドウ パッケージ (**ソリューション エクスプローラー** など) が、代わりに <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> を構築するためです。
 
-<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> は、IDE によって呼び出される3つのメソッドで構成されます。
+<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> は、IDE によって呼び出される次の 3 つのメソッドで構成されています。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> [ **プロパティ** ] ウィンドウに表示されるように選択されたオブジェクトの数を格納します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.CountObjects%2A> には、 **[プロパティ]** ウィンドウに表示されるように選択されているオブジェクトの数が含まれています。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A>`IDispatch`[**プロパティ**] ウィンドウに表示されるように選択されたオブジェクトを返します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> は、 **[プロパティ]** ウィンドウに表示されるように選択されている `IDispatch` オブジェクトを返します。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> によって返されるオブジェクトを <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> ユーザーが選択できるようにします。 これにより、UI でユーザーに表示される選択内容を VSPackage が視覚的に更新できるようになります。
+- <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> は、<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> によって返される任意のオブジェクトをユーザーが選択できるようにします。 これにより、UI でユーザーに表示される選択項目を VSPackage で視覚的に更新できるようになります。
 
-[ **プロパティ** ] ウィンドウは、 `IDispatch` 参照されるプロパティを取得するために、オブジェクトから情報を抽出します。 プロパティブラウザーは、を使用して、で `IDispatch` サポートされているプロパティを照会し `ITypeInfo` ます。これは、から取得 `IDispatch::GetTypeInfo` します。 次に、ブラウザーはこれらの値を使用して、[ **プロパティ** ] ウィンドウを設定し、グリッドに表示される個々のプロパティの値を変更します。 プロパティ情報は、オブジェクト内で保持されます。
+**[プロパティ]** ウィンドウでは、参照されるプロパティを取得するために `IDispatch` オブジェクトから情報を抽出します。 [プロパティ] ブラウザーでは、`IDispatch` を使用して (`IDispatch::GetTypeInfo` から取得される) `ITypeInfo` をクエリすることによって、そのオブジェクトにどのようなプロパティをサポートしているかをたずねます。 このブラウザーでは次に、これらの値を使用して **[プロパティ]** ウィンドウを設定したり、グリッドに表示される個々のプロパティの値を変更したりします。 これらのプロパティ情報は、そのオブジェクト自体の中に保持されます。
 
-返されたオブジェクトはをサポートするため `IDispatch` 、呼び出し元はまたはを呼び出して、 `IDispatch::Invoke` 必要な `ITypeInfo::Invoke` 情報を表す定義済みのディスパッチ識別子 (DISPID) を指定して、オブジェクトの名前などの情報を取得できます。 Dispid は、ユーザー定義の識別子と競合しないようにするために負の値です。
+返されたオブジェクトは `IDispatch` をサポートしているため、呼び出し元は、目的の情報を表す定義済みのディスパッチ識別子 (DISPID) を指定して `IDispatch::Invoke` または `ITypeInfo::Invoke` を呼び出すことによって、そのオブジェクトの名前などの情報を取得できます。 宣言される DISPID は、ユーザー定義の識別子と競合しないように負の値になっています。
 
-[ **プロパティ** ] ウィンドウには、選択したオブジェクトの特定のプロパティの属性に応じて、さまざまな種類のフィールドが表示されます。 これらのフィールドには、エディットボックス、ドロップダウンリスト、およびカスタムエディターダイアログボックスへのリンクが含まれます。
+**[プロパティ]** ウィンドウには、選択されたオブジェクトの特定のプロパティの属性に応じて、さまざまな種類のフィールドが表示されます。 これらのフィールドには、編集ボックス、ドロップダウン リストのほか、カスタム エディター ダイアログ ボックスへのリンクが含まれます。
 
-- 列挙されたリストに含まれる値は、クエリによってに取得され <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> `IDispatch` ます。 列挙された一覧から取得した値は、[プロパティ] グリッドで、フィールド名をダブルクリックするか、値をクリックしてドロップダウンリストから新しい値を選択することによって変更できます。 列挙されたリストの設定が定義されているプロパティの場合、[プロパティ] の一覧でプロパティ名をダブルクリックすると、使用可能な選択肢が順番に表示されます。 True/false などの2つの選択肢だけを持つ定義済みプロパティの場合は、プロパティ名をダブルクリックして選択範囲を切り替えます。
+- 列挙された一覧に含まれている値は、`IDispatch` への <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.GetObjects%2A> クエリによって取得されます。 列挙された一覧から取得された値は、フィールド名をダブルクリックするか、またはその値をクリックし、ドロップダウン リストから新しい値を選択することによってプロパティ グリッドで変更できます。 列挙された一覧にある定義済みの設定を持つプロパティの場合は、[プロパティ] 一覧のプロパティ名をダブルクリックすると、使用可能な選択肢が順番に切り替わります。 2 つの選択肢 (true/false など) しかない定義済みのプロパティの場合は、プロパティ名をダブルクリックして、これらの選択肢を切り替えます。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A>が `false` で、値が変更されたことを示している場合、値は太字で表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> は、値を元の値にリセットできるかどうかを判断するために使用されます。 その場合は、値を右クリックし、表示されるメニューから [ **リセット** ] を選択して、既定値に戻すことができます。 それ以外の場合は、値を既定値に戻して手動で変更する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> では、デザイン時に表示されるプロパティの名前をローカライズおよび非表示にすることもできますが、実行時に表示されるプロパティ名には影響しません。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HasDefaultValue%2A> が `false` である場合 (この値が変更されたことを示します) は、値が太字で表示されます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.CanResetPropertyValue%2A> は、この値を元の値にリセットできるかどうかを判定するために使用されます。 その場合は、その値を右クリックし、表示されるメニューから **[リセット]** を選択することによって元の既定値に変更できます。 そうでない場合は、その値を手動で元の既定値に変更する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> では、デザイン時に表示されるプロパティの名前をローカライズしたり、非表示にしたりすることもできますが、実行時に表示されるプロパティ名には影響を与えません。
 
-- 省略記号ボタン ([...]) をクリックすると、ユーザーが選択できるプロパティ値の一覧が表示されます (カラーピッカーやフォント一覧など)。 <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> これらの値を提供します。
+- 省略記号 (...) ボタンをクリックすると、ユーザーが選択できるプロパティ値の一覧 (カラー ピッカーやフォントの一覧など) が表示されます。 これらの値は <xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder> によって提供されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [プロパティの拡張](../../extensibility/internals/extending-properties.md)
+- [プロパティを拡張する](../../extensibility/internals/extending-properties.md)

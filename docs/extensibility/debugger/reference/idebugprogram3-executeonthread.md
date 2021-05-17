@@ -1,6 +1,6 @@
 ---
-description: デバッガープログラムを実行します。
-title: 'IDebugProgram3:: ExecuteOnThread |Microsoft Docs'
+description: デバッガー プログラムを実行します。
+title: IDebugProgram3::ExecuteOnThread | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a86bca6aa26a6bb364e9d704e79f57cef8f55395
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084390"
 ---
 # <a name="idebugprogram3executeonthread"></a>IDebugProgram3::ExecuteOnThread
-デバッガープログラムを実行します。 スレッドは、プログラムの実行時にユーザーが表示しているスレッドについてデバッガー情報を提供するために返されます。
+デバッガー プログラムを実行します。 プログラムの実行時にユーザーが表示しているスレッドのデバッガー情報を提供するために、スレッドが返されます。
 
 ## <a name="syntax"></a>構文
 
@@ -39,22 +39,22 @@ int ExecuteOnThread(
 
 ## <a name="parameters"></a>パラメーター
 `pThread`\
-から [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクトです。
+[入力] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- デバッガーが停止した後に実行を再開するには、次の3つの方法があります。
+## <a name="remarks"></a>解説
+ デバッガーが停止した後に実行を再開するには、次の 3 つの方法があります。
 
-- Execute: 前の手順をキャンセルし、次のブレークポイントまで実行します。
+- Execute: 前のステップをキャンセルし、次のブレークポイントまで実行します。
 
-- ステップ: 前の手順をキャンセルし、新しい手順が完了するまで実行します。
+- Step: 以前のステップをキャンセルし、新しいステップが完了するまで実行します。
 
-- 続行: をもう一度実行し、古いステップをアクティブのままにします。
+- Continue: もう一度実行し、以前のステップをアクティブのままにします。
 
-  に渡されるスレッド `ExecuteOnThread` は、キャンセルするステップを決定するときに役立ちます。 スレッドがわからない場合は、execute を実行すると、すべてのステップが取り消されます。 スレッドに関する知識があれば、アクティブスレッドでの手順をキャンセルするだけでよいのです。
+  `ExecuteOnThread` に渡されるスレッドは、キャンセルするステップを決定するときに役立ちます。 スレッドがわからない場合は、Execute を実行すると、すべてのステップがキャンセルされます。 スレッドがわかっている場合は、アクティブなスレッドのステップをキャンセルする必要があるだけです。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [実行](../../../extensibility/debugger/reference/idebugprogram2-execute.md)
 - [IDebugProgram3](../../../extensibility/debugger/reference/idebugprogram3.md)

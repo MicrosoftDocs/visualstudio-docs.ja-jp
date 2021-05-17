@@ -1,6 +1,6 @@
 ---
-description: ソースファイル内の指定された位置のコードパスの一覧を取得します。
-title: 'IDebugProgram2:: EnumCodePaths |Microsoft Docs'
+description: ソース ファイル内の指定された位置のコード パスの一覧を取得します。
+title: IDebugProgram2::EnumCodePaths | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 057089c8c7b68fd1109c31bbfc0014f49a71368c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076044"
 ---
 # <a name="idebugprogram2enumcodepaths"></a>IDebugProgram2::EnumCodePaths
-ソースファイル内の指定された位置のコードパスの一覧を取得します。
+ソース ファイル内の指定された位置のコード パスの一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,28 +52,28 @@ int EnumCodePaths(
 
 ## <a name="parameters"></a>パラメーター
 `pszHint`\
-からIDE の [ **ソース** ] ビューまたは [ **逆アセンブル** ] ビューで、カーソルの下にある単語。
+[入力] IDE の **[ソース]** または **[逆アセンブリ]** ビューで、カーソルの下にある単語。
 
 `pStart`\
-から現在のコードコンテキストを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクト。
+[入力] 現在のコード コンテキストを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクト。
 
 `pFrame`\
-から現在のブレークポイントに関連付けられているスタックフレームを表す [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) オブジェクト。
+[入力] 現在のブレークポイントに関連付けられているスタック フレームを表す [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) オブジェクト。
 
 `fSource`\
-から`TRUE`**ソース** ビューの場合は0以外 () `FALSE` 。**逆アセンブル** ビューの場合は 0 ()。
+[入力] **[ソース]** ビューの場合は 0 以外 (`TRUE`)、 **[逆アセンブリ]** ビューの場合は 0 (`FALSE`)。
 
 `ppEnum`\
-入出力コードパスのリストを格納している [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) オブジェクトを返します。
+[出力] コード パスの一覧を格納している [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md) オブジェクトを返します。
 
 `ppSafety`\
-入出力選択したコードパスがスキップされた場合にブレークポイントとして設定される追加のコードコンテキストを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクトを返します。 これは、たとえば、サーキットのブール式の場合に発生する可能性があります。
+[出力] 選択したコード パスがスキップされた場合のブレークポイントとして設定される追加のコード コンテキストを表す [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) オブジェクトを返します。 これは、たとえば短絡ブール式の場合に発生する可能性があります。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="remarks"></a>解説
- コードパスは、プログラムの実行中に現在のポイントにアクセスするために呼び出されたメソッドまたは関数の名前を記述します。 コードパスの一覧は、呼び出し履歴を表します。
+ コード パスは、プログラムの実行中に現在のポイントにアクセスするために呼び出されたメソッドまたは関数の名前を記述します。 コード パスの一覧は、呼び出し履歴を表します。
 
 ## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

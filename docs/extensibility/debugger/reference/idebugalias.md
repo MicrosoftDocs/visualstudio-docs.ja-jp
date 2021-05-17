@@ -1,6 +1,6 @@
 ---
 description: 変数の数値の別名を表します。
-title: IDebugAlias |Microsoft Docs
+title: IDebugAlias | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,50 +15,50 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d5eb9f1d4bc493779d9b42a984c8fc1577e2fe66
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059146"
 ---
 # <a name="idebugalias"></a>IDebugAlias
 > [!IMPORTANT]
-> Visual Studio 2015 では、式エバリュエーターを実装するこの方法は非推奨とされます。 CLR 式エバリュエーターの実装の詳細については、「 [Clr 式](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) エバリュエーターと [マネージ式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)」を参照してください。
+> Visual Studio 2015 では、この方法での式エバリュエーターの実装は非推奨です。 CLR 式エバリュエーターの実装については、[CLR 式エバリュエーター](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators)に関する記事と[マネージド式エバリュエーターのサンプル](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)に関する記事をご覧ください。
 
- 変数の数値の別名を表します。 別名は、単に変数の異なる名前です。
+ 変数の数値の別名を表します。 別名とは、単に変数の異なる名前です。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```
 IDebugAlias : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>実装側の注意
- 式エバリュエーター (EE) は、変数の数値のエイリアスをサポートするために、このインターフェイスを実装します。
+ 式エバリュエーター (EE) により、変数の数値のエイリアスをサポートするために、このインターフェイスが実装されます。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-- [Createalias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) は、特定のオブジェクトの別名を作成します。 エイリアスを検索するには、 [Findalias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md) または [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)を使用します。
+- [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) により、特定のオブジェクトの別名が作成されます。 別名を検索するには、[FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md) または [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md) を使用します。
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
- インターフェイスでは、次のメソッドが定義されてい `IDebugAlias` ます。
+ `IDebugAlias` インターフェイスでは、次のメソッドが定義されています。
 
 |メソッド|説明|
 |------------|-----------------|
-|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|このエイリアスが参照するオブジェクトを取得します。|
-|[GetName](../../../extensibility/debugger/reference/idebugalias-getname.md)|エイリアス名を取得します。|
-|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|`ICorDebugValue`このオブジェクトに関するマネージコード情報へのアクセスを提供するインターフェイスを取得します (マネージコードのみ)。|
-|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|このエイリアスは使用されなくなったものとしてマークします。|
+|[GetObject](../../../extensibility/debugger/reference/idebugalias-getobject.md)|この別名が参照するオブジェクトを取得します。|
+|[GetName](../../../extensibility/debugger/reference/idebugalias-getname.md)|別名の名前を取得します。|
+|[GetICorDebugValue](../../../extensibility/debugger/reference/idebugalias-geticordebugvalue.md)|このオブジェクトに関するマネージド コード情報へのアクセスを提供する `ICorDebugValue` インターフェイスを取得します (マネージド コードのみ)。|
+|[Dispose](../../../extensibility/debugger/reference/idebugalias-dispose.md)|この別名は使用されなくなったものとしてマークします。|
 
-## <a name="remarks"></a>注釈
- エイリアスは、文字列形式の10進数の後に # 文字が続きます (たとえば、1001 #)。
+## <a name="remarks"></a>解説
+ 別名は、文字列形式の 10 進数の後に # 文字が続いたものです (たとえば、1001#)。
 
-## <a name="requirements"></a>要件
- ヘッダー: ee
+## <a name="requirements"></a>必要条件
+ ヘッダー: ee.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [式の評価のインターフェイス](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 - [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md)
 - [FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md)

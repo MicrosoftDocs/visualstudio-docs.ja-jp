@@ -1,6 +1,6 @@
 ---
 description: メッセージの種類と理由を指定します。
-title: MESSAGETYPE |Microsoft Docs
+title: MESSAGETYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b85933896dfff38c2d346fd18144710e2e6fc127
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091527"
@@ -26,7 +26,7 @@ ms.locfileid: "105091527"
 # <a name="messagetype"></a>MESSAGETYPE
 メッセージの種類と理由を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_MESSAGETYPE { 
@@ -53,32 +53,32 @@ public enum enum_MESSAGETYPE {
 
 ## <a name="fields"></a>フィールド
  `MT_OUTPUTSTRING`\
- メッセージを出力ウィンドウに送信することを示します。 これは、とは相互に排他的です `MT_MESSAGEBOX` 。
+ メッセージを出力ウィンドウに送信することを示します。 これは `MT_MESSAGEBOX` とは相互に排他的です。
 
  `MT_MESSAGEBOX`\
- メッセージがメッセージボックスに表示されることを示します。 これは、とは相互に排他的です `MT_OUTPUTSTRING` 。
+ メッセージがメッセージ ボックスに表示されることを示します。 これは `MT_OUTPUTSTRING` とは相互に排他的です。
 
  `MT_TYPE_MASK`\
  メッセージの送信先を分離するマスク値。
 
  `MT_REASON_EXCEPTION`\
- メッセージボックスが例外の結果として表示されていることを示します。 これは、とは相互に排他的です `MT_REASON_TRACEPOINT` 。
+ メッセージ ボックスが例外の結果として表示されていることを示します。 これは `MT_REASON_TRACEPOINT` とは相互に排他的です。
 
  `MT_REASON_TRACEPOINT`\
- トレースポイントをヒットした結果としてメッセージボックスが表示されていることを示します。 これは、とは相互に排他的です `MT_REASON_EXCEPTION` 。
+ メッセージ ボックスがトレースポイントをヒットした結果として表示されていることを示します。 これは `MT_REASON_EXCEPTION` と相互に排他的です。
 
  `MT_REASON_MASK`\
- 表示されるメッセージの理由を特定するマスク値。
+ 表示されるメッセージの理由を分離するマスク値。
 
-## <a name="remarks"></a>注釈
- これらの値は、 [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) メソッドと [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) メソッドから返されます。
+## <a name="remarks"></a>解説
+ これらの値は、[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) および [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) メソッドから返されます。
 
- いずれかの理由値を、ビットごとのを使用して出力先の値の1つと組み合わせることができ `OR` ます。
+ 理由値の 1 つを、ビットごとの `OR` を使用して出力先の値の 1 つと組み合わせることができます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
