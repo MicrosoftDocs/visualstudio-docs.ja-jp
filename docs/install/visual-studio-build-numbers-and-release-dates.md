@@ -5,19 +5,19 @@ description: Visual Studio の現在までのリリース済みバージョン�
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 04/22/2021
+ms.date: 05/11/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 9407d6dcb8a56d4c6844008cfc8cf6ac6fb8384c
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: a88e114b664ebf239c375c48536753da3574da11
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913021"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782622"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio のビルド番号とリリース日
 
@@ -29,6 +29,10 @@ ms.locfileid: "107913021"
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.10.0 | Preview 3 | 2021 年 5 月 11 日 | 16.10.31306.274 |
+| 16.9.5 | Release | 2021 年 5 月 11 日 | 16.9.31229.75 |
+| 16.7.15 | Release | 2021 年 5 月 11 日 | 16.7.31229.181 |
+| 16.4.22| Release | 2021 年 5 月 11 日 | 16.4.31229.387 |
 | 16.10.0 | Preview 2.1 | 2021 年 4 月 22 日 | 16.10.31220.234 |
 | 16.10.0 | Preview 2 | 2021 年 4 月 14 日 | 16.10.31213.239 |
 | 16.9.4 | Release | 2021 年 4 月 13 日 | 16.9.31205.134 |
@@ -224,6 +228,7 @@ ms.locfileid: "107913021"
 
 | **Version**| **チャネル** | **リリース日** | **ビルド バージョン** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.36 | Release | 2021 年 5 月 11 日 | 15.9.28307.1525 |
 | 15.9.35 | Release | 2021 年 4 月 13 日 | 15.9.28307.1500 |
 | 15.9.34 | Release | 2021 年 3 月 9 日 | 15.9.28307.1440 |
 | 15.9.33 | リリース | 2021 年 2 月 10 日 | 15.9.28307.1401 |

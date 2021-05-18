@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: 8ef65fbd9452aef52d807210f84928a4eef14100
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1fd620a0c7f4860421b6f8b1a15c0b708c1ba860
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877747"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729261"
 ---
 # <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Visual Studio で ASP.NET または ASP.NET Core アプリをデバッグする
 
@@ -51,7 +51,7 @@ Visual Studio では、ASP.NET アプリと ASP.NET Core アプリをデバッ�
 
 IIS Express が既定値であり、事前に構成されています。 ローカル IIS 上でデバッグする場合は、[ローカル IIS デバッグの要件](#iis)を満たしていることを確認します。
 
-1. Visual Studio の **ソリューション エクスプローラー** で ASP.NET プロジェクトを選択し、 **[プロパティ]** アイコンを選択して、**Alt**+**Enter** キーを押すか、右クリックして **[プロパティ]** をクリックします。
+1. Visual Studio の **ソリューション エクスプローラー** で ASP.NET プロジェクトを選択し、 **[プロパティ]** アイコンをクリックするか、**Alt**+**Enter** キーを押すか、右クリックして **[プロパティ]** を選択します。
 
 1. **[Web]** タブを選択します。
 
@@ -65,7 +65,7 @@ IIS Express が既定値であり、事前に構成されています。 ロー�
 
    ![ASP.NET のデバッガー設定](media/dbg-aspnet-enable-debugging2.png "ASP.NET のデバッガー設定")
 
-1. **[ファイル]**  >  **[選択されたファイルを上書き保存]** を使用するか、**Ctrl**+**S** キーを押して変更を保存します。
+1. **[ファイル]**  >  **[選択されたファイルを上書き保存]** を選択して (または、**Ctrl**+**S** キーを押して) 変更を保存します。
 
 1. アプリをデバッグするには、プロジェクトで、一部のコードにブレークポイントを設定します。 Visual Studio ツールバーで、構成が **[デバッグ]** に設定されていること、目的のブラウザーがエミュレーター フィールドの **[IIS Express (\<Browser name>)]** または **[ローカル IIS (\<Browser name>)]** に表示されていることを確認します。
 
@@ -75,7 +75,7 @@ IIS Express が既定値であり、事前に構成されています。 ロー�
 
 IIS Express が既定値であり、事前に構成されています。 ローカル IIS 上でデバッグする場合は、[ローカル IIS デバッグの要件](#iis)を満たしていることを確認します。
 
-1. Visual Studio の **ソリューション エクスプローラー** で ASP.NET Core プロジェクトを選択し、 **[プロパティ]** アイコンを選択して、**Alt**+**Enter** キーを押すか、右クリックして **[プロパティ]** をクリックします。
+1. Visual Studio の **ソリューション エクスプローラー** で ASP.NET Core プロジェクトを選択し、 **[プロパティ]** アイコンをクリックするか、**Alt**+**Enter** キーを押すか、右クリックして **[プロパティ]** を選択します。
 
 1. **[デバッグ]** タブを選択します。
 

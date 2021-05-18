@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 855a04fae1d5b406019e758c6d6f931d6657bb4e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b5fb35c1cd30f872d2a58504f73596357cc60025
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102145379"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729326"
 ---
 # <a name="first-look-at-profiling-tools"></a>プロファイリング ツールの概要
 
@@ -31,7 +31,7 @@ Visual Studio にはさまざまなプロファイリング ツールがあり�
 
 ## <a name="measure-performance-while-debugging"></a>デバッグ中にパフォーマンスを測定する
 
-[診断ツール] ウィンドウのプロファイリング ツールには、デバッグ セッション中にアクセスできます。 [診断ツール] ウィンドウは、オフにしていない限り自動的に表示されます。 このウィンドウを表示するには、 **[デバッグ]、[ウィンドウ]、[診断ツールの表示]** の順にクリックします。 ウィンドウを開いている状態で、データを収集するツールを選択できます。
+[診断ツール] ウィンドウのプロファイリング ツールには、デバッグ セッション中にアクセスできます。 [診断ツール] ウィンドウは、オフにしていない限り自動的に表示されます。 このウィンドウを表示するには、 **[デバッグ]、[ウィンドウ]、[診断ツールの表示]** の順にクリックします (または **Ctrl**  +  **Alt**  +  **F2** キーを押します)。 ウィンドウを開いている状態で、データを収集するツールを選択できます。
 
 ![[診断ツール] ウィンドウ](../profiling/media/prof-tour-diagnostic-tools.png "診断ツール")
 
@@ -235,13 +235,13 @@ Visual Studio 2019 では、従来のパフォーマンス エクスプローラ
 ::: moniker range=">=vs-2019"
 |パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[パフォーマンスのヒント](../profiling/perftips.md)|はい|はい|可|
-|[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|はい|はい|可|
-|[メモリ使用量](../profiling/memory-usage.md)|はい|はい|可|
+|[パフォーマンスのヒント](../profiling/perftips.md)|はい|はい|○|
+|[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|はい|はい|○|
+|[メモリ使用量](../profiling/memory-usage.md)|はい|はい|○|
 |[.NET オブジェクトの割り当て](../profiling/dotnet-alloc-tool.md)|はい (.NET のみ)|可|はい|
 |[GPU 使用率](./gpu-usage.md)|はい|はい|no|
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可 (XAML)|はい|no|
-|[イベント ビューアー](../profiling/events-viewer.md)|可|はい|可|
+|[イベント ビューアー](../profiling/events-viewer.md)|可|はい|○|
 |[.NET Async](../profiling/analyze-async.md)|はい (.NET のみ)|可|はい|
 |[.NET カウンター](../profiling/dotnet-counters-tool.md)|可 (.NET Core のみ)|Ｘ|可 (ASP.NET Core のみ)|
 |[データベース](../profiling/analyze-database.md)|可 (.NET Core のみ)|Ｘ|可 (ASP.NET Core のみ)|
@@ -252,12 +252,12 @@ Visual Studio 2019 では、従来のパフォーマンス エクスプローラ
 ::: moniker range="vs-2017"
 |パフォーマンス ツール|Windows デスクトップ|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|はい|はい|可|
+|[CPU 使用率](../profiling/beginners-guide-to-performance-profiling.md)|はい|はい|○|
 |[メモリ使用量](../profiling/memory-usage.md)|はい|はい|はい|
 |[GPU 使用率](./gpu-usage.md)|はい|はい|no|
 |[アプリケーションのタイムライン](../profiling/application-timeline.md)|可 (XAML)|はい|no|
 |[パフォーマンスのヒント](../profiling/perftips.md)|可|XAML の場合は可、HTML の場合は不可|可|
-|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|はい|no|可|
+|[パフォーマンス エクスプローラー](../profiling/performance-explorer.md)|はい|いいえ|可|
 |[IntelliTrace](../debugger/intellitrace.md)|Visual Studio Enterprise を使用した .NET のみ|Visual Studio Enterprise を使用した .NET のみ|Visual Studio Enterprise を使用した .NET のみ|
 |[ネットワーク使用率](../profiling/network-usage.md)|no|はい|no|
 |[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|Ｘ|HTML の場合は可、XAML の場合は不可|Ｘ|

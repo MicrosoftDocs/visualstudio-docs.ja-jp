@@ -1,7 +1,7 @@
 ---
 title: Python 用の C++ 拡張機能の記述
 description: 混合モードのデバッグなど、Visual Studio、CPython、PyBind11 を使用して Python 用の C++ 拡張機能を作成するチュートリアルです。
-ms.date: 11/19/2018
+ms.date: 05/11/2021
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: df3d32bfedfc730b8fae0837ce0e48f50e6496f4
-ms.sourcegitcommit: 925db7adb9cb554b081c7e727d09680d4863feed
+ms.openlocfilehash: 286d5f2c316379316b1a1cf55334cab39cdc247c
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107941150"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782635"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python 用 C++ 拡張機能の作成
 
@@ -23,46 +23,43 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 - アクセラレータ モジュール: Python はインタープリター言語であるため、コードの特定の部分を C++ で書くことによってパフォーマンスを向上させることができます。
 - ラッパー モジュール: 既存の C/C++ インターフェイスを Python コードに公開します。または、Python から使いやすい、より "Python らしい" API を公開します。
-- 低レベル システム アクセス モジュール: CPython ランタイム、オペレーティング システム、または基盤ハードウェアの低レベル機能にアクセスするために作成します。
+- 低レベル システム アクセス モジュール: `CPython` ランタイム、オペレーティング システム、または基盤ハードウェアの低レベル機能にアクセスするために作成します。
 
-この記事では、双曲正接を計算する CPython 用の C++ 拡張モジュールを作成し、Python コードからそれを呼び出す手順について説明します。 Python では最初にルーチンを実装して、C++ で同じルーチンを実装した場合の相対的なパフォーマンス向上を示します。
+この記事では、双曲正接を計算する `CPython` 用の C++ 拡張モジュールを作成し、Python コードからそれを呼び出す手順について説明します。 Python では最初にルーチンを実装して、C++ で同じルーチンを実装した場合の相対的なパフォーマンス向上を示します。
 
 この記事では、Python で C++ を使用できるようにする 2 つの方法も示します。
 
-- [Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている標準の CPython 拡張機能
+- [Python のドキュメント](https://docs.python.org/3/c-api/)で説明されている標準の `CPython` 拡張機能
 - その簡潔さから C++ 11 に推奨される [PyBind11](https://github.com/pybind/pybind11)
-
-これらの方法と他の方法の比較については、この記事の最後にある「[別の方法](#alternative-approaches)」をご覧ください。
 
 このチュートリアルで使われているサンプルの完全版は [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) にあります。
 
 ## <a name="prerequisites"></a>前提条件
 
-- **C++ によるデスクトップ開発** と **Python 開発** ワークロードの両方を備えた Visual Studio 2017 以降が既定のオプションでインストールされます。
-- **Python 開発** ワークロードでは、**[Python ネイティブ開発ツール]** の横のボックスもオンにします。 このオプションによって、この記事で説明するほとんどの構成が設定されます。 (このオプションには、C++ のワークロードも自動的に含まれます)。
+- **Python ネイティブ開発ツール** (これによりネイティブ拡張機能に必要な C++ ワークロードとツールセットが提供されます) を含む、**Python 開発** ワークロードがインストールされた Visual Studio 2017 以降。
 
     ![[Python ネイティブ開発ツール] オプションの選択](media/cpp-install-native.png)
 
     > [!Tip]
     > **データ サイエンスと分析アプリケーション** ワークロードをインストールすることでも、Python と **Python ネイティブ開発ツール** オプションが既定で含まれます。
 
-他のバージョンの Visual Studio の使用など、詳細については [Visual Studio 用の Python サポートのインストール](installing-python-support-in-visual-studio.md)に関する記事をご覧ください。 Python を別にインストールする場合は、インストーラーで **[詳細オプション]** の **[Download debugging symbols (デバッグ シンボルのダウンロード)]** と **[Download debug binaries (デバッグ バイナリのダウンロード)]** を必ず選んでください。 このオプションを選択すると、デバッグ ビルドを行う場合に、必要なデバッグ ライブラリを確実に使用できます。
+インストール オプションの詳細については、[Visual Studio 用の Python サポートのインストール](installing-python-support-in-visual-studio.md)に関するページを参照してください。 Python を別個にインストールする場合は、そのインストーラーの **[詳細オプション]** で **[Download debugging symbols]\(デバッグ シンボルのダウンロード\)** を必ず選択してください。 このオプションは、Python コードとネイティブ コードの間で混合モードのデバッグを使用する場合に必要です。
 
 ## <a name="create-the-python-application"></a>Python アプリケーションを作成する
 
-1. Visual Studio で **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、新しい Python プロジェクトを作成します。 "Python" を検索し、**Python アプリケーション** テンプレートを選択し、適切な名前と場所を指定し、**[OK]** を選択します。
+1. Visual Studio で **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、新しい Python プロジェクトを作成します。 "Python" と検索して **Python アプリケーション** テンプレートを選択し、任意の名前と場所を指定して、 **[OK]** を選択します。
 
-1. C++ を使用するには、32 ビットの Python インタープリターを使用する必要があります (Python 3.6 以降を推奨)。 Visual Studio の **[ソリューション エクスプローラー]** ウィンドウに、プロジェクト ノードを展開し、**[Python 環境]** ノードを展開します。 (太字または **グローバル デフォルト** ラベルで) 既定として 32 ビット環境が表示されない場合、[プロジェクト用の Python 環境の選択](selecting-a-python-environment-for-a-project.md)に関する記事の指示に従ってください。 32 ビット インタープリターをインストールしていない場合、「[Python インタープリターのインストール](installing-python-interpreters.md)」をご覧ください。
+1. プロジェクトの *.py* ファイルに、次のコードを貼り付けます (または、[Python の編集機能](editing-python-code-in-visual-studio.md)の一部を体験するために手動で入力します)。 このコードでは、数値演算ライブラリを使用せずに双曲線正接が計算されます。このコードは、ネイティブ拡張機能を使用して高速化する対象です。
 
-1. プロジェクトの *.py* ファイルに、双曲正接の計算をベンチマークする次のコードを貼り付けます (簡単に比較できるよう、数値演算ライブラリを使わずに実装されています)。 自由に手動でコードを入力し、[Python の編集機能](editing-python-code-in-visual-studio.md)を体験してください。
+    > [!Tip]
+    > C++ で書き換える前に、純粋な Python でコードを記述します。 このようにすることで、ネイティブ コードが正しいかどうかをより簡単に確認できます。
 
     ```python
-    from itertools import islice
     from random import random
     from time import perf_counter
 
     COUNT = 500000  # Change this value depending on the speed of your computer
-    DATA = list(islice(iter(lambda: (random() - 0.5) * 3.0, None), COUNT))
+    DATA = [(random() - 0.5) * 3 for _ in range(COUNT)]
 
     e = 2.7182818284590452353602874713527
 
@@ -98,9 +95,7 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 ## <a name="create-the-core-c-projects"></a>C++ のコア プロジェクトを作成する
 
-"superfastcode"と"superfastcode2"という 2 つの同じ C++ プロジェクトを作成するには、このセクションの手順に従います。 後で、各プロジェクトで別の手段を使用して C++ コードを Python に公開します。
-
-1. `PYTHONHOME` 環境変数が使用する Python インタープリターに設定されていることを確認してください。 Visual Studio の C++ プロジェクトは、この変数に戻づいて、Python 拡張機能の作成時に使用される *python.h* などのファイルを見つけます。
+"superfastcode"と"superfastcode2"という 2 つの同じ C++ プロジェクトを作成するには、このセクションの手順に従います。 後で、各プロジェクトで 2 種類の方法を使用して C++ コードを Python に公開します。
 
 1. **ソリューション エクスプローラー** で、ソリューションを右クリックし、**[追加]** > **[新しいプロジェクト]** の順に選択します。 Visual Studio ソリューションには、Python プロジェクトと C++ プロジェクトの両方を含めることができます (これは Visual Studio for Python 使用の利点の 1 つです)。
 
@@ -114,29 +109,39 @@ Python インタープリターの機能を拡張するため、およびオペ�
     > [!Important]
     > 後続の手順で C++ プロパティ ページを有効にするには、*.cpp* 拡張子を持つファイルが必要です。
 
-1. **ソリューション エクスプローラー** で C++ プロジェクトを右クリックして、**[プロパティ]** を選択します。
+1. 64 ビットの Python ランタイムを使用する場合は、メイン ツールバーのドロップダウンメ ニューを使用して **x64** 構成をアクティブにします。 32 ビットの Python ランタイムの場合は、**Win32** 構成をアクティブにします。
 
-1. 表示される **[プロパティ ページ]** ダイアログ ボックスの上部で、**[構成]** を **[すべての構成]** に、**[プラットフォーム]** を **[Win32]** に設定します。
-
-1. 次の表に示すように、特定のプロパティを設定し、**[OK]** を選択します。
-
-    | タブ | プロパティ | 値 |
-    | --- | --- | --- |
-    | **全般** | **[全般]**  >  **[ターゲット名]** | `from...import` ステートメントで Python からモジュールを参照するときのモジュール名を指定します。 この名前は、Python のモジュールを定義するときに C++ でも使用します。 プロジェクトの名前をモジュール名として使用する場合は、既定値の **$(ProjectName)** のままにしておきます。 |
-    | | **[全般]**  >  **[ターゲットの拡張子]** | **.pyd** |
-    | | **[プロジェクトの既定値]**  >  **[構成の種類]** | **ダイナミック ライブラリ (.dll)** |
-    | **[C/C++]**  >  **[全般]** | **追加のインクルード ディレクトリ** | インストールに合わせて Python の *include* フォルダーを追加します (例: `c:\Python36\include`)。  |
-    | **[C/C++]**  >  **[プリプロセッサ]** | **プリプロセッサの定義** | **CPython のみ**: 文字列の先頭に `Py_LIMITED_API;` (セミコロンを含む) を追加します。 この定義により、Python から呼び出すことができる一部の関数を制限し、Python の異なるバージョン間でのコードの移植性を高くします。 PyBind11 を使用している場合は、この定義を追加しないでください。追加すると、ビルド エラーが発生します。 |
-    | **[C/C++]**  >  **[コード生成]** | **ランタイム ライブラリ** | **マルチスレッド DLL (/MD)** (下記の「警告」を参照) |
-    | **[リンカー]**  >  **[全般]** | **追加のライブラリ ディレクトリ** | インストールに合わせて、*.lib* ファイルが含まれる Python の *libs* フォルダーを追加します (例: `c:\Python36\libs`)。 (*.py* ファイルが含まれる *Lib* フォルダー *ではなく*、*.lib* ファイルが含まれる *libs* フォルダーを必ず指定してください)。 |
+1. **ソリューション エクスプローラー** で C++ プロジェクトを右クリックして、**[プロパティ]** を選択します。 **[構成]** の値は **[アクティブ (デバッグ)]** にする必要があり、 **[プラットフォーム]** は、前の手順の選択に基づき **[アクティブ (x64)]** または **[アクティブ (Win32)]** にします。
 
     > [!Tip]
-    > プロジェクトのプロパティに [C/C++] タブが表示されない場合は、C/C++ ソース ファイルとして識別されるファイルがプロジェクトに含まれないためです。 このような条件は、*.c* または *.cpp* 拡張子を付けずにソース ファイルを作成すると発生する可能性があります。 たとえば、前の新しい項目のダイアログで「`module.cpp`」ではなく誤って「`module.coo`」と入力した場合、Visual Studio ではこのファイルを作成しますが、ファイルの種類が C/C++ のプロパティ タブをアクティブにする種類である [C/C+ コード] に設定されません。このような誤った識別は、このファイルの名前を `.cpp` に変更した場合でもそのままになります。 ファイルの種類を正しく設定するには、**ソリューション エクスプローラー** でファイルを右クリックして **[プロパティ]** を選び、 **[ファイルの種類]** を **[C/C++ コード]** に設定します。
+    > 独自のプロジェクトの場合、デバッグとリリースの構成を両方とも構成することが望ましいです。 ここでは、デバッグ構成のみ行い、`CPython` の "*リリース*" ビルドを使用するようにその構成を設定します。これにより、アサーションなど、C++ ランタイムの一部のデバッグ機能が無効になります。 `CPython` の "*デバッグ*" バイナリ (`python_d.exe`) を使用する場合は、異なる設定が必要になります。
 
-    > [!Warning]
-    > デバッグ構成の場合でも **[C/C++]**  >  **[コード生成]**  >  **[ランタイム ライブラリ]** のオプションを常に **マルチスレッド DLL (/MD)** に設定します。これは、この設定がデバッグ以外の Python バイナリのビルドに使用されるためです。 CPython では、 **[マルチスレッド デバッグ DLL (/MDd)]** オプションを設定した場合、 **[デバッグ]** 構成のビルドによって "**C1189: Py_LIMITED_API は Py_DEBUG、Py_TRACE_REFS、Py_REF_DEBUG と互換性がありません**" というエラーが発生します。 さらに、ビルド エラーを避けるために `Py_LIMITED_API` を削除すると (CPython では必要ですが、PyBind11 では不要)、モジュールをインポートしようとしたときに Python がクラッシュします (後で説明しますが、クラッシュは DLL の`PyModule_Create` の呼び出し内で発生し、出力メッセージは "**Fatal Python error: PyThreadState_Get: no current thread (Python 致命的エラー: PyThreadState_Get: 現在のスレッドがありません)**" です)。
-    >
-    > /MDd オプションは Python デバッグ バイナリ (*python_d.exe* など) のビルドに使われますが、拡張 DLL に対して選ぶと、やはり `Py_LIMITED_API` のビルド エラーになります。
+1. 次の表に示すように、特定のプロパティを設定し、**[OK]** を選択します。
+    ::: moniker range=">=vs-2019"
+    | タブ | プロパティ | 値 |
+    | --- | --- | --- |
+    | **全般** | **ターゲット名** | `from...import` ステートメントで Python からモジュールを参照するときのモジュール名を指定します。 この名前は、Python のモジュールを定義するときに C++ でも使用します。 プロジェクトの名前をモジュール名として使用する場合は、既定値の **$(ProjectName)** のままにしておきます。 `python_d.exe` では、名前の末尾に `_d` を追加します。 |
+    | | **[構成の種類]** | **ダイナミック ライブラリ (.dll)** |
+    | **詳細** | **[ターゲット ファイルの拡張子]** | **.pyd** |
+    | **[C/C++]** > **[全般]** | **追加のインクルード ディレクトリ** | インストールに合わせて Python の *include* フォルダーを追加します (例: `c:\Python36\include`)。  |
+    | **[C/C++]** > **[プリプロセッサ]** | **プリプロセッサの定義** | **_DEBUG** 値を **NDEBUG** に変更して、`CPython` の非デバッグ バージョンに一致させます (存在する場合)。 (`python_d.exe` を使用する場合、これは変更せずそのままにします。) |
+    | **[C/C++]** > **[コード生成]** | **ランタイム ライブラリ** | `CPython` の非デバッグ バージョンに一致する **[マルチスレッド DLL (/MD)]** 。 (`python_d.exe` を使用する場合、これは変更せずそのままにします。) |
+    | **[リンカー]** > **[全般]** | **追加のライブラリ ディレクトリ** | インストールに合わせて、*.lib* ファイルが含まれる Python の *libs* フォルダーを追加します (例: `c:\Python36\libs`)。 (*.py* ファイルが含まれる *Lib* フォルダー *ではなく*、*.lib* ファイルが含まれる *libs* フォルダーを必ず指定してください)。 |
+    ::: moniker-end
+    ::: moniker range="=vs-2017"
+    | タブ | プロパティ | 値 |
+    | --- | --- | --- |
+    | **全般** | **[全般]** > **[ターゲット名]** | `from...import` ステートメントで Python からモジュールを参照するときのモジュール名を指定します。 この名前は、Python のモジュールを定義するときに C++ でも使用します。 プロジェクトの名前をモジュール名として使用する場合は、既定値の **$(ProjectName)** のままにしておきます。 `python_d.exe` では、名前の末尾に `_d` を追加します。 |
+    | | **[全般]** > **[ターゲットの拡張子]** | **.pyd** |
+    | | **[プロジェクトの既定値]** > **[構成の種類]** | **ダイナミック ライブラリ (.dll)** |
+    | **[C/C++]** > **[全般]** | **追加のインクルード ディレクトリ** | インストールに合わせて Python の *include* フォルダーを追加します (例: `c:\Python36\include`)。  |
+    | **[C/C++]** > **[プリプロセッサ]** | **プリプロセッサの定義** | **_DEBUG** 値を **NDEBUG** に変更して、`CPython` の非デバッグ バージョンに一致させます (存在する場合)。 (`python_d.exe` を使用する場合、これは変更せずそのままにします。) |
+    | **[C/C++]** > **[コード生成]** | **ランタイム ライブラリ** | `CPython` の非デバッグ バージョンに一致する **[マルチスレッド DLL (/MD)]** 。 (`python_d.exe` を使用する場合、これは変更せずそのままにします。) |
+    | **[リンカー]** > **[全般]** | **追加のライブラリ ディレクトリ** | インストールに合わせて、*.lib* ファイルが含まれる Python の *libs* フォルダーを追加します (例: `c:\Python36\libs`)。 (*.py* ファイルが含まれる *Lib* フォルダー *ではなく*、*.lib* ファイルが含まれる *libs* フォルダーを必ず指定してください)。 |
+    ::: moniker-end
+    
+    > [!Tip]
+    > プロジェクトのプロパティに [C/C++] タブが表示されない場合は、C/C++ ソース ファイルとして識別されるファイルがプロジェクトに含まれないためです。 このような条件は、*.c* または *.cpp* 拡張子を付けずにソース ファイルを作成すると発生する可能性があります。 たとえば、前の新しい項目のダイアログで「`module.cpp`」ではなく誤って「`module.coo`」と入力した場合、Visual Studio ではこのファイルを作成しますが、ファイルの種類が C/C++ のプロパティ タブをアクティブにする種類である [C/C+ コード] に設定されません。このような誤った識別は、このファイルの名前を `.cpp` に変更した場合でもそのままになります。 ファイルの種類を正しく設定するには、**ソリューション エクスプローラー** でファイルを右クリックして **[プロパティ]** を選び、 **[ファイルの種類]** を **[C/C++ コード]** に設定します。
 
 1. C++ プロジェクトを右クリックし、 **[ビルド]** を選んで構成をテストします (**デバッグ** と **リリース** の両方)。 *.pyd* ファイルは、C++ のプロジェクト フォルダー自体ではなく、**Debug** および **Release** の下の **solution** フォルダーにあります。
 
@@ -169,13 +174,11 @@ Python インタープリターの機能を拡張するため、およびオペ�
 
 C++ DLL を Python の拡張機能にするには、まず Python の型と対話するようにエクスポートしたメソッドを変更します。 その後、モジュールのメソッドの定義と共に、モジュールをエクスポートする関数を追加します。
 
-次のセクションでは、CPython の拡張機能と PyBind11 の両方を使用してこれらの手順を実行する方法について説明します。
+次のセクションでは、`CPython` の拡張機能と PyBind11 の両方を使用してこれらの手順を実行する方法について説明します。
 
 ### <a name="cpython-extensions"></a>CPython の拡張機能
 
-このセクションに登場する Python 3.x の機能の背景については、python.org の「[Python/C API リファレンスマニュアル](https://docs.python.org/3/c-api/index.html)」を参照してください。特に、「[モジュールオブジェクト](https://docs.python.org/3/c-api/module.html)」を参照してください。右上にあるドロップダウン コントロールから必ずお使いのバージョンの Python を選択すると該当文書が表示されます。
-
-Python 2.7 を使用している場合は、代わりに python.org で [C や C++ による Python 2.7 の拡張](https://docs.python.org/2.7/extending/extending.html)に関するページや「[Python 3 への拡張モジュール移植](https://docs.python.org/2.7/howto/cporting.html)」を参照してください。
+このセクションの内容の詳しい背景については、python.org の「[Python/C API リファレンスマニュアル](https://docs.python.org/3/c-api/index.html)」を参照してください。特に、「[モジュール オブジェクト](https://docs.python.org/3/c-api/module.html)」を参照してください (正しいドキュメントを表示するために、右上にあるドロップダウン コントロールからお使いのバージョンの Python を必ず選択してください)。
 
 1. *module.cpp* の上部で、*Python.h* を含めます。
 
@@ -186,7 +189,7 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
 1. Python の型 (つまり `PyObject*`) を受け付けて戻すように、`tanh_impl` メソッドを変更します。
 
     ```cpp
-    PyObject* tanh_impl(PyObject *, PyObject* o) {
+    PyObject* tanh_impl(PyObject* /* unused module reference */, PyObject* o) {
         double x = PyFloat_AsDouble(o);
         double tanh_x = sinh_impl(x) / cosh_impl(x);
         return PyFloat_FromDouble(tanh_x);
@@ -197,8 +200,9 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
 
     ```cpp
     static PyMethodDef superfastcode_methods[] = {
-        // The first property is the name exposed to Python, fast_tanh, the second is the C++
-        // function name that contains the implementation.
+        // The first property is the name exposed to Python, fast_tanh
+        // The second is the C++ function with the implementation
+        // METH_O means it takes a single PyObject argument
         { "fast_tanh", (PyCFunction)tanh_impl, METH_O, nullptr },
 
         // Terminate the array with an object containing nulls.
@@ -226,15 +230,17 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
     }
     ```
 
-1. ターゲットの構成を **リリース** に設定し、もう一度 C++ プロジェクトをビルドして、コードを検証します。 エラーが発生した場合は、以下の「[トラブルシューティング](#troubleshooting)」セクションをご覧ください。
+1. もう一度 C++ プロジェクトをビルドして、コードを検証します。 エラーが発生した場合は、以下の「[トラブルシューティング](#troubleshooting)」セクションをご覧ください。
 
 ### <a name="pybind11"></a>PyBind11
 
 前のセクションの手順を完了すると、C++ コードに必要なモジュール構造を作成するために多数の定型コードを使用したことに気付きます。 PyBind11 は、はるかに少ないコードで同じ結果を実現する C++ ヘッダー ファイルのマクロを使用してプロセスを簡略化します。 このセクションに表示される内容の背景については、[PyBind11 の基本](https://github.com/pybind/pybind11/blob/master/docs/basics.rst) (github.com) を参照してください。
 
-1. pip (`pip install pybind11` または `py -m pip install pybind11`) を使用して PyBind11 をインストールします。
+1. pip (`pip install pybind11` または `py -m pip install pybind11`) を使用して PyBind11 をインストールします。 (または、[Python 環境] ウィンドウでインストールして、次の手順のために "Powershell で開く" コマンドを使用できます。)
 
-1. *module.cpp* の上部で、*pybind11.h* を含めます。
+1. 同じターミナルで `python -m pybind11 --includes` または `py -m pybind11 --includes` を実行します。 これにより、プロジェクトの **[C/C++]**  >  **[全般]**  >  **[追加のインクルード ディレクトリ]** プロパティに追加する必要があるパスの一覧が出力されます (`-I` プレフィックスが存在する場合、削除してください)。
+
+1. 前のセクションの変更が含まれていない新しい *module.cpp* の上部に、*pybind11.h* を組み込みます。
 
     ```cpp
     #include <pybind11/pybind11.h>
@@ -258,7 +264,7 @@ Python 2.7 を使用している場合は、代わりに python.org で [C や C
     }
     ```
 
-1. ターゲットの構成を **リリース** に設定し、C++ プロジェクトをビルドして、コードを検証します。 エラーが発生した場合は、次のトラブルシューティングをご覧ください。
+1. C++ プロジェクトをビルドして、コードを検証します。 エラーが発生した場合は、次のトラブルシューティングをご覧ください。
 
 ### <a name="troubleshooting"></a>トラブルシューティング
 
@@ -268,7 +274,7 @@ C++ モジュールは、次の理由でコンパイルに失敗する場合が�
 
 - Python ライブラリが見つかりません: プロジェクトのプロパティの **[リンカー]**  >  **[全般]**  >  **[追加のライブラリ ディレクトリ]** のパスが、Python インストールの *libs* フォルダーを指していることを確認します。 「[C++ のコア プロジェクトを作成する](#create-the-core-c-projects)」の手順 6 をご覧ください。
 
-- ターゲット アーキテクチャに関連するリンカー エラー: C++ プロジェクトのターゲット アーキテクチャを、Python インストールのアーキテクチャと一致するように変更します。 たとえば、C++ プロジェクトで x64 をターゲットとするが、Python インストールが x86 の場合は、C++ プロジェクトを x86 をターゲットとするように変更します。
+- ターゲット アーキテクチャに関連するリンカー エラー: C++ プロジェクトのターゲット アーキテクチャを、Python インストールのアーキテクチャと一致するように変更します。 たとえば、C++ プロジェクトで **Win32** をターゲットとする一方で、Python インストールが 64 ビットの場合は、C++ プロジェクトを **x64** に変更します。
 
 ## <a name="test-the-code-and-compare-the-results"></a>コードをテストして結果を比較する
 
@@ -282,63 +288,69 @@ Python プロジェクトと C++ プロジェクトが同じソリューショ�
 
 ![superfastcode プロジェクトに参照を追加する](media/cpp-add-reference.png)
 
-次の手順で説明する別の方法では、グローバル Python 環境にモジュールをインストールし、他の Python プロジェクトでも使えるようにします  (そのためには、通常、その環境に合わせて Visual Studio 2017 バージョン 15.5 以前で IntelliSense 入力候補データベースを更新する必要があります。 環境からモジュールを削除するときも、更新する必要があります)。
-
-1. Visual Studio 2017 以降を使っている場合は、Visual Studio インストーラーを実行して **[変更]** を選び、**[個別のコンポーネント]** > **[コンパイラ、ビルド ツール、およびランタイム]** > **[Visual C++ 2015.3 v140 ツールセット]** を選びます。 この手順が必要な理由は、Python (for Windows) 自体が Visual Studio 2015 (バージョン 14.0) でビルドされ、ここで説明する方法で拡張機能をビルドするときはこれらのツールが使えることが想定されるためです。 (32 ビット バージョンの Python をインストールし、DLL を x64 ではなく Win32 にターゲットする必要がある場合があることに注意してください)。
+次の手順で説明する別の方法では、Python 環境にモジュールをインストールし、他の Python プロジェクトでも使えるようにします。 詳細なドキュメントについては、[**setuptools** プロジェクト](https://setuptools.readthedocs.io/)に関するページを参照してください。
 
 1. プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択して、C++ プロジェクトに *setup.py* という名前のファイルを作成します。 次に、**C++ File (.cpp)** を選択し、ファイルに `setup.py` という名前を付け、**[OK]** を選択します (*.py* 拡張子を使用してファイルに名前を付けることで、C++ ファイル テンプレートを使用していても、Visual Studio でそのファイルが Python として認識されるようにします)。 ファイルがエディターに表示されたら、拡張メソッドに応じて、そこに次のコードを貼り付けます。
 
-    **CPython の拡張機能 (superfastcode プロジェクト):**
+    **`CPython` 拡張機能 (superfastcode プロジェクト):**
 
     ```python
-    from distutils.core import setup, Extension, DEBUG
+    from setuptools import setup, Extension
 
     sfc_module = Extension('superfastcode', sources = ['module.cpp'])
 
-    setup(name = 'superfastcode', version = '1.0',
-        description = 'Python Package with superfastcode C++ extension',
-        ext_modules = [sfc_module]
-        )
+    setup(
+        name='superfastcode',
+        version='1.0',
+        description='Python Package with superfastcode C++ extension',
+        ext_modules=[sfc_module]
+    )
     ```
 
-    このスクリプトについては、「[Building C and C++ Extensions](https://docs.python.org/3/extending/building.html)」 (C と C++ の拡張機能のビルド) (python.org) をご覧ください。
-
-    **PyBind11 (superfastcode2 プロジェクト):**
+    **`PyBind11` (superfastcode2 プロジェクト):**
 
     ```python
-    import os, sys
-
-    from distutils.core import setup, Extension
-    from distutils import sysconfig
+    from setuptools import setup, Extension
+    import pybind11
 
     cpp_args = ['-std=c++11', '-stdlib=libc++', '-mmacosx-version-min=10.7']
 
     sfc_module = Extension(
-        'superfastcode2', sources = ['module.cpp'],
-        include_dirs=['pybind11/include'],
+        'superfastcode2',
+        sources=['module.cpp'],
+        include_dirs=[pybind11.get_include()],
         language='c++',
-        extra_compile_args = cpp_args,
+        extra_compile_args=cpp_args,
         )
 
     setup(
-        name = 'superfastcode2',
-        version = '1.0',
-        description = 'Python package with superfastcode2 C++ extension (PyBind11)',
-        ext_modules = [sfc_module],
+        name='superfastcode2',
+        version='1.0',
+        description='Python package with superfastcode2 C++ extension (PyBind11)',
+        ext_modules=[sfc_module],
     )
     ```
 
-1. *setup.py* コードをコマンド ラインから使用すると、Visual Studio 2015 C++ ツールセット使って拡張機能をビルドするように Python に指示します。 管理者特権でコマンド プロンプトを開き、C++ プロジェクトを含むフォルダー (つまり *setup.py* を含むフォルダー) に移動して、次のコマンドを入力します。
+1. C++ プロジェクトで、*pyproject.toml* という名前の 2 番目のファイルを作成し、次のコードを貼り付けます。
 
-    ```command
-    pip install .
+    ```toml
+    [build-system]
+    requires = ["setuptools", "wheel", "pybind11"]
+    build-backend = "setuptools.build_meta"
     ```
 
-    または
+1. 拡張機能をビルドするために、開いている *pyproject.toml* タブを右クリックし、[完全なパスのコピー] を選択します (*pyproject.toml* 名は、使用前にパスから削除します)。
 
-    ```command
-    py -m pip install .
-    ```
+1. ソリューション エクスプローラーで、アクティブな Python 環境を右クリックし、 *[Python パッケージの管理]* を選択します。
+
+    > [!Tip]
+    > パッケージが既にインストールされている場合は、一覧内に表示されます。 続行する前に、[X] をクリックしてアンインストールします。
+
+1. コピーしたパスを検索ボックスに貼り付け、末尾から `pyproject.toml` を削除します。 Enter キーを押して、そのディレクトリからインストールを行います。
+
+    > [!Tip]
+    > アクセス許可のエラーによってインストールが失敗した場合は、`--user` を追加し、コマンドを再試行します。
+
 
 ### <a name="call-the-dll-from-python"></a>Python から DLL を呼び出す
 
@@ -367,10 +379,21 @@ Python プロジェクトと C++ プロジェクトが同じソリューショ�
 
     **[デバッグなしで開始]** コマンドが無効な場合、**ソリューション エクスプローラー** で Python プロジェクトを右クリックして、 **[スタートアップ プロジェクトに設定]** を選択します。
 
-1. 違いがより顕著になるように `COUNT` 変数を増やしてみてください。 また、C++ モジュールの **デバッグ** ビルドの実行は、**リリース** ビルドよりも低速になります。これは、**デバッグ** ビルドが十分に最適化されず、さまざまなエラー チェックが含まれるためです。 これらの構成間を自由に切り替えて比較することができます。
+1. 違いがより顕著になるように `COUNT` 変数を増やしてみてください。 また、C++ モジュールの **デバッグ** ビルドの実行は、**リリース** ビルドよりも低速になります。これは、**デバッグ** ビルドが十分に最適化されず、さまざまなエラー チェックが含まれるためです。 比較のために、これらの構成を自由に切り替えることができます (ただし、必ず前に戻って、**リリース** 構成の前のプロパティを更新してください)。
 
-> [!NOTE]
-> 出力で、PyBind11 拡張機能が CPython 拡張機能ほど高速ではないものの、Python をそのまま実装した場合よりも大幅に高速であることが確認できます。 この差は、C++ インターフェイスを劇的に簡素化するために、PyBind11 によってもたらされる呼び出しごとの少量のオーバーヘッドによるものです。 この呼び出しごとの差は、実際には完全に無視できるほど小さいものです。テスト コードは、extension 関数を 500,000 回呼び出すため、ここに表されている結果には、そのオーバーヘッドが大幅に増幅されています。 通常、C++ 関数は、ここで使用されている単純な `fast_tanh[2]` メソッドよりもずっと多くの作業を行っており、この場合にはオーバーヘッドは重要ではありません。 ただし、1 秒あたり何千回も呼び出される可能性があるメソッドを実装する場合は、CPython のアプローチを使用することで、PyBind11 よりも高いパフォーマンスを実現できます。
+出力で、PyBind11 拡張機能が `CPython` 拡張機能ほど高速ではないものの、純粋な Python 実装よりも大幅に高速であることが確認できます。 この違いの主な原因は、複数のパラメーター、パラメーター名、またはキーワード引数をサポートしていない `METH_O` 呼び出しを使用したことです。 PyBind11 は、より Python に類似したインターフェイスを呼び出し元に提供するために、少し複雑なコードを生成しますが、テスト コードで関数が 50 万回呼び出されるため、結果的にオーバーヘッドが大幅に増加する可能性があります。
+
+`for` ループをネイティブ コードに移動することで、オーバーヘッドをさらに軽減できます。 これには、各要素を処理するための[反復子プロトコル](https://docs.python.org/c-api/iter.html) (または[関数パラメーター](https://pybind11.readthedocs.io/en/stable/advanced/functions.html#python-objects-as-args)用の PyBind11 の `py::iterable` 型) の使用が含まれます。 Python と C++ の間で繰り返される切り替えを削除することは、シーケンスの処理にかかる時間を短縮する効果的な方法です。
+
+### <a name="troubleshooting"></a>トラブルシューティング
+
+モジュールをインポートしようとしたときに `ImportError` が発生した場合、次のいずれかの問題が原因として考えられます。
+
+* プロジェクト参照を使用してビルドする場合は、C++ プロジェクトのプロパティが、Python プロジェクトでアクティブになっている Python 環境と一致していることを確認します (特に Include および Library ディレクトリ)。
+
+* 出力ファイルが `superfastcode.pyd` という名前であることを確認します。 別の名前または拡張機能を使用すると、インポートできません。
+
+* *setup.py* ファイルを使用してモジュールをインストールした場合、Python プロジェクト用にアクティブ化された Python 環境で *pip* コマンドを実行したことを確認します。 ソリューション エクスプローラーで Python 環境を展開すると、`superfastcode` のエントリが表示されます。
 
 ## <a name="debug-the-c-code"></a>C++ コードをデバッグする
 
@@ -397,18 +420,20 @@ Visual Studio では、Python と C++ コードを一緒にデバッグするこ
 
 ## <a name="alternative-approaches"></a>他の方法
 
-次の表で説明するように、Python の拡張機能を作成するにはさまざまな方法があります。 CPython と PyBind11 の最初の 2 つのエントリは、この記事で既に説明しています。
+次の表で説明するように、Python の拡張機能を作成するにはさまざまな方法があります。 `CPython` と `PyBind11` の最初の 2 つのエントリは、この記事で既に説明しています。
 
 | アプローチ | Vintage | 代表的ユーザー | 
 | --- | --- | --- |
-| CPython 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | 
+| `CPython` 用の C/C++ 拡張モジュール | 1991 | 標準ライブラリ | 
 | [PyBind11](https://github.com/pybind/pybind11) (C++ 向けに推奨) | 2015 |  |
-| Cython (C に推奨) | 2007 | [gevent](https://www.gevent.org/)、[kivy](https://kivy.org/) |
-| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
+| [Cython](https://cython.org) (C 向けに推奨) | 2007 | [gevent](https://www.gevent.org/)、[kivy](https://kivy.org/) |
+| [HPy](https://hpyproject.org/) | 2019 | |
+| [mypyc](https://mypyc.readthedocs.io/) | 2017 | |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 
+| cffi | 2013 | [cryptography](https://cryptography.io/)、[pypy](https://pypy.org/) |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 
-| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/)、[pypy](https://pypy.org/) |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | |
+| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | |
+| [cppyy](https://cppyy.readthedocs.io/) | 2017 | |
 
 ## <a name="see-also"></a>こちらもご覧ください
 
