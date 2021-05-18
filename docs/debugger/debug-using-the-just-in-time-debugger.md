@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e082f5346d22fd574b7f9b725f8ec88b8a3b08f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3bdd35056706491ace6e5e6b2f7c3f6a45464d2e
+ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873198"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109729248"
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Visual Studio で Just-In-Time デバッガーを使用してデバッグする
 
@@ -177,7 +177,7 @@ Just-In-Time デバッグの際に次のエラー メッセージが表示され
 
     デバッガーが、別のユーザーで実行されているプロセスにアタッチしようとしました。
 
-    この問題を解決するには、Visual Studio で、 **[デバッグ]**  >  **[プロセスにアタッチ]** を開き、デバッグするプロセスを **[選択可能なプロセス]** の一覧で探します。 プロセスの名前がわからない場合は、 **[Visual Studio Just-In-Time デバッガー]** ダイアログで、プロセス ID を確認します。 そのプロセスを **[選択可能なプロセス]** の一覧から選択し、 **[アタッチ]** を選択します。 **[いいえ]** を選択して、[Just-In-Time デバッガー] ダイアログを閉じます。
+    この問題を回避するには、Visual Studio で **[デバッグ]**  >  **[プロセスにアタッチ]** を開き (または、**Ctrl** + **Alt** + **P** を押して)、 **[選択可能なプロセス]** の一覧でデバッグするプロセスを見つけます。 プロセスの名前がわからない場合は、 **[Visual Studio Just-In-Time デバッガー]** ダイアログで、プロセス ID を確認します。 そのプロセスを **[選択可能なプロセス]** の一覧から選択し、 **[アタッチ]** を選択します。 **[いいえ]** を選択して、[Just-In-Time デバッガー] ダイアログを閉じます。
 
 - **ログオンしているユーザーがいないため、デバッガーを開始できませんでした。**
 

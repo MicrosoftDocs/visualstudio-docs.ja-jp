@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: Visual Studio Subscription with GitHub Enterprise でのサブスクリプションの管理
-ms.openlocfilehash: c66932d9f0da5e7dbca6dccb8efc911b1453bb8e
-ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
+ms.openlocfilehash: c174b9beb7a7a0eec6bdb65e684869bc0be7dadb
+ms.sourcegitcommit: 8da735b586276c95bf566a867655e3464ab1f989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104757660"
+ms.lasthandoff: 05/11/2021
+ms.locfileid: "109740666"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise を使用して Visual Studio サブスクリプションを管理する
 Microsoft と Enterprise Agreement (EA) を契約しているお客様は、Visual Studio Standard サブスクリプションと GitHub Enterprise が一体化した、新しいサブスクリプション オファーを購入できます。 この方法により、Visual Studio サブスクライバーは GitHub Enterprise を簡単かつ経済的に入手することができます。 
@@ -40,8 +40,7 @@ Visual Studio サブスクリプションの管理の詳細については、次
 
 > [!IMPORTANT]
 > 上記のように、既存のサブスクライバー データ、履歴、サブスクリプション ID が維持されます。また、アクティブにしているベネフィットがこの移動により中断されることはありません。  
->
-> この機能は段階的に展開されています。契約直後には利用できない場合があります。
+
 
 **[今すぐ移動]** ボタンをクリックすると、Enterprise および Professional サブスクリプションの移動に関する推奨事項がポップアップ パネルに表示されます。
 
@@ -50,8 +49,7 @@ Visual Studio サブスクリプションの管理の詳細については、次
 
 このタイルでは、影響を受けるサブスクライバーを確認したり、移動完了後、メール通知が届くことを通知するかどうかを指定したりできます。  このメールでは、ベネフィットが変更されないことと、GitHub でプレゼンス設定を始めることを推奨することがサブスクライバーに伝えられます。  
 
-**[Move all subscribers]\(すべてのサブスクライバーを移動\)** ボタンをクリックした後、選択内容を確認し、サブスクリプションの移動が完了するまで数秒待ちます。  該当する場合、Professional と Enterprise で別々に以上の手順を行う必要があります。  
-
+ **[Move subscribers]\(サブスクライバーの移動\)**   ボタンをクリックすると、推奨されるすべてのサブスクライバーを移動することや、一覧から個々のサブスクライバーを選択することができます。  選択内容を確定した後、サブスクリプションの移動が完了するまで数秒かかります。 該当する場合、Professional と Enterprise で別々に以上の手順を行う必要があります。  
 
 ## <a name="what-is-the-visual-studio-with-github-enterprise-setup-process"></a>GitHub Enterprise の設定プロセスを使用した Visual Studio とは
 GitHub Enterprise は、Visual Studio サブスクリプションとは別に設定され、管理されます。 Visual Studio Subscription with GitHub Enterprise を購入すると、GitHub Enterprise アカウントの設定プロセスが、[manage.visualstudio.com](https://manage.visualstudio.com) での契約と並行して (ただし、個別に) 開始されます。 この GitHub Enterprise アカウントの確立には、時間がかかることがあります。 
