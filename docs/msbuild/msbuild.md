@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dbf938e61cc1567beb682847821595f5ca6cc026
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 372fc5c81b963cbb8e46cab689713e476fcfff7d
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905474"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848280"
 ---
 # <a name="msbuild"></a>MSBuild
 
@@ -112,7 +112,7 @@ MSBuild.exe MyProj.proj -property:Configuration=Debug
 ```xml
 <ItemGroup>
   <Compile Include="one.cs" />
-  <comPile Include="two.cs" />
+  <Compile Include="two.cs" />
 </ItemGroup>
 ```
 
