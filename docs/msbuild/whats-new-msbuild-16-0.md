@@ -10,12 +10,12 @@ manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 24b106442456f8bfbd415c4559cba71e463418d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cdfb552c53a40b6ad2f2349556396475926900be
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933792"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848254"
 ---
 # <a name="whats-new-in-msbuild-160"></a>MSBuild 16.0 の新機能
 
