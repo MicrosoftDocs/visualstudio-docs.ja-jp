@@ -16,6 +16,7 @@
   items:
     - name: Visual Studio のインストール
       href: install/install-visual-studio.md
+      displayName: system requirements
     - name: オフラインでのインストール
       items:
         - name: Visual Studio のオフライン インストールを作成する
@@ -268,16 +269,6 @@
         - name: ビルドのカスタマイズとタスクのデバッグ
           displayName: makefile tasks.vs.json
           href: ide/customize-build-and-debug-tasks-in-visual-studio.md
-    - name: Codespaces を使用した開発 (プレビュー)
-      items:
-        - name: 概要
-          href: ide/codespaces/codespaces-overview.md
-        - name: Codespace で Visual Studio を使用する
-          href: ide/codespaces/use-visual-studio-with-codespaces.md
-        - name: Codespace をカスタマイズする
-          href: ide/codespaces/customize-codespaces.md
-        - name: サポートされている Visual Studio の機能
-          href: ide/codespaces/supported-features-codespaces.md
     - name: チーム エクスプローラーのプロジェクトに接続する
       displayName: Azure DevOps VSTS
       href: ide/connect-team-project.md
@@ -1443,38 +1434,16 @@
       href: ide/whats-new-visual-studio-docs.md
     - name: ドキュメントの新着情報の履歴
       href: ide/whats-new-visual-studio-docs-history.md
-    - name: リリース ノートとシステム要件
+    - name: リリース ノート
       items:
         - name: リリースのタイミング
           href: /visualstudio/productinfo/release-rhythm/
-        - name: Visual Studio 2017
-          items:
-            - name: 最新のリリース ノート
-              href: /visualstudio/releasenotes/vs2017-relnotes/
-            - name: リリース ノートのプレビュー
-              href: /visualstudio/releasenotes/vs2017-preview-relnotes/
-            - name: リリース ノート履歴
-              href: /visualstudio/releasenotes/vs2017-relnotes-history/
-            - name: 再頒布可能コード
-              href: /visualstudio/productinfo/2017-redistribution-vs/
-            - name: プラットフォームの互換性
-              href: /visualstudio/productinfo/vs2017-compatibility-vs/
-            - name: システム要件
-              href: /visualstudio/productinfo/vs2017-system-requirements-vs/
-        - name: Visual Studio 2019
-          items:
-            - name: 最新のリリース ノート
-              href: /visualstudio/releases/2019/release-notes/
-            - name: リリース ノートのプレビュー
-              href: /visualstudio/releases/2019/release-notes-preview/
-            - name: リリース ノート履歴
-              href: /visualstudio/releases/2019/release-notes-history/
-            - name: 再頒布可能コード
-              href: /visualstudio/releases/2019/redistribution/
-            - name: プラットフォームの互換性
-              href: /visualstudio/releases/2019/compatibility/
-            - name: システム要件
-              href: /visualstudio/releases/2019/system-requirements/
+        - name: Visual Studio 2019 ノート
+          href: /visualstudio/releases/2019/release-notes/
+        - name: Visual Studio 2017 ノート
+          href: /visualstudio/releasenotes/vs2017-relnotes/
+        - name: Visual Studio 2015 ドキュメント
+          href: vs-2015-archive.md
         - name: ライセンス条項
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: サポート ライフサイクルとサービス
@@ -1512,8 +1481,3 @@
       href: ide/developer-community-guidelines.md
     - name: 開発者コミュニティのデータのプライバシー
       href: ide/developer-community-privacy.md
-- name: Visual Studio 2015
-  expanded: true
-  items:
-    - name: Visual Studio 2015 ドキュメント
-      href: vs-2015-archive.md
