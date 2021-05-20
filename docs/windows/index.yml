@@ -11,199 +11,193 @@ metadata:
   ms.date: 03/30/2021
   monikerRange: '>=vs-2017'
   f1_keywords:
-  - MSDNSTART
-  ms.openlocfilehash: c2f3b148f99924047c71f2bf1a13a99183e77063
-  ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
-  ms.translationtype: HT
-  ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/31/2021
-  ms.locfileid: "106083543"
+    - MSDNSTART
 highlightedContent:
   items:
-  - title: セットアップとインストール
-    itemType: download
-    url: ../install/install-visual-studio.md
-  - title: Visual Studio IDE へようこそ
-    itemType: overview
-    url: ../get-started/visual-studio-ide.md
-  - title: Visual Studio 2019 リリース ノート
-    itemType: whats-new
-    url: /visualstudio/releases/2019/release-notes/
-  - title: Visual Studio のスキルを高める
-    itemType: learn
-    url: /learn/browse/?products=vs
+    - title: セットアップとインストール
+      itemType: download
+      url: ../install/install-visual-studio.md
+    - title: Visual Studio IDE へようこそ
+      itemType: overview
+      url: ../get-started/visual-studio-ide.md
+    - title: Visual Studio 2019 リリース ノート
+      itemType: whats-new
+      url: /visualstudio/releases/2019/release-notes/
+    - title: Visual Studio のスキルを高める
+      itemType: learn
+      url: /learn/browse/?products=vs
 conceptualContent:
   title: 作業開始
   items:
-  - title: Visual Studio の使用方法を学ぶ
-    links:
-    - text: コードを作成して編集する
-      url: ../ide/index-writing-code.yml
-      itemType: tutorial
-    - text: コードをビルドする
-      url: ../ide/compiling-and-building-in-visual-studio.md
-      itemType: tutorial
-    - text: コードをデバッグする
-      itemType: tutorial
-      url: ../debugger/debugger-feature-tour.md
-    - text: コードをテストする
-      itemType: tutorial
-      url: ../test/getting-started-with-unit-testing.md
-    - text: リポジトリからコードを開く
-      url: ../get-started/tutorial-open-project-from-repo.md
-      itemType: tutorial
-  - title: チュートリアルを実行する
-    links:
-    - text: シンプルな C# コンソール アプリを作成する
-      url: ../get-started/csharp/tutorial-console.md
-      itemType: get-started
-    - text: C++ コンソール電卓を作成する
-      url: /cpp/get-started/tutorial-console-cpp
-      itemType: get-started
-    - text: Visual Basic コンソール アプリを作成する
-      url: ../get-started/visual-basic/tutorial-console.md
-      itemType: get-started
-    - text: Python を使い始める
-      url: ../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md
-      itemType: get-started
-    - text: Node.js と Express のアプリを作成する
-      url: ../javascript/tutorial-nodejs.md
-      itemType: get-started
-    - text: F# Web サービスを作成する
-      url: ../ide/quickstart-fsharp.md
-      itemType: get-started
-  - title: Visual Studio の言語のガイダンス
-    links:
-    - text: C#
-      itemType: get-started
-      url: ../get-started/csharp/index.yml
-    - text: C++
-      itemType: get-started
-      url: /cpp/overview/visual-cpp-in-visual-studio
-    - text: Visual Basic
-      itemType: get-started
-      url: ../get-started/visual-basic/index.yml
-    - text: Python
-      itemType: get-started
-      url: ../python/index.yml
-    - text: JavaScript
-      url: ../javascript/index.yml
-      itemType: get-started
-    - text: F#
-      itemType: get-started
-      url: /dotnet/fsharp/get-started/get-started-visual-studio
+    - title: Visual Studio の使用方法を学ぶ
+      links:
+        - text: コードを作成して編集する
+          url: ../ide/index-writing-code.yml
+          itemType: tutorial
+        - text: コードをビルドする
+          url: ../ide/compiling-and-building-in-visual-studio.md
+          itemType: tutorial
+        - text: コードをデバッグする
+          itemType: tutorial
+          url: ../debugger/debugger-feature-tour.md
+        - text: コードをテストする
+          itemType: tutorial
+          url: ../test/getting-started-with-unit-testing.md
+        - text: リポジトリからコードを開く
+          url: ../get-started/tutorial-open-project-from-repo.md
+          itemType: tutorial
+    - title: チュートリアルを実行する
+      links:
+        - text: シンプルな C# コンソール アプリを作成する
+          url: ../get-started/csharp/tutorial-console.md
+          itemType: get-started
+        - text: C++ コンソール電卓を作成する
+          url: /cpp/get-started/tutorial-console-cpp
+          itemType: get-started
+        - text: Visual Basic コンソール アプリを作成する
+          url: ../get-started/visual-basic/tutorial-console.md
+          itemType: get-started
+        - text: Python を使い始める
+          url: ../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md
+          itemType: get-started
+        - text: Node.js と Express のアプリを作成する
+          url: ../javascript/tutorial-nodejs.md
+          itemType: get-started
+        - text: F# Web サービスを作成する
+          url: ../ide/quickstart-fsharp.md
+          itemType: get-started
+    - title: Visual Studio の言語のガイダンス
+      links:
+        - text: C#
+          itemType: get-started
+          url: ../get-started/csharp/index.yml
+        - text: C++
+          itemType: get-started
+          url: /cpp/overview/visual-cpp-in-visual-studio
+        - text: Visual Basic
+          itemType: get-started
+          url: ../get-started/visual-basic/index.yml
+        - text: Python
+          itemType: get-started
+          url: ../python/index.yml
+        - text: JavaScript
+          url: ../javascript/index.yml
+          itemType: get-started
+        - text: F#
+          itemType: get-started
+          url: /dotnet/fsharp/get-started/get-started-visual-studio
 tools:
   title: 言語のドキュメント
   items:
-  - title: C++
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
-    url: /cpp/
-  - title: C#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
-    url: /dotnet/csharp
-  - title: F#
-    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
-    url: /dotnet/fsharp
-  - title: Visual Basic
-    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
-    url: /dotnet/visual-basic
-  - title: Python
-    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
-    url: ../python/index.yml
-  - title: JavaScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
-    url: ../javascript/index.yml
-  - title: TypeScript
-    imageSrc: https://docs.microsoft.com/media/logos/logo_TS.svg
-    url: http://www.typescriptlang.org/docs/tutorial.html
-  - title: R
-    imageSrc: https://docs.microsoft.com/media/logos/logo_R.svg
-    url: ../rtvs/index.md?view=vs-2017&preserve-view=true
+    - title: C++
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_Cplusplus.svg'
+      url: /cpp/
+    - title: C#
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_Csharp.svg'
+      url: /dotnet/csharp
+    - title: F#
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_Fsharp.svg'
+      url: /dotnet/fsharp
+    - title: Visual Basic
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_VB.svg'
+      url: /dotnet/visual-basic
+    - title: Python
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_python.svg'
+      url: ../python/index.yml
+    - title: JavaScript
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_js.svg'
+      url: ../javascript/index.yml
+    - title: TypeScript
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_TS.svg'
+      url: 'http://www.typescriptlang.org/docs/tutorial.html'
+    - title: R
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_R.svg'
+      url: ../rtvs/index.md?view=vs-2017&preserve-view=true
 additionalContent:
   sections:
-  - title: Visual Studio での開発
-    items:
-    - title: Web とクラウド
-      links:
-      - text: Web 開発
-        url: /aspnet/
-      - text: Azure 開発および管理
-        url: ../azure/index.yml
-      - text: Python
-        url: ../python/index.yml
-      - text: Node.js
-        url: ../javascript/index.yml
-      - text: データ ストレージとデータ処理
-        url: ../data-tools/index.yml
-      - text: データ サイエンス
-        url: ../python/data-science-and-analytical-applications-workload.md
-      - text: Office/Sharepoint 開発
-        url: https://developer.microsoft.com/office/docs
-    - title: デスクトップおよびモバイル
-      links:
-      - text: Windows アプリ開発
-        url: /windows/apps/
-      - text: .NET デスクトップ開発
-        url: /dotnet/framework/develop-client-apps
-      - text: C++ での Windows 開発
-        url: /cpp/windows/desktop-applications-visual-cpp
-      - text: .NET (Xamarin) によるモバイル開発
-        url: /xamarin/
-      - text: C++ でのモバイル開発
-        url: /visualstudio/cross-platform/
-      - text: JavaScript でのモバイル開発
-        url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017&preserve-view=true
-        note: (Visual Studio 2017 および 2015 のみ)
-    - title: ゲーム
-      links:
-      - text: Unity でのゲーム開発
-        url: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
-      - text: C++ によるゲーム開発
-        url: /windows/uwp/gaming/e2e
-    - title: 他のツールセット
-      links:
-      - text: Visual Studio 拡張機能の開発
-        url: ../extensibility/index.yml
-      - text: C++ による Linux 開発
-        url: /cpp/linux/
-      - text: .NET Core クロスプラットフォームの開発
-        url: /dotnet/core/
-  - title: タスク
-    items:
-    - title: 開発
-      summary: コード エディターを使ってコードを作成し、管理します。
-      url: ../ide/index-writing-code.yml
-    - title: ビルド
-      summary: ソース コードをコンパイルし、ビルドします。
-      url: ../ide/compiling-and-building-in-visual-studio.md
-    - title: デバッグ
-      summary: コードのバグを調査し、修正します。
-      url: ../debugger/index.yml
-    - title: テスト
-      summary: プロジェクトでテストを実行します。
-      url: ../test/improve-code-quality.md
-    - title: デプロイ
-      summary: Web 配置、InstallShield、NuGet、継続的インテグレーションなどを使用して、アプリとコードを共有します。
-      url: ../deployment/index.yml
-    - title: バージョン管理
-      summary: Git や GitHub などのバージョン コントロール テクノロジを使ってコードを共有します。
-      url: ../ide/git-with-visual-studio.md
-    - title: DevOps
-      summary: 継続的にクラウドでアプリを構築およびリリースし、Azure DevOps Services でアジャイル プラクティスを実装します。
-      url: /azure/devops
-    - title: パフォーマンスの計測
-      summary: 診断ツールを使ってボトルネックを特定し、コードのパフォーマンスを最適化します。
-      url: ../profiling/index.yml
-    - title: 拡張
-      summary: 開発エクスペリエンスを向上させる独自の機能を Visual Studio IDE に追加します。
-      url: ../extensibility/index.yml
-    - title: データ
-      summary: 任意のデータベースまたはサービス、および任意の場所 (ローカルまたはクラウド) に接続するデータ アプリを作成します。
-      url: ../data-tools/accessing-data-in-visual-studio.md
-    - title: 共同作業
-      summary: 共同作業リアルタイム環境でコードを共有、編集、およびデバッグします。
-      url: /visualstudio/liveshare/
-    - title: Docker コンテナーを使用した開発
-      summary: Docker コンテナーを使用してモジュラー コンポーネントを分離し、スケーラビリティを向上させます。
-      url: ../containers/index.yml
-  footer: '[ブログ](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [問題報告](../ide/feedback-options.md) - [開発者コミュニティ](https://aka.ms/feedback/suggest?space=8) - [トラブルシューティング](/troubleshoot/visualstudio/welcome-visual-studio)'
+    - title: Visual Studio での開発
+      items:
+        - title: Web とクラウド
+          links:
+            - text: Web 開発
+              url: /aspnet/
+            - text: Azure 開発および管理
+              url: ../azure/index.yml
+            - text: Python
+              url: ../python/index.yml
+            - text: Node.js
+              url: ../javascript/index.yml
+            - text: データ ストレージとデータ処理
+              url: ../data-tools/index.yml
+            - text: データ サイエンス
+              url: ../python/data-science-and-analytical-applications-workload.md
+            - text: Office/Sharepoint 開発
+              url: 'https://developer.microsoft.com/office/docs'
+        - title: デスクトップおよびモバイル
+          links:
+            - text: Windows アプリ開発
+              url: /windows/apps/
+            - text: .NET デスクトップ開発
+              url: /dotnet/framework/develop-client-apps
+            - text: C++ での Windows 開発
+              url: /cpp/windows/desktop-applications-visual-cpp
+            - text: .NET (Xamarin) によるモバイル開発
+              url: /xamarin/
+            - text: C++ でのモバイル開発
+              url: /visualstudio/cross-platform/
+            - text: JavaScript でのモバイル開発
+              url: /visualstudio/cross-platform/tools-for-cordova/?view=toolsforcordova-2017&preserve-view=true
+              note: (Visual Studio 2017 and 2015 only)
+        - title: ゲーム
+          links:
+            - text: Unity でのゲーム開発
+              url: /visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity
+            - text: C++ によるゲーム開発
+              url: /windows/uwp/gaming/e2e
+        - title: 他のツールセット
+          links:
+            - text: Visual Studio 拡張機能の開発
+              url: ../extensibility/index.yml
+            - text: C++ による Linux 開発
+              url: /cpp/linux/
+            - text: .NET Core クロスプラットフォームの開発
+              url: /dotnet/core/
+    - title: タスク
+      items:
+        - title: 開発
+          summary: コード エディターを使ってコードを作成し、管理します。
+          url: ../ide/index-writing-code.yml
+        - title: ビルド
+          summary: ソース コードをコンパイルし、ビルドします。
+          url: ../ide/compiling-and-building-in-visual-studio.md
+        - title: デバッグ
+          summary: コードのバグを調査し、修正します。
+          url: ../debugger/index.yml
+        - title: テスト
+          summary: プロジェクトでテストを実行します。
+          url: ../test/improve-code-quality.md
+        - title: デプロイ
+          summary: Web 配置、InstallShield、NuGet、継続的インテグレーションなどを使用して、アプリとコードを共有します。
+          url: ../deployment/index.yml
+        - title: バージョン管理
+          summary: Git や GitHub などのバージョン コントロール テクノロジを使ってコードを共有します。
+          url: ../version-control/index.yml
+        - title: DevOps
+          summary: 継続的にクラウドでアプリを構築およびリリースし、Azure DevOps Services でアジャイル プラクティスを実装します。
+          url: /azure/devops
+        - title: パフォーマンスの計測
+          summary: 診断ツールを使ってボトルネックを特定し、コードのパフォーマンスを最適化します。
+          url: ../profiling/index.yml
+        - title: 拡張
+          summary: 開発エクスペリエンスを向上させる独自の機能を Visual Studio IDE に追加します。
+          url: ../extensibility/index.yml
+        - title: データ
+          summary: 任意のデータベースまたはサービス、および任意の場所 (ローカルまたはクラウド) に接続するデータ アプリを作成します。
+          url: ../data-tools/accessing-data-in-visual-studio.md
+        - title: 共同作業
+          summary: 共同作業リアルタイム環境でコードを共有、編集、およびデバッグします。
+          url: /visualstudio/liveshare/
+        - title: Docker コンテナーを使用した開発
+          summary: Docker コンテナーを使用してモジュラー コンポーネントを分離し、スケーラビリティを向上させます。
+          url: ../containers/index.yml
+  footer: '[Blogs](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Issue Reporting](../ide/feedback-options.md) - [Developer Community](https://aka.ms/feedback/suggest?space=8) - [Troubleshooting](/troubleshoot/visualstudio/welcome-visual-studio)'

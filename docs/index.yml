@@ -6,7 +6,7 @@ metadata:
   title: Visual Studio の製品ファミリのドキュメント
   description: Visual Studio の製品ファミリ (Windows および Mac 用の Visual Studio IDE、Visual Studio Code、Visual Studio App Center、GitHub Codespaces、Visual Studio サブスクリプションなど) のドキュメントについて説明します。
   ms.topic: hub-page
-  ms.custom: contperf-fy21q1, contperf-fy21q3
+  ms.custom: 'contperf-fy21q1, contperf-fy21q3'
   ms.date: 03/23/2021
   searchScope: []
   titleSuffix: ''
@@ -15,73 +15,65 @@ metadata:
   ms.manager: jillfra
   monikerRange: '>=vs-2017'
   hide_bc: true
-  ms.openlocfilehash: d9aa5ff71a4dc24b32827f24e0df219db3674df2
-  ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-  ms.translationtype: HT
-  ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/25/2021
-  ms.locfileid: "105073743"
 productDirectory:
   items:
-  - title: Visual Studio
-    imageSrc: ./media/vs-ide-2019.svg
-    links:
-    - url: ./windows/index.yml?view=vs-2019&preserve-view=true
-      text: Visual Studio 2019 (最新)
-    - url: ./windows/index.yml?view=vs-2017&preserve-view=true
-      text: Visual Studio 2017
-    - url: /previous-versions/visualstudio/
-      text: 以前のバージョン
-    - url: /visualstudio/releases/2019/release-notes
-      text: リリース ノート
-    - url: https://visualstudio.microsoft.com/
-      text: 製品ページ
-  - title: Visual Studio for Mac
-    imageSrc: ./media/vs-mac-2019.svg
-    links:
-    - url: /visualstudio/mac
-      text: Visual Studio 2019 for Mac (最新)
-    - url: /visualstudio/mac/?view=vsmac-2017&preserve-view=true
-      text: Visual Studio 2017 for Mac
-    - url: /visualstudio/releasenotes/vs2019-mac-relnotes
-      text: リリース ノート
-    - url: https://visualstudio.microsoft.com/vs/mac/
-      text: 製品ページ
-  - title: Visual Studio Code
-    imageSrc: ./media/vs-code-logo.svg
-    links:
-    - url: https://code.visualstudio.com/docs
-      text: ドキュメント
-    - url: https://code.visualstudio.com/updates
-      text: リリース ノート
-    - url: https://code.visualstudio.com
-      text: 製品ページ
-  - title: GitHub Codespaces
-    imageSrc: https://docs.microsoft.com/media/logos/logo_octokitty.svg
-    links:
-    - url: https://docs.github.com/github/developing-online-with-codespaces/
-      text: ドキュメント
-    - url: https://code.visualstudio.com/docs/remote/codespaces/
-      text: Visual Studio Code での使用
-    - url: ./ide/codespaces/use-visual-studio-with-codespaces.md
-      text: Visual Studio での使用
-    - url: https://github.com/features/codespaces/
-      text: 製品ページ
-  - title: Visual Studio アプリ センター
-    imageSrc: ./media/vs-mobile-center.svg
-    links:
-    - url: /appcenter
-      text: ドキュメント
-    - url: https://visualstudio.microsoft.com/app-center/
-      text: ポータル
-  - title: Visual Studio サブスクリプション
-    imageSrc: ./media/vs-subscription-temp.svg
-    links:
-    - url: /visualstudio/subscriptions
-      text: ドキュメント
-    - url: https://visualstudio.microsoft.com/subscriptions
-      text: visualstudio.com の情報
-    - url: https://my.visualstudio.com
-      text: サブスクライバー向けポータル
-    - url: https://manage.visualstudio.com
-      text: 管理者ポータル
+    - title: Visual Studio
+      imageSrc: ./media/vs-ide-2019.svg
+      links:
+        - url: ./windows/index.yml?view=vs-2019&preserve-view=true
+          text: Visual Studio 2019 (最新)
+        - url: ./windows/index.yml?view=vs-2017&preserve-view=true
+          text: Visual Studio 2017
+        - url: /previous-versions/visualstudio/
+          text: 以前のバージョン
+        - url: /visualstudio/releases/2019/release-notes
+          text: リリース ノート
+        - url: 'https://visualstudio.microsoft.com/'
+          text: 製品ページ
+    - title: Visual Studio for Mac
+      imageSrc: ./media/vs-mac-2019.svg
+      links:
+        - url: /visualstudio/mac
+          text: Visual Studio 2019 for Mac (最新)
+        - url: /visualstudio/mac/?view=vsmac-2017&preserve-view=true
+          text: Visual Studio 2017 for Mac
+        - url: /visualstudio/releasenotes/vs2019-mac-relnotes
+          text: リリース ノート
+        - url: 'https://visualstudio.microsoft.com/vs/mac/'
+          text: 製品ページ
+    - title: Visual Studio Code
+      imageSrc: ./media/vs-code-logo.svg
+      links:
+        - url: 'https://code.visualstudio.com/docs'
+          text: ドキュメント
+        - url: 'https://code.visualstudio.com/updates'
+          text: リリース ノート
+        - url: 'https://code.visualstudio.com'
+          text: 製品ページ
+    - title: GitHub Codespaces
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_octokitty.svg'
+      links:
+        - url: 'https://docs.github.com/github/developing-online-with-codespaces/'
+          text: ドキュメント
+        - url: 'https://code.visualstudio.com/docs/remote/codespaces/'
+          text: Visual Studio Code での使用
+        - url: 'https://github.com/features/codespaces/'
+          text: 製品ページ
+    - title: Visual Studio アプリ センター
+      imageSrc: ./media/vs-mobile-center.svg
+      links:
+        - url: /appcenter
+          text: ドキュメント
+        - url: 'https://visualstudio.microsoft.com/app-center/'
+          text: ポータル
+    - title: Visual Studio サブスクリプション
+      imageSrc: ./media/vs-subscription-temp.svg
+      links:
+        - url: /visualstudio/subscriptions
+          text: ドキュメント
+        - url: 'https://visualstudio.microsoft.com/subscriptions'
+          text: visualstudio.com の情報
+        - url: 'https://my.visualstudio.com'
+          text: サブスクライバー向けポータル
+        - url: 'https://manage.visualstudio.com'
+          text: 管理者ポータル

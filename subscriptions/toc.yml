@@ -161,7 +161,7 @@
         - name: スーパー管理者と管理者
           href: admin-roles.md
         - name: 契約の基本設定を設定する
-          href: admin-prefs.md
+          href: admin-preferences.md
         - name: 概要
           href: using-admin-portal.md
         - name: 月払いサブスクリプションを追加する
