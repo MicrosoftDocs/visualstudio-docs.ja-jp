@@ -1,6 +1,6 @@
 ---
-title: ポートサプライヤー |Microsoft Docs
-description: この記事では、Visual Studio のデバッガーアーキテクチャにおけるポートサプライヤーの定義とロールについて説明します。
+title: ポート サプライヤー | Microsoft Docs
+description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるポート サプライヤーの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,23 +15,23 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 7ace9a7072287fa26aee3fa2abd083cc9f7f1314
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067804"
 ---
-# <a name="port-suppliers"></a>ポートサプライヤー
-デバッガーアーキテクチャでは、 *ポート供給業者* は次のようになります。
+# <a name="port-suppliers"></a>ポート サプライヤー
+デバッガー アーキテクチャにおいて、"*ポート サプライヤー*" は次のようなものです。
 
-- はサーバーに含まれており、そのサーバーに要求するポートを提供します。
+- サーバーに含まれており、要求に応じてそのサーバーにポートが提供されます。
 
-- 含まれているサーバーのポートを追加および削除できます。
+- 含まれているサーバーからポートの追加と削除を行うことができます。
 
-- では、サーバーに提供されたすべてのポートを列挙できます。
+- サーバーに提供されたすべてのポートを列挙できます。
 
-- は、 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) インターフェイスによって表されます。これは、レジストリを使用して Visual Studio に登録されます。 このインターフェイスは、 [Getportsupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)を呼び出すことによって取得できます。
+- レジストリを介して Visual Studio に登録されている [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) インターフェイスで表されます。 このインターフェイスは、[GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md) を呼び出して取得できます。
 
-  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 既定のポートサプライヤーと既定のポートを提供します。 カスタムポートを実装する必要がある場合は、カスタムポート供給業者を実装してカスタムポートを提供する必要もあります。
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] により、既定のポート サプライヤーと既定のポートが提供されます。 カスタム ポートを実装する必要がある場合は、カスタム ポート サプライヤーも実装し、それらのカスタム ポートを提供する必要があります。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [サーバー](../../extensibility/debugger/servers-visual-studio-sdk.md)

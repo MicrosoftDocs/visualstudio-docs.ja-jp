@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のワークスペースファイルのコンテキスト |Microsoft Docs
-description: IFileContextProvider インターフェイスを実装して、開いているフォルダーワークスペースへの洞察をサポートするファイルコンテキストプロバイダーについて説明します。
+title: Visual Studio におけるワークスペースのファイル コンテキスト | Microsoft Docs
+description: IFileContextProvider インターフェイスを実装して、[フォルダーを開く] ワークスペースの分析情報をサポートするファイル コンテキスト プロバイダーについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -11,69 +11,69 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 271b05d78123136d47cb618e8ed38cea64b7beac
 ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97877066"
 ---
-# <a name="workspace-file-contexts"></a>ワークスペースファイルのコンテキスト
+# <a name="workspace-file-contexts"></a>ワークスペースのファイル コンテキスト
 
-開いている [フォルダー](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) のワークスペースへのすべての洞察は、インターフェイスを実装する "ファイルコンテキストプロバイダー" によって生成され <xref:Microsoft.VisualStudio.Workspace.IFileContextProvider> ます。 これらの拡張機能では、ファイルコンテキストを定義するために必要な洞察を蓄積するために、フォルダーまたはファイル内のパターンの検索、MSBuild ファイルとメイクファイルの読み取り、パッケージの依存関係の検出などを行うことができます。 ファイルコンテキスト自体はアクションを実行しませんが、別の拡張機能が実行できるデータを提供します。
+[[フォルダーを開く]](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) ワークスペースのすべての分析情報は、<xref:Microsoft.VisualStudio.Workspace.IFileContextProvider> インターフェイスを実装する "ファイル コンテキスト プロバイダー" によって生成されます。 これらの拡張機能により、フォルダーまたはファイル内のパターンの検索、MSBuild ファイルとメイクファイルの読み取り、パッケージの依存関係の検出などを行って、ファイル コンテキストを定義するために必要な分析情報を蓄積できます。 ファイル コンテキスト自体はアクションを実行しませんが、別の拡張機能で操作できるデータを提供します。
 
-各には <xref:Microsoft.VisualStudio.Workspace.FileContext> 、 `Guid` それに含まれるデータの型を識別するが関連付けられています。 ワークスペースはこれ `Guid` を後で使用して、プロパティを通じてデータを使用する拡張機能と照合し <xref:Microsoft.VisualStudio.Workspace.FileContext.Context> ます。 ファイルコンテキストプロバイダーは、データを生成する可能性があるファイルコンテキストを識別するメタデータと共にエクスポートされ `Guid` ます。
+各 <xref:Microsoft.VisualStudio.Workspace.FileContext> には、受け渡すデータの型を識別する `Guid` が関連付けられています。 ワークスペースではこの `Guid` を後から使用して、<xref:Microsoft.VisualStudio.Workspace.FileContext.Context> プロパティを通じてデータを使用する拡張機能と一致させます。 ファイル コンテキスト プロバイダーは、データの生成対象となるファイル コンテキストの `Guid` を識別するメタデータと共にエクスポートされます。
 
-定義されたファイルコンテキストは、ワークスペース内の任意の数のファイルまたはフォルダーに関連付けることができます。 指定されたファイルまたはフォルダーは、任意の数のファイルコンテキストに関連付けることができます。 これは多対多リレーションシップです。
+定義されたファイル コンテキストは、ワークスペース内の任意の数のファイルまたはフォルダーに関連付けることができます。 指定されたファイルまたはフォルダーを、任意の数のファイル コンテキストに関連付けることができます。 これは多対多リレーションシップです。
 
-ファイルコンテキストの最も一般的なシナリオは、ビルド、デバッグ、および言語サービスに関連しています。 詳細については、これらのシナリオに関連するその他のトピックを参照してください。
+ファイル コンテキストの最も一般的なシナリオは、ビルド、デバッグ、および言語サービスに関連するものです。 詳細については、これらのシナリオに関する別のトピックを参照してください。
 
-## <a name="file-context-lifecycle"></a>ファイルコンテキストのライフサイクル
+## <a name="file-context-lifecycle"></a>ファイル コンテキストのライフサイクル
 
-のライフサイクル `FileContext` は非決定的です。 コンポーネントは、任意の時点で、何らかの種類のコンテキストに対して非同期に要求できます。 要求コンテキスト型の一部のサブセットをサポートするプロバイダーに対しては、クエリが実行されます。 インスタンスは、メソッドを使用して `IWorkspace` コンシューマーとプロバイダーの間の中間者として機能し <xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A> ます。 コンシューマーはコンテキストを要求し、コンテキストに基づいて短期的なアクションを実行できますが、他のユーザーはコンテキストを要求し、有効期間の長い参照を維持することができます。
+`FileContext` のライフサイクルは非確定的です。 コンポーネントはいつでも、何らかのコンテキスト型のセットを非同期的に要求できます。 要求コンテキスト型の一部のサブセットをサポートするプロバイダーに対してクエリが実行されます。 `IWorkspace` インスタンスは、<xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A> メソッドを通じてコンシューマーとプロバイダーの間の中間者として機能します。 コンシューマーは、コンテキストを要求し、そのコンテキストに基づいて短期的なアクションを実行します。一方、コンテキストを要求し、有効期間の長い参照を維持するコンシューマーも存在します。
 
-ファイルのコンテキストが古くなる原因となるファイルが変更される可能性があります。 プロバイダーは、でイベントを発生させて、 `FileContext` コンシューマーに更新プログラムを通知することができます。 たとえば、一部のファイルに対してビルドコンテキストが提供されていても、ディスク上の変更によってそのコンテキストが無効になった場合、元のプロデューサーはイベントを呼び出すことができます。 それを参照しているコンシューマーは `FileContext` 、新しいを再クエリでき `FileContext` ます。
+ファイル コンテキストの期限切れを引き起こすファイルは変更される可能性があります。 プロバイダーは `FileContext` でイベントを発生させて、コンシューマーに更新を通知できます。 たとえば、あるファイルに対してビルド コンテキストが提供されていても、ディスク上の変更によってそのコンテキストが無効になった場合、元のプロデューサーはイベントを呼び出すことができます。 その `FileContext` を参照しているコンシューマーは、新しい `FileContext` のクエリを再び実行できます。
 
 >[!NOTE]
->コンシューマーにプッシュモデルはありません。 コンシューマーは、要求後にプロバイダーの新しい通知を受け取ることはありません `FileContext` 。
+>コンシューマーに対するプッシュ モデルはありません。 要求後にコンシューマーがプロバイダーの新しい `FileContext` について通知を受け取ることはありません。
 
-## <a name="expensive-file-context-computations"></a>高コストなファイルコンテキストの計算
+## <a name="expensive-file-context-computations"></a>負荷のかかるファイル コンテキストの計算
 
-ファイルの内容をディスクから読み取ると、特にプロバイダーがファイル間のリレーションシップを解決する必要がある場合に、コストが高くなる可能性があります。 たとえば、ソースファイルのファイルコンテキストに対してプロバイダーに対してクエリを行うことはできますが、ファイルコンテキストはプロジェクトファイルのメタデータに依存します。 プロジェクトファイルを解析したり、MSBuild で評価したりすると、コストが高くなります。 代わりに、拡張機能はをエクスポートして、 `IFileScanner` `FileDataValue` ワークスペースのインデックス作成中にデータを作成することができます。 ファイルコンテキストを要求されると、は `IFileContextProvider` そのインデックス付きデータのクエリを迅速に実行できるようになります。 インデックス作成の詳細については、「 [ワークスペースのインデックス作成](workspace-indexing.md) 」を参照してください。
+ディスクからのファイルのコンテンツの読み取りには負荷がかかる可能性があります (特に、プロバイダーがファイル間のリレーションシップを解決する必要がある場合)。 たとえば、ソース ファイルのファイル コンテキストのクエリをプロバイダーに対して実行することは可能ですが、ファイル コンテキストはプロジェクト ファイルのメタデータに依存します。 プロジェクト ファイルを解析したり、MSBuild で評価したりする処理は負荷が高くなります。 代わりに、拡張機能によって `IFileScanner` をエクスポートして、ワークスペースのインデックス作成中に `FileDataValue` データを作成できます。 これで、ファイル コンテキストを要求されたときに、`IFileContextProvider` はそのインデックス付きデータのクエリを迅速に実行できるようになります。 インデックス作成の詳細については、「[ワークスペースのインデックス作成](workspace-indexing.md)」を参照してください。
 
 >[!WARNING]
->他に `FileContext` も、計算に負荷がかかる可能性がある点に注意してください。 一部の UI 操作は同期的であり、大量の要求に依存してい `FileContext` ます。 たとえば、[エディター] タブを開いて **ソリューションエクスプローラー** ショートカットメニューを開くことができます。 これらのアクションは、多くのビルドコンテキスト型要求を行います。
+>他の方法でも `FileContext` の計算に負荷がかかる可能性があることに注意してください。 一部の UI 操作は同期的であり、大量の `FileContext` 要求に依存します。 たとえば、エディター タブを開く操作や **ソリューション エクスプローラー** のコンテキスト メニューを開く操作などです。 これらのアクションは、多数のビルド コンテキスト型の要求を行います。
 
-## <a name="file-context-related-apis"></a>ファイルコンテキスト関連の Api
+## <a name="file-context-related-apis"></a>ファイル コンテキストに関連する API
 
-- <xref:Microsoft.VisualStudio.Workspace.FileContext> データとメタデータを保持します。
-- <xref:Microsoft.VisualStudio.Workspace.IFileContextProvider><xref:Microsoft.VisualStudio.Workspace.IFileContextProvider`1>ファイルコンテキストを作成します。
-- <xref:Microsoft.VisualStudio.Workspace.ExportFileContextProviderAttribute> ファイルコンテキストプロバイダーをエクスポートします。
-- <xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A> は、コンシューマーがファイルコンテキストを取得するために使用されます。
-- <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes> 開いているフォルダーが使用するビルドコンテキストの種類を定義します。
+- <xref:Microsoft.VisualStudio.Workspace.FileContext> は、データとメタデータを保持します。
+- <xref:Microsoft.VisualStudio.Workspace.IFileContextProvider> と <xref:Microsoft.VisualStudio.Workspace.IFileContextProvider`1> は、ファイル コンテキストを作成します。
+- <xref:Microsoft.VisualStudio.Workspace.ExportFileContextProviderAttribute> は、ファイル コンテキスト プロバイダーをエクスポートします。
+- <xref:Microsoft.VisualStudio.Workspace.IWorkspace.GetFileContextsAsync%2A> は、ファイル コンテキストを取得するためにコンシューマーで使用されます。
+- <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes> は、[フォルダーを開く] で使用するビルド コンテキスト型を定義します。
 
-## <a name="file-context-actions"></a>ファイルコンテキストアクション
+## <a name="file-context-actions"></a>ファイル コンテキスト アクション
 
-`FileContext`自体はいくつかのファイルに関するデータにすぎませんが、は <xref:Microsoft.VisualStudio.Workspace.IFileContextAction> そのデータを表現して操作する方法です。 `IFileContextAction` は柔軟に使用できます。 最も一般的な2つのケースは、ビルドとデバッグです。
+`FileContext` 自体は一部のファイルに関するデータにすぎませんが、<xref:Microsoft.VisualStudio.Workspace.IFileContextAction> はそのデータを表現して操作するための方法です。 `IFileContextAction` は柔軟に使用できます。 最も一般的な 2 つのケースはビルドとデバッグです。
 
 ## <a name="reporting-progress"></a>進行状況を報告する
 
-<xref:Microsoft.VisualStudio.Workspace.IFileContextActionBase.ExecuteAsync%2A>メソッドは渡され `IProgress<IFileContextActionProgressUpdate>` ますが、引数をその型として使用することはできません。 `IFileContextActionProgressUpdate` は空のインターフェイスであり、を呼び出すと `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` スローされる可能性があり `NotImplementedException` ます。 代わりに、では、 `IFileContextAction` シナリオに応じて、引数を別の型にキャストする必要があります。
+<xref:Microsoft.VisualStudio.Workspace.IFileContextActionBase.ExecuteAsync%2A> メソッドによって `IProgress<IFileContextActionProgressUpdate>` が渡されますが、引数をその型として使用することはできません。 `IFileContextActionProgressUpdate` は空のインターフェイスであり、`IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` を呼び出すと `NotImplementedException` がスローされる場合があります。 代わりに、`IFileContextAction` がシナリオに応じて引数を別の型にキャストする必要があります。
 
-Visual Studio によって提供される型の詳細については、各シナリオのドキュメントを参照してください。
+Visual Studio で提供される型については、各シナリオのドキュメントを参照してください。
 
-## <a name="file-context-action-related-apis"></a>ファイルコンテキストアクション関連 Api
+## <a name="file-context-action-related-apis"></a>ファイル コンテキスト アクションに関連する API
 
-- <xref:Microsoft.VisualStudio.Workspace.IFileContextAction> に基づいていくつかの動作を実行 `FileContext` します。
-- <xref:Microsoft.VisualStudio.Workspace.IFileContextActionProvider> のインスタンスを作成 `IFileContextAction` します。
-- <xref:Microsoft.VisualStudio.Workspace.ExportFileContextActionProviderAttribute> 型をエクスポート `IWorkspaceProviderFactory<IFileContextActionProvider>` します。
+- <xref:Microsoft.VisualStudio.Workspace.IFileContextAction> は、`FileContext` に基づいて動作を実行します。
+- <xref:Microsoft.VisualStudio.Workspace.IFileContextActionProvider> は、`IFileContextAction` のインスタンスを作成します。
+- <xref:Microsoft.VisualStudio.Workspace.ExportFileContextActionProviderAttribute> は、`IWorkspaceProviderFactory<IFileContextActionProvider>` 型をエクスポートします。
 
 ## <a name="file-watching"></a>ファイルの監視
 
-ワークスペースは、ファイルの変更通知をリッスンし、via を提供し <xref:Microsoft.VisualStudio.Workspace.IFileWatcherService> <xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetFileWatcherService%2A> ます。 "ExcludedItems" 設定に一致するファイルは、ファイル通知イベントを生成しません。 イベント間のしきい値は、通知の簡略化と重複除去に使用されます。 ファイルの変更に対処する必要がある場合は、このサービスをサブスクライブする必要があります。
+ワークスペースは、ファイルの変更通知をリッスンし、<xref:Microsoft.VisualStudio.Workspace.WorkspaceServiceHelper.GetFileWatcherService%2A> を通じて <xref:Microsoft.VisualStudio.Workspace.IFileWatcherService> を提供します。 "ExcludedItems" 設定が一致するファイルは、ファイル通知イベントを生成しません。 イベント間のしきい値は、通知の簡略化と重複の削減に使用されます。 ファイルの変更に対処する必要がある場合は、このサービスをサブスクライブしてください。
 
 >[!TIP]
->ワークスペースの [インデックスサービス](workspace-indexing.md) は、既定でファイルイベントをサブスクライブします。 ファイルの追加と変更により、関連 `IFileScanner` するイベントがそのファイルの新しいデータに対して呼び出されます。 ファイルの削除によってインデックス付きデータが削除されます。 ファイル監視サービスに対してをサブスクライブする必要はありません `IFileScanner` 。
+>ワークスペースの[インデックス作成サービス](workspace-indexing.md)では、既定でファイル イベントをサブスクライブします。 ファイルの追加と変更により、関連する `IFileScanner` イベントがそのファイルの新しいデータに対して呼び出されます。 ファイルの削除により、インデックス付きデータが削除されます。 ファイル監視サービスに対して `IFileScanner` をサブスクライブする必要はありません。
 
 ## <a name="next-steps"></a>次のステップ
 
-* [インデックス作成](workspace-indexing.md) -ワークスペースのインデックス作成は、ワークスペースに関する情報を収集して保持します。
-* [ワークスペース-ワーク](workspaces.md) スペースの概念と設定のストレージを確認します。
+* [インデックス作成](workspace-indexing.md)ワークスペースのインデックス作成では、ワークスペースに関する情報を収集して保持します。
+* [ワークスペース](workspaces.md) - ワークスペースの概念と設定の格納について確認します。

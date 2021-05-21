@@ -14,7 +14,7 @@ ms.workload:
 - unity
 ms.openlocfilehash: f11c5c1407d16d7a82a9d8d24e6a8dd3a04e57eb
 ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/03/2021
 ms.locfileid: "101683372"
@@ -24,73 +24,73 @@ ms.locfileid: "101683372"
 Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="2920"></a>2.9.2.0
-リリース日2021年3月2日
+リリース日: 2021 年 3 月 2 日
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - Unity メッセージダイアログでの検索の強調表示を修正します。
+  - Unity メッセージ ダイアログでの検索の強調表示を修正しました。
 
-  - Unity プロジェクトの treeview による安定性の問題を修正した。
+  - Unity プロジェクトのツリー ビューの安定性の問題を修正しました。
 
 - **デバッグ:**
 
-  - 条件付きブレークポイントの処理を修正した。
+  - 条件付きブレークポイントの処理を修正しました。
 
 ## <a name="2910"></a>2.9.1.0
-2021年2月9日のリリース
+リリース日: 2021 年 2 月 9 日
 
 ### <a name="new-features"></a>新機能
 
 - **統合:**
 
-  - IDE から Unity テストを実行およびデバッグするためのサポートを追加しました
+  - IDE での Unity のテストの実行とデバッグのサポートを追加しました。
 
 - **評価:**
 
-  - `Active Scene`ルートゲームオブジェクトを示す [ローカル] に追加されました。
+  - ルートのゲーム オブジェクトを示す `Active Scene` を [ローカル] に追加しました。
 
-  - `this.gameObject`Unity プロジェクトで広く使用されている場合は、ローカルに追加されます。
+  - Unity プロジェクトで広く使用されていることから、`this.gameObject` を [ローカル] に追加しました。
 
-  - すべて `Children` のインスタンスにとグループを追加して、 `Components` `GameObject` すべてのオブジェクト階層を簡単に表示できるようにしました。
+  - `Children` と `Components` のグループを `GameObject` のすべてのインスタンスに追加し、すべてのオブジェクトを階層に簡単に表示できるようにしました。
 
-  - `Scene Path` `GameObject` シーン内の場所を表示するために、すべてのインスタンスに追加されます。
+  - シーン内のすべての位置を表示するために、`Scene Path` を `GameObject` のすべてのインスタンスに追加しました。
 
-  - `JobEntityBatch`ソースジェネレーターでエンティティを使用するときに、/ラムダのサポートが追加されました。
+  - ソース ジェネレーターでエンティティを使用するときの `JobEntityBatch`/Lambdas のサポートを追加しました。
 
-  - 大きな配列を表示するためのサポートの強化 (インデックスバケットを使用)。
+  - (インデックス バケットを使用して) 大きな配列を表示するためのサポートを強化しました。
 
-  - 2019.4 API の不足している Unity メッセージを追加しました。
+  - 2019.4 API で不足している Unity メッセージを追加しました。
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - Unity メッセージダイアログの安定性に関する問題を修正した
+  - Unity メッセージ ダイアログの安定性の問題を修正しました。
 
-  - ENU 以外の言語のさまざまな UI の問題を修正した。
+  - ENU 以外の言語のさまざまな UI の問題を修正しました。
 
-  - 診断に関する安定性の問題を修正 [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) した。
+  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) 診断に関する安定性の問題を修正しました。
 
 - **デバッグ:**
 
-  - メソッドを使用するときの VM の切断に関する問題を修正 `Trace` します。
+  - `Trace` メソッドを使用するときに VM が切断される問題を修正しました。
 
 - **評価:**
 
   - 例外をスローする古いプロパティのフィルター処理を修正しました。
 
 ## <a name="2900"></a>2.9.0.0
-2021年1月20日にリリース
+リリース日: 2021 年 1 月 20 日
 
 ### <a name="new-features"></a>新機能
 
 - **統合:**
 
-  - 、、およびの各ファイルのサポートを追加しました `raytrace shaders` `UXML` `USS` 。
+  - `raytrace shaders`、`UXML`、および `USS` のファイルのサポートを追加しました。
 
-  - Unity messages API (コルーチンとして使用されるすべてのメソッド) が更新されました。
+  - (コルーチンとして使用されているすべてのメソッドの) Unity メッセージ API を更新しました。
 
   - Android SDK 検出を更新しました。
 
@@ -98,70 +98,70 @@ Visual Studio Tools for Unity の変更ログです。
 
 - **統合:**
 
-  - [`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md)診断を修正し、コルーチンおよびに対して間違った警告を出し `AssetPostprocessor.OnAssignMaterialModel` ます。
+  - コルーチンと `AssetPostprocessor.OnAssignMaterialModel` に対して間違った警告を出す、[`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) 診断を修正しました。
 
 ## <a name="2840"></a>2.8.4.0
-リリース日は2020年12月15日
+リリース日: 2020 年 12 月 15 日
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - Unity イベント作成ウィザードを終了するときの信頼性の問題を修正しました。
+  - Unity イベント作成ウィザードを閉じる際の信頼性の問題を修正しました。
 
 ## <a name="2830"></a>2.8.3.0
-リリース日2020年11月10日
+リリース日: 2020 年 11 月 10 日
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **デバッガー:**
 
-  - ソリューションに VSTU プロジェクトが存在しない場合でも Unity へのアタッチを修正します。
+  - ソリューションに VSTU プロジェクトが存在しない場合の Unity へのアタッチを修正しました。
 
 ## <a name="2820"></a>2.8.2.0
-リリース日-2020 年10月27日
+リリース日: 2020 年 10 月 27 日
 
 ### <a name="new-features"></a>新機能
 
 - **統合:**
 
-  - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) `Component` だけでなく、から継承されたすべてに適用される診断機能が向上しました `MonoBehaviour` 。
+  - `MonoBehaviour` だけでなく `Component` を継承するすべてに適用されるように、[`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) 診断を改善しました。
 
 ## <a name="2810"></a>2.8.1.0
-リリース日-2020 年10月13日
+リリース日: 2020 年 10 月 13 日
 
 ### <a name="new-features"></a>新機能
 
 - **評価:**
 
-  - 呼び出しによる暗黙的な変換のサポートが追加されました。 以前は、エバリュエーターに厳密な型チェックが適用され、警告メッセージが生成されていま `Failed to find a match for method([parameters...])` した。
+  - 呼び出しによる暗黙的な変換のサポートが追加されました。 以前は、エバリュエーターによって厳密な型チェックが適用され、`Failed to find a match for method([parameters...])` 警告メッセージが生成されていました。
 
 - **統合:**
 
-  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) 診断が追加されました。 、、、など `System.Reflection` のパフォーマンスクリティカルなメッセージでは、機能を使用しないでください `Update` `FixedUpdate` `LateUpdate` `OnGUI` 。
+  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) 診断が追加されました。 `Update`、`FixedUpdate`、`LateUpdate`、または `OnGUI` のようなパフォーマンスが重要なメッセージでは、`System.Reflection` 機能を使用しないでください。
 
-  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) すべての静的メソッドがサポートされるようになり、suppressors が改善されました `AssetPostprocessor` 。
+  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) および [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) サプレッサーを改善し、すべての `AssetPostprocessor` 静的メソッドがサポートされるようになりました。
 
-  - `CS8618` 用の [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) サプレッサーが追加されました。 `C# 8.0` null 許容の参照型と null 非許容の参照型について説明します。 から継承する型の初期化検出はサポートされて `UnityEngine.Object` いないため、エラーが発生します。
+  - `CS8618` 用の [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) サプレッサーが追加されました。 `C# 8.0` によって、null 許容参照型と null 非許容参照型が導入されます。 `UnityEngine.Object` から継承する型の初期化検出はサポートされず、エラーが発生します。
 
-  - Unity 2019. x と 2020. x + の両方に同じプレーヤーと asmdef プロジェクト生成メカニズムを使用するようになりました。
+  - 現在、Unity 2019.x と 2020.x+ の両方で、同じプレーヤーおよび asmdef プロジェクト生成メカニズムを使用しています。
   
-  - ウィザードを使用して Unity メッセージを生成するときのユーザーエクスペリエンスが向上しました。
+  - ウィザードを使用して Unity メッセージを生成するときのユーザー エクスペリエンスが向上しました。
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - コメント内のメッセージの予期しない完了を修正します。
+  - コメント内のメッセージが予期せずに完了することを修正しました。
 
 ## <a name="2800"></a>2.8.0.0 
-2020年9月14日にリリース
+リリース日: 2020 年 9 月 14 日
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - Unity 2019. x でのプレーヤープロジェクトの生成を修正します。
+  - Unity 2019.x でのプレーヤー プロジェクト生成を修正しました。
 
 ## <a name="2710"></a>2.7.1.0
 リリース日: 2020 年 8 月 5 日

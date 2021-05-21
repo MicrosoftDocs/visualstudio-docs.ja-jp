@@ -1,6 +1,6 @@
 ---
-description: 型引数の配列を指定して、フィールドインスタンスを構築します。
-title: 'IDebugGenericFieldDefinition:: 構築 Tインスタンス化 |Microsoft Docs'
+description: 型引数の配列を指定して、フィールド インスタンスを構築します。
+title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4565077357678725a6601ac14c48cfce21ec9101
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105063436"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-型引数の配列を指定して、フィールドインスタンスを構築します。
+型引数の配列を指定して、フィールド インスタンスを構築します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,19 +45,19 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>パラメーター
 `cArgs`\
-から配列内の引数の数 `ppArgs` 。
+[入力] `ppArgs` 配列内の引数の数。
 
 `ppArgs`\
-から型引数を格納している配列。 型引数は、閉じられた型 (非ジェネリックまたは完全にインスタンス化されたジェネリック) である必要があります。
+[入力] 型引数が格納されている配列。 型引数は終了型 (非ジェネリック、または完全にインスタンス化されたジェネリック) である必要があります。
 
 `ppConstructedField`\
-入出力新しいフィールドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) インターフェイスを返します。
+[出力] 新しいフィールドを表す [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) インターフェイスを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 制約はチェックされません。
+## <a name="remarks"></a>解説
+ 制約はチェックされません
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

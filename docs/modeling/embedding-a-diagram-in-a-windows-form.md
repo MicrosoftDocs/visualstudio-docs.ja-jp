@@ -1,6 +1,6 @@
 ---
 title: Windows フォームでのダイアグラムの埋め込み
-description: Windows コントロールに DSL 図を埋め込む方法について説明します。これは、Visual Studio ウィンドウに表示されます。
+description: Visual Studio ウィンドウに表示される Windows コントロールに DSL 図を埋め込む方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,26 +11,26 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 084de14a9a73e8f9f884c31da1e1ef9a5d8496b3
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99935119"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Windows フォームにダイアグラムを埋め込む
 
-Windows コントロールに DSL 図を埋め込むことができます。これは、Visual Studio ウィンドウに表示されます。
+Visual Studio ウィンドウに表示される Windows コントロールに DSL 図を埋め込むことができます。
 
 ## <a name="embed-a-dsl-diagram-in-a-windows-control"></a>Windows コントロールに DSL 図を埋め込む
 
-1. 新しい **ユーザーコントロール** ファイルを DslPackage プロジェクトに追加します。
+1. 新しい **ユーザー コントロール** ファイルを DslPackage プロジェクトに追加します。
 
-2. パネルコントロールをユーザーコントロールに追加します。 このパネルには DSL の図が表示されます。
+2. Panel コントロールをユーザー コントロールに追加します。 このパネルに、DSL の図が表示されます。
 
      必要なその他のコントロールを追加します。
 
-     コントロールのアンカープロパティを設定します。
+     コントロールのアンカー プロパティを設定します。
 
-3. ソリューションエクスプローラーで、ユーザーコントロールファイルを右クリックし、[ **コードの表示**] をクリックします。 次のコンストラクターと変数をコードに追加します。
+3. ソリューション エクスプローラーでユーザー コントロール ファイルを右クリックし、 **[コードの表示]** をクリックします。 次のコンストラクターと変数をコードに追加します。
 
     ```csharp
     internal UserControl1(MyDSLDocView docView, Control content)
@@ -42,7 +42,7 @@ Windows コントロールに DSL 図を埋め込むことができます。こ�
     private MyDSLDocView docView;
     ```
 
-4. 次の内容を使用して、DslPackage プロジェクトに新しいファイルを追加します。
+4. 次の内容の新しいファイルを、DslPackage プロジェクトに追加します。
 
     ```csharp
     using System.Windows.Forms;
@@ -65,13 +65,13 @@ Windows コントロールに DSL 図を埋め込むことができます。こ�
     } } } }
     ```
 
-5. DSL をテストするには、 **F5** キーを押してサンプルモデルファイルを開きます。 この図はコントロール内に表示されます。 ツールボックスとその他の機能は正常に動作します。
+5. DSL をテストするために、**F5** キーを押してサンプル モデル ファイルを開きます。 コントロール内に図が表示されます。 ツールボックスとその他の機能は、通常どおり動作します。
 
-## <a name="update-the-form-using-store-events"></a>ストアイベントを使用してフォームを更新する
+## <a name="update-the-form-using-store-events"></a>ストア イベントを使用してフォームを更新する
 
-1. フォームデザイナーで、という名前の **リストボックス** を追加 `listBox1` します。 これにより、モデル内の要素の一覧が表示されます。 これは、 *ストアイベント* を使用してモデルと同期されます。 詳細については、「 [イベントハンドラーによって変更がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)」を参照してください。
+1. フォーム デザイナーで、`listBox1` という名前の **ListBox** を追加します。 これにより、モデル内の要素の一覧が表示されます。 それは、*ストア イベント* を使用してモデルと同期されます。 詳細については、「[イベント ハンドラーによって変更がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)」を参照してください。
 
-2. カスタムコードファイルで、DocView クラスにさらにメソッドをオーバーライドします。
+2. カスタム コード ファイルで、他のメソッドを DocView クラスにオーバーライドします。
 
     ```csharp
     partial class MyDSLDocView
@@ -112,7 +112,7 @@ Windows コントロールに DSL 図を埋め込むことができます。こ�
      }
     ```
 
-3. ユーザーコントロールの背後にあるコードで、追加および削除された要素をリッスンするメソッドを挿入します。
+3. ユーザー コントロールの分離コードに、追加および削除された要素をリッスンするメソッドを挿入します。
 
     ```csharp
     public partial class UserControl1 : UserControl { ...
@@ -139,11 +139,11 @@ Windows コントロールに DSL 図を埋め込むことができます。こ�
     }
     ```
 
-4. DSL をテストするには、 **F5** キーを押し、Visual Studio の実験用インスタンスでサンプルモデルファイルを開きます。
+4. DSL をテストするために、**F5** キーを押し、Visual Studio の実験用インスタンスでサンプル モデル ファイルを開きます。
 
-     リストボックスには、モデル内の要素の一覧が表示され、追加または削除した後、[元に戻す] と [やり直し] の後に適切であることがわかります。
+     リスト ボックスには、モデル内の要素の一覧が表示され、追加、削除、元に戻す、およびやり直す操作を行った後でも適切であることに注目してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [プログラム コードにおけるモデル内の移動およびモデルの更新](../modeling/navigating-and-updating-a-model-in-program-code.md)
 - [ドメイン固有言語をカスタマイズするコードの記述](../modeling/writing-code-to-customise-a-domain-specific-language.md)

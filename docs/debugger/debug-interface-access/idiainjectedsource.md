@@ -1,7 +1,8 @@
 ---
-title: IDiaInjectedSource |Microsoft Docs
+description: DIA データ ソースに保存されている挿入されたソース コードにアクセスします。
+title: IDiaInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,46 +10,46 @@ helpviewer_keywords:
 ms.assetid: 75192c5c-812d-4675-9dc5-4c2cff3ba503
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 994f454372883f2516d1eab03bf1152693969b16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7ea02d5312aea0bdf5e38d5a1f54de546860edfd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743304"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634400"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
-DIA データソースに格納されている挿入されたソースコードにアクセスします。
+DIA データ ソースに保存されている挿入されたソース コードにアクセスします。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaInjectedSource : IUnknown
+IDiaInjectedSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaInjectedSource` のメソッドを示しています。
+次の表に、`IDiaInjectedSource` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
-|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|ソースコードのバイトから計算された巡回冗長検査 (CRC) を取得します。|
+|[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|ソース コードのバイトから計算された巡回冗長検査 (CRC) を取得します。|
 |[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|コードのバイト数を取得します。|
 |[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|ソースのファイル名を取得します。|
-|[IDiaInjectedSource::get_objectFilename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|ソースがコンパイルされたオブジェクトファイルの名前を取得します。|
-|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|ファイル以外のソースコードに指定された名前を取得します。つまり、挿入されたコードです。|
-|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|使用されるソース圧縮のインジケーターを取得します。|
-|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|ソースコードのバイトを取得します。|
+|[IDiaInjectedSource::get_objectFilename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|ソースのコンパイル先のオブジェクト ファイル名を取得します。|
+|[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|ファイル以外のソース コード、つまり挿入されたコードに付けられた名前を取得します。|
+|[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|使用されているソース圧縮のインジケーターを取得します。|
+|[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|ソース コードのバイト数を取得します。|
 
-## <a name="remarks"></a>Remarks
-挿入されたソースは、コンパイル時に挿入されるテキストです。 これは、で `#include` プリプロセッサを使用C++しているわけではありません。
+## <a name="remarks"></a>解説
+挿入されたソースは、コンパイル時に挿入されたテキストです。 これは、C++ で使用されるプリプロセッサの `#include` を意味するわけではありません。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md)または[IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md)メソッドを呼び出します。 @No__t_1 インターフェイスを取得する例については、 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)インターフェイスを参照してください。
+このインターフェイスを取得するには、[IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) または [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) メソッドを呼び出します。 `IDiaInjectedSource` インターフェイスを取得する例については、[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) インターフェイスを参照してください。
 
 ## <a name="example"></a>例
-この例では、`IDiaInjectedSource` インターフェイスから使用可能なデータを表示します。 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)インターフェイスを使用した別の方法については、 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)インターフェイスの例を参照してください。
+この例では、`IDiaInjectedSource` インターフェイスから使用可能なデータを表示します。 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) インターフェイスを使用した別の方法については、[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) インターフェイスの例を参照してください。
 
 ```C++
 void PrintInjectedSource(IDiaInjectedSource* pSource)
@@ -112,12 +113,12 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

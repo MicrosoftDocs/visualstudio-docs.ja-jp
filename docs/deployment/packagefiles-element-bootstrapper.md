@@ -1,6 +1,6 @@
 ---
-title: '&lt;PackageFiles &gt; 要素 (ブートストラップ) |Microsoft Docs'
-description: PackageFiles 要素について説明します。この要素には、コマンド要素の結果として実行されるインストールパッケージを定義する PackageFile 要素が含まれています。
+title: '&lt;PackageFiles&gt; 要素 (ブートストラップ) | Microsoft Docs'
+description: PackageFiles 要素について説明します。この要素には、Command 要素の結果として実行されるインストール パッケージを定義する PackageFile 要素が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,13 +19,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 0fbf76fec604819d7944a7b54fa4b2421e37c111
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99925364"
 ---
-# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles &gt; 要素 (ブートストラップ)
-要素には、要素 `PackageFiles` `PackageFile` の結果として実行されるインストールパッケージを定義する要素が含まれ `Command` ます。
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt; 要素 (ブートストラップ)
+`PackageFiles` 要素には、`Command` 要素の結果として実行されるインストール パッケージを定義する `PackageFile` 要素が含まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -48,20 +48,20 @@ ms.locfileid: "99925364"
 
 |属性|説明|
 |---------------|-----------------|
-|`CopyAllPackageFiles`|任意。 に設定すると、 `false` インストーラーは要素から参照されるファイルのみをダウンロードし `Command` ます。 に設定すると `true` 、すべてのファイルがダウンロードされます。<br /><br /> に設定すると、インストーラーは、 `IfNotHomesite` がに設定されている場合と同じように動作し `False` `ComponentsLocation` `HomeSite` ます。それ以外の場合は、と同じように動作し `True` ます。 この設定は、ブートストラップ自体のパッケージが HomeSite シナリオで独自の動作を実行することを許可するのに役立ちます。<br /><br /> 既定値は、`true` です。|
+|`CopyAllPackageFiles`|省略可能。 `false` に設定すると、インストーラーでは `Command` 要素から参照されるファイルのみがダウンロードされます。 `true` に設定すると、すべてのファイルがダウンロードされます。<br /><br /> `IfNotHomesite` に設定したときに、`ComponentsLocation` が `HomeSite` に設定されている場合、インストーラーの動作は `False` に設定されている場合と同じになります。それ以外の場合は、`True` と同じように動作します。 この設定は、ブートストラップ自体のパッケージが HomeSite シナリオで独自の動作を実行できるようにするのに役立ちます。<br /><br /> 既定では、 `true`です。|
 
 ## <a name="packagefile"></a>PackageFile
- 要素は `PackageFile` 要素の子です `PackageFiles` 。 要素には、 `PackageFiles` 少なくとも1つの要素が必要 `PackageFile` です。
+ `PackageFile` 要素は、`PackageFiles` 要素の子です。 `PackageFiles` 要素には `PackageFile` 要素が少なくとも 1 つ必要です。
 
- `PackageFile` には次の属性があります。
+ `PackageFile` には以下の属性があります。
 
 | 属性 | 説明 |
 |---------------| - |
-| `Name` | 必須。 パッケージ ファイルの名前。 これは、 `Command` パッケージがインストールされる条件を定義するときに要素が参照する名前です。 この値は、テーブルのキーとしても使用され `Strings` ます。この名前は、などのツールが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] パッケージの記述に使用するローカライズされた名前を取得するために使用されます。 |
-| `HomeSite` | 任意。 リモートサーバー上のパッケージの場所 (インストーラーに含まれていない場合)。 |
-| `CopyOnBuild` | 任意。 ブートストラップがビルド時にパッケージファイルをディスクにコピーするかどうかを指定します。 既定値は true です。 |
-| `PublicKey` | パッケージの証明書署名者の暗号化された公開キー。 を使用する場合は必須。 `HomeSite` それ以外の場合は省略可能。 |
-| `Hash` | 任意。 パッケージファイルの SHA1 ハッシュ。 これは、インストール時にファイルの整合性を確認するために使用されます。 パッケージファイルから同じハッシュを計算できない場合、パッケージはインストールされません。 |
+| `Name` | 必須。 パッケージ ファイルの名前。 これは、パッケージがインストールされる条件を定義するときに `Command` 要素によって参照される名前です。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] などのツールでパッケージを記述するために使用されるローカライズされた名前を取得する `Strings` テーブルのキーとしても使用されます。 |
+| `HomeSite` | 省略可能。 リモート サーバー上のパッケージの場所 (インストーラーに含まれていない場合)。 |
+| `CopyOnBuild` | 省略可能。 ビルド時にブートストラップによるパッケージ ファイルのディスクへのコピーが必要かどうかを指定します。 既定値は true です。 |
+| `PublicKey` | パッケージの証明書署名者の暗号化された公開キー。 `HomeSite` を使用する場合は必須。それ以外の場合は省略可能。 |
+| `Hash` | 省略可能。 パッケージ ファイルの SHA1 ハッシュ。 これは、インストール時にファイルの整合性を確認するために使用されます。 パッケージ ファイルから同じハッシュを計算できない場合、パッケージはインストールされません。 |
 
 ## <a name="example"></a>例
  次のコード例では、.NET Framework 再頒布可能パッケージとその依存関係 (Windows インストーラーなど) のパッケージを定義します。
@@ -78,4 +78,4 @@ ms.locfileid: "99925364"
 ## <a name="see-also"></a>関連項目
 - [\<Product> 要素](../deployment/product-element-bootstrapper.md)
 - [\<Package> 要素](../deployment/package-element-bootstrapper.md)
-- [製品およびパッケージスキーマリファレンス](../deployment/product-and-package-schema-reference.md)
+- [製品およびパッケージ スキーマ リファレンス](../deployment/product-and-package-schema-reference.md)

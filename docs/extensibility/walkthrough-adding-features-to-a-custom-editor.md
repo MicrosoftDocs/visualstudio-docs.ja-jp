@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: カスタムエディターへの機能の追加 |Microsoft Docs'
-description: このチュートリアルを使用してエディターを作成した後に、カスタムエディターに機能を追加する方法について説明します。
+title: 'チュートリアル: カスタム エディターに機能を追加する | Microsoft Docs'
+description: このチュートリアルを使用してエディターを作成した後に、カスタム エディターに機能を追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,88 +14,88 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: a19808e76714e0435bd5bb638aea0fbc7eaba929
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062058"
 ---
-# <a name="walkthrough-add-features-to-a-custom-editor"></a>チュートリアル: カスタムエディターへの機能の追加
-カスタムエディターを作成したら、それにさらに機能を追加できます。
+# <a name="walkthrough-add-features-to-a-custom-editor"></a>チュートリアル: カスタム エディターに機能を追加する
+カスタム エディターを作成した後に、機能を追加することができます。
 
 ## <a name="to-create-an-editor-for-a-vspackage"></a>VSPackage のエディターを作成するには
 
-1. Visual Studio パッケージプロジェクトテンプレートを使用して、カスタムエディターを作成します。
+1. Visual Studio パッケージ プロジェクト テンプレートを使用してカスタム エディターを作成します。
 
-     詳細については、「 [チュートリアル: カスタムエディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)」を参照してください。
+     詳細については、「[チュートリアル: カスタム エディターを作成する](../extensibility/walkthrough-creating-a-custom-editor.md)」を参照してください。
 
-2. エディターで1つのビューまたは複数のビューをサポートするかどうかを決定します。
+2. エディターで 1 つのビューと複数のビューのどちらをサポートするかを決定します。
 
-     [ **新しいウィンドウ** ] コマンドをサポートするエディター、またはフォームビューとコードビューがあるエディターでは、個別のドキュメントデータオブジェクトとドキュメントビューオブジェクトが必要です。 1つのビューだけをサポートするエディターでは、ドキュメントデータオブジェクトとドキュメントビューオブジェクトを同じオブジェクトに実装できます。
+     **[新しいウィンドウ]** コマンドをサポートするエディター、またはフォーム ビューとコード ビューがあるエディターには、ドキュメント データ オブジェクトとドキュメント ビュー オブジェクトを別々に用意する必要があります。 1 つのビューのみをサポートするエディターの場合、ドキュメント データ オブジェクトとドキュメント ビュー オブジェクトを同じオブジェクトに実装できます。
 
-     複数のビューの例については、「 [複数のドキュメントビューのサポート](../extensibility/supporting-multiple-document-views.md)」を参照してください。
+     複数のビューの例については、「[複数のドキュメント ビューのサポート](../extensibility/supporting-multiple-document-views.md)」を参照してください。
 
-3. インターフェイスを設定して、エディターファクトリを実装し <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> ます。
+3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> インターフェイスを設定して、エディター ファクトリを実装します。
 
-     詳細については、「 [エディターファクトリ](/previous-versions/visualstudio/visual-studio-2015/extensibility/editor-factories?preserve-view=true&view=vs-2015)」を参照してください。
+     詳細については、「[エディター ファクトリ](/previous-versions/visualstudio/visual-studio-2015/extensibility/editor-factories?preserve-view=true&view=vs-2015)」を参照してください。
 
-4. エディターでドキュメントビューのオブジェクトウィンドウを管理するために、埋め込み先でのアクティブ化または簡略化された埋め込みを使用するかどうかを決定します。
+4. エディターで、ドキュメント ビュー オブジェクト ウィンドウを管理するためにインプレース アクティブ化と簡易埋め込みのどちらを使用するかを決定します。
 
-     簡略化された埋め込みエディターウィンドウは標準のドキュメントビューをホストし、インプレースアクティベーションエディターウィンドウは ActiveX コントロールまたはその他のアクティブなオブジェクトをドキュメントビューとしてホストします。 詳細については、「簡略化された [埋め込み](../extensibility/simplified-embedding.md) と [インプレースアクティブ化](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015)」を参照してください。
+     簡易埋め込みエディター ウィンドウは標準のドキュメント ビューをホストし、インプレース アクティブ化エディター ウィンドウは ActiveX コントロールまたはその他のアクティブ オブジェクトをドキュメント ビューとしてホストします。 詳細については、「[簡易埋め込み](../extensibility/simplified-embedding.md)」と「[インプレース アクティブ化](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015)」を参照してください。
 
-5. <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>コマンドを処理するインターフェイスを実装します。
+5. コマンドを処理する <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> インターフェイスを実装します。
 
-6. ドキュメントの永続化と外部ファイルの変更への応答を提供します。
+6. ドキュメントの保持機能と外部ファイルの変更への応答機能を用意します。
 
-    1. ファイルを永続化するには、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> エディターのドキュメントデータオブジェクトにおよびを実装します。
+    1. ファイルを保持するには、エディターのドキュメント データ オブジェクトに <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> と <xref:Microsoft.VisualStudio.Shell.Interop.IPersistFileFormat> を実装します。
 
-    2. 外部ファイルの変更に応答するには、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> エディターのドキュメントデータオブジェクトにおよびを実装します。
+    2. 外部ファイルの変更に応答するには、エディターのドキュメント データ オブジェクトに <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> を実装します。
 
         > [!NOTE]
-        > へ `QueryService` の <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> ポインターを取得するには、を呼び出し `IVsFileChangeEx` ます。
+        > <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> に対して `QueryService` を呼び出し、`IVsFileChangeEx` へのポインターを取得します。
 
-7. ドキュメントの編集イベントをソースコード管理で調整します。 次の手順に従います。
+7. ソース コード管理を使用してドキュメント編集イベントを調整します。 次の手順に従います。
 
-    1. でを呼び出して、へのポインターを取得 `IVsQueryEditQuerySave2` `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> します。
+    1. <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> に対して `QueryService` を呼び出し、`IVsQueryEditQuerySave2` へのポインターを取得します。
 
-    2. 最初の編集イベントが発生したときに、メソッドを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> ます。
+    2. 最初の編集イベントが発生したら、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QueryEditFiles%2A> メソッドを呼び出します。
 
-         このメソッドは、ファイルがまだチェックアウトされていない場合にチェックアウトするようにユーザーに求めます。"ファイルがチェックアウトされていません" 状態を処理して、エラーを回避してください。
+         このメソッドは、ファイルがまだチェックアウトされていない場合にファイルをチェックアウトするようにユーザーに促すものです。エラーを回避するために、必ず "ファイルがチェックアウトされていない" 条件を処理してください。
 
-    3. 同様に、ファイルを保存する前に、メソッドを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> ます。
+    3. 同様に、ファイルを保存する前に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2.QuerySaveFile%2A> メソッドを呼び出します。
 
-         このメソッドは、ファイルが保存されていない場合、または最後の保存以降に変更された場合に、ファイルを保存するようにユーザーに要求します。
+         このメソッドは、ファイルが保存されていない場合、または最後の保存以降に変更された場合に、ファイルを保存するようにユーザーに促すものです。
 
-8. [ **プロパティ** ] ウィンドウを有効にすると、エディターで選択したテキストのプロパティを表示できます。 次の手順に従います。
+8. エディターで選択したテキストのプロパティを表示するには、 **[プロパティ]** ウィンドウを有効にします。 次の手順に従います。
 
-    1. テキスト選択が変更されるたびに <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> を呼び出し、の実装を渡し <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> ます。
+    1. テキストの選択が変更されるたびに <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> を呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> の実装を渡します。
 
-    2. `QueryService`サービスで <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> を呼び出して、へのポインターを取得 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> します。
+    2. <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> サービスに対して `QueryService` を呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> へのポインターを取得します。
 
-9. ユーザーがエディターと **ツールボックス** の間、または外部エディター (Microsoft Word など) と **ツールボックス** の間で項目をドラッグアンドドロップできるようにします。 次の手順に従います。
+9. ユーザーがエディターと **ツールボックス** の間、または外部エディター (Microsoft Word など) と **ツールボックス** の間で項目をドラッグ アンド ドロップできるようにします。 次の手順に従います。
 
-    1. エディター `IDropTarget` がドロップ先であることを IDE に警告するには、エディターでを実装します。
+    1. エディターに `IDropTarget` を実装し、エディターがドロップ ターゲットであることを IDE に警告します。
 
-    2. エディターが <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> **ツールボックス** 内の項目を有効または無効にできるように、ビューにインターフェイスを実装します。
+    2. エディターで **ツールボックス** の項目を有効または無効にできるように、ビューに <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolboxUser> インターフェイスを実装します。
 
-    3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> およびインターフェイスへのポインターを取得するには、を実装し、サービスに対してを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> ます。
+    3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.ResetDefaults%2A> を実装し、<xref:Microsoft.VisualStudio.Shell.Interop.SVsToolbox> サービスに対して `QueryService` を呼び出し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox2> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolbox3> のインターフェイスへのポインターを取得します。
 
-         これらの手順により、VSPackage で **ツールボックス** に新しい項目を追加できるようになります。
+         以上の手順で、VSPackage から新しい項目を **ツールボックス** に追加できるようになります。
 
-10. エディターに他のオプション機能を使用するかどうかを決定します。
+10. エディターに他のオプション機能が必要かどうかを決定します。
 
-    - エディターで検索と置換のコマンドをサポートする場合は、を実装 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> します。
+    - エディターで検索と置換のコマンドをサポートする場合は、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> を実装します。
 
-    - エディターでドキュメントアウトラインツールウィンドウを使用する場合は、を実装 `IVsDocOutlineProvider` します。
+    - エディターでドキュメント アウトライン ツール ウィンドウを使用する場合は、`IVsDocOutlineProvider` を実装します。
 
-    - エディターでステータスバーを使用する場合は、を実装 <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> し、を呼び出して、 `QueryService` <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> へのポインターを取得し `IVsStatusBar` ます。
+    - エディターでステータス バーを使用する場合は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> を実装し、<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> に対して `QueryService` を呼び出し、`IVsStatusBar` へのポインターを取得します。
 
-         たとえば、エディターでは、行または列の情報、選択モード (ストリーム/ボックス)、および挿入モード (insert/上書き) を表示できます。
+         たとえば、エディターには、行と列の情報、選択モード (ストリームとボックス)、挿入モード (挿入と上書き) を表示できます。
 
-    - エディターでコマンドをサポートする場合は、 `Undo` OLE 元に戻すマネージャーモデルを使用することをお勧めします。 別の方法として、エディターで直接コマンドを処理することもでき `Undo` ます。
+    - エディターで `Undo` コマンドをサポートする場合は、OLE の元に戻すマネージャー モデルを使用することをお勧めします。 また、エディターで `Undo` コマンドを直接処理する方法もあります。
 
-11. VSPackage の Guid、メニュー、エディター、およびその他の機能を含むレジストリ情報を作成します。
+11. VSPackage、メニュー、エディター、その他の機能の GUID を含むレジストリ情報を作成します。
 
-     次に、エディターを適切に登録する方法を示すために、 *.rgs* ファイルスクリプトに記述するコードの一般的な例を示します。
+     エディターを適切に登録する方法を示すために、 *.rgs* ファイル スクリプトに配置するコードの一般的な例を次に示します。
 
     ```csharp
     NoRemove Editors
@@ -115,21 +115,21 @@ ms.locfileid: "105062058"
     }
     ```
 
-12. 状況依存のヘルプサポートを実装します。
+12. 状況依存のヘルプのサポートを実装します。
 
-     この手順では、エディターの項目に対して F1 ヘルプとダイナミックヘルプウィンドウのサポートを提供できます。 詳細については、「 [方法: エディターのコンテキストを指定する](/previous-versions/visualstudio/visual-studio-2015/extensibility/how-to-provide-context-for-editors?preserve-view=true&view=vs-2015)」を参照してください。
+     この手順を実行すると、エディター内の項目に F1 ヘルプと動的ヘルプ ウィンドウをサポートできるようになります。 詳細については、「[方法: エディターにコンテキストを提供する](/previous-versions/visualstudio/visual-studio-2015/extensibility/how-to-provide-context-for-editors?preserve-view=true&view=vs-2015)」を参照してください。
 
-13. インターフェイスを実装することによって、エディターからオートメーションオブジェクトモデルを公開し `IDispatch` ます。
+13. `IDispatch` インターフェイスを実装することで、エディターからオートメーション オブジェクト モデルを公開します。
 
      詳細については、「 [Contributing to the Automation Model](../extensibility/internals/contributing-to-the-automation-model.md)」を参照してください。
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-- エディターインスタンスは、IDE がメソッドを呼び出したときに作成され <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> ます。 エディターが複数のビューをサポートしている場合は、に `CreateEditorInstance` よってドキュメントデータとドキュメントビューオブジェクトの両方が作成されます。 ドキュメントデータオブジェクトが既に開いている場合は、null 以外の `punkDocDataExisting` 値がに渡され `IVsEditorFactory::CreateEditorInstance` ます。 エディターファクトリの実装では、既存のドキュメントデータオブジェクトに適切なインターフェイスを照会することによって互換性があるかどうかを判断する必要があります。 詳細については、「 [複数のドキュメントビューのサポート](../extensibility/supporting-multiple-document-views.md)」を参照してください。
+- エディター インスタンスは、IDE から <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> メソッドが呼び出されたときに作成されます。 エディターが複数のビューをサポートしている場合、`CreateEditorInstance` により、ドキュメント データとドキュメント ビューのオブジェクトが両方作成されます。 ドキュメント データ オブジェクトが既に開かれている場合は、null ではない `punkDocDataExisting` 値が `IVsEditorFactory::CreateEditorInstance` に渡されます。 エディター ファクトリの実装の場合、既存のドキュメント データ オブジェクトに適切なインターフェイスのクエリを実行して、互換性があるかどうかを判断する必要があります。 詳細については、「[複数のドキュメント ビューのサポート](../extensibility/supporting-multiple-document-views.md)」を参照してください。
 
-- 簡略化された埋め込み方法を使用する場合は、インターフェイスを実装し <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> ます。
+- 簡易埋め込みアプローチを使用する場合は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> インターフェイスを実装します。
 
-- インプレースライセンス認証を使用する場合は、次のインターフェイスを実装します。
+- インプレース アクティブ化を使用する場合は、次のインターフェイスを実装します。
 
    <xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>
 
@@ -138,17 +138,17 @@ ms.locfileid: "105062058"
    <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>
 
   > [!NOTE]
-  > この `IOleInPlaceComponent` インターフェイスは、OLE 2 メニューのマージを避けるために使用されます。
+  > `IOleInPlaceComponent` インターフェイスは、OLE 2 メニューのマージを回避するために使用されます。
 
-   の `IOleCommandTarget` 実装では、 **切り取り**、 **コピー**、 **貼り付け** などのコマンドが処理されます。 を実装する場合 `IOleCommandTarget` 、エディターが独自のコマンドメニュー構造を定義するために独自の *vsct* ファイルを必要とするか、で定義された標準コマンドを実装できるかどうかを決定 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] します。 通常、エディターでは、IDE のメニューを使用して拡張し、独自のツールバーを定義します。 ただし、IDE の標準コマンドセットを使用するだけでなく、エディターで独自の特定のコマンドを定義する必要がある場合もあります。 エディターは、使用する標準コマンドを宣言してから、新しいコマンド、コンテキストメニュー、トップレベルメニュー、ツールバーを *vsct* ファイルで定義する必要があります。 インプレースアクティブ化エディターを作成する場合は、 <xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> OLE 2 メニューのマージではなく、 *vsct* ファイルでエディターのメニューとツールバーを実装して定義します。
+   `IOleCommandTarget` の実装により、**切り取り**、**コピー**、**貼り付け** などのコマンドを処理します。 `IOleCommandTarget` を実装する場合は、独自のコマンド メニュー構造を定義するために独自の *.vsct* ファイルがエディターに必要か、それとも [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に定義されている標準のコマンドを実装できるかを決定します。 通常、エディターに IDE のメニューを使用して拡張し、独自のツールバーを定義します。 ただし、エディターに IDE の標準のコマンド セットを使用するだけでなく、独自の特定のコマンドを定義する必要があることがよくあります。 エディターにより、使用する標準のコマンドを宣言してから、新しいコマンド、コンテキスト メニュー、トップレベル メニュー、およびツールバーを *.vsct* ファイルで定義する必要があります。 インプレース アクティブ化エディターを作成する場合は、OLE 2 メニューのマージを使用するのではなく、<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent> を実装し、エディターのメニューとツールバーを *.vsct* ファイルで定義します。
 
-- UI でメニューコマンド crowding を回避するには、新しいコマンドをにせよする前に、IDE の既存のコマンドを使用する必要があります。 共有コマンドは、 *Sharedcmddef. vsct* および *shellcmddef. vsct* で定義されています。 これらのファイルは、インストールの VisualStudioIntegration\Common\Inc サブディレクトリに既定でインストールされ [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] ます。
+- UI でメニュー コマンドが煩雑になるのを防ぐには、新しいコマンドを作成する前に、IDE の既存のコマンドを使用するようにします。 共有コマンドは、*SharedCmdDef.vsct* と *ShellCmdDef.vsct* で定義されています。 これらのファイルは、既定で [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] インストールの VisualStudioIntegration\Common\Inc サブディレクトリにインストールされています。
 
-- `ISelectionContainer` では、単一選択と複数選択の両方を表すことができます。 選択した各オブジェクトは、オブジェクトとして実装され `IDispatch` ます。
+- `ISelectionContainer` を使用して、1 つの選択と複数の選択の両方を表すことができます。 選択された各オブジェクトは、`IDispatch` オブジェクトとして実装されます。
 
-- IDE は、から `IOleUndoManager` アクセス可能なサービスとして、 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> またはを介してインスタンス化できるオブジェクトとしてを実装し <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> ます。 エディターは、 `IOleUndoUnit` 各アクションのインターフェイスを実装し `Undo` ます。
+- IDE には、<xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> からアクセス可能なサービスとして、または <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> を介してインスタンス化できるオブジェクトとして `IOleUndoManager` が実装されています。 このエディターには、`Undo` アクションごとに `IOleUndoUnit` インターフェイスが実装されています。
 
-- カスタムエディターは、次の2つの場所でオートメーションオブジェクトを公開できます。
+- カスタム エディターからオートメーション オブジェクトを公開できる場所は 2 つあります。
 
   - `Document.Object`
 
@@ -156,4 +156,4 @@ ms.locfileid: "105062058"
 
 ## <a name="see-also"></a>こちらもご覧ください
 
-- [オートメーションモデルに貢献する](../extensibility/internals/contributing-to-the-automation-model.md)
+- [オートメーション モデルへの投稿](../extensibility/internals/contributing-to-the-automation-model.md)

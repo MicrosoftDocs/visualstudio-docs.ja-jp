@@ -1,7 +1,8 @@
 ---
-title: IDiaImageData |Microsoft Docs
+description: モジュールまたはイメージの基本場所とメモリ オフセットの詳細を公開します。
+title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,42 +10,42 @@ helpviewer_keywords:
 ms.assetid: b696f350-fc08-4352-9287-a15e87512c1e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 75a81ae23db90b06915e7090a9f2918be3ff18ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c8cee712f393c3b006484eeda4a0ec1033c1f26b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743403"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634891"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
-モジュールまたはイメージのベースの位置とメモリオフセットの詳細を公開します。
+モジュールまたはイメージの基本場所とメモリ オフセットの詳細を公開します。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaImageData : IUnknown
+IDiaImageData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaImageData` のメソッドを示しています。
+次の表に、`IDiaImageData` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
-|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|アプリケーションを基準として、モジュールの仮想メモリ内の場所を取得します。|
+|[IDiaImageData::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-relativevirtualaddress.md)|アプリケーションを基準とする、モジュールの仮想メモリ内の場所を取得します。|
 |[IDiaImageData::get_virtualAddress](../../debugger/debug-interface-access/idiaimagedata-get-virtualaddress.md)|イメージの仮想メモリ内の場所を取得します。|
-|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|イメージの基になるメモリ位置を取得します。|
+|[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|イメージのベースとなるメモリの場所を取得します。|
 
-## <a name="remarks"></a>Remarks
-一部のデバッグストリーム (.XDATA、PDATA) には、イメージにも格納されているデータのコピーが含まれています。 これらのストリームデータオブジェクトは、`IDiaImageData` インターフェイスに対してクエリを実行できます。 詳細については、このトピックの「呼び出し元のメモ」セクションを参照してください。
+## <a name="remarks"></a>解説
+一部のデバッグ ストリーム (XDATA、PDATA) には、イメージに保存されているデータのコピーが含まれています。 これらのストリーム データ オブジェクトに対して、`IDiaImageData` インターフェイスのクエリを実行できます。 詳細については、このトピックの「呼び出し元に関する注意事項」を参照してください。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)オブジェクトで `QueryInterface` を呼び出します。 すべてのデバッグストリームで `IDiaImageData` インターフェイスがサポートされているわけではないことに注意してください。 たとえば、現在、`IDiaImageData` インターフェイスをサポートしているのは、.XDATA と PDATA のストリームだけです。
+このインターフェイスを取得するには、[IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) オブジェクトに対して `QueryInterface` を呼び出します。 すべてのデバッグ ストリームで `IDiaImageData` インターフェイスがサポートされているわけではないことに注意してください。 たとえば、現時点で `IDiaImageData` インターフェイスをサポートしているのは、XDATA および PDATA ストリームだけです。
 
 ## <a name="example"></a>例
-この例では、`IDiaImageData` インターフェイスをサポートするすべてのストリームについて、すべてのデバッグストリームを検索します。 そのようなストリームが見つかると、そのストリームに関する情報が表示されます。
+この例では、すべてのデバッグ ストリームを対象に、`IDiaImageData` インターフェイスをサポートするストリームを検索します。 そのようなストリームが見つかった場合は、そのストリームに関する情報が表示されます。
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -110,12 +111,12 @@ void ShowImageData(IDiaSession *pSession)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

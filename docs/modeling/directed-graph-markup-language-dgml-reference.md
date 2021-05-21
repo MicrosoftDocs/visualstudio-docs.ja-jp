@@ -1,6 +1,6 @@
 ---
 title: Directed Graph Markup Language (DGML) リファレンス
-description: 有向グラフマークアップ言語 (DGML) で、視覚化に使用される情報と複雑さ分析を実行する方法について説明します。
+description: Directed Graph Markup Language (DGML) は、視覚化と複雑性の分析を実行するために使用する情報を記述します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 9abc3d3596a64c04bf25c0471d32a00f1cb7705d
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99935080"
@@ -20,12 +20,12 @@ ms.locfileid: "99935080"
 
 Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を実行するために使用する情報を記述する、Visual Studio でコード マップを保持するために使用される形式です。 DGML では、単純な XML を使用して、循環と非循環の両方の有向グラフを記述します。 有向グラフは、リンク (エッジ) によって接続されている一連のノードです。 ノードとリンクを使用すると、ネットワーク構造 (ソフトウェア プロジェクトの要素など) を表すことができます。
 
-一部のバージョンの Visual Studio では、DGML 機能のサブセットのみがサポートされています。「 [アーキテクチャツールとモデリングツールのバージョンサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+Visual Studio のバージョンによっては、DGML 機能のサブセットのみがサポートされることに注意してください。「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
 
 > [!NOTE]
-> .dgml ファイルを編集するときは、各要素とその値に使用できる属性が IntelliSense によって識別されます。 属性で色を指定するには、一般的な色の名前 ("Blue" など) または ARGB 16 進値 ("#ffa0b1c3" など) を使用してください。 DGML では、WPF (Windows Presentation Foundation) 色定義形式の小さいサブセットを使用します。 詳細については、「 [Colors クラス](/dotnet/api/system.windows.media.colors?view=netframework-4.8&preserve-view=true)」を参照してください。
+> .dgml ファイルを編集するときは、各要素とその値に使用できる属性が IntelliSense によって識別されます。 属性で色を指定するには、一般的な色の名前 ("Blue" など) または ARGB 16 進値 ("#ffa0b1c3" など) を使用してください。 DGML では、WPF (Windows Presentation Foundation) 色定義形式の小さいサブセットを使用します。 詳細については、「[Colors クラス](/dotnet/api/system.windows.media.colors?view=netframework-4.8&preserve-view=true)」を参照してください。
 
-## <a name="dgml-syntax"></a><a name="DGML"></a> DGML 構文
+## <a name="dgml-syntax"></a><a name="DGML"></a>DGML の構文
 
 次の表は、DGML で使用される要素の種類について説明しています。
 
@@ -35,15 +35,15 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 
    追加できる属性 (省略可能) は次のとおりです。
 
-   `Background` -マップの背景色
+   `Background` - マップの背景色。
 
-   `BackgroundImage` -マップの背景として使用するイメージファイルの場所。
+   `BackgroundImage` - マップの背景として使用する画像ファイルの場所。
 
-   `GraphDirection` -マップがツリーレイアウト () に設定されている場合、ほとんどのリンクが指定した `Sugiyama` 方向にフローするようにノードを配置します ( `TopToBottom` 、、 `BottomToTop` `LeftToRight` 、または `RightToLeft` )。 「 [マップレイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
+   `GraphDirection` - マップがツリー レイアウト (`Sugiyama`) に設定された場合に、ほとんどのリンクが指定方向 (`TopToBottom`、`BottomToTop`、`LeftToRight`、または `RightToLeft`) に向かうようにノードを配置します。 「[マップ レイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
 
-   `Layout` -マップを `None` 、 `Sugiyama` (ツリーレイアウト)、 `ForceDirected` (クイッククラスター)、またはの各レイアウトに設定します `DependencyMatrix` 。 「 [マップレイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
+   `Layout` - マップのレイアウトを、`None`、`Sugiyama` (ツリー レイアウト)、`ForceDirected` (クイック クラスター)、または `DependencyMatrix` に設定します。 「[マップ レイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
 
-   `NeighborhoodDistance` -マップがツリーレイアウトまたはクイッククラスターレイアウトに設定されている場合、指定された数 (1-7) のリンクが選択したノードから離れているノードのみを表示します。 「 [マップレイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
+   `NeighborhoodDistance` - マップがツリー レイアウトまたはクイック クラスター レイアウトに設定された場合に、選択したノードから指定したリンク数 (1 ～ 7) 離れているノードのみ表示します。 「[マップ レイアウトの変更](../modeling/browse-and-rearrange-code-maps.md#Selecting)」を参照してください。
 
    例:
 
@@ -92,23 +92,23 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 
    この要素には、次の属性が必要です。
 
-   `Id` -ノードの一意の名前、および属性の既定値 `Label` (個別の `Label` 属性が指定されていない場合)。 この名前は、名前を参照するリンクの `Source` 属性または `Target` 属性と一致する必要があります。
+   `Id` - ノードの一意の名前。`Label` 属性が指定されていない場合の `Label` 属性の既定値です。 この名前は、名前を参照するリンクの `Source` 属性または `Target` 属性と一致する必要があります。
 
    追加できる属性 (省略可能) の一部を次に示します。
 
-   `Label` -ノードの表示名。
+   `Label` - ノードの表示名。
 
    スタイル属性。 「 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。
 
-   `Category` -この属性を共有する要素を識別するカテゴリの名前。 詳細については、`<Category/>` 要素を参照してください。
+   `Category` - この属性を共有する要素を識別するカテゴリの名前。 詳細については、`<Category/>` 要素を参照してください。
 
-   `Property` -同じプロパティ値を持つ要素を識別するプロパティの名前。 詳細については、`<Property/>` 要素を参照してください。
+   `Property` - プロパティ値が同じ要素を識別するプロパティの名前。 詳細については、`<Property/>` 要素を参照してください。
 
-   `Group` - ノードに他のノードが含まれている場合は、この属性を `Expanded` または `Collapsed` に設定して、そのコンテンツの表示と非表示を切り替えます。 `<Link/>` 属性を含み、親ノードをリンク元ノード、子ノードをリンク先ノードとして指定する `Category="Contains"` 要素が必要です。 「 [グループコード要素](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)」を参照してください。
+   `Group` - ノードに他のノードが含まれている場合は、この属性を `Expanded` または `Collapsed` に設定して、そのコンテンツの表示と非表示を切り替えます。 `<Link/>` 属性を含み、親ノードをリンク元ノード、子ノードをリンク先ノードとして指定する `Category="Contains"` 要素が必要です。 「[コード要素をグループ化する](../modeling/customize-code-maps-by-editing-the-dgml-files.md#OrganizeNodes)」を参照してください。
 
-   `Visibility` -この属性を `Visible` 、、 `Hidden` またはに設定 `Collapsed` します。 `System.Windows.Visibility`が使用されます。 「 [ノードとリンクの非表示または表示](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)」を参照してください。
+   `Visibility` - この属性は、`Visible`、`Hidden`、または `Collapsed` に設定します。 `System.Windows.Visibility`が使用されます。 「[ノードやリンクの表示/非表示を切り替える](../modeling/browse-and-rearrange-code-maps.md#HidingShowing)」を参照してください。
 
-   `Reference` - この属性をドキュメントまたは URL へのリンクに設定します。 「 [コード要素とリンクへのドキュメントまたは url のリンク」を](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)参照してください。
+   `Reference` - この属性をドキュメントまたは URL へのリンクに設定します。 「[ドキュメントまたは URL をコード要素とリンクにリンクする](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AddReferences)」を参照してください。
 
    例:
 
@@ -155,19 +155,19 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 
    この要素には、次の属性が必要です。
 
-   `Source` -リンクのソースノード
+   `Source` - リンク元ノード。
 
    `Target` - リンク先ノード。
 
    追加できる属性 (省略可能) の一部を次に示します。
 
-   `Label` -リンクの表示名
+   `Label` - リンクの表示名。
 
    スタイル属性。 「 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。
 
-   `Category` -この属性を共有する要素を識別するカテゴリの名前。 詳細については、`<Category/>` 要素を参照してください。
+   `Category` - この属性を共有する要素を識別するカテゴリの名前。 詳細については、`<Category/>` 要素を参照してください。
 
-   `Property` -同じプロパティ値を持つ要素を識別するプロパティの名前。 詳細については、`<Property/>` 要素を参照してください。
+   `Property` - プロパティ値が同じ要素を識別するプロパティの名前。 詳細については、`<Property/>` 要素を参照してください。
 
    例:
 
@@ -216,9 +216,9 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 
    `Label` - カテゴリのわかりやすい名前。
 
-   `BasedOn` -現在の要素のが継承する親カテゴリ `<Category/>` 。
+   `BasedOn` - 現在の要素の `<Category/>` の継承元の親カテゴリ。
 
-   この要素の例では、`FailedTest` カテゴリは、`Stroke` カテゴリから `PassedTest` 属性を継承します。 「 [DGML ファイルを編集してコードマップをカスタマイズ](../modeling/customize-code-maps-by-editing-the-dgml-files.md)する」の「階層カテゴリを作成するには」を参照してください。
+   この要素の例では、`FailedTest` カテゴリは、`Stroke` カテゴリから `PassedTest` 属性を継承します。 「[DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」の「階層カテゴリを作成するには」を参照してください。
 
    カテゴリでは、マップに表示されるノードおよびリンクの外観を制御するいくつかの基本的なテンプレート動作も提供します。 「 [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)」を参照してください。
 
@@ -267,13 +267,13 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 
    この要素には、次の属性が必要です。
 
-  - `Id` -プロパティの一意の名前、および属性の既定値 `Label` (個別の `Label` 属性が指定されていない場合)。
+  - `Id` - プロパティの一意の名前。`Label` 属性が指定されていない場合の `Label` 属性の既定値です。
 
-  - `DataType` -プロパティによって格納されるデータの型
+  - `DataType` - プロパティに格納されるデータの型。
 
-    プロパティを [ **プロパティ** ] ウィンドウに表示する場合は、プロパティを使用してプロパティ `Label` の表示名を指定します。
+    **[プロパティ]** ウィンドウにプロパティを表示する場合は、`Label` プロパティを使用してプロパティの表示名を指定します。
 
-    「 [コード要素およびリンクにカテゴリを割り当てる」を](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)参照してください。
+    「[コード要素およびリンクにカテゴリを割り当てる](../modeling/customize-code-maps-by-editing-the-dgml-files.md#AssignCategories)」を参照してください。
 
     例:
 
@@ -302,7 +302,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
   </DirectedGraph>
   ```
 
-### <a name="aliases-for-commonly-used-paths"></a><a name="AddAlias"></a> 一般的に使用されるパスのエイリアス
+### <a name="aliases-for-commonly-used-paths"></a><a name="AddAlias"></a> よく使用されるパスのエイリアス
 
 よく使用されるパスをエイリアスに置き換えると、.dgml ファイルのサイズを小さくして、ファイルの読み込みまたは保存に必要な時間を短縮することができます。 エイリアスを作成するには、.dgml ファイルの末尾に `<Paths></Paths>` セクションを追加します。 このセクションには、パスのエイリアスを定義する `<Path/>` 要素を追加します。
 
@@ -312,7 +312,7 @@ Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を
 </Paths>
 ```
 
-.Dgml ファイル内の要素からエイリアスを参照するには、 `Id` 要素のを \<Path/> ドル記号 ($) とかっこ (()) で囲みます。
+.dgml ファイルの要素からエイリアスを参照するには、\<Path/> 要素の `Id` をドル記号 ($) と括弧 (()) で囲みます。
 
 ```xml
 <Nodes>

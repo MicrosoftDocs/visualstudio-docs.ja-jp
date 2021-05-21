@@ -1,7 +1,7 @@
 ---
-title: サードパーティのアナライザーのインストール
+title: サードパーティ製アナライザーのインストール
 ms.date: 08/27/2020
-description: Visual Studio でサードパーティ製アナライザーをインストールする方法について説明します。 「.Vsix ファイルと NuGet アナライザーパッケージにアナライザーをインストールする方法」を参照してください。
+description: サードパーティ製のアナライザーを Visual Studio にインストールする方法について説明します。 .vsix ファイルと NuGet アナライザー パッケージのアナライザーをインストールする方法を示します。
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,53 +15,53 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 3d4833ba922ddde1a1770cfd75cf446f210e2c79
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99859854"
 ---
 # <a name="install-third-party-analyzers"></a>サードパーティ製アナライザーのインストール
 
-Visual Studio には、.NET Compiler Platform (*Roslyn*) アナライザーのコアセットが含まれています。 これらのアナライザーは常にオンになっています。 追加のアナライザーは、NuGet パッケージとして、または *VSIX* ファイルの Visual Studio 拡張機能としてインストールできます。
+Visual Studio には、.NET Compiler Platform (*Roslyn*) アナライザーのコア セットが含まれています。 これらのアナライザーは常に有効になっています。 NuGet パッケージとして、または *VSIX* ファイルの Visual Studio 拡張機能として、追加のアナライザーをインストールできます。
 
-## <a name="to-install-nuget-analyzer-packages"></a>NuGet analyzer パッケージをインストールするには
+## <a name="to-install-nuget-analyzer-packages"></a>NuGet アナライザー パッケージをインストールするには
 
-1. Www.nuget.org にインストールするアナライザーパッケージを見つけます。
+1. www.nuget.org でインストールするアナライザー パッケージを見つけます。
 
-   たとえば、 [StyleCop](https://www.nuget.org/packages/stylecop.analyzers/) をインストールして、コードベースでスタイルの問題を探すことができます。
+   たとえば、[StyleCop.Analyzers](https://www.nuget.org/packages/stylecop.analyzers/) をインストールすることにより、コード ベースでのスタイルの問題を探すことができます。
 
-2. パッケージ [マネージャーコンソール](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) または [パッケージマネージャー UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)を使用して、Visual Studio にパッケージをインストールします。
+2. Visual Studio でパッケージをインストールするには、[パッケージ マネージャー コンソール](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)または[パッケージマネージャー UI](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) を使用します。
 
    > [!NOTE]
-   > 各アナライザーパッケージの [www.nuget.org] ページには、 **パッケージマネージャーコンソール** に貼り付けるコマンドが表示されます。 クリップボードにテキストをコピーするための便利なボタンもあります。
+   > www.nuget.org の各アナライザー パッケージのページには、**パッケージ マネージャー コンソール** に貼り付けるためのコマンドが表示されています。 簡単にテキストをクリップボードにコピーするためのボタンも用意されています。
 
-   Analyzer アセンブリがインストールされ、[**参照**] [アナライザー] の下の **ソリューションエクスプローラー** に表示され  >  ます。
+   アナライザー アセンブリがインストールされ、**ソリューション エクスプローラー** の **[参照]**  >  **[アナライザー]** の下の表示されます。
 
 ## <a name="to-install-vsix-analyzers"></a>VSIX アナライザーをインストールするには
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio で、[ **ツール**] [ > **拡張機能と更新プログラム**] を選択します。
+1. Visual Studio で、 **[ツール]** > **[拡張機能と更新プログラム]** を選択します。
 
    **[拡張機能と更新プログラム]** ダイアログ ボックスが表示されます。
 
    > [!NOTE]
-   > または、 [Visual Studio Marketplace](https://marketplace.visualstudio.com)から直接、analyzer 拡張機能を見つけてダウンロードすることもできます。
+   > または、[Visual Studio Marketplace](https://marketplace.visualstudio.com) で直接アナライザー拡張機能を見つけてダウンロードすることもできます。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Visual Studio で、[ **拡張** 機能] [ > **拡張機能の管理**] を選択します。
+1. Visual Studio で、 **[拡張機能]** > **[拡張機能の管理]** を選択します。
 
-   [ **拡張機能の管理** ] ダイアログボックスが表示されます。
+   **[拡張機能の管理]** ダイアログ ボックスが開きます。
 
    > [!NOTE]
-   > または、 [Visual Studio Marketplace](https://marketplace.visualstudio.com)から直接、analyzer 拡張機能を見つけてダウンロードすることもできます。
+   > または、[Visual Studio Marketplace](https://marketplace.visualstudio.com) で直接アナライザー拡張機能を見つけてダウンロードすることもできます。
 
 ::: moniker-end
 
-2. 左側のウィンドウで [ **オンライン** ] を展開し、[ **Visual Studio Marketplace**] を選択します。
+2. 左側のペインで **[オンライン]** を展開し、 **[Visual Studio Marketplace]** を選択します。
 
 3. 検索ボックスに、インストールするアナライザー拡張機能の名前を入力します。
 
@@ -69,36 +69,36 @@ Visual Studio には、.NET Compiler Platform (*Roslyn*) アナライザーの�
 
    拡張機能がダウンロードされます。
 
-5. [ **OK** ] を選択してダイアログボックスを閉じ、Visual Studio のすべてのインスタンスを閉じて、 **VSIX インストーラー** を起動します。
+5. **[OK]** を選択してダイアログ ボックスを閉じた後、Visual Studio のすべてのインスタンスを閉じて、**VSIX インストーラー** を起動します。
 
-   [ **VSIX インストーラー** ] ダイアログボックスが表示されます。
+   **[VSIX インストーラー]** ダイアログ ボックスが開きます。
 
-   ![Microsoft コード分析用の VSIX インストーラー](media/vsix-installer-code-analysis.png)
+   ![Microsoft Code Analysis 用の VSIX インストーラー](media/vsix-installer-code-analysis.png)
 
-6. [ **変更** ] を選択してインストールを開始します。
+6. **[変更]** を選択すると、インストールが開始されます。
 
-7. 1 ~ 2 分後にインストールが完了します。 **[閉じる]** を選択します。
+7. インストールは 1 から 2 分で完了します。 **[閉じる]** を選択します。
 
 8. Visual Studio を再度開きます。
 
 ::: moniker range="vs-2017"
 
-拡張機能がインストールされているかどうかを確認する場合は、[**ツール**] [  >  **拡張機能と更新プログラム**] を選択します。 [ **拡張機能と更新プログラム** ] ダイアログボックスで、左側の [ **インストール済み** ] カテゴリを選択し、名前を指定して拡張機能を検索します。
+拡張機能がインストールされているかどうかを確認する場合は、 **[ツール]**  >  **[拡張機能と更新プログラム]** を選択します。 **[拡張機能と更新プログラム]** ダイアログ ボックスで、左側の **[インストール済み]** カテゴリを選択し、名前で拡張機能を検索します。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-拡張機能がインストールされているかどうかを確認する場合は、[**拡張** 機能] [  >  **拡張機能の管理**] を選択します。 [ **拡張機能の管理** ] ダイアログボックスで、左側の [ **インストール済み** ] カテゴリを選択し、名前を指定して拡張機能を検索します。
+拡張機能がインストールされているかどうかを確認する場合は、 **[拡張機能]**  >  **[拡張機能の管理]** を選択します。 **[拡張機能の管理]** ダイアログ ボックスで、左側の **[インストール済み]** カテゴリを選択し、名前で拡張機能を検索します。
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Visual Studio でコード アナライザーを使用する](../code-quality/use-roslyn-analyzers.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio のコードアナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
+- [Visual Studio のコード アナライザーの概要](../code-quality/roslyn-analyzers-overview.md)
 - [.NET アナライザーのインストール](../code-quality/install-net-analyzers.md)

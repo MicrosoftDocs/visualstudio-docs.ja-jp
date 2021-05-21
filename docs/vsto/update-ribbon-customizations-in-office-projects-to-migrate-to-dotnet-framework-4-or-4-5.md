@@ -1,6 +1,6 @@
 ---
 title: .NET Framework 4.5 に移行されたリボンのカスタマイズを更新する
-description: ターゲットフレームワークが .NET Framework 4 以降に変更された場合に、プロジェクトコードを変更する必要があることについて説明します。
+description: ターゲット フレームワークが .NET Framework 4 以降に変更された場合に必要な、プロジェクト コードの変更について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,25 +17,25 @@ ms.workload:
 - office
 ms.openlocfilehash: 684ec027f5e7615832a942edc93336bf91944b09
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99838309"
 ---
 # <a name="update-ribbon-customizations-migrated-to-net-framework-45"></a>.NET Framework 4.5 に移行されたリボンのカスタマイズを更新する
 
-  [ **リボン (ビジュアルデザイナー)** ] プロジェクト項目を使用して作成されたリボンのカスタマイズがプロジェクトに含まれている場合、ターゲットフレームワークが以降に変更された場合は、プロジェクトコードに次の変更を加える必要があり [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ます。
+  **[リボン (ビジュアル デザイナー)]** プロジェクト項目を使用して作成したリボンのカスタマイズを含むプロジェクトのターゲット フレームワークを [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、プロジェクト コードに対して次の変更を行う必要があります。
 
 - 生成されたリボン コードを変更する。
 
-- 実行時にリボンコントロールをインスタンス化するコード、リボンイベントを処理するコード、またはリボンコンポーネントの位置をプログラムによって設定するコードを変更します。
+- 実行時にリボン コントロールをインスタンス化するコード、リボン イベントを処理するコード、またはリボン コンポーネントの位置をプログラムによって設定するコードをすべて変更する。
 
-## <a name="update-the-generated-ribbon-code"></a>生成されたリボンコードを更新する
+## <a name="update-the-generated-ribbon-code"></a>生成されたリボン コードの更新
  プロジェクトのターゲット フレームワークを [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降に変更する場合は、次の手順を実行して、リボン項目に対して生成されたコードを変更する必要があります。 更新する必要があるコード ファイルは、プログラミング言語の種類とプロジェクトの作成方法に応じて次のように異なります。
 
-- Visual Basic プロジェクト、またはで作成した Visual C# プロジェクトでは、 [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] または [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] リボンの分離コードファイル (*ribbonitem*) のすべての手順を実行します。Designer.cs または *Ribbonitem*。デザイナー .vb)。 Visual Basic プロジェクトの分離コードファイルを表示するには、**ソリューションエクスプローラー** の [**すべてのファイルを表示**] ボタンをクリックします。
+- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] または [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] のいずれかで作成した Visual Basic プロジェクトまたは Visual C# プロジェクトの場合は、リボンの分離コード ファイル (*YourRibbonItem*.Designer.cs or *YourRibbonItem*.Designer.vb) ですべての手順を実行します。 Visual Basic プロジェクトで分離コード ファイルを確認するには、**ソリューション エクスプローラー** の **[すべてのファイルの表示]** をクリックします。
 
-- Visual Studio 2008 で作成してからにアップグレードした Visual C# プロジェクトでは [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 、リボンコードファイルの最初の2つの手順 (*ribbonitem*.Cs または *ribbonitem*.vb) を実行し、リボンの分離コードファイルで残りの手順を実行します。
+- Visual Studio 2008 で作成してから [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] にアップグレードした Visual C# プロジェクトの場合は、リボンのコード ファイル (*YourRibbonItem*.cs または *YourRibbonItem*.vb) で最初の 2 つの手順を実行し、リボンの分離コード ファイルで残りの手順を実行します。
 
 ### <a name="to-change-the-generated-ribbon-code"></a>生成されたリボン コードを変更するには
 
@@ -101,33 +101,33 @@ ms.locfileid: "99838309"
     this.button1 = this.Factory.CreateRibbonButton();
     ```
 
-     リボンコントロールのヘルパーメソッドの完全な一覧については、「 [リボンコントロールのインスタンス化](#ribboncontrols)」を参照してください。
+     リボン コントロールのすべてのヘルパー メソッドの一覧については、「[リボン コントロールのインスタンス化](#ribboncontrols)」を参照してください。
 
 4. Visual C# プロジェクトでは、代わりに特定のリボン デリゲートが使用されるように、`InitializeComponent` デリゲートを使用する <xref:System.EventHandler%601> メソッドのコード行を変更します。
 
      たとえば、.NET Framework 3.5 を対象とするプロジェクトで、<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> イベントを処理する次のコード行がファイルに含まれていると仮定します。
 
-    \<CodeContentPlaceHolder>8 </CodeContentPlaceHolder> 以降を対象とするプロジェクトで [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] は、代わりに次のコードを使用する必要があります。
+    \<CodeContentPlaceHolder>8</CodeContentPlaceHolder> [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、代わりに次のコードを使用する必要があります。
 
-    \<CodeContentPlaceHolder>9 </CodeContentPlaceHolder> リボンデリゲートの完全な一覧については、「 [リボンイベントの処理](#ribbonevents)」を参照してください。
+    \<CodeContentPlaceHolder>9</CodeContentPlaceHolder> すべてのリボン デリゲートの一覧については、「[リボン イベントの処理](#ribbonevents)」を参照してください。
 
 5. Visual Basic プロジェクトでは、ファイルの最後にある `ThisRibbonCollection` クラスを検索します。 このクラスが `Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection` から継承されないように、クラスの宣言を変更します。
 
-## <a name="instantiate-ribbon-controls"></a><a name="ribboncontrols"></a> リボンコントロールのインスタンス化
+## <a name="instantiate-ribbon-controls"></a><a name="ribboncontrols"></a> リボン コントロールのインスタンス化
  リボン コントロールを動的にインスタンス化するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、リボン コントロールは特定のシナリオで直接インスタンス化できるクラスです。 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、これらのコントロールはインターフェイスであるため、直接インスタンス化できません。 コントロールを作成するには、<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトが提供するメソッドを使用する必要があります。
 
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトにアクセスするには、次の 2 つの方法があります。
 
-- リボンクラスのファクトリプロパティを使用します。 この方法は、リボン クラス内のコードから使用します。
+- リボン クラスの Factory プロパティの使用。 この方法は、リボン クラス内のコードから使用します。
 
-- `Globals.Factory.GetRibbonFactory` メソッドの使用。 この方法は、リボン クラス外のコードから使用します。 Globals クラスの詳細については、「 [Office プロジェクト内のオブジェクトへのグローバルアクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。
+- `Globals.Factory.GetRibbonFactory` メソッドの使用。 この方法は、リボン クラス外のコードから使用します。 Globals クラスの詳細については、「[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。
 
   次のコード例は、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトのリボン クラスで <xref:Microsoft.Office.Tools.Ribbon.RibbonButton> を作成する方法を示しています。
 
-\<CodeContentPlaceHolder>10 </CodeContentPlaceHolder> 
- \<CodeContentPlaceHolder> 11 </CodeContentPlaceHolder> 次の表に、プログラムによって作成できるコントロールと、以降を対象とするプロジェクトでのコントロールの作成に使用するメソッドを示し [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ます。
+\<CodeContentPlaceHolder>10</CodeContentPlaceHolder>
+\<CodeContentPlaceHolder>11</CodeContentPlaceHolder> 次の表は、プログラムによって作成できるコントロールと、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでのコントロールの作成に使用するメソッドを示しています。
 
-|コントロール|[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降のプロジェクトで使用する RibbonFactory メソッド|
+|Control|[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降のプロジェクトで使用する RibbonFactory メソッド|
 |-------------| - |
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonButton>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButton%2A>|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonButtonGroup>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonButtonGroup%2A>|
@@ -147,25 +147,25 @@ ms.locfileid: "99838309"
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonTab%2A>|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>|
 
-## <a name="handle-ribbon-events"></a><a name="ribbonevents"></a> リボンイベントの処理
+## <a name="handle-ribbon-events"></a><a name="ribbonevents"></a> リボン イベントの処理
  リボン コントロールのイベントを処理するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、これらのイベントは汎用の <xref:System.EventHandler%601> デリゲートによって処理されます。 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、これらのイベントは他のデリゲートによって処理されるようになりました。
 
  次の表は、リボンのイベントと、[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでこれらのイベントに関連付けられているデリゲートを示しています。
 
-|イベント|[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降のプロジェクトで使用するデリゲート|
+|event|[!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降のプロジェクトで使用するデリゲート|
 |-----------| - |
-|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> 生成されたリボンクラスのイベント|<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler>|
+|生成されたリボン クラスの <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage> イベント|<xref:Microsoft.Office.Tools.Ribbon.RibbonLoadImageEventHandler>|
 |<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>|<xref:Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler>|
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ButtonClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox.TextChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ButtonClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>|<xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler>|
 
-## <a name="set-the-position-of-a-ribbon-component-programmatically"></a>リボンコンポーネントの位置をプログラムによって設定する
+## <a name="set-the-position-of-a-ribbon-component-programmatically"></a>リボン コンポーネントの位置をプログラムによって設定する
  リボンのグループ、タブ、またはコントロールの位置を設定するすべてのコードを変更する必要があります。 .NET Framework 3.5 を対象とするプロジェクトでは、静的な `AfterOfficeId` クラスの `BeforeOfficeId` メソッドと `Microsoft.Office.Tools.Ribbon.RibbonPosition` メソッドを使用して、グループ、タブ、またはコントロールの `Position` プロパティを割り当てることができます。 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 以降を対象とするプロジェクトでは、<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトが提供する <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.RibbonPosition%2A> プロパティを使用して、これらのメソッドにアクセスする必要があります。
 
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> オブジェクトにアクセスするには、次の 2 つの方法があります。
 
 - リボン クラスの `Factory` プロパティの使用。 この方法は、リボン クラス内のコードから使用します。
 
-- `Globals.Factory.GetRibbonFactory` メソッドの使用。 この方法は、リボン クラス外のコードから使用します。 Globals クラスの詳細については、「 [Office プロジェクト内のオブジェクトへのグローバルアクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。
+- `Globals.Factory.GetRibbonFactory` メソッドの使用。 この方法は、リボン クラス外のコードから使用します。 Globals クラスの詳細については、「[Office プロジェクト内のオブジェクトへのグローバル アクセス](../vsto/global-access-to-objects-in-office-projects.md)」を参照してください。
 
   次のコード例は、.NET Framework 3.5 を対象とするプロジェクトでリボン クラスのタブの `Position` プロパティを設定する方法を示しています。
 
@@ -188,5 +188,5 @@ this.tab1.Position = this.Factory.RibbonPosition.AfterOfficeId("TabHome");
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Office ソリューションを .NET Framework 4 以降に移行する](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
+- [.NET Framework 4 以降への Office ソリューションの移行](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)
 - [リボン デザイナー](../vsto/ribbon-designer.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: findLinesByLinenum |Microsoft Docs'
+description: ソース ファイル内の指定された行番号が内部または近くにあるコンパイル単位の行番号を特定します。
+title: IDiaSession::findLinesByLinenum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 76d5622d-9a91-4c2a-a98f-263af5d1daef
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f5d64e9484b9450f5211e271df3b154ebab0fa75
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 924b3aada49fca11056a1cf7f1b577bab505b3ce
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742104"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634315"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
-ソースファイル内の指定した行番号が含まれているコンパイル単位の行番号を確認します。
+ソース ファイル内の指定された行番号が内部または近くにあるコンパイル単位の行番号を特定します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findLinesByLinenum ( 
+HRESULT findLinesByLinenum ( 
     IDiaSymbol*           compiland,
     IDiaSourceFile*       file,
     DWORD                 linenum,
@@ -37,32 +38,32 @@ HRESULT findLinesByLinenum ( 
 #### <a name="parameters"></a>パラメーター
 `compiland`
 
-から行番号を検索するコンパイル単位を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。 このパラメーターを `NULL` とすることはできません。
+[入力] 行番号を検索するコンパイル単位を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクト。 このパラメーターを `NULL` とすることはできません。
 
 `file`
 
-から検索するソースファイルを表す[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)オブジェクト。 このパラメーターを `NULL` とすることはできません。
+[入力] 検索対象のソース ファイルを表す [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) オブジェクト。 このパラメーターを `NULL` とすることはできません。
 
 `linenum`
 
-から1から始まる行番号を指定します。
+[入力] 1 から始まる行番号を指定します。
 
 > [!NOTE]
-> 0を使用してすべての行を指定することはできません (すべての行を検索するには、 [IDiaSession:: findlines](../../debugger/debug-interface-access/idiasession-findlines.md)メソッドを使用します)。
+> 0 を使用してすべての行を指定することはできません (すべての行を検索するには、[IDiaSession::findLines](../../debugger/debug-interface-access/idiasession-findlines.md) メソッドを使用します)。
 
 `column`
 
-から列番号を指定します。 すべての列を指定するには0を使用します。 列は、1行に対するバイトオフセットです。
+[入力] 列番号を指定します。 すべての列を指定するには 0 を使用します。 列は行へのバイト オフセットです。
 
 `ppResult`
 
-入出力取得された行番号の一覧を含む[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta を返します。
+[出力] 取得した行番号のリストを含む [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例では、ソースファイルを開き、このファイルによって提供される compilands を列挙し、各コンパイル単位が開始されるソースファイル内の行番号を検索する方法を示します。
+次の例は、ソース ファイルを開き、このファイルによって提供されるコンパイル単位を列挙し、各コンパイル単位が始まるソース ファイル内の行番号を見つける方法を示しています。
 
 ```C++
 void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)

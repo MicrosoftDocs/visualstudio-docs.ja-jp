@@ -1,6 +1,6 @@
 ---
-title: プロジェクトプロパティのユーザーインターフェイス |Microsoft Docs
-description: プロジェクトのサブタイプで、基本プロジェクトによって提供される [プロジェクトのプロパティページ] ダイアログボックスを変更する方法について説明します。
+title: プロジェクトのプロパティのユーザー インターフェイス | Microsoft Docs
+description: プロジェクト サブタイプで、ベース プロジェクトに用意されているプロジェクトの [プロパティ ページ] ダイアログ ボックスを変更する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
@@ -16,32 +16,32 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 051c373b85eff4483012dec5b264fa09fe7d962e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064476"
 ---
 # <a name="project-property-user-interface"></a>プロジェクト プロパティのユーザー インターフェイス
 
-プロジェクトのサブタイプは、プロジェクトの [ **プロパティページ** ] ダイアログボックスで、基本プロジェクトによって指定されている項目を使用することができます。また、指定どおりに読み取り専用コントロールやページ全体を表示または非表示にしたり、[ **プロパティページ** ] ダイアログボックスにプロジェクトのサブタイプ固有のページを追加したりできます。
+プロジェクト サブタイプで、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスにある項目を、ベース プロジェクトに用意されているものをそのまま使用することができます。また、コントロールやページ全体をそのまま読み取り専用または非表示にしたり、 **[プロパティ ページ]** ダイアログ ボックスにプロジェクト サブタイプ固有のページを追加したりできます。
 
-## <a name="extending-the-project-property-dialog-box"></a>[プロジェクトプロパティ] ダイアログボックスの拡張
+## <a name="extending-the-project-property-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックスを拡張する
 
-プロジェクトのサブタイプは、オートメーションエクステンダーとプロジェクト構成の参照オブジェクトを実装します。 これらのエクステンダー <xref:EnvDTE.IFilterProperties> は、特定のプロパティを非表示または読み取り専用にするためのインターフェイスを実装しています。 基本プロジェクトの [ **プロパティページ** ] ダイアログボックスでは、基本プロジェクトによって実装され、オートメーションエクステンダーによって実行されるフィルター処理が優先されます。
+プロジェクト サブタイプで、オートメーション エクステンダーとプロジェクト構成参照オブジェクトが実装されます。 これらのエクステンダーには、特定のプロパティを非表示または読み取り専用にするための <xref:EnvDTE.IFilterProperties> インターフェイスが実装されています。 ベース プロジェクトによって実装されたベース プロジェクトの **[プロパティ ページ]** ダイアログ ボックスでは、オートメーション エクステンダーによって実行されるフィルター処理が優先されます。
 
-**プロジェクトプロパティ** ダイアログボックスを拡張するプロセスを次に示します。
+**[プロジェクトのプロパティ]** ダイアログ ボックスを拡張するプロセスを以下に示します。
 
-- 基本プロジェクトは、インターフェイスを実装することで、プロジェクトのサブタイプからエクステンダーを取得し <xref:EnvDTE80.IInternalExtenderProvider> ます。 基本プロジェクトの [参照]、[プロジェクトオートメーション]、[プロジェクト構成] の各オブジェクトは、このインターフェイスを実装します。
+- ベース プロジェクトで <xref:EnvDTE80.IInternalExtenderProvider> インターフェイスを実装することにより、プロジェクト サブタイプからエクステンダーを取得します。 ベース プロジェクトの参照、プロジェクト オートメーション、プロジェクト構成参照オブジェクトには、このインターフェイスが実装されます。
 
-- プロジェクト参照オブジェクトとプロジェクトオートメーションオブジェクトのの実装は、プロジェクトの <xref:EnvDTE80.IInternalExtenderProvider> <xref:EnvDTE80.IInternalExtenderProvider> サブタイプアグリゲーター (つまり、 `QueryInterface` プロジェクトオブジェクトに対する) の実装に対するを実装し <xref:EnvDTE80.IInternalExtenderProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> ます。
+- プロジェクト参照オブジェクトおよびプロジェクト オートメーション オブジェクトでの <xref:EnvDTE80.IInternalExtenderProvider> の実装は、プロジェクト サブタイプ アグリゲーターの <xref:EnvDTE80.IInternalExtenderProvider> 実装に委任されます (つまり、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> プロジェクト オブジェクトに対し <xref:EnvDTE80.IInternalExtenderProvider> の `QueryInterface` を呼び出します)。
 
-- 基本プロジェクト構成の参照オブジェクトは、 <xref:EnvDTE80.IInternalExtenderProvider> プロジェクトのサブタイプ構成オブジェクトからオートメーションエクステンダーに直接接続するためにも実装します。 その実装 <xref:EnvDTE80.IInternalExtenderProvider> は、プロジェクトのサブタイプアグリゲーターによって実装されるインターフェイスに委任されます。
+- ベース プロジェクト構成参照オブジェクトには、プロジェクト サブタイプ構成オブジェクトからオートメーション エクステンダーに直接接続するための <xref:EnvDTE80.IInternalExtenderProvider> も実装されます。 その実装は、プロジェクト サブタイプ アグリゲーターで実装される <xref:EnvDTE80.IInternalExtenderProvider> インターフェイスに委任されます。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A>は、プロジェクト構成参照オブジェクトによって実装され、オブジェクトを返し <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> ます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A> は、プロジェクト構成参照オブジェクトによって実装され、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> オブジェクトが返されます。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A>は、プロジェクト構成参照オブジェクトによっても実装され、オブジェクトを返し <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> ます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A> も、プロジェクト構成参照オブジェクトによって実装され、<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> オブジェクトが返されます。
 
-- プロジェクトのサブタイプは、次の値を取得することによって、実行時に基本プロジェクトのさまざまな拡張可能なオブジェクトの適切な Catid を特定でき <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> ます。
+- プロジェクト サブタイプで、次の <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> の値の取得により、実行時にベース プロジェクトのさまざまな拡張可能オブジェクトに適切な CATID を確認できます。
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_ExtObjectCATID>
 
@@ -49,17 +49,17 @@ ms.locfileid: "105064476"
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_CfgBrowseObjectCATID>
 
-プロジェクトスコープの Catid を決定するために、プロジェクトのサブタイプは VSITEMID の上のプロパティを取得し [ます。](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) からのルート `VSITEMID typedef` 。 プロジェクトのサブタイプでは、プロジェクトに対して表示される [ **プロパティページ** ] ダイアログボックスのページを制御する必要がある場合もあります。構成依存と構成に依存しません。 一部のプロジェクトのサブタイプでは、組み込みページを削除し、プロジェクトのサブタイプに固有のページを追加する必要がある場合があります。 これを有効にするために、マネージクライアントプロジェクトは、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 次のプロパティのメソッドを呼び出します。
+プロジェクト スコープの CATID を確認するために、プロジェクト サブタイプで `VSITEMID typedef` から [VSITEMID.Root](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) の上記のプロパティを取得します。 プロジェクト サブタイプには、構成に依存するものと依存しないものの両方について、プロジェクトに対して表示される **[プロパティ ページ]** ダイアログ ボックスのページを制御する必要がある場合もあります。 一部のプロジェクト サブタイプには、組み込みのページを削除し、プロジェクト サブタイプに固有のページを追加する必要がある場合があります。 これを可能にするために、マネージド クライアント プロジェクトから、次のプロパティの <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> メソッドを呼び出します。
 
-- `VSHPROPID_PropertyPagesCLSIDList` —構成に依存しないプロパティページの Clsid をセミコロンで区切った一覧。
+- `VSHPROPID_PropertyPagesCLSIDList` - 構成に依存しないプロパティ ページの CLSID をセミコロンで区切った一覧。
 
-- `VSHPROPID_CfgPropertyPagesCLSIDList —` 構成に依存するプロパティページの Clsid をセミコロンで区切った一覧。
+- `VSHPROPID_CfgPropertyPagesCLSIDList —` 構成に依存するプロパティ ページの CLSID をセミコロンで区切った一覧。
 
-プロジェクトのサブタイプによってオブジェクトが集約されるため <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 、これらのプロパティの定義をオーバーライドして、どの **プロパティページ** のダイアログボックスを表示するかを制御できます。 プロジェクトのサブタイプは、これらのプロパティを内部基本プロジェクトから取得し、必要に応じて Clsid を追加または削除できます。
+プロジェクト サブタイプによって <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> オブジェクトが集約されるため、これらのプロパティの定義をオーバーライドして、どの **[プロパティ ページ]** ダイアログ ボックスを表示するかを制御できます。 プロジェクト サブタイプで、これらのプロパティを内部のベース プロジェクトから取得し、必要に応じて CLSID を追加または削除できます。
 
-プロジェクトのサブタイプによって追加された新しいプロパティページには、プロジェクト構成の参照オブジェクトが基本プロジェクトの実装から渡されます。 このプロジェクト構成の参照オブジェクトは、オートメーションエクステンダーをサポートしています。 AutomationExtenders の詳細については、「 [オートメーションエクステンダーの実装と使用](/previous-versions/0y92k2w2(v=vs.140))」を参照してください。 プロジェクトのサブタイプの呼び出しによって実装されるプロパティページでは、 <xref:EnvDTE.Project.Extender%2A> 基本プロジェクトの構成参照オブジェクトを拡張する独自のプロジェクトサブタイプの構成参照オブジェクトを取得します。
+プロジェクト サブタイプによって追加された新しいプロパティ ページには、ベース プロジェクトの実装からプロジェクト構成参照オブジェクトが渡されます。 このプロジェクト構成参照オブジェクトは、オートメーション エクステンダーをサポートします。 オートメーション エクステンダーの詳細については、「[オートメーション エクステンダーの実装と使用](/previous-versions/0y92k2w2(v=vs.140))」を参照してください。 プロジェクト サブタイプによって実装されるプロパティ ページは、<xref:EnvDTE.Project.Extender%2A> を呼び出して、ベース プロジェクト構成参照オブジェクトを拡張する独自のプロジェクト サブタイプ構成参照オブジェクトを取得します。
 
 ## <a name="see-also"></a>こちらもご覧ください
 
 - <xref:EnvDTE.IFilterProperties>
-- [[プロパティページ] ダイアログボックス](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))
+- [[プロパティ ページ] ダイアログ ボックス](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))

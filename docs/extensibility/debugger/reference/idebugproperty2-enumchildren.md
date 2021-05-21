@@ -1,6 +1,6 @@
 ---
-description: プロパティの子のリストを取得します。
-title: 'IDebugProperty2:: EnumChildren |Microsoft Docs'
+description: プロパティの子の一覧を取得します。
+title: IDebugProperty2::EnumChildren | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 58378b04589c7e55272eeb3c2ce761516835a77c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065048"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
-プロパティの子のリストを取得します。
+プロパティの子の一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,28 +54,28 @@ int EnumChildren (
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-から列挙された[DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md)構造体に格納されるフィールドを指定する、 [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md)列挙のフラグの組み合わせ。
+[入力] [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) 列挙型からのフラグの組み合わせ。列挙された [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 構造体のどのフィールドに格納されるかを指定します。
 
 `dwRadix`\
-から数値情報の書式設定に使用する基数を指定します。
+[入力] 数値情報の書式設定に使用される基数を指定します。
 
 `guidFilter`\
-から `dwAttribFilter` `pszNameFilter` 列挙する子を選択するために、パラメーターとパラメーターで使用されるフィルターの GUID `DEBUG_PROPERTY_INFO` 。 たとえば、 `guidFilterLocals` ローカル変数をフィルター処理します。
+[入力] どの `DEBUG_PROPERTY_INFO` 子を列挙するかを選択するために `dwAttribFilter` および `pszNameFilter` パラメーターで使用されるフィルターの GUID。 たとえば、`guidFilterLocals` により、ローカル変数がフィルター処理されます。
 
 `dwAttribFilter`\
-から列挙するオブジェクトの型を指定する、 [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 列挙体のフラグの組み合わせ `DBG_ATTRIB_METHOD` 。このプロパティの子になる可能性のあるすべてのメソッドなどがあります。 パラメーターとパラメーターを組み合わせて使用 `guidFilter` `pszNameFilter` します。
+[入力] 列挙するオブジェクトの型を指定する [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) 列挙型のフラグの組み合わせ。たとえば、このプロパティの子である可能性のあるすべてのメソッドの `DBG_ATTRIB_METHOD`。 `guidFilter` および `pszNameFilter` パラメーターと組み合わせて使用されます。
 
 `pszNameFilter`\
-から `guidFilter` `dwAttribFilter` 列挙する子を選択するために、パラメーターとパラメーターで使用されるフィルターの名前 `DEBUG_PROPERTY_INFO` 。 たとえば、"MyX" という名前のすべての子のフィルターを "MyX" に設定します。
+[入力] どの `DEBUG_PROPERTY_INFO` 子を列挙するかを選択するために `guidFilter` および `dwAttribFilter` パラメーターで使用されるフィルターの名前。 たとえば、このパラメーターを "MyX" に設定すると、"MyX" という名前のすべての子がフィルター処理されます。
 
 `dwTimeout`\
-からこのメソッドから制御が戻るまでに待機する最大時間をミリ秒単位で指定します。 `INFINITE`無期限に待機するには、を使用します。
+[入力] このメソッドから戻る前に待機する最大時間 (ミリ秒単位) を指定します。 待機時間を指定しない場合は `INFINITE` を使用します。
 
 `ppEnum`\
-入出力子プロパティのリストを格納している [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) オブジェクトを返します。
+[出力] 子プロパティの一覧が格納されている [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)
