@@ -1,6 +1,6 @@
 ---
 description: このモジュールに関する情報を取得します。
-title: 'IDebugModule2:: GetInfo |Microsoft Docs'
+title: IDebugModule2::GetInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 69286a7bf50c32aa3aa720deff78ee957f53fc65
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065659"
@@ -45,18 +45,18 @@ int GetInfo(
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-からどのフィールドを入力するかを指定する、 [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 列挙のフラグの組み合わせ `pInfo` 。
+[in] 入力する `pInfo` のフィールドを指定する [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) 列挙体のフラグの組み合わせ。
 
 `pInfo`\
-[入力、出力]モジュールの説明を入力する [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 構造体。
+[in, out] モジュールの説明が入力されている [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)構造体には、[**モジュール**] ウィンドウに表示されるモジュールの名前が含まれています。
+## <a name="remarks"></a>解説
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 構造体には、 **[モジュール]** ウィンドウに表示されるモジュールの名前が含まれています。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
 - [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md)
 - [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)

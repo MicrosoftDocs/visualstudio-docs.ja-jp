@@ -1,7 +1,8 @@
-﻿---
-title: Stackフレーム Typeenum |Microsoft Docs
+---
+description: スタック フレームの種類を指定します。
+title: StackFrameTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 61e40163-eee0-4c1f-af47-cef3771bdc41
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b0c9dd106e5744a369ddaa6cb870788f7464d3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: b84ad19ec31cd1fae65913827b8ee381711f6534
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738550"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634557"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
-スタックフレームの種類を指定します。
+スタック フレームの種類を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,24 +36,24 @@ enum StackFrameTypeEnum {
 };
 ```
 
-## <a name="elements"></a>Elements
-`FrameTypeFPO` フレームポインターを省略します。FPO info を利用できます。
+## <a name="elements"></a>要素
+`FrameTypeFPO` 省略されたフレーム ポインター。FPO の情報を利用できます。
 
-`FrameTypeTrap` カーネルトラップフレーム。
+`FrameTypeTrap` カーネル トラップ フレーム。
 
-`FrameTypeTSS` カーネルトラップフレーム。
+`FrameTypeTSS` カーネル トラップ フレーム。
 
-`FrameTypeStandard` 標準の EBP スタックフレームです。
+`FrameTypeStandard` 標準 EBP スタック フレーム。
 
-`FrameTypeFrameData` フレームポインターを省略します。使用可能なフレームデータ情報です。
+`FrameTypeFrameData` 省略されたフレーム ポインター。フレーム データの情報を利用できます。
 
-デバッグ情報が含まれていないフレームを `FrameTypeUnknown` します。
+`FrameTypeUnknown` デバッグ情報が含まれていないフレーム。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)メソッドの呼び出しによって返されます。
+## <a name="remarks"></a>解説
+この列挙の値は、[IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) メソッドへの呼び出しによって返されます。
 
-## <a name="requirements"></a>［要件］
-ヘッダー: cvconst. h
+## <a name="requirements"></a>必要条件
+ヘッダー: cvconst.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)

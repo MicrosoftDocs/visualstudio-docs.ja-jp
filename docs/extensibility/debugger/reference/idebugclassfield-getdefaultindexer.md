@@ -1,6 +1,6 @@
 ---
 description: 既定のインデクサーの名前を取得します。
-title: 'IDebugClassField:: GetDefaultIndexer |Microsoft Docs'
+title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 8ce8a492ea4d45a54a295617d7863b0623fd6a87
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088550"
@@ -41,13 +41,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>パラメーター
-`pbstrIndexer` 入出力既定のインデクサーの名前を含む文字列を返します。
+`pbstrIndexer` [out] 既定のインデクサーの名前を含む文字列を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。既定のインデクサーがない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。
+ 成功した場合は、S_OK を返します。既定のインデクサーがない場合は、S_FALSE を返します。 それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- クラスの既定のインデクサーは、 `Default` 配列アクセスのプロパティとしてマークされているプロパティです。 これは、に固有のものです [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] 。 で宣言された既定のインデクサーの例 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] と、その使用方法を次に示します。
+## <a name="remarks"></a>解説
+ クラスの既定のインデクサーは、配列アクセスの `Default` プロパティとしてマークされているプロパティです。 これは [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] に固有のものです。 [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] で宣言された既定のインデクサーの例と、その使用方法を次に示します。
 
 ```vb
 Imports System.Collections;
@@ -79,5 +79,5 @@ Function GetItem(Index as Integer) as Integer
 End Function
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

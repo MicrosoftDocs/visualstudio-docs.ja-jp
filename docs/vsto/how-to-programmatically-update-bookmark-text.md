@@ -1,6 +1,6 @@
 ---
-title: '方法: プログラムによってブックマークテキストを更新する'
-description: Visual Studio を使用して、Microsoft Word 文書のプレースホルダーブックマークにテキストをプログラムで挿入する方法について説明します。
+title: '方法: プログラムによってブックマークのテキストを更新する'
+description: Visual Studio を使用し、Microsoft Word 文書のプレースホルダー ブックマークにテキストをプログラムによって挿入する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,13 +18,13 @@ ms.workload:
 - office
 ms.openlocfilehash: f67dbbe4d1d5c24d617f9cbc49a58ec2d134e90b
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826201"
 ---
-# <a name="how-to-programmatically-update-bookmark-text"></a>方法: プログラムによってブックマークテキストを更新する
-  Microsoft Office Word 文書のプレースホルダー ブックマークにテキストを挿入することにより、そのテキストを後で取得したり、ブックマーク内のテキストを置き換えたりすることができます。 ドキュメント レベルのカスタマイズを開発している場合は、データにバインドされた <xref:Microsoft.Office.Tools.Word.Bookmark> コントロール内のテキストを更新することもできます。 詳細については、「 [データを Office ソリューションのコントロールにバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)」を参照してください。
+# <a name="how-to-programmatically-update-bookmark-text"></a>方法: プログラムによってブックマークのテキストを更新する
+  Microsoft Office Word 文書のプレースホルダー ブックマークにテキストを挿入することにより、そのテキストを後で取得したり、ブックマーク内のテキストを置き換えたりすることができます。 ドキュメント レベルのカスタマイズを開発している場合は、データにバインドされた <xref:Microsoft.Office.Tools.Word.Bookmark> コントロール内のテキストを更新することもできます。 詳細については、「[Office ソリューションのコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)」を参照してください。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -32,15 +32,15 @@ ms.locfileid: "107826201"
 
 - <xref:Microsoft.Office.Tools.Word.Bookmark> ホスト コントロール。
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、ネイティブ <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトを拡張したもので、データのバインドとイベントの公開が可能になります。 ホストコントロールの詳細については、「 [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)」を参照してください。
+   <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールは、ネイティブ <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトを拡張したもので、データのバインドとイベントの公開が可能になります。 ホスト コントロールについて詳しくは、「[ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)」をご覧ください。
 
 - <xref:Microsoft.Office.Interop.Word.Bookmark> ネイティブ オブジェクトです。
 
    <xref:Microsoft.Office.Interop.Word.Bookmark> オブジェクトには、イベントや、データのバインド機能はありません。
 
-  ブックマークにテキストを割り当てる場合、<xref:Microsoft.Office.Interop.Word.Bookmark> と <xref:Microsoft.Office.Tools.Word.Bookmark> の動作は異なります。 詳細については、「 [Bookmark コントロール](../vsto/bookmark-control.md)」を参照してください。
+  ブックマークにテキストを割り当てる場合、<xref:Microsoft.Office.Interop.Word.Bookmark> と <xref:Microsoft.Office.Tools.Word.Bookmark> の動作は異なります。 詳細については、「[Bookmark コントロール](../vsto/bookmark-control.md)」を参照してください。
 
-## <a name="use-host-controls"></a>ホストコントロールを使用する
+## <a name="use-host-controls"></a>ホスト コントロールを使用する
 
 ### <a name="to-update-bookmark-contents-using-a-bookmark-control"></a>Bookmark コントロールを使用してブックマークの内容を更新するには
 
@@ -52,7 +52,7 @@ ms.locfileid: "107826201"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet63":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet63":::
 
-2. *NewText* 文字列を <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> のプロパティに割り当て <xref:Microsoft.Office.Tools.Word.Bookmark> ます。
+2. 文字列 *newText* を <xref:Microsoft.Office.Tools.Word.Bookmark> の <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> プロパティに割り当てます。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet64":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet64":::
@@ -69,7 +69,7 @@ ms.locfileid: "107826201"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet65":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet65":::
 
-2. ブックマークのプロパティに *newText* 文字列を割り当てます。これにより、 <xref:Microsoft.Office.Interop.Word.Range.Text%2A> ブックマークが自動的に削除されます。 その後、<xref:Microsoft.Office.Interop.Word.Bookmarks> コレクションにブックマークを再び追加します。
+2. 文字列 *newText* をブックマークの <xref:Microsoft.Office.Interop.Word.Range.Text%2A> プロパティに割り当てます。これによって、ブックマークが自動的に削除されます。 その後、<xref:Microsoft.Office.Interop.Word.Bookmarks> コレクションにブックマークを再び追加します。
 
      次のコード例はドキュメント レベルのカスタマイズで使用できます。
 
@@ -83,5 +83,5 @@ ms.locfileid: "107826201"
 
 ## <a name="see-also"></a>関連項目
 - [方法: プログラムによって Word 文書にテキストを挿入する](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [Word オブジェクトモデルの概要](../vsto/word-object-model-overview.md)
+- [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)
 - [Bookmark コントロール](../vsto/bookmark-control.md)

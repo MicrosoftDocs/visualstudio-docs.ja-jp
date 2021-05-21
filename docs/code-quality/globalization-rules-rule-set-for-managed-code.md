@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "グローバリゼーション規則" 規則セット
 ms.date: 11/04/2016
-description: 言語、ロケール、およびカルチャに関連する問題に焦点を当てた、Visual Studio でのグローバリゼーション規則の規則セットについて説明します。 ルールの説明を参照してください。
+description: Visual Studio の "グローバリゼーション規則" 規則セットについて説明します。これは言語、ロケール、およびカルチャに関連する問題に焦点を当てています。 規則の説明を示します。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 3c4032ee-0805-4581-8c48-b1827cd6b213
@@ -12,14 +12,14 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: fdf816b978aac5d22b1750eeabe3737f1eb64085
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867933"
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>マネージド コードの "グローバリゼーション規則" 規則セット
 
-Microsoft グローバリゼーションルールのルールセットを使用して、アプリケーションのデータが異なる言語、ロケール、およびカルチャで正しく表示されない可能性のある問題に焦点を当てます。 アプリケーションがローカライズ、グローバル化、またはその両方である場合は、この規則セットを含める必要があります。
+Microsoft の "グローバリゼーション規則" 規則セットを使用して、アプリケーションのデータが異なる言語、ロケール、およびカルチャで正しく表示されない可能性のある問題に焦点を当てます。 アプリケーションのローカライズまたはグローバル化 (またはその両方) を行う場合には、この規則セットを含める必要があります。
 
 |ルール|説明|
 |----------|-----------------|

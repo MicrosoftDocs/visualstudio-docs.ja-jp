@@ -1,6 +1,6 @@
 ---
-description: 特定のコンピューターに対して取得する情報の種類を指定します。
-title: MACHINE_INFO_FIELDS |Microsoft Docs
+description: 特定のコンピューターについて、取得する情報の種類を指定します。
+title: MACHINE_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3361ed090dc724f948d98aa0037949e0c573d56d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057937"
 ---
 # <a name="machine_info_fields"></a>MACHINE_INFO_FIELDS
-特定のコンピューターに対して取得する情報の種類を指定します。
+特定のコンピューターについて、取得する情報の種類を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_MACHINE_INFO_FIELDS { 
@@ -47,25 +47,25 @@ public enum enum_MACHINE_INFO_FIELDS {
 
 ## <a name="fields"></a>フィールド
  `MCIF_NAME`\
- 構造体のフィールドを初期化/使用し `bstrName` ます。
+ 構造体の `bstrName` フィールドを初期化および使用します。
 
  `MCIF_FLAGS`\
- 構造体のフィールドを初期化/使用し `Flags` ます。
+ 構造体の `Flags` フィールドを初期化および使用します。
 
  `MIF_ALL`\
- 構造体のすべてのフィールドを初期化/使用します。
+ 構造体の該当するフィールドすべてを初期化および使用します。
 
-## <a name="remarks"></a>注釈
- これらの値は、 [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)構造体のどのメンバーを初期化するかを示すために[getmachineinfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)メソッドに渡されます。
+## <a name="remarks"></a>解説
+ これらの値は [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) メソッドに渡され、[MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) 構造体のどのメンバーを初期化するかを示します。
 
- また、 `Fields` 構造体のメンバーで、使用され `MACHINE_INFO` ているフィールドと有効なフィールドを示すためにも使用されます。
+ また、`MACHINE_INFO` 構造体の `Fields` メンバーでも使用され、どのフィールドが使用され有効になっているかが示されます。
 
- これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+ これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

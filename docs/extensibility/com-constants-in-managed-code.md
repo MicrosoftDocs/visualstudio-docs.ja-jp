@@ -1,6 +1,6 @@
 ---
-title: マネージコードの COM 定数 |Microsoft Docs
-description: マネージパッケージフレームワークについて説明します。これにより、いくつかの標準 COM 定数をマネージコードで使用できるようになります。
+title: マネージド コードの COM 定数 | Microsoft Docs
+description: Managed Package Framework について学習します。これにより、いくつかの標準 COM 定数をマネージド コードで使用できるようになります。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,15 +14,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8aed8ec62278850d0b091320c12ece484778eb15
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089733"
 ---
-# <a name="com-constants-in-managed-code"></a>マネージコードの COM 定数
-Managed Package Framework (MPF) では、一部の標準 COM 定数をマネージコードで使用できます。 これらの定数を以下に示します。
+# <a name="com-constants-in-managed-code"></a>マネージド コードの COM 定数
+Managed Package Framework (MPF) により、いくつかの標準 COM 定数をマネージド コードで使用できるようになります。 参考までに、これらの定数の一覧を以下に示します。
 
-## <a name="boolean-hresult-values"></a>ブール値の HRESULT 値
+## <a name="boolean-hresult-values"></a>ブール型の HRESULT 値
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>
 
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>
@@ -91,7 +91,7 @@ Managed Package Framework (MPF) では、一部の標準 COM 定数をマネー�
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>
 
-## <a name="ole-dispatch-errors"></a>OLE ディスパッチエラー
+## <a name="ole-dispatch-errors"></a>OLE ディスパッチ エラー
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>
@@ -128,5 +128,5 @@ Managed Package Framework (MPF) では、一部の標準 COM 定数をマネー�
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md)

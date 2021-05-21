@@ -1,7 +1,8 @@
 ---
-title: 'IDiaPropertyStorage:: ReadULONGLONG |Microsoft Docs'
+description: プロパティ セット内の ULONGLONG 値を読み取ります。
+title: IDiaPropertyStorage::ReadULONGLONG | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: f80a2e24-5744-4fec-bab0-3ed51aef6e58
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: dde2f111e468b8ccf6c1d91440f06d3e7048a0f6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: f314152355459ffd2437621efaae002ef284c765
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742853"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634374"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
-プロパティセット内の `ULONGLONG` 値を読み取ります。
+プロパティ セット内の `ULONGLONG` 値を読み取ります。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT ReadULONGLONG ( 
+HRESULT ReadULONGLONG ( 
    PROPID     id,
    ULONGLONG* pValue
 );
@@ -34,17 +35,17 @@ HRESULT ReadULONGLONG ( 
 #### <a name="parameters"></a>パラメーター
  `id`
 
-から読み取るプロパティの識別子 (`PROPID` は、WTypes. h で `ULONG` として定義されています)。
+[入力] 読み取るプロパティの識別子 (`PROPID` は、WTypes.h に `ULONG` として定義されます)。
 
  `pValue`
 
-入出力プロパティ値を返します。
+[出力] プロパティ値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 プロパティが `ULONGLONG` 型でない場合は `E_INVALIDARG` を返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 プロパティの型が `ULONGLONG` ではない場合、`E_INVALIDARG` を返します。
 
-## <a name="remarks"></a>Remarks
- @No__t_0 は、Windows によって64ビット符号なし整数として定義されます。
+## <a name="remarks"></a>解説
+ `ULONGLONG` は、Windows で、64 ビットの符号なし整数として定義されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

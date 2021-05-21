@@ -1,6 +1,6 @@
 ---
-description: では、コアサーバーを選択して操作するためのポートサプライヤーがサポートされています。
-title: IDebugPortSupplierEx2 |Microsoft Docs
+description: ポート サプライヤーでコア サーバーを選択して操作するためのサポートを提供します。
+title: IDebugPortSupplierEx2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,38 +13,38 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c2020f3efe2bd7562640fd44e45a10c9a3a6c767
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071845"
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
-では、コアサーバーを選択して操作するためのポートサプライヤーがサポートされています。
+ポート サプライヤーでコア サーバーを選択して操作するためのサポートを提供します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```
 IDebugPortSupplierEx2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>実装側の注意
- カスタムポート供給業者は、このインターフェイスを実装して、使用するコアサーバーを選択できるようにします。
+ カスタム ポート サプライヤーではこのインターフェイスを実装し、使用するコア サーバーを選択できるようにします。
 
 ## <a name="methods"></a>メソッド
- 次の表は、 **IDebugPortSupplierEx2** のメソッドを示しています。
+ 次の表は、**IDebugPortSupplierEx2** のメソッドを示しています。
 
 |メソッド|説明|
 |------------|-----------------|
-|[SetServer](../../../extensibility/debugger/reference/idebugportsupplierex2-setserver.md)|ポートサプライヤーのコアサーバーを設定します。|
+|[SetServer](../../../extensibility/debugger/reference/idebugportsupplierex2-setserver.md)|ポート サプライヤーのコア サーバーを設定します。|
 
-## <a name="requirements"></a>要件
- ヘッダー: Portpriv. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: Portpriv.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
-- [コアインターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)
+## <a name="see-also"></a>関連項目
+- [コア インターフェイス](../../../extensibility/debugger/reference/core-interfaces.md)
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)
 - [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

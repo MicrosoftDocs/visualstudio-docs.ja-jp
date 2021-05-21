@@ -1,6 +1,6 @@
 ---
-title: '&lt;customization &gt; 要素 (Visual Studio での Office 開発)'
-description: Vstov4 名前空間のカスタマイズ要素が特定の Office ソリューションについて記述する方法について説明します。
+title: '&lt;customization&gt; 要素 (Visual Studio での Office 開発)'
+description: vstov4 名前空間の customization 要素での特定の Office ソリューションの記述方法について説明します。
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
@@ -17,15 +17,15 @@ ms.workload:
 - office
 ms.openlocfilehash: e63b93728f41dcff360da8ee9d14e2830d216be5
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99849945"
 ---
-# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;customization &gt; 要素 (Visual Studio での Office 開発)
+# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;customization&gt; 要素 (Visual Studio での Office 開発)
   `customization` 名前空間の `vstov4` 要素では、特定の Office ソリューションについて記述します。 ドキュメント レベルのカスタマイズと VSTO アドインでは、子要素が異なります。
 
-## <a name="syntax-for-document-level-customizations"></a>ドキュメントレベルのカスタマイズの構文
+## <a name="syntax-for-document-level-customizations"></a>ドキュメント レベルの customizations の構文
 
 ```xml
 <customization
@@ -62,22 +62,22 @@ ms.locfileid: "99849945"
 |---------------|-----------------|
 |`id`|複数プロジェクトの配置の場合は必須です。 `id` 要素によって、Office ソリューションを一意に識別します。|
 
-### <a name="document-level-customizations"></a>カスタマイズの Document-Level
+### <a name="document-level-customizations"></a>ドキュメントレベルのカスタマイズ
  `customization` 要素には、次の子要素があります。
 
 #### <a name="document"></a>ドキュメント
- `document`名前空間の要素 `vstov4` は[&#60;document&#62; 要素 &#40;Visual Studio&#41;での Office 開発](../vsto/document-element-office-development-in-visual-studio.md)に定義されています。
+ `vstov4` 名前空間の `document` 要素は、「[&#60;document&#62; 要素 &#40;Visual Studio での Office 開発&#41;](../vsto/document-element-office-development-in-visual-studio.md)」で定義されています。
 
 ### <a name="vsto-add-ins"></a>VSTO アドイン
  `customization` 要素には、次の子要素があります。
 
 #### <a name="appaddin"></a>appAddin
- `appAddin`名前空間の要素 `vstov4` は[&#60;appaddin&#62; 要素で定義され、Visual Studio&#41;での Office 開発 &#40;](../vsto/appaddin-element-office-development-in-visual-studio.md)ます。
+ `vstov4` 名前空間の `appAddin` 要素は、「[&#60;appAddin&#62; 要素 &#40;Visual Studio での Office 開発&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md)」で定義されています。
 
-## <a name="example-of-a-document-level-customization"></a>ドキュメントレベルのカスタマイズの例
+## <a name="example-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの例
 
-### <a name="description"></a>Description
- 次のコード例は、ドキュメント レベルのカスタマイズの `customization` 要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+### <a name="description"></a>説明
+ 次のコード例は、ドキュメント レベルのカスタマイズの `customization` 要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。
 
 ### <a name="code"></a>コード
 
@@ -90,8 +90,8 @@ ms.locfileid: "99849945"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO アドインの例
 
-### <a name="description"></a>Description
- 次のコード例は、 `customization` VSTO アドインの要素を示しています。 この例は、フォーム領域が含まれた Outlook VSTO アドインです。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+### <a name="description"></a>説明
+ 次のコード例では、VSTO アドインの `customization` 要素を示しています。 この例は、フォーム領域が含まれた Outlook VSTO アドインです。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」に記載されている例から一部を抜粋したものです。
 
 ### <a name="code"></a>コード
 
@@ -122,6 +122,6 @@ ms.locfileid: "99849945"
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューション用アプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)
-- [Office ソリューションの配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)
+- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

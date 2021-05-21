@@ -1,6 +1,6 @@
 ---
-description: モジュールを記述するために使用されます。
-title: MODULE_FLAGS |Microsoft Docs
+description: モジュールを説明するために使用されます。
+title: MODULE_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b78e0ec9f720307a60485283b98939dee954ff29
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079788"
 ---
 # <a name="module_flags"></a>MODULE_FLAGS
-モジュールを記述するために使用されます。
+モジュールを説明するために使用されます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_MODULE_FLAGS { 
@@ -56,29 +56,29 @@ public enum enum_MODULE_FLAGS {
  モジュールを指定しません。
 
  `MODULE_FLAG_SYSTEM`\
- システムモジュールを指定します。
+ システム モジュールを指定します。
 
  `MODULE_FLAG_SYMBOLS`\
- シンボルモジュールを指定します。
+ シンボル モジュールを指定します。
 
  `MODULE_FLAG_64BIT`\
- 64ビットモジュールを指定します。
+ 64 ビット モジュールを指定します。
 
  `MODULE_FLAG_OPTIMIZED`\
- モジュールが最適化されていることを指定します。 この状態は、[ **モジュール** ] ウィンドウに反映されます。
+ モジュールが最適化されていることを指定します。 この状態は、 **[モジュール]** ウィンドウに反映されます。
 
  `MODULE_FLAG_UNOPTIMIZED`\
- モジュールが最適化されていないことを指定します。 この状態は、[ **モジュール** ] ウィンドウに反映されます。 これが既定の状態です。
+ モジュールが最適化されていないことを指定します。 この状態は、 **[モジュール]** ウィンドウに反映されます。 これが既定の状態です。
 
-## <a name="remarks"></a>注釈
- `m_dwModuleFlags` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)構造体のメンバーに使用されます。
+## <a name="remarks"></a>解説
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) 構造体の `m_dwModuleFlags` メンバーに使用されます。
 
- これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+ これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSession:: findSymbolsForAcceleratorPointerTag |Microsoft Docs'
+description: 親アクセラレータ スタブ関数で指定のタグ値が対応する変数のシンボルの列挙型を返します。
+title: IDiaSession::findSymbolsForAcceleratorPointerTag | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 95fd5e7a-c637-437e-b369-c864eef733c2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: da795770ad0f6f57697bc17a4ee8cf936cfc1183
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 4d1a177cd1c36a2e51f846bf60edfbef875a51df
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741974"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635007"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-親アクセラレータスタブ関数で、指定したタグ値が対応する変数のシンボルの列挙体を返します。
+親アクセラレータ スタブ関数で指定のタグ値が対応する変数のシンボルの列挙型を返します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findSymbolsForAcceleratorPointerTag ( 
+HRESULT findSymbolsForAcceleratorPointerTag ( 
    IDiaSymbol*           parent,
    DWORD                 tagValue,
    IDiaEnumSymbols**     ppResult
@@ -33,18 +34,18 @@ HRESULT findSymbolsForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>パラメーター
  `parent`
 
-から検索対象の Accelerator スタブ関数に対応する IDiaSymbol。
+[入力] 検索するアクセラレータ スタブ関数に対応する IDiaSymbol。
 
  `tagValue`
 
-からポインターのタグ値。
+[入力] ポインター タグ値。
 
  `ppResult`
 
-入出力結果を使用して初期化される `IDiaEnumSymbols` インターフェイスポインターへのポインター。
+[出力] 結果で初期化される `IDiaEnumSymbols` インターフェイス ポインターへのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

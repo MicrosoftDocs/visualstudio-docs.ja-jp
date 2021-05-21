@@ -1,6 +1,6 @@
 ---
 title: T4 インポート ディレクティブ
-description: Visual Studio T4 テキストテンプレートで、import ディレクティブを使用すると、完全修飾名を指定しなくても、別の名前空間の要素を参照できます。
+description: Visual Studio の T4 テキスト テンプレートでインポート ディレクティブを使用すると、完全修飾名を指定しなくても別の名前空間の要素を参照できることについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,16 +11,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d9eb50261b346d8751a76817d97d59a798d17236
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99899660"
 ---
 # <a name="t4-import-directive"></a>T4 インポート ディレクティブ
 
-Visual Studio T4 テキストテンプレートのコードブロックでは、ディレクティブを `import` 使用して、完全修飾名を指定せずに別の名前空間の要素を参照することができます。 このディレクティブは、C# の `using` または `imports` の [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] に相当します。
+Visual Studio の T4 テキスト テンプレートのコード ブロックで `import` ディレクティブを使用すると、完全修飾名を指定しなくても別の名前空間の要素を参照できます。 このディレクティブは、C# の `using` または `imports` の [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] に相当します。
 
-T4 テキストテンプレートの作成の概要については、「 [T4 テキストテンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。
+T4 テキスト テンプレートの作成方法の概要については、「[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。
 
 ## <a name="using-the-import-directive"></a>import ディレクティブの使用
 

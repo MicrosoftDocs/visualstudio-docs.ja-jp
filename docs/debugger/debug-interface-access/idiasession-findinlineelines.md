@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSession:: Findinlineline|Microsoft Docs'
+description: 指定の親シンボルで直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復処理することを可能にする列挙体を取得します。
+title: IDiaSession::findInlineeLines | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b6822d8b-70d5-470b-8278-3aec4680326c
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5103a881b1b046479a1a3156f06038e230f5063e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: bb3f5fa1062d6894e1820ebd7175cd5434056bb8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742241"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634822"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
-指定した親シンボルによってインラインで、直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復処理できるようにする列挙体を取得します。
+指定の親シンボルで直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復処理することを可能にする列挙体を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findInlineeLines ( 
+HRESULT findInlineeLines ( 
    IDiaSymbol*       parent,
    IDiaEnumLineNumbers** ppResult
 );
@@ -32,14 +33,14 @@ HRESULT findInlineeLines ( 
 #### <a name="parameters"></a>パラメーター
  `parent`
 
-から親を表す `IDiaSymbol` オブジェクト。
+[入力] 親を表す `IDiaSymbol` オブジェクト。
 
  `ppResult`
 
-入出力取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
+[出力] 取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

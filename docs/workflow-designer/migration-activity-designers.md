@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナー移行アクティビティデザイナー
-description: 移行アクティビティデザイナーを使用して、.NET Framework 4 以降を対象とするワークフローから workflow 3.0/3.5 アクティビティを呼び出す方法について説明します。
+title: ワークフロー デザイナー - 移行アクティビティ デザイナー
+description: 移行アクティビティ デザイナーを使用して、.NET Framework 4 以降を対象とするワークフローからワークフロー 3.0/3.5 アクティビティを呼び出す方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,20 +12,20 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d808603dde5853aa7d7f0edc6052d7e34cb9c73a
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99905206"
 ---
 # <a name="migration-activity-designers"></a>移行アクティビティ デザイナー
 
-移行アクティビティデザイナーは、.NET Framework 4 以降を対象とするワークフローから workflow 3.0/3.5 アクティビティを呼び出すために使用されます。
+移行アクティビティ デザイナーは、.NET Framework 4 以降を対象とするワークフローからワークフロー 3.0/3.5 アクティビティを呼び出すために使用されます。
 
-このセクションに含まれるトピックでは、ワークフローデザイナーアクティビティデザイナーの使用方法について説明します。
+このセクションに含まれているトピックでは、ワークフロー デザイナーのアクティビティ デザイナーの使用方法についてのガイドラインを示します。
 
 ## <a name="related-sections"></a>関連項目
 
-その他の種類のアクティビティデザイナーについては、次のトピックを参照してください。
+他の種類のアクティビティ デザイナーについては、次のトピックを参照してください。
 
 - [制御フロー](../workflow-designer/control-flow-activity-designers.md)
 

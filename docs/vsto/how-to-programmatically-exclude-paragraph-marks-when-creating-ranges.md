@@ -1,5 +1,5 @@
 ---
-title: プログラムによって範囲を作成するときに段落記号を除外する
+title: 範囲を作成するときにプログラムによって段落記号を除外する
 description: Microsoft Word 文書で範囲を作成するときに、プログラムによって段落記号を除外する方法について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
@@ -20,7 +20,7 @@ ms.workload:
 - office
 ms.openlocfilehash: c0929ccf3bb2567099dc7f3b795ad2257da0edb3
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825798"
@@ -80,7 +80,7 @@ ms.locfileid: "107825798"
 
      2 つの範囲の元の内容は文字列として保存されているため、ドキュメントを元の状態に復元することができます。
 
-8. `firstRange` <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> 1 文字の位置に対してメソッドを使用して、段落記号を含めるように再調整します。
+8. 1 文字分の位置に `firstRange` メソッドを使用して <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> を再調整し、段落記号を含めます。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet34":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet34":::
@@ -100,7 +100,7 @@ ms.locfileid: "107825798"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet37":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet37":::
 
-## <a name="document-level-customization-example"></a>ドキュメントレベルのカスタマイズの例
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例
 
 ### <a name="to-control-paragraph-structure-when-inserting-text-in-document-level-customizations"></a>ドキュメント レベルのカスタマイズでテキストを挿入するときに段落の構造を制御するには
 
@@ -111,17 +111,17 @@ ms.locfileid: "107825798"
 
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例
 
-### <a name="to-control-paragraph-structure-when-inserting-text-in-a-vsto-add-in"></a>VSTO アドインにテキストを挿入するときに段落の構造を制御するには
+### <a name="to-control-paragraph-structure-when-inserting-text-in-a-vsto-add-in"></a>VSTO アドインにテキストを挿入するときに、段落の構造を制御するには
 
-1. 次の例は、VSTO アドインの完全なメソッドを示しています。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。
+1. 次の例は、VSTO アドインのメソッド全体を示しています。 このコードを使用するには、プロジェクトの `ThisAddIn` クラスから実行します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet26":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet26":::
 
 ## <a name="see-also"></a>関連項目
-- [方法: プログラムによって文書内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [方法: プログラムによって文書内の範囲または選択項目を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+- [方法: プログラムによってドキュメント内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [方法: プログラムによって文書内の範囲または選択範囲を縮小する](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
 - [方法: プログラムによって Word 文書にテキストを挿入する](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [方法: プログラムによって Word 文書の範囲をリセットする](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
-- [方法: プログラムによって文書内の範囲を定義および選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [方法: プログラムによって文書に複数の範囲を定義して選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 - [Office ソリューションの省略可能なパラメーター](../vsto/optional-parameters-in-office-solutions.md)

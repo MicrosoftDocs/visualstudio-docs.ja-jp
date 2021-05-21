@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、このブレークポイント要求を記述するブレークポイント要求情報を取得します。
-title: 'IDebugBreakpointRequest3:: GetRequestInfo2 |Microsoft Docs'
+description: このメソッドは、このブレークポイント要求を説明するブレークポイント要求情報を取得します。
+title: IDebugBreakpointRequest3::GetRequestInfo2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 46c4984251d7546df5ea82f4c674b8ab849d27c8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054440"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
-このメソッドは、このブレークポイント要求を記述するブレークポイント要求情報を取得します。
+このメソッドは、このブレークポイント要求を説明するブレークポイント要求情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,18 +44,18 @@ int GetRequestInfo2(
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-からに入力するフィールドを決定する、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙のフラグの組み合わせ `pBPRequestInfo` 。
+[in] 設定する `pBPRequestInfo` のフィールドを決定する、[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙型のフラグの組み合わせ。
 
 `bBPRequestInfo`\
-入出力入力する [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体。
+[out] 設定する [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- この要求には、 [Getrequestinfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) メソッドから返された情報よりも詳細な情報があります。
+## <a name="remarks"></a>解説
+ この要求には、[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md) メソッドから返されるものより多くの情報があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBreakpointRequest3](../../../extensibility/debugger/reference/idebugbreakpointrequest3.md)
 - [GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)
 - [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

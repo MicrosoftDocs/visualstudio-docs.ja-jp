@@ -1,6 +1,6 @@
 ---
-description: アプリケーションドメイン識別子を指定して、指定したモジュールのデバッグシンボルを読み込むかどうかを決定します。
-title: 'IDebugComPlusSymbolProvider:: Aresymbold Sloaded |Microsoft Docs'
+description: アプリケーション ドメインの識別子を指定して、指定したモジュールのデバッグ シンボルを読み込むかどうかを判定します。
+title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 567a0906544a28c2f145e8b4361045b56b6f9278
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088303"
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-アプリケーションドメイン識別子を指定して、指定したモジュールのデバッグシンボルを読み込むかどうかを決定します。
+アプリケーション ドメインの識別子を指定して、指定したモジュールのデバッグ シンボルを読み込むかどうかを判定します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int AreSymbolsLoaded (
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意の識別子。
+[in] モジュールの一意識別子。
 
 ## <a name="return-value"></a>戻り値
-デバッグシンボルが読み込まれると、はを返します。 `S_OK` それ以外の場合はを返し `S_FALSE` ます。
+デバッグ シンボルが読み込まれた場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` を返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(
@@ -74,5 +74,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

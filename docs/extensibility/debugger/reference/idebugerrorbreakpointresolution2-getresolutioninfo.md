@@ -1,6 +1,6 @@
 ---
-description: ブレークポイントのエラー解決情報を取得します。
-title: 'IDebugErrorBreakpointResolution2:: Get Info |Microsoft Docs'
+description: ブレークポイント エラーの解決情報を取得します。
+title: IDebugErrorBreakpointResolution2::GetResolutionInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9329302a81fd7dd93bbb96dce5c5747edf40bf1c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065789"
 ---
 # <a name="idebugerrorbreakpointresolution2getresolutioninfo"></a>IDebugErrorBreakpointResolution2::GetResolutionInfo
-ブレークポイントのエラー解決情報を取得します。
+ブレークポイント エラーの解決情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int GetResolutionInfo(
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-からどのフィールドを入力するかを決定する、 [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) 列挙のフラグの組み合わせ `pErrorResolutionInfo` 。
+[in] 入力する `pErrorResolutionInfo` のフィールドを判断する [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) 列挙体のフラグの組み合わせ。
 
 `pErrorResolutionInfo`\
-[入力、出力]ブレークポイントの解決の説明が入力されている [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) 構造体。
+[in, out] ブレークポイントの解決の説明が入力されている [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例では、IDebugErrorBreakpointResolution2 インターフェイスを公開する単純なオブジェクトに対して、このメソッドを実装して `CDebugErrorBreakpointResolution` います。 [](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
+次の例では、[IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) インターフェイスを公開するシンプルな `CDebugErrorBreakpointResolution` オブジェクトに対して、このメソッドを実装しています。
 
 ```cpp
 HRESULT CDebugErrorBreakpointResolution::GetResolutionInfo(
@@ -153,7 +153,7 @@ HRESULT CDebugErrorBreakpointResolution::CopyBP_ERROR_RESOLUTION_INFO(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
 - [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md)

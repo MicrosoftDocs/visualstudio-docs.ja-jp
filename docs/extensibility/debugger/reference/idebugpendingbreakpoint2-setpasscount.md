@@ -1,6 +1,6 @@
 ---
-description: 保留中のブレークポイントに関連付けられているパスカウントを設定または変更します。
-title: 'IDebugPendingBreakpoint2:: Setpass Count |Microsoft Docs'
+description: 保留中のブレークポイントに関連付けられているパス カウントを設定または変更します。
+title: IDebugPendingBreakpoint2::SetPassCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d83249667bd9489b052f35a4d3d3b7ca826d540f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058353"
 ---
 # <a name="idebugpendingbreakpoint2setpasscount"></a>IDebugPendingBreakpoint2::SetPassCount
-保留中のブレークポイントに関連付けられているパスカウントを設定または変更します。
+保留中のブレークポイントに関連付けられているパス カウントを設定または変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,14 +43,14 @@ int SetPassCount(
 
 ## <a name="parameters"></a>パラメーター
 `bpPassCount`\
-からパスカウントを格納している [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) 構造体。
+[in] パス カウントが格納される [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`ブレークポイントが削除されている場合は、を返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 ブレークポイントが削除されている場合は、`E_BP_DELETED` を返します。
 
-## <a name="remarks"></a>注釈
- 保留中のブレークポイントに関連付けられていたパスカウントは失われます。 この保留中のブレークポイントからバインドされたすべてのブレークポイントは、パスカウントをパラメーターに設定するために呼び出され `bpPassCount` ます。
+## <a name="remarks"></a>解説
+ 保留中のブレークポイントに以前に関連付けられたパス カウントは失われます。 この保留中のブレークポイントからバインドされているブレークポイントはすべて呼び出され、それらのパス カウントが `bpPassCount` パラメーターに設定されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)

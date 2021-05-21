@@ -1,5 +1,5 @@
 ---
-title: '方法: NamedRange コントロールのサイズを変更する'
+title: '方法 : NamedRange コントロールのサイズを変更する'
 description: Visual Studio を使用して、Microsoft Excel ブック内の NamedRange コントロールのサイズをプログラムによって変更する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -18,12 +18,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 3b70b34de222c35903a4f08b95d9efe8d8f896d9
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826461"
 ---
-# <a name="how-to-resize-namedrange-controls"></a>方法: NamedRange コントロールのサイズを変更する
+# <a name="how-to-resize-namedrange-controls"></a>方法 : NamedRange コントロールのサイズを変更する
   <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのサイズは Microsoft Office Excel ドキュメントにコントロールを追加するときに設定できますが、後でサイズの変更が必要になる場合があります。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "107826461"
 
  このトピックでは、次のタスクについて説明します。
 
-- [デザイン時に NamedRange コントロールのサイズを変更する](#designtime)
+- [デザイン時に NamedRange コントロールをサイズ変更する](#designtime)
 
-- [実行時にドキュメントレベルのプロジェクトの NamedRange コントロールのサイズを変更する](#runtimedoclevel)
+- [実行時にドキュメント レベルのプロジェクトの NamedRange コントロールをサイズ変更する](#runtimedoclevel)
 
-- [実行時に VSTO アドインプロジェクトの NamedRange コントロールのサイズを変更する](#runtimeaddin)
+- [実行時に VSTO アドイン プロジェクトの NamedRange コントロールをサイズ変更する](#runtimeaddin)
 
-## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a> デザイン時に NamedRange コントロールのサイズを変更する
+## <a name="resize-namedrange-controls-at-design-time"></a><a name="designtime"></a> デザイン時に NamedRange コントロールをサイズ変更する
  名前付き範囲のサイズを変更するには、 **[名前の定義]** ダイアログ ボックスでサイズを再定義します。
 
 ### <a name="to-resize-a-named-range-by-using-the-define-name-dialog-box"></a>[名前の定義] ダイアログ ボックスで名前付き範囲のサイズを変更するには
@@ -57,7 +57,7 @@ ms.locfileid: "107826461"
 
 6. **[OK]** をクリックします。
 
-## <a name="resize-namedrange-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> 実行時にドキュメントレベルのプロジェクトの NamedRange コントロールのサイズを変更する
+## <a name="resize-namedrange-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> 実行時にドキュメント レベルのプロジェクトの NamedRange コントロールをサイズ変更する
  <xref:Microsoft.Office.Tools.Excel.NamedRange.RefersTo%2A> プロパティを使用して、名前付き範囲のサイズをプログラムで変更できます。
 
 > [!NOTE]
@@ -75,8 +75,8 @@ ms.locfileid: "107826461"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet5":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet5":::
 
-## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> 実行時に VSTO アドインプロジェクトの NamedRange コントロールのサイズを変更する
- 実行時に、任意の開いているワークシート上の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのサイズを変更できます。 VSTO アドインを使用してワークシートにコントロールを追加する方法の詳細について <xref:Microsoft.Office.Tools.Excel.NamedRange> は、「 [方法: ワークシートに NamedRange コントロールを追加](../vsto/how-to-add-namedrange-controls-to-worksheets.md)する」を参照してください。
+## <a name="resize-namedrange-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> 実行時に VSTO アドイン プロジェクトの NamedRange コントロールをサイズ変更する
+ 実行時に、任意の開いているワークシート上の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのサイズを変更できます。 VSTO アドインを使用して <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートに追加する方法について詳しくは、「[方法 : ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)」をご覧ください。
 
 ### <a name="to-resize-a-named-range-programmatically"></a>名前付き範囲のサイズをプログラムで変更するには
 
@@ -94,7 +94,7 @@ ms.locfileid: "107826461"
 - [実行時に VSTO アドインの Word 文書と Excel ブックを拡張する](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [実行時に Office ドキュメントにコントロールを追加する](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Office ドキュメントのコントロール](../vsto/controls-on-office-documents.md)
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)
 - [拡張オブジェクトを使用して Excel を自動化する](../vsto/automating-excel-by-using-extended-objects.md)
 - [NamedRange コントロール](../vsto/namedrange-control.md)
 - [方法: ワークシートに NamedRange コントロールを追加する](../vsto/how-to-add-namedrange-controls-to-worksheets.md)

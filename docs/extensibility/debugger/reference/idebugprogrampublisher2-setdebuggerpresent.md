@@ -1,6 +1,6 @@
 ---
-description: デバッガーが存在し、実行中であることをプログラム発行者に通知します。
-title: 'IDebugProgramPublisher2:: Setデバッガ Present |Microsoft Docs'
+description: デバッガーが存在し、実行中であることをプログラムの発行元に通知します。
+title: IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b9b7f5cb8d479d19bd9d7a5f89de065c52e581ec
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065126"
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
-デバッガーが存在し、実行中であることをプログラム発行者に通知します。
+デバッガーが存在し、実行中であることをプログラムの発行元に通知します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int SetDebuggerPresent(
 
 ## <a name="parameters"></a>パラメーター
 `fDebuggerPresent`\
-から`TRUE`デバッガーが存在する場合は0以外 ()、そうでない場合は 0 () `FALSE` 。
+[in] デバッガーが存在する場合はゼロ以外 (`TRUE`)、そうでない場合はゼロ (`FALSE`)。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- デバッガーが存在するかどうかは、 [Getproviderprocessdata](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)メソッドから返されたデータに反映されます。返された値は、メソッドの前の呼び出しによって設定またはクリアされます。 `SetDebuggerPresent`
+## <a name="remarks"></a>解説
+ デバッガーが存在するかどうかは、[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドから返されたデータに反映されます。そこで返された値は、`SetDebuggerPresent` メソッドの前の呼び出しによって設定またはクリアされます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)

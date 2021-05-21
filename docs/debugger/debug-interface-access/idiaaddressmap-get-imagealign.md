@@ -1,7 +1,8 @@
-﻿---
+---
+description: 現在のイメージの配置を取得します。
 title: IDiaAddressMap::get_imageAlign | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: f1ba8071-669c-4cf7-9ac0-02f26d99f366
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fa5394580a9b0db4600a7f1e67aa8bd7f7703542
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: daf52fa451c690445778258400f68ad95cc91f3c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745090"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634538"
 ---
 # <a name="idiaaddressmapget_imagealign"></a>IDiaAddressMap::get_imageAlign
 現在のイメージの配置を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72745090"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_imageAlign ( 
+HRESULT get_imageAlign ( 
    DWORD* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_imageAlign ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力実行可能ファイルのイメージの配置値を返します。
+[出力] 実行可能ファイルからのイメージ配置の値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- イメージは、イメージの読み込みと作成の方法に応じて、特定のメモリ境界に合わせて調整されます。 通常、アラインメントは1、2、4、8、16、32、または64バイトの境界にあります。 イメージの配置は、 [IDiaAddressMap::P ut_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)メソッドの呼び出しを使用して設定できます。
+## <a name="remarks"></a>解説
+ イメージは、それがどのように読み込みおよび作成されたかに応じて、特定のメモリ境界に配置されます。 通常は、1、2、4、8、16、32、または 64 バイト境界に配置されます。 イメージの配置を設定するには、[IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) メソッドを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

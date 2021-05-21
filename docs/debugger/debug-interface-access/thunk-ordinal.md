@@ -1,7 +1,8 @@
-﻿---
-title: THUNK_ORDINAL |Microsoft Docs
+---
+description: サンクの種類を指定します。
+title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 026f98a9-36b8-41ef-8a72-12d7cbc2d362
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1de2d6c9700dcb7b1106c3693d855bb1d8ae2cfa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 8d9fe78eedd0166594daf43093aa525e3d8d3e88
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738497"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635197"
 ---
 # <a name="thunk_ordinal"></a>THUNK_ORDINAL
 サンクの種類を指定します。
@@ -38,26 +39,26 @@ typedef enum THUNK_ORDINAL {
 } THUNK_ORDINAL;
 ```
 
-## <a name="elements"></a>Elements
-THUNK_ORDINAL_NOTYPE 標準サンク。
+## <a name="elements"></a>要素
+THUNK_ORDINAL_NOTYPE 標準のサンク。
 
-THUNK_ORDINAL_ADJUSTOR A `this` ADJUSTOR サンク。
+THUNK_ORDINAL_ADJUSTOR `this` を調整するサンク。
 
 THUNK_ORDINAL_VCALL 仮想呼び出しサンク。
 
-THUNK_ORDINAL_PCODE P-コードサンク。
+THUNK_ORDINAL_PCODE P コード サンク。
 
 THUNK_ORDINAL_LOAD 遅延読み込みサンク。
 
-THUNK_ORDINAL_TRAMP_INCREMENTAL インクリメンタル trampoline サンク (trampoline サンクは、あるメモリ領域から別のメモリ領域への呼び出しをバウンスするために使用されます)。
+THUNK_ORDINAL_TRAMP_INCREMENTAL 増分トランポリン サンク (トランポリン サンクは、あるメモリ空間からの呼び出しを別のものにバウンスするために使用します)。
 
-THUNK_ORDINAL_TRAMP_BRANCHISLAND Branch point trampoline サンク。
+THUNK_ORDINAL_TRAMP_BRANCHISLAND ブランチ ポイント トランポリン サンク。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)メソッドの呼び出しから返されます。
+## <a name="remarks"></a>解説
+この列挙の値は、[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) メソッドへの呼び出しから返されます。
 
-## <a name="requirements"></a>［要件］
-ヘッダー: cvconst. h
+## <a name="requirements"></a>必要条件
+ヘッダー: cvconst.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)

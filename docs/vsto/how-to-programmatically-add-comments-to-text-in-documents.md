@@ -18,7 +18,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 4e03f189f2236131308b8f9ea5d90c52ffa3147d
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825824"
@@ -51,4 +51,4 @@ ms.locfileid: "107825824"
 
 ## <a name="see-also"></a>関連項目
 - [方法: プログラムによって文書からすべてのコメントを削除する](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)
-- [ドキュメントホスト項目](../vsto/document-host-item.md)
+- [Document ホスト項目](../vsto/document-host-item.md)

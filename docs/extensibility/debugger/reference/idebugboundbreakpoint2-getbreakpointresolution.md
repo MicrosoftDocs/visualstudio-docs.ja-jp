@@ -1,6 +1,6 @@
 ---
-description: このブレークポイントを説明するブレークポイントの解決を取得します。
-title: 'IDebugBoundBreakpoint2:: GetBreakpointResolution |Microsoft Docs'
+description: このブレークポイントを記述するブレークポイントの解決を取得します。
+title: IDebugBoundBreakpoint2::GetBreakpointResolution | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 60dfff7884f30090f1eb2feaeaea8bec7dc8753e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088901"
 ---
 # <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
-このブレークポイントを説明するブレークポイントの解決を取得します。
+このブレークポイントを記述するブレークポイントの解決を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,20 +43,20 @@ int GetBreakpointResolution(
 
 ## <a name="parameters"></a>パラメーター
 `ppBPResolution`\
-入出力次のいずれかを表す [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) インターフェイスを返します。
+[out] 次のいずれかを表す [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) インターフェイスを返します。
 
-- コードのブレークポイントがバインドされているコード内の場所を記述するブレークポイント解決オブジェクト。
+- コード ブレークポイントがバインドされているコード内の場所を記述するブレークポイント解決オブジェクト。
 
-- データブレークポイントがバインドされているデータの場所。
+- データ ブレークポイントがバインドされているデータの場所。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`バインドされたブレークポイントオブジェクトの状態が `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙体の一部) に設定されている場合は、を返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 バインドされたブレークポイント オブジェクトの状態が `BPS_DELETED` ([BP_STATE](../../../extensibility/debugger/reference/bp-state.md) 列挙の一部) に設定されている場合は、`E_BP_DELETED` を返します。
 
-## <a name="remarks"></a>注釈
-[Getbreakpointtype](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)メソッドを呼び出して、ブレークポイントの解決がコードとデータのどちらであるかを判断します。
+## <a name="remarks"></a>解説
+[GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) メソッドを呼び出して、ブレークポイントの解決がコードとデータのどちらに対するものであるかを判断します。
 
 ## <a name="example"></a>例
-次の例は、IDebugBoundBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CBoundBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
+次の例は、[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを公開するシンプルな `CBoundBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CBoundBreakpoint::GetBreakpointResolution(
@@ -89,7 +89,7 @@ HRESULT CBoundBreakpoint::GetBreakpointResolution(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)

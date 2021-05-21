@@ -1,6 +1,6 @@
 ---
-description: シンボルプロバイダーがメンバーとなっているシンボルグループに関する情報を取得します。
-title: 'IDebugSymbolProviderDirect:: Getcurrentモジュール State |Microsoft Docs'
+description: シンボル プロバイダーがメンバーとなっているシンボル グループに関する情報を取得します。
+title: IDebugSymbolProviderDirect::GetCurrentModulesState | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e5bc7af275d18626fdb86e25400e9433002be8cf
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081309"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-シンボルプロバイダーがメンバーとなっているシンボルグループに関する情報を取得します。
+シンボル プロバイダーがメンバーとなっているシンボル グループに関する情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int GetCurrentModulesState(
 
 ## <a name="parameters"></a>パラメーター
 `pState`\
-入出力シンボルプロバイダーグループの状態。
+[out] シンボル プロバイダー グループの状態。
 
 `count`\
-入出力グループ内のモジュールの数。
+[out] グループ内のモジュールの数。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- モジュールがシンボルグループに追加されるか、シンボルグループから削除されるたびに、状態が変更されます。 そのため、このメソッドを使用して、シンボルグループが変更されているかどうかを検出できます。
+## <a name="remarks"></a>解説
+ モジュールがシンボル グループとの間で追加、または削除されるたびに、状態が変更されます。 そのため、このメソッドを使用して、シンボル グループが変更されているかどうかを検出できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

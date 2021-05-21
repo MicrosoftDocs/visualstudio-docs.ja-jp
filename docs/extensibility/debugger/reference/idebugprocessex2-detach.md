@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、セッションがプロセスのデバッグを終了したことをプロセスに通知します。
-title: IDebugProcessEx2::D etach |Microsoft Docs
+description: このメソッドでは、セッションでもうプロセスをデバッグしていないことをプロセスに通知します。
+title: IDebugProcessEx2::Detach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: c5ad25fe6461f1df89ada83623ab4e28194ca207
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076330"
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
-このメソッドは、セッションがプロセスのデバッグを終了したことをプロセスに通知します。
+このメソッドでは、セッションでもうプロセスをデバッグしていないことをプロセスに通知します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int Detach(
 
 ## <a name="parameters"></a>パラメーター
 `pSession`\
-からこのプロセスをデタッチするセッションを一意に識別する値。
+[in] このプロセスをデタッチするセッションを一意に識別する値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 渡されるインターフェイス `pSession` は、クッキーとしてのみ扱われます。これは、最初にこのプロセスにアタッチされたセッションデバッグマネージャーを一意に識別する値です。指定されたインターフェイスのメソッドは機能しません。
+## <a name="remarks"></a>解説
+ 渡されるインターフェイス `pSession` は、Cookie としてのみ扱われます。これは、このプロセスに最初にアタッチしたセッション デバッグ マネージャーを一意に識別する値です。指定されたインターフェイスのメソッドは機能しません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

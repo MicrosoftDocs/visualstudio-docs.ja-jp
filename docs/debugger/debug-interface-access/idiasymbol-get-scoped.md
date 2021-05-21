@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_scoped |Microsoft Docs'
+---
+description: ユーザー定義のデータ型が、グローバルではない字句スコープに表示されるかどうかを示すフラグを取得します。
+title: IDiaSymbol::get_scoped | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 588163f7-958e-4072-bf66-db5c5f07d3cb
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 862fa147b5f157760a93631d0e2c8addbd3bd1f2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 63260280f4730c2a0ee32324e49205650cd6c204
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739371"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635230"
 ---
 # <a name="idiasymbolget_scoped"></a>IDiaSymbol::get_scoped
-ユーザー定義データ型が非グローバル構文のスコープに表示されるかどうかを指定するフラグを取得します。
+ユーザー定義のデータ型が、グローバルではない字句スコープに表示されるかどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_scoped ( 
+HRESULT get_scoped ( 
    BOOL* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_scoped ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力ユーザー定義データ型が非グローバル構文のスコープに含まれている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] ユーザー定義のデータ型が、グローバルではない字句スコープに出現する場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティがそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

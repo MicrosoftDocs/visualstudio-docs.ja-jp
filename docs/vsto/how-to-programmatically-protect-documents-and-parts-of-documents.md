@@ -1,5 +1,5 @@
 ---
-title: ドキュメントとドキュメントの一部をプログラムによって保護する
+title: プログラムによって文書および文書の一部を保護する
 description: Microsoft Word 文書に保護を追加して、ユーザーがドキュメントを編集できないようにする方法について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
@@ -19,7 +19,7 @@ ms.workload:
 - office
 ms.openlocfilehash: af3cc1d9c34bf0d6dc503ca2aabe35de5848265c
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107827605"
@@ -32,11 +32,11 @@ ms.locfileid: "107827605"
  ドキュメントの特定の領域を例外としてマークし、指定したユーザーに対し、ドキュメントのその領域の編集のみを許可することもできます。 たとえば、特定のブックマークを除くドキュメント全体を保護できます。 必要に応じてパスワードを追加し、パスワードを知らないユーザーに対し、ドキュメント保護の解除を禁止できます。
 
 > [!NOTE]
-> 次の例では、パスワード保護を使用しません。ただし、ドキュメント保護を追加するときに、パスワードの使用を検討することもできます。 詳細については、「 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」のドキュメントプロテクターのサンプルを参照してください。
+> 次の例では、パスワード保護を使用しません。ただし、ドキュメント保護を追加するときに、パスワードの使用を検討することもできます。 詳しくは、「[Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」にあるドキュメント保護のサンプルをご覧ください。
 
- コンテンツ コントロールを使用してドキュメントの一部を保護することもできます。 詳細については、「 [方法: コンテンツコントロールを使用してドキュメントの一部を保護](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)する」を参照してください。
+ コンテンツ コントロールを使用してドキュメントの一部を保護することもできます。 詳細については、「[方法: コンテンツ コントロールを使用して文書を保護する](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)」を参照してください。
 
-## <a name="protect-a-document-that-is-part-of-a-document-level-customization"></a>ドキュメントレベルのカスタマイズの一部であるドキュメントを保護する
+## <a name="protect-a-document-that-is-part-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの一部であるドキュメントを保護する
 
 ### <a name="to-protect-a-document-that-is-part-of-a-document-level-customization"></a>ドキュメント レベルのカスタマイズの一部であるドキュメントを保護するには
 
@@ -60,7 +60,7 @@ ms.locfileid: "107827605"
 ### <a name="compile-the-code"></a>コードのコンパイル
  これらのコード例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。 これらのコード例は、コードが表示されるドキュメントに <xref:Microsoft.Office.Tools.Word.Bookmark> という名前の既存の `Bookmark1` コントロールが存在していることを前提としています。
 
-## <a name="protect-a-document-by-using-a-vsto-add-in"></a>VSTO アドインを使用してドキュメントを保護する
+## <a name="protect-a-document-by-using-a-vsto-add-in"></a>VSTO アドインを使用して文書を保護する
 
 ### <a name="to-protect-a-document-by-using-an-application-level-vsto-add-in"></a>アプリケーション レベルの VSTO アドインを使用してドキュメントを保護するには
 
@@ -72,8 +72,8 @@ ms.locfileid: "107827605"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet111":::
 
 ## <a name="see-also"></a>関連項目
-- [ドキュメントレベルのソリューションにおけるドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)
+- [ドキュメント レベルのソリューションにおけるドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)
 - [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)
-- [方法: アクセス許可が制限されたドキュメントの背後でコードの実行を許可する](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
+- [方法: アクセス許可が制限されたドキュメントの背後でのコードの実行を許可する](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
 - [方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
-- [Office ソリューションの設計と作成](../vsto/designing-and-creating-office-solutions.md)
+- [Office ソリューションを設計して作成する](../vsto/designing-and-creating-office-solutions.md)

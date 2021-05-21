@@ -1,6 +1,6 @@
 ---
-description: この構造体は、ローカル変数、パラメーター、またはその他のフィールドを記述します。
-title: FIELD_INFO |Microsoft Docs
+description: この構造体では、ローカル変数、パラメーター、またはその他のフィールドを記述します。
+title: FIELD_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 27055178f01f41bb6b4642b8c4d70ea6346b9e74
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059422"
 ---
 # <a name="field_info"></a>FIELD_INFO
-この構造体は、ローカル変数、パラメーター、またはその他のフィールドを記述します。
+この構造体では、ローカル変数、パラメーター、またはその他のフィールドを記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,10 +50,10 @@ public struct FIELD_INFO {
 
 ## <a name="members"></a>メンバー
 `dwFields`\
-入力されるメンバーを指定する、 [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) 列挙のフラグの組み合わせ。
+入力するメンバーを指定する [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) 列挙体のフラグの組み合わせ。
 
 `bstrFullName`\
-フィールドの完全な名前。
+フィールドの完全名。
 
 `bstrName`\
 フィールドの短い名前。
@@ -62,19 +62,19 @@ public struct FIELD_INFO {
 フィールドの型。
 
 `dwModifiers`\
-フィールドを説明する [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) 列挙のフラグの組み合わせ。
+フィールドを記述する [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md) 列挙体のフラグの組み合わせ。
 
-## <a name="remarks"></a>注釈
-この構造体は、入力されている [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) メソッドに渡されます。
+## <a name="remarks"></a>解説
+この構造体は、入力する [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) メソッドに渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)

@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、デバッグプロセスの指定されたプロパティ値を照会します。
-title: 'IDebugProcessQueryProperties:: QueryProperties |Microsoft Docs'
+description: このメソッドは、デバッグ プロセスの指定されたプロパティ値のクエリを実行します。
+title: IDebugProcessQueryProperties::QueryProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2e2f4d36c911e3b41d86e9cc0480c97979d63897
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105081387"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperties"></a>IDebugProcessQueryProperties::QueryProperties
-このメソッドは、デバッグプロセスの指定されたプロパティ値を照会します。
+このメソッドは、デバッグ プロセスの指定されたプロパティ値のクエリを実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,10 +42,10 @@ int QueryProperties(
 
 ## <a name="parameters"></a>パラメーター
 `celt`\
-からプロパティ定義とプロパティ値を含む配列のサイズ。
+[in] プロパティ定義とプロパティ値を含む配列のサイズ。
 
 `dwPropType`\
-からクエリ対象のプロパティの定義を格納している配列。 次の値を指定できます。
+[in] クエリ対象のプロパティの定義を含む配列。 指定できる値は、
 
 - PROCESS_PROPERTY_COMMAND_LINE = 1
 
@@ -54,13 +54,13 @@ int QueryProperties(
 - PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3
 
 `pvarPropValue`\
-入出力プロパティ値を格納している配列。
+[out] プロパティ値を含む配列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドはほとんど使用されません。
+## <a name="remarks"></a>解説
+ このメソッドは、ほとんど使用されません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

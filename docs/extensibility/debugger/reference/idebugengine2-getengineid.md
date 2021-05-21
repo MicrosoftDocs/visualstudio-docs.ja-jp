@@ -1,6 +1,6 @@
 ---
-description: デバッグエンジン (DE) の GUID を取得します。
-title: 'IDebugEngine2:: GetEngineID |Microsoft Docs'
+description: デバッグ エンジン (DE) の GUID を取得します。
+title: IDebugEngine2::GetEngineID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2d7a483517f89c91005f465c539d2af4b9d442a8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088030"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
-デバッグエンジン (DE) の GUID を取得します。
+デバッグ エンジン (DE) の GUID を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,16 +42,16 @@ int GetEngineID(
 
 ## <a name="parameters"></a>パラメーター
 `pguidEngine`\
-入出力DE の GUID を返します。
+[out] DE の GUID を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-一般的な Guid の例として `guidScriptEng` 、、、などがあり `guidNativeEng` `guidSQLEng` ます。 新しいデバッグエンジンでは、識別用に独自の GUID が作成されます。
+## <a name="remarks"></a>解説
+一般的な GUID の例として、`guidScriptEng`、`guidNativeEng`、`guidSQLEng` などがあります。 新しいデバッグ エンジンでは、識別のため、独自の GUID が作成されます。
 
 ## <a name="example"></a>例
-次の例は、IDebugEngine2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CEngine` います。 [](../../../extensibility/debugger/reference/idebugengine2.md)
+次の例は、[IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) インターフェイスを実装するシンプルな `CEngine` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CEngine::GetEngineId(GUID *pguidEngine) {
@@ -67,5 +67,5 @@ HRESULT CEngine::GetEngineId(GUID *pguidEngine) {
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

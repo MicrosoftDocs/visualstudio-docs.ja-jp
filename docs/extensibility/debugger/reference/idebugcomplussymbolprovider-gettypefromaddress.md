@@ -1,6 +1,6 @@
 ---
-description: デバッグアドレスを指定してシンボル型を取得します。
-title: 'IDebugComPlusSymbolProvider:: GetTypeFromAddress |Microsoft Docs'
+description: デバッグ アドレスを指定してシンボル型を取得します。
+title: IDebugComPlusSymbolProvider::GetTypeFromAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3cde5d445551b83cc5497d3310bd5660842e9ffe
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095603"
 ---
 # <a name="idebugcomplussymbolprovidergettypefromaddress"></a>IDebugComPlusSymbolProvider::GetTypeFromAddress
-デバッグアドレスを指定してシンボル型を取得します。
+デバッグ アドレスを指定してシンボル型を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int GetTypeFromAddress(
 
 ## <a name="parameters"></a>パラメーター
 `pAddress`\
-から [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグアドレス。
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグ アドレス。
 
 `ppField`\
-入出力 [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) インターフェイスによって表される配列型を返します。
+[out] [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) インターフェイスによって表される配列型を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetTypeFromAddress(
@@ -119,5 +119,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

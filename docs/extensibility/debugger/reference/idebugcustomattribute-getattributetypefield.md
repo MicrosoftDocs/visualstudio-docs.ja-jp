@@ -1,6 +1,6 @@
 ---
-description: カスタム属性クラスの型を取得します。
-title: 'IDebugCustomAttribute:: GetAttributeTypeField |Microsoft Docs'
+description: カスタム属性のクラス型を取得します。
+title: IDebugCustomAttribute::GetAttributeTypeField | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d0d0cfdfcdb49c934d9f4c0288f66a52e3e48f49
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088095"
 ---
 # <a name="idebugcustomattributegetattributetypefield"></a>IDebugCustomAttribute::GetAttributeTypeField
-カスタム属性クラスの型を取得します。
+カスタム属性のクラス型を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ int GetAttributeTypeField(
 
 ## <a name="parameters"></a>パラメーター
 `ppCAType`\
-入出力カスタム属性がインスタンスであるクラスを表す [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) オブジェクトを返します。
+[out] カスタム属性がインスタンスであるクラスを表す [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  カスタム属性は常にクラスです。 このメソッドは、そのクラスを記述する [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) オブジェクトへのアクセスを提供します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

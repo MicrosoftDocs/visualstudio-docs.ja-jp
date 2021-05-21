@@ -1,6 +1,6 @@
 ---
-title: '方法: ドキュメントレベルのカスタマイズにカスタム XML 部分を追加する'
-description: ドキュメントレベルのカスタマイズでカスタム XML 部分を作成することによって、XML データを Microsoft Office Excel ブックまたは Microsoft Office Word 文書に格納する方法について説明します。
+title: '方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加する'
+description: ドキュメント レベルのカスタマイズにカスタム XML 部分を作成して、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納する方法について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -22,18 +22,18 @@ ms.workload:
 - office
 ms.openlocfilehash: 99374a2daded3c4b49b60053a69cd1ff7c4dffe8
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107827689"
 ---
-# <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>方法: ドキュメントレベルのカスタマイズにカスタム XML 部分を追加する
-  ドキュメント レベルのカスタマイズにカスタム XML 部分を作成すると、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納できます。 詳細については、「 [カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)」を参照してください。
+# <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>方法: ドキュメント レベルのカスタマイズにカスタム XML 部分を追加する
+  ドキュメント レベルのカスタマイズにカスタム XML 部分を作成すると、Microsoft Office Excel ブックまたは Microsoft Office Word 文書に XML データを格納できます。 詳細については、「[カスタム XML 部分の概要](../vsto/custom-xml-parts-overview.md)」を参照してください。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 > [!NOTE]
-> Visual Studio では、Microsoft Office PowerPoint のドキュメント レベルのプロジェクトは提供していません。 VSTO アドインを使用してカスタム XML 部分を PowerPoint プレゼンテーションに追加する方法については、「 [方法: vsto アドインを使用してカスタム xml 部分をドキュメントに追加する](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)」を参照してください。
+> Visual Studio では、Microsoft Office PowerPoint のドキュメント レベルのプロジェクトは提供していません。 VSTO アドインを使用してカスタム XML 部分を PowerPoint プレゼンテーションに追加する方法については、「[方法: VSTO アドインを使用してドキュメントにカスタム XML 部分を追加する](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)」を参照してください。
 
 ### <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>カスタム XML 部分を Excel ブックに追加するには
 

@@ -1,5 +1,5 @@
 ---
-description: 次の FxCop レガシ分析規則は、まだアナライザーとして実装されていませんが、の場合もあります。
+description: FxCop の以下のレガシ分析規則は、まだアナライザーとして実装されていませんが、可能性はあります。
 title: 移植される可能性がある非移植規則
 ms.date: 05/21/2019
 ms.topic: reference
@@ -13,16 +13,16 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 6a01a46330e28960cfa1eab4598c17fe71b4fcc0
 ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102144690"
 ---
 # <a name="unported-rules-that-may-be-ported"></a>移植される可能性がある非移植規則
 
-次の FxCop レガシ分析規則は、まだアナライザーとして実装されていませんが、の場合もあります。 これは、技術的な理由がブロックされているか、ルールの優先度が低いことが原因である可能性があります。 各ルールの移植状態の詳細については、[ **問題の追跡** ] 列のリンクをクリックしてください。
+FxCop の以下のレガシ分析規則は、まだアナライザーとして実装されていませんが、可能性はあります。 これは、技術的な理由で妨げられているか、単に規則の優先度が低いことが原因である可能性があります。 各規則の移植状態の詳細については、「**イシューの追跡**」列のリンクをクリックしてください。
 
-ルールの ID | 問題の追跡
+ルールの ID | イシューの追跡
 --- | ---
 [CA1004](ca1004.md) | [https://github.com/dotnet/roslyn-analyzers/issues/370](https://github.com/dotnet/roslyn-analyzers/issues/370)
 [CA1007](ca1007.md) | [https://github.com/dotnet/roslyn-analyzers/issues/373](https://github.com/dotnet/roslyn-analyzers/issues/373)

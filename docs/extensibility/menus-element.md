@@ -1,6 +1,6 @@
 ---
-title: Menus 要素 |Microsoft Docs
-description: Menus 要素は、VSPackage が実装するすべてのメニューとツールバーを定義します。 この記事には例が含まれています。
+title: Menus 要素 | Microsoft Docs
+description: Menus 要素では、VSPackage で実装するすべてのメニューとツール バーを定義します。 この記事には例が含まれます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c5b6010945bd176f0663c7b0d57c3991470fff07
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064008"
 ---
 # <a name="menus-element"></a>Menus 要素
-VSPackage が実装するすべてのメニューとツールバーを定義します。
+VSPackage で実装するすべてのメニューとツール バーを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,14 +39,14 @@ VSPackage が実装するすべてのメニューとツールバーを定義し�
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 「[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Menus 要素](../extensibility/menus-element.md)|VSPackage が実装するすべてのメニューとツールバーを定義します。|
-|[Menu 要素](../extensibility/menu-element.md)|1つのメニューまたはツールバーを表します。|
+|[Menus 要素](../extensibility/menus-element.md)|VSPackage で実装するすべてのメニューとツール バーを定義します。|
+|[Menu 要素](../extensibility/menu-element.md)|単一のメニューまたはツール バーを表します。|
 
 ### <a name="parent-elements"></a>親要素
 
@@ -80,5 +80,5 @@ VSPackage が実装するすべてのメニューとツールバーを定義し�
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

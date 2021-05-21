@@ -1,6 +1,6 @@
 ---
-title: Combos 要素 |Microsoft Docs
-description: Combos 要素は、コンボボックスに表示されるコマンドを定義する、コンボ要素をグループ化します。 この記事には例が含まれています。
+title: Combos 要素 | Microsoft Docs
+description: Combos 要素では、コンボ ボックスに表示されるコマンドを定義する Combo 要素をグループ化します。 この記事には例が含まれます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: be9135e2f863f3ab277e6c7408579d7ef8242bce
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089720"
 ---
 # <a name="combos-element"></a>Combos 要素
-グループの [コンボ要素](../extensibility/combo-element.md) 要素。
+[Combo 要素](../extensibility/combo-element.md)の要素をグループ化します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,20 +39,20 @@ ms.locfileid: "105089720"
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Combos 要素](../extensibility/combos-element.md)|グループのコンボ要素。|
-|[コンボ要素](../extensibility/combo-element.md)|コンボボックスに表示されるコマンドを定義します。|
+|[Combos 要素](../extensibility/combos-element.md)|Combo 要素をグループ化します。|
+|[Combo 要素](../extensibility/combo-element.md)|コンボ ボックスに表示されるコマンドを定義します。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツールバーのコマンドのコレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンド コレクションを表します。|
 
 ## <a name="example"></a>例
 
@@ -79,5 +79,5 @@ ms.locfileid: "105089720"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

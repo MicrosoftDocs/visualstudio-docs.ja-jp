@@ -1,6 +1,6 @@
 ---
 description: 指定された行オフセットを表す関数内のアドレスを取得します。
-title: 'IDebugComPlusSymbolProvider:: GetFunctionLineOffset |Microsoft Docs'
+title: IDebugComPlusSymbolProvider::GetFunctionLineOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ae212e00e6d49b54b0536147194317584fad2830
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058769"
@@ -45,19 +45,19 @@ int GetFunctionLineOffset(
 
 ## <a name="parameters"></a>パラメーター
 `pAddress`\
-から関数を表すアドレス。
+[in] 関数を表すアドレス。
 
 `dwLine`\
-から関数の先頭からの行オフセット。
+[in] 関数の先頭からの行オフセット。
 
 `ppNewAddress`\
-入出力関数の先頭からの行オフセットを表す新しいアドレス。
+[out] 関数の先頭からの行オフセットを表す新しいアドレス。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetFunctionLineOffset(
@@ -104,5 +104,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumDebugStreams:: Item |Microsoft Docs'
+description: インデックスや名前を利用してデバッグ ストリームを取得します。
+title: IDiaEnumDebugStreams::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 6b388fe1-eabc-4720-9d59-dc09b0ceaeac
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a07669e36d397550c28d1cc4a5de2ad300763e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ff8b1dc19cec15b414c92c0aa13aaae3f6a7c49c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744742"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634964"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
-インデックスまたは名前を使ってデバッグストリームを取得します。
+インデックスや名前を利用してデバッグ ストリームを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,14 +35,14 @@ HRESULT Item (
 #### <a name="parameters"></a>パラメーター
 インデックス
 
-から取得するデバッグストリームのインデックスまたは名前。 整数バリアントを使用する場合は、0 ~ `count`-1 の範囲で指定する必要があります。この場合 `count` は[IDiaEnumDebugStreams:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md)メソッドによって返されます。
+[入力] 取得するデバッグ ストリームのインデックスまたは名前。 整数バリアントが使用される場合、それは 0 から `count`-1 までの範囲に含まれる必要があります。`count` は、[IDiaEnumDebugStreams::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) メソッドによって返されるものです。
 
-ストリーム
+ストリーム (stream)
 
-入出力指定されたデバッグストリームを表す[IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)オブジェクトを返します。
+[出力] 指定のデバッグ ストリームを表す [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
 

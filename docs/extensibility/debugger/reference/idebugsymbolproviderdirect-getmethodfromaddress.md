@@ -1,6 +1,6 @@
 ---
-description: 指定されたデバッグアドレスのメソッドに関する情報を取得します。
-title: 'IDebugSymbolProviderDirect:: GetMethodFromAddress |Microsoft Docs'
+description: 指定されたデバッグ アドレスのメソッドに関する情報を取得します。
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 306cb3bbe863ed0d8ca37c50b44158ea087ac015
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071091"
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-指定されたデバッグアドレスのメソッドに関する情報を取得します。
+指定されたデバッグ アドレスのメソッドに関する情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -53,28 +53,28 @@ int GetMethodFromAddress(
 
 ## <a name="parameters"></a>パラメーター
 `pAddress`\
-から [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグアドレス。
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグ アドレス。
 
 `pGuid`\
-入出力モジュールの一意識別子。
+[out] モジュールの一意識別子。
 
 `pAppID`\
-入出力アプリケーションドメインの識別子。
+[out] アプリケーション ドメインの識別子。
 
 `pTokenClass`\
-入出力含んでいるクラスを表すトークン。
+[out] 含んでいるクラスを表すトークン。
 
 `pTokenMethod`\
-入出力モジュールを表すトークン。
+[out] モジュールを表すトークン。
 
 `pdwOffset`\
-入出力パラメーターの先頭からのオフセット (バイト単位) `pAddress` 。
+[out] `pAddress` パラメーターの先頭からのオフセット (バイト単位)。
 
 `pdwVersion`\
-入出力メソッドのバージョン番号。
+[out] メソッドのバージョン番号。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

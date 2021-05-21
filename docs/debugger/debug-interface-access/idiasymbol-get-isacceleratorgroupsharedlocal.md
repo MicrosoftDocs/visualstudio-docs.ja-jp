@@ -1,24 +1,25 @@
-﻿---
-title: 'IDiaSymbol:: get_isAcceleratorGroupSharedLocal |Microsoft Docs'
+---
+description: シンボルが C++ AMP Accelerator 用にコンパイルされたコード内のグループ共有ローカル変数に対応するかどうかを示すフラグを取得します。
+title: IDiaSymbol::get_isAcceleratorGroupSharedLocal | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 17a20542-5b45-478f-bb80-0d56031aadb5
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d6cf755121f851e652cce251ace2105e6773822
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 8da1e0e8672fb0c10769ca448556f0007fe44014
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740334"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634255"
 ---
 # <a name="idiasymbolget_isacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
-C++ AMP アクセラレータ用にコンパイルされたコード内のグループ共有ローカル変数にシンボルが対応するかどうかを示すフラグを取得します。
+シンボルが C++ AMP Accelerator 用にコンパイルされたコード内のグループ共有ローカル変数に対応するかどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,10 +31,10 @@ HRESULT get_isAcceleratorGroupSharedLocal(
 #### <a name="parameters"></a>パラメーター
  `pFlag`
 
-入出力C++ AMP アクセラレータ用にコンパイルされたコード内のグループ共有ローカル変数にシンボルが対応するかどうかを示す `BOOL` へのポインター。 @No__t_0 場合、`get_baseDataSlot` メソッドと `get_baseDataOffset` メソッドを使用して、変数のストレージの場所情報を取得できます。
+[出力] シンボルが C++ AMP Accelerator 用にコンパイルされたコード内のグループ共有ローカル変数に対応するかどうかを示す `BOOL` へのポインター。 `TRUE` の場合、`get_baseDataSlot` と `get_baseDataOffset` のメソッドを使用して、変数のストレージの場所情報を取得できます。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLoadCallback2:: RestrictOriginalPathAccess |Microsoft Docs'
+description: 元のデバッグ ディレクトリで .pdb ファイルを検索しても良いかどうかを判断します。
+title: IDiaLoadCallback2::RestrictOriginalPathAccess | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 31fde3af-2824-4b0f-8d0d-cee6046596f6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bcdaa7c1896a0ef29706e3650ad8ac56537f778
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7af6794b57dfe5efe8d2e85f8e74febcede5ef23
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742997"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634864"
 ---
 # <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
-元のデバッグディレクトリで .pdb ファイルを検索することができているかどうかを判断します。
+元のデバッグ ディレクトリで .pdb ファイルを検索しても良いかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,10 +30,10 @@ HRESULT RestrictOriginalPathAccess ();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- @No__t_0 以外のリターンコードは、元のデバッグディレクトリで .pdb ファイルを検索できません。 元のデバッグディレクトリは、デバッグを有効にしたときに実行可能ファイルにコンパイルされたシンボルファイルへのパスです。 このパスは、必ずしも実行可能ファイルが存在するパスと同じではありません。
+## <a name="remarks"></a>解説
+ `S_OK` 以外のリターン コードの場合、元のデバッグ ディレクトリで .pdb ファイルを検索できません。 元のデバッグ ディレクトリは、デバッグをオンにしたときに実行可能ファイルにコンパイルされるシンボル ファイルのパスです。 このパスは、実行可能ファイルが存在するパスと必ずしも同じではありません。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

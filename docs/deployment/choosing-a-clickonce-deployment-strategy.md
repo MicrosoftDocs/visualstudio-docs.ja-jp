@@ -1,6 +1,6 @@
 ---
-title: ClickOnce 配置ストラテジの選択 |Microsoft Docs
-description: ClickOnce アプリケーションを配置するための方法と、配置するアプリケーションの種類に応じて戦略を選択する方法について説明します。
+title: ClickOnce 配置ストラテジの選択 | Microsoft Docs
+description: ClickOnce アプリケーションの配置に関するストラテジについて、および配置しているアプリケーションの種類に応じてストラテジを選択する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: f4c20689c79529edf4a34edca857dedf1420b03f
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99895116"
@@ -34,14 +34,14 @@ ms.locfileid: "99895116"
 - Web またはネットワーク共有からのアプリケーションの起動
 
     > [!NOTE]
-    > 配置ストラテジを選択するだけでなく、アプリケーションの更新プログラムを提供するストラテジも選択する必要があります。 詳細については、「 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)」を参照してください。
+    > 配置ストラテジを選択するだけでなく、アプリケーションの更新プログラムを提供するストラテジも選択する必要があります。 詳細については、「[ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)」を参照してください。
 
 ## <a name="install-from-the-web-or-a-network-share"></a>Web またはネットワーク共有からのインストール
  このストラテジを使用すると、アプリケーションが Web サーバーまたはネットワーク ファイル共有に配置されます。 エンド ユーザーがアプリケーションをインストールするときは、Web ページのアイコンをクリックするか、ファイル共有のアイコンをダブルクリックします。 これで、アプリケーションがユーザーのコンピューターにダウンロードされ、インストールされて起動します。 項目が **[スタート]** メニューと **[コントロール パネル]** の **[プログラムの追加と削除]** に追加されます。
 
  このストラテジはネットワーク接続に依存するため、ローカル エリア ネットワークや高速インターネット接続にアクセスできるユーザーのコンピューターにアプリケーションを配置する場合に最適です。
 
- アプリケーションを Web から配置する場合は、そのアプリケーションが URL を使用してアクティブ化されるときに、アプリケーションに引数を渡すことができます。 詳細については、「 [方法: オンライン ClickOnce アプリケーションでクエリ文字列情報を取得する](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)」を参照してください。 ここで説明されている他の方法でアクティブ化されるアプリケーションには、引数を渡すことができません。
+ アプリケーションを Web から配置する場合は、そのアプリケーションが URL を使用してアクティブ化されるときに、アプリケーションに引数を渡すことができます。 詳細については、「[方法: オンライン ClickOnce アプリケーションでクエリ文字列の情報を取得する](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)」を参照してください。 ここで説明されている他の方法でアクティブ化されるアプリケーションには、引数を渡すことができません。
 
  この配置ストラテジを [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] で有効にするには、発行ウィザードの **[ユーザーはアプリケーションをどのようにインストールするのですか?]** ページで **[Web サイトから]** または **[UNC パスまたはファイル共有から]** をクリックします。
 

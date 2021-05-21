@@ -1,6 +1,6 @@
 ---
-description: この構造体は、メソッドまたは関数のパラメーターを表します。
-title: METADATA_ADDRESS_PARAM |Microsoft Docs
+description: これは、メソッドまたは関数のパラメーターを表すための構造体です。
+title: METADATA_ADDRESS_PARAM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0171fd59ec034c2015843732cdd361228166e74f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057924"
 ---
 # <a name="metadata_address_param"></a>METADATA_ADDRESS_PARAM
-この構造体は、メソッドまたは関数のパラメーターを表します。
+これは、メソッドまたは関数のパラメーターを表すための構造体です。
 
 ## <a name="syntax"></a>構文
 
@@ -52,19 +52,19 @@ public struct METADATA_ADDRESS_PARAM {
  パラメーターの ID。
 
  `dwIndex`\
- パラメーターのリスト内のパラメーターのインデックス。
+ パラメーターの一覧にあるパラメーターのインデックス。
 
-## <a name="remarks"></a>注釈
- この構造体は、構造体のフィールドがに設定されている場合に、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部になり `dwKind` `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_PARAM` ます ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型の値)。
+## <a name="remarks"></a>解説
+ この構造体は、`DEBUG_ADDRESS_UNION` 構造体の `dwKind` フィールドが `ADDRESS_KIND_PARAM` ([ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙からの値) に設定されている場合、[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部です。
 
-## <a name="requirements"></a>要件
- ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: sh.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)
 - [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

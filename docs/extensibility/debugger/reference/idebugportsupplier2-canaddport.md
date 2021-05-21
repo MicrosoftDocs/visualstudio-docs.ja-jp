@@ -1,6 +1,6 @@
 ---
-description: ポート供給業者が新しいポートを追加できることを確認します。
-title: 'IDebugPortSupplier2:: CanAddPort |Microsoft Docs'
+description: ポート サプライヤーにより新しいポートを追加できることを確認します。
+title: IDebugPortSupplier2::CanAddPort | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ad704eda53807d344b23736d2d9b55e172c36468
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072209"
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
-ポート供給業者が新しいポートを追加できることを確認します。
+ポート サプライヤーにより新しいポートを追加できることを確認します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,11 +39,11 @@ int CanAddPort();
 ```
 
 ## <a name="return-value"></a>戻り値
- ポートを追加できる場合はを返し `S_OK` ます。それ以外の場合はを返し、 `S_FALSE` このポートサプライヤーにポートを追加できないことを示します。
+ ポートを追加できる場合は、`S_OK` を返します。それ以外の場合は `S_FALSE` を返し、このポート サプライヤーにポートを追加できないことを示します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、 [Addport](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) メソッドを呼び出す前に呼び出します。後者の方法では、ポートが作成され、追加されるため、時間がかかることがあります。
+## <a name="remarks"></a>解説
+ このメソッドは、[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) メソッドを呼び出す前に呼び出します。後者のメソッドではポートが作成されるだけでなく追加されるため、時間のかかる操作となる可能性があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)
 - [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

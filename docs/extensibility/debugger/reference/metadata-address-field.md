@@ -1,6 +1,6 @@
 ---
 description: この構造体は、クラスまたは構造体のフィールドのアドレスを表します。
-title: METADATA_ADDRESS_FIELD |Microsoft Docs
+title: METADATA_ADDRESS_FIELD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 32e5db3a4ad197d66d530487eb50dd1b47ac0199
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091514"
@@ -44,23 +44,23 @@ public struct METADATA_ADDRESS_FIELD {
 ## <a name="members"></a>メンバー
 
 `tokField`\
-フィールドトークンの ID。
+フィールド トークンの ID。
 
-[C++] `_mdToken` は、 `typedef` 32 ビットのです `int` 。
+[C++] `_mdToken` は、32 ビット `int` の `typedef` です。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この構造体は、構造体のフィールドがに設定されている場合に、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部になり `dwKind` `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_FIELD` ます ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型の値)。
+この構造体は、`DEBUG_ADDRESS_UNION` 構造体の `dwKind` フィールドが `ADDRESS_KIND_FIELD` ([ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙からの値) に設定されている場合、[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-ヘッダー: sh. h
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

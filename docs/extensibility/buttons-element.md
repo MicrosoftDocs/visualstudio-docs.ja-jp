@@ -1,6 +1,6 @@
 ---
-title: Buttons 要素 |Microsoft Docs
-description: ボタン要素は、個々のコマンドを表すボタン要素をグループ化します。 この記事には例が含まれています。
+title: Buttons 要素 | Microsoft Docs
+description: Buttons 要素では、個々のコマンドを表す Button 要素をグループ化します。 この記事には例が含まれます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 7e2988654ebd676d49c8a5dd02652fc8a3662869
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068129"
 ---
 # <a name="buttons-element"></a>Buttons 要素
-個々のコマンドを表すグループ [ボタン](../extensibility/button-element.md) 要素。
+個々のコマンドを表す [Button](../extensibility/button-element.md) 要素をグループ化します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,20 +39,20 @@ ms.locfileid: "105068129"
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 「[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Buttons 要素](../extensibility/buttons-element.md)|グループボタン要素。|
+|[Buttons 要素](../extensibility/buttons-element.md)|Button 要素をグループ化します。|
 |[Button 要素](../extensibility/button-element.md)|ユーザーが操作できるコマンドを定義します。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツールバーのコマンドのコレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンドのコレクションを表します。|
 
 ## <a name="example"></a>例
 
@@ -69,5 +69,5 @@ ms.locfileid: "105068129"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

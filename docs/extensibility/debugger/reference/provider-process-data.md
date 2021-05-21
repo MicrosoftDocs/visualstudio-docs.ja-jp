@@ -1,6 +1,6 @@
 ---
-description: この構造体は、コンピューター上で実行されているプロセスに関する情報を提供します。
-title: PROVIDER_PROCESS_DATA |Microsoft Docs
+description: この構造体では、コンピューター上で実行されているプロセスに関する情報が提供されます。
+title: PROVIDER_PROCESS_DATA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a6c48c87f92fde487b9a008c5db45f75eb026f83
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079515"
 ---
 # <a name="provider_process_data"></a>PROVIDER_PROCESS_DATA
-この構造体は、コンピューター上で実行されているプロセスに関する情報を提供します。
+この構造体では、コンピューター上で実行されているプロセスに関する情報が提供されます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,25 +46,25 @@ public struct PROVIDER_PROCESS_DATA {
 
 ## <a name="members"></a>メンバー
  `Fields`\
- [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md)列挙のフラグの組み合わせ。入力されているフィールドを示します。
+ [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) 列挙体のフラグの組み合わせ。入力されるフィールドを示します。
 
  `ProgramNodes`\
- プログラムノードの配列を格納する [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) 構造体。
+ プログラム ノードの配列を格納する [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) 構造体。
 
  `fIsDebuggerPresent`\
- `TRUE`デバッガーが実行されている場合は0以外 () [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 、そうでない場合は 0 () `FALSE` です。
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] デバッガーが実行されている場合は 0 以外 (`TRUE`)、そうでない場合は 0 (`FALSE`)。
 
-## <a name="remarks"></a>注釈
- この構造体は、 [Getproviderprocessdata](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドに渡されます。
+## <a name="remarks"></a>解説
+ この構造体は、それが入力される [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドに渡されます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md)
 - [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md)

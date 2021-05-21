@@ -1,6 +1,6 @@
 ---
-description: データストリームを指定してデバッグシンボルを読み込みます。
-title: 'IDebugComPlusSymbolProvider:: Loadシンボル Fromstream |Microsoft Docs'
+description: データ ストリームを指定してデバッグ シンボルを読み込みます。
+title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: eb4b08cf4e7823f7f8f2cc3a9fb52af300872ed6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095460"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-データストリームを指定してデバッグシンボルを読み込みます。
+データ ストリームを指定してデバッグ シンボルを読み込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -49,25 +49,25 @@ int LoadSymbolsFromStream(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[in] モジュールの一意識別子。
 
 `baseAddress`\
-からベースメモリアドレス。
+[in] ベース メモリ アドレス。
 
 `pUnkMetadataImport`\
-からシンボルメタデータを格納しているオブジェクト。
+[in] シンボル メタデータが格納されているオブジェクト。
 
 `pStream`\
-からシンボルを格納しているデータストリーム。
+[in] シンボルが格納されているデータ ストリーム。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。 メソッドは、 [Loadシンボル Fromstreamwithcormodule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) メソッドを呼び出します。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。 このメソッドによって [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) メソッドが呼び出されます。
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(
@@ -82,5 +82,5 @@ HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

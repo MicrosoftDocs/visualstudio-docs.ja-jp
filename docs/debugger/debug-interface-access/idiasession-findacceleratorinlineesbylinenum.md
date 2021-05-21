@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSession:: findAcceleratorInlineesByLinenum |Microsoft Docs'
+description: 指定したソースの場所に対応するインライン フレームのシンボルの列挙子を返します。
+title: IDiaSession::findAcceleratorInlineesByLinenum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 386c87aa-f7b2-4d38-9dd6-fffba9ff01f0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d08168a83b9bb635fd6a0e22dc22f91a454001f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 4ddb65e5041f19ad854eec271b22f3cbcab5a97c
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742320"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634335"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
-指定したソースの場所に対応するインラインフレームのシンボルの列挙体を返します。
+指定したソースの場所に対応するインライン フレームのシンボルの列挙子を返します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findAcceleratorInlineeLinesByName ( 
+HRESULT findAcceleratorInlineeLinesByName ( 
    IDiaSymbol*           parent,
    IDiaSourceFile*       file,
    DWORD                 linenum,
@@ -35,26 +36,26 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>パラメーター
  `parent`
 
-から検索する必要があるアクセラレータのスタブ関数に対応する `IDiaSymbol`。
+[入力] 検索する必要があるアクセラレータ スタブ関数に対応する `IDiaSymbol`。
 
  `file`
 
-からソースの場所の `IDiaSourceFile`。
+[入力] ソースの場所の `IDiaSourceFile`。
 
  `linenum`
 
-からソースの場所の行番号。
+[入力] ソースの場所の行番号。
 
  `colnum`
 
-からソースの場所の列番号。
+[入力] ソースの場所の列番号。
 
  `ppResult`
 
-入出力結果を使用して初期化される `IDiaEnumLineNumbers` インターフェイスポインターへのポインター。
+[出力] 結果で初期化される `IDiaEnumLineNumbers` インターフェイス ポインターへのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

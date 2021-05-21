@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: findSymbolByVAEx |Microsoft Docs'
+description: 指定した仮想アドレス (VA) およびオフセットを含む、またはそれに最も近い、指定したシンボルの種類を取得します。
+title: IDiaSession::findSymbolByVAEx | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 11c685f6-cda2-4474-a432-214ecaae4ffa
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 56dd91e76380bb4f43fae4f26d4124b2f9bc3ebf
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 578745bae879609bd734a209c959cacf50639848
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741984"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634298"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-指定した仮想アドレス (VA) とオフセットを格納している、またはそれに最も近いシンボルの種類を取得します。
+指定した仮想アドレス (VA) およびオフセットを含む、またはそれに最も近い、指定したシンボルの種類を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findSymbolByVAEx ( 
+HRESULT findSymbolByVAEx ( 
    ULONGLONG    va,
    SymTagEnum   symtag,
    IDiaSymbol** ppSymbol,
@@ -36,22 +37,22 @@ HRESULT findSymbolByVAEx ( 
 #### <a name="parameters"></a>パラメーター
  `va`
 
-からVA を指定します。
+[入力] VA を指定します。
 
  `symtag`
 
-から検索するシンボルの種類。 値は[Symtagenum](../../debugger/debug-interface-access/symtagenum.md)列挙型から取得されます。
+[入力] 検出するシンボルの種類。 値は、[SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の列挙体から取得されます。
 
  `ppSymbol`
 
-入出力取得されたシンボルを表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[出力] 取得したシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
  `displacement`
 
-入出力@No__t_0 によって指定された仮想アドレスからのオフセットを指定する値を返します。
+[出力] `va` で指定した仮想アドレスからのオフセットを指定する値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
 

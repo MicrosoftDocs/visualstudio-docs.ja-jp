@@ -1,6 +1,6 @@
 ---
 title: Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行う
-description: Windows フォームアプリケーションでデータのフィルター処理と並べ替えを行います。 フィルタープロパティを、目的のレコードを返す文字列式に設定します。
+description: Windows フォーム アプリケーションのデータのフィルター処理および並べ替えを行います。 Filter プロパティを、目的のレコードを返す文字列式に設定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -23,7 +23,7 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: 045da0ade1ce60e2a8d21c24238c8e2b061e8612
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106215826"
@@ -32,10 +32,10 @@ ms.locfileid: "106215826"
 
 データをフィルター処理するには、<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティに目的のレコードを返す文字列式を設定します。
 
-データを並べ替えるには、並べ替えに使用する <xref:System.Windows.Forms.BindingSource.Sort%2A> 列名にプロパティを設定します。 `DESC` 降順で並べ替えるには、を追加し、昇順で並べ替えるにはを追加し `ASC` ます。
+データを並べ替えるには、<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティに並べ替える列の名前を設定し、降順の場合は末尾に `DESC` を、昇順の場合は末尾に `ASC` を付けます。
 
 > [!NOTE]
-> アプリケーションでコンポーネントを使用しない場合は <xref:System.Windows.Forms.BindingSource> 、オブジェクトを使用してデータのフィルター処理と並べ替えを行うことができ <xref:System.Data.DataView> ます。 詳しくは、「[DataView](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)」をご覧ください。
+> アプリケーションで <xref:System.Windows.Forms.BindingSource> コンポーネントを使用しない場合は、<xref:System.Data.DataView> オブジェクトを使用してデータのフィルター処理および並べ替えを行うことができます。 詳しくは、「[DataView](/dotnet/framework/data/adonet/dataset-datatable-dataview/dataviews)」をご覧ください。
 
 ## <a name="to-filter-data-by-using-a-bindingsource-component"></a>BindingSource コンポーネントを使用してデータをフィルター処理するには
 

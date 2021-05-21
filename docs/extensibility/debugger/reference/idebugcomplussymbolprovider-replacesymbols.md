@@ -1,6 +1,6 @@
 ---
-description: 現在のデバッグシンボルを、指定したデータストリーム内のシンボルに置き換えます。
-title: 'IDebugComPlusSymbolProvider:: ReplaceSymbols |Microsoft Docs'
+description: 現在のデバッグ シンボルを、指定したデータ ストリーム内のものに置き換えます。
+title: IDebugComPlusSymbolProvider::ReplaceSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 164f5a780ae2c4306d4e8f424ac2bfa82408a6f7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095421"
 ---
 # <a name="idebugcomplussymbolproviderreplacesymbols"></a>IDebugComPlusSymbolProvider::ReplaceSymbols
-現在のデバッグシンボルを、指定したデータストリーム内のシンボルに置き換えます。
+現在のデバッグ シンボルを、指定したデータ ストリーム内のものに置き換えます。
 
 ## <a name="syntax"></a>構文
 
@@ -45,19 +45,19 @@ int ReplaceSymbols(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[in] モジュールの一意識別子。
 
 `pStream`\
-から新しいシンボルを格納しているデータストリーム。
+[in] 新しいシンボルが格納されているデータ ストリーム。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::ReplaceSymbols(
@@ -82,5 +82,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)
