@@ -1,6 +1,6 @@
 ---
 description: クラスで特定のインターフェイスが定義されているかどうかを判断します。
-title: IDebugClassField::D oesInterfaceExist |Microsoft Docs
+title: IDebugClassField::DoesInterfaceExist | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 60a9a64e408f182476d6f34b19fea45f6fe8ad48
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085026"
@@ -42,13 +42,13 @@ int DoesInterfaceExist(
 
 ## <a name="parameters"></a>パラメーター
 `pszInterfaceName`\
-から検索するインターフェイス名を格納している文字列。
+[in] 検索するインターフェイス名を含む文字列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返し、インターフェイスが存在しない場合は S_FALSE を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。インターフェイスが存在しない場合は、S_FALSE を返します。それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、すべてのインターフェイスの列挙体を取得し、一致するインターフェイスのリストを検索します。
+## <a name="remarks"></a>解説
+ このメソッドは、事実上、すべてのインターフェイスの列挙体を取得し、一覧を検索して、一致するインターフェイスを見つけます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

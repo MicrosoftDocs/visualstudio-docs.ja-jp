@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_volatileType |Microsoft Docs'
+---
+description: 揮発性のユーザー定義のデータ型 (UDT) であるかどうかを示すフラグを取得します。
+title: IDiaSymbol::get_volatileType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 19782a4d-40a8-467b-ab7d-58bc4d812309
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5967a13596b5fad99f0f14277ea0e9505e222a41
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 27d2f1a49b55fd7006aa69f40e532356aded64b0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738798"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635216"
 ---
 # <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
-ユーザー定義データ型 (UDT) が volatile であるかどうかを指定するフラグを取得します。
+揮発性のユーザー定義のデータ型 (UDT) であるかどうかを示すフラグを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_volatileType ( 
+HRESULT get_volatileType ( 
    BOOL* pRetVal
 );
 ```
@@ -33,16 +34,16 @@ HRESULT get_volatileType ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力UDT が volatile の場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] 揮発性の UDT の場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
- でC++は、`volatile` キーワードを使用して UDT をマークできます。これは、その内容が1つのアクセスから次のアクセスに存在するとは見なされないことを示します。
+## <a name="remarks"></a>解説
+ C++ では、UDT を `volatile` キーワードを使用してマークできます。これは、1 回アクセスして次まで、その内容が存在するとは限らないことを示します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

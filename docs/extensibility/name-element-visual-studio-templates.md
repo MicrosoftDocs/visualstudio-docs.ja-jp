@@ -1,6 +1,6 @@
 ---
-title: Name 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: Name 要素について、また、[新しいプロジェクト] ダイアログボックスまたは [新しい項目の追加] ダイアログボックスに表示されるテンプレートの名前を指定する方法について説明します。
+title: Name 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: Name 要素についてと、[新しいプロジェクト] または [新しい項目の追加] ダイアログ ボックスに表示されるテンプレートの名前を指定する方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: b8d45c66d73efe163c22bf2a24663ec02f41bc84
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090578"
 ---
 # <a name="name-element-visual-studio-templates"></a>Name 要素 (Visual Studio テンプレート)
-[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスに表示されるテンプレートの名前を指定します。
+**[新しいプロジェクト]** または **[新しい項目の追加]** ダイアログ ボックスに表示されるテンプレートの名前を指定します。
 
  \<VSTemplate> \<TemplateData>
  \<Name>
@@ -45,8 +45,8 @@ ms.locfileid: "105090578"
 
 |属性|説明|
 |---------------|-----------------|
-|`Package`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
-|`ID`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します。|
+|`Package`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
+|`ID`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のリソース ID を指定します。|
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -62,7 +62,7 @@ ms.locfileid: "105090578"
 
  テキストによってテンプレートの名前を指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `Name` は `TemplateData` に必須の子要素です。
 
 ## <a name="example"></a>例

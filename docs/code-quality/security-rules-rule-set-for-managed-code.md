@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "セキュリティ規則" 規則セット
 ms.date: 11/04/2016
-description: Visual Studio レガシコード分析のセキュリティ規則規則セットについて説明します。 潜在的なセキュリティの問題に焦点を当てたルールの説明を参照してください。
+description: Visual Studio レガシ コード分析の "セキュリティ規則" 規則セットについて説明します。 潜在的なセキュリティの問題に焦点を当てた規則の説明をご覧ください。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
@@ -12,14 +12,14 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 2568137d5724613b0f5ddf801df6302c85e430f1
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99859685"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>マネージド コードの "セキュリティ規則" 規則セット
 
-レガシコード分析用の Microsoft セキュリティ規則セットを使用して、報告される潜在的なセキュリティ問題の数を最大化します。
+レガシ コード分析用の Microsoft の "セキュリティ規則" 規則セットを使用して、報告される潜在的なセキュリティ問題の数を最大化します。
 
 |ルール|説明|
 |----------|-----------------|
@@ -57,7 +57,7 @@ ms.locfileid: "99859685"
 |[CA2138](../code-quality/ca2138.md)|透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない|
 |[CA2139](../code-quality/ca2139.md)|透過的メソッドは、HandleProcessCorruptingExceptions 属性を使用してはならない|
 |[CA2140](../code-quality/ca2140.md)|透過的コードは、セキュリティ上重要な項目を参照してはならない|
-|[CA2141](../code-quality/ca2141.md)|透過的メソッドは Linkdemand を満たしてはならない|
+|[CA2141](../code-quality/ca2141.md)|透過的メソッドは LinkDemand を満たしてはならない|
 |[CA2142](../code-quality/ca2142.md)|透過的コードは、LinkDemand を使用して保護されてはならない|
 |[CA2143](../code-quality/ca2143.md)|透過的メソッドは、セキュリティ確認要求を使用してはならない|
 |[CA2144](../code-quality/ca2144.md)|透過的コードは、バイト配列からアセンブリを読み込んではならない|

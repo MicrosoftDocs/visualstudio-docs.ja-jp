@@ -1,6 +1,6 @@
 ---
-title: 中断モードでステップインする |Microsoft Docs
-description: デバッガーが中断モードのときに発生するプロセスについて説明します。 次に、デバッガーはコードをステップ実行する必要があります。
+title: 中断モードでのステップ実行 | Microsoft Docs
+description: デバッガーが中断モードのときに発生するプロセスについて学習します。 その後、デバッガーでコードをステップ実行する必要があります。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 0ed11d05e4351ac6ba76bc9aa10531a8a96ddf23
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105075407"
@@ -26,9 +26,9 @@ ms.locfileid: "105075407"
 
 ## <a name="stepping-process"></a>ステップ実行プロセス
 
-1. ステップを実行するには、 [Stepkind](../../extensibility/debugger/reference/stepkind.md)引数と[stepkind](../../extensibility/debugger/reference/stepunit.md)引数を指定して[IDebugProgram2:: step](../../extensibility/debugger/reference/idebugprogram2-step.md)を呼び出します。
+1. [STEPKIND](../../extensibility/debugger/reference/stepkind.md) および [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) 引数を指定して [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md) を呼び出し、ステップ実行します。
 
-2. ステップが完了したら、停止イベントとして [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) を送信します。
+2. ステップ実行が終了したら、停止イベントとして [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) を送信します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [呼び出し (デバッガーイベントを)](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目
+- [デバッガーのイベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

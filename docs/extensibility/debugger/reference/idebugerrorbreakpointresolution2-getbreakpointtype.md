@@ -1,6 +1,6 @@
 ---
 description: ブレークポイントの種類を取得します。
-title: 'IDebugErrorBreakpointResolution2:: GetBreakpointType |Microsoft Docs'
+title: IDebugErrorBreakpointResolution2::GetBreakpointType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: f66b98ad47fdfca953a5cf2f2c14e483e450dae8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092489"
@@ -42,16 +42,16 @@ int GetBreakpointType(
 
 ## <a name="parameters"></a>パラメーター
 `pBPType`\
-入出力ブレークポイントの種類を記述する [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 列挙から値を返します。
+[out] ブレークポイントの種類を記述する [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 列挙からの値を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-このメソッドは、バインドに失敗したブレークポイントの型を返します。これにより、エラーのブレークポイントイベントが必要になります。
+## <a name="remarks"></a>解説
+このメソッドからは、バインドに失敗したブレークポイントの種類が返されます。したがって、エラーのブレークポイント イベントが必要になります。
 
 ## <a name="example"></a>例
-次の例は、IDebugErrorBreakpointResolution2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CDebugErrorBreakpointResolution` います。 [](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
+次の例は、[IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) インターフェイスを公開するシンプルな `CDebugErrorBreakpointResolution` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
@@ -84,6 +84,6 @@ HRESULT CDebugErrorBreakpointResolution::GetBreakpointType(BP_TYPE* pBPType)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)
 - [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md)

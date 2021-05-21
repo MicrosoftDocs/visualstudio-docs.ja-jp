@@ -1,6 +1,6 @@
 ---
 title: '方法: Bookmark コントロールのサイズを変更する'
-description: Visual Studio を使用して、Microsoft Word 文書にブックマークコントロールを追加するときに、そのサイズを設定する方法について説明します。
+description: Microsoft Word 文書に Bookmark コントロールを追加するとき、Visual Studio を使用し、Bookmark コントロールのサイズを設定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.workload:
 - office
 ms.openlocfilehash: b2b2bd963b2f0b4eb574630382930eb0805909be
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825785"
@@ -41,11 +41,11 @@ ms.locfileid: "107825785"
 
    これは、ブックマークのサイズや場所に大幅な変更がある場合に便利です。
 
-  ドキュメント レベルのプロジェクトでは、デザイン時または実行時にプロジェクトの文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトでは、実行時に、開いている任意の文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 詳細については、「 [方法: Word 文書にブックマークコントロールを追加](../vsto/how-to-add-bookmark-controls-to-word-documents.md)する」を参照してください。
+  ドキュメント レベルのプロジェクトでは、デザイン時または実行時にプロジェクトの文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 VSTO アドイン プロジェクトでは、実行時に、開いている任意の文書に <xref:Microsoft.Office.Tools.Word.Bookmark> コントロールを追加できます。 詳細については、「[方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)」を参照してください。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="change-the-start-and-end-properties"></a>Start プロパティと end プロパティの変更
+## <a name="change-the-start-and-end-properties"></a>Start および End プロパティを変更する
 
 ### <a name="to-resize-a-bookmark-in-a-document-level-project-at-design-time"></a>デザイン時にドキュメント レベルのプロジェクト内のブックマークのサイズを変更するには
 
@@ -69,7 +69,7 @@ ms.locfileid: "107825785"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet3":::
 
-### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>実行時に VSTO アドインプロジェクト内のブックマークのサイズを変更するには
+### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>実行時に VSTO アドイン プロジェクト内のブックマークのサイズを変更するには
 
 1. 実行時またはデザイン時に作成した <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> の <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> および <xref:Microsoft.Office.Tools.Word.Bookmark> プロパティを変更します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "107825785"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet16":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet16":::
 
-## <a name="recreate-the-bookmark"></a>ブックマークを再作成します。
+## <a name="recreate-the-bookmark"></a>ブックマークを再作成する
  ドキュメント レベルのプロジェクト内のブックマークのサイズを変更するには、既存のブックマークと同じ名前の新しいブックマークを別のサイズで作成します。
 
 ### <a name="to-recreate-a-bookmark-in-a-document-level-project-at-design-time"></a>デザイン時にドキュメント レベルのプロジェクト内のブックマークを再作成するには
@@ -92,7 +92,7 @@ ms.locfileid: "107825785"
 ## <a name="see-also"></a>関連項目
 - [方法: Word 文書に Bookmark コントロールを追加する](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
 - [拡張オブジェクトを使用して Word を自動化する](../vsto/automating-word-by-using-extended-objects.md)
-- [ホスト項目とホストコントロールの概要](../vsto/host-items-and-host-controls-overview.md)
+- [ホスト項目とホスト コントロールの概要](../vsto/host-items-and-host-controls-overview.md)
 - [方法: NamedRange コントロールのサイズを変更する](../vsto/how-to-resize-namedrange-controls.md)
 - [方法: ListObject コントロールのサイズを変更する](../vsto/how-to-resize-listobject-controls.md)
-- [ホスト項目とホストコントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [ホスト項目およびホスト コントロールのプログラム上の制限事項](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

@@ -1,6 +1,6 @@
 ---
 description: プロセス ID を指定します。これは、システム ID または GUID のいずれかになります。
-title: AD_PROCESS_ID |Microsoft Docs
+title: AD_PROCESS_ID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 479a30c85fe16830d49c3d44dc2daea4eed9f31c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094485"
@@ -50,17 +50,17 @@ public struct AD_PROCESS_ID {
 
 ## <a name="members"></a>メンバー
 `ProcessIdType`\
-[](../../../extensibility/debugger/reference/ad-process-id-type.md) `ProcessId` 共用体 (または、マネージコードの場合は、アクセスする構造体のメンバー) を解釈する方法を指定する AD_PROCESS_ID_TYPE 列挙の値。
+`ProcessId` 共用体を解釈する方法 (または、マネージド コードの場合、アクセスする構造体のメンバー) を指定する [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) 列挙体の値。
 
 `dwProcessId`\
-システムからの値としてのプロセス ID。
+システムの値としてのプロセス ID。
 
 `guidProcessId`\
 GUID としてのプロセス ID。
 
-dwUnused の埋め込み。
+dwUnused パディング。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 この構造体は、次のメソッドに渡されます。
 
 - [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)
@@ -71,20 +71,20 @@ dwUnused の埋め込み。
 
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 
-とは、次のメソッドから返されます。
+そして、次のメソッドから返されます。
 
 - [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)
 
 - [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)
 - [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

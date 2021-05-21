@@ -1,7 +1,7 @@
 ---
 title: PromptForSaveOnCreation 要素 (Visual Studio テンプレート)
 titleSuffix: ''
-description: PromptForSaveOnCreation 要素について、また、[新しいプロジェクト] ダイアログボックスを使用して、プロジェクトの保存場所の入力を求めるメッセージをユーザーに表示するかどうかを指定する方法について説明します。
+description: PromptForSaveOnCreation 要素についてと、それを使用して、[新しいプロジェクト] ダイアログ ボックスでユーザーがプロジェクトの保存場所の入力を求められるかどうかを指定する方法を学習します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,14 +19,14 @@ ms.workload:
 monikerRange: vs-2017
 ms.openlocfilehash: 5bc3c28bcfa35dac23c96d9a566b9767f8db9c1c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068644"
 ---
 # <a name="promptforsaveoncreation-element-visual-studio-templates"></a>PromptForSaveOnCreation 要素 (Visual Studio テンプレート)
 
-プロジェクトの作成時に [ **新しいプロジェクト** ] ダイアログボックスを使用して、プロジェクトの保存場所の入力をユーザーに要求するかどうかを指定します。 この要素がに設定されている場合 `true` 、ユーザーは保存場所の入力を求められます。 `false`の場合、プロンプトは表示されません (つまり、一時プロジェクトが作成されます)。
+プロジェクトの作成時に **[新しいプロジェクト]** ダイアログ ボックスでユーザーがプロジェクトの保存場所の入力を求められるかどうかを指定します。 この要素が `true` に設定されている場合、ユーザーは保存場所の入力を求められます。 `false` の場合、入力を求められません (つまり、一時プロジェクトが作成されます)。
 
 ```xml
 \<VSTemplate>
@@ -60,7 +60,7 @@ ms.locfileid: "105068644"
 
  テキストは `true` または `false` である必要があります。`true` は、新しいプロジェクトの作成時にユーザーに保存場所の入力を求めることを示します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `PromptForSaveOnCreation` は省略可能な要素です。 既定値は `false` です。
 
  一時プロジェクトは、プロジェクトの内容を保存しないで作成および変更できるプロジェクトです。

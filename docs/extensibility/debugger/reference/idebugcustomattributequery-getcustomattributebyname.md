@@ -1,6 +1,6 @@
 ---
-description: 名前を指定して、カスタム属性を取得します。
-title: 'IDebugCustomAttributeQuery:: GetCustomAttributeByName |Microsoft Docs'
+description: 指定された名前でカスタム属性を取得します。
+title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: edfebdba8d1ad10678ec441cad7ca8b4a1440c24
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058665"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-名前を指定して、カスタム属性を取得します。
+指定された名前でカスタム属性を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,19 +45,19 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>パラメーター
 `pszCustomAttributeName`\
-からカスタム属性の名前。
+[in] カスタム属性の名前。
 
 `ppBlob`\
-[入力、出力]カスタム属性データを格納しているバイトの配列。
+[in,out] カスタム属性データが格納されているバイトの配列。
 
 `pdwLen`\
-入出力パラメーターの長さ (バイト単位) `ppBlob` 。
+[out] `ppBlob` パラメーターの長さ (バイト単位)。
 
 ## <a name="return-value"></a>戻り値
-正常に終了した場合は、`S_OK` を返します。 カスタム属性が存在しない場合、はを返し `S_FALSE` ます。 それ以外の場合はエラー コードを返します。
+正常に終了した場合は、`S_OK` を返します。 カスタム属性が存在しない場合は、`S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)インターフェイスを公開する **Cdebugclassfieldsymbol** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) インターフェイスを公開する **CDebugClassFieldSymbol** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugClassFieldSymbol::GetCustomAttributeByName(
@@ -94,5 +94,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)

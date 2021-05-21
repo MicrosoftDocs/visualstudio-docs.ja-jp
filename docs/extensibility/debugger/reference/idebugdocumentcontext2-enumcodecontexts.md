@@ -1,6 +1,6 @@
 ---
-description: このドキュメントコンテキストに関連付けられているすべてのコードコンテキストのリストを取得します。
-title: 'IDebugDocumentContext2:: EnumCodeContexts |Microsoft Docs'
+description: このドキュメント コンテキストに関連付けられているすべてのコード コンテキストのリストを取得します。
+title: IDebugDocumentContext2::EnumCodeContexts | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 99f60cd99a694c6f2610982a2b85fe2dbce1282b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066699"
 ---
 # <a name="idebugdocumentcontext2enumcodecontexts"></a>IDebugDocumentContext2::EnumCodeContexts
-このドキュメントコンテキストに関連付けられているすべてのコードコンテキストのリストを取得します。
+このドキュメント コンテキストに関連付けられているすべてのコード コンテキストのリストを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,13 +44,13 @@ int EnumCodeContexts(
 `ppEnumCodeCxts`\
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-ドキュメントがテンプレートまたはインクルードファイルを使用している場合、1つのドキュメントコンテキストで複数のコードコンテキストを生成できます。
+## <a name="remarks"></a>解説
+ドキュメントでテンプレートまたはインクルード ファイルが使用されている場合は、1 つのドキュメント コンテキストで複数のコード コンテキストを生成できます。
 
 ## <a name="example"></a>例
-次の例は、IDebugDocumentContext2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CDebugContext` います。 [](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
+次の例は、[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) インターフェイスを公開するシンプルな `CDebugContext` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts)
@@ -108,6 +108,6 @@ HRESULT CDebugContext::EnumCodeContexts(IEnumDebugCodeContexts2 **ppEnumCodeCxts
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

@@ -1,6 +1,6 @@
 ---
-description: このコードコンテキストの言語情報を取得します。
-title: 'IDebugCodeContext2:: Get言語 Info |Microsoft Docs'
+description: このコード コンテキストの言語情報を取得します。
+title: IDebugCodeContext2::GetLanguageInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 62d076a2780ab8d49f79379111eaeef9dd1cdc88
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088381"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
-このコードコンテキストの言語情報を取得します。
+このコード コンテキストの言語情報を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int GetLanguageInfo(
 
 ## <a name="parameters"></a>パラメーター
 `pbstrLanguage`\
-[入力、出力]"C++" など、言語の名前を含む文字列を返します。
+[in, out] "C++" などの言語の名前を含む文字列を返します。
 
 `pguidLanguage`\
-[入力、出力]コードコンテキストの言語の GUID を返します。たとえば、のように `guidCPPLang` なります。
+[in, out] `guidCPPLang` など、コード コンテキストの言語の GUID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 少なくとも1つのパラメーターが null 以外の値を返す必要があります。
+## <a name="remarks"></a>解説
+ 少なくとも 1 つのパラメーターから null 以外の値が返される必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

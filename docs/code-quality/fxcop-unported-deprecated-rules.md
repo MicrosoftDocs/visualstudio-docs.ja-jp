@@ -1,5 +1,5 @@
 ---
-description: 次の FxCop レガシ分析ルールは非推奨とされており、アナライザーとして実装されません。
+description: FxCop の以下のレガシ分析規則は非推奨になっており、アナライザーとして実装されることはありません。
 title: 非推奨の規則
 ms.date: 05/21/2019
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 21a151f7d2da18f1c498269504f216b1f7fbd44c
 ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102144703"
 ---
 # <a name="deprecated-rules"></a>非推奨の規則
 
-次の FxCop レガシ分析ルールは非推奨とされており、アナライザーとして実装されません。 詳細については、 [roslyn-Analyzer GitHub の問題](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)に関するページで、ルール ID (たとえば、 **CA1009**) で検索することができます。
+FxCop の以下のレガシ分析規則は非推奨になっており、アナライザーとして実装されることはありません。 詳細については、[roslyn-analyzers の GitHub イシュー ページ](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)で、規則 ID (**CA1009** など) により検索できます。
 
 - [CA1006](ca1006.md)
 - [CA1009](ca1009.md)
@@ -30,7 +30,7 @@ ms.locfileid: "102144703"
 - [CA1035](ca1035.md)
 - [CA1038](ca1038.md)
 - [CA1039](ca1039.md)
-- [CA1048: SEALED](ca1048.md)
+- [CA1048](ca1048.md)
 - [CA1059](ca1059.md)
 - [CA1302](ca1302.md)
 - [CA1400](ca1400.md)
@@ -90,7 +90,7 @@ ms.locfileid: "102144703"
 - [CA2210](ca2210.md)
 - [CA2220](ca2220.md)
 - [CA2221](ca2221.md)
-- [CA2222](ca2222.md) ([ジャスティフィケーション](https://github.com/dotnet/roslyn-analyzers/issues/1378))
+- [CA2222](ca2222.md) ([根拠](https://github.com/dotnet/roslyn-analyzers/issues/1378))
 - [CA2223](ca2223.md)
 - [CA2228](ca2228.md)
 - [CA2230](ca2230.md)

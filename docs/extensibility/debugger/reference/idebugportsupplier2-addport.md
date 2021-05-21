@@ -1,6 +1,6 @@
 ---
 description: ポートを追加します。
-title: 'IDebugPortSupplier2:: AddPort |Microsoft Docs'
+title: IDebugPortSupplier2::AddPort | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 4c2b9c4c7c5378670c87926e76d185d54448a244
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072196"
@@ -44,18 +44,18 @@ int AddPort(
 
 ## <a name="parameters"></a>パラメーター
 `pRequest`\
-から追加するポートを記述する [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) オブジェクト。
+[in] 追加するポートを記述する [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) オブジェクト。
 
 `ppPort`\
-入出力ポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクトを返します。
+[out] ポートを表す [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、要求されたポートを実際に作成するだけでなく、ポート供給元のアクティブなポートの内部リストに追加します。 [Canaddport](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)メソッドは、時間がかかる可能性のある遅延を回避するために最初に呼び出すことができます。
+## <a name="remarks"></a>解説
+ このメソッドでは、要求されたポートを実際に作成するだけでなく、ポート サプライヤーのアクティブなポートの内部リストに追加します。 [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) メソッドは、時間がかかる可能性のある遅延を回避するために最初に呼び出すことができます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)
 - [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)
 - [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

@@ -1,6 +1,6 @@
 ---
-description: プログラムの実行を特定の時点に達した後に実行を停止できるかどうかを判断するために使用されます。
-title: CANSTOP_REASON |Microsoft Docs
+description: 実行中、特定のポイントに到達後、プログラムでは実行を停止できるか判断する目的で使用されます。
+title: CANSTOP_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 39a22a0534a464e9899e666550b31ab24503c05d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096526"
 ---
 # <a name="canstop_reason"></a>CANSTOP_REASON
-プログラムの実行を特定の時点に達した後に実行を停止できるかどうかを判断するために使用されます。
+実行中、特定のポイントに到達後、プログラムでは実行を停止できるか判断する目的で使用されます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_CANSTOP_REASON {
@@ -45,18 +45,18 @@ public enum enum_CANSTOP_REASON {
 
 ## <a name="fields"></a>フィールド
 `CANSTOP_ENTRYPOINT`\
-指定されたプログラムのエントリポイントを指定します。
+指定のプログラムのエントリ ポイントを指定します。
 
 `CANSTOP_STEPIN`\
-関数へのステップインを指定します。
+関数のステップ インを指定します。
 
-## <a name="remarks"></a>注釈
-プログラムのエントリポイントに到達した後、または関数またはメソッドにステップインした後に、セッションデバッグマネージャー (SDM) で確認するために、 [Getreason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+プログラムのエントリ ポイントに到達後、あるいは関数またはメソッドのステップ イン後、停止しても問題ないか、セッション デバッグ マネージャー (SDM) に確認する目的で、[GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) メソッドに引数として渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

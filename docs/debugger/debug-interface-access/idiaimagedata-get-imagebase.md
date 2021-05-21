@@ -1,7 +1,8 @@
 ---
-title: 'IDiaImageData:: get_imageBase |Microsoft Docs'
+description: イメージのベースとなるメモリの場所を取得します。
+title: IDiaImageData::get_imageBase | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 4ba3d9e4-b205-4ee6-a41d-6996972f1f85
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7887fea30b04f4ebb6605169c58551122eccf73d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 82f80f95689a176118d5be6dcc5cfe4fdb903e0f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743437"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634418"
 ---
 # <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
-イメージの基になるメモリ位置を取得します。
+イメージのベースとなるメモリの場所を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_imageBase ( 
+HRESULT get_imageBase ( 
    ULONGLONG* pRetVal
 );
 ```
@@ -33,13 +34,13 @@ HRESULT get_imageBase ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力推奨されるイメージのベース値を返します。
+[出力] 推奨されるイメージ ベース値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- イメージベースの競合により、イメージが読み込まれるときに、未使用のメモリ位置に自動的に再配置される場合があります。 このメソッドは、コンパイル時にモジュールに格納された基本ヒント (推奨されるメモリの場所) を返します。
+## <a name="remarks"></a>解説
+ イメージ ベースの競合により、イメージは、読み込み時に、未使用のメモリの場所に自動的に再配置される場合があります。 このメソッドからは、コンパイル時にモジュールに格納された、ベースに関するヒント (推奨されるメモリの場所) が返されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

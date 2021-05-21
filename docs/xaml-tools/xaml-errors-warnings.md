@@ -1,6 +1,6 @@
 ---
 title: XAML のエラーと警告
-description: エラーの分類方法、エラー情報の取得方法、それらを修正するためのオプションの検索方法など、Visual Studio での XAML のエラーと警告について説明します。
+description: エラーの分類方法、エラー情報の取得方法、およびそれらを修正するためのオプションの検索方法など、Visual Studio での XAML のエラーと警告について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 03/06/2018
 ms.topic: error-reference
@@ -12,14 +12,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: e33cdc11eb5531fd2325bd90912dc22a105711c5
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99903647"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML のエラーと警告
 
-Visual Studio では、XAML を作成するとき、入力したコードがすぐに解析されます。 エラーが検出されると、コード行に波線が付きます。 この波線にマウス カーソルを合わせると、エラーまたは警告に関する詳細が表示されます。 一部のエラーと警告については、クイックアクションの電球が表示され、 **Ctrl キー** を使用し + **ます。** 問題解決のための選択肢が表示されます。
+Visual Studio では、XAML を作成するとき、入力したコードがすぐに解析されます。 エラーが検出されると、コード行に波線が付きます。 この波線にマウス カーソルを合わせると、エラーまたは警告に関する詳細が表示されます。 一部のエラーと警告にはクイック アクションの電球が表示されます。**Ctrl**+ **.** キーボード ショートカットで 問題解決のための選択肢が表示されます。
 
 ## <a name="error-types"></a>エラーの種類
 
@@ -29,10 +29,10 @@ Visual Studio では、XAML を作成するとき、入力したコードがす�
 | - |-----------------| - |
 |XAML 言語サービス (XAML エディター)|XLSxxxx| すべてのバージョン |
 |XAML デザイナー|XDGxxxx| すべてのバージョン | 
-|XAML のエディット コンティニュ|XECxxxx| Visual Studio 2019 バージョン16.1 以前 |
-|XAML ホット リロード | XHRxxxx | Visual Studio 2019 バージョン16.2 以降 |
+|XAML のエディット コンティニュ|XECxxxx| Visual Studio 2019 バージョン 16.1 以前 |
+|XAML ホット リロード | XHRxxxx | Visual Studio 2019 バージョン 16.2 以降 |
 
-Xaml のブランド変更の編集 & の詳細については、XAML のホットリロードとして続行するには、「[リリースノート](/visualstudio/releases/2019/release-notes-v16.2#wpfuwp-tooling)」を参照してください。
+XAML のエディット コンティニュから XAML ホット リロードへのブランド変更の詳細については、[リリース ノート](/visualstudio/releases/2019/release-notes-v16.2#wpfuwp-tooling)を参照してください
 
 > [!Note]
 > 一部のエラーや警告には該当コードがありません。 そのようなエラーは通常、XAML デザイナーが検出したエラーです。

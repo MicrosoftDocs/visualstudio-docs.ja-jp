@@ -1,6 +1,6 @@
 ---
-title: データアクセスフォーラム
-description: パブリックフォーラムでのエラーと警告のトラブルシューティングに関するヘルプを参照してください。 データ関連のフォーラムの一覧を表示します。
+title: データ アクセス フォーラム
+description: パブリック フォーラムで、エラーや警告のトラブルシューティングに役立つ情報を見つけます。 データ関連のフォーラムの一覧を表示します。
 ms.custom: SEO-VS-2020
 ms.date: 06/27/2018
 ms.topic: troubleshooting
@@ -228,30 +228,30 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: a61e7be94faf9a9b75349412f923157b5df47b6a
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867387"
 ---
-# <a name="troubleshoot-data-access-errors-on-the-forums"></a>フォーラムでのデータアクセスエラーのトラブルシューティング
+# <a name="troubleshoot-data-access-errors-on-the-forums"></a>フォーラムでのデータ アクセス エラーのトラブルシューティング
 
 MSDN (Microsoft Developer Network) のパブリック フォーラムでは、エラーや警告のトラブルシューティングに役立つ情報を参照できます。 MSDN で利用できるデータ関連のフォーラムを次に示します。
 
-- [データコントロールとデータバインドの Windows フォーム](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
+- [Windows フォームのデータ コントロールとデータバインド](https://social.msdn.microsoft.com/Forums/windows/en-US/home?forum=winformsdatacontrols)
 
-- [ADO.NET データセットフォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)
+- [ADO.NET DataSet フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)
 
 - [ADO.NET Entity Framework と LINQ to Entities](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetentityframework)
 
-- [WCF data services フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)
+- [WCF Data Services フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)
 
-- [SQL Server データアクセスフォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldataaccess)
+- [SQL Server データ アクセス フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldataaccess)
 
 - [LINQ to SQL フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=linqtosql)
 
-- [ADO.NET データプロバイダーフォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
+- [ADO.NET データ プロバイダー フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)
 
-SQL Server への接続のトラブルシューティング方法の詳細については、「 [SQL Server データベースエンジンへの接続に関するトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)」を参照してください。
+SQL Server への接続のトラブルシューティングを行う方法については、「[SQL Server データベース エンジンへの接続のトラブルシューティング方法](https://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

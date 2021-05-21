@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLoadCallback:: NotifyOpenDBG |Microsoft Docs'
+description: .dbg ファイルが開かれたときに呼び出されます。
+title: IDiaLoadCallback::NotifyOpenDBG | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: dbc4dcf0-4ace-4dce-9790-0fdaf3a23d3b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 70607af90469594491223afa5f316dc63bf935b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 7f1dfdc36f66a883f1c66d37eb6f4ff48b8962a0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743078"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634868"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
-Dbg ファイルが開かれたときに呼び出されます。
+.dbg ファイルが開かれたときに呼び出されます。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT NotifyOpenDBG ( 
+HRESULT NotifyOpenDBG ( 
    LPCOLESTR dbgPath,
    HRESULT   resultCode
 );
@@ -34,14 +35,14 @@ HRESULT NotifyOpenDBG ( 
 #### <a name="parameters"></a>パラメーター
  `dbgPath`
 
-からDbg ファイルの完全パス。
+[入力] .dbg ファイルの完全なパス。
 
  `resultCode`
 
-からこのファイルに適用されている読み込みの成功 (`S_OK`) または失敗を示すコード。
+[入力] このファイルに適用された読み込みの成功 (`S_OK`) または失敗を示すコード。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 通常、リターンコードは無視されます。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 リターン コードは、通常無視されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

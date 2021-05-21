@@ -1,6 +1,6 @@
 ---
-description: 指定されたデバッグアドレスがシーケンスポイントであるかどうかを判断します。
-title: 'IDebugComPlusSymbolProvider2:: IsAddressSequencePoint |Microsoft Docs'
+description: 指定されたデバッグ アドレスがシーケンス ポイントであるかどうかを判断します。
+title: IDebugComPlusSymbolProvider2::IsAddressSequencePoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 966981d4dba7e1517e8e89471ccd2c062a8fb822
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084962"
 ---
 # <a name="idebugcomplussymbolprovider2isaddresssequencepoint"></a>IDebugComPlusSymbolProvider2::IsAddressSequencePoint
-指定されたデバッグアドレスがシーケンスポイントであるかどうかを判断します。
+指定されたデバッグ アドレスがシーケンス ポイントであるかどうかを判断します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,13 +41,13 @@ int IsAddressSequencePoint(
 
 ## <a name="parameters"></a>パラメーター
 `pAddress`\
-から [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグアドレス。
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるデバッグ アドレス。
 
 ## <a name="return-value"></a>戻り値
-デバッグアドレスがシーケンスポイントの場合はを返します。 `S_OK` それ以外の場合はを返し `S_FALSE` ます。
+デバッグ アドレスがシーケンス ポイントである場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` を返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsAddressSequencePoint(
@@ -87,5 +87,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

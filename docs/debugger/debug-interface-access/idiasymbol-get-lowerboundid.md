@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_lowerBoundId |Microsoft Docs'
+---
+description: FORTRAN 配列次元の下限のシンボル識別子を取得します。
+title: IDiaSymbol::get_lowerBoundId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 12ce98e9-a225-4947-88c9-5fda39dd67e4
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d3685512521d5fc919f4c9b1752a039ae1085bc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1aa4cf51b4501ad26e1d2364eb41e2a9726c043b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739821"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634656"
 ---
 # <a name="idiasymbolget_lowerboundid"></a>IDiaSymbol::get_lowerBoundId
 FORTRAN 配列次元の下限のシンボル識別子を取得します。
@@ -25,7 +26,7 @@ FORTRAN 配列次元の下限のシンボル識別子を取得します。
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_lowerBoundId ( 
+HRESULT get_lowerBoundId ( 
    DWORD* pRetVal
 );
 ```
@@ -33,15 +34,15 @@ HRESULT get_lowerBoundId ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力FORTRAN 配列次元の下限を表すシンボルのシンボル ID を返します。
+[出力] FORTRAN 配列次元の下限を表すシンボルのシンボル ID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  識別子は、すべてのシンボルを一意としてマークするために DIA SDK によって作成される一意の値です。
 
 ## <a name="see-also"></a>関連項目

@@ -1,6 +1,6 @@
 ---
-title: TemplateGroupID 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: TemplateGroupID 要素について、および項目テンプレートを表示するプロジェクトの種類を指定する方法について説明します。
+title: TemplateGroupID 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: TemplateGroupID 要素についてと、それを使用して、項目テンプレートが表示されるプロジェクトの種類を指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5f97d60fe319ee19cf74c7a5e3a3f3d7ef13b921
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056000"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID 要素 (Visual Studio テンプレート)
-項目テンプレートを表示するプロジェクトの種類を指定します。 この要素は、 [showbydefault Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md) がに設定されている場合に重要です `false` 。 [ [Showbydefault Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md) ] がに設定されている場合 `true` 、すべてのプロジェクトの種類で項目テンプレートを使用できます。
+項目テンプレートを表示するプロジェクトの種類を指定します。 この要素は、[ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md) が `false` に設定されている場合、重要です。 [ShowByDefault (Visual Studio テンプレート)](../extensibility/showbydefault-visual-studio-templates.md) が `true` に設定されている場合、すべてのプロジェクトの種類で項目テンプレートを使用できます。
 
  \<VSTemplate> \<TemplateData>
  \<TemplateGroupID>
@@ -55,12 +55,12 @@ ms.locfileid: "105056000"
 
  このテキストは、項目テンプレートのカテゴリの識別子を指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `TemplateGroupID` は要素です。
 
- 要素の値 `TemplateGroupID` は、 \\ *\<version number>* \\ [**新しい項目の追加**] ダイアログボックスに表示されるテンプレートをフィルター処理するために、プロジェクトシステムの登録 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\ プロジェクト) と共に使用されます。
+ `TemplateGroupID` 要素の値は、 **[新しい項目の追加]** ダイアログ ボックスに表示されるテンプレートをフィルター処理するために、プロジェクト システム登録 (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\ *\<version number>* \Projects\\) と共に使用されます。
 
-|Visual C++ の値|意味|
+|Visual C++ の値|説明|
 |------------------------|-------------|
 |VC-Native|ネイティブ プロジェクトに使用されます。 プロジェクトの種類を特定できない場合は、これが既定値になります。|
 |VC-Managed|マネージド (/clr) プロジェクトに使用されます|
@@ -72,6 +72,6 @@ ms.locfileid: "105056000"
 |WinRT - ネイティブ|Windows 8.0 ストア プロジェクトに使用されます|
 |VC-Android|Android プロジェクトに使用されます|
 
-## <a name="see-also"></a>こちらもご覧ください
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+## <a name="see-also"></a>関連項目
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

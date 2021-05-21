@@ -1,6 +1,6 @@
 ---
-description: このメソッドを使用すると、ユーザーが安全でないプロセスにアタッチする前に、ポート供給者が警告を表示できます。
-title: 'IDebugProcessSecurity:: Querycansaf Elyattach |Microsoft Docs'
+description: このメソッドを使用すると、ユーザーが安全でないプロセスにアタッチする前に、ポート サプライヤーで警告を示すことができます。
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,13 +16,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: cbbfcf11a35fcfc43ae9e903b13a7480a3cf9743
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076278"
 ---
 # <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
-このメソッドを使用すると、ユーザーが安全でないプロセスにアタッチする前に、ポート供給者が警告を表示できます。
+このメソッドを使用すると、ユーザーが安全でないプロセスにアタッチする前に、ポート サプライヤーで警告を示すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,13 +35,13 @@ int QueryCanSafelyAttach();
 ```
 
 ## <a name="return-value"></a>戻り値
- 戻り値は次のとおりです。
+ 戻り値は以下のとおりです。
 
-- `S_OK`: プロセスへのアタッチは安全であり、警告ダイアログボックスは表示されません。
+- `S_OK`: プロセスへのアタッチは安全であり、警告ダイアログ ボックスは表示されません。
 
-- `S_FALSE`: アタッチがセキュリティ上の問題であり、警告が表示されたダイアログボックスが表示される場合があります。
+- `S_FALSE`: アタッチがセキュリティ上の問題である可能性があり、警告を示すダイアログ ボックスが表示されます。
 
-- `FAILURE`: プロセスにアタッチできません。
+- `FAILURE`: プロセスへのアタッチに失敗しました。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

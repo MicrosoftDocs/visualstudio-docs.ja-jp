@@ -1,7 +1,8 @@
-﻿---
-title: シンボルの場所 |Microsoft Docs
+---
+description: ほとんどのシンボルの場所は、イメージ ファイル内に定義されています。
+title: シンボルの場所 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -10,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7c8cd8fe-169e-4161-9cff-5e9015984add
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f972d0d072aa36cab608c85305588f6bbd5d47d4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 2452d9aca52c281a96ea8f5738bc38ed21ee63e8
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738537"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635200"
 ---
 # <a name="symbol-locations"></a>シンボルの場所
-ほとんどのシンボルには、イメージファイル内の場所が定義されています。 シンボルの場所は、 [LocationType 列挙](../../debugger/debug-interface-access/locationtype.md)型の列挙体の値と共に指定されます。 シンボルは、その場所に応じて追加のプロパティをサポートする場合があります。
+ほとんどのシンボルの場所は、イメージ ファイル内に定義されています。 シンボルの場所は、[LocationType 列挙型](../../debugger/debug-interface-access/locationtype.md)の列挙体の値を使用して指定します。 場所によっては、シンボルが追加のプロパティをサポートする場合もあります。
 
- 次の表に、最も一般的に使用される場所の種類とその他のプロパティを示します。
+ 次の表に、最も一般的に使用される場所の種類とそれらの追加のプロパティを示します。
 
-|場所の種類|その他のプロパティ|
+|場所の種類|追加のプロパティ|
 |-------------------|---------------------------|
-|`LocIsNull`|none|
-|`LocIsStatic`|[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)<br /><br /> [IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)<br /><br /> [IDiaSymbol:: get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md) (相対仮想アドレスが有効になっている場合)<br /><br /> [IDiaSymbol:: get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md) (イメージのベースが0以外に設定されている場合)|
+|`LocIsNull`|なし|
+|`LocIsStatic`|[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)<br /><br /> [IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)<br /><br /> [IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md) (相対仮想アドレスが有効な場合)<br /><br /> [IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md) (イメージ ベースが 0 以外に設定されている場合)|
 |`LocIsTLS`|[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)<br /><br /> [IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|
 |`LocIsRegRel`|[IDiaSymbol::get_registerId](../../debugger/debug-interface-access/idiasymbol-get-registerid.md)<br /><br /> [IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)|
 |`LocIsThisRel`|[IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md)|

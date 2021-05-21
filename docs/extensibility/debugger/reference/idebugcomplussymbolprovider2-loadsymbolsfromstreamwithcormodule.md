@@ -1,5 +1,5 @@
 ---
-description: コードオブジェクトを指定して、データストリームからデバッグシンボルを読み込みます。
+description: ICorDebugModule オブジェクトを指定して、データ ストリームからデバッグ シンボルを読み込みます。
 title: IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e7dd252fae60c60e65d9f164739c6f9a577aa9e0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094147"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-コードオブジェクトを指定し **て、データ** ストリームからデバッグシンボルを読み込みます。
+**ICorDebugModule** オブジェクトを指定して、データ ストリームからデバッグ シンボルを読み込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -53,28 +53,28 @@ int LoadSymbolsFromStreamWithCorModule(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[in] モジュールの一意識別子。
 
 `baseAddress`\
-からベースメモリアドレス。
+[in] ベース メモリ アドレス。
 
 `pUnkMetadataImport`\
-からシンボルメタデータを格納しているオブジェクト。
+[in] シンボル メタデータが格納されているオブジェクト。
 
 `pUnkCorDebugModule`\
-からの [モジュールインターフェイス](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)を実装するオブジェクト。
+[in] [ICorDebugModule インターフェイス](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)が実装されているオブジェクト。
 
 `pStream`\
-から読み込むデバッグシンボルを格納しているデータストリーム。
+[in] 読み込むデバッグ シンボルを含むデータ ストリーム。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(
@@ -146,5 +146,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

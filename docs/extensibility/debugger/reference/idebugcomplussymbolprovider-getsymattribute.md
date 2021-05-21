@@ -1,6 +1,6 @@
 ---
-description: 指定したモジュールの指定した親属性を持つデバッグシンボルを取得します。
-title: 'IDebugComPlusSymbolProvider:: GetSymAttribute |Microsoft Docs'
+description: 指定のモジュールの指定の親属性を持つデバッグ シンボルを取得します。
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a79cf50aed14bc236224228eaff4b35ae2845ce6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095668"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-指定したモジュールの指定した親属性を持つデバッグシンボルを取得します。
+指定のモジュールの指定の親属性を持つデバッグ シンボルを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -53,31 +53,31 @@ int GetSymAttribute (
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメインの識別子。
+[入力] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[入力] モジュールの一意識別子。
 
 `tokParent`\
-から親属性のトークン。
+[入力] 親属性のトークン。
 
 `pstrName`\
-からモジュールの名前。
+[入力] モジュールの名前。
 
 `cBuffer`\
-から出力に必要なバイト数 `buffer` 。
+[入力] 出力 `buffer` に必要なバイト数。
 
 `pcBuffer`\
-入出力出力の長さ `buffer` 。
+[出力] 出力 `buffer` の長さ。
 
 `buffer`\
-入出力シンボルを格納している配列。
+[出力] シンボルが格納されている配列。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetSymAttribute(
@@ -107,5 +107,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

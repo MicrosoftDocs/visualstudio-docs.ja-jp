@@ -1,6 +1,6 @@
 ---
-description: プロパティの最も派生したプロパティを取得します。
-title: 'IDebugProperty2:: GetDerivedMostProperty |Microsoft Docs'
+description: プロパティの最派生プロパティを取得します。
+title: IDebugProperty2::GetDerivedMostProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 6187b71338e6a91a412e704857a6c92888490f52
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065061"
 ---
 # <a name="idebugproperty2getderivedmostproperty"></a>IDebugProperty2::GetDerivedMostProperty
-プロパティの最も派生したプロパティを取得します。
+プロパティの最派生プロパティを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int GetDerivedMostProperty (
 
 ## <a name="parameters"></a>パラメーター
 `ppDerivedMost`\
-入出力最派生のプロパティを表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
+[out] 最派生プロパティを表す [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。 `S_GETDERIVEDMOST_NO_DERIVED_MOST`取得するプロパティが派生していない場合は、を返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 取得する最派生プロパティがない場合は、`S_GETDERIVEDMOST_NO_DERIVED_MOST` を返します。
 
-## <a name="remarks"></a>注釈
- たとえば、このプロパティがを実装するオブジェクトを表し、 `ClassRoot` 実際にはから派生したのインスタンス化である場合、 `ClassDerived` `ClassRoot` このメソッドは、オブジェクトを記述する [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトを返し `ClassDerived` ます。
+## <a name="remarks"></a>解説
+ たとえば、このプロパティが `ClassRoot` を実装するオブジェクトを表し、実際には `ClassRoot` から派生した `ClassDerived` のインスタンス化である場合、このメソッドからは、`ClassDerived` オブジェクトを記述する [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) オブジェクトが返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

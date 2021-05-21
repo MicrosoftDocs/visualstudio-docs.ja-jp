@@ -1,5 +1,5 @@
 ---
-description: 指定したモジュール内のドキュメント位置をデバッグアドレスの配列にマップします。
+description: 指定したモジュール内のドキュメントの位置をデバッグ アドレスの配列にマップします。
 title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d19b54e5e2d35791d160c5deb6eb06ee0431f978
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088212"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-指定したモジュール内のドキュメント位置をデバッグアドレスの配列にマップします。
+指定したモジュール内のドキュメントの位置をデバッグ アドレスの配列にマップします。
 
 ## <a name="syntax"></a>構文
 
@@ -53,28 +53,28 @@ int GetAddressesInModuleFromPosition(
 
 ## <a name="parameters"></a>パラメーター
 `ulAppDomainID`\
-からアプリケーションドメイン識別子。
+[in] アプリケーション ドメインの識別子。
 
 `guidModule`\
-からモジュールの一意識別子。
+[in] モジュールの一意識別子。
 
 `pDocPos`\
-からドキュメントの位置。
+[in] ドキュメントの位置。
 
 `fStatmentOnly`\
-から `TRUE`の場合、デバッグアドレスを1つのステートメントに限定します。
+[in] `TRUE` の場合、デバッグ アドレスを単一のステートメントに限定します。
 
 `ppEnumBegAddresses`\
-入出力このステートメントまたは行に関連付けられている開始デバッグアドレスの列挙子を返します。
+[out] このステートメントまたは行に関連付けられている開始デバッグ アドレスの列挙子を返します。
 
 `ppEnumEndAddresses`\
-入出力このステートメントまたは行に関連付けられている終了デバッグアドレスの列挙子を返します。
+[out] このステートメントまたは行に関連付けられている終了デバッグ アドレスの列挙子を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
- 次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+ 次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAddressesInModuleFromPosition(
@@ -225,5 +225,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,5 +1,5 @@
 ---
-description: 指定したプログラミング言語で実装されている、指定した属性を持つクラスを取得します。
+description: 指定されたプログラミング言語で実装されている、指定された属性を持つクラスを取得します。
 title: IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 99898ec45f7a09dc1123a46e2e95d3dba2dbb856
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058925"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
-指定したプログラミング言語で実装されている、指定した属性を持つクラスを取得します。
+指定されたプログラミング言語で実装されている、指定された属性を持つクラスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -47,19 +47,19 @@ int GetAttributedClassesForLanguage (
 
 ## <a name="parameters"></a>パラメーター
 `guidLanguage`\
-から言語の一意の識別子。
+[in] 言語の一意識別子。
 
 `pstrAttribute`\
-から属性文字列。
+[in] 属性文字列。
 
 `ppEnum`\
-入出力属性クラスの列挙体を返します。
+[out] 属性クラスの列挙体を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAttributedClassesForLanguage(
@@ -189,5 +189,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

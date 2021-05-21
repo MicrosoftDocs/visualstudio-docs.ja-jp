@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: findInjectedSource |Microsoft Docs'
+description: 属性プロバイダーまたはコンパイル プロセスの他のコンポーネントによりシンボル ストアに配置されたソースの一覧を取得します。
+title: IDiaSession::findInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 907531b6-1ef8-4153-986d-b72611a1632d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e2145c90c25c448880e51b9b394c7085e0d49b7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: e1604bf91f70f2973dcd394f81569b5ee04e9a99
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742252"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634332"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
-属性プロバイダーまたはコンパイルプロセスの他のコンポーネントによってシンボルストアに配置されたソースの一覧を取得します。
+属性プロバイダーまたはコンパイル プロセスの他のコンポーネントによりシンボル ストアに配置されたソースの一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findInjectedSource ( 
+HRESULT findInjectedSource ( 
    LPCOLESTR                 srcFile,
    IDiaEnumInjectedSources** ppResult
 );
@@ -34,14 +35,14 @@ HRESULT findInjectedSource ( 
 #### <a name="parameters"></a>パラメーター
  srcFile
 
-から検索するソースファイルの名前。
+[入力] 検索するソース ファイルの名前。
 
  ppResult
 
-入出力挿入されたすべてのソースの一覧を含む[IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)オブジェクトを返します。
+[出力] 挿入したすべてのソースの一覧を含む [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

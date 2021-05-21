@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 52c0cdf514f606287386c68713371d112cb97e79
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091917"
@@ -43,14 +43,14 @@ int GetInterceptCookie(
 
 ## <a name="parameters"></a>パラメーター
 `pqwCookie`\
-入出力インターセプトされた例外に関連付けられている一意の値。
+[out] インターセプトされた例外に関連付けられている一意の値。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返します。それ以外の場合は `S_OK` エラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)メソッドによってインターセプトされた例外の処理が完了すると、 [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)イベントが送信されます。 ハンドラーは、メソッドを使用して、 `GetInterceptCookie` 例外に関連付けられている一意の値 (メソッドに渡されたものと同じ値) を取得でき `InterceptCurrentException` ます。
+## <a name="remarks"></a>解説
+ [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) メソッドでは、インターセプトされた例外の処理の完了後に、[IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) イベントが送信されます。 ハンドラーでは `GetInterceptCookie` メソッドを使用して、例外に関連付けられている一意の値 (`InterceptCurrentException` メソッドに渡されたものと同じ値) を取得できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)
 - [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

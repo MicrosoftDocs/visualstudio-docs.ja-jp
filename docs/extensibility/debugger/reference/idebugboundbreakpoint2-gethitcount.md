@@ -1,6 +1,6 @@
 ---
-description: このバインドされたブレークポイントの現在のヒットカウントを取得します。
-title: 'IDebugBoundBreakpoint2:: GetHitCount |Microsoft Docs'
+description: このバインドされたブレークポイントの現在のヒット カウントを取得します。
+title: IDebugBoundBreakpoint2::GetHitCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ca015a814956a0b6073e090d17751e623b557429
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088859"
 ---
 # <a name="idebugboundbreakpoint2gethitcount"></a>IDebugBoundBreakpoint2::GetHitCount
-このバインドされたブレークポイントの現在のヒットカウントを取得します。
+このバインドされたブレークポイントの現在のヒット カウントを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,14 +43,14 @@ int GetHitCount(
 
 ## <a name="parameters"></a>パラメーター
 `pdwHitCount`\
-入出力ヒットカウントを返します。
+[out] ヒット カウントを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`バインドされたブレークポイントオブジェクトの状態が `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙体の一部) に設定されている場合は、を返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 バインドされたブレークポイント オブジェクトの状態が `BPS_DELETED` ([BP_STATE](../../../extensibility/debugger/reference/bp-state.md) 列挙の一部) に設定されている場合は、`E_BP_DELETED` を返します。
 
-## <a name="remarks"></a>注釈
- ヒットカウントは、現在のセッションの実行中にこのブレークポイントが発生した回数です。
+## <a name="remarks"></a>解説
+ ヒット カウントは、セッションの現在の実行中にこのブレークポイントが発生した回数となります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

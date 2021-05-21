@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_isLTCG |Microsoft Docs'
+---
+description: コンパイル単位が、プログラム全体の最適化を支援するリンカー スイッチ、/LTCG (リンク時のコード生成) (/cpp/build/reference/ltcg-link-time-code-generation) にリンクされているかどうかを示すフラグを取得します。
+title: IDiaSymbol::get_isLTCG | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 5f7f05b8-6b71-4958-9e1e-e4924ef9c59b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d3fa97d5612b61151d9c435b91f500c87af0b23
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1b8306dabe6533287d7d28841ea76f2d6478e4a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740216"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635132"
 ---
 # <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
-[コンパイル単位](../../debugger/debug-interface-access/compiland.md)がリンカースイッチ[/ltcg (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation)にリンクされているかどうかを指定するフラグを取得します。これにより、プログラム全体の最適化を支援します。 このスイッチは、マネージコードにのみ適用されます。
+[コンパイル単位](../../debugger/debug-interface-access/compiland.md)が、プログラム全体の最適化を支援するリンカー スイッチ、[/LTCG (リンク時のコード生成)](/cpp/build/reference/ltcg-link-time-code-generation) にリンクされているかどうかを示すフラグを取得します。 このスイッチは、マネージド コードにのみ適用できます。
 
 ## <a name="syntax"></a>構文
 
@@ -33,20 +34,20 @@ HRESULT get_iSLTCG(
 #### <a name="parameters"></a>パラメーター
  pFlag
 
-入出力@No__t_1 が/LTCG リンカースイッチに関連付けられている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
+[出力] `compiland` が /LTCG のリンカー スイッチにリンクされている場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティがそのシンボルに使用できないことを意味します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|必要条件|説明|
+|要件|説明|
 |-----------------|-----------------|
-|ヘッダー:|dia2|
-|バージョン:|DIA SDK v1.0|
+|ヘッダー:|dia2.h|
+|バージョン:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

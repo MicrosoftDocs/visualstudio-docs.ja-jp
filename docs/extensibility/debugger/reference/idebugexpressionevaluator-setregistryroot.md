@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、レジストリのルートを設定します。
-title: 'IDebugExpressionEvaluator:: SetRegistryRoot |Microsoft Docs'
+description: このメソッドではレジストリ ルートを設定します。
+title: IDebugExpressionEvaluator::SetRegistryRoot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 14ce5d00dcfec9da4c6193398f62edbe4e1988d3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092047"
 ---
 # <a name="idebugexpressionevaluatorsetregistryroot"></a>IDebugExpressionEvaluator::SetRegistryRoot
-このメソッドは、レジストリのルートを設定します。 サイドバイサイドデバッグに使用されます。
+このメソッドではレジストリ ルートを設定します。 サイドバイサイドのデバッグに使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int SetRegistryRoot(
 
 ## <a name="parameters"></a>パラメーター
 `ustrRegistryRoot`\
-から新しいレジストリルート。
+[in] 新しいレジストリ ルート。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 指定されたレジストリルートは、通常、式エバリュエーターが最初にインスタンス化され、特定のバージョンの Visual Studio のレジストリキーを指している場合に設定されます (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudioの \\ *x* *. y* はバージョン番号です)。
+## <a name="remarks"></a>解説
+ 指定されたレジストリ ルートは通常、式エバリュエーターが最初にインスタンス化され、特定のバージョンの Visual Studio のレジストリ キーを指している場合に設定されます (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*X.Y*。ここで、*X.Y* はバージョン番号です)。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

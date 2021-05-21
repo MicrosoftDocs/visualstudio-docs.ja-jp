@@ -1,6 +1,6 @@
 ---
 description: 指定されたテキスト内の行と列の位置を記述します。
-title: TEXT_POSITION |Microsoft Docs
+title: TEXT_POSITION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 1b99b5dcede7f0e40e0ff77d1e3f7f64b5943c18
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070896"
@@ -45,14 +45,14 @@ public struct TEXT_POSITION {
 ## <a name="members"></a>メンバー
 
 `dwLine`\
-ソースファイル内の行のインデックス。
+ソース ファイル内の行のインデックス。
 
 `dwColumn`\
-直線への文字オフセット。
+行への文字オフセット。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-この構造体は、 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) と [disassemblydata](../../../extensibility/debugger/reference/disassemblydata.md) 構造体で使用されます。
+この構造体は、[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) および [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 構造体で使用されます。
 
 この構造体は、次のメソッドの呼び出しによって入力されます。
 
@@ -76,15 +76,15 @@ public struct TEXT_POSITION {
 
 - [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
- ヘッダー: msdbg. h
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)

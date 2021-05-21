@@ -1,6 +1,6 @@
 ---
-description: プロセスの境界を越えて、指定されたインターフェイスを取得します。
-title: 'IDebugProviderProgramNode2:: UnmarshalDebuggeeInterface |Microsoft Docs'
+description: プロセス境界を越えて、指定されたインターフェイスを取得します。
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 42b51d93f9c0cec3a2ee74b2dfc0f4621c608c07
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105083688"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-プロセスの境界を越えて、指定されたインターフェイスを取得します。
+プロセス境界を越えて、指定されたインターフェイスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int UnmarshalDebuggeeInterface(
 
 ## <a name="parameters"></a>パラメーター
 `riid`\
-から取得するインターフェイスの GUID。
+[in] 取得するインターフェイスの GUID。
 
 `ppvObject`\
-入出力目的のインターフェイスを実装しているオブジェクトを返します。 [C++] これは、目的のインターフェイス型に直接キャストできます。 [C#] メソッドを使用し <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> て、目的のインターフェイスを取得します。
+[out] 目的のインターフェイスを実装するオブジェクトを返します。 [C++] これは、目的のインターフェイス型に直接キャストできます。 [C#] <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> メソッドを使用して、目的のインターフェイスを取得します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、デバッグエンジンがプロセス空間で実行されて [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] おり、デバッグ中のプログラムが独自のプロセス空間で実行されている場合に使用されます。
+## <a name="remarks"></a>解説
+ このメソッドは、[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] プロセス空間でデバッグ エンジンが実行され、デバッグするプログラムが専用のプロセス空間で実行されている場合に使用されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

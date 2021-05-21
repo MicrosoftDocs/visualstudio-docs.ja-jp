@@ -1,6 +1,6 @@
 ---
 description: 指定したプリミティブ型から型を作成します。
-title: 'IDebugComPlusSymbolProvider:: CreateTypeFromPrimitive |Microsoft Docs'
+title: IDebugComPlusSymbolProvider::CreateTypeFromPrimitive | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: f09e61efe513d5698af6fc9a64e1d7625585fa8c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088290"
@@ -45,19 +45,19 @@ int CreateTypeFromPrimitive(
 
 ## <a name="parameters"></a>パラメーター
 `dwPrimType`\
-からプリミティブ型を表す [Corelementtype 列挙子](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) の値。
+[in] プリミティブ型を表す [CorElementType 列挙型](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration)の値。
 
 `pAddress`\
-から [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスによって表されるアドレスオブジェクト。
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) インターフェイスで表されるアドレス オブジェクト。
 
 `ppType`\
-から型を記述する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
+[in] 型を記述する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)インターフェイスを公開する **Cdebugシンボルプロバイダー** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) インターフェイスを公開する **CDebugSymbolProvider** オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugSymbolProvider::CreateTypeFromPrimitive(
@@ -96,5 +96,5 @@ Error:
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

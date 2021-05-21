@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナー-Throw アクティビティデザイナー
-description: Throw アクティビティについて、および throw アクティビティデザイナーを使用して Throw アクティビティを作成および構成する方法について説明します。
+title: ワークフロー デザイナー - Throw アクティビティ デザイナー
+description: Throw アクティビティについて、および Throw アクティビティ デザイナーを使用して Throw アクティビティを作成および構成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: a1ffd0a9dda243e53431e419910b866853cd3932
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99969100"
 ---
 # <a name="throw-activity-designer"></a>Throw アクティビティ デザイナー
 
-**Throw** アクティビティデザイナーは、アクティビティを作成および構成するために使用され <xref:System.Activities.Statements.Throw> ます。
+**Throw** アクティビティ デザイナーは、<xref:System.Activities.Statements.Throw> アクティビティを作成および構成するために使用します。
 
 ## <a name="the-throw-activity"></a>Throw アクティビティ
 
@@ -29,18 +29,18 @@ ms.locfileid: "99969100"
 
 ### <a name="using-the-throw-activity-designer"></a>Throw アクティビティ デザイナーの使用
 
-[**ツールボックス**] の [**エラー処理**] カテゴリで、 **Throw** アクティビティデザイナーにアクセスします。
+**[ツールボックス]** の **[エラー処理]** カテゴリにある **Throw** アクティビティ デザイナーにアクセスします。
 
-**Throw** アクティビティデザイナーは、[**ツールボックス**] からドラッグして、アクティビティを通常配置している任意の場所 (内など) にワークフローデザイナー画面にドロップできます <xref:System.Activities.Statements.Sequence> 。 これ <xref:System.Activities.Statements.Throw> により、Throw という既定の **DisplayName** を持つアクティビティが作成されます。 この <xref:System.Activities.Activity.DisplayName%2A> 値は、 **Throw** アクティビティデザイナーのヘッダー、またはプロパティグリッドの [ **DisplayName** ] ボックスで編集できます。 この <xref:System.Activities.Statements.Throw.Exception%2A> プロパティは、プロパティ グリッドで編集する必要があります。
+**Throw** アクティビティ デザイナーを **[ツールボックス]** からドラッグして、アクティビティが配置される通常のワークフロー デザイナー画面 (<xref:System.Activities.Statements.Sequence> 内など) にドロップできます。 この操作により、Throw という既定の **DisplayName** を持つ <xref:System.Activities.Statements.Throw> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A> 値は、**Throw** アクティビティ デザイナーのヘッダー、またはプロパティ グリッドの **DisplayName** ボックスで編集できます。 この <xref:System.Activities.Statements.Throw.Exception%2A> プロパティは、プロパティ グリッドで編集する必要があります。
 
 ### <a name="the-throw-properties"></a>Throw プロパティ
 
 次の表に、<xref:System.Activities.Statements.Throw> のプロパティと、デザイナーでのその使用方法を示します。
 
-|プロパティ名|必須|使用|
+|プロパティ名|必須|使用方法|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Throw> アクティビティの表示名を指定します (省略可能)。 既定値は Throw です。|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|True|スローされる例外。 この例外は、<xref:System.Exception> から派生していることが必要です。 例外を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
+|<xref:System.Activities.Activity.DisplayName%2A>|いいえ|<xref:System.Activities.Statements.Throw> アクティビティの表示名を指定します (省略可能)。 既定値は Throw です。|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|はい|スローされる例外。 この例外は、<xref:System.Exception> から派生していることが必要です。 例外を指定するには、プロパティ グリッドで Visual Basic の式を入力します。|
 
 ## <a name="see-also"></a>関連項目
 

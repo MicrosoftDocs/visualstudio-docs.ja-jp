@@ -1,6 +1,6 @@
 ---
-description: この保留中のブレークポイントが原因で発生したすべてのエラーブレークポイントの一覧を取得します。
-title: 'IDebugPendingBreakpoint2:: EnumErrorBreakpoints ポイント |Microsoft Docs'
+description: この保留中のブレークポイントが原因で発生したすべてのエラー ブレークポイントの一覧を取得します。
+title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 68776819e985262ed62aea28d1849ad57c778779
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072690"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-この保留中のブレークポイントが原因で発生したすべてのエラーブレークポイントの一覧を取得します。
+この保留中のブレークポイントが原因で発生したすべてのエラー ブレークポイントの一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,16 +45,16 @@ int EnumErrorBreakpoints(
 
 ## <a name="parameters"></a>パラメーター
 `bpErrorType`\
-から列挙するエラーの種類を選択する [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) 列挙の値の組み合わせ。
+[in] 列挙するエラーの種類を選択する [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) 列挙体の値の組み合わせ。
 
 `ppEnum`\
-入出力[IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)オブジェクトの一覧を含む[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)オブジェクトを返します。
+[out] [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) オブジェクトの一覧を含む [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`ブレークポイントが削除されている場合は、を返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 ブレークポイントが削除されている場合は、`E_BP_DELETED` を返します。
 
 ## <a name="example"></a>例
- 次の例は、IDebugPendingBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CPendingBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
+ 次の例は、[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスを公開するシンプルな `CPendingBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(
@@ -128,7 +128,7 @@ HRESULT CPendingBreakpoint::EnumErrorBreakpoints(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
 - [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)
 - [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)

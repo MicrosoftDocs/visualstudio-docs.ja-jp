@@ -1,6 +1,6 @@
 ---
-title: Description 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: Description 要素について、また、[新しいプロジェクト] ダイアログボックスまたは [新しい項目の追加] ダイアログボックスに表示されるテンプレートの説明を指定する方法について説明します。
+title: Description 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: Description 要素についてと、[新しいプロジェクト] または [新しい項目の追加] ダイアログ ボックスに表示されるテンプレートの説明を指定する方法について学習します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8a48e80800480a6e6fa1d9576b83112fd7cdcff4
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091293"
 ---
 # <a name="description-element-visual-studio-templates"></a>Description 要素 (Visual Studio テンプレート)
-[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスに表示されるテンプレートの説明を指定します。
+**[新しいプロジェクト]** または **[新しい項目の追加]** ダイアログ ボックスに表示されるテンプレートの説明を指定します。
 
  \<VSTemplate> \<TemplateData>
  \<Description>
@@ -45,8 +45,8 @@ ms.locfileid: "105091293"
 
 |属性|説明|
 |---------------|-----------------|
-|`Package`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
-|`ID`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します。|
+|`Package`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
+|`ID`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のリソース ID を指定します。|
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -60,10 +60,10 @@ ms.locfileid: "105091293"
 ## <a name="text-value"></a>テキスト値
  `Package` と `ID` 属性を使わない限り、テキスト値が必要です。
 
- テキストは、テンプレートの説明を提供します。
+ テキストでテンプレートについて説明します。
 
-## <a name="remarks"></a>注釈
- `Description` は、要素の必須の子要素です `TemplateData` 。
+## <a name="remarks"></a>解説
+ `Description` は、`TemplateData` 要素に必須の子要素です。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。

@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_types |Microsoft Docs'
+---
+description: このシンボルのコンパイラ固有の型の配列を取得します。
+title: IDiaSymbol::get_types | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 5f056e0c-e15b-4e00-8f78-aadc8574f7ea
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d23ea3c4d885b3f7575c998999814d0808d03bc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: aec5db878c87ba257f1f83458d1ae742272a9b0f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739056"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635103"
 ---
 # <a name="idiasymbolget_types"></a>IDiaSymbol::get_types
 このシンボルのコンパイラ固有の型の配列を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72739056"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_types ( 
+HRESULT get_types ( 
    DWORD       cTypes,
    DWORD*      pcTypes,
    IDiaSymbol* types[]
@@ -35,21 +36,21 @@ HRESULT get_types ( 
 #### <a name="parameters"></a>パラメーター
  `cTypes`
 
-からデータを格納するバッファーのサイズ。
+[入力] データを保持するバッファーのサイズ。
 
  `pcTypes`
 
-入出力書き込まれた型の数を返します。 `types` パラメーターが `NULL` の場合は、使用可能な型の合計数を返します。
+[出力] 書き込まれた型の数、または `types` パラメーターが `NULL` の場合、使用可能な型の合計数を返します。
 
  `types[]`
 
-入出力このシンボルのすべての型を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを使用して入力する配列。
+[出力] このシンボルのすべての型を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを使用して格納される配列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

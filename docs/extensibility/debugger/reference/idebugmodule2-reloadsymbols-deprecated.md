@@ -1,6 +1,6 @@
 ---
 description: 互換性のために残されています。 このモジュールのシンボルを再読み込みします。
-title: 'IDebugModule2:: ReloadSymbols_Deprecated |Microsoft Docs'
+title: IDebugModule2::ReloadSymbols_Deprecated | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5dfcd1edd92048cde6da6cc195c3e0ba8f1cd392
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065711"
@@ -44,17 +44,17 @@ int ReloadSymbols(
 
 ## <a name="parameters"></a>パラメーター
 `pszUrlToSymbols`\
-からシンボルストアへのパス。
+[in] シンボル ストアへのパス。
 
 `pbstrDebugMessage`\
-入出力[モジュール] ウィンドウのモジュール名の右側に表示される情報メッセージ (状態やエラーメッセージなど) を返します。
+[out] [モジュール] ウィンドウのモジュール名の右側に表示される情報メッセージ (状態やエラー メッセージなど) を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 デバッグエンジンは常にを返す必要があり `E_FAIL` ます。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 デバッグ エンジンでは、常に `E_FAIL` を返す必要があります。
 
-## <a name="remarks"></a>注釈
- このメソッドはサポートされなくなりました。 代わりに、 [Loadsymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) メソッドを実装してください。
+## <a name="remarks"></a>解説
+ このメソッドはサポートされなくなりました。 代わりに [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) メソッドを実装してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)
 - [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md)

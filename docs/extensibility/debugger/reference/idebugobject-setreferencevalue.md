@@ -1,6 +1,6 @@
 ---
 description: このオブジェクトの参照値を設定します。
-title: 'IDebugObject:: SetReferenceValue |Microsoft Docs'
+title: IDebugObject::SetReferenceValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5a65c14d4122ac6d877573822b4fa8be1cb6cdd1
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054115"
@@ -42,14 +42,14 @@ int SetReferenceValue(
 
 ## <a name="parameters"></a>パラメーター
 `pObject`\
-から新しい参照値を表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクト。
+[in] 新しい参照値を表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクト。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、この [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトを、パラメーターに指定されたオブジェクトの値への参照として使用し `pObject` 、前の参照をすべて破棄します。 このオブジェクトは `IDebugObject` 、既に参照型である必要があることに注意してください。
+## <a name="remarks"></a>解説
+ このメソッドを使用すると、この [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトが `pObject` パラメーターで指定されたオブジェクトの値への参照となり、前の参照は破棄されます。 この `IDebugObject` オブジェクトは、既に参照型になっている必要があることに注意してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)
 - [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

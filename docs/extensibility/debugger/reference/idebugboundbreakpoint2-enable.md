@@ -1,6 +1,6 @@
 ---
 description: ブレークポイントを有効または無効にします。
-title: 'IDebugBoundBreakpoint2:: Enable |Microsoft Docs'
+title: IDebugBoundBreakpoint2::Enable | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,7 +19,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 7b68651fa100555fbc07065dedc5cff22b14b1a1
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105088953"
@@ -43,13 +43,13 @@ int Enable(
 
 ## <a name="parameters"></a>パラメーター
 `fEnable`\
-から0以外 () に設定する `TRUE` と、または 0 () を使用し `FALSE` てブレークポイントを無効にできます。
+[in] ブレークポイントを有効にする場合はゼロ以外 (`TRUE`) に、無効にする場合はゼロ (`FALSE`) に設定します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`バインドされたブレークポイントオブジェクトの状態が `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)列挙体の一部) に設定されている場合は、を返します。
+正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 バインドされたブレークポイント オブジェクトの状態が `BPS_DELETED` ([BP_STATE](../../../extensibility/debugger/reference/bp-state.md) 列挙の一部) に設定されている場合は、`E_BP_DELETED` を返します。
 
 ## <a name="example"></a>例
-次の例は、IDebugBoundBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CBoundBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
+次の例は、[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを公開するシンプルな `CBoundBreakpoint` オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CBoundBreakpoint::Enable(BOOL fEnable)
@@ -98,6 +98,6 @@ HRESULT CBoundBreakpoint::Enable(BOOL fEnable)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、SetHostingProcessLanguage の呼び出しによって設定された、このプロセスの言語を表す GUID を返します。
-title: 'IDebugProcess3:: GetHostingProcessLanguage |Microsoft Docs'
+description: このメソッドからは、SetHostingProcessLanguage の呼び出しによって設定されたこのプロセスの言語を表す GUID が返されます。
+title: IDebugProcess3::GetHostingProcessLanguage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 2615f0e43c21983e220600e30ea9b78f508c8ddb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105076551"
 ---
 # <a name="idebugprocess3gethostingprocesslanguage"></a>IDebugProcess3::GetHostingProcessLanguage
-このメソッドは、 `GUID` [Sethostingprocesslanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)の呼び出しによって設定された、このプロセスの言語を表すを返します。
+このメソッドからは、[SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md) の呼び出しによって設定されたこのプロセスの言語を表す `GUID` が返されます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,11 +42,11 @@ int GetHostingProcessLanguage(
 
 ## <a name="parameters"></a>パラメーター
 `pguidLang`\
-入出力 `GUID` このプロセスの言語の。 `GUID_NULL` (C++) または `Guid.Empty` (C#) は、言語が設定されていないことを意味します。
+[out] このプロセスの言語の `GUID`。 `GUID_NULL` (C++) または `Guid.Empty` (C#) は、言語が設定されていないことを意味します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)
 - [SetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-sethostingprocesslanguage.md)

@@ -1,6 +1,6 @@
 ---
 description: 保留中のブレークポイント (まだバインドされていないブレークポイント) の状態を指定します。
-title: PENDING_BP_STATE |Microsoft Docs
+title: PENDING_BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d041042be92fe68dd6f0ea35bbdb4f6dd6d9ac7e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105086379"
@@ -26,7 +26,7 @@ ms.locfileid: "105086379"
 # <a name="pending_bp_state"></a>PENDING_BP_STATE
 保留中のブレークポイント (まだバインドされていないブレークポイント) の状態を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_PENDING_BP_STATE { 
@@ -49,7 +49,7 @@ public enum enum_PENDING_BP_STATE {
 
 ## <a name="fields"></a>フィールド
  `PBPS_NONE`\
- ゼロのプレースホルダーです。 この値は返されません。
+ 0 のプレースホルダー。 この値が返されることはありません。
 
  `PBPS_DELETED`\
  保留中のブレークポイントが削除されたことを示します。
@@ -60,13 +60,13 @@ public enum enum_PENDING_BP_STATE {
  `PBPS_ENABLED`\
  保留中のブレークポイントが有効であることを示します。
 
-## <a name="remarks"></a>注釈
- `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md)構造体のメンバーとして使用します。
+## <a name="remarks"></a>解説
+ [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) 構造体の `state` メンバーとして使用します。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

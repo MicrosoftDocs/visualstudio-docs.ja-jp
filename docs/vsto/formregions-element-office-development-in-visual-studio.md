@@ -1,6 +1,6 @@
 ---
-description: Vstov4 名前空間の formRegions 要素には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれています。
-title: '&lt;formRegions &gt; 要素 (Visual Studio での Office 開発)'
+description: vstov4 名前空間の formRegions 要素には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が格納されます。
+title: '&lt;formRegions&gt; 要素 (Visual Studio での Office 開発)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -19,13 +19,13 @@ ms.workload:
 - office
 ms.openlocfilehash: 7c8fd7e0ced0fadcd945388a9730513b2a591ed0
 ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102223460"
 ---
-# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions &gt; 要素 (Visual Studio での Office 開発)
-  `formRegions`名前空間の要素には `vstov4` 、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が含まれます。
+# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt; 要素 (Visual Studio での Office 開発)
+  `vstov4` 名前空間の `formRegions` 要素には、VSTO アドインに関連付けられている Microsoft Office Outlook フォーム領域が格納されます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,12 +46,12 @@ ms.locfileid: "102223460"
  `formRegions` 要素には次の要素があります。
 
 ### <a name="formregion"></a>formRegion
- フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion`要素は&#60;formRegion&#62; 要素で定義され、 [Visual Studio&#41;での Office 開発 &#40;](../vsto/formregion-element-office-development-in-visual-studio.md)ます。
+ フォーム領域のある Outlook VSTO アドインに必要です。 `formRegion` 要素は、「[&#60;formRegion&#62; 要素 &#40;Visual Studio での Office 開発&#41;](../vsto/formregion-element-office-development-in-visual-studio.md)」で定義されています。
 
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例
 
 ### <a name="description"></a>説明
- 次のコード例は、 `formRegions` を使用して展開したアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例は、 `formRegions` を使用して展開したアプリケーション レベルの Office ソリューションに対するアプリケーション マニフェストの [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」で提供されている大きな例の一部です。
 
 ### <a name="code"></a>コード
 
@@ -68,6 +68,6 @@ ms.locfileid: "102223460"
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューション用アプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)
-- [Office ソリューションの配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)
+- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

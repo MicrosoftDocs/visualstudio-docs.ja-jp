@@ -1,7 +1,7 @@
 ---
 title: LocationFieldMRUPrefix 要素 (Visual Studio テンプレート)
 titleSuffix: ''
-description: LocationFieldMRUPrefix 要素について、および [新しいプロジェクト] ダイアログボックスと [新しい項目の追加] ダイアログボックスで最近使用した (MRU) パスをどのように指定するかについて説明します。
+description: LocationFieldMRUPrefix 要素についてと、[新しいプロジェクト] および [新しい項目の追加] ダイアログ ボックスで最近使用した (MRU) パスをどのように指定するかについて学習します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,14 +19,14 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 189c7d0979d125b18db0ee8c467fd9538493a266
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073210"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix 要素 (Visual Studio テンプレート)
 
-[ **新しいプロジェクト** ] ダイアログボックスと [ **新しい項目の追加** ] ダイアログボックスで最近使用した (MRU) パスを指定します。
+**[新しいプロジェクト]** および **[新しい項目の追加]** ダイアログ ボックスで最近使用した (MRU) パスを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,9 +52,9 @@ ms.locfileid: "105073210"
 |-------------|-----------------|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
- この要素は、を使用して生成されたテンプレートに対してのみ使用してください [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)] 。
+ この要素は、[!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)] で生成されたテンプレートに対してのみ使用してください。
 
 ## <a name="see-also"></a>関連項目
 

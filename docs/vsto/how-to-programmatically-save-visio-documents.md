@@ -17,7 +17,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 340d813a19c0c0dc5c347d3cfe4c7b29ff1bd049
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828996"
@@ -47,7 +47,7 @@ ms.locfileid: "107828996"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet11":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet11":::
 
-## <a name="save-a-document-with-a-new-name"></a>新しい名前でドキュメントを保存する
+## <a name="save-a-document-with-a-new-name"></a>新しい名前を付けて図面を保存する
  新しい図面を保存するか、または新しい名前を付けて図面を保存するには、`Microsoft.Office.Interop.Visio.Document.SaveAs` メソッドを使用します。 このメソッドでは、新しいファイル名を指定する必要があります。
 
 ### <a name="to-save-the-active-visio-document-with-a-new-name"></a>作業中の Visio 図面に新しい名前を付けて保存するには
@@ -59,7 +59,7 @@ ms.locfileid: "107828996"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet10":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet10":::
 
-## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>新しい名前と指定した引数を使用してドキュメントを保存する
+## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数を使用して図面を保存する
  新しい名前を付けて図面を保存し、適用可能な引数を指定して図面に適用するには、`Microsoft.Office.Interop.Visio.Document.SaveAsEx` メソッドを使用します。
 
 ### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>新しい名前および指定した引数を使用して図面を保存するには
@@ -74,11 +74,11 @@ ms.locfileid: "107828996"
 ## <a name="compile-the-code"></a>コードのコンパイル
  このコード例で必要な要素は次のとおりです。
 
-- 新しい名前を持つドキュメントを保存するには、という名前のディレクトリを `Test` *[マイドキュメント* ] フォルダー (windows XP 以前の場合) または [ *ドキュメント* ] フォルダー (windows Vista の場合) に配置する必要があります。
+- 図面に新しい名前を付けて保存するには、*マイ ドキュメント* フォルダー (Windows XP 以前の場合) または *ドキュメント* フォルダー (Windows Vista の場合) 内に `Test` という名前のディレクトリが存在している必要があります。
 
 ## <a name="see-also"></a>関連項目
 - [Visio ソリューション](../vsto/visio-solutions.md)
-- [Visio オブジェクトモデルの概要](../vsto/visio-object-model-overview.md)
+- [Visio オブジェクト モデルの概要](../vsto/visio-object-model-overview.md)
 - [方法: プログラムによって新しい Visio 図面を作成する](../vsto/how-to-programmatically-create-new-visio-documents.md)
 - [方法: プログラムによって Visio 図面を開く](../vsto/how-to-programmatically-open-visio-documents.md)
 - [方法: プログラムによって Visio 図面を閉じる](../vsto/how-to-programmatically-close-visio-documents.md)

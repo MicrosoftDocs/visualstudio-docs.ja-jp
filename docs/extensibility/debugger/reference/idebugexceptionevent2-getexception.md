@@ -1,6 +1,6 @@
 ---
-description: このイベントを発生させた例外の詳細な説明を取得します。
-title: 'IDebugExceptionEvent2:: GetException |Microsoft Docs'
+description: このイベントを発生された例外に関する詳細な説明を取得します。
+title: IDebugExceptionEvent2::GetException | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 72457b1b8931d028f555e7f9354f34b133fa79bb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084780"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-このイベントを発生させた例外の詳細な説明を取得します。
+このイベントを発生された例外に関する詳細な説明を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,16 +42,16 @@ int GetException(
 
 ## <a name="parameters"></a>パラメーター
 `pExceptionInfo`\
-[入力、出力]例外の説明と共に入力される [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 構造体。
+[in, out] 例外の説明が入力される [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
- [C++ のみ]呼び出し元は、構造内の[IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)オブジェクトを解放するだけでなく、 [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)構造体内の任意の文字列を解放する役割も担います。
+ [C++ のみ] 呼び出し元は、[EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) 構造体内の文字列を解放するだけでなく、構造体内の [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) オブジェクトも解放する責任があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)
 - [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

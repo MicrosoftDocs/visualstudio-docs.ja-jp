@@ -1,7 +1,8 @@
 ---
-title: 'IDiaPropertyStorage:: ReadBOOL |Microsoft Docs'
+description: プロパティ セット内の BOOL 値を読み取ります。
+title: IDiaPropertyStorage::ReadBOOL | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: ad1822db-4572-48f7-9919-f8137f6701f2
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d776e37bab189e61d0264f4cbda24f89cb4501ce
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 3a279cf7d8af13751a8464b5bccae1fd0b8a0acb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742939"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634380"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
-プロパティセット内の `BOOL` 値を読み取ります。
+プロパティ セット内の `BOOL` 値を読み取ります。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT ReadBOOL ( 
+HRESULT ReadBOOL ( 
    PROPID id,
    BOOL*  pValue
 );
@@ -34,17 +35,17 @@ HRESULT ReadBOOL ( 
 #### <a name="parameters"></a>パラメーター
  `id`
 
-から読み取るプロパティの識別子 (`PROPID` は、WTypes. h で `ULONG` として定義されています)。
+[入力] 読み取るプロパティの識別子 (`PROPID` は、WTypes.h に `ULONG` として定義されます)。
 
  `pValue`
 
-入出力プロパティ値を返します。
+[出力] プロパティ値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 プロパティが `BOOL` 型でない場合は `E_INVALIDARG` を返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 プロパティの型が `BOOL` ではない場合、`E_INVALIDARG` を返します。
 
-## <a name="remarks"></a>Remarks
- 一貫した結果を得るために、`BOOL` 値を解釈して0以外の値が `TRUE`、0が `FALSE` されるようにします。
+## <a name="remarks"></a>解説
+ 一貫した結果を得るには、0 以外の値が `TRUE` で、0 が `FALSE` になるように、`BOOL` 値を解釈します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

@@ -1,6 +1,6 @@
 ---
 description: プロセスに対して取得する情報の種類を指定します。
-title: PROCESS_INFO_FIELDS |Microsoft Docs
+title: PROCESS_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d1f779352ce6b1217cd8af1e87988cb165b2dddc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079632"
@@ -26,7 +26,7 @@ ms.locfileid: "105079632"
 # <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
 プロセスに対して取得する情報の種類を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_PROCESS_INFO_FIELDS { 
@@ -59,43 +59,43 @@ public enum enum_PROCESS_INFO_FIELDS {
 
 ## <a name="fields"></a>フィールド
  `PIF_FILE_NAME`\
- `bstrFileName` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体のフィールドを初期化/使用します。
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 構造体の `bstrFileName` フィールドを初期化および使用します。
 
  `PIF_BASE_NAME`\
- 構造体のフィールドを初期化/使用し `bstrBaseName` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `bstrBaseName` フィールドを初期化および使用します。
 
  `PIF_TITLE`\
- 構造体のフィールドを初期化/使用し `bstrTitle` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `bstrTitle` フィールドを初期化および使用します。
 
  `PIF_PROCESS_ID`\
- 構造体のフィールドを初期化/使用し `ProcessId` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `ProcessId` フィールドを初期化および使用します。
 
  `PIF_SESSION_ID`\
- 構造体のフィールドを初期化/使用し `dwSessionId` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `dwSessionId` フィールドを初期化および使用します。
 
  `PIF_ATTACHED_SESSION_NAME`\
- 構造体のフィールドを初期化/使用し `bstrAttachedSessionName` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `bstrAttachedSessionName` フィールドを初期化および使用します。
 
  `PIF_CREATION_TIME`\
- 構造体のフィールドを初期化/使用し `CreationTime` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `CreationTime` フィールドを初期化および使用します。
 
  `PIF_FLAGS`\
- 構造体のフィールドを初期化/使用し `Flags` `PROCESS_INFO` ます。
+ `PROCESS_INFO` 構造体の `Flags` フィールドを初期化および使用します。
 
  `PIF_ALL`\
- すべてのフィールドを入力します。
+ すべてのフィールドに入力します。
 
-## <a name="remarks"></a>注釈
- [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体のどのフィールドを初期化するかを示すために[GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md)メソッドに渡されます。
+## <a name="remarks"></a>解説
+ [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 構造体のどのフィールドを初期化するかを示すために [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) メソッドに渡されます。
 
- また `Fields` 、構造体のフィールドで、使用され `PROCESS_INFO` ているフィールドと有効なフィールドを示すためにも使用されます。
+ また、`PROCESS_INFO` 構造体の `Fields` フィールドでも使用され、どのフィールドが使用され有効になっているかが示されます。
 
- これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+ これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
- ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: msdbg.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
