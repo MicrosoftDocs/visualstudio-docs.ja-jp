@@ -1,7 +1,9 @@
 ---
-title: CV_HREG_e |Microsoft Docs
+title: CV_HREG_e | Microsoft Docs
+description: Debug Interface Access SDK でターゲット レジスタを指定する、CV_HREG_e 列挙型に関する参照情報を提供します。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 3f0622f7-6790-41d8-8778-227cbbf8a212
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aac055930e9d1b016bbdc4949cbbdbee798cfaa2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 9cbc24e8abe378a1a6c61680a797a6014efc5a91
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745317"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634194"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
-ターゲットレジスタを指定します。
+ターゲット レジスタを指定します。
 
 > [!NOTE]
-> ここでは `CV_HREG_e` 列挙体が大きすぎて完全には複製できないため、省略されたバージョンが参照として提供されます。 欠落しているエントリは、斜体で区切っています。 完全な列挙体は、cvconst .h ヘッダーファイルで使用できます。
+> `CV_HREG_e` 列挙型は大きすぎてここに全体を複製することはできないため、省略されたバージョンが参照として提供されています。 欠落しているエントリは斜体で表記されています。 完全な列挙型は、cvconst.h ヘッダー ファイルにあります。
 
 ## <a name="syntax"></a>構文
 
@@ -408,33 +410,33 @@ enum CV_HREG_e {
 } CV_HREG_e;
 ```
 
-## <a name="elements"></a>Elements
-CV_REG_ * Intel 80x86 と ix86 processor、および p コードによって使用されるレジスタです。
+## <a name="elements"></a>要素
+Intel 80x86 および ix86 プロセッサと p コードで使用される CV_REG_* レジスタ。
 
-CV_R68_ * 68K processor によって使用されるレジスタです。
+68K プロセッサで使用される CV_R68_* レジスタ。
 
-CV_M4_ * MIPS 4000 シリーズプロセッサで使用されるレジスタ。
+MIPS 4000 シリーズ プロセッサで使用される CV_M4_* レジスタ。
 
-CV_ALPHA_ * デジタル機器 Corporation Alpha シリーズのプロセッサによって使用されるレジスタです。
+Digital Equipment Corporation Alpha AXP シリーズ プロセッサで使用される CV_ALPHA_* レジスタ。
 
-CV_PPC_ * Motorola/IBM PowerPC プロセッサによって使用されるレジスタです。
+Motorola/IBM PowerPC プロセッサで使用される CV_PPC_* レジスタ。
 
-CV_SH3_ * と CV_SH_ は、Hitachi SH3 および Hitachi SH シリーズのプロセッサによって使用されるレジスタ \* ます。
+Hitachi SH3 および Hitachi SH シリーズ プロセッサで使用される CV_SH3_* および CV_SH_\* レジスタ。
 
-CV_ARM_ * Advanced RISC Machine (ARM) プロセッサで使用されるレジスタです。
+Advanced RISC Machine (ARM) プロセッサで使用される CV_ARM_* レジスタ。
 
-CV_IA64_ * Intel IA64 シリーズプロセッサで使用されるレジスタです。
+Intel IA64 シリーズ プロセッサで使用される CV_IA64_* レジスタ。
 
-CV_TRI_ * Infineon Technologies TriCore processor によって使用されるレジスタです。
+Infineon Technologies TriCore プロセッサで使用される CV_TRI_* レジスタ。
 
-CV_AM33_ * Matsushita/Panasonic AM33 および関連するプロセッサによって使用されるレジスタです。
+Matsushita/Panasonic AM33 プロセッサおよび関連するプロセッサで使用される CV_AM33_* レジスタ。
 
-CV_M32R_ * 三菱 M32R processor によって使用されるレジスタです。
+Mitsubishi M32R プロセッサで使用される CV_M32R_* レジスタ。
 
-## <a name="remarks"></a>Remarks
-各プロセッサの種類は、独自の一意のレジスタセットを使用します。
+## <a name="remarks"></a>解説
+各プロセッサの種類では、独自のレジスタ セットが使用されます。
 
-この列挙体の値は、次のメソッドに渡されます。
+この列挙型の値は次のメソッドに渡されます。
 
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 
@@ -447,7 +449,7 @@ CV_M32R_ * 三菱 M32R processor によって使用されるレジスタです�
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
 ## <a name="requirements"></a>要件:
-ヘッダー: cvconst. h
+ヘッダー: cvconst.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)

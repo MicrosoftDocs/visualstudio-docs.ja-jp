@@ -1,6 +1,6 @@
 ---
 title: WPF アプリケーションでルックアップ テーブルを作成する
-description: WPF アプリでルックアップテーブルを作成します。 参照テーブルは、別のテーブルの外部キーフィールド値に基づいてデータテーブルの情報を表示するコントロールです。
+description: WPF アプリでルックアップ テーブルを作成します。 ルックアップ テーブルとは、別のテーブルの外部キー フィールドの値に基づいて、データ テーブルからの情報を表示するコントロールです。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,46 +20,46 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: cc390642155d33f75bf5c4a69236945658845639
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867101"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF アプリケーションでルックアップ テーブルを作成する
 
-用語 *参照テーブル* ( *参照バインド* と呼ばれることもあります) は、別のテーブルの外部キーフィールドの値に基づいて1つのデータテーブルの情報を表示するコントロールを表します。 参照テーブルを作成するには、[ **データソース** ] ウィンドウで親テーブルまたはオブジェクトのメインノードを、関連付けられている子テーブルの列またはプロパティに既にバインドされているコントロールにドラッグします。
+"*ルックアップ テーブル*" ("*参照バインディング*" と呼ばれることもあります) という用語は、別のテーブルの外部キー フィールドの値に基づいて、データ テーブルからの情報を表示するコントロールを表します。 ルックアップ テーブルを作成するには、 **[データ ソース]** ウィンドウの親テーブルまたはオブジェクトのメイン ノードを、関連する子テーブルの列またはプロパティに既にバインドされているコントロールにドラッグします。
 
-たとえば、販売データベースの `Orders` テーブルであれば、次のように使用されます。 テーブル内の各レコードには `Orders` 、 `CustomerID` 注文を配置した顧客を示すが含まれています。 は、 `CustomerID` テーブル内の顧客レコードを指す外部キーです `Customers` 。 テーブルから注文の一覧を表示する場合は `Orders` 、ではなく実際の顧客名を表示することもでき `CustomerID` ます。 顧客名はテーブルに含まれているので、 `Customers` 顧客名を表示するルックアップテーブルを作成する必要があります。 参照テーブルは、レコードの値を使用して `CustomerID` `Orders` リレーションシップを移動し、顧客名を返します。
+たとえば、販売データベースの `Orders` テーブルであれば、次のように使用されます。 `Orders` テーブルの各レコードには、注文した顧客を示す `CustomerID` が含まれています。 `CustomerID` は、`Customers` テーブルの顧客レコードを指す外部キーです。 `Orders` テーブルから注文の一覧を表示するときに、`CustomerID` ではなく、実際の顧客名を表示したい場合があります。 顧客名は `Customers` テーブルに含まれているので、顧客名を表示するにはルックアップ テーブルを作成する必要があります。 ルックアップ テーブルでは、`Orders` レコードの `CustomerID` 値を使用してリレーションシップをナビゲートし、顧客名を返します。
 
 ## <a name="to-create-a-lookup-table"></a>ルックアップ テーブルを作成するには
 
-1. 次のいずれかの種類のデータソースを関連データと共にプロジェクトに追加します。
+1. 関連データを含む次のいずれかの種類のデータ ソースをプロジェクトに追加します。
 
     - データセットまたは Entity Data Model。
 
-    - WCF Data Service、WCF サービス、または web サービス。 詳細については、「 [方法: サービスのデータに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)」を参照してください。
+    - WCF Data Service、WCF サービス、または Web サービス。 詳細については、「[方法: サービスのデータに接続する](../data-tools/how-to-connect-to-data-in-a-service.md)」を参照してください。
 
-    - オブジェクト。 詳細については、「 [Visual Studio でのオブジェクトへのバインド](bind-objects-in-visual-studio.md)」を参照してください。
+    - オブジェクト。 詳細については、[Visual Studio でのオブジェクトへのバインド](bind-objects-in-visual-studio.md)に関する記事を参照してください。
 
     > [!NOTE]
-    > ルックアップテーブルを作成するには、2つの関連するテーブルまたはオブジェクトがプロジェクトのデータソースとして存在している必要があります。
+    > ルックアップ テーブルを作成するには、関連する 2 つのテーブルまたはオブジェクトがプロジェクトのデータ ソースとして存在している必要があります。
 
-2. **WPF デザイナー** を開き、[**データソース**] ウィンドウ内の項目の有効なドロップ先であるコンテナーがデザイナーに含まれていることを確認します。
+2. **WPF デザイナー** を開き、 **[データ ソース]** ウィンドウ内の項目の有効なドロップ ターゲットであるコンテナーがデザイナーに含まれていることを確認します。
 
-     有効なドロップターゲットの詳細については、「 [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)」を参照してください。
+     有効なドロップ ターゲットの詳細については、「[Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)」を参照してください。
 
 3. **[データ]** メニューの **[データ ソースの表示]** をクリックして **[データ ソース]** ウィンドウを開きます。
 
-4. 親テーブルまたはオブジェクト、および関連する子テーブルまたはオブジェクトが表示されるまで、[ **データソース** ] ウィンドウのノードを展開します。
+4. **[データ ソース]** ウィンドウで、親テーブルまたはオブジェクトと関連する子テーブルまたはオブジェクトが表示されるまでノードを展開します。
 
     > [!NOTE]
     > 関連する子テーブルまたはオブジェクトは、親テーブルまたはオブジェクトの下に展開可能な子ノードとして表示されるノードです。
 
-5. 子ノードのドロップダウンメニューをクリックし、[ **詳細**] をクリックします。
+5. 子ノードのドロップダウン メニューをクリックし、 **[詳細]** を選択します。
 
 6. 子ノードを展開します。
 
-7. 子ノードの下で、子データと親データを関連付けるアイテムのドロップダウンメニューをクリックします。 (前の例では、これは **CustomerID** ノードです)。参照バインドをサポートするコントロールの種類を次の中から1つ選択します。
+7. 子ノードの下で、子と親のデータを関連付ける項目のドロップダウン メニューをクリックします (前の例では、これは **CustomerID** ノードです)。参照バインディングをサポートする次のいずれかの種類のコントロールを選択します。
 
     - **ComboBox**
 
@@ -68,27 +68,27 @@ ms.locfileid: "99867101"
     - **ListView**
 
         > [!NOTE]
-        > リスト **ボックス** または **ListView** コントロールが一覧に表示されない場合は、これらのコントロールを一覧に追加できます。 詳細については、「[ [データソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)」を参照してください。
+        > **ListBox** または **ListView** コントロールが一覧に表示されていない場合は、これらのコントロールを一覧に追加できます。 詳細については、「[[データ ソース] ウィンドウからドラッグしたときに作成されるコントロールを設定する](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)」を参照してください。
 
-    - から派生した任意のカスタムコントロール <xref:System.Windows.Controls.Primitives.Selector> 。
+    - <xref:System.Windows.Controls.Primitives.Selector> から派生したカスタム コントロール。
 
         > [!NOTE]
-        > [ **データソース** ] ウィンドウで項目に対して選択できるコントロールの一覧にカスタムコントロールを追加する方法については、「[ [データソース] ウィンドウにカスタムコントロールを追加](../data-tools/add-custom-controls-to-the-data-sources-window.md)する」を参照してください。
+        > **[データ ソース]** ウィンドウの項目に対して選択できるコントロールの一覧にカスタム コントロールを追加する方法については、「[[データ ソース] ウィンドウにカスタム コントロールを追加する](../data-tools/add-custom-controls-to-the-data-sources-window.md)」を参照してください。
 
-8. [ **データソース** ] ウィンドウから、WPF デザイナーのコンテナーに子ノードをドラッグします。 (前の例では、子ノードは **Orders** ノードです)。
+8. **[データ ソース]** ウィンドウから WPF デザイナーのコンテナーに子ノードをドラッグします (前の例では、子ノードは **Orders** ノードです)。
 
-     Visual Studio では、ドラッグする各項目に対して新しいデータバインドコントロールを作成する XAML が生成されます。 また、XAML は、 <xref:System.Windows.Data.CollectionViewSource> 子テーブルまたはオブジェクトの新しいをドロップ先のリソースに追加します。 一部のデータソースでは、Visual Studio によって、テーブルまたはオブジェクトにデータを読み込むためのコードも生成されます。 詳細については、「 [Visual Studio でのデータへの WPF コントロールのバインド](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)」を参照してください。
+     Visual Studio により、ドラッグした項目ごとに新しいデータバインド コントロールを作成する XAML が生成されます。 この XAML では、子テーブルまたはオブジェクトの新しい <xref:System.Windows.Data.CollectionViewSource> もドロップ ターゲットのリソースに追加します。 一部のデータ ソースでは、Visual Studio によって、テーブルまたはオブジェクトにデータを読み込むコードも生成されます。 詳細については、「[Visual Studio でデータに WPF コントロールをバインドする](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)」を参照してください。
 
-9. [ **データソース** ] ウィンドウから、前に作成した [参照バインド] コントロールに親ノードをドラッグします。 (前の例では、親ノードは **Customers** ノードです)。
+9. **[データ ソース]** ウィンドウから、前に作成した参照バインディング コントロールに親ノードをドラッグします (前の例では、親ノードは **Customers** ノードです)。
 
-     Visual Studio では、参照バインドを構成するためにコントロールのいくつかのプロパティを設定します。 次の表に、Visual Studio によって変更されるプロパティを示します。 必要に応じて、XAML または [ **プロパティ** ] ウィンドウでこれらのプロパティを変更できます。
+     Visual Studio では、参照バインディングを構成するために、コントロールにいくつかのプロパティが設定されます。 次の表に、Visual Studio によって変更されるプロパティを示します。 必要に応じて、XAML または **[プロパティ]** ウィンドウでこれらのプロパティを変更できます。
 
     |プロパティ|設定の説明|
     |--------------| - |
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|このプロパティは、コントロールに表示されるデータを取得するために使用されるコレクションまたはバインディングを指定します。 このプロパティは、 <xref:System.Windows.Data.CollectionViewSource> コントロールにドラッグした親データのに対して、Visual Studio によってに設定されます。|
-    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|このプロパティは、コントロールに表示されるデータ項目のパスを指定します。 Visual Studio は、このプロパティを、主キーの後に文字列データ型の親データの最初の列またはプロパティに設定します。<br /><br /> 親データに別の列またはプロパティを表示する場合は、このプロパティを別のプロパティのパスに変更します。|
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|このプロパティは、Visual Studio によって、デザイナーにドラッグした子データの列またはプロパティにバインドされます。 これは、親データへの外部キーです。|
-    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio は、このプロパティを、親データへの外部キーである子データの列またはプロパティのパスに設定します。|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|このプロパティでは、コントロールに表示されるデータを取得するために使用されるコレクションまたはバインディングを指定します。 Visual Studio により、このプロパティは、コントロールにドラッグした親データの <xref:System.Windows.Data.CollectionViewSource> に設定されます。|
+    |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|このプロパティでは、コントロールに表示されるデータ項目のパスを指定します。 Visual Studio により、このプロパティは、親データの主キーの後にある、文字列データ型を含む最初の列またはプロパティに設定されます。<br /><br /> 親データの別の列またはプロパティを表示する場合は、このプロパティを別のプロパティのパスに変更します。|
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio により、このプロパティは、デザイナーにドラッグした子データの列またはプロパティにバインドされます。 これは親データへの外部キーです。|
+    |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio により、このプロパティは、親データへの外部キーである子データの列またはプロパティのパスに設定されます。|
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,6 +1,6 @@
 ---
-title: データセットデザイナーに DataTable を作成する
-description: このチュートリアルでは、データセットデザイナーを使用して、(TableAdapter のない) DataTable を作成します。 新しい Windows フォームアプリケーションを作成し、新しいデータセットを追加します。
+title: データセット デザイナーで DataTable を作成する
+description: このチュートリアルでは、データセット デザイナーを使用して、(TableAdapter のない) DataTable を作成します。 新しい Windows フォーム アプリケーションを作成して、新しいデータセットを追加します。
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -16,52 +16,52 @@ ms.workload:
 - data-storage
 ms.openlocfilehash: feec31fa0a9e34ad63e0b849d09084081e5710e5
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99858177"
 ---
-# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>チュートリアル: データセットデザイナーでの DataTable の作成
+# <a name="walkthrough-create-a-datatable-in-the-dataset-designer"></a>チュートリアル: データセット デザイナーで DataTable を作成する
 
-このチュートリアルでは、 <xref:System.Data.DataTable> **データセットデザイナー** を使用して (TableAdapter を使用せずに) を作成する方法について説明します。 Tableadapter を含むデータテーブルの作成の詳細については、「 [tableadapter の作成と構成](../data-tools/create-and-configure-tableadapters.md)」を参照してください。
+このチュートリアルでは、**データセット デザイナー** を使用して、(TableAdapter のない) <xref:System.Data.DataTable> を作成する方法を説明します。 TableAdapter を含むデータ テーブルの作成方法については、「[TableAdapter の作成および構成](../data-tools/create-and-configure-tableadapters.md)」を参照してください。
 
 ## <a name="create-a-new-windows-forms-application"></a>新しい Windows フォーム アプリケーションを作成する
 
 1. Visual Studio の **[ファイル]** メニューで､ **[新規作成]**  >  **[プロジェクト]** を選択します。
 
-2. 左側のペインで [ **Visual C#** ] または [ **Visual Basic** を展開し、[ **Windows デスクトップ**] を選択します。
+2. 左側のペインで **[Visual C#]** または **[Visual Basic]** を展開し、 **[Windows デスクトップ]** を選択します。
 
-3. 中央のウィンドウで、[ **Windows フォーム App** ] プロジェクトの種類を選択します。
+3. 中央のペインで、 **[Windows フォーム アプリ]** プロジェクト タイプを選択します。
 
-4. プロジェクトに「 **Datatablewalkthrough**」という名前を入力し、[ **OK]** をクリックします。
+4. プロジェクトに **DataTableWalkthrough** という名前を付け、 **[OK]** を選択します。
 
-     **Datatablewalkthrough** プロジェクトが作成され、**ソリューションエクスプローラー** に追加されます。
+     **DataTableWalkthrough** プロジェクトが作成され、**ソリューション エクスプローラー** に追加されます。
 
-## <a name="add-a-new-dataset-to-the-application"></a>アプリケーションに新しいデータセットを追加する
+## <a name="add-a-new-dataset-to-the-application"></a>新しいデータセットをアプリケーションに追加する
 
 1. **[プロジェクト]** メニューで、 **[新しい項目の追加]** を選択します。
 
      **[新しい項目の追加]** ダイアログ ボックスが表示されます。
 
-2. 左側のウィンドウで、[ **データ**] を選択し、中央のペインで [データ **セット** ] を選択します。
+2. 左側のペインで、 **[データ]** を選択し、中央のペインで **[データセット]** を選択します。
 
-3. **[追加]** をクリックします。
+3. **[追加]** を選びます。
 
-     Visual Studio によって、 **DataSet1** という名前のファイルがプロジェクトに追加され、 **データセットデザイナー** で開かれます。
+     Visual Studio によってプロジェクトに **DataSet1.xsd** という名前のファイルが追加され、**データセット デザイナー** でこれが開かれます。
 
-## <a name="add-a-new-datatable-to-the-dataset"></a>新しい DataTable をデータセットに追加します。
+## <a name="add-a-new-datatable-to-the-dataset"></a>新しい DataTable をデータセットに追加する
 
-1. **ツールボックス** の [**データセット**] タブから **DataTable** を **データセットデザイナー** にドラッグします。
+1. **DataTable** を **[ツールボックス]** の **[データセット]** タブから **データセット デザイナー** にドラッグします。
 
-     **DataTable1** という名前のテーブルがデータセットに追加されます。
+     **DataTable1** という名前のテーブルが、データセットに追加されます。
 
-2. **DataTable1** のタイトルバーをクリックし、名前を変更 `Music` します。
+2. **DataTable1** のタイトル バーをクリックし、名前を `Music` に変更します。
 
-## <a name="add-columns-to-the-datatable"></a>DataTable への列の追加
+## <a name="add-columns-to-the-datatable"></a>DataTable に列を追加する
 
-1. [ **Music** ] テーブルを右クリックします。 **[追加]** をポイントして、**[列]** をクリックします。
+1. **[Music]** テーブルを右クリックします。 **[追加]** をポイントして、**[列]** をクリックします。
 
-2. 列にという名前を指定 `SongID` します。
+2. 列に `SongID` という名前を付けます。
 
 3. **[プロパティ]** ウィンドウで、 <xref:System.Data.DataColumn.DataType%2A> プロパティを <xref:System.Int16?displayProperty=fullName>に設定します。
 
@@ -73,18 +73,18 @@ ms.locfileid: "99858177"
 
      `Genre`: <xref:System.String?displayProperty=fullName>
 
-## <a name="set-the-primary-key-for-the-table"></a>テーブルの主キーの設定
+## <a name="set-the-primary-key-for-the-table"></a>テーブルに主キーを設定する
 
-すべてのデータテーブルには主キーが必要です。 主キーは、データテーブル内の特定のレコードを一意に識別します。
+すべてのデータ テーブルには主キーが必要です。 主キーは、データ テーブル内の特定のレコードを一意に識別します。
 
-主キーを設定するには、[ **SongID** ] 列を右クリックし、[ **主キーの設定**] をクリックします。 **SongID** 列の横にキーアイコンが表示されます。
+主キーを設定するには、 **[SongID]** 列を右クリックし、 **[主キーの設定]** をクリックします。 キー アイコンが **[SongID]** 列の横に表示されます。
 
 ## <a name="save-your-project"></a>プロジェクトを保存する
 
-**Datatablewalkthrough** プロジェクトを保存するには、[**ファイル**] メニューの [**すべてを保存**] をクリックします。
+**DataTableWalkthrough** プロジェクトを保存するには、 **[ファイル]** メニューの **[すべて保存]** を選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [Visual Studio でデータセットを作成および構成する](../data-tools/create-and-configure-datasets-in-visual-studio.md)
 - [Visual Studio でのデータへのコントロールのバインド](../data-tools/bind-controls-to-data-in-visual-studio.md)
-- [検証 (データを)](../data-tools/validate-data-in-datasets.md)
+- [データの検証](../data-tools/validate-data-in-datasets.md)
