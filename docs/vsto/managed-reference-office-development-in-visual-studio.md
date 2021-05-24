@@ -1,6 +1,6 @@
 ---
-title: マネージ参照 (Visual Studio での Office 開発)
-description: .NET Framework を対象とする Office プロジェクトで使用される名前空間と型に関する API リファレンスドキュメントについて説明します。
+title: マネージド リファレンス (Visual Studio での Office 開発)
+description: .NET Framework を対象とする Office プロジェクトで使用される名前空間と型についての API リファレンス ドキュメントについて説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
@@ -18,13 +18,13 @@ ms.workload:
 - office
 ms.openlocfilehash: 9364b191886408e509aa09a83bde70ce8240707e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99958753"
 ---
-# <a name="managed-reference-office-development-in-visual-studio"></a>マネージ参照 (Visual Studio での Office 開発)
-  このセクションには、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](includes/net-v45-md.md)]を対象とする Office プロジェクトで使用される名前空間と型についての API リファレンス ドキュメントが含まれています。 .NET Framework 3.5 を対象とする Office プロジェクトで使用される名前空間と型に関する API リファレンスドキュメントについては、Visual Studio ドキュメントの「 [マネージリファレンス (Visual studio での Office 開発)](managed-reference-office-development-in-visual-studio.md)」の参照セクションを参照してください。
+# <a name="managed-reference-office-development-in-visual-studio"></a>マネージド リファレンス (Visual Studio での Office 開発)
+  このセクションには、 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] または [!INCLUDE[net_v45](includes/net-v45-md.md)]を対象とする Office プロジェクトで使用される名前空間と型についての API リファレンス ドキュメントが含まれています。 .NET Framework 3.5 を対象とする Office プロジェクトで使用される名前空間と型に関する API リファレンス ドキュメントについては、Visual Studio ドキュメントのリファレンス セクション「[マネージド リファレンス (Visual Studio での Office 開発)](managed-reference-office-development-in-visual-studio.md)」を参照してください。
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
@@ -74,7 +74,7 @@ ms.locfileid: "99958753"
  Office プロジェクトのビルドに使用される MSBuild タスク クラスが含まれています。
 
 ## <a name="see-also"></a>関連項目
-- [Visual Studio tools for Office runtime の概要](visual-studio-tools-for-office-runtime-overview.md)
-- [Visual Studio で &#40;Office 開発を開始する&#41;](getting-started-office-development-in-visual-studio.md)
+- [Visual Studio Tools for Office Runtime の概要](visual-studio-tools-for-office-runtime-overview.md)
+- [はじめに &#40;Visual Studio での Office 開発&#41;](getting-started-office-development-in-visual-studio.md)
 - [Office 開発のサンプルとチュートリアル](office-development-samples-and-walkthroughs.md)
-- [Office ソリューションの設計と作成](designing-and-creating-office-solutions.md)
+- [Office ソリューションを設計して作成する](designing-and-creating-office-solutions.md)

@@ -1,6 +1,6 @@
 ---
-description: オブジェクトがユーザーデータを表すかどうかを判断します。
-title: 'IDebugObject2:: IsUserData |Microsoft Docs'
+description: オブジェクトがユーザー データを表しているかどうかを判別します。
+title: IDebugObject2::IsUserData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 485583c0d6ef8ac42b78612e68995462ef900795
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105053725"
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
-オブジェクトがユーザーデータを表すかどうかを判断します。
+オブジェクトがユーザー データを表しているかどうかを判別します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ int IsUserData(
 
 ## <a name="parameters"></a>パラメーター
 `pfUser`\
-入出力`TRUE`オブジェクトがユーザーデータを表している場合は0以外 () を返し、 `FALSE` そうでない場合はゼロ () を返します。
+[out] オブジェクトがユーザー データを表している場合は、0 以外 (`TRUE`) を返します。そうでない場合は、0 (`FALSE`) を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- ユーザーデータとは、"ジャスト Mycode" として指定されたモジュールの一部である任意のオブジェクトです (ユーザーが構成可能なオプションで、モジュールをユーザーコードとしてマークし、スタックトレースに表示します)。
+## <a name="remarks"></a>解説
+ ユーザー データとは、JustMyCode (モジュールをユーザー コードとしてマークし、スタック トレースで表示できるようにする、ユーザーが構成可能なオプション) として指定されているモジュールの一部である、任意のオブジェクトです。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

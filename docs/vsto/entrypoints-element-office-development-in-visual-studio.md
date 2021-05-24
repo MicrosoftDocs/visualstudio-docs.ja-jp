@@ -1,6 +1,6 @@
 ---
-description: Vstav3 名前空間の entryPoints 要素には、Office ソリューションに関連付けられているすべての entryPoint 要素が含まれています。
-title: '&lt;entryPoints &gt; 要素 (Visual Studio での Office 開発)'
+description: vstav3 名前空間の entryPoints 要素には、Office ソリューションに関連付けられているすべての entryPoint 要素が格納されます。
+title: '&lt;entryPoints&gt; 要素 (Visual Studio での Office 開発)'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
@@ -17,12 +17,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 481c67302c84ce08f60c571eb17084b96c0322bd
 ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102223174"
 ---
-# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints &gt; 要素 (Visual Studio での Office 開発)
+# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt; 要素 (Visual Studio での Office 開発)
   `entryPoints` 名前空間の `vstav3` の要素には、Office ソリューションに関連付けるすべての `entryPoint` 要素を格納します。
 
 ## <a name="syntax"></a>構文
@@ -50,12 +50,12 @@ ms.locfileid: "102223174"
  `entryPoints` には、次の要素があります。
 
 ### <a name="entrypoint"></a>entryPoint
- 必須です。 名前空間の要素のロールは、 `entryPoint` `vstav3` [ Visual Studio&#41;で &#40;Office 開発の&#60;entryPoint&#62; 要素 ](../vsto/entrypoint-element-office-development-in-visual-studio.md)で定義されています。
+ 必須。 `vstav3` 名前空間での `entryPoint` 要素の役割は、「[&#60;entryPoint&#62; 要素 &#40;Visual Studio での Office 開発&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md)」で定義されています。
 
-## <a name="document-level-customization-example"></a>ドキュメントレベルのカスタマイズの例
+## <a name="document-level-customization-example"></a>ドキュメント レベルのカスタマイズの例
 
 ### <a name="description"></a>説明
- 次のコード例では、 `entryPoints` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例では、 `entryPoints` を使用して配置したドキュメント レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」で提供されている大きな例の一部です。
 
 ### <a name="code"></a>コード
 
@@ -99,7 +99,7 @@ ms.locfileid: "102223174"
 ## <a name="vsto-add-in-example"></a>VSTO アドインの例
 
 ### <a name="description"></a>説明
- 次のコード例では、 `entryPoints` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例では、 `entryPoints` を使用して配置したアプリケーション レベルのソリューションのアプリケーション マニフェストにある [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」で提供されている大きな例の一部です。
 
 ### <a name="code"></a>コード
 
@@ -119,7 +119,7 @@ ms.locfileid: "102223174"
 ## <a name="multi-project-deployment-example"></a>複数プロジェクトの配置の例
 
 ### <a name="description"></a>説明
- 次のコード例は、複数プロジェクトの配置のためのアプリケーション マニフェストの `entryPoints` 要素を示しています。 このコード例は、 [Office ソリューションのアプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)に用意されている大規模な例の一部です。
+ 次のコード例は、複数プロジェクトの配置のためのアプリケーション マニフェストの `entryPoints` 要素を示しています。 このコード例は、「[Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)」で提供されている大きな例の一部です。
 
 ### <a name="code"></a>コード
 
@@ -174,6 +174,6 @@ ms.locfileid: "102223174"
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューション用アプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)
-- [Office ソリューションの配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce アプリケーションマニフェスト](../deployment/clickonce-application-manifest.md)
+- [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)
+- [Office ソリューション用配置マニフェスト](../vsto/deployment-manifests-for-office-solutions.md)
+- [ClickOnce アプリケーション マニフェスト](../deployment/clickonce-application-manifest.md)

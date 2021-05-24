@@ -1,6 +1,6 @@
 ---
 description: このブレークポイント要求を説明するブレークポイント要求情報を取得します。
-title: 'IDebugBreakpointRequest2:: GetRequestInfo |Microsoft Docs'
+title: IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 69fac031f12e27916bb945aa2dde88fee29939f2
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105054466"
@@ -44,16 +44,16 @@ int GetRequestInfo(
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-からパラメーター内のどのフィールドを入力するかを決定する、 [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙のフラグの組み合わせ `pBPRequestInfo` 。
+[in] 設定する `pBPRequestInfo` パラメーターのフィールドを決定する、[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙型のフラグの組み合わせ。
 
 `pBPRequestInfo`\
-入出力ブレークポイント要求の説明と共に入力する [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 構造体を指定します。
+[out] ブレークポイント要求の説明を設定する [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) 構造体を指定します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 正常に終了した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
- 次の例は、IDebugBreakpointRequest2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CDebugBreakpointRequest` います。 [](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)
+ 次の例は、[IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) インターフェイスを公開する単純な `CDebugBreakpointRequest` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CDebugBreakpointRequest::GetRequestInfo(
@@ -217,7 +217,7 @@ HRESULT CDebugBreakpointRequest::CopyBP_REQUEST_INFO(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)
 - [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
