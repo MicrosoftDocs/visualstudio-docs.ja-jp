@@ -2,7 +2,7 @@
 title: VSTO アドインのプログラミングの概要
 description: VSTO アドインを使用して、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張し、アプリケーションのユーザー インターフェイスをカスタマイズする方法を説明します。
 ms.custom: SEO-VS-2020
-ms.date: 02/02/2017
+ms.date: 04/28/2021
 ms.topic: conceptual
 f1_keywords:
 - VST.ProjectItem.Outlook
@@ -17,14 +17,17 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: d7e6f891f8485d4e08734e59a11db8018eaa07b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1757dd6042536b6a042e67a8b3dcd9b12a2ea758
+ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860638"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109848293"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>VSTO アドインのプログラミングの概要
+> [!IMPORTANT]
+> VSTO は [.NET Framework](https://docs.microsoft.com/dotnet/framework/get-started/overview) に依存しています。 COM アドインも .NET Framework を使用して記述することができます。 Office アドインは、[.NET Core と .NET 5+](https://docs.microsoft.com/dotnet/core/dotnet-five) (.NET の最新バージョン) では作成できません。 これは、.NET Core と .NET 5+ を .NET Framework と同じプロセスで動作させることができず、アドインの読み込みエラーが発生する可能性があるためです。 引き続き .NET Framework を使用して、Office 用の VSTO アドインと COM アドインを記述できます。 Microsoft が VSTO または COM アドイン プラットフォームを、.NET Core または .NET 5+ を使用するように更新することはありません。 .NET Core と .NET 5+ (ASP.NET Core を含む) を利用して、[Office Web アドイン](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)のサーバー側を作成できます。
+
   VSTO アドインを使用することにより、Microsoft Office アプリケーションを自動化し、アプリケーションの機能を拡張できるほか、アプリケーションのユーザー インターフェイス (UI) をカスタマイズすることもできます。 VSTO アドインと、Visual Studio を使用して作成できる他の種類の Office ソリューションの比較方法については、「[Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)」を参照してください。
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
@@ -71,7 +74,7 @@ ms.locfileid: "99860638"
 
   Microsoft Office アプリケーションの UI をカスタマイズする方法の詳細については、「[Office UI のカスタマイズ](../vsto/office-ui-customization.md)」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
  VSTO アドインの作成方法については、次のチュートリアルを参照してください。
 
 - [チュートリアル : 初めての Excel 用 VSTO アドインを作成する](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)
