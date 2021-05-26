@@ -1,6 +1,6 @@
 ---
-title: '&lt;description &gt; 要素 (ClickOnce 配置) |Microsoft Docs'
-description: Description 要素は、コントロールパネルの [シェルのプレゼンス] と [プログラムの追加と削除] 項目を作成するために使用されるアプリケーション情報を識別します。
+title: '&lt;description&gt; 要素 (ClickOnce 配置) | Microsoft Docs'
+description: description 要素では、シェルに表示する内容とコントロール パネルの [プログラムの追加と削除] 項目を作成するために使用されるアプリケーション情報を指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,13 +20,13 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 8dee33fca027ce47ede8315f7956479ee2394382
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99893088"
 ---
-# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;description &gt; 要素 (ClickOnce 配置)
-コントロールパネルの [シェルのプレゼンス] と [ **プログラムの追加と削除** ] 項目を作成するために使用されるアプリケーション情報を識別します。
+# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;description&gt; 要素 (ClickOnce 配置)
+シェルに表示する内容とコントロール パネルの **[プログラムの追加と削除]** 項目を作成するために使用されるアプリケーション情報を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,16 +45,16 @@ ms.locfileid: "99893088"
 
 |属性|説明|
 |---------------|-----------------|
-|`publisher`|必須。 展開がインストール用に構成されている場合に、Windows の [ **スタート** ] メニューおよび [コントロールパネル] の [ **プログラムの追加と削除** ] 項目で、アイコンの配置に使用される会社名を識別します。|
-|`product`|必須。 製品の完全な名前を識別します。 Windows の [ **スタート** ] メニューにインストールされているアイコンのタイトルとして使用されます。|
-|`suiteName`|任意。 Windows の [スタート] メニューのフォルダー内のサブフォルダーを識別 `publisher` します。 |
-|`supportUrl`|任意。 コントロールパネルの [ **プログラムの追加と削除** ] 項目に表示されるサポート URL を指定します。 この URL へのショートカットは、展開がインストール用に構成されている場合に、Windows の [ **スタート** ] メニューでアプリケーションをサポートするためにも作成されます。|
+|`publisher`|必須。 配置がインストール用に構成されている場合に、Windows の **[スタート]** メニューとコントロール パネルの **[プログラムの追加と削除]** 項目で、アイコンの配置に使用される会社名を指定します。|
+|`product`|必須。 完全な製品名を指定します。 Windows の **[スタート]** メニューで、インストールされているアイコンのタイトルとして使用されます。|
+|`suiteName`|省略可能。 Windows の **[スタート]** メニューの `publisher` フォルダー内のサブフォルダーを指定します。|
+|`supportUrl`|省略可能。 コントロール パネルの **[プログラムの追加と削除]** 項目に表示されるサポート URL を指定します。 配置がインストール用に構成されている場合は、Windows の **[スタート]** メニューでのアプリケーションのサポート用に、この URL へのショートカットも作成されます。|
 
 ## <a name="remarks"></a>解説
- Description 要素は、すべての配置構成に必要です。
+ description 要素はすべての配置構成で必須です。
 
 ## <a name="example"></a>例
- 次のコード例は、 `description` 配置マニフェストの要素を示してい [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。 このコード例は、「 [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md) 」で提供されている、より大きな例の一部です。
+ 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの `description` 要素を示しています。 このコード例は、「[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)」に記載されている、より大きな例の一部です。
 
 ```xml
 <description

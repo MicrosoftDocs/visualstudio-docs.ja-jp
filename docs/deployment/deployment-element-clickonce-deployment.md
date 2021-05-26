@@ -1,6 +1,6 @@
 ---
-title: '&lt;deployment &gt; 要素 (ClickOnce 配置) |Microsoft Docs'
-description: Deployment 要素は、更新の展開およびシステムへの公開に使用される属性を識別します。
+title: '&lt;deployment&gt; 要素 (ClickOnce 配置) | Microsoft Docs'
+description: deployment 要素では、更新プログラムの配置とシステムへの公開に使用される属性を指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -25,12 +25,12 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 369d48c76ed82825021622af35141ef12ff42c76
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99893920"
 ---
-# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;deployment &gt; 要素 (ClickOnce 配置)
+# <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;deployment&gt; 要素 (ClickOnce 配置)
 更新プログラムの配置とシステムへの公開に使用される属性を指定します。
 
 ## <a name="syntax"></a>構文
@@ -64,53 +64,53 @@ ms.locfileid: "99893920"
 
 | 属性 | 説明 |
 |--------------------------| - |
-| `install` | 必須。 このアプリケーションが Windows の [ **スタート** ] メニューと [コントロールパネル] の [ **プログラムの追加と削除** ] アプリケーションでプレゼンスを定義するかどうかを指定します。 有効な値は `true` と `false` です。 `false`の場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] は常に、このアプリケーションの最新バージョンをネットワークから実行し、要素を認識しません `subscription` 。 |
-| `minimumRequiredVersion` | 任意。 クライアントで実行できる、このアプリケーションの最小バージョンを指定します。 アプリケーションのバージョン番号が配置マニフェストで指定されたバージョン番号よりも小さい場合、アプリケーションは実行されません。 バージョン番号は、という形式で指定する必要があり `N.N.N.N` ます。ここで、 `N` は符号なし整数です。 属性がの場合、を設定することはでき `install` `false` `minimumRequiredVersion` ません。 |
-| `mapFileExtensions` | 任意。 既定値は `false` です。 の場合 `true` 、配置内のすべてのファイルに .deploy 拡張子が必要です。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] は、これらのファイルを Web サーバーからダウンロードするとすぐに、この拡張機能を削除します。 を使用してアプリケーションを発行すると [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、この拡張機能がすべてのファイルに自動的に追加されます。 このパラメーターを使用すると、配置内のすべてのファイル [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] を Web サーバーからダウンロードして、.exe などの "安全でない" 拡張機能で終わるファイルの転送をブロックすることができます。 |
-| `disallowUrlActivation` | 任意。 既定値は `false` です。 `true`の場合、インストールされているアプリケーションは、url をクリックするか、Internet Explorer に url を入力することで起動できなくなります。 `install`属性が存在しない場合、この属性は無視されます。 |
-| `trustURLParameters` | 任意。 既定値は `false` です。 の場合、 `true` アプリケーションに渡されるクエリ文字列パラメーターを URL に含めることができます。コマンドライン引数はコマンドラインアプリケーションに渡されます。 詳細については、「 [方法: オンライン ClickOnce アプリケーションでクエリ文字列情報を取得する](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)」を参照してください。<br /><br /> 属性がの場合は `disallowUrlActivation` `true` 、 `trustUrlParameters` マニフェストから除外するか、を明示的にに設定する必要があり `false` ます。 |
+| `install` | 必須。 Windows の **[スタート]** メニューとコントロール パネルの **[プログラムの追加と削除]** アプリケーションに表示される内容をこのアプリケーションで定義するかどうかを指定します。 有効な値は、`true`、`false` です。 `false` の場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、ネットワークからこのアプリケーションの最新バージョンが常に実行され、`subscription` 要素は認識されません。 |
+| `minimumRequiredVersion` | 省略可能。 クライアントで実行できる、このアプリケーションの最小バージョンを指定します。 アプリケーションのバージョン番号が配置マニフェストで指定されたバージョン番号よりも小さい場合、アプリケーションは実行されません。 バージョン番号は、`N.N.N.N` の形式で指定する必要があります。`N` は符号なし整数です。 `install` 属性が `false` の場合は、`minimumRequiredVersion` を設定しないでください。 |
+| `mapFileExtensions` | 任意。 既定値は `false` です。 `true` の場合、配置内のすべてのファイルに .deploy 拡張子が必要です。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、これらのファイルを Web サーバーからダウンロードするとすぐに、この拡張子を削除します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を使用してアプリケーションを発行すると、この拡張子がすべてのファイルに自動的に追加されます。 このパラメーターを使用すると、.exe などの "安全ではない" 拡張子で終わるファイルの転送をブロックする Web サーバーから、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置内のすべてのファイルをダウンロードできます。 |
+| `disallowUrlActivation` | 任意。 既定値は `false` です。 `true` の場合、URL をクリックしたり、Internet Explorer に URL を入力したりすることによって、インストールされたアプリケーションを起動することはできなくなります。 `install` 属性が存在しない場合、この属性は無視されます。 |
+| `trustURLParameters` | 任意。 既定値は `false` です。 `true` の場合、コマンドライン引数がコマンドライン アプリケーションに渡されるのとほぼ同様に、アプリケーションに渡されるクエリ文字列パラメーターを URL に含めることができます。 詳細については、「[方法: オンライン ClickOnce アプリケーションでクエリ文字列の情報を取得する](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md)」を参照してください。<br /><br /> `disallowUrlActivation` 属性が `true` の場合は、`trustUrlParameters` をマニフェストから除外するか、明示的に `false` に設定する必要があります。 |
 
- 要素には `deployment` 、次の子要素も含まれます。
+ `deployment` 要素には、次の子要素も含まれます。
 
 ## <a name="subscription"></a>subscription
- 任意。 要素が含まれてい `update` ます。 `subscription` 要素に属性はありません。 要素が存在しない場合 `subscription` 、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションは更新プログラムをスキャンしません。 `install`要素の属性がの場合 `deployment` `false` 、要素は `subscription` 無視されます。これは、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ネットワークから起動されるアプリケーションが常に最新バージョンを使用するためです。
+ 省略可能。 `update` 要素を含みます。 `subscription` 要素に属性はありません。 `subscription` 要素が存在しない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションが更新プログラムをスキャンすることはありません。 `deployment` 要素の `install` 属性が `false` の場合、ネットワークから起動される [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションで常に最新バージョンが使用されるため、`subscription` 要素は無視されます。
 
 ## <a name="update"></a>update
- 必須。 この要素は要素の子で `subscription` あり、要素または要素で構成され `beforeApplicationStartup` `expiration` ます。 `beforeApplicationStartup` との `expiration` 両方を同じ配置マニフェストで指定することはできません。
+ 必須。 この要素は `subscription` 要素の子であり、`beforeApplicationStartup` または `expiration` 要素が含まれます。 `beforeApplicationStartup` と `expiration` の両方を同じ配置マニフェストで指定することはできません。
 
  `update` 要素に属性はありません。
 
 ## <a name="beforeapplicationstartup"></a>beforeApplicationStartup
- 任意。 この要素は要素の子であり、 `update` 属性はありません。 要素が `beforeApplicationStartup` 存在する場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] クライアントがオンラインになっている場合は、が更新プログラムを確認するときに、アプリケーションがブロックされます。 この要素が存在しない場合、 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] は、最初に要素に指定された値に基づいて更新プログラムをスキャンし `expiration` ます。 `beforeApplicationStartup` との `expiration` 両方を同じ配置マニフェストで指定することはできません。
+ 省略可能。 この要素は `update` 要素の子であり、属性はありません。 `beforeApplicationStartup` 要素が存在する場合、クライアントがオンラインの場合に [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] によって更新プログラムが確認されるときに、アプリケーションがブロックされます。 この要素が存在しない場合、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] では、`expiration` 要素に指定された値に基づいて、最初に更新プログラムがスキャンされます。 `beforeApplicationStartup` と `expiration` の両方を同じ配置マニフェストで指定することはできません。
 
 ## <a name="expiration"></a>expiration
- 任意。 この要素は要素の子で `update` あり、子はありません。 `beforeApplicationStartup` との `expiration` 両方を同じ配置マニフェストで指定することはできません。 更新プログラムのチェックが行われ、更新されたバージョンが検出されると、既存のバージョンが実行されている間に新しいバージョンがキャッシュされます。 その後、アプリケーションの次回の起動時に、新しいバージョンがインストールされ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。
+ 省略可能。 この要素は `update` 要素の子であり、子はありません。 `beforeApplicationStartup` と `expiration` の両方を同じ配置マニフェストで指定することはできません。 更新チェックが行われ、更新されたバージョンが検出されると、既存のバージョンの実行中に新しいバージョンがキャッシュされます。 新しいバージョンは、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの次回の起動時にインストールされます。
 
- 要素は、 `expiration` 次の属性をサポートしています。
+ `expiration` 要素では、次の属性がサポートされています。
 
 |属性|説明|
 |---------------|-----------------|
-|`maximumAge`|必須。 アプリケーションが更新プログラムのチェックを実行する前に、現在の更新プログラムがどのようになるかを指定します。 時間の単位は、属性によって決まり `unit` ます。|
-|`unit`|必須。 の時間単位を識別 `maximumAge` します。 有効な単位は `hours` 、、 `days` 、および `weeks` です。|
+|`maximumAge`|必須。 アプリケーションで更新チェックを実行するまでに、現在の更新プログラムがどのくらい古くなっている必要があるかを指定します。 時間の単位は、`unit` 属性で指定されます。|
+|`unit`|必須。 `maximumAge` の時間の単位を指定します。 有効な単位は、`hours`、`days`、`weeks` です。|
 
 ## <a name="deploymentprovider"></a>deploymentProvider
- .NET Framework 2.0 の場合、配置マニフェストにセクションが含まれている場合、この要素は必須です `subscription` 。 .NET Framework 3.5 以降では、この要素は省略可能であり、配置マニフェストが検出されたサーバーとファイルパスに既定で設定されます。
+ .NET Framework 2.0 では、配置マニフェストに `subscription` セクションが含まれている場合、この要素は必須です。 .NET Framework 3.5 以降では、この要素は省略可能であり、配置マニフェストが検出されたサーバーとファイル パスに既定で設定されます。
 
  この要素は `deployment` 要素の子であり、以下の属性があります。
 
 | 属性 | 説明 |
 |------------| - |
-| `codebase` | 必須。 アプリケーションの更新に使用される配置マニフェストの場所を Uniform Resource Identifier (URI) で識別し [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。 また、この要素により、CD ベースのインストールの更新プログラムの場所も転送できます。 有効な URI である必要があります。 |
+| `codebase` | 必須。 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションの更新に使用される配置マニフェストの場所を Uniform Resource Identifier (URI) で指定します。 この要素により、CD ベースのインストールの更新プログラムの場所を転送することもできます。 有効な URI である必要があります。 |
 
 ## <a name="remarks"></a>解説
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]スタートアップ時に更新プログラムをスキャンしたり、起動後に更新プログラムをスキャンしたり、更新プログラムを確認したりしないようにアプリケーションを構成できます。 スタートアップ時に更新プログラムをスキャンするには、要素が要素の下に存在することを確認し `beforeApplicationStartup` `update` ます。 スタートアップ後に更新プログラムをスキャンするには、要素の `expiration` 下に要素が存在 `update` し、その更新間隔が指定されていることを確認します。
+ 起動時に更新プログラムをスキャンするか、起動後に更新プログラムをスキャンするか、または更新プログラムを確認しないように [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションを構成できます。 起動時に更新プログラムをスキャンするには、`beforeApplicationStartup` 要素が `update` 要素の下に存在することを確認します。 起動後に更新プログラムをスキャンするには、`expiration` 要素が `update` 要素の下に存在し、更新間隔が指定されていることを確認します。
 
- 更新プログラムの確認を無効にするには、要素を削除し `subscription` ます。 配置マニフェストで更新プログラムをスキャンしないように指定した場合でも、メソッドを使用して更新プログラムを手動で確認でき <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> ます。
+ 更新プログラムの確認を無効にするには、`subscription` 要素を削除します。 更新プログラムをスキャンしないように配置マニフェストで指定した場合でも、<xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> メソッドを使用して更新プログラムを手動で確認できます。
 
- DeploymentProvider が更新プログラムにどのように関連しているかの詳細については、「 [ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)」を参照してください。
+ deploymentProvider と更新プログラムの関連性の詳細については、「[ClickOnce の更新方法の選択](../deployment/choosing-a-clickonce-update-strategy.md)」を参照してください。
 
 ## <a name="examples"></a>例
- 次のコード例は、 `deployment` 配置マニフェストの要素を示してい [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ます。 この例では、要素を使用し `deploymentProvider` て、優先する更新の場所を示しています。
+ 次のコード例は、[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 配置マニフェストの `deployment` 要素を示しています。 この例では、`deploymentProvider` 要素を使用して、優先される更新プログラムの場所を示しています。
 
 ```xml
 <deployment install="true" minimumRequiredVersion="2.0.0.0" mapFileExtension="true" trustUrlParameters="true">

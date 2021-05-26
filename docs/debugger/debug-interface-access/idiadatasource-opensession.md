@@ -1,7 +1,8 @@
 ---
-title: 'IDiaDataSource:: openSession |Microsoft Docs'
+description: シンボルのクエリを実行するためのセッションを開きます。
+title: IDiaDataSource::openSession | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: a3319ed0-3979-483b-9852-c0af96852c48
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dd6ab61db3e3bafd594298aa41d32bce64d4941
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: d31e30c2044332d1e299d6a734ee5fecb22ec686
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744920"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634980"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
-シンボルに対してクエリを実行するためのセッションを開きます。
+シンボルのクエリを実行するためのセッションを開きます。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT openSession ( 
+HRESULT openSession ( 
    IDiaSession** ppSession
 );
 ```
@@ -33,21 +34,21 @@ HRESULT openSession ( 
 #### <a name="parameters"></a>パラメーター
 ppSession
 
-入出力開いているセッションを表す[IDiaSession](../../debugger/debug-interface-access/idiasession.md)オブジェクトを返します。
+[出力] 開いているセッションを表す [IDiaSession](../../debugger/debug-interface-access/idiasession.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 次の表に、このメソッドで使用できる戻り値を示します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 次の表に、このメソッドで返される可能性のある戻り値を示します。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
-|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)オブジェクトは、以前はシンボルのソースで初期化されていません。|
+|E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) オブジェクトは、以前にシンボルのソースで初期化されていません。|
 |E_INVALIDARG|無効な `ppSession` パラメーター。|
 |E_OUTOFMEMORY|セッションを開くためのメモリが不足しています。|
 
-## <a name="remarks"></a>Remarks
-このメソッドは、データソースの[IDiaSession](../../debugger/debug-interface-access/idiasession.md)オブジェクトを開きます。
+## <a name="remarks"></a>解説
+このメソッドは、データ ソースの [IDiaSession](../../debugger/debug-interface-access/idiasession.md) オブジェクトを開きます。
 
-`IDiaSession` オブジェクトは、データソースへのクエリを実装します。 セッションは、デバッグシンボルのセットごとに1つのアドレス空間を管理します。 データソースシンボルによって記述されている .exe ファイルまたは .dll ファイルが複数のアドレス範囲でアクティブになっている場合 (複数のプロセスが読み込まれている場合など)、各アドレス範囲に対して1つのセッションを使用する必要があります。
+`IDiaSession` オブジェクトは、データ ソースへのクエリを実装します。 セッションでは、デバッグ シンボルのセットごとに 1 つのアドレス空間を管理します。 データ ソース シンボルが示す .exe または .dll ファイルが複数のアドレス範囲でアクティブな場合は (複数のプロセスで読み込まれている場合など)、アドレス範囲ごとに 1 つのセッションを使用する必要があります。
 
 ## <a name="example"></a>例
 

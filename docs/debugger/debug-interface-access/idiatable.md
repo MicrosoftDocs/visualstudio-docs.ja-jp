@@ -1,7 +1,8 @@
-﻿---
-title: IDiaTable |Microsoft Docs
+---
+description: DIA データ ソース テーブルを列挙します。
+title: IDiaTable | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,44 +10,44 @@ helpviewer_keywords:
 ms.assetid: c99a2c44-7b72-4e3c-b963-25fe3df3a555
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bc7a573eb92d7c51079b0a7e97067abd155ae4fa
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 3b93dad0baef701a7d417993080d6511373454a3
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738707"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635206"
 ---
 # <a name="idiatable"></a>IDiaTable
-DIA データソーステーブルを列挙します。
+DIA データ ソース テーブルを列挙します。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaTable : IEnumUnknown
+IDiaTable : IEnumUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaTable` のメソッドを示しています。
+次の表に、`IDiaTable` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
-|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|この列挙子の[IEnumVARIANT インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant)バージョンを取得します。|
+|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|この列挙子の [IEnumVARIANT インターフェイス](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ienumvariant) バージョンを取得します。|
 |[IDiaTable::get_name](../../debugger/debug-interface-access/idiatable-get-name.md)|テーブルの名前を取得します。|
 |[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|テーブル内の項目の数を取得します。|
-|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|特定のエントリインデックスへの参照を取得します。|
+|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|特定のエントリ インデックスへの参照を取得します。|
 
-## <a name="remarks"></a>Remarks
-このインターフェイスは、VisualStudio 名前空間の `IEnumUnknown` 列挙メソッドを実装します。 @No__t_0 列挙インターフェイスでは、 [IDiaTable:: get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)メソッドと[IDiaTable:: Item](../../debugger/debug-interface-access/idiatable-item.md)メソッドよりもテーブルの内容を反復処理する方がはるかに効率的です。
+## <a name="remarks"></a>解説
+このインターフェイスは、Microsoft.VisualStudio.OLE.Interop 名前空間の、`IEnumUnknown` 列挙型のメソッドを実装します。 `IEnumUnknown` 列挙型インターフェイスでは、[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) メソッドや [IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md) メソッドよりも、テーブルの内容の反復処理をはるかに効率的に行うことができます。
 
-@No__t_1 メソッドまたは `Next` メソッド (VisualStudio 名前空間) のいずれかから返された `IUnknown` インターフェイスの解釈は、テーブルの種類によって異なります。 たとえば、`IDiaTable` インターフェイスが挿入されたソースの一覧を表す場合は、 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)インターフェイスに対して `IUnknown` インターフェイスを照会する必要があります。
+(Microsoft.VisualStudio.OLE.Interop 名前空間の) `IDiaTable::Item` メソッドまたは `Next` メソッドから返される `IUnknown` インターフェイスの解釈は、テーブルの型によって異なります。 たとえば、`IDiaTable` インターフェイスが挿入されたソースのリストを表す場合、`IUnknown` インターフェースに対して [IDiaInjectedSource ](../../debugger/debug-interface-access/idiainjectedsource.md) インターフェイスを照会する必要があります。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md)または[IDiaEnumTables:: Next](../../debugger/debug-interface-access/idiaenumtables-next.md)メソッドを呼び出します。
+このインターフェイスを取得するには、[IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md) または [IDiaEnumTables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md) メソッドを呼び出します。
 
-次のインターフェイスは `IDiaTable` インターフェイスで実装されます (つまり、次のいずれかのインターフェイスに対して `IDiaTable` インターフェイスに対してクエリを実行できます)。
+次のインターフェイスは、`IDiaTable` インターフェイスで実装されています (つまり、`IDiaTable` インターフェイスに対して、次のいずれかのインターフェイスを照会できます)。
 
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)
 
@@ -63,7 +64,7 @@ IDiaTable : IEnumUnknown
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)
 
 ## <a name="example"></a>例
-最初の関数 `ShowTableNames` は、セッション内のすべてのテーブルの名前を表示します。 2番目の関数 `GetTable` は、指定されたインターフェイスを実装するテーブルのすべてのテーブルを検索します。 3番目の関数 `UseTable` は、`GetTable` 関数の使用方法を示しています。
+最初の関数の `ShowTableNames` は、セッション内のすべてのテーブルの名前を表示します。 2 番目の関数の `GetTable` は、すべてのテーブルを対象に、指定されたインターフェイスを実装するテーブルを検索します。 3 番目の関数の `UseTable` は、`GetTable` 関数の使用方法を示します。
 
 > [!NOTE]
 > `CDiaBSTR` は、`BSTR` をラップし、インスタンス化がスコープ外になったときに文字列の解放を自動的に処理するクラスです。
@@ -130,12 +131,12 @@ void UseTable(IDiaSession *pSession)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
