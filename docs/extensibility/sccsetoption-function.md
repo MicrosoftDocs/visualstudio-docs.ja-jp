@@ -1,6 +1,6 @@
 ---
-description: この関数は、ソース管理プラグインの動作を制御するオプションを設定します。
-title: SccSetOption 関数 |Microsoft Docs
+description: この関数では、ソース管理プラグインの動作を制御するオプションを設定します。
+title: SccSetOption 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 031de256b231bbd95e7535af80448db5140cba7e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090149"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption 関数
-この関数は、ソース管理プラグインの動作を制御するオプションを設定します。
+この関数では、ソース管理プラグインの動作を制御するオプションを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,55 +36,55 @@ SCCRTN SccSetOption(
 #### <a name="parameters"></a>パラメーター
  pvContext
 
-からソース管理プラグインのコンテキスト構造。
+[入力] ソース管理プラグインのコンテキスト構造体。
 
- いいえ
+ nOption
 
-から設定するオプション。
+[入力] 設定しているオプション。
 
  dwVal
 
-からオプションの設定。
+[入力] オプションの設定。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|オプションが正常に設定されました。|
-|SCC_I_SHARESUBPROJOK|がの場合に返され `nOption` `SCC_OPT_SHARESUBPROJ` ます。ソース管理プラグインでは、IDE でターゲットフォルダーを設定できます。|
-|SCC_E_OPNOTSUPPORTED|オプションが設定されていないため、依存しないようにする必要があります。|
+|SCC_I_SHARESUBPROJOK|`nOption` が `SCC_OPT_SHARESUBPROJ` だった場合に返されます。ソース管理プラグインでは、IDE で送信先フォルダーを設定できます。|
+|SCC_E_OPNOTSUPPORTED|オプションが設定されていません。依存しないようにする必要があります。|
 
-## <a name="remarks"></a>注釈
- IDE は、この関数を呼び出して、ソース管理プラグインの動作を制御します。 最初のパラメーターは、 `nOption` 設定される値を示します。2番目のパラメーターは、 `dwVal` その値の処理方法を示します。 プラグインは、に関連付けられたこの情報を格納するので、 `pvContext``,` IDE は [Sccinitialize](../extensibility/sccinitialize-function.md) を呼び出した後にこの関数を呼び出す必要があります (ただし、 [sccopenproject](../extensibility/sccopenproject-function.md)の各呼び出しの後では必ずしも必要ではありません)。
+## <a name="remarks"></a>解説
+ IDE では、ソース管理プラグインの動作を制御するためにこの関数を呼び出します。 最初のパラメーター `nOption` は設定されている値を示し、2 番目の `dwVal` はその値の処理方法を示します。 プラグインには、`pvContext``,` に関連付けられたこの情報が格納されるので、IDE では [SccInitialize](../extensibility/sccinitialize-function.md) を呼び出した後にこの関数を呼び出す必要があります (ただし、[SccOpenProject](../extensibility/sccopenproject-function.md) を呼び出すたびに必ずしも必要になるとは限りません)。
 
  オプションとその値の概要:
 
-|`nOption`|`dwValue`|Description|
+|`nOption`|`dwValue`|説明|
 |---------------|---------------|-----------------|
-|`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|バックグラウンドイベントキューを有効または無効にします。|
-|`SCC_OPT_USERDATA`|任意の値|[Optnamechangepfn](../extensibility/optnamechangepfn.md)コールバック関数に渡されるユーザー値を指定します。|
-|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|IDE が現在操作のキャンセルをサポートしているかどうかを示します。|
-|`SCC_OPT_NAMECHANGEPFN`|[Optnamechangepfn](../extensibility/optnamechangepfn.md)コールバック関数へのポインター|名前変更コールバック関数へのポインターを設定します。|
-|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|IDE で、ソース管理ユーザーインターフェイスを使用して手動でファイルのチェックアウトを許可するか、ソース管理プラグインを通じてのみチェックアウトする必要があるかを示します。|
-|`SCC_OPT_SHARESUBPROJ`|該当なし|ソース管理プラグインで IDE でローカルプロジェクトフォルダーを指定できる場合、プラグインはを返し `SCC_I_SHARESUBPROJOK` ます。|
+|`SCC_OPT_EVENTQUEUE`|`SCC_OPT_EQ_DISABLE`<br /><br /> `SCC_OPT_EQ_ENABLE`|バックグラウンド イベント キューを有効または無効にします。|
+|`SCC_OPT_USERDATA`|任意の値|[OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) コールバック関数に渡されるユーザー値を指定します。|
+|`SCC_OPT_HASCANCELMODE`|`SCC_OPT_HCM_NO`<br /><br /> `SCC_OPT_HCM_YES`|IDE で現在操作のキャンセルがサポートされるかどうかを示します。|
+|`SCC_OPT_NAMECHANGEPFN`|[OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) コールバック関数へのポインター|名前変更コールバック関数へのポインターを設定します。|
+|`SCC_OPT_SCCCHECKOUTONLY`|`SCC_OPT_SCO_NO`<br /><br /> `SCC_OPT_SCO_YES`|(ソース管理ユーザー インターフェイスを使用して) 手動によるファイルのチェックアウトを IDE で許可するか、またはソース管理プラグインを使用してのみチェックアウトする必要があるかを示します。|
+|`SCC_OPT_SHARESUBPROJ`|なし|ソース管理プラグインで IDE によるローカル プロジェクト フォルダーの指定を許可する場合、プラグインでは `SCC_I_SHARESUBPROJOK` を返します。|
 
 ## <a name="scc_opt_eventqueue"></a>SCC_OPT_EVENTQUEUE
- がの場合 `nOption` `SCC_OPT_EVENTQUEUE` 、IDE はバックグラウンド処理を無効 (または再有効化) しています。 たとえば、コンパイル中に、IDE はソース管理プラグインに対して、任意の種類のアイドル状態の処理を停止するように指示する場合があります。 コンパイル後、プラグインのイベントキューを最新の状態に保つために、バックグラウンド処理を再び有効にします。 の値に対応するには、、、 `SCC_OPT_EVENTQUEUE` `nOption` およびの2つの値を使用でき `dwVal` `SCC_OPT_EQ_ENABLE` `SCC_OPT_EQ_DISABLE` ます。
+ `nOption` が `SCC_OPT_EVENTQUEUE` の場合、IDE ではバックグラウンド処理を無効 (または再有効化) しています。 たとえば、コンパイル中に IDE では、任意の種類のアイドル状態の処理を停止するようにソース管理プラグインに対して指示する場合があります。 コンパイル後、プラグインのイベント キューを最新の状態に保つために、バックグラウンド処理を再び有効にします。 `nOption` の `SCC_OPT_EVENTQUEUE` 値に対応する 2 つの値 (つまり、`SCC_OPT_EQ_ENABLE` と `SCC_OPT_EQ_DISABLE`) を `dwVal` に使用できます。
 
 ## <a name="scc_opt_hascancelmode"></a>SCC_OPT_HASCANCELMODE
- の値がの `nOption` 場合 `SCC_OPT_HASCANCELMODE` 、IDE ではユーザーが長い操作を取り消すことができます。 `dwVal`を `SCC_OPT_HCM_NO` (既定値) に設定すると、IDE にキャンセルモードがないことを示します。 ユーザーがキャンセルできるようにするには、ソース管理プラグインが独自の [キャンセル] ボタンを提供している必要があります。 `SCC_OPT_HCM_YES` IDE が操作をキャンセルする機能を提供することを示します。そのため、SCC プラグインでは、独自の [キャンセル] ボタンを表示する必要がありません。 IDE がに設定されている場合 `dwVal` `SCC_OPT_HCM_YES` 、 `SCC_MSG_STATUS` `DOCANCEL` コールバック関数に送信されたメッセージとメッセージに応答する準備が `lpTextOutProc` あります (「 [lptextoutproc](../extensibility/lptextoutproc.md)」を参照してください)。 IDE でこの変数が設定されていない場合、プラグインはこれら2つのメッセージを送信しません。
+ `nOption` の値が `SCC_OPT_HASCANCELMODE` の場合、IDE ではユーザーが長い操作をキャンセルすることができます。 `dwVal` を `SCC_OPT_HCM_NO` (既定値) に設定すると、IDE にキャンセル モードがないことを示します。 ユーザーがキャンセルできるようにする場合は、ソース管理プラグインに独自の [キャンセル] ボタンが用意されている必要があります。 `SCC_OPT_HCM_YES` は、IDE で操作をキャンセルする機能が用意されていることを示します。そのため、SCC プラグインでは、独自の [キャンセル] ボタンが表示されている必要はありません。 IDE で `dwVal` が `SCC_OPT_HCM_YES` に設定されている場合、`lpTextOutProc` コールバック関数に送信された `SCC_MSG_STATUS` および `DOCANCEL` メッセージに応答する準備ができています (「[LPTEXTOUTPROC](../extensibility/lptextoutproc.md)」を参照してください)。 IDE でこの変数が設定されていない場合、プラグインではこれら 2 つのメッセージを送信できません。
 
 ## <a name="scc_opt_namechangepfn"></a>SCC_OPT_NAMECHANGEPFN
- NOption がに設定され `SCC_OPT_NAMECHANGEPFN` ていて、ソース管理プラグインと IDE の両方で許可されている場合、プラグインは実際にソース管理操作中にファイルの名前変更や移動を行うことができます。 は、 `dwVal` [Optnamechangepfn](../extensibility/optnamechangepfn.md)型の関数ポインターに設定されます。 ソース管理操作中に、プラグインはこの関数を呼び出して、3つのパラメーターを渡すことができます。 これらは、ファイルの古い名前 (完全修飾パスを持つ)、そのファイルの新しい名前 (完全修飾パス)、および IDE に関連する情報へのポインターです。 IDE は、 `SccSetOption` `nOption` データをポイントするをに設定してを呼び出すことにより、この最後のポインターでを送信し `SCC_OPT_USERDATA` `dwVal` ます。 この関数のサポートは省略可能です。 この機能を使用する VSSCI プラグは、関数ポインターとユーザーデータ変数をに初期化する必要があり `NULL` ます。また、名前を指定していない場合は、rename 関数を呼び出すことはできません。 また、指定された値を保持するように準備するか、への新しい呼び出しに応じて変更する必要があり `SccSetOption` ます。 これは、ソース管理コマンド操作の途中では発生しませんが、コマンド間で発生する可能性があります。
+ NOption が `SCC_OPT_NAMECHANGEPFN` に設定されていて、ソース管理プラグインと IDE の両方でこれを許可している場合、プラグインでは実際にソース管理操作中にファイルの名前変更や移動を行うことができます。 `dwVal` は、[OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) 型の関数ポインターに設定されます。 ソース管理操作中に、プラグインではこの関数を呼び出して、3 つのパラメーターを渡すことができます。 これらは、ファイルの (完全修飾パスを持つ) 前の名前、そのファイルの (完全修飾パスを持つ) 新しい名前、IDE に関連する情報へのポインターです。 IDE では、`nOption` を `SCC_OPT_USERDATA` に設定して `dwVal` がデータを指すようにして `SccSetOption` を呼び出すことで、この最後のポインターを送信します。 この関数のサポートは省略可能です。 この機能を使用する VSSCI プラグでは、関数ポインターとユーザー データ変数を `NULL` に初期化する必要があります。また指定されていない場合は、rename 関数を呼び出すことはできません。 また、指定された値を保持するか、`SccSetOption` への新しい呼び出しに応じてこれを変更する準備ができている必要があります。 これは、ソース管理コマンド操作の途中では発生しませんが、コマンド間で発生する可能性があります。
 
 ## <a name="scc_opt_scccheckoutonly"></a>SCC_OPT_SCCCHECKOUTONLY
- NOption がに設定されている場合 `SCC_OPT_SCCCHECKOUTONLY` 、IDE は、現在開いているプロジェクト内のファイルをソース管理システムのユーザーインターフェイスを介して手動でチェックアウトしないことを示します。 代わりに、ファイルをチェックアウトするには、IDE コントロールのソース管理プラグインを使用する必要があります。 がに設定されている場合は、 `dwValue` `SCC_OPT_SCO_NO` ファイルがプラグインによって正常に処理され、ソース管理 UI でチェックアウトできることを意味します。 がに設定されている場合は、 `dwValue` `SCC_OPT_SCO_YES` プラグインのみがファイルのチェックアウトを許可され、ソース管理システムの UI を呼び出すことはできません。 これは、ide に "擬似ファイル" が含まれている可能性があります。この場合、IDE でのみチェックアウトするのが理にかなっています。
+ nOption が `SCC_OPT_SCCCHECKOUTONLY` に設定されている場合、IDE では、ソース管理システムのユーザー インターフェイスを介して、現在開いているプロジェクト内のファイルを手動でチェックアウトしてはならないことを示しています。 代わりに、ファイルをチェックアウトする場合は、IDE コントロールのソース管理プラグインのみを使用する必要があります。 `dwValue` が `SCC_OPT_SCO_NO` に設定されている場合は、ファイルがプラグインによって正常に処理され、ソース管理 UI でチェックアウトできることを意味します。 `dwValue` が `SCC_OPT_SCO_YES` に設定されている場合は、プラグインのみがファイルのチェックアウトを許可され、ソース管理システムの UI を呼び出すことはできません。 これは、IDE に "擬似ファイル" が含まれている可能性がある状況のためです。この場合、IDE でのみチェックアウトするのが理にかなっています。
 
 ## <a name="scc_opt_sharesubproj"></a>SCC_OPT_SHARESUBPROJ
- `nOption`がに設定されている場合 `SCC_OPT_SHARESUBPROJ` 、IDE はソース管理プラグインがソース管理からファイルを追加するときに、指定したローカルフォルダーを使用できるかどうかをテストします。 この場合、パラメーターの値は `dwVal` 問題になりません。 プラグインで、 [Sccaddfromscc](../extensibility/sccaddfromscc-function.md) が呼び出されたときにソース管理からファイルが追加されるローカルの保存先フォルダーを IDE で指定できる場合、プラグインは `SCC_I_SHARESUBPROJOK` 関数が呼び出されたときにを返す必要があり `SccSetOption` ます。 次に、IDE は関数のパラメーターを使用して、 `lplpFileNames` `SccAddFromScc` 出力先フォルダーを渡します。 プラグインは、このコピー先フォルダーを使用して、ソース管理から追加されたファイルを配置します。 オプションを設定したときにプラグインが戻らない場合、IDE では、 `SCC_I_SHARESUBPROJOK` `SCC_OPT_SHARESUBPROJ` プラグインが現在のローカルフォルダーにのみファイルを追加できることを前提としています。
+ `nOption` が `SCC_OPT_SHARESUBPROJ` に設定されている場合、IDE では、ソース管理からファイルを追加するときに指定されたローカル フォルダーをソース管理プラグインで使用できるかどうかをテストします。 この場合、`dwVal` パラメーターの値は問題になりません。 [SccAddFromScc](../extensibility/sccaddfromscc-function.md) が呼び出されたときにソース管理からファイルが追加されるローカルの送信先フォルダーを IDE で指定することがプラグインによって許可されている場合、プラグインでは `SccSetOption` 関数が呼び出されたときに `SCC_I_SHARESUBPROJOK` を返す必要があります。 次に、IDE では `SccAddFromScc` 関数の `lplpFileNames` パラメーターを使用して、送信先フォルダーを渡します。 プラグインでは、この送信先フォルダーを使用して、ソース管理から追加されたファイルを配置します。 `SCC_OPT_SHARESUBPROJ` オプションを設定したときにプラグインで `SCC_I_SHARESUBPROJOK` が返されない場合、プラグインでは現在のローカル フォルダーにのみファイルを追加できることが、IDE で前提とされています。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)

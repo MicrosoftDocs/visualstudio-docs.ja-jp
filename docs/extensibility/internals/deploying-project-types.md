@@ -1,6 +1,6 @@
 ---
-title: プロジェクトの種類の配置 |Microsoft Docs
-description: Visual Studio SDK で、新しいプロジェクトタイプアグリゲーターと再配布用の Windows インストーラーパッケージを使用して、マネージコードプロジェクトの種類を配置する方法について説明します。
+title: プロジェクト タイプのデプロイ | Microsoft Docs
+description: Visual Studio SDK で、新しいプロジェクト タイプ アグリゲーターと再配布用の Windows インストーラー パッケージを使用して、マネージド コード プロジェクト タイプをデプロイする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 121dda58b8e01c5b0029d8b3c93ef66d2657446e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090994"
 ---
-# <a name="deploy-project-types"></a>プロジェクトの種類の配置
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 新しいプロジェクトタイプアグリゲーター (*ProjectAggregator2.dll*) と、再配布用の Windows インストーラーパッケージ (*ProjectAggregator2.msi*) をインストールします。 マネージコードプロジェクトの種類には、新しいアグリゲーターを使用する必要があります。 ProjectAggregator2 は、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] マネージコードプロジェクトの種類が正しく動作しないようにするプロジェクトアグリゲーターの制限に対処します。 次の手順では、新しいアグリゲーターを使用するように VSPackage を変更する方法について説明します。
+# <a name="deploy-project-types"></a>プロジェクト タイプのデプロイ
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] では、新しいプロジェクト タイプ アグリゲーター (*ProjectAggregator2.dll*) と、再配布用の Windows インストーラー パッケージ (*ProjectAggregator2.msi*) をインストールします。 マネージド コード プロジェクト タイプには、新しいアグリゲーターを使用する必要があります。 ProjectAggregator2 では、マネージド コード プロジェクト タイプが正しく動作しなくなる [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] プロジェクト アグリゲーターの制限に対処します。 次の手順では、新しいアグリゲーターを使用するように VSPackage を変更する方法について説明します。
 
 1. ソリューションから NativeHierarchyWrapper プロジェクトを削除します。
 

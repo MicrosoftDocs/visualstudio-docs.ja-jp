@@ -1,6 +1,6 @@
 ---
-title: カスタムスタートページの配置 |Microsoft Docs
-description: VSIX 配置を使用するか、ターゲットコンピューター上の正しい場所にファイルをコピーして、カスタムスタートページを展開する方法について説明します。
+title: カスタム スタート ページの配置 | Microsoft Docs
+description: VSIX 配置を使用するか、ターゲット コンピューター上の正しい場所にファイルをコピーして、カスタム スタート ページを配置する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,88 +16,88 @@ ms.workload:
 monikerRange: vs-2017
 ms.openlocfilehash: a356fe3dadaf0eca4f0b4d0f2a7d17f0b475acfb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061408"
 ---
-# <a name="deploy-custom-start-pages"></a>カスタムスタートページのデプロイ
+# <a name="deploy-custom-start-pages"></a>カスタム スタート ページを配置する
 
-VSIX 配置を使用するか、ターゲットコンピューター上の正しい場所にファイルをコピーすることで、カスタムスタートページを配置できます。
+カスタム スタート ページを配置するには、VSIX 配置を使用するか、ターゲット コンピューター上の正しい場所にファイルをコピーします。
 
-## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>スタートページのプロジェクトテンプレートを使用した VSIX 配置
+## <a name="vsix-deployment-by-using-the-start-page-project-template"></a>スタート ページのプロジェクト テンプレートを使用した VSIX 配置
 
-スタートページのプロジェクトテンプレートを使用してスタートページを作成し、プロジェクトをビルドすると、Visual Studio によって、配布できる *.vsix* ファイルが作成されます。 *.Vsix* ファイルにスタートページをパッケージ化すると、対象ユーザーに応じて次の配置オプションを使用できます。
+スタート ページのプロジェクト テンプレートを使用してスタート ページを作成してから、プロジェクトをビルドすると、配布できる *.vsix* ファイルが Visual Studio によって作成されます。 *.vsix* ファイルにスタート ページをパッケージ化すると、対象ユーザーに応じて次の配置オプションを使用できます。
 
-- *.Vsix* ファイルは、ネットワーク共有またはパブリック Web サイトに配置できます。 他のユーザーがファイルを開くと、スタートページが自動的にインストールされます。
+- *.vsix* ファイルをネットワーク共有またはパブリック Web サイトに配置できます。 他のユーザーがファイルを開くと、スタート ページが自動的にインストールされます。
 
-- *.Vsix* ファイルを [Visual Studio Marketplace](https://marketplace.visualstudio.com/) Web サイトにアップロードして、ユーザーが **拡張機能マネージャー** を使用してインストールできるようにすることができます。
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/) Web サイトに *.vsix* ファイルをアップロードすると、ユーザーは **拡張機能マネージャー** を使用してそれをインストールできます。
 
-スタートページのプロジェクトテンプレートによって、既定の Visual Studio のスタートページのコピーが作成されます。これにより、コピーを変更して元のファイルを保持することができます。
+スタート ページのプロジェクト テンプレートでは、既定の Visual Studio のスタート ページのコピーが作成されるため、コピーを変更して元を保持できます。
 
-スタートページのプロジェクトテンプレートを取得するには、 **拡張機能マネージャー** を使用するか、Web サイトからダウンロードします。
+スタート ページのプロジェクト テンプレートを取得するには、**拡張機能マネージャー** を使用するか、Web サイトからそれをダウンロードします。
 
-## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>スタートページのプロジェクトテンプレートを使用しない VSIX 配置
- VSIX 配置を正常に実行するには、VSIX 登録プロセスおよび **拡張機能マネージャー** によって認識されるフォルダーに拡張機能をインストールする必要があります。 スタートページのプロジェクトテンプレートには既に正しいフォルダーが指定されているので、VSIX 配置用の拡張機能をパッケージ化する場合は、このテンプレートを使用することをお勧めします。 ただし、テンプレートを使用できない場合は、VSIX の配置を使用せずに作成できます。
+## <a name="vsix-deployment-without-using-the-start-page-project-template"></a>スタート ページのプロジェクト テンプレートを使用しない VSIX 配置
+ VSIX 配置を成功させるには、VSIX 登録プロセスと **拡張機能マネージャー** で認識されるフォルダーに拡張機能をインストールする必要があります。 スタート ページのプロジェクト テンプレートには既に正しいフォルダーが指定されているので、VSIX 配置用の拡張機能をパッケージ化する場合は、常にこれを使用することをお勧めします。 ただし、テンプレートを使用できない場合は、それを使用せずに VSIX 配置を作成できます。
 
- スタートページのプロジェクトテンプレートを使用せずに VSIX の配置を作成するには、最初に次の2つの方法のいずれかで、スタートページの *.vsix* ファイルを作成します。
+ スタート ページのプロジェクト テンプレートを使用せずに VSIX 配置を作成するには、最初に次の 2 つの方法のいずれかでスタート ページの *.vsix* ファイルを作成します。
 
-- カスタムスタートページファイルを空の VSIX プロジェクトに追加する。 詳細については、「[VSIX プロジェクト テンプレート](../extensibility/vsix-project-template.md)」を参照してください。
+- カスタム スタート ページ ファイルを空の VSIX プロジェクトに追加する。 詳細については、「[VSIX プロジェクト テンプレート](../extensibility/vsix-project-template.md)」を参照してください。
 
-- *.Vsix* ファイルを手動で作成する。 .Vsix ファイルを手動で作成するには、次のように *します* 。
+- *.vsix* ファイルを手動で作成する。 *.vsix* ファイルを手動で作成するには:
 
-   1. 新しいフォルダーに *source.extension.vsixmanifest* ファイルと *[Content_Types] .xml* ファイルを作成します。 詳細については、「 [VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)」を参照してください。
+   1. 新しいフォルダーに *extension.vsixmanifest* ファイルと *[Content_Types].xml* ファイルを作成します。 詳細については、「[VSIX パッケージの構造](../extensibility/anatomy-of-a-vsix-package.md)」を参照してください。
 
-   2. Windows エクスプローラーで、2つの XML ファイルが含まれているフォルダーを右クリックし、[ **送信**] をクリックして、[圧縮 (zip 形式) フォルダー] をクリックします。 結果の *.zip* ファイルの名前を *filename .vsix* に変更します。ここで、filename はパッケージをインストールする再頒布可能ファイルの名前です。
+   2. エクスプローラーで、2 つの XML ファイルを含むフォルダーを右クリックし、 **[送る]** 、[圧縮 (zip 形式) フォルダー] の順にクリックします。 作成された *.zip* ファイルの名前を *Filename.vsix* に変更します (Filename はパッケージをインストールする再頒布可能ファイルの名前です)。
 
-Visual Studio がスタートページを認識するには、 `Content Element` VSIX マニフェストのに、属性がに設定されたが含まれている必要があり `CustomExtension Element` `Type` `"StartPage"` ます。 VSIX 配置を使用してインストールされたスタートページの拡張機能は、[**スタートアップ** オプション] ページの [**スタートページのカスタマイズ**] の一覧に [インストールされて **いる拡張機能]** の *名前* として表示されます。
+Visual Studio でスタート ページを認識するには、VSIX マニフェストの `Content Element` に、`Type` 属性が `"StartPage"` に設定された `CustomExtension Element` を含める必要があります。 VSIX 配置を使用してインストールされたスタート ページ拡張機能は、 **[スタートアップ]** オプション ページの **[スタート ページのカスタマイズ]** の一覧に **[インストールされた拡張機能]** <*拡張機能名*> として表示されます。
 
-スタートページパッケージにアセンブリが含まれている場合は、Visual Studio の起動時に使用できるように、バインドパス登録を追加する必要があります。 これを行うには、パッケージに次の情報を含む *pkgdef* ファイルが含まれていることを確認してください。
+スタート ページ パッケージにアセンブリが含まれている場合は、Visual Studio の起動時にそれらを使用できるようにするため、バインド パスの登録を追加する必要があります。 これを行うには、次の情報を含む *.pkgdef* ファイルがパッケージに含まれていることを確認します。
 
 ```
 [$RootKey$\BindingPaths\{Insert a new GUID here}]
 "$PackageFolder$"=""
 ```
 
-### <a name="vsix-deployment-for-all-users"></a>すべてのユーザーの VSIX 配置
- 既定では、VSIX パッケージに配置された拡張機能は、現在のユーザーに対してのみインストールされます。 All-Users の展開を作成することによって、ターゲットコンピューターのすべてのユーザーに対してスタートページのインストールを行うことができます。
+### <a name="vsix-deployment-for-all-users"></a>すべてのユーザーに対する VSIX 配置
+ 既定では、VSIX パッケージに配置された拡張機能は、現在のユーザーに対してのみインストールされます。 ターゲット コンピューターのすべてのユーザーに対するスタート ページ インストールを作成するには、All-Users の配置を作成します。
 
-### <a name="to-create-an-all-users-deployment"></a>All-Users の展開を作成するには
+### <a name="to-create-an-all-users-deployment"></a>All-Users の配置を作成するには
 
-1. コードビューで *source.extension.vsixmanifest* ファイルを開きます。
+1. コード ビューで *extension.vsixmanifest* ファイルを開きます。
 
-2. `Identifier`Vsix マニフェストの要素に、 `AllUsers` の値を持つ要素を追加し `true` ます。
+2. vsix マニフェストの `Identifier` 要素に、`true` の値を持つ `AllUsers` 要素を追加します。
 
     ```
     <AllUsers>true</AllUsers>
     ```
 
-     これにより、vsix インストーラーによって管理者のアクセス許可が求められ、 *\Common7\IDE\Extensions* にファイルがインストールされます。
+     これにより、vsix インストーラーで管理者のアクセス許可が求められた後、 *\Common7\IDE\Extensions* にファイルがインストールされます。
 
-3. *Pkgdef* ファイルを開きます。
+3. *.pkgdef* ファイルを開きます。
 
-4. 次のように追加して、[HKLM] の下に既定のスタートページを設定するように *pkgdef* を変更します。ここで、 *Mystartpage* は、スタートページを含む *.xaml* ファイルの名前です。
+4. [HKLM] の下に次を追加して、既定のスタート ページを設定するように *.pkgdef* を変更します。ここで、*MyStartPage.xaml* は、スタート ページを含む *.xaml* ファイルの名前です。
 
-     [$RootKey $ \ Startpage\ 既定値]
+     [$RootKey$\StartPage\Default]
 
-     "Uri" = "$PackageFolder $ \\ *mystartpage. .xaml*"
+     "Uri"="$PackageFolder$\\*MyStartPage.xaml*"
 
-     これにより、Visual Studio に新しいスタートページの場所を検索するように指示されます。
+     これで、Visual Studio に対して新しいスタート ページの場所を検索するように指示されます。
 
-## <a name="file-copy-deployment"></a>ファイルコピーの展開
- カスタムスタートページを配置するための *.vsix* ファイルを作成する必要はありません。 代わりに、マークアップとサポートファイルをユーザーの \ startpages フォルダーに直接コピーすることができ <em> \* ます。*</em>* [**スタートアップ** オプション] ページの [スタートページのカスタマイズ] の一覧には、そのフォルダー内のすべての *.xaml* ファイルとパス (たとえば、 *%USERPROFILE%\My Documents\Visual Studio {version} \ startpages \\ {file Name} .xaml*) が表示されます。 スタートページにプライベートアセンブリへの参照が含まれている場合は、それらをコピーして、* \ privateassemblies フォルダーに貼り付ける必要があり \* ます。
+## <a name="file-copy-deployment"></a>ファイル コピーの配置
+ カスタム スタート ページを配置するために *.vsix* ファイルを作成する必要はありません。 代わりに、マークアップとサポート ファイルをユーザーの <em>\StartPages\* フォルダーに直接コピーできます。* **[スタートアップ]** オプション ページの *[スタート ページのカスタマイズ]</em> の一覧には、そのフォルダー内のすべての *.xaml* ファイルがパスと共に表示されます (たとえば、 *%USERPROFILE%\My Documents\Visual Studio <バージョン>\StartPages\\<ファイル名>.xaml*)。 スタート ページにプライベート アセンブリへの参照が含まれている場合は、それらをコピーして、*\PrivateAssemblies\* フォルダーに貼り付ける必要があります。
 
- 作成したスタートページを *.vsix* ファイルにパッケージ化せずに配布するには、基本的なファイルコピー方法 (バッチスクリプトなど)、または必要なディレクトリにファイルを配置するその他の展開テクノロジを使用することをお勧めします。
+ 作成したスタート ページを *.vsix* ファイルにパッケージ化せずに配布するには、基本的なファイル コピー方法 (バッチ スクリプトなど)、または必要なディレクトリにファイルを配置できるその他の配置テクノロジを使用することをお勧めします。
 
-### <a name="to-manually-install-a-custom-start-page"></a>カスタムスタートページを手動でインストールするには
+### <a name="to-manually-install-a-custom-start-page"></a>カスタム スタート ページを手動でインストールするには
 
-1. スタートページのマークアップを含む *.xaml* ファイルを、アセンブリ以外のサポートファイルと共にコピーし、ユーザーの * \ startpages フォルダーに貼り付けます。 \*
+1. スタート ページのマークアップを含む *.xaml* ファイルをアセンブリ以外のサポート ファイルと共にコピーし、ユーザーの *\StartPages\* フォルダーに貼り付けます。
 
-2. スタートページにアセンブリが必要な場合は、それをコピーし、に貼り付けます。 *\\{Visual Studio インストールフォルダー} \Common7\IDE\PrivateAssemblies \\*。
+2. スタート ページにアセンブリが必要な場合は、それらをコピーし、 *..\\<Visual Studio インストール フォルダー>\Common7\IDE\PrivateAssemblies\\* に貼り付けます。
 
-3. [**スタートアップ** オプション] ページの [**スタートページのカスタマイズ**] の一覧で、新しいスタートページを選択します。 詳細については、「 [スタートページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)」を参照してください。
+3. **[スタートアップ]** オプション ページの **[スタート ページのカスタマイズ]** の一覧で、新しいスタート ページを選択します。 詳細については、[スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)に関する記事をご覧ください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [スタートページをカスタマイズする](../ide/customizing-the-start-page-for-visual-studio.md)
-- [スタートページにユーザーコントロールを追加する](../extensibility/adding-user-control-to-the-start-page.md)
+- [スタート ページのカスタマイズ](../ide/customizing-the-start-page-for-visual-studio.md)
+- [スタート ページにユーザー コントロールを追加する](../extensibility/adding-user-control-to-the-start-page.md)

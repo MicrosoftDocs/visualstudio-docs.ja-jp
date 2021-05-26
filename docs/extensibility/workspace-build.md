@@ -1,6 +1,6 @@
 ---
-title: Visual Studio でのワークスペースビルド |Microsoft Docs
-description: 開いているフォルダーのシナリオをサポートするために、ワークスペースのインデックス付きおよびファイルコンテキストデータを提供するエクステンダーについて説明します。
+title: Visual Studio におけるワークスペース ビルド | Microsoft Docs
+description: フォルダーを開くシナリオをサポートするために、ワークスペースのインデックス付きおよびファイル コンテキスト データを提供するエクステンダーについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -11,56 +11,56 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: e44c2398b873bbca95c971ae1b44ac3de831b2ae
 ms.sourcegitcommit: 0c9155e9b9408fb7481d79319bf08650b610e719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97877105"
 ---
-# <a name="workspace-build"></a>ワークスペースビルド
+# <a name="workspace-build"></a>ワークスペース ビルド
 
-[フォルダーを開く](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)シナリオでのビルドサポートには、実行するビルドアクションだけでなく、[ワークスペース](workspaces.md)の[インデックス付き](workspace-indexing.md)および[ファイルコンテキスト](workspace-file-contexts.md)データを提供するエクステンダーが必要です。
+[フォルダーを開く](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)シナリオでのビルド サポートには、実行するビルド アクションだけでなく、[ワークスペース](workspaces.md)の[インデックス付き](workspace-indexing.md)および[ファイル コンテキスト](workspace-file-contexts.md)データを提供するエクステンダーが必要です。
 
 拡張機能に必要なものの概要を次に示します。
 
-## <a name="build-file-context"></a>ビルドファイルコンテキスト
+## <a name="build-file-context"></a>ビルド ファイル コンテキスト
 
-- プロバイダーファクトリ
-  - `ExportFileContextProviderAttribute`の `supportedContextTypeGuids` すべての適用可能な定数としての属性 `string``BuildContextTypes`
+- プロバイダー ファクトリ
+  - `BuildContextTypes` のすべての適用可能な `string` 定数として `supportedContextTypeGuids` がある `ExportFileContextProviderAttribute` 属性
   - `IWorkspaceProviderFactory<IFileContextProvider>` を実装します
-  - ファイルコンテキストプロバイダー
-    - `FileContext`ビルド操作ごとにを返し、サポートされる構成
+  - ファイル コンテキスト プロバイダー
+    - サポートされるビルド操作と構成ごとに `FileContext` を返します
       - <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes> からの `contextType`
-      - `context` は、 <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> `Configuration` プロパティをビルド構成として実装し `"Debug|x86"` ます ( `"ret"` `null` 該当しない場合は、、、など)。 または、のインスタンスを使用し <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext> ます。 構成値は、インデックス付きのファイルデータ値の構成と一致して **いる必要があり** ます。
+      - `context` は、`Configuration` プロパティをビルド構成として <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> を実装します (`"Debug|x86"`、`"ret"`、または該当しない場合は `null` など)。 または、単純に <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext> のインスタンス自体を使用します。 構成値は、インデックス付きのファイル データ値の構成と一致している **必要があります**。
 
-## <a name="indexed-build-file-data-value"></a>インデックス付きビルドファイルのデータ値
+## <a name="indexed-build-file-data-value"></a>インデックス付きビルド ファイルのデータ値
 
-- プロバイダーファクトリ
-  - `ExportFileScannerAttribute``IReadOnlyCollection<FileDataValue>`サポートされる型としての属性
+- プロバイダー ファクトリ
+  - `IReadOnlyCollection<FileDataValue>` をサポートする型としての `ExportFileScannerAttribute` 属性
   - `IWorkspaceProviderFactory<IFileScanner>` を実装します
-- ファイルスキャナーをオンにする `ScanContentAsync<T>`
-  - が型引数の場合にデータを返します `FileScannerTypeConstants.FileDataValuesType`
-  - 次のように構築された各構成のファイルデータ値を返します。
+- `ScanContentAsync<T>` のファイル スキャナー
+  - `FileScannerTypeConstants.FileDataValuesType` が型引数の場合にデータを返します
+  - 次のように構築された各構成のファイル データ値を返します。
     - `type` as `BuildConfigurationContext.ContextTypeGuid`
-    - `context` ビルド構成 ( `"Debug|x86"` `"ret"` 該当しない場合は、、など `null` )。 この値は、ファイルコンテキストの構成と一致して **いる必要があり** ます。
+    - ビルド構成としての `context` (`"Debug|x86"`、`"ret"`、または該当しない場合は `null` など)。 この値は、ファイル コンテキストの構成と一致している **必要があります**。
 
-## <a name="build-file-context-action"></a>ビルドファイルコンテキストアクション
+## <a name="build-file-context-action"></a>ビルド ファイル コンテキスト アクション
 
-- プロバイダーファクトリ
-  - `ExportFileContextActionProvider`の `supportedContextTypeGuids` すべての適用可能な定数としての属性 `string``BuildContextTypes`
+- プロバイダー ファクトリ
+  - `BuildContextTypes` のすべての適用可能な `string` 定数として `supportedContextTypeGuids` がある `ExportFileContextActionProvider` 属性
   - `IWorkspaceProviderFactory<IFileContextActionProvider>` を実装します
-- のアクションプロバイダー `IFileContextActionProvider.GetActionsAsync`
-  - `IFileContextAction`指定された値と一致するを返します。 `FileContext.ContextType`
-- ファイルコンテキストアクション
-  - `IFileContextAction`とを実装します。<xref:Microsoft.VisualStudio.Workspace.Extensions.VS.IVsCommandItem>
-  - `CommandGroup` プロパティの戻り値 `16537f6e-cb14-44da-b087-d1387ce3bf57`
-  - `CommandId``0x1000`ビルド用、 `0x1010` リビルド用、または `0x1020` クリーン用
+- `IFileContextActionProvider.GetActionsAsync` のアクション プロバイダー
+  - 指定された `FileContext.ContextType` 値と一致する `IFileContextAction` を返す
+- ファイル コンテキスト アクション
+  - `IFileContextAction` と <xref:Microsoft.VisualStudio.Workspace.Extensions.VS.IVsCommandItem> を実装します
+  - `CommandGroup` プロパティは `16537f6e-cb14-44da-b087-d1387ce3bf57` を返します
+  - `CommandId` は、ビルド用に `0x1000`、リビルド用に `0x1010`、またはクリーン用に `0x1020`
 
 >[!NOTE]
->は `FileDataValue` インデックスを作成する必要があるため、ワークスペースを開く間隔と、完全なビルド機能のためにファイルをスキャンするポイントの間には、一定の時間がかかります。 以前にキャッシュされたインデックスが存在しないため、フォルダーを最初に開いたときに遅延が発生します。
+>`FileDataValue` にはインデックスを作成する必要があるため、ワークスペースを開いてから、ファイルがスキャンされて完全なビルド機能が利用できるようになるまでには、一定の時間がかかります。 フォルダーを最初に開いたときは、以前にキャッシュされたインデックスが存在しないため、遅延が発生します。
 
 ## <a name="reporting-messages-from-a-build"></a>ビルドからのメッセージの報告
 
-ビルドでは、次の2つの方法のいずれかで、情報、警告、およびエラーメッセージをユーザーに通知できます。 単純な方法は、を使用 <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> し、次のようにを提供することです <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> 。
+ビルドでは、次の 2 つの方法のいずれかで、情報、警告、およびエラー メッセージをユーザーに通知できます。 単純な方法は、<xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> を使用し、次のように <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> を提供することです。
 
 ```csharp
 using Microsoft.VisualStudio.Workspace;
@@ -90,22 +90,22 @@ private static void OutputBuildMessage(IWorkspace workspace)
 }
 ```
 
-`BuildMessage.Type` また、 `BuildMessage.LogMessage` ユーザーに情報が表示される場所の動作を制御します。 `BuildMessage.TaskType`以外の値を `None` 指定すると、指定した詳細を含む **エラー一覧** エントリが生成されます。 `LogMessage`は常に **出力** ツールウィンドウの [**ビルド**] ペインに出力されます。
+`BuildMessage.Type` および `BuildMessage.LogMessage` は、ユーザーに情報が表示される場所の動作を制御します。 `None` 以外の `BuildMessage.TaskType` 値を指定すると、指定した詳細を含む **[エラー一覧]** エントリが生成されます。 `LogMessage` は常に **[出力]** ツール ウィンドウの **[ビルド]** ペインに出力されます。
 
-また、拡張機能は、 **エラー一覧** または **ビルド** ペインと直接対話できます。 Visual Studio 2017 バージョン15.7 より前のバージョンに `pszProjectUniqueName` は、の引数が無視されるバグが存在し <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> ます。
+または、拡張機能は、 **[エラー一覧]** または **[ビルド]** ペインと直接対話できます。 Visual Studio 2017 バージョン 15.7 より前のバージョンにはバグが存在し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> の `pszProjectUniqueName` 引数が無視されます。
 
 >[!WARNING]
->の呼び出し元 `IFileContextAction.ExecuteAsync` は、引数の基になる任意の実装を提供でき `IProgress<IFileContextActionProgressUpdate>` ます。 直接呼び出すことはできません `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` 。 現在、この引数を使用するための一般的なガイドラインはありませんが、これらのガイドラインは変更される可能性があります。
+>`IFileContextAction.ExecuteAsync` の呼び出し元は、`IProgress<IFileContextActionProgressUpdate>` 引数の基になる任意の実装を提供できます。 `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` を直接呼び出すことはできません。 現在、この引数を使用するための一般的なガイドラインはありませんが、これらのガイドラインは変更される可能性があります。
 
-## <a name="build-related-apis"></a>ビルド関連の Api
+## <a name="build-related-apis"></a>ビルド関連の API
 
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> ビルド構成の詳細を提供します。
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService><xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>ユーザーに s を表示します。
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> は、ビルド構成の詳細を提供します。
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> は、ユーザーに <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> を表示します。
 
-## <a name="tasksvsjson-and-launchvsjson"></a>On と launch.vs.jsの tasks.vs.js
+## <a name="tasksvsjson-and-launchvsjson"></a>tasks.vs.json および launch.vs.json
 
-ファイルの tasks.vs.jsを作成する方法、またはファイルに launch.vs.jsする方法については、「 [ビルドタスクとデバッグタスクのカスタマイズ](../ide/customize-build-and-debug-tasks-in-visual-studio.md)」を参照してください。
+tasks.vs.js ファイルまたは launch.vs.js ファイルを作成する方法については、[ビルド タスクとデバッグ タスクのカスタマイズ](../ide/customize-build-and-debug-tasks-in-visual-studio.md)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-* [言語サーバープロトコル](language-server-protocol.md) -言語サーバーを Visual Studio に統合する方法について説明します。
+* [言語サーバー プロトコル](language-server-protocol.md) -言語サーバーを Visual Studio に統合する方法について説明します。

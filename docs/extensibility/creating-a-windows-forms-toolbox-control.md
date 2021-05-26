@@ -1,6 +1,6 @@
 ---
-title: Windows フォームツールボックスコントロールの作成 |Microsoft Docs
-description: このチュートリアルでは、Windows フォームツールボックスコントロールテンプレートを使用して、Visual Studio SDK を使用して簡単なカウンターコントロールを作成する方法について説明します。
+title: Windows フォーム ツールボックス コントロールの作成 | Microsoft Docs
+description: このチュートリアルでは、Visual Studio SDK を使用して、Windows フォーム ツールボックス コントロール テンプレートを使用した簡単なカウンター コントロールを作成する方法について説明します。
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -15,69 +15,69 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 42dcf30e7c31880357bb95e3858a2c70aa59f174
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089330"
 ---
-# <a name="create-a-windows-forms-toolbox-control"></a>Windows フォームツールボックスコントロールを作成する
+# <a name="create-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールの作成
 
-Visual Studio Extensibility Tools (VS SDK) に含まれている Windows フォームツールボックスコントロール項目テンプレートを使用すると、拡張機能のインストール時に自動的に追加される **ツールボックス** コントロールを作成できます。 このチュートリアルでは、テンプレートを使用して、他のユーザーに配布できる単純なカウンターコントロールを作成する方法について説明します。
+Visual Studio Extensibility Tools (VS SDK) に含まれている Windows フォーム ツールボックス コントロール項目テンプレートを使用すると、拡張機能のインストール時に自動的に追加される **ツールボックス** コントロールを作成できます。 このチュートリアルでは、他のユーザーに配布できる簡単なカウンター コントロールを、テンプレートを使用して作成する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
-## <a name="create-the-toolbox-control"></a>ツールボックスコントロールを作成する
+## <a name="create-the-toolbox-control"></a>ツールボックス コントロールを作成する
 
-Windows フォームツールボックスコントロールテンプレートは、未定義のユーザーコントロールを作成し、コントロールを **ツールボックス** に追加するために必要なすべての機能を提供します。
+Windows フォーム ツールボックス コントロール テンプレートでは、未定義のユーザー コントロールを作成できます。また、**ツールボックス** にコントロールを追加するために必要な機能がすべて用意されています。
 
-### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Windows フォームツールボックスコントロールを使用して拡張機能を作成する
+### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Windows フォーム ツールボックス コントロールを使用して拡張機能を作成する
 
-1. という名前の VSIX プロジェクトを作成 `MyWinFormsControl` します。 VSIX プロジェクトテンプレートは、"vsix" を検索することで、[ **新しいプロジェクト** ] ダイアログで見つけることができます。
+1. `MyWinFormsControl` という名前の VSIX プロジェクトを作成します。 VSIX プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログで「vsix」と検索すると見つかります。
 
-2. プロジェクトが開いたら、という名前の **Windows フォームツールボックスコントロール** 項目テンプレートを追加 `Counter` します。 **ソリューションエクスプローラー** で、プロジェクトノードを右クリックし、[新しい項目の **追加**] を選択し  >  ます。 [**新しい項目の追加**] ダイアログで、[ **Visual C#** の  >  **機能拡張**] にアクセスし、[ **Windows フォームツールボックスコントロール**] を選択します。
+2. プロジェクトが開いたら、`Counter` という名前の **Windows フォーム ツールボックス コントロール** 項目テンプレートを追加します。 **ソリューション エクスプローラー** で、プロジェクト ノードを右クリックして、 **[追加]**  >  **[新しい項目]** の順に選択します。 **[新しい項目の追加]** ダイアログで、 **[Visual C#]**  >  **[機能拡張]** の順にアクセスし、 **[Windows フォーム ツールボックス コントロール]** を選択します。
 
-3. これにより、ユーザーコントロールが追加され、 `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> **ツールボックス** にコントロールが配置されます。また、展開用の VSIX マニフェストに **VisualStudio** アセットエントリが追加されます。
+3. これにより、ユーザー コントロール、**ツールボックス** にコントロールを配置するための `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute>、展開用の VSIX マニフェストの **Microsoft.VisualStudio.ToolboxControl** アセット エントリが追加されます。
 
-### <a name="build-a-user-interface-for-the-control"></a>コントロールのユーザーインターフェイスを作成する
+### <a name="build-a-user-interface-for-the-control"></a>コントロールのユーザー インターフェイスを構築する
 
-コントロールには、 `Counter` 現在の数を表示するための2つの子コントロール <xref:System.Windows.Forms.Label> と、カウントを <xref:System.Windows.Forms.Button> 0 にリセットするためのが必要です。 呼び出し元はプログラムによってカウンターをインクリメントするため、他の子コントロールは必要ありません。
+`Counter` コントロールには、現在のカウントを表示するための <xref:System.Windows.Forms.Label> と、カウントを 0 にリセットするための <xref:System.Windows.Forms.Button> の 2 つの子コントロールが必要です。 呼び出し元がプログラムでカウンターをインクリメントするため、これら以外の子コントロールは必要ありません。
 
 #### <a name="to-build-the-user-interface"></a>ユーザー インターフェイスを作成するには
 
-1. **ソリューションエクスプローラー** で、[ *Counter. .cs* ] をダブルクリックしてデザイナーで開きます。
+1. **ソリューション エクスプローラー** で *Counter.cs* をダブルクリックして、デザイナーで開きます。
 
-2. ここを **クリックしてください。** Windows フォームツールボックスコントロール項目テンプレートを追加するときに既定で含まれるボタン。
+2. **[ここをクリック]** ボタンを削除します。これは、Windows フォーム ツールボックス コントロール項目テンプレートを追加するときに既定で含まれます。
 
-3. [ **ツールボックス**] からコントロールをドラッグし、 `Label` `Button` その下にあるコントロールをデザインサーフェイスにドラッグします。
+3. **ツールボックス** から、`Label` コントロールと、その下にある `Button` コントロールをデザイン サーフェイスにドラッグします。
 
-4. ユーザーコントロール全体のサイズを150、50ピクセルに変更し、ボタンコントロールのサイズを50、20ピクセルに変更します。
+4. ユーザー コントロール全体のサイズを 150, 50 ピクセルに変更し、ボタン コントロールのサイズを 50, 20 ピクセルに変更します。
 
-5. [ **プロパティ** ] ウィンドウで、デザインサーフェイス上のコントロールに対して次の値を設定します。
+5. **[プロパティ]** ウィンドウで、デザイン サーフェイス上のコントロールに対して次の値を設定します。
 
     |コントロール|プロパティ|値|
     |-------------|--------------|-----------|
-    |`Label1`|**[Text]**|""|
+    |`Label1`|**[テキスト]**|""|
     |`Button1`|**名前**|btnReset|
-    |`Button1`|**[Text]**|Reset|
+    |`Button1`|**[テキスト]**|Reset|
 
-### <a name="code-the-user-control"></a>ユーザーコントロールのコーディング
+### <a name="code-the-user-control"></a>ユーザー コントロールのコーディング
 
-コントロールは、 `Counter` カウンターをインクリメントするメソッド、カウンターがインクリメントされるたびに発生するイベント、 **リセット** ボタン、および現在のカウント、表示テキスト、および **リセット** ボタンを表示するか非表示にするかを指定する3つのプロパティを公開します。 `ProvideToolboxControl` 属性は、 **[ツールボックス]** のどの場所に `Counter` コントロールが表示されるかを判断します。
+`Counter` コントロールは、カウンターをインクリメントするメソッド、カウンターがインクリメントされると発生するイベント、および **[Reset]** ボタンを公開します。また、現在のカウント、表示テキスト、および **[Reset]** ボタンの表示または非表示の状態を格納するための、3 つのプロパティも公開します。 `ProvideToolboxControl` 属性は、 **[ツールボックス]** のどの場所に `Counter` コントロールが表示されるかを判断します。
 
-#### <a name="to-code-the-user-control"></a>ユーザーコントロールをコーディングするには
+#### <a name="to-code-the-user-control"></a>ユーザー コントロールのコーディングを行うには
 
-1. フォームをダブルクリックすると、その読み込みイベントハンドラーがコードウィンドウに表示されます。
+1. フォームをダブルクリックすると、その読み込みイベント ハンドラーがコード ウィンドウに表示されます。
 
-2. イベントハンドラーメソッドの上にあるコントロールクラスで、次の例に示すように、カウンター値を格納する整数と表示テキストを格納する文字列を作成します。
+2. イベント ハンドラー メソッドの上にあるコントロール クラスで、次の例に示すように、カウンター値を格納する整数と表示テキストを格納する文字列を作成します。
 
     ```csharp
     int currentValue;
     string displayText;
     ```
 
-3. 次のパブリックプロパティ宣言を作成します。
+3. 次のパブリック プロパティ宣言を作成します。
 
     ```csharp
     public int Value {
@@ -96,9 +96,9 @@ Windows フォームツールボックスコントロールテンプレートは
 
     ```
 
-    呼び出し元は、これらのプロパティにアクセスして、カウンターの表示テキストを取得および設定したり、 **リセット** ボタンの表示と非表示を切り替えることができます。 呼び出し元は、読み取り専用プロパティの現在の値を取得でき `Value` ますが、値を直接設定することはできません。
+    呼び出し元では、これらのプロパティにアクセスして、カウンターの表示テキストを取得および設定したり、 **[Reset]** ボタンの表示と非表示を切り替えたりすることができます。 呼び出し元では、読み取り専用の `Value` プロパティの現在の値を取得できますが、値を直接設定することはできません。
 
-4. コントロールのイベントに次のコードを追加 `Load` します。
+4. コントロールの `Load` イベントに次のコードを追加します。
 
     ```csharp
     private void Counter_Load(object sender, EventArgs e)
@@ -109,9 +109,9 @@ Windows フォームツールボックスコントロールテンプレートは
 
     ```
 
-    イベントの **ラベル** テキストを設定する <xref:System.Windows.Forms.UserControl.Load> と、対象のプロパティの値が適用される前に読み込むことができます。 コンストラクターで **ラベル** のテキストを設定すると、空の **ラベル** が生成されます。
+    <xref:System.Windows.Forms.UserControl.Load> イベントの **ラベル** テキストを設定すると、対象のプロパティの値が適用される前に読み込むことができます。 コンストラクターで **ラベル** テキストを設定すると、空の **ラベル** が生成されます。
 
-5. 次のパブリックメソッドを作成して、カウンターをインクリメントします。
+5. 次のように、カウンターをインクリメントするパブリック メソッドを作成します。
 
     ```csharp
     public void Increment()
@@ -123,15 +123,15 @@ Windows フォームツールボックスコントロールテンプレートは
 
     ```
 
-6. イベントの宣言を `Incremented` コントロールクラスに追加します。
+6. `Incremented` イベントの宣言をコントロール クラスに追加します。
 
     ```csharp
     public event EventHandler Incremented;
     ```
 
-    呼び出し元は、このイベントにハンドラーを追加して、カウンターの値の変更に応答することができます。
+    呼び出し元では、このイベントにハンドラーを追加して、カウンターの値の変更に応答することができます。
 
-7. デザインビューに戻り、[ **リセット** ] ボタンをダブルクリックして `btnReset_Click` イベントハンドラーを生成します。 次に、次の例に示すように入力します。
+7. デザイン ビューに戻り、 **[Reset]** ボタンをダブルクリックして `btnReset_Click` イベント ハンドラーを生成します。 次に、以下の例に示すように入力します。
 
     ```csharp
     private void btnReset_Click(object sender, EventArgs e)
@@ -153,37 +153,37 @@ Windows フォームツールボックスコントロールテンプレートは
 
 ### <a name="test-the-control"></a>コントロールをテストする
 
- **ツールボックス** コントロールをテストするには、まず開発環境でテストしてから、コンパイル済みアプリケーションでテストします。
+ **ツールボックス** コントロールをテストする場合は、まず開発環境でテストし、その後で、コンパイルされたアプリケーションでテストします。
 
 #### <a name="to-test-the-control"></a>コントロールをテストするには
 
 1. **F5** キーを押して **デバッグを開始** します。
 
-    このコマンドは、プロジェクトをビルドし、コントロールがインストールされている Visual Studio の2番目の実験用インスタンスを開きます。
+    このコマンドを使用するとプロジェクトが構築され、コントロールがインストールされた Visual Studio の 2 つ目の実験用インスタンスが開きます。
 
-2. Visual Studio の実験用インスタンスで、 **Windows フォームアプリケーション** プロジェクトを作成します。
+2. Visual Studio の実験用インスタンスで、**Windows フォーム アプリケーション** プロジェクトを作成します。
 
-3. **ソリューションエクスプローラー** で、 *Form1* をダブルクリックしてデザイナーで開きます (まだ開いていない場合)。
+3. **ソリューション エクスプローラー** で *Form1.cs* をダブルクリックして、デザイナーで開きます (まだ開いていない場合)。
 
-4. **ツールボックス** では、 `Counter` コントロールが **[全般**] セクションに表示されます。
+4. **ツールボックス** では、`Counter` コントロールが **[全般]** セクションに表示されます。
 
-5. コントロールを `Counter` フォームにドラッグし、選択します。 、、およびの各プロパティは、 `Value` `Message` `ShowReset` から継承されたプロパティと共に [ **プロパティ** ] ウィンドウに表示され <xref:System.Windows.Forms.UserControl> ます。
+5. `Counter` コントロールをフォームにドラッグして選択します。 `Value`、`Message`、`ShowReset` の各プロパティが、<xref:System.Windows.Forms.UserControl> から継承されたプロパティと一緒に、 **[プロパティ]** ウィンドウに表示されます。
 
-6. `Message` プロパティを `Count:`に設定します。
+6. `Message` プロパティを `Count:` に設定します。
 
-7. コントロールを <xref:System.Windows.Forms.Button> フォームにドラッグし、ボタンの name プロパティと text プロパティをに設定し `Test` ます。
+7. <xref:System.Windows.Forms.Button> コントロールをフォームにドラッグし、ボタンの名前プロパティとテキスト プロパティを `Test` に設定します。
 
-8. ボタンをダブルクリックしてコードビューで *Form1* を開き、クリックハンドラーを作成します。
+8. ボタンをダブルクリックしてコード ビューで *Form1.cs* を開き、クリック ハンドラーを作成します。
 
-9. クリックハンドラーで、を呼び出し `counter1.Increment()` ます。
+9. クリック ハンドラーで、`counter1.Increment()` を呼び出します。
 
-10. コンストラクター関数で、の呼び出しの後に `InitializeComponent` 「」と入力し、 `counter1``.``Incremented +=` **tab** キーを2回押します。
+10. コンストラクター関数で、`InitializeComponent` の呼び出しの後に「`counter1``.``Incremented +=`」と入力し、**Tab** キーを 2 回押します。
 
-    Visual Studio によって、イベントのフォームレベルのハンドラーが生成さ `counter1.Incremented` れます。
+    Visual Studio によって、`counter1.Incremented` イベントのフォーム レベルのハンドラーが生成されます。
 
-11. イベントハンドラーでステートメントを強調表示し、「」 `Throw` と入力し `mbox` ます。 **tab** キーを2回押すと、mbox コードスニペットからメッセージボックスが生成されます。
+11. イベント ハンドラーで `Throw` ステートメントを強調表示し、「`mbox`」と入力します。**Tab** キーを 2 回押すと、mbox コード スニペットからメッセージ ボックスが生成されます。
 
-12. 次の行で、次のブロックを追加して `if` / `else` 、[**リセット**] ボタンの表示を設定します。
+12. 次の行で、以下の `if`/`else` ブロックを追加して、 **[Reset]** ボタンの表示を設定します。
 
     ```csharp
     if (counter1.Value < 5) counter1.ShowReset = false;
@@ -192,21 +192,21 @@ Windows フォームツールボックスコントロールテンプレートは
 
 13. **F5** キーを押します。
 
-    フォームが開きます。 コントロールには `Counter` 、次のテキストが表示されます。
+    フォームが開きます。 `Counter` コントロールに次のテキストが表示されます。
 
-    **カウント: 0**
+    **Count: 0**
 
 14. **[Test]** を選択します。
 
-    カウンターの値が増加し、Visual Studio によってメッセージボックスが表示されます。
+    カウンターの値が増加し、Visual Studio によってメッセージ ボックスが表示されます。
 
-15. メッセージボックスを閉じます。
+15. メッセージ ボックスを閉じます。
 
-    [ **リセット** ] ボタンが表示されなくなります。
+    **[Reset]** ボタンが消えます。
 
-16. [ **テスト** ] を選択すると、カウンターがメッセージボックスを閉じるたびに **5** に達します。
+16. カウンターが **5** に到達するまで **[Test]** を選択し、毎回メッセージ ボックスを閉じます。
 
-    [ **リセット** ] ボタンが再び表示されます。
+    **[Reset]** ボタンが再び表示されます。
 
 17. **[リセット]** を選択します。
 
@@ -214,11 +214,11 @@ Windows フォームツールボックスコントロールテンプレートは
 
 ## <a name="next-steps"></a>次のステップ
 
-**ツールボックス** コントロールをビルドすると、Visual Studio によってプロジェクトの \bin\debug\ フォルダーに *ProjectName* という名前のファイルが作成されます。 コントロールを配置するには、 *.vsix* ファイルをネットワークまたは Web サイトにアップロードします。 ユーザーが *.vsix* ファイルを開くと、コントロールがインストールされ、ユーザーのコンピューターの Visual Studio **ツールボックス** に追加されます。 または、 *.vsix* ファイルを [Visual Studio Marketplace](https://marketplace.visualstudio.com/)にアップロードして、ユーザーが [**ツール**  >  ] [**拡張機能と更新プログラム**] ダイアログで参照して検索できるようにすることもできます。
+**ツールボックス** コントロールを構築すると、Visual Studio によって、プロジェクトの \bin\debug\ フォルダーに *ProjectName.vsix* という名前のファイルが作成されます。 コントロールは、 *.vsix* ファイルをネットワークや Web サイトにアップロードすることで展開できます。 この *.vsix* ファイルをユーザーが開くと、コントロールがユーザーのコンピューターにインストールされ、Visual Studio の **ツールボックス** に追加されます。 または、 *.vsix* ファイルを [Visual Studio Marketplace](https://marketplace.visualstudio.com/) にアップロードして、ユーザーが **[ツール]**  >  **[拡張機能と更新プログラム]** ダイアログで検索できるようにすることもできます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio の他の部分を拡張する](../extensibility/extending-other-parts-of-visual-studio.md)
-- [WPF ツールボックスコントロールの作成](../extensibility/creating-a-wpf-toolbox-control.md)
+- [WPF ツールボックス コントロールの作成](../extensibility/creating-a-wpf-toolbox-control.md)
 - [Visual Studio の他の部分を拡張する](../extensibility/extending-other-parts-of-visual-studio.md)
-- [Windows フォームコントロールの開発の基礎](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)
+- [Windows フォーム コントロール開発の基本概念](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)

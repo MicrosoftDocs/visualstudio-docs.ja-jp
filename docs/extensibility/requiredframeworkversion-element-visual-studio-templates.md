@@ -17,17 +17,17 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 661e4067ac0191444be8ec7f1136f805ea8b39b5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068454"
 ---
 # <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion 要素 (Visual Studio テンプレート)
 
-テンプレートに必要な .NET Framework の最小バージョンを指定します。 これにより、[**新しいプロジェクト**] ダイアログに [**ターゲットフレームワークのバージョン**] ドロップダウンが表示されます。 また、要素は、 `RequiredFrameworkVersion` ドロップダウンリストで使用できる最小値を決定します。
+テンプレートに必要な .NET Framework の最小バージョンを指定します。 これにより、 **[新しいプロジェクト]** ダイアログに **[ターゲット フレームワーク バージョン]** ドロップダウンが表示されます。 また、`RequiredFrameworkVersion` 要素によって、このドロップダウンで使用可能な最小値も決定されます。
 
 > [!IMPORTANT]
-> Visual Studio 2017 バージョン15.6 以降では、[**新しいプロジェクト**] ダイアログの [**テンプレート**] セクションに表示されるテンプレートの [**ターゲットフレームワークのバージョン**] ボックスの一覧が表示されなくなりました。 代わりに、ドロップダウンリストは、選択したテンプレートのフレームワークの選択として機能します。
+> Visual Studio 2017 バージョン 15.6 から、 **[ターゲット フレームワーク バージョン]** ドロップダウンは、 **[新しいプロジェクト]** ダイアログの **[テンプレート]** セクションに表示されているテンプレートのためのフィルターではなくなりました。 代わりに、このドロップダウンは、選択されているテンプレートのフレームワーク ピッカーとして機能します。
 
  \<VSTemplate> \<TemplateData>
  \<RequiredFrameworkVersion>
@@ -51,20 +51,20 @@ ms.locfileid: "105068454"
 
 |要素|説明|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、 **新しいプロジェクト** または [ **新しい項目の追加** ] ダイアログボックスでの表示方法を定義します。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類し、それが **[新しいプロジェクト]** または **[新しい項目の追加]** ダイアログ ボックスのどちらかにどのように表示されるかを定義します。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
  このテキストは、テンプレートに必要な .NET Framework の最小バージョン番号である必要があります。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-`RequiredFrameworkVersion` は省略可能な要素です。 この要素は、テンプレートが .NET Framework の特定の最小バージョン (およびそれ以降のバージョン) をサポートしている場合にのみ使用します。 要素を指定し、 `RequiredFrameworkVersion` テンプレートが特定の最小バージョンの .NET Framework をサポートしていない場合、[ **ターゲットフレームワークのバージョン** ] ドロップダウンは適用できないときに表示されます。
+`RequiredFrameworkVersion` は省略可能な要素です。 この要素は、テンプレートで .NET Framework の特定の最小バージョン (および、存在する場合はそれ以降のバージョン) をサポートしている場合にのみ使用します。 `RequiredFrameworkVersion` 要素を指定しても、テンプレートで .NET Framework の特定の最小バージョンをサポートしていない場合、 **[ターゲット フレームワーク バージョン]** ドロップダウンには、それがいつ適用不可であるかが表示されます。
 
 ## <a name="example"></a>例
 
-次の例は、標準クラステンプレートのメタデータを示してい [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ます。
+標準の [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラス テンプレートのメタデータの例を次に示します。
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -84,7 +84,7 @@ ms.locfileid: "105068454"
 </VSTemplate>
 ```
 
-この例では、テンプレートで必要とされる .NET Framework の最小バージョン `RequiredFrameworkVersion` は3.0 です。 このテンプレートを使用して作成されたプロジェクトは、3.0 以降のバージョンを対象に .NET Framework ことができます。
+この例では、テンプレートに必要な .NET Framework の最小バージョン (`RequiredFrameworkVersion` で表されます) は 3.0 です。 このテンプレートで作成されたプロジェクトは、3.0 以降の .NET Framework バージョンを対象とすることができます。
 
 ## <a name="see-also"></a>関連項目
 

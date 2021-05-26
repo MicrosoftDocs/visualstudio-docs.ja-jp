@@ -1,6 +1,6 @@
 ---
 description: この関数は、ソース管理から現在開いているプロジェクトにファイルの一覧を追加します。
-title: SccAddFilesFromSCC 関数 |Microsoft Docs
+title: SccAddFilesFromSCC 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,7 +15,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 056e918642e75bbd74c310499544cb2500428646
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105060472"
@@ -42,50 +42,50 @@ SCCRTN SccAddFilesFromSCC(
 ### <a name="parameters"></a>パラメーター
  pContext
 
-からソース管理プラグインのコンテキストポインター。
+[入力] ソース管理プラグインのコンテキスト ポインター。
 
  hWnd
 
-からソース管理プラグインが提供するすべてのダイアログボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] ソース管理プラグインが、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
 
  lpUser
 
-[入力、出力]ユーザー名 (null 終端文字を含む SCC_USER_SIZE まで)。
+[入力、出力] ユーザー名 (null 終端文字を含め、最大 SCC_USER_SIZE 文字)。
 
  lpAuxProjPath
 
-[入力、出力]プロジェクトを識別する補助文字列 ( `SCC_PRJPATH_` null 終端文字を含む、最大サイズまで)。
+[入力、出力] プロジェクトを識別する補助文字列 (null 終端文字を含め、最大 `SCC_PRJPATH_`SIZE 文字)。
 
  cFiles
 
-からによって指定されたファイルの数 `lpFilePaths` 。
+[入力] `lpFilePaths` によって指定されたファイルの数。
 
  lpFilePaths
 
-[入力、出力]現在のプロジェクトに追加するファイル名の配列。
+[入力、出力] 現在のプロジェクトに追加するファイル名の配列。
 
  lpDestination
 
-からファイルの書き込み先のパス。
+[入力] ファイルの書き込み先のパス。
 
  lpComment
 
-から追加する各ファイルに適用されるコメント。
+[入力] 追加する各ファイルに適用されるコメント。
 
  pbResults
 
-[入力、出力]各ファイルに対して成功 (0 以外または TRUE) または失敗 (0 または FALSE) を示すフラグの配列 (配列のサイズは、少なくとも long である必要があり `cFiles` ます)。
+[入力、出力] 各ファイルに対して成功 (0 以外または TRUE) または失敗 (0 または FALSE) を示すフラグの配列 (配列のサイズは、少なくとも `cFiles` 以上の長さである必要があります)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|プロジェクトが開いていません。|
-|SCC_E_OPNOTPERFORMED|接続は、によって指定されたプロジェクトと同じではありません `lpAuxProjPath.`|
+|SCC_E_OPNOTPERFORMED|接続は、`lpAuxProjPath.` によって指定されたプロジェクトと同じではありません|
 |SCC_E_NOTAUTHORIZED|ユーザーには、データベースを更新する権限がありません。|
 |SCC_E_NONSPECIFICERROR|不明なエラー。|
 |SCC_I_RELOADFILE|ファイルまたはプロジェクトを再度読み込む必要があります。|
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>関連項目
+- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)

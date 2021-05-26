@@ -1,7 +1,7 @@
 ---
 title: SupportsLanguageDropDown 要素 (Visual Studio テンプレート)
 titleSuffix: ''
-description: SupportsLanguageDropDown 要素について、および Web 項目テンプレートが複数の言語で同一であるかどうか、および言語オプションが有効になっているかどうかをどのように指定するかについて説明します。
+description: SupportsLanguageDropDown 要素と、Web の項目テンプレートを複数の言語で同一にするかどうか、および言語オプションを有効にするかどうかをその要素で指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,14 +19,14 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 67bf92c8c447faac2969bde3f208823158663712
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056078"
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 要素 (Visual Studio テンプレート)
 
-Web 項目テンプレートが複数の言語で同一であるかどうか、および [**新しい項目の追加**] ダイアログボックスで [**言語**] オプションが有効になっているかどうかを指定します。
+Web の項目テンプレートを複数の言語で同一にするかどうか、および **[言語]** オプションを **[新しい項目の追加]** ダイアログ ボックスで有効にするかどうかを指定します。
 
  \<VSTemplate> \<TemplateData>
  \<SupportsLanguageDropDown>
@@ -59,19 +59,19 @@ Web 項目テンプレートが複数の言語で同一であるかどうか、�
 
  テキスト値が必要です。
 
- テキストはまたはのいずれかである必要があり `true` `false` ます。 [**新しい項目の追加**] ダイアログボックスで [**言語**] オプションを使用できるかどうかを示します。
+ テキストには、 **[言語]** オプションを **[新しい項目の追加]** ダイアログ ボックスで使用できるようにするかどうかを示す、`true` または `false` のどちらかを指定する必要があります。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
  `SupportsLanguageDropDown` は省略可能な要素です。 既定値は `false` です。
 
- `SupportsLanguageDropDown`要素は、Web 項目テンプレートでのみ使用できます。
+ `SupportsLanguageDropDown` 要素は、Web の項目テンプレートにのみ使用できます。
 
- この要素の値がに設定されている場合、 `true` すべてのプログラミング言語で項目テンプレートが同じになり、[**新しい項目の追加**] ダイアログボックスで [**言語**] オプションが有効になります。 このオプションを使用すると、テンプレートから作成する新しい項目のプログラミング言語を選択できます。
+ この要素の値が `true` に設定されている場合は、項目テンプレートがすべてのプログラミング言語で同一になり、 **[言語]** オプションが **[新しい項目の追加]** ダイアログ ボックスで有効になります。 このオプションを使用すると、テンプレートから作成する新しい項目のプログラミング言語を選択できます。
 
 ## <a name="example"></a>例
 
- 次の例では、 **言語** ドロップダウンオプションを表示するように指定します。
+ 次の例では、 **[言語]** ドロップダウン オプションが表示されるように指定します。
 
 ```xml
 <VSTemplate Version="3.0.0" Type="Project"
@@ -95,7 +95,7 @@ Web 項目テンプレートが複数の言語で同一であるかどうか、�
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

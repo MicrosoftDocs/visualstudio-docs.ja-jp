@@ -1,6 +1,6 @@
 ---
 description: この関数は、プロジェクトを閉じて、特定のセッションの終了をマークします。
-title: SccCloseProject 関数 |Microsoft Docs
+title: SccCloseProject 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,7 +15,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 05dbf0552242bdc1a21ec6dd81a592711f50f391
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085638"
@@ -32,22 +32,22 @@ SCCRTN SccCloseProject (
 ```
 
 ### <a name="parameters"></a>パラメーター
- pvContext ソース管理プラグインのコンテキスト構造。
+ pvContext: ソース管理プラグインのコンテキスト構造体。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
-|SCC_OK|プロジェクトは正常に終了しました。|
+|SCC_OK|プロジェクトが正常に閉じられました。|
 |SCC_E_PROJNOTOPEN|現在開いているプロジェクトはありません。|
-|SCC_E_NOTAUTHORIZED|ユーザーはこの操作を実行できません。|
+|SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。|
 
-## <a name="remarks"></a>注釈
- [Sccopenproject](../extensibility/sccopenproject-function.md)は、この関数の前に常に呼び出されます。 その後、この関数の呼び出しの後に、 `SccOpenProject` 関数または [Sccuninitialize](../extensibility/sccuninitialize-function.md)解除の呼び出しが行われます。これにより、ソース管理システムへの接続が完全に終了します。
+## <a name="remarks"></a>解説
+ この関数の前に常に [SccOpenProject](../extensibility/sccopenproject-function.md) が呼び出されます。 この関数の呼び出しの後に、`SccOpenProject` 関数または [SccUninitialize](../extensibility/sccuninitialize-function.md) の呼び出しが行われます。これにより、ソース管理システムへの接続が完全に終了します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>関連項目
+- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [SccOpenProject](../extensibility/sccopenproject-function.md)
 - [SccInitialize](../extensibility/sccinitialize-function.md)

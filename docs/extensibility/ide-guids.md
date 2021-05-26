@@ -1,6 +1,6 @@
 ---
-title: IDE Guid |Microsoft Docs
-description: VSConstants クラスは、IDE の一部の Guid のセットを公開します。 この記事では、Guid の一覧を示します。
+title: IDE GUID | Microsoft Docs
+description: VSConstants クラスでは、IDE の一部の GUID を公開します。 この記事では、GUID の一覧を示します。
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: conceptual
@@ -15,16 +15,16 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 6351ea576c8976bd12fe206d8c4dbbe5f34a72d8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105069856"
 ---
 # <a name="ide-guids"></a>IDE GUIDs
 
-クラスは、 <xref:Microsoft.VisualStudio.VSConstants> 次の表に示すように、統合開発環境 (IDE) の一部の部分の guid を発行します。
+<xref:Microsoft.VisualStudio.VSConstants> クラスでは、次の表に示すように、統合開発環境 (IDE) の一部について GUID を公開します。
 
-## <a name="core-systems"></a>コアシステム
+## <a name="core-systems"></a>コア システム
 
 |定数|GUID|
 |--------------|----------|
@@ -37,7 +37,7 @@ ms.locfileid: "105069856"
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.HtmlEditor_guid>|C76D83F8-A489-11D0-8195-00A0C91BBEE3|
 |<xref:Microsoft.VisualStudio.VSConstants.VsEditorFactoryGuid.TextEditor_guid>|8B382828-6202-11d1-8870-0000F87579D2|
 
-## <a name="broadly-visible-components"></a>広範に見えるコンポーネント
+## <a name="broadly-visible-components"></a>広範な可視コンポーネント
 
 |定数|GUID|
 |--------------|----------|
@@ -82,7 +82,7 @@ ms.locfileid: "105069856"
 |<xref:Microsoft.VisualStudio.VSConstants.OutputWindowPaneGuid.StoreValidationPane_guid>|54065C74-1B11-4249-9EA7-5540D1A6D528|
 |Microsoft.VisualStudio.VSConstants.SID_SVsGeneralOutputWindowPane|65482c72-defa-41b7-902c-11c091889c83|
 
-## <a name="command-sets-and-properties"></a>コマンドセットとプロパティ
+## <a name="command-sets-and-properties"></a>コマンド セットとプロパティ
 
 |定数|GUID|
 |--------------|----------|
@@ -95,7 +95,7 @@ ms.locfileid: "105069856"
 |--------------|----------|
 |<xref:Microsoft.VisualStudio.VSConstants.IID_IUnknown>|00000000-0000-0000-C000-000000000046|
 
-## <a name="task-list-guids"></a>タスク一覧の Guid
+## <a name="task-list-guids"></a>タスク一覧の GUID
 
 |定数|GUID|
 |--------------|----------|
@@ -111,7 +111,7 @@ ms.locfileid: "105069856"
 |<xref:Microsoft.VisualStudio.VSConstants.CLSID.VsTaskList_guid>|BC5955D5-aa0d-11d0-a8c5-00a0c921a4d2|
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsTaskListPackage_guid>|4A9B7E50-aa16-11d0-a8c5-00a0c921a4d2|
 
-## <a name="component-selector-page-guids"></a>コンポーネントセレクターページ Guid
+## <a name="component-selector-page-guids"></a>コンポーネント セレクター ページの GUID
 
 |定数|GUID|
 |---------------|----------|
@@ -119,7 +119,7 @@ ms.locfileid: "105069856"
 |Microsoft.VisualStudio.VSConstants.GUID_COMPlusPage|9A341D95-5A64-11d3-BFF9-00C04F990235|
 |Microsoft.VisualStudio.VSConstants.GUID_SolutionPage|9A341D97-5A64-11d3-BFF9-00C04F990235|
 
-## <a name="miscellaneous-shell-guids"></a>その他のシェル Guid
+## <a name="miscellaneous-shell-guids"></a>その他のシェルの GUID
 
 |定数|GUID|
 |---------------|----------|
@@ -127,8 +127,8 @@ ms.locfileid: "105069856"
 |<xref:Microsoft.VisualStudio.VSConstants.VsPackageGuid.VsDocOutlinePackage_guid>|21af45b0-ffa5-11d0-b63f-00a0c922e851|
 |Microsoft.VisualStudio.VSConstants.SID_SVsToolboxActiveXDataProvider|35222106-bb44-11d0-8c46-00c04fc2aae2|
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [マネージコードの COM 定数](../extensibility/com-constants-in-managed-code.md)
+- [マネージド コードの COM 定数](../extensibility/com-constants-in-managed-code.md)
 - [IDE 定数](../extensibility/ide-constants.md)
-- [プロジェクト s の ems を拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)
+- [プロジェクト システムを拡張するための IDE 定義コマンド](../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)

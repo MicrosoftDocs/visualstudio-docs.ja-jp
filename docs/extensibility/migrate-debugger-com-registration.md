@@ -1,6 +1,6 @@
 ---
-title: 64ビットデバッガー COM クラス登録の移行 |Microsoft Docs
-description: HKEY_CLASSES_ROOT に書き込むことなくデバッガー拡張のために COM クラスを msvsmon に登録する方法について説明します。
+title: 64 ビット デバッガー COM クラス登録の移行 | Microsoft Docs
+description: HKEY_CLASSES_ROOT に書き込むことなく、デバッガー拡張のために COM クラスを msvsmon に登録する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/10/2016
 ms.topic: conceptual
@@ -12,22 +12,22 @@ ms.workload:
 - greggm
 ms.openlocfilehash: adc1db57de2167ff3caa0e87e1075c8ff5b462e4
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99886718"
 ---
-# <a name="migrate-64-bit-debugger-com-class-registration"></a>64ビットデバッガーの COM クラス登録の移行
+# <a name="migrate-64-bit-debugger-com-class-registration"></a>64 ビット デバッガー COM クラス登録の移行
 
-Regasm、regsvr32、またはレジストリへの直接書き込みを使用して HKEY_CLASSES_ROOT に COM クラスを登録し、 *msvsmon.exe* (リモートデバッガー) に読み込むデバッガー拡張機能の場合、HKEY_CLASSES_ROOT に書き込むことなく、msvsmon にこの登録を行うことができるようになりました。 これは、 *msvsmon.exe* プロセスに読み込むように構成されているレガシ .net デバッガー式エバリュエーターまたはデバッグエンジンに影響します。
+regasm や regsvr32 を使用するか、レジストリに直接書き込んで *msvsmon.exe* (リモート デバッガー) に読み込むことで HKEY_CLASSES_ROOT に COM クラスを登録するデバッガー拡張機能の場合、HKEY_CLASSES_ROOT に書き込むことなく、msvsmon にこの登録を行うことができるようになりました。 これは、*msvsmon.exe* プロセスに読み込むように構成されているレガシ .NET デバッガー式エバリュエーターまたはデバッグ エンジンに影響します。
 
 ## <a name="msvsmon-comclass-def"></a>msvsmon-comclass-def
 
-この手法を使用するには、msvsmon (InstallDir: \Common7\IDE\Remote Debugger\x64 *) の横にある *ファイル *に.msvsmon-comclass-def.js** を追加します。
+この手法を使用するには、**.msvsmon-comclass-def.json* ファイルを msvsmon (InstallDir:* \Common7\IDE\Remote Debugger\x64*) の隣に追加します。
 
-次に、1つのマネージクラスと1つのネイティブクラスを登録する msvsmon クラス def ファイルの例を示します。
+次に、1 つのマネージド クラスと 1 つのネイティブ クラスを登録する msvsmon-comclass-def ファイルの例を示します。
 
-ファイル名: *MyCompany.MyExample.msvsmon-comclass-def.js*
+ファイル名: *MyCompany.MyExample.msvsmon-comclass-def.json*
 
 ```json
 {

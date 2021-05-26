@@ -1,6 +1,6 @@
 ---
-title: ProjectItem 要素 (Visual Studio プロジェクトテンプレート) |Microsoft Docs
-description: プロジェクトテンプレートの ProjectItem 要素と、テンプレートがプロジェクトと項目のどちらであるかに応じて異なる属性を受け入れる方法について説明します。
+title: ProjectItem 要素 (Visual Studio プロジェクト テンプレート) | Microsoft Docs
+description: プロジェクト テンプレートの ProjectItem 要素と、それを使用して、そのテンプレートがプロジェクトまたは項目のどちらのものであるかに応じて異なる属性を受け付ける方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,16 +18,16 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: bb7513a37f73bfd4dfc1cb8060c772d375a57329
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068740"
 ---
-# <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 要素 (Visual Studio プロジェクトテンプレート)
-プロジェクトテンプレートに含まれるファイルを指定します。
+# <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 要素 (Visual Studio プロジェクト テンプレート)
+プロジェクト テンプレートに含まれているファイルを指定します。
 
 > [!NOTE]
-> 要素は、 `ProjectItem` テンプレートがプロジェクトと項目のどちらであるかに応じて、異なる属性を受け取ります。 このトピックでは、プロジェクトテンプレートの要素について説明し `ProjectItem` ます。 `ProjectItem`項目テンプレートの要素の説明については、「 [ProjectItem 要素 (Visual Studio 項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)」を参照してください。
+> `ProjectItem` 要素は、そのテンプレートがプロジェクトまたは項目のどちらのものであるかに応じて異なる属性を受け付けます。 このトピックでは、プロジェクト テンプレートの `ProjectItem` 要素について説明します。 項目テンプレートの `ProjectItem` 要素の説明については、「[ProjectItem 要素 (Visual Studio 項目テンプレート)](../extensibility/projectitem-element-visual-studio-item-templates.md)」を参照してください。
 
  \<VSTemplate> \<TemplateContent>
  \<Project>
@@ -54,12 +54,12 @@ ms.locfileid: "105068740"
 
 | 属性 | 説明 |
 |---------------------| - |
-| `TargetFileName` | 省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されるときのプロジェクト項目の名前とパスを指定します。 この属性は、テンプレート *.zip* ファイルのディレクトリ構造とは異なるディレクトリ構造を作成したり、パラメーター置換を使用して項目名を作成したりする場合に便利です。 |
-| `ReplaceParameters` | 省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されたときに置き換える必要があるパラメーター値が項目にあるかどうかを指定するブール値。 既定値は `false` です。 |
-| `OpenInEditor` | 省略可能な属性です。<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]プロジェクトがテンプレートから作成されたときに、内のそれぞれのエディターで項目を開くかどうかを指定するブール値。<br /><br /> `OpenInWebBrowser`属性と `OpenInHelpBrowser` 属性は、値がの項目では無視され `OpenInEditor` `true` ます。<br /><br /> 既定値は `false` です。 |
-| `OpenInWebBrowser` | 省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されたときに、その項目を Web ブラウザーで開くかどうかを指定するブール値。<br /><br /> Web ブラウザーで開くことができるのは、プロジェクトに対してローカルな HTML ファイルとテキストファイルだけです。 この属性では外部 Url を開くことができません。<br /><br /> 既定値は `false` です。 |
-| `OpenInHelpBrowser` | 省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されたときに、その項目をヘルプビューアーで開くかどうかを指定するブール値。<br /><br /> ヘルプブラウザーで開くことができるのは、プロジェクトに対してローカルな HTML ファイルとテキストファイルだけです。 この属性では外部 Url を開くことができません。<br /><br /> 既定値は `false` です。 |
-| `OpenOrder` | 省略可能な属性です。<br /><br /> 各エディターで項目が開かれる順序を表す数値を指定します。 すべての値は、10の倍数である必要があります。 `OpenOrder`値が大きい項目が最初に開かれます。 |
+| `TargetFileName` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるときのプロジェクト項目の名前とパスを指定します。 この属性は、テンプレート *.zip* ファイル内のディレクトリ構造とは異なるディレクトリ構造を作成したり、パラメーター置換を使用して項目名を作成したりするために役立ちます。 |
+| `ReplaceParameters` | 省略可能な属性です。<br /><br /> この項目に、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーター値が含まれているかどうかを指定するブール値。 既定値は `false` です。 |
+| `OpenInEditor` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるときに、この項目を [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のそれに対応するエディターで開く必要があるかどうかを指定するブール値。<br /><br /> `true` の `OpenInEditor` 値を持つ項目では、`OpenInWebBrowser` と `OpenInHelpBrowser` の属性は無視されます。<br /><br /> 既定値は `false` です。 |
+| `OpenInWebBrowser` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるときに、この項目を Web ブラウザーで開く必要があるかどうかを指定するブール値。<br /><br /> Web ブラウザーで開くことができるのは、プロジェクトに対してローカルな HTML ファイルとテキスト ファイルだけです。 この属性で外部 URL を開くことはできません。<br /><br /> 既定値は `false` です。 |
+| `OpenInHelpBrowser` | 省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるときに、この項目をヘルプ ビューアーで開く必要があるかどうかを指定するブール値。<br /><br /> ヘルプ ブラウザーで開くことができるのは、プロジェクトに対してローカルな HTML ファイルとテキスト ファイルだけです。 この属性で外部 URL を開くことはできません。<br /><br /> 既定値は `false` です。 |
+| `OpenOrder` | 省略可能な属性です。<br /><br /> 項目がそれに対応するエディターで開かれる順序を表す数値を指定します。 すべての値が 10 の倍数である必要があります。 より大きな `OpenOrder` 値を持つ項目が最初に開かれます。 |
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -73,44 +73,44 @@ ms.locfileid: "105068740"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- `string`テンプレート *.zip* ファイル内のファイルの名前またはパスを表す。
+ テンプレート *.zip* ファイル内のファイルの名前またはパスを表す `string`。
 
-## <a name="remarks"></a>注釈
- `ProjectItem` は、の省略可能な子です `Project` 。
+## <a name="remarks"></a>解説
+ `ProjectItem` は、`Project` の省略可能な子です。
 
- 属性を使用して、 `TargetFileName` テンプレートの *.zip* ファイル内のディレクトリ構造とは異なるディレクトリ構造を作成できます。 たとえば、 *myfile.txt* ファイルがテンプレート *.zip* ファイルのルートに存在するものの、テンプレートから作成されたすべてのプロジェクトの *customfiles* という名前のディレクトリにファイルを配置する場合は、次の XML を使用します。
+ `TargetFileName` 属性を使用すると、テンプレート *.zip* ファイル内のディレクトリ構造とは異なるディレクトリ構造を作成できます。 たとえば、ファイル *MyFile.vb* はテンプレート *.zip* ファイルのルートに存在するが、そのファイルを、テンプレートから作成されたすべてのプロジェクトで *CustomFiles* という名前のディレクトリに配置したい場合は、次の XML を使用します。
 
 ```xml
 <ProjectItem TargetFileName="CustomFiles\MyFile.vb">MyFile.vb</ProjectItem>
 ```
 
- 属性を使用して、 `TargetFileName` ファイル名に国際的な文字を含むファイルの名前を変更することもできます。 たとえば、テンプレートの *.zip* ファイルに Unicode 文字のファイル名を含めることはできません。そのため、 *.zip* ファイルに圧縮する前に、ファイルの名前を変更する必要があります。 属性を使用して、 `TargetFileName` ファイル名を元の Unicode ファイル名に戻すことができます。
+ また、`TargetFileName` 属性を使用して、ファイル名に国際文字が含まれているファイルの名前を変更することもできます。 たとえば、テンプレート *.zip* ファイルに Unicode 文字のファイル名を含めることはできないため、 *.zip* ファイルに圧縮するにはファイルの名前を変更しておく必要があります。 `TargetFileName` 属性を使用すると、ファイル名を元の Unicode のファイル名に戻すことができます。
 
- `TargetFileName`属性を使用して、パラメーターでファイルの名前を変更することもできます。 次の手順では、テンプレートの *.zip* ファイルのルートディレクトリに存在 *するファイル名* を、プロジェクト名に基づいてファイル名に変更する方法について説明します。
+ また、`TargetFileName` 属性を使用して、パラメーターでファイルの名前を変更することもできます。 次の手順では、テンプレート *.zip* ファイルのルート ディレクトリに存在するファイル *MyFile.vb* の名前を、プロジェクト名に基づいたファイル名に変更する方法について説明します。
 
-### <a name="to-rename-files-with-parameters"></a>パラメーターを使用してファイル名を変更するには
+### <a name="to-rename-files-with-parameters"></a>パラメーターでファイルの名前を変更するには
 
-1. *.Vstemplate* ファイルで次の XML を使用します。
+1. *.vstemplate* ファイルで次の XML を使用します。
 
    ```xml
    <ProjectItem TargetFileName="$safeprojectname$.vb">MyFile.vb</ProjectItem>
    ```
 
-2. テキストエディターまたはでプロジェクトファイル (プロジェクトの *.vbproj* ) を開き [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ます。
+2. テキスト エディターまたは [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] でプロジェクト ファイル ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] プロジェクトの場合は *.vbproj*) を開きます。
 
-3. プロジェクトファイル内の次の XML のような行を探します。
+3. 次の XML のようなプロジェクト ファイル内の行を見つけます。
 
    ```xml
    <Compile Include="MyFile.vb">
    ```
 
-4. コード行を次の XML に置き換えます。
+4. このコード行を次の XML に置き換えます。
 
    ```xml
    <Compile Include="$safeprojectname$.vb">
    ```
 
-    このテンプレートからプロジェクトを作成すると、[ **新しいプロジェクト** ] ダイアログボックスでユーザーが入力した名前に基づいて、安全でないすべての文字とスペースが削除されます。 詳細については、「 [テンプレートパラメーター](../ide/template-parameters.md)」を参照してください。
+    このテンプレートからプロジェクトが作成されたとき、そのファイル名は、 **[新しいプロジェクト]** ダイアログ ボックスでユーザーが入力した名前 (安全でない文字とスペースはすべて削除されます) に基づきます。 詳細については、「[テンプレート パラメーター](../ide/template-parameters.md)」を参照してください。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。

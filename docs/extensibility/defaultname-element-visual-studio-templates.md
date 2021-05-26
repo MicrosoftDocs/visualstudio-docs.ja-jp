@@ -1,6 +1,6 @@
 ---
-title: DefaultName 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: DefaultName 要素について、およびプロジェクトまたはアイテムの作成時に Visual Studio プロジェクトシステムによって生成される名前をどのように指定するかについて説明します。
+title: DefaultName 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: DefaultName 要素について、およびプロジェクトまたは項目の作成時にこれらに対して Visual Studio プロジェクト システムで生成される名前を指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c8b11655424086b65a1b4e2089e245f1e389b611
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091384"
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName 要素 (Visual Studio テンプレート)
-プロジェクトまたはアイテムの作成時に Visual Studio プロジェクトシステムによって生成される名前を指定します。
+プロジェクトまたは項目の作成時にこれらに対して Visual Studio プロジェクト システムで生成される名前を指定します。
 
  \<VSTemplate> \<TemplateData>
  \<DefaultName>
@@ -54,19 +54,19 @@ ms.locfileid: "105091384"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- このテキストは、プロジェクトまたはアイテムの既定の名前を指定します。
+ このテキストによって、プロジェクトまたは項目の既定の名前が指定されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `DefaultName` は省略可能な要素です。
 
- プロジェクトの場合、この要素は、プロジェクトをディスクに格納するディレクトリの名前を指定します。 項目の場合は、ソースファイルのファイル名を指定します。
+ プロジェクトの場合、この要素によって、ディスク上でプロジェクトを格納するディレクトリの名前が指定されます。 項目の場合、ソース ファイルのファイル名が指定されます。
 
- プロジェクトまたは項目を作成するときに、[ **名前** ] オプションを使用して既定の名前を変更できます。このオプションは、[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスから使用できます。
+ プロジェクトまたは項目を作成するときに、 **[名前]** オプションを使用して既定の名前を変更できます。このオプションは、 **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスのどちらかから利用できます。
 
- プロジェクトシステムでプロジェクトまたは項目の既定の名前を生成しないようにする場合 [は、[](../extensibility/providedefaultname-element-visual-studio-templates.md) 指定] をに設定し `False` ます。
+ プロジェクト システムでプロジェクトまたは項目既定の名前を生成させない場合は、[ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) 要素を `False` に設定します。
 
 ## <a name="example"></a>例
- 次の例は、クラスの標準項目テンプレートのメタデータを示してい [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ます。
+ 次の例では、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] クラスの標準的な項目テンプレートのメタデータを示します。
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"

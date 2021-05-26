@@ -1,6 +1,6 @@
 ---
 title: EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
-description: EnableLocationBrowseButton 要素について、および [新しいプロジェクト] ダイアログボックスで [参照] ボタンを使用できるかどうかをどのように指定するかについて説明します。
+description: EnableLocationBrowseButton 要素と、[新しいプロジェクト] ダイアログ ボックスで [参照] ボタンを使用できるかどうかを指定する方法について説明します。
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5bf5ec98fc71158d9ebe3b95ec9e3d49526cb491
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105061395"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 要素 (Visual Studio テンプレート)
-[**新しいプロジェクト**] ダイアログボックスで [**参照**] ボタンを使用できるようにするかどうかを指定します。これにより、新しいプロジェクトを保存する既定のディレクトリをユーザーが簡単に変更できるようになります。
+**[新しいプロジェクト]** ダイアログ ボックスで **[参照]** ボタンを使用できるかどうかを指定します。これにより、新しいプロジェクトを保存する既定のディレクトリをユーザーが簡単に変更できるようになります。
 
  \<VSTemplate> \<TemplateData>
  \<EnableLocationBrowseButton>
@@ -53,12 +53,12 @@ ms.locfileid: "105061395"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストは、[ `true` `false` **新しいプロジェクト**] ダイアログボックスに [**参照**] ボタンを表示するかどうかを示す、またはのいずれかである必要があります。
+ このテキストは、 **[新しいプロジェクト]** ダイアログ ボックスに **[参照]** ボタンを表示するかどうかを示す `true` または `false` のいずれかである必要があります。
 
-## <a name="remarks"></a>注釈
- `EnableLocationBrowseButton` は省略可能な要素です。 既定値はで、[ `true` **新しいプロジェクト**] ダイアログボックスの [**参照**] ボタンが表示されます。
+## <a name="remarks"></a>解説
+ `EnableLocationBrowseButton` は省略可能な要素です。 既定値は、 **[新しいプロジェクト]** ダイアログ ボックスに **[参照]** ボタンを表示する `true` です。
 
- [ **新しいプロジェクト** ] ダイアログボックスの [ **場所** ] テキストボックスで、新しいプロジェクトを保存するディレクトリを指定します。 [ **参照** ] ボタンをクリックすると、[ **プロジェクトの場所** ] ダイアログボックスが表示され、このディレクトリを変更できます。このダイアログボックスでは、コンピューターから使用できる別のディレクトリに移動して、新しいプロジェクトを保存するディレクトリとして選択することができます。
+ **[新しいプロジェクト]** ダイアログ ボックスの **[場所]** テキスト ボックスでは、新しいプロジェクトを保存するディレクトリを指定します。 **[参照]** ボタンをクリックすると、このディレクトリを変更するのに役立つ **[プロジェクトの場所]** ダイアログ ボックスが表示されます。そこでは、コンピューターで使用できる別のディレクトリに移動して、それを新しいプロジェクトを保存するディレクトリとして選択できます。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーションでのメタデータの例を次に示します。

@@ -10,14 +10,14 @@ user.type: subscriber
 tags: sign-in
 subscription.type: retail
 sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: 39f74d1014f3cea75b0a7f5a85e17f3694b99370
-ms.sourcegitcommit: 60e5a8a7ee91854356797d05f3b502572c4a4884
+ms.openlocfilehash: cbbd449b89e441e756cc49f374c98e653f52706e
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96916171"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349823"
 ---
 ## <a name="how-to-change-your-sign-in-email-address-for-visual-studio-subscriptions-purchased-through-the-microsoft-store"></a>Microsoft Store で購入した Visual Studio のサブスクリプションの自分のサインイン メール アドレスを変更する方法
-自分の Visual Studio のサブスクリプションのサインインに使用するメール アドレスを変更する場合、自分のサブスクリプションが Microsoft Store で購入されているときは、Microsoft のアカウント、サブスクリプションおよび課金サポート チームに連絡し、自分のサインイン メール アドレスを変更してもらう必要があります。 
+自分の Visual Studio のサブスクリプションのサインインに使用するメール アドレスを変更する場合、自分のサブスクリプションが Microsoft Store で購入されているときは、Microsoft のアカウント、サブスクリプションおよび課金サポート チームに連絡し、自分のサインイン メールを変更してもらう必要があります。 
 
-ヘルプを依頼するには、[サポート チケットを作成します] をクリックします。
+ヘルプを依頼するには、[オンライン要求] をクリックします。

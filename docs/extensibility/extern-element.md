@@ -1,6 +1,6 @@
 ---
-title: Extern 要素 |Microsoft Docs
-description: Extern 要素は、コンパイル時に、vsct ファイルとマージする外部ヘッダー (.h) ファイルを参照します。
+title: Extern 要素 | Microsoft Docs
+description: Extern 要素は、コンパイル時に、.vsct ファイルとマージする外部ヘッダー (.h) ファイルを参照します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,15 +17,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5771dbc1c6b17b0f488d42c30a036ff1d90a5a18
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105074991"
 ---
 # <a name="extern-element"></a>Extern 要素
-Extern 要素は、コンパイル時に、 *vsct* ファイルとマージする外部ヘッダー (*.h*) ファイルを参照します。 マージするファイルは、VSCT コンパイラに指定されたインクルードパスに存在するか、 [include 要素](../extensibility/include-element.md)によって参照されている必要があります。 ファイルは、他の *vsct* ファイルまたは C++ ヘッダーファイルにすることができます。
+Extern 要素は、コンパイル時に、 *.vsct* ファイルとマージする外部ヘッダー ( *.h*) ファイルを参照します。 マージするファイルは、VSCT コンパイラに提供されるインクルード パスに存在するか、[Include 要素](../extensibility/include-element.md)によって参照されている必要があります。 ファイルは、他の *.vsct* ファイルや C++ ヘッダー ファイルなどになります。
 
- ヘッダーファイル内の定義は、"#define [シンボル] [値]" の形式にする必要があります。以前に定義されている場合は、値が別のシンボルである可能性があります。 定義は、コマンド項目の条件付きステートメントで使用できます。 実際に使用されていないシンボルはすべて破棄されます。
+ ヘッダー ファイル内の定義は、"#define [Symbol] [Value]" の形式にする必要があります。値は以前に定義されている場合、別のシンボルになることがあります。 定義は、コマンド項目の条件付きステートメントで使用できます。 実際に使用されていないシンボルはすべて破棄されます。
 
  CommandTable 要素 Extern 要素
 
@@ -42,21 +42,21 @@ Extern 要素は、コンパイル時に、 *vsct* ファイルとマージす�
 
 |属性|説明|
 |---------------|-----------------|
-|href|必須。 ヘッダーファイルのパス:<br /><br /> href = "stdidcmd"|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
-|language|省略可能。 コマンドテーブル内のすべての要素の既定の言語 [\<Strings>](../extensibility/strings-element.md) :<br /><br /> language = "en-us"|
+|href|必須。 ヘッダー ファイルのパス:<br /><br /> href="stdidcmd.h"|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
+|language|省略可能。 コマンド テーブル内のすべての [\<Strings>](../extensibility/strings-element.md) 要素の既定の言語:<br /><br /> language="en-us"|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[なし] :|[なし] :|
+|[なし] :|なし。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage が IDE に提供するコマンド (メニュー項目、メニュー、ツールバー、およびコンボボックス) を表すすべての要素を定義します。|
+|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage によって IDE に提供されるコマンドを表すすべての要素 (つまり、メニュー項目、メニュー、ツールバー、およびコンボ ボックス) を定義します。|
 
 ## <a name="example"></a>例
 
@@ -71,6 +71,6 @@ Extern 要素は、コンパイル時に、 *vsct* ファイルとマージす�
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Visual Studio コマンドテーブル (vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

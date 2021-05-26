@@ -1,6 +1,6 @@
 ---
-title: '方法: 入れ子になったプロジェクトを実装する |Microsoft Docs'
-description: ソリューションおよび親プロジェクトからのイベントを発生させてプロジェクト階層を構築することにより、Visual Studio で入れ子になったプロジェクトを実装する方法について説明します。
+title: '方法: 入れ子になったプロジェクトの実装 |Microsoft Docs'
+description: Visual Studio で入れ子になったプロジェクトを実装する方法について説明します。それには、ソリューションおよび親プロジェクトからイベントを発生させて、プロジェクト階層を構築します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,81 +15,81 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 49f2e3b971c16b63f900424aa99649e424490d30
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105078865"
 ---
-# <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトを実装する
+# <a name="how-to-implement-nested-projects"></a>方法: 入れ子になったプロジェクトの実装
 
-入れ子になったプロジェクトの種類を作成する場合は、いくつかの追加の手順を実装する必要があります。 親プロジェクトは、その入れ子になった (子) プロジェクトに対してソリューションと同じ役割を担います。 親プロジェクトは、ソリューションに似たプロジェクトのコンテナーです。 特に、入れ子になったプロジェクトの階層を構築するために、ソリューションおよび親プロジェクトによって発生する必要があるいくつかのイベントがあります。 これらのイベントについては、入れ子になったプロジェクトを作成するための次のプロセスで説明します。
+入れ子になったプロジェクト タイプを作成する場合、追加の手順をいくつか実装する必要があります。 親プロジェクトは、ソリューションがその入れ子になった (子) プロジェクトに対して担うものと同じ役割を一部担います。 親プロジェクトは、ソリューションに似た、プロジェクトのコンテナーです。 特に、入れ子になったプロジェクトの階層を構築するために、ソリューションおよび親プロジェクトからいくつかのイベントを発生させる必要があります。 これらのイベントについては、入れ子になったプロジェクトを作成する次のプロセスで説明します。
 
 ## <a name="create-nested-projects"></a>入れ子になったプロジェクトの作成
 
-1. 統合開発環境 (IDE: integrated development environment) は、インターフェイスを呼び出すことによって、親プロジェクトのプロジェクトファイルとスタートアップ情報を読み込み <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> ます。 親プロジェクトが作成され、ソリューションに追加されます。
+1. 統合開発環境 (IDE) では、<xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> インターフェイスが呼び出されて、親プロジェクトのプロジェクト ファイルとスタートアップ情報が読み込まれます。 親 プロジェクトが作成され、ソリューションに追加されます。
 
     > [!NOTE]
-    > この時点では、子プロジェクトを作成する前に親プロジェクトを作成する必要があるため、親プロジェクトが入れ子になったプロジェクトを作成するプロセスは早すぎます。 このシーケンスに従うと、親プロジェクトは設定を子プロジェクトに適用でき、子プロジェクトは必要に応じて親プロジェクトから情報を取得できます。 このシーケンスは、ソースコード管理 (SCC) や **ソリューションエクスプローラー** などのクライアントによってで必要とされる場合にあります。
+    > 子プロジェクトを作成する前に親プロジェクトを作成する必要があるため、プロセスのこの時点では、親プロジェクトで入れ子になったプロジェクトを作成するのは早すぎます。 このシーケンスに従うことで、親プロジェクトでは設定を子プロジェクトに適用でき、子プロジェクトでは必要に応じて親プロジェクトから情報を取得できます。 このシーケンスは、ソースコード管理 (SCC) や **ソリューション エクスプローラー** などのクライアントによってそれが必要とされる場合を対象としています。
 
-     親プロジェクトは、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> 入れ子になった (子) プロジェクトまたはプロジェクトを作成する前に、IDE によってメソッドが呼び出されるまで待機する必要があります。
+     親プロジェクトでは、IDE によって <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> メソッドが呼び出されてから、入れ子になった (子) プロジェクト (複数可) を作成する必要があります。
 
-2. IDE は、 `QueryInterface` の親プロジェクトでを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject> ます。 この呼び出しが成功した場合、IDE は親のメソッドを呼び出して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> 親プロジェクトのすべての入れ子になったプロジェクトを開きます。
+2. IDE では、親プロジェクトで <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject> に対して `QueryInterface` が呼び出されます。 この呼び出しが成功した場合、IDE では親の <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> メソッドが呼び出され、親プロジェクトの入れ子になったプロジェクトがすべて開きます。
 
-3. 親プロジェクトはメソッドを呼び出し <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnBeforeOpeningChildren%2A> て、入れ子になったプロジェクトが作成されようとしていることをリスナーに通知します。 たとえば、SCC では、これらのイベントをリッスンして、ソリューションとプロジェクトの作成プロセスのステップが順番に実行されているかどうかを確認します。 順序が正しくない場合は、ソリューションがソースコード管理に正しく登録されていない可能性があります。
+3. 親プロジェクトでは <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnBeforeOpeningChildren%2A> メソッドが呼び出されて、入れ子になったプロジェクトが作成されようとしていることがリスナーに通知されます。 たとえば、SCC ではこれらのイベントがリッスンされ、ソリューションとプロジェクトの作成プロセスの手順が順番に実行されているかどうかが確認されます。 手順の順序が正しくない場合、ソリューションはソース コード管理に正しく登録されない可能性があります。
 
-4. 親プロジェクトは、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A> それぞれの子プロジェクトに対してメソッドまたはメソッドを呼び出します。
+4. 親プロジェクトでは、それぞれの子プロジェクトで <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProject%2A> メソッドまたは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AddVirtualProjectEx%2A> メソッドが呼び出されます。
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS>メソッドにを渡して、 `AddVirtualProject` 仮想 (入れ子になった) プロジェクトをプロジェクトウィンドウに追加し、ビルドから除外して、ソースコード管理に追加する必要があることを示します。 `VSADDVPFLAGS` 入れ子になったプロジェクトの表示を制御し、関連付けられている機能を示すことができます。
+     <xref:Microsoft.VisualStudio.Shell.Interop.__VSADDVPFLAGS> を `AddVirtualProject` メソッドに渡し、仮想 (入れ子になった) プロジェクトのプロジェクト ウィンドウへの追加、ビルドからの除外、ソースコード管理への追加などが必要であることを示します。 `VSADDVPFLAGS` では、入れ子になったプロジェクトの表示を制御し、関連付ける機能を示すことができます。
 
-     プロジェクト GUID が親プロジェクトのプロジェクトファイルに格納されている既存の子プロジェクトを再度読み込むと、親プロジェクトはを呼び出し `AddVirtualProjectEx` ます。 との唯一の違いは、にはパラメーターがあり、これを使用すると、 `AddVirtualProject` `AddVirtualProjectEX` `AddVirtualProjectEX` 親プロジェクトで子プロジェクトが有効になり、 `guidProjectID` <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A> 正常に機能するように、インスタンスごとにを指定できるようになり <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A> ます。
+     プロジェクト GUID が親プロジェクトのプロジェクト ファイルに格納されている既存の子プロジェクトを再読み込みすると、親プロジェクトによって `AddVirtualProjectEx` が呼び出されます。 `AddVirtualProject` と `AddVirtualProjectEX` の唯一の違いは、`AddVirtualProjectEX` には、親プロジェクトを有効化してインスタンスごとに `guidProjectID` を指定するためのパラメーターがあるという点です。このため、子プロジェクトでは <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfGuid%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProjectOfProjref%2A> を正しく機能するように有効化できます。
 
-     新しい入れ子になったプロジェクトを追加するときなど、使用可能な GUID がない場合、ソリューションは親に追加されたときにプロジェクト用にプロジェクトを作成します。 そのプロジェクトの GUID をプロジェクトファイルに保存するのは、親プロジェクトの役割です。 入れ子になったプロジェクトを削除すると、そのプロジェクトの GUID を削除することもできます。
+     入れ子になったプロジェクトを新しく追加するときなど、使用可能な GUID がない場合、ソリューションでは、プロジェクトが親に追加されたときに、それ専用のものが作成されます。 そのプロジェクトの GUID をプロジェクト ファイルに保持するのは、親プロジェクトの役割です。 入れ子になったプロジェクトを削除する場合、そのプロジェクトの GUID も削除することができます。
 
-5. IDE は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren> 親プロジェクトの各子プロジェクトでメソッドを呼び出します。
+5. IDE では、親プロジェクトのそれぞれの子プロジェクトで <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren> メソッドが呼び出されます。
 
-     プロジェクトを入れ子にする場合は、親プロジェクトでを実装する必要があり `IVsParentProject` ます。 ただし、親プロジェクト `QueryInterface` `IVsParentProject` がその下に親プロジェクトがある場合でも、親プロジェクトがを呼び出すことはありません。 ソリューションは、の呼び出しを処理し、 `IVsParentProject` 実装されている場合は、を呼び出して `OpenChildren` 入れ子になったプロジェクトを作成します。 `AddVirtualProjectEX` は常にから呼び出され `OpenChildren` ます。 階層作成イベントを順番に保持するために、親プロジェクトからは呼び出さないでください。
+     プロジェクトを入れ子にする場合は、親プロジェクトで `IVsParentProject` を実装する必要があります。 ただし、下に親プロジェクトがある場合でも、親プロジェクトでは `IVsParentProject` に対して `QueryInterface` が呼び出されることはありません。 ソリューションでは、`IVsParentProject` への呼び出しが処理され、実装されている場合には `OpenChildren` が呼び出されて、入れ子になったプロジェクトが作成されます。 `AddVirtualProjectEX` は常に `OpenChildren` から呼び出されます。 階層作成イベントの順番を保つため、これは親プロジェクトから呼び出さないでください。
 
-6. IDE は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> 子プロジェクトでメソッドを呼び出します。
+6. IDE では、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> メソッドは子プロジェクトで呼び出されます。
 
-7. 親プロジェクトは、メソッドを呼び出して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpeningChildren%2A> 親の子プロジェクトが作成されたことをリスナーに通知します。
+7. 親プロジェクトでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpeningChildren%2A> メソッドが呼び出されて、親の子プロジェクトが作成されたことがリスナーに通知されます。
 
-8. IDE は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpenProject%2A> すべての子プロジェクトが開かれた後に、親プロジェクトのメソッドを呼び出します。
+8. IDE では、すべての子プロジェクトが開いた後に、<xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents.FireOnAfterOpenProject%2A> メソッドが親プロジェクトで呼び出されます。
 
-     入れ子になっていない場合は、を呼び出すことによって、入れ子になった各プロジェクトの GUID が作成され `CoCreateGuid` ます。
-
-    > [!NOTE]
-    > `CoCreateGuid` は、GUID が作成されるときに呼び出される COM API です。 詳細については、MSDN ライブラリの「」および「Guid」を参照してください `CoCreateGuid` 。
-
-     親プロジェクトは、この GUID を IDE で次に開いたときに取得されるプロジェクトファイルに格納します。 を呼び出して `AddVirtualProjectEX` 子プロジェクトのを取得する方法の詳細については、手順4を参照してください `guidProjectID` 。
-
-9. 次に、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 規則によって、入れ子になったプロジェクトにデリゲートするときに、親 ItemID に対してメソッドが呼び出されます。 は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> 親で呼び出されるときに、デリゲートするプロジェクトを入れ子にするノードのプロパティを取得します。
-
-     親プロジェクトと子プロジェクトはプログラムによってインスタンス化されるため、この時点で入れ子になったプロジェクトのプロパティを設定できます。
+     存在しない場合、親プロジェクトでは `CoCreateGuid` が呼び出されて、入れ子になった各プロジェクトの GUID が作成されます。
 
     > [!NOTE]
-    > 入れ子になったプロジェクトからコンテキスト情報を受け取るだけでなく、__VSHPROPID をチェックすることによって、親プロジェクトにその項目のコンテキストがあるかどうかを確認することもでき [ます。VSHPROPID_UserContext](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_UserContext>)。 このようにして、入れ子になった個々のプロジェクトに固有の追加の動的なヘルプ属性とメニューオプションを追加できます。
+    > `CoCreateGuid` は、GUID の作成時に呼び出される COM API です。 詳細については、MSDN ライブラリの `CoCreateGuid` と GUID を参照してください。
 
-10. 階層は、メソッドを呼び出すことによって **ソリューションエクスプローラー** に表示するように構築されてい <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A> ます。
+     親プロジェクトでは、この GUID がプロジェクト ファイルに保存され、IDE で次にこれを開いたときに取得されます。 `AddVirtualProjectEX` を呼び出して子プロジェクトの `guidProjectID` を取得する際の詳細情報については、手順 4 を参照してください。
 
-     を使用して階層を環境に渡し、 `GetNestedHierarchy` ソリューションエクスプローラーに表示する階層を構築します。 この方法では、プロジェクトが存在し、ビルドマネージャーでビルドできるように管理できること、またはプロジェクト内のファイルをソースコード管理下に配置できることがソリューションによって認識されます。
+9. 次に、慣例では入れ子になったプロジェクトに委譲する親 ItemID に対して <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> メソッドが呼び出されます。 親で <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> が呼び出されるときに、委譲先のプロジェクトを入れ子にするノードのプロパティが取得されます。
 
-11. Project1 の入れ子になったすべてのプロジェクトが作成されると、コントロールがソリューションに戻され、プロセスが Project2 に対して繰り返されます。
+     親と子の各プロジェクトはプログラムによってインスタンス化されるため、この時点で入れ子になったプロジェクトのプロパティを設定できます。
 
-     入れ子になったプロジェクトを作成する場合も、子を持つ子プロジェクトに対して同じプロセスが実行されます。 この場合、Project1 の子である BuildProject1 には子プロジェクトがあったので、BuildProject1 と Project2 の前に作成されます。 プロセスは再帰的で、階層は上から順に構築されます。
+    > [!NOTE]
+    > 入れ子になったプロジェクトからコンテキスト情報を受け取るだけでなく、[__VSHPROPID.VSHPROPID_UserContext](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID.VSHPROPID_UserContext>) をチェックすることによって、親プロジェクトにその項目のコンテキストがあるかどうかも確認できます。 このようにして、入れ子になった個々のプロジェクトに固有の動的なヘルプ属性とメニュー オプションをさらに追加できます。
 
-     ユーザーがソリューションまたは特定のプロジェクト自体を閉じたために入れ子になったプロジェクトが閉じられると、のもう1つのメソッド `IVsParentProject` <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.CloseChildren%2A> が呼び出されます。 親プロジェクトは、メソッドの呼び出しをとメソッドでラップして、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.RemoveVirtualProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeClosingChildren%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterClosingChildren%2A> 入れ子になったプロジェクトが閉じられていることを示すソリューションイベントにリスナーに通知します。
+10. 階層は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A> メソッドを呼び出すことによって **ソリューション エクスプローラー** に表示されるように構築されます。
+
+     `GetNestedHierarchy` を使用して階層を環境に渡し、ソリューション エクスプローラーに表示する階層を構築します。 このようにして、プロジェクトが存在し、ビルド マネージャーで構築するためにそれを管理できること、またはプロジェクト内のファイルをソース コード管理下に配置できることがソリューションにおいて認識されます。
+
+11. Project1 の入れ子になったプロジェクトがすべて作成されると、コントロールがソリューションに戻され、Project2 でもそのプロセスが繰り返されます。
+
+     入れ子になったプロジェクトを作成するこのプロセスと同じプロセスが、子を持つ子プロジェクトについても実行されます。 このとき、Project1 の子である BuildProject1 に子プロジェクトがある場合は、BuildProject1 の後、Project2 の前に作成されます。 プロセスは再帰的で、階層は上から順に構築されます。
+
+     ユーザーがソリューションまたは特定のプロジェクト自体を閉じたために入れ子になったプロジェクトが閉じた場合、`IVsParentProject` のもう 1 つのメソッドである <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.CloseChildren%2A> が呼び出されます。 親プロジェクトでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.RemoveVirtualProject%2A> メソッドへの呼び出しが <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeClosingChildren%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterClosingChildren%2A> の各メソッドでラップされ、入れ子になったプロジェクトが閉じられていることがソリューション イベントのリスナーに通知されます。
 
 次のトピックでは、入れ子になったプロジェクトを実装する際に考慮する必要があるいくつかの概念について説明します。
 
-- [入れ子になったプロジェクトのアンロードと再読み込みに関する考慮事項](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
-- [入れ子になったプロジェクトに対するウィザードのサポート](../../extensibility/internals/wizard-support-for-nested-projects.md)
-- [入れ子になったプロジェクトのコマンド処理を実装する](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
-- [入れ子になったプロジェクトの [AddItem] ダイアログボックスをフィルター処理する](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
+- [入れ子になったプロジェクトのアンロードと再ロードに関する考慮事項](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
+- [入れ子になったプロジェクト向けのウィザード サポート](../../extensibility/internals/wizard-support-for-nested-projects.md)
+- [入れ子になったプロジェクト向けのコマンド処理の実装](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)に関するページ
+- [入れ子になったプロジェクトの [AddItem] ダイアログ ボックスをフィルター処理する](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [[新しい項目の追加] ダイアログボックスへの項目の追加](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
+- [[新しい項目の追加] ダイアログ ボックスへの項目の追加](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 - [プロジェクトと項目テンプレートの登録](../../extensibility/internals/registering-project-and-item-templates.md)
-- [チェックリスト: 新しいプロジェクトの種類を作成する](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [チェックリスト: 新しいプロジェクト タイプの作成](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)
-- [ウィザード (.vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)
+- [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

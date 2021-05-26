@@ -1,6 +1,6 @@
 ---
 description: この関数は、指定されたファイルのリストを列挙し、コールバック関数を介して各ファイルの名前変更に関する情報を提供します。
-title: SccQueryChanges 関数 |Microsoft Docs
+title: SccQueryChanges 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,7 +15,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c821453642a3632c98fac153a367e8ba41495adc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073938"
@@ -38,38 +38,38 @@ SCCRTN SccQueryChanges(
 #### <a name="parameters"></a>パラメーター
  pContext
 
-からソース管理プラグインのコンテキストポインター。
+[入力] ソース管理プラグインのコンテキスト ポインター。
 
  nFiles
 
-から配列内のファイルの数 `lpFileNames` 。
+[入力] `lpFileNames` 配列内のファイルの数。
 
- lpFileNames 名
+ lpFileNames
 
-から情報を取得するファイル名の配列。
+[入力] 情報を取得するファイル名の配列。
 
  pfnCallback
 
-からリスト内の各ファイル名に対して呼び出すコールバック関数 (詳細については、「 [queryの](../extensibility/querychangesfunc.md) 内容」を参照してください)。
+[入力] リスト内の各ファイル名に対して呼び出すコールバック関数 (詳細については、「[QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)」を参照してください)。
 
  pvCallerData
 
-からコールバック関数に変更されずに渡される値。
+[入力] 変更されずにコールバック関数に渡される値。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|クエリ処理が正常に完了しました。|
 |SCC_E_PROJNOTOPEN|プロジェクトがソース管理で開かれていません。|
-|SCC_E_ACCESSFAILURE|ネットワークまたは競合の問題が原因で、ソース管理システムへのアクセスで問題が発生しました。|
-|SCC_E_NONSPECIFICERROR|指定されていないか、一般的なエラーが発生しました。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。|
+|SCC_E_NONSPECIFICERROR|指定されていないエラーまたは一般的なエラーが発生しました。|
 
-## <a name="remarks"></a>注釈
- に対して照会される変更は、名前空間に対して行われます。具体的には、ファイルの名前変更、追加、および削除です。
+## <a name="remarks"></a>解説
+ クエリされる変更は名前空間に対するもので、具体的にはファイルの名前変更、追加、および削除です。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md)
 - [エラー コード](../extensibility/error-codes.md)

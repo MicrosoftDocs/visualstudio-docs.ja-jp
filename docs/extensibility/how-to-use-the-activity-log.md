@@ -1,6 +1,6 @@
 ---
-title: '方法: アクティビティログを使用する |Microsoft Docs'
-description: Vspackage は、アクティビティログにメッセージを書き込むことができます。 リテール環境で Vspackage をデバッグするためにアクティビティログを使用する方法について説明します。
+title: '方法: アクティビティ ログを使用する | Microsoft Docs'
+description: VSPackage では、アクティビティ ログにメッセージを書き込むことができます。 リテール環境で VSPackage をデバッグするためにアクティビティ ログを使用する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,20 +15,20 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: f02a8dd1497680239db9363a2e0682082f0c68d8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057339"
 ---
-# <a name="how-to-use-the-activity-log"></a>方法: アクティビティログを使用する
-Vspackage は、アクティビティログにメッセージを書き込むことができます。 この機能は、小売環境で Vspackage をデバッグする場合に特に便利です。
+# <a name="how-to-use-the-activity-log"></a>方法: アクティビティ ログを使用する
+VSPackage では、アクティビティ ログにメッセージを書き込むことができます。 この機能は、リテール環境で VSPackage をデバッグする場合に特に便利です。
 
 > [!TIP]
-> アクティビティログは常にオンになっています。 Visual Studio では、最後の100エントリと、一般的な構成情報を持つ最初の10個のエントリのローリングバッファーが保持されます。
+> アクティビティ ログは常にオンになっています。 Visual Studio では、一般的な構成情報を持つ最後の 100 のエントリと最初の 10 のエントリのローリング バッファーが保持されます。
 
-## <a name="to-write-an-entry-to-the-activity-log"></a>アクティビティログにエントリを書き込むには
+## <a name="to-write-an-entry-to-the-activity-log"></a>アクティビティ ログにエントリを書き込む方法
 
-1. このコード <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> は、VSPackage コンストラクターを除く、メソッドまたは他の任意のメソッドに挿入します。
+1. 次のように、このコードを VSPackage コンストラクターを除く、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドまたは他の任意のメソッドに挿入します。
 
     ```csharp
     IVsActivityLog log = GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -40,19 +40,19 @@ Vspackage は、アクティビティログにメッセージを書き込むこ�
         "Called for: {0}", this.ToString()));
     ```
 
-     このコードは、 <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> サービスを取得し、それをインターフェイスにキャストし <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> ます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> 現在のカルチャコンテキストを使用して、情報エントリをアクティビティログに書き込みます。
+     このコードにより、<xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> サービスが取得され、それが <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> インターフェイスにキャストされます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog.LogEntry%2A> により、現在のカルチャ コンテキストを使用して、情報エントリがアクティビティ ログに書き込まれます。
 
-2. VSPackage が読み込まれると (通常はコマンドが呼び出されたとき、またはウィンドウが開かれたときに)、テキストがアクティビティログに書き込まれます。
+2. VSPackage が読み込まれると (通常はコマンドが呼び出されたとき、またはウィンドウが開かれたときに)、テキストがアクティビティ ログに書き込まれます。
 
-## <a name="to-examine-the-activity-log"></a>アクティビティログを確認するには
+## <a name="to-examine-the-activity-log"></a>アクティビティ ログを調べる方法
 
-1. [/Log](../ide/reference/log-devenv-exe.md)コマンドラインスイッチを使用して Visual Studio を実行し、セッション中にディスクに ActivityLog.xml を書き込みます。
+1. [/Log](../ide/reference/log-devenv-exe.md) コマンド ライン スイッチを使用して Visual Studio を実行し、セッション中にディスクに ActivityLog.xml を書き込みます。
 
-2. Visual Studio を終了した後、Visual Studio データのサブフォルダーでアクティビティログを見つけます。
+2. Visual Studio を終了した後、Visual Studio データの次のサブフォルダーでアクティビティ ログを見つけます。
 
-   <em> *% AppData%</em>\Microsoft\VisualStudio \\ \<version>\ActivityLog.xml*。
+   <em> *%AppData%</em>\Microsoft\VisualStudio\\\<version>\ActivityLog.xml*.
 
-3. 任意のテキストエディターを使用して、アクティビティログを開きます。 一般的なエントリは次のとおりです。
+3. 任意のテキスト エディターを使用して、アクティビティ ログを開きます。 典型的なエントリを次に示します。
 
    ```
    Called for: Company.MyApp.MyAppPackage ...
@@ -60,11 +60,11 @@ Vspackage は、アクティビティログにメッセージを書き込むこ�
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-アクティビティログはサービスであるため、アクティビティログは VSPackage コンストラクターでは使用できません。
+アクティビティ ログはサービスであるため、アクティビティ ログは VSPackage コンストラクターでは使用できません。
 
-書き込みの直前にアクティビティログを取得する必要があります。 将来使用するために、アクティビティログをキャッシュまたは保存しないでください。
+書き込みの直前にアクティビティ ログを取得する必要があります。 将来使用するために、アクティビティ ログをキャッシュまたは保存しないでください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [/Log (devenv.exe)](../ide/reference/log-devenv-exe.md)
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog>

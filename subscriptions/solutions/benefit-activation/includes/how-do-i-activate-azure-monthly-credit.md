@@ -10,12 +10,12 @@ user.type: subscriber
 tags: benefit, azure
 subscription.type: vl, cloud, retail, partner
 sap.id: 8dedd10e-cb1c-2eb1-bcda-fe00b07ac903
-ms.openlocfilehash: 7f1978f0d0679d94bbde3b565ff5680ce89f9063
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: bb387f9a359b6f645dd6a160ffb281375cd747a9
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107589964"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349993"
 ---
 ## <a name="how-to-activate-the-monthly-azure-devtest-individual-credit-benefit"></a>月単位の Azure Dev/Test の個別クレジット特典をアクティブ化にする方法
 
@@ -30,7 +30,7 @@ Visual Studio サブスクリプション特典を通じて作成された Azure
 
 ## <a name="azure-credit-benefit-activation-errors"></a>Azure クレジット特典のアクティブ化エラー
 
-新しい Visual Studio サブスクリプションをお持ちで、月単位の Azure クレジット特典をアクティブ化しようとしたときに "You can't activate this Visual Studio benefit more than once" (この Visual Studio 特典を複数回アクティブ化することはできません) というエラーが表示される場合は、このソリューションの下部にある [サポート チケットを作成] ボタンをクリックして、Visual Studio サブスクリプション サポートにお問い合わせください。 
+新しい Visual Studio サブスクリプションをお持ちで、月単位の Azure クレジット特典をアクティブ化しようとしたときに "この Visual Studio 特典を複数回アクティブ化することはできません" というエラーが表示される場合は、このソリューションの下部にある [オンライン要求] ボタンをクリックして、Visual Studio サブスクリプション サポートにお問い合わせください。 
 
 サブスクリプションが割り当てられてから少し時間がたっている場合は、まず次の点を確認してください。
 - サブスクリプション ポータルの [[特典] ページ](https://my.visualstudio.com/benefits)で [Azure の月単位のクレジット] タイルを確認して、この特典をまだアクティブ化していないことを確認します。 

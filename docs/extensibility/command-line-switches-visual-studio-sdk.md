@@ -1,6 +1,6 @@
 ---
-title: Command-Line スイッチ (Visual Studio SDK) |Microsoft Docs
-description: Devenv.exe は、Vspackage の開発に特化したコマンドラインスイッチをサポートしています。 コマンドラインスイッチの詳細については、このセクションの記事を参照してください。
+title: コマンド ライン スイッチ (Visual Studio SDK) | Microsoft Docs
+description: Devenv.exe は、VSPackage の開発に特化したコマンド ライン スイッチをサポートしています。 コマンド ライン スイッチの詳細については、このセクションの記事を参照してください。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,18 +16,18 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 58ec16faf930799c8ab164c006e063cbce8378fe
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089655"
 ---
-# <a name="command-line-switches-visual-studio-sdk"></a>コマンドラインスイッチ (Visual Studio SDK)
-*Devenv.exe*、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) を起動する実行可能ファイルは、vspackage の開発に特化したコマンドラインスイッチをサポートしています。 また、Vspackage は、独自のスイッチを Devenv コマンドラインで使用できるようにすることもできます。 次のトピックでは、IDE でコマンドラインスイッチを使用する方法について説明します。
+# <a name="command-line-switches-visual-studio-sdk"></a>コマンド ライン スイッチ (Visual Studio SDK)
+*Devenv.exe* は、[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) を起動する実行可能ファイルであり、VSPackage の開発に特化したコマンド ライン スイッチをサポートしています。 VSPackage では、それ自体のスイッチを Devenv コマンドラインで使用できるようにすることもできます。 次のトピックでは、IDE でのコマンド ライン スイッチの使用方法を説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
-- [VSPackage Ddevelopment 用の Devenv コマンドラインスイッチ](../extensibility/devenv-command-line-switches-for-vspackage-development.md) VSPackage の開発、デバッグ、および配置を簡略化するために使用できる Devenv コマンドラインスイッチについて説明します。
+- 「[VSPackage 開発用の Devenv コマンド ライン スイッチ](../extensibility/devenv-command-line-switches-for-vspackage-development.md)」では、VSPackage の開発、デバッグ、およびデプロイを簡素化するために使用できる Devenv コマンド ライン スイッチについて説明します。
 
-- [コマンドラインスイッチの追加](../extensibility/adding-command-line-switches.md) パッケージに対してユーザーが入力したコマンドラインスイッチを実装、検索、および読み取りする方法について説明します。
+- 「[コマンド ライン スイッチの追加](../extensibility/adding-command-line-switches.md)」では、パッケージ用にユーザーが入力したコマンド ライン スイッチの実装、検索、および読み取りの方法を説明します。
 
 ## <a name="related-sections"></a>関連項目
-- [Devenv コマンドラインスイッチ](../ide/reference/devenv-command-line-switches.md) Devenv で IDE のさまざまなオプションを設定する方法と、コマンドラインからプロジェクトをコンパイル、ビルド、デバッグする方法について説明します。 また、Devenv スイッチの構文とスイッチのテーブルについても説明します。
+- 「[Devenv コマンド ライン スイッチ](../ide/reference/devenv-command-line-switches.md)」では、Devenv で IDE のさまざまなオプションを設定する方法と、コマンド ラインからプロジェクトをコンパイル、ビルド、デバッグする方法を説明します。 さらに、Devenv スイッチの構文の詳細と、スイッチの表も含まれます。

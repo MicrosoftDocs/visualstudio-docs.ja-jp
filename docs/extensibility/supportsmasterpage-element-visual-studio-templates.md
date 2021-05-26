@@ -1,6 +1,6 @@
 ---
-title: SupportsMasterPage 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: SupportsMasterPage 要素について、および [新しい項目の追加] ダイアログボックスで [マスターページの選択] チェックボックスがオンになっているかどうかをどのように指定するかについて説明します。
+title: SupportsMasterPage 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: SupportsMasterPage 要素と、[マスター ページの選択] チェック ボックスを [新しい項目の追加] ダイアログ ボックスで有効にするかどうかをその要素で指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c3b779b3626c4ff47fe798fa9f4ff2e7bc9c7ac8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056039"
 ---
 # <a name="supportsmasterpage-element-visual-studio-templates"></a>SupportsMasterPage 要素 (Visual Studio テンプレート)
-[**新しい項目の追加**] ダイアログボックスで [**マスターページの選択**] チェックボックスがオンになっているかどうかを指定します。
+**[マスター ページの選択]** チェック ボックスを **[新しい項目の追加]** ダイアログ ボックスで有効にするかどうかを指定します。
 
  \<VSTemplate> \<TemplateData>
  \<SupportsMasterPage>
@@ -48,20 +48,20 @@ ms.locfileid: "105056039"
 
 |要素|説明|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートを分類するデータを指定し、[ **新しいプロジェクト** ] または [ **新しい項目** ] ダイアログボックスでの表示方法を定義します。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートに分類されるデータを指定し、 **[新しいプロジェクト]** または **[新しい項目]** ダイアログ ボックスでどのように表示させるかを定義します。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストは、[ `true` `false` **新しい項目の追加**] ダイアログボックスで [**マスターページの選択**] チェックボックスがオンになっているかどうかを示す、またはのいずれかである必要があります。
+ テキストには、 **[マスター ページの選択]** チェック ボックスを **[新しい項目の追加]** ダイアログ ボックスで有効にするかどうかを示す、`true` または `false` のどちらかを指定する必要があります。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `SupportsMasterPage` は省略可能な要素です。 既定値は `false` です。
 
- `SupportsMasterPage`要素は、Web 項目テンプレートでのみ使用できます。
+ `SupportsMasterPage` 要素は、Web の項目テンプレートにのみ使用できます。
 
 ## <a name="example"></a>例
- 次の例は、マスターページのサポートを含む Web プロジェクトのメタデータを示しています。
+ 次の例は、マスター ページのサポートを含む Web プロジェクトのメタデータを示しています。
 
 ```
 <VSTemplate Version="3.0.0" Type="Project"
@@ -85,6 +85,6 @@ ms.locfileid: "105056039"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+## <a name="see-also"></a>関連項目
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

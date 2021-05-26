@@ -1,6 +1,6 @@
 ---
 description: この関数は、lpParentProjPath 引数で指定された既存の親プロジェクトの下に、指定された名前のサブプロジェクトを作成します。
-title: SccCreateSubProject 関数 |Microsoft Docs
+title: SccCreateSubProject 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 70568c27afb4bdb5794db64322113dffbd824452
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105074003"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject 関数
-この関数は、引数で指定された既存の親プロジェクトの下に、指定された名前のサブプロジェクトを作成し `lpParentProjPath` ます。
+この関数は、`lpParentProjPath` 引数で指定された既存の親プロジェクトの下に、指定された名前のサブプロジェクトを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,66 +40,66 @@ SCCRTN SccCreateSubProject(
 ### <a name="parameters"></a>パラメーター
  pContext
 
-からソース管理プラグインのコンテキストポインター。
+[入力] ソース管理プラグインのコンテキスト ポインター。
 
  hWnd
 
-からソース管理プラグインが提供するすべてのダイアログボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] ソース管理プラグインが、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
 
  lpUser
 
-[入力、出力]ユーザー名 (NULL 終端文字を含む SCC_USER_SIZE まで)。
+[入力、出力] ユーザー名 (NULL 終端文字を含め、最大 SCC_USER_SIZE 文字)。
 
  lpParentProjPath
 
-から親プロジェクトのパスを識別する文字列 (NULL ターミネータを含む SCC_PRJPATH_SIZE まで)。
+[入力] 親プロジェクトのパスを識別する出力文字列 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
  lpSubProjName
 
-から推奨されるサブプロジェクト名 (NULL 終端文字を含む SCC_PRJPATH_SIZE まで)。
+[入力] 提案されるサブプロジェクト名 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
  lpAuxProjPath
 
-[入力、出力]プロジェクトを識別する補助文字列 (NULL ターミネータを含む SCC_PRJPATH_SIZE まで)。
+[入力、出力] プロジェクトを識別する補助文字列 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
  lpSubProjPath
 
-[入力、出力]サブプロジェクトのパスを識別する出力文字列 (NULL ターミネータを含む SCC_PRJPATH_SIZE まで)。
+[入力、出力] サブプロジェクトのパスを識別する出力文字列 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
-|SCC_OK|サブプロジェクトが正常に作成されました。|
+|SCC_OK|サブオブジェクトは正常に作成されました。|
 |SCC_E_INITIALIZEFAILED|親プロジェクトを初期化できませんでした。|
-|SCC_E_INVALIDUSER|ユーザーは、ソース管理システムにログインできませんでした。|
+|SCC_E_INVALIDUSER|ユーザーがソース管理システムにログインできませんでした。|
 |SCC_E_COULDNOTCREATEPROJECT|サブプロジェクトを作成できません。|
-|SCC_E_PROJSYNTAXERR|プロジェクトの構文が無効です。|
-|SCC_E_UNKNOWNPROJECT|親プロジェクトは、ソース管理プラグインでは不明です。|
-|SCC_E_INVALIDFILEPATH|ファイルパスが無効であるか、使用できません。|
-|SCC_E_NOTAUTHORIZED|ユーザーはこの操作を実行できません。|
-|SCC_E_ACCESSFAILURE|ネットワークまたは競合の問題が原因で、ソース管理システムへのアクセスで問題が発生しました。 再試行することをお勧めします。|
+|SCC_E_PROJSYNTAXERR|プロジェクト構文が無効です。|
+|SCC_E_UNKNOWNPROJECT|親プロジェクトがソース管理プラグインで認識されていません。|
+|SCC_E_INVALIDFILEPATH|ファイル パスが無効であるか、または使用できません。|
+|SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
 |SCC_E_CONNECTIONFAILURE|ソース管理プラグイン接続の問題が発生しました。|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|
 
-## <a name="remarks"></a>注釈
- 同じ名前のサブプロジェクトが既に存在する場合、関数は、既定の名前を変更して一意の名前を作成できます。たとえば、"_ \<number> " を追加します。 、、およびへの変更を受け入れるには、呼び出し元が準備されている必要があり `lpUser` `lpSubProjPath` `lpAuxProjPath` ます。 次に、 `lpSubProjPath` `lpAuxProjPath` 引数と引数を [Sccopenproject](../extensibility/sccopenproject-function.md)の呼び出しで使用します。 返されるときに、呼び出し元によって変更されないようにする必要があります。 これらの文字列は、ソース管理プラグインがプロジェクトに関連付けるために必要な情報を追跡するための手段を提供します。 呼び出し元 IDE では、これらの2つのパラメーターは返されません。これは、プラグインが表示に適さない可能性のある書式設定された文字列を使用できるためです。 関数は成功または失敗のコードを返し、成功した場合は、 `lpSubProjPath` 新しいプロジェクトへの完全なプロジェクトパスを変数に入力します。
+## <a name="remarks"></a>解説
+ 名前を持つサブプロジェクトが既に存在する場合、関数は、既定の名前を変更して一意の名前を作成できます。たとえば、"_ \<number>" を追加します。 呼び出し元は、`lpUser`、`lpSubProjPath`、および `lpAuxProjPath` への変更を受け入れるように準備されている必要があります。 次に、`lpSubProjPath` 引数と `lpAuxProjPath` 引数が [Sccopenproject](../extensibility/sccopenproject-function.md)の呼び出しで使用されます。 返されるときに、これらが呼び出し元によって変更されないようにする必要があります。 これらの文字列を使用すると、ソース管理プラグインではプロジェクトに関連付ける必要がある情報を追跡することができます。 呼び出し元 IDE では、返されるときにこれらの 2 つのパラメーターは表示されません。表示に適していない可能性のある、書式設定された文字列をプラグインで使用できるためです。 関数は、成功またはエラー コードを返します。成功した場合は、変数 `lpSubProjPath` を新しいプロジェクトへの完全なプロジェクト パスで埋めます。
 
- この関数は [Sccgetprojpath](../extensibility/sccgetprojpath-function.md)に似ていますが、ユーザーに選択を求めるのではなく、プロジェクトが自動的に作成される点が異なります。 `SccCreateSubProject`関数が呼び出されると、 `lpParentProjName` と `lpAuxProjPath` は空にならず、有効なプロジェクトに対応します。 これらの文字列は、通常、以前の `SccGetProjPath` 関数または [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)の呼び出しから IDE によって受信されます。
+ この関数は [SccGetProjPath](../extensibility/sccgetprojpath-function.md)に似ていますが、ユーザーにプロジェクトの選択を求めるのではなく、プロジェクトは自動的に作成されます。 `SccCreateSubProject` 関数が呼び出された場合、`lpParentProjName` と `lpAuxProjPath` は空にはならず、有効なプロジェクトに対応します。 これらの文字列は通常、`SccGetProjPath` 関数または [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md) の以前の呼び出しから IDE によって受信されます。
 
- `lpUser`引数はユーザー名です。 IDE は、以前に受信したものと同じユーザー名を渡します `SccGetProjPath` 。ソース管理プラグインでは、その名前を既定値として使用する必要があります。 ユーザーが既にプラグインと開いている接続を持っている場合、プラグインは、関数がサイレントモードで動作するかどうかを確認するプロンプトを表示しないようにする必要があります。 ただし、ログインに失敗した場合は、プラグインによってユーザーにログインを求めるメッセージが表示され、有効なログインを受け取ったときに、その名前がに戻され `lpUser` ます。 この文字列はプラグインによって変更される可能性があるため、IDE は常にサイズのバッファー (SCC_USER_LEN + 1 または SCC_USER_SIZE (null 終端文字用の領域を含む) を割り当てます。 文字列が変更された場合、新しい文字列は有効なログイン名 (少なくとも古い文字列と同じ) である必要があります。
+ `lpUser` 引数はユーザー名です。 IDE では、以前に `SccGetProjPath` から受信したものと同じユーザー名を渡すため、ソース管理プラグインでは、この名前を既定値として使用する必要があります。 ユーザーが既にプラグインとの開いている接続を使用している場合は、この関数が確認なしで動作できるように、プラグインはすべてのプロンプトを排除するよう試みる必要があります。 ただし、ログインが失敗した場合、プラグインはユーザーにログインを入力するよう求め、有効なログインを受信したら、その名前を `lpUser` に戻す必要があります。 この文字列はプラグインによって変更される可能性があるため、IDE では常にサイズのバッファーを割り当てます (null 終端文字用のスペースを含む、SCC_USER_LEN + 1 または SCC_USER_SIZE)。 この文字列が変更された場合、新しい文字列は有効な (少なくとも以前の文字列と同程度に有効な) ログイン名である必要があります。
 
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject と SccGetParentProjectPath のテクニカルノート
- Visual Studio では、ソース管理システムでの場所の選択を求めるメッセージが表示される回数を最小限に抑えるために、Visual Studio でソリューションとプロジェクトを簡単に追加できました。 ソース管理プラグインが新しい関数との両方をサポートしている場合、これらの変更は Visual Studio によってアクティブ化され `SccCreateSubProject` `SccGetParentProjectPath` ます。 ただし、次のレジストリエントリを使用すると、これらの変更を無効にして、以前の Visual Studio (ソース管理プラグイン API バージョン 1.1) の動作に戻すことができます。
+## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject と SccGetParentProjectPath に関するテクニカル ノート
+ Visual Studio では、ソース管理へのソリューションやプロジェクトの追加が簡略化され、ユーザーがソース管理システム内の場所を選択するよう求められる回数は最小限に抑えられています。 ソース管理プラグインが新しい関数 `SccCreateSubProject` と `SccGetParentProjectPath` の両方をサポートしている場合、これらの変更は Visual Studio によってアクティブ化されます。 ただし、次のレジストリ エントリを使用すると、これらの変更を無効にして、以前の Visual Studio (ソース管理プラグイン API バージョン 1.1) の動作に戻すことができます。
 
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl]"DoNotCreateSolutionRootFolderInSourceControl" = dword: 00000001**
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl"=dword:00000001**
 
- このレジストリエントリが存在しない場合、または dword: 00000000 に設定されている場合、Visual Studio は、新しい関数、およびを使用しようとし `SccCreateSubProject` `SccGetParentProjectPath` ます。
+ このレジストリ エントリが存在しないか、または dword:00000000 に設定されている場合、Visual Studio では新しい関数 `SccCreateSubProject` と `SccGetParentProjectPath` を使用しようとします。
 
- レジストリエントリが dword: 00000001 に設定されている場合、Visual Studio はこれらの新しい関数を使用しません。また、ソース管理に追加する操作は、以前のバージョンの Visual Studio の場合と同様に動作します。
+ このレジストリ エントリが dword:00000001 に設定されている場合は、Visual Studio がこれらの新しい関数を使用しようとしないため、ソース管理への追加の操作は以前のバージョンの Visual Studio の場合と同様に機能します。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>関連項目
+- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)
 - [SccGetProjPath](../extensibility/sccgetprojpath-function.md)

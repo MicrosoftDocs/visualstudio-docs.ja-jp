@@ -1,6 +1,6 @@
 ---
-title: ソリューションエクスプローラーツールバーにコマンドを追加する |Microsoft Docs
-description: Visual Studio のソリューションエクスプローラーツールバーにコマンドを実行するボタンを追加する方法について説明します。
+title: ソリューション エクスプローラーのツールバーへのコマンドの追加 | Microsoft Docs
+description: Visual Studio のソリューション エクスプローラーのツールバーにコマンドを実行するボタンを追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,37 +16,37 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: cf6ffcded95d142578ed118ab26b57914eb36c37
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105060095"
 ---
-# <a name="add-a-command-to-the-solution-explorer-toolbar"></a>ソリューションエクスプローラーツールバーにコマンドを追加する
-このチュートリアルでは、[ **ソリューションエクスプローラー** ] ツールバーにボタンを追加する方法について説明します。
+# <a name="add-a-command-to-the-solution-explorer-toolbar"></a>ソリューション エクスプローラー ツールバーにコマンドを追加する
+このチュートリアルでは、**ソリューション エクスプローラー** のツールバーにボタンを追加する方法について説明します。
 
- ツールバーまたはメニューのすべてのコマンドは、Visual Studio のボタンと呼ばれます。 このボタンをクリックすると、コマンドハンドラーのコードが実行されます。 通常、関連するコマンドは、1つのグループを形成するためにグループ化されます。 メニューまたはツールバーは、グループのコンテナーとして機能します。 優先順位によって、グループ内の個々のコマンドがメニューまたはツールバーに表示される順序が決まります。 ツールバーまたはメニューの表示を制御することによって、ボタンが表示されないようにすることができます。 `<VisibilityConstraints>` *. Vsct* ファイルのセクションに示されているコマンドは、関連付けられたコンテキストにのみ表示されます。 表示をグループに適用することはできません。
+ ツールバーまたはメニューのすべてのコマンドは、Visual Studio ではボタンと呼ばれます。 このボタンをクリックすると、コマンド ハンドラーのコードが実行されます。 通常、関連するコマンドは、1 つのグループを形成するためにグループ化されます。 メニューまたはツールバーは、グループのコンテナーとして機能します。 優先順位によって、グループ内の個々のコマンドがメニューまたはツールバーに表示される順序が決定されます。 ツールバーまたはメニューの表示を制御することによって、ボタンが表示されないようにすることができます。 *.vsct* ファイルの `<VisibilityConstraints>` セクションに示されているコマンドは、関連付けられたコンテキストにのみ表示されます。 表示をグループに適用することはできません。
 
- メニュー、ツールバーコマンド、および *vsct* ファイルの詳細については、「 [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)」を参照してください。
+ メニュー、ツールバー コマンド、 *.vsct* ファイルの詳細については、「[コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)」を参照してください。
 
 > [!NOTE]
-> コマンドテーブル構成 (*ctc*) ファイルではなく、XML コマンドテーブル (*vsct*) ファイルを使用して、vspackage にメニューとコマンドを表示する方法を定義します。 詳細については、「 [Visual Studio コマンドテーブル ()」を参照してください。Vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)。
+> コマンド テーブル構成 ( *.ctc*) ファイルではなく、XML コマンド テーブル ( *.vsct*) ファイルを使用して、VSPackage にメニューとコマンドを表示する方法を定義します。 詳細については、「[Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
- Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+## <a name="prerequisites"></a>必須コンポーネント
+ Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
-## <a name="create-an-extension-with-a-menu-command"></a>メニューコマンドを使用して拡張機能を作成する
- という名前の VSIX プロジェクトを作成 `SolutionToolbar` します。 **ToolbarButton** という名前のメニューコマンド項目テンプレートを追加します。 これを行う方法については、「 [メニューコマンドを使用して拡張機能を作成](../extensibility/creating-an-extension-with-a-menu-command.md)する」を参照してください。
+## <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用した拡張機能の作成
+ `SolutionToolbar` という名前の VSIX プロジェクトを作成します。 **ToolbarButton** という名前のメニュー コマンド項目テンプレートを追加します。 この方法の詳細については、[メニュー コマンドを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)に関するページをご覧ください。
 
-## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>ソリューションエクスプローラーツールバーにボタンを追加する
- チュートリアルのこのセクションでは、 **ソリューションエクスプローラー** ツールバーにボタンを追加する方法について説明します。 ボタンがクリックされると、コールバックメソッドのコードが実行されます。
+## <a name="add-a-button-to-the-solution-explorer-toolbar"></a>ソリューション エクスプローラー ツールバーにボタンを追加する
+ このチュートリアルのセクションでは、**ソリューション エクスプローラー** のツールバーにボタンを追加する方法について説明します。 ボタンがクリックされると、コールバック メソッドのコードが実行されます。
 
-1. *Toolbarbuttonpackage. vsct* ファイルで、セクションにアクセスし `<Symbols>` ます。 ノードには、 `<GuidSymbol>`  パッケージテンプレートによって生成されたメニューグループおよびコマンドが含まれています。 `<IDSymbol>`このノードに要素を追加して、コマンドを保持するグループを宣言します。
+1. *ToolbarButtonPackage.vsct* ファイルで、`<Symbols>` セクションに移動します。 `<GuidSymbol>` ノードには、パッケージ テンプレートによって生成されたメニュー グループおよびコマンドが含まれています。 このノードに `<IDSymbol>` 要素を追加して、コマンドを保持するグループを宣言します。
 
     ```xml
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>
     ```
 
-2. セクションで、 `<Groups>` 既存のグループエントリの後に、前の手順で宣言した新しいグループを定義します。
+2. `<Groups>` セクションで、既存のグループ エントリの後に、前の手順で宣言した新しいグループを定義します。
 
     ```xml
     <Group guid="guidToolbarButtonPackageCmdSet"
@@ -55,9 +55,9 @@ ms.locfileid: "105060095"
           </Group>
     ```
 
-     親 GUID: ID をに設定し `guidSHLMainMenu` て、 `IDM_VS_TOOL_PROJWIN` このグループを [ **ソリューションエクスプローラー** ] ツールバーに配置し、優先度の高い値を設定すると、他のコマンドグループの後に配置されます。
+     親 GUID:ID ペアを `guidSHLMainMenu` と `IDM_VS_TOOL_PROJWIN` に設定することにより、このグループが **ソリューション エクスプローラー** のツールバーに配置され、優先度の高い値を設定すると、他のコマンド グループの後に配置されます。
 
-3. セクションで `<Buttons>` 、生成されたエントリの親 ID `<Button>` を、前の手順で定義したグループを反映するように変更します。 変更された要素は次のようになり `<Button>` ます。
+3. `<Buttons>` セクションで、生成された `<Button>` エントリの親 ID を、前の手順で定義したグループが反映されるように変更します。 変更された `<Button>` 要素は次のようになります。
 
     ```xml
     <Button guid="guidToolbarButtonPackageCmdSet" id="ToolbarButtonId" priority="0x0100" type="Button">
@@ -71,27 +71,27 @@ ms.locfileid: "105060095"
 
 4. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。
 
-     **ソリューションエクスプローラー** ツールバーに、既存のボタンの右側に [新しいコマンド] ボタンが表示されます。 ボタンアイコンは取り消し線です。
+     **ソリューション エクスプローラー** のツールバーに、既存のボタンの右側に新しいコマンド ボタンが表示されるはずです。 ボタン アイコンは取り消し線です。
 
-5. [新規] ボタンをクリックします。
+5. 新しいボタンをクリックします。
 
-     ダイアログボックスが表示されます。このダイアログボックスには、 **ToolbarButton. MenuItemCallback ()** というメッセージが表示されます。
+     **ToolbarButtonPackage Inside SolutionToolbar.ToolbarButton.MenuItemCallback()** というメッセージを含むダイアログ ボックスが表示されるはずです。
 
 ## <a name="control-the-visibility-of-a-button"></a>ボタンの表示を制御する
- チュートリアルのこのセクションでは、ツールバーのボタンの表示を制御する方法について説明します。 `<VisibilityConstraints>` *Solutiontoolbar. vsct* ファイルのセクションで1つ以上のプロジェクトにコンテキストを設定することにより、プロジェクトまたはプロジェクトが開いている場合にのみ、ボタンを表示するように制限します。
+ チュートリアルのこのセクションでは、ツールバーのボタンの表示を制御する方法について説明します。 *SolutionToolbar.vsct* ファイルの `<VisibilityConstraints>` セクションで 1 つ以上のプロジェクトにコンテキストを設定することにより、プロジェクトまたはプロジェクトが開いている場合にのみ、ボタンが表示されるように制限します。
 
-### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>1つ以上のプロジェクトが開いているときにボタンを表示するには
+### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>1 つ以上のプロジェクトが開いているときにボタンを表示する方法
 
-1. `<Buttons>` *Toolbarbuttonpackage. vsct* のセクションで、タグとタグの間に、既存の要素に2つのコマンドフラグを追加し `<Button>` `<Strings>` `<Icons>` ます。
+1. *ToolbarButtonPackage.vsct* の `<Buttons>` セクションで、`<Strings>` と `<Icons>` タグの間の既存の `<Button>` 要素に 2 つのコマンド フラグを追加します。
 
    ```xml
    <CommandFlag>DefaultInvisible</CommandFlag>
    <CommandFlag>DynamicVisibility</CommandFlag>
    ```
 
-    `DefaultInvisible`セクションの `DynamicVisibility` エントリが有効になるように、フラグとフラグを設定する必要があり `<VisibilityConstraints>` ます。
+    `<VisibilityConstraints>` セクションのエントリが有効になるように、`DefaultInvisible` と `DynamicVisibility` フラグを設定する必要があります。
 
-2. `<VisibilityConstraints>`2 つのエントリを持つセクションを作成 `<VisibilityItem>` します。 新しいセクションを終了タグの直後に配置し `</Commands>` ます。
+2. 2 つの `<VisibilityItem>` エントリを持つ `<VisibilityConstraints>` セクションを作成します。 新しいセクションを `</Commands>` 終了タグの直後に配置します。
 
    ```xml
    <VisibilityConstraints>
@@ -108,15 +108,15 @@ ms.locfileid: "105060095"
 
 3. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。
 
-    **ソリューションエクスプローラー** ツールバーに取り消し線ボタンが含まれていません。
+    **ソリューション エクスプローラー** のツールバーに取り消し線ボタンが含まれていません。
 
 4. プロジェクトを含むソリューションを開きます。
 
-    ツールバーの [取り消し線] ボタンが、既存のボタンの右側に表示されます。
+    取り消し線ボタンが、ツールバーの既存のボタンの右側に表示されます。
 
-5. **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックします。 ツールバーのボタンが消えます。
+5. **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックします。 ツールバーからボタンが消えます。
 
-   ボタンの表示は、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage が読み込まれるまでによって制御されます。 VSPackage が読み込まれた後、ボタンの可視性は VSPackage によって制御されます。  詳細については、「 [Menucommands と OleMenuCommands](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015)」を参照してください。
+   ボタンの表示は、VSPackage が読み込まれるまで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって制御されます。 VSPackage が読み込まれた後、ボタンの可視性は VSPackage によって制御されます。  詳細については、「[MenuCommands と OleMenuCommands の比較](/previous-versions/visualstudio/visual-studio-2015/misc/menucommands-vs-olemenucommands?preserve-view=true&view=vs-2015)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+## <a name="see-also"></a>関連項目
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

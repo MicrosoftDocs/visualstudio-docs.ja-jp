@@ -1,6 +1,6 @@
 ---
-title: VSCT XML スキーマリファレンス |Microsoft Docs
-description: VSCT XML スキーマのリファレンス記事では、コマンドテーブルコンパイラのスキーマ要素について説明し、それぞれに許可されている子要素と属性を示します。
+title: VSCT XML スキーマ リファレンス | Microsoft Docs
+description: VSCT XML スキーマのリファレンス記事では、コマンド テーブル コンパイラのスキーマ要素について説明し、それぞれで使用できる子要素と属性を示します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,34 +15,34 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9f24d11c9458b56b5b66de495a18ec75491d3ac0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062305"
 ---
-# <a name="vsct-xml-schema-reference"></a>VSCT XML スキーマリファレンス
-コマンドテーブルコンパイラスキーマ要素のテーブルを提供します。これには、許可されている子要素と属性がそれぞれ含まれています。
+# <a name="vsct-xml-schema-reference"></a>VSCT XML スキーマ リファレンス
+コマンド テーブル コンパイラのスキーマ要素と、それぞれで使用できる子要素と属性をまとめた表を提供します。
 
- XML ベースのコマンドテーブル構成 (vsct) ファイルは、VSPackage が統合開発環境 (IDE) に提供するコマンド要素を定義します。 これらの要素には、メニュー項目、メニュー、ツールバー、およびコンボボックスが含まれます。
+ XML ベースのコマンド テーブル構成 (.vsct) ファイルでは、VSPackage から統合開発環境 (IDE) に提供されるコマンド要素を定義します。 これら要素には、メニュー項目、メニュー、ツール バー、コンボ ボックスが含まれます。
 
 > [!NOTE]
-> VSCT コンパイラは、vsct ファイルでプリプロセッサを実行できます。 これは通常、C++ プリプロセッサであるため、C++ ファイルで使用されているのと同じ構文を持つインクルードマクロとマクロを定義できます。 この例は、 **新しいプロジェクト** ウィザードによって VSPackage プロジェクト用に作成される、vsct ファイルで提供されています。
+> VSCT コンパイラでは、.vsct ファイルに対してプリプロセッサを実行できます。 これは通常 C++ プリプロセッサであるため、C++ ファイルで使用されているのと同じ構文を持つインクルードとマクロを定義できます。 これの例は、**新しいプロジェクト** ウィザードで VSPackage プロジェクト用に作成される .vsct ファイルで提供されます。
 
 ## <a name="optional-elements"></a>オプションの要素
- 一部の VSCT 要素は省略可能です。 `Parent`引数が指定されていない場合、Group_Undefined: 0は暗黙的に指定されます。 `Icon`引数が指定されていない場合、guidOfficeIcon: msotcidNoIcon が暗黙的に指定されます。 ショートカットキーが定義されている場合、通常は使用されていないエミュレーションがオプションです。
+ VSCT のいくつかの要素は省略可能です。 `Parent` 引数が指定されていない場合は、Group_Undefined:0 が暗黙的に指定されます。 `Icon` 引数が指定されていない場合は、guidOfficeIcon:msotcidNoIcon が暗黙的に指定されます。 ショートカット キーが定義されている場合、通常使用されないエミュレーションは省略可能です。
 
- ビットマップ項目は、コンパイル時に、引数にビットマップストリップの場所を指定することで埋め込むことができ `href` ます。 ビットマップストリップは、DLL のリソースから抽出されるのではなく、マージ中にコピーされます。 引数を指定した場合、 `href` `usedList` 引数は省略可能になり、ビットマップストリップ内のすべてのスロットが使用されていると見なされます。
+ ビットマップ項目は、コンパイル時に `href` 引数にビットマップ ストリップの場所を指定することで、埋め込むことができます。 ビットマップ ストリップは、DLL のリソースから抽出されるのではなく、マージ中にコピーされます。 `href` 引数を指定した場合、`usedList` 引数は省略可能になり、ビットマップ ストリップのすべてのスロットが使用されていると見なされます。
 
- すべての GUID と ID の値は、シンボル名を使用して定義する必要があります。 これらの名前は、ヘッダーファイルまたは VSCT セクションで定義でき \<Symbols> ます。 シンボル名は、ローカルであるか、 \<Include> 要素を通じて、または要素によって参照されている必要があり \<Extern> ます。 シンボル名は、要素で指定されているヘッダーファイルから \<Extern> #define シンボル値の単純なパターンに従っている場合、そのファイルからインポートされます。 この値は、そのシンボルが既に定義されている限り、別のシンボルにすることができます。 GUID 定義は、OLE 形式または C++ 形式のいずれかに従う必要があります。 次の行に示すように、ID 値には、10進数または0x の前に0x が付く16進数を指定できます。
+ すべての GUID と ID の値は、シンボル名を使用して定義する必要があります。 これらの名前は、ヘッダー ファイルまたは VSCT の \<Symbols> セクションで定義できます。 シンボル名は、ローカルにするか、\<Include> 要素を使用してインクルードするか、または \<Extern> 要素で参照する必要があります。 シンボル名は、\<Extern> 要素で指定されるヘッダー ファイルからインポートされます (「#define シンボル   値」の単純なパターンに従っている場合)。 この値として、別のシンボルを使用することもできます (そのシンボルが既に定義されている場合)。 GUID 定義は、OLE 形式または C++ 形式のいずれかに従う必要があります。 ID 値には、次の行に示すように、10 進数または 0x で始まる 16 進数を指定できます。
 
 - {6D484634-E53D-4a2c-ADCB-55145C9362C8}
 
-- {0x6d484634、0xe53d、0x4a2c、{0xad、0xcb、0xad、0x14、0x5c、0x93、0x62、0xcb}}
+- { 0x6d484634, 0xe53d, 0x4a2c, { 0xad, 0xcb, 0x55, 0x14, 0x5c, 0x93, 0x62, 0xc8 } }
 
-  XML コメントを使用することもできますが、ラウンドトリップグラフィカルユーザーインターフェイス (GUI) ツールはそれらを破棄する場合があります。 要素の内容は、 \<Annotation> 形式に関係なく維持されることが保証されます。
+  XML コメントを使用することもできますが、ラウンドトリップ グラフィカル ユーザー インターフェイス (GUI) ツールでは、それらが破棄される場合があります。 \<Annotation> 要素の内容は、形式に関係なく維持されることが保証されます。
 
 ## <a name="schema-hierarchy"></a>スキーマの階層
- Vsct ファイルには、次の主要な要素があります。
+ .vsct ファイルの主な要素は次のとおりです。
 
 - [CommandTable 要素](../extensibility/commandtable-element.md)
 
@@ -58,9 +58,9 @@ ms.locfileid: "105062305"
 
 - [VisibilityConstraints 要素](../extensibility/visibilityconstraints-element.md)
 
-- [キーバインド要素](../extensibility/keybindings-element.md)
+- [KeyBindings 要素](../extensibility/keybindings-element.md)
 
-- [Used Commands 要素](../extensibility/usedcommands-element.md)
+- [UsedCommands 要素](../extensibility/usedcommands-element.md)
 
 - [親要素](../extensibility/parent-element.md)
 
@@ -68,12 +68,12 @@ ms.locfileid: "105062305"
 
 - [Strings 要素](../extensibility/strings-element.md)
 
-- [Command Flag 要素](../extensibility/command-flag-element.md)
+- [コマンド フラグ要素](../extensibility/command-flag-element.md)
 
 - [Symbols 要素](../extensibility/symbols-element.md)
 
-- [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)
+- [Conditional 属性](../extensibility/vsct-xml-schema-conditional-attributes.md)
 
-## <a name="see-also"></a>こちらもご覧ください
-- [Vspackage のユーザーインターフェイス要素の追加方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
-- [Vspackage でのコマンドルーティング](../extensibility/internals/command-routing-in-vspackages.md)
+## <a name="see-also"></a>関連項目
+- [VSPackage でユーザー インターフェイス要素を追加する方法](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackage のコマンド ルーティング](../extensibility/internals/command-routing-in-vspackages.md)

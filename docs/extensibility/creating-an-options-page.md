@@ -1,6 +1,6 @@
 ---
-title: オプションページを作成する |Microsoft Docs
-description: プロパティグリッドを使用してプロパティを確認および設定する簡単なツール/オプションページを作成する方法について説明します。
+title: オプション ページの作成 | Microsoft Docs
+description: プロパティ グリッドを使用してプロパティを確認および設定する簡単な [ツール] - [オプション] ページを作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -14,36 +14,36 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: eb94554b4ac1af30d8187a8ab75aa83f65dccc72
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055805"
 ---
-# <a name="create-an-options-page"></a>オプションページを作成する
+# <a name="create-an-options-page"></a>オプション ページを作成する
 
-このチュートリアルでは、プロパティグリッドを使用してプロパティを確認および設定する簡単なツール/オプションページを作成します。
+このチュートリアルでは、プロパティ グリッドを使用してプロパティを確認および設定する簡単な [ツール] - [オプション] ページを作成します。
 
- これらのプロパティをに保存し、設定ファイルから復元するには、次の手順に従い、「 [設定のカテゴリを作成](../extensibility/creating-a-settings-category.md)する」を参照してください。
+ これらのプロパティを設定ファイルに保存したり、設定ファイルから復元したりするには、以下の手順に従った後、「[設定カテゴリを作成する」](../extensibility/creating-a-settings-category.md)をご覧ください。
 
- MPF には、ツールオプションページ、クラス、およびクラスの作成に役立つ2つのクラスが用意されて <xref:Microsoft.VisualStudio.Shell.Package> <xref:Microsoft.VisualStudio.Shell.DialogPage> います。 クラスをサブクラス化することで、これらのページのコンテナーを提供する VSPackage を作成し `Package` ます。 クラスから派生することによって、各ツールオプションページを作成し `DialogPage` ます。
+ MPF には、[ツール] - [オプション] ページの作成に役立つ 2 つのクラス (<xref:Microsoft.VisualStudio.Shell.Package> クラスと <xref:Microsoft.VisualStudio.Shell.DialogPage> クラス) が用意されています。 これらのページのコンテナーを提供する VSPackage を作成するには、`Package` クラスをサブクラス化します。 各 [ツール] - [オプション] ページを作成するには、`DialogPage` クラスから派生させます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
- Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+ Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
-## <a name="create-a-tools-options-grid-page"></a>[ツールオプション] グリッドページを作成する
+## <a name="create-a-tools-options-grid-page"></a>[ツール] - [オプション] のグリッド ページを作成する
 
- このセクションでは、簡単なツールオプションのプロパティグリッドを作成します。 このグリッドを使用して、プロパティの値を表示および変更します。
+ このセクションでは、簡単な [ツール] - [オプション] のプロパティ グリッドを作成します。 このグリッドを使用すると、プロパティの値を表示および変更できます。
 
 ### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>VSIX プロジェクトを作成して VSPackage を追加するには
 
-1. すべての Visual Studio 拡張機能は、拡張機能アセットを含む VSIX デプロイプロジェクトから開始されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前の VSIX プロジェクトを作成 `MyToolsOptionsExtension` します。 VSIX プロジェクトテンプレートは、"vsix" を検索することで、[ **新しいプロジェクト** ] ダイアログで見つけることができます。
+1. すべての Visual Studio 拡張機能は、拡張機能アセットを格納する VSIX デプロイ プロジェクトから始まります。 `MyToolsOptionsExtension` という名前の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX プロジェクトを作成します。 VSIX プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログで「vsix」と検索すると見つかります。
 
-2. という名前の Visual Studio パッケージ項目テンプレートを追加して、VSPackage を追加し `MyToolsOptionsPackage` ます。 **ソリューションエクスプローラー** で、プロジェクトノードを右クリックし、[新しい項目の **追加**] を選択し  >  ます。 [**新しい項目の追加] ダイアログ** で、[ **visual C# 項目** の  >  **機能拡張**] にアクセスし、[ **visual Studio パッケージ**] を選択します。 ダイアログの下部にある [ **名前** ] フィールドで、ファイル名をに変更 `MyToolsOptionsPackage.cs` します。 VSPackage を作成する方法の詳細については、「 [VSPackage を使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-vspackage.md)」を参照してください。
+2. `MyToolsOptionsPackage` という名前の Visual Studio パッケージ項目テンプレートを追加して、VSPackage を追加します。 **ソリューション エクスプローラー** で、プロジェクト ノードを右クリックして、 **[追加]**  >  **[新しい項目]** の順に選択します。 **[新しい項目の追加]** ダイアログで、 **[Visual C# の項目]**  >  **[機能拡張]** の順にアクセスし、 **[Visual Studio パッケージ]** を選択します。 ダイアログの下部にある **[名前]** フィールドで、ファイル名を `MyToolsOptionsPackage.cs` に変更します。 VSPackage の作成方法の詳細については、「[VSPackage を使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-vspackage.md)」をご覧ください。
 
-### <a name="to-create-the-tools-options-property-grid"></a>ツールオプションのプロパティグリッドを作成するには
+### <a name="to-create-the-tools-options-property-grid"></a>[ツール] - [オプション] のプロパティ グリッドを作成するには
 
-1. コードエディターで *MyToolsOptionsPackage* ファイルを開きます。
+1. コード エディターで *MyToolsOptionsPackage* ファイルを開きます。
 
 2. 次の using ステートメントを追加します。
 
@@ -51,14 +51,14 @@ ms.locfileid: "105055805"
    using System.ComponentModel;
    ```
 
-3. クラスを宣言 `OptionPageGrid` し、から派生させ <xref:Microsoft.VisualStudio.Shell.DialogPage> ます。
+3. `OptionPageGrid` クラスを宣言し、<xref:Microsoft.VisualStudio.Shell.DialogPage> から派生させます。
 
    ```csharp
    public class OptionPageGrid : DialogPage
    {  }
    ```
 
-4. クラスにを適用して、 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> `VSPackage` オプションのカテゴリとオプションページ名をオプションページグリッドに割り当てます。 結果は次のようになります。
+4. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> を `VSPackage` クラスに適用して、OptionPageGrid のオプションのカテゴリとオプション ページ名をそのクラスに割り当てます。 結果は以下のようになります。
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -70,13 +70,13 @@ ms.locfileid: "105055805"
     public sealed class MyToolsOptionsPackage : Package
     ```
 
-5. `OptionInteger`クラスにプロパティを追加 `OptionPageGrid` します。
+5. `OptionInteger` プロパティを `OptionPageGrid` クラスに追加します。
 
-    - プロパティ <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> グリッドカテゴリのプロパティに割り当てるを適用します。
+    - <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> を適用して、そのプロパティにプロパティ グリッドカテゴリを割り当てます。
 
-    - を適用し <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> て、プロパティに名前を割り当てます。
+    - <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> を適用して、そのプロパティに名前を割り当てます。
 
-    - を適用し <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> て、プロパティに説明を割り当てます。
+    - <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> を適用して、そのプロパティに説明を割り当てます。
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -95,21 +95,21 @@ ms.locfileid: "105055805"
     ```
 
     > [!NOTE]
-    > の既定の実装で <xref:Microsoft.VisualStudio.Shell.DialogPage> は、適切なコンバーターを持つプロパティ、または適切なコンバーターを持つプロパティに拡張できる構造体または配列であるプロパティがサポートされています。 コンバーターの一覧については、「名前空間」を参照してください <xref:System.ComponentModel> 。
+    > <xref:Microsoft.VisualStudio.Shell.DialogPage> の既定の実装では、適切なコンバーターを持つプロパティ、または適切なコンバーターを持つプロパティに拡張できる構造体または配列であるプロパティがサポートされています。 コンバーターの一覧については、<xref:System.ComponentModel> 名前空間をご覧ください。
 
 6. プロジェクトをビルドし、デバッグを開始します。
 
-7. Visual Studio の実験用インスタンスで、[ **ツール** ] メニューの [ **オプション**] をクリックします。
+7. Visual Studio の実験用インスタンスで、 **[ツール]** メニューの **[オプション]** をクリックします。
 
-     左側のウィンドウに **[マイカテゴリ]** が表示されます。 (オプションのカテゴリはアルファベット順に一覧表示されているため、一覧の半分になります)。[ **マイカテゴリ** ] を開き、[ **マイグリッドページ**] をクリックします。 右ペインに [オプション] グリッドが表示されます。 プロパティカテゴリは **My Options** で、プロパティ名は " **My Integer" オプション** です。 ペインの下部に [プロパティの説明] の **[整数] オプション** が表示されます。 値を256の初期値から別の値に変更します。 [ **OK**] をクリックし、[ **グリッドページ**] を再度開きます。 新しい値が保持されていることがわかります。
+     左側のペインに **[My Category]** が表示されます (オプションのカテゴリはアルファベット順に一覧表示されるため、一覧の中ほどにそれが表示されます)。 **[My Category]** を開いてから、 **[My Grid Page]** をクリックします。 右側のペインに、オプションのグリッドが表示されます。 プロパティのカテゴリは **My Options** で、プロパティ名は **My Integer Option** です。 ペインの下部に **My integer option** というプロパティの説明が表示されます。 値を初期値の 256 から別の値に変更します。 **[OK]** をクリックしてから、 **[My Grid Page]** をもう一度開きます。 新しい値が保持されていることがわかります。
 
-     [オプション] ページは、Visual Studio の検索ボックスからも使用できます。 IDE の上部付近にある検索ボックスに「 **My category** 」と入力すると、[ **カテゴリ-> マイグリッド] ページ** が結果に表示されます。
+     お客様のオプション ページは、Visual Studio の検索ボックスからも使用できます。 IDE の上部付近にある検索ボックスに「**My Category**」と入力すると、 **[My Category] -> [My Grid Page]** が結果に表示されます。
 
-## <a name="create-a-tools-options-custom-page"></a>ツールオプションのカスタムページを作成する
+## <a name="create-a-tools-options-custom-page"></a>[ツール] - [オプション] のカスタム ページを作成する
 
- このセクションでは、カスタム UI を使用して [ツール] オプションページを作成します。 このページを使用すると、プロパティの値を表示したり、変更したりできます。
+ このセクションでは、カスタム UI を使用して [ツール] - [オプション] ページを作成します。 このページを使用すると、プロパティの値を表示および変更できます。
 
-1. コードエディターで *MyToolsOptionsPackage* ファイルを開きます。
+1. コード エディターで *MyToolsOptionsPackage* ファイルを開きます。
 
 2. 次の using ステートメントを追加します。
 
@@ -117,7 +117,7 @@ ms.locfileid: "105055805"
     using System.Windows.Forms;
     ```
 
-3. クラス `OptionPageCustom` の直前に、クラスを追加し `OptionPageGrid` ます。 から新しいクラスを派生させ `DialogPage` ます。
+3. `OptionPageCustom` クラスを `OptionPageGrid` クラスの直前に追加します。 `DialogPage` から新しいクラスを派生させます。
 
     ```csharp
     public class OptionPageCustom : DialogPage
@@ -148,7 +148,7 @@ ms.locfileid: "105055805"
     }
     ```
 
-5. VSPackage クラスに2つ目のを適用 <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> します。 この属性は、クラスにオプションのカテゴリとオプションページの名前を割り当てます。
+5. 2 つ目の <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> を VSPackage クラスに適用します。 この属性によって、オプションのカテゴリとオプション ページ名がそのクラスに割り当てます。
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -162,13 +162,13 @@ ms.locfileid: "105055805"
     public sealed class MyToolsOptionsPackage : Package
     ```
 
-6. MyUserControl という名前の新しい **ユーザーコントロール** をプロジェクトに追加します。
+6. MyUserControl という名前の新しい **ユーザー コントロール** をプロジェクトに追加します。
 
-7. **TextBox** コントロールをユーザーコントロールに追加します。
+7. **TextBox** コントロールをそのユーザー コントロールに追加します。
 
-     [ **プロパティ** ] ウィンドウのツールバーで、[ **イベント** ] ボタンをクリックし、[ **Leave** ] イベントをダブルクリックします。 新しいイベントハンドラーが *MyUserControl* コードに表示されます。
+     **[プロパティ]** ウィンドウのツール バーで、 **[イベント]** ボタンをクリックしてから、**Leave** イベントをダブルクリックします。 新しいイベント ハンドラーが *MyUserControl.cs* コードに表示されます。
 
-8. パブリックフィールドと `OptionsPage` `Initialize` メソッドをコントロールクラスに追加し、イベントハンドラーを更新して、オプションの値をテキストボックスの内容に設定します。
+8. パブリックの `OptionsPage` フィールド (`Initialize` メソッド) をコントロール クラスに追加し、イベント ハンドラーを更新して、オプションの値をテキスト ボックスの内容に設定します。
 
     ```csharp
     public partial class MyUserControl : UserControl
@@ -192,9 +192,9 @@ ms.locfileid: "105055805"
     }
     ```
 
-     フィールドは、 `optionsPage` 親インスタンスへの参照を保持し `OptionPageCustom` ます。 `Initialize`メソッドが `OptionString` **テキストボックス** に表示されます。 イベントハンドラーは、フォーカスが Textbox の外に出たときに、**テキストボックス** の現在の値をに書き込み `OptionString` ます。 
+     `optionsPage` フィールドでは、親の `OptionPageCustom` インスタンスへの参照が保持されます。 `Initialize` メソッドによって `OptionString` が **TextBox** に表示されます。 フォーカスが **TextBox** から離れると、イベント ハンドラーによって **TextBox** の現在の値が `OptionString` に書き込まれます。
 
-9. パッケージコードファイルで、プロパティのオーバーライドをクラスに追加して、 `OptionPageCustom.Window` `OptionPageCustom` のインスタンスを作成、初期化、および返すようにし `MyUserControl` ます。 クラスは次のようになります。
+9. パッケージ コード ファイルで、`OptionPageCustom.Window` プロパティのオーバーライドを `OptionPageCustom` クラスに追加して、`MyUserControl` のインスタンスを作成、初期化して、返します。 このクラスは以下のようになります。
 
     ```csharp
     [Guid("00000000-0000-0000-0000-000000000000")]
@@ -223,17 +223,17 @@ ms.locfileid: "105055805"
 
 10. プロジェクトをビルドして実行します。
 
-11. 実験用インスタンスで、[**ツール**] [オプション] の順にクリックし  >  ます。
+11. 実験用インスタンスで、 **[ツール]**  >  **[オプション]** の順にクリックします。
 
-12. [ **マイカテゴリ]** 、[ **マイカスタム] ページ** の順に検索します。
+12. **[My Category]** 、 **[My Custom Page]** の順に検索します。
 
-13. **Optionstring** の値を変更します。 [ **OK**] をクリックし、 **カスタムページ** を再度開きます。 新しい値が保持されていることを確認できます。
+13. **OptionString** の値を変更します。 **[OK]** をクリックしてから、 **[My Custom Page]** をもう一度開きます。 新しい値が保持されていることがわかります。
 
-## <a name="access-options"></a>アクセスオプション
+## <a name="access-options"></a>アクセス オプション
 
- このセクションでは、関連付けられている [ツールオプション] ページをホストする VSPackage からオプションの値を取得します。 同じ手法を使用して、パブリックプロパティの値を取得することもできます。
+ このセクションでは、関連付けられている [ツール] - [オプション] ページをホストする VSPackage からオプションの値を取得します。 同じ手法を使用して、パブリック プロパティの値を取得することもできます。
 
-1. パッケージコードファイルで、 **MyToolsOptionsPackage** クラスに **optioninteger** というパブリックプロパティを追加します。
+1. パッケージ コード ファイルで、**OptionInteger** というパブリック プロパティ を **MyToolsOptionsPackage** クラスに追加します。
 
     ```csharp
     public int OptionInteger
@@ -247,11 +247,11 @@ ms.locfileid: "105055805"
 
     ```
 
-     このコード <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> は、を呼び出してインスタンスを作成または取得 `OptionPageGrid` します。 `OptionPageGrid` を呼び出して <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> 、パブリックプロパティであるオプションを読み込みます。
+     このコードでは、<xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> を呼び出して `OptionPageGrid` インスタンスを作成または取得します。 `OptionPageGrid` では、<xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> を呼び出して、パブリック プロパティであるそのオプションを読み込みます。
 
-2. ここで、 **MyToolsOptionsCommand** という名前のカスタムコマンド項目テンプレートを追加して、値を表示します。 [**新しい項目の追加**] ダイアログで、[ **Visual C#** の  >  **機能拡張**] にアクセスし、[**カスタムコマンド**] を選択します。 ウィンドウの下部にある [ **名前** ] フィールドで、[コマンドファイル名] を *MyToolsOptionsCommand* に変更します。
+2. ここで、**MyToolsOptionsCommand** という名前のカスタム コマンド項目テンプレートを追加して、値を表示します。 **[新しい項目の追加]** ダイアログで、 **[Visual C#]**  >  **[機能拡張]** の順にアクセスし、 **[カスタム コマンド]** を選択します。 ウィンドウの下部にある **[名前]** フィールドで、コマンド ファイル名を *MyToolsOptionsCommand.cs* に変更します。
 
-3. *MyToolsOptionsCommand* ファイルで、コマンドのメソッドの本体を `ShowMessageBox` 次のように置き換えます。
+3. *MyToolsOptionsCommand* ファイルで、コマンドの `ShowMessageBox` メソッドの本体を以下に置き換えます。
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -264,10 +264,10 @@ ms.locfileid: "105055805"
 
 4. プロジェクトをビルドし、デバッグを開始します。
 
-5. 実験用インスタンスで、[ **ツール** ] メニューの [ **MyToolsOptionsCommand の呼び出し**] をクリックします。
+5. 実験用インスタンスで、 **[ツール]** メニューの **[MyToolsOptionsCommand の呼び出し]** をクリックします。
 
-     メッセージボックスに、の現在の値が表示され `OptionInteger` ます。
+     メッセージ ボックスに `OptionInteger` の現在の値が表示されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [[オプション] ページと [オプション] ページ](../extensibility/internals/options-and-options-pages.md)
+- [オプションとオプション ページ](../extensibility/internals/options-and-options-pages.md)

@@ -1,6 +1,6 @@
 ---
-title: Button 要素 |Microsoft Docs
-description: Button 要素は、ユーザーが操作できる要素を定義します。 ボタンは、ボタン、メニューボタン、および SplitDropDown という異なる種類にすることができます。
+title: Button 要素 | Microsoft Docs
+description: Button 要素では、ユーザーが操作できる要素を定義します。 ボタンは、Button、MenuButton、SplitDropDown のいくつかの種類から選択できます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: ec0640313195d6a15599d1a765081557c0c1a75a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068145"
 ---
 # <a name="button-element"></a>Button 要素
-ユーザーが操作できる要素を定義します。 ボタンには、ボタン、MenuButton、および SplitDropDown のさまざまな種類があります。
+ユーザーが操作できる要素を定義します。 ボタンは、Button、MenuButton、SplitDropDown のいくつかの種類から選択できます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,9 +43,9 @@ ms.locfileid: "105068145"
 |---------------|-----------------|
 |guid|必須。 GUID/ID コマンド識別子の GUID。|
 |id|必須。 GUID/ID コマンド識別子の ID。|
-|priority|省略可能。 優先度を示す数値です。|
-|型|省略可能。 ボタンの種類を指定する列挙値。<br /><br /> 指定されていない場合は、ボタンを使用します。<br /><br /> Button<br /> ツールバーに表示される標準コマンド (通常はアイコンボタン)、メニュー、およびコンテキストメニュー。<br /><br /> MenuButton<br /> コマンドを実行せずに別のメニューを生成するメニュー項目。<br /><br /> SplitDropDown<br /> Microsoft Word の [標準] ツールバーの [元に戻す] および [やり直し] ボタンなどのコントロール。|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|priority|省略可能。 優先順位を指定する数値。|
+|型|省略可能。 ボタンの種類を指定する列挙値。<br /><br /> 指定されていない場合は、Button を使用します。<br /><br /> ボタン<br /> ツール バー (通常はアイコン化されたボタンとして)、メニュー、コンテキスト メニューに表示される標準コマンド。<br /><br /> MenuButton<br /> コマンドは実行しないが、別のメニューを生成するメニュー項目。<br /><br /> SplitDropDown<br /> Microsoft Word の標準ツール バーにある [元に戻す] ボタンや [やり直し] ボタンなどのコントロール。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
@@ -53,18 +53,18 @@ ms.locfileid: "105068145"
 |-------------|-----------------|
 |[親要素](../extensibility/parent-element.md)|省略可能。 ボタンの親要素。|
 |[Icon 要素](../extensibility/icon-element.md)|省略可能。 ボタンに関連付けられているアイコン。|
-|[Command flag 要素](../extensibility/command-flag-element.md)|必須。 ボタンの CommandFlag の有効な値は次のとおりです。<br /><br /> -AllowParams<br /><br /> - CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -Defaul/Visible<br /><br /> -DontCache<br /><br /> -DynamicItemStart<br /><br /> -DynamicVisibility<br /><br /> -FixMenuController<br /><br /> -IconAndText<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -NoShowOnMenuController<br /><br /> -Pict<br /><br /> -PostExec<br /><br /> - ProfferedCmd<br /><br /> -RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> -TextMenuUseButton<br /><br /> -TextChanges<br /><br /> -Text] ボタン<br /><br /> -TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> -TextMenuUseButton<br /><br /> -TextOnly|
-|[Strings 要素](../extensibility/strings-element.md)|必須。 子の [Buttontext 要素](../extensibility/buttontext-element.md) を定義する必要があります。|
-|注釈|コメント (省略可能)。|
+|[コマンド フラグ要素](../extensibility/command-flag-element.md)|必須。 Button の有効な CommandFlag 値は次のとおりです。<br /><br /> - AllowParams<br /><br /> - CommandWellOnly<br /><br /> - DefaultDisabled<br /><br /> - DefaultInvisible<br /><br /> - DontCache<br /><br /> - DynamicItemStart<br /><br /> - DynamicVisibility<br /><br /> - FixMenuController<br /><br /> - IconAndText<br /><br /> - NoButtonCustomize<br /><br /> - NoCustomize<br /><br /> - NoKeyCustomize<br /><br /> - NoShowOnMenuController<br /><br /> - Pict<br /><br /> - PostExec<br /><br /> - ProfferedCmd<br /><br /> - RouteToDocs<br /><br /> - TextCascadeUseBtn<br /><br /> - TextMenuUseButton<br /><br /> - TextChanges<br /><br /> - TextChangesButton<br /><br /> - TextContextUseButton<br /><br /> - TextMenuCtrlUseMenu<br /><br /> - TextMenuUseButton<br /><br /> - TextOnly|
+|[Strings 要素](../extensibility/strings-element.md)|必須。 子の [ButtonText 要素](../extensibility/buttontext-element.md)を定義する必要があります。|
+|注釈|省略可能なコメント。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[Buttons 要素](../extensibility/buttons-element.md)|グループボタン要素。|
+|[Buttons 要素](../extensibility/buttons-element.md)|Button 要素をグループ化します。|
 
 ## <a name="example"></a>例
- 次の例では、 *vsct* ファイルでボタンを定義しています。
+ 次の例では、 *.vsct* ファイルでボタンを定義しています。
 
  ```xml
 <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -78,5 +78,5 @@ ms.locfileid: "105068145"
 </Button>
  ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [Visual Studio コマンドテーブル (vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>関連項目
+- [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

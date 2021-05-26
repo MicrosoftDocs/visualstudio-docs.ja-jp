@@ -1,6 +1,6 @@
 ---
-title: 言語サーバープロトコル拡張機能を追加する |Microsoft Docs
-description: 言語サーバープロトコル (LSP) に基づいて言語サーバーを統合する Visual Studio 拡張機能を作成する方法について説明します。
+title: 言語サーバー プロトコルの拡張機能の追加 | Microsoft Docs
+description: 言語サーバー プロトコル (LSP) に基づいて言語サーバーを統合する Visual Studio 拡張機能を作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/14/2017
 ms.topic: conceptual
@@ -12,96 +12,96 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: accf054cbf0b58066568124a3f35e064ce3cba78
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094992"
 ---
 # <a name="add-a-language-server-protocol-extension"></a>言語サーバー プロトコルの拡張機能の追加
 
-言語サーバープロトコル (LSP) は、JSON RPC v2.0 形式の共通プロトコルで、さまざまなコードエディターに言語サービス機能を提供するために使用されます。 開発者は、このプロトコルを使用して、1つの言語サーバーを作成して、その LSP をサポートするさまざまなコードエディターに IntelliSense、エラー診断、すべての参照の検索などの言語サービス機能を提供できます。 従来、Visual Studio の言語サービスは、TextMate 文法ファイルを使用して、構文の強調表示などの基本的な機能を提供したり、豊富なデータを提供するために Visual Studio 機能拡張 Api の完全なセットを使用するカスタム言語サービスを記述したりすることによって追加できます。 Visual Studio で LSP をサポートしている場合は、3つ目のオプションがあります。
+言語サーバー プロトコル (LSP) は、JSON RPC v2.0 形式の共通プロトコルであり、さまざまなコード エディターに言語サービス機能を提供するために使用されます。 開発者は、このプロトコルを使用して、1 つの言語サーバーを作成して、その LSP をサポートするさまざまなコード エディターに IntelliSense、エラー診断、すべての参照の検索などの言語サービス機能を提供できます。 従来、Visual Studio の言語サービスを追加するには、構文の強調表示などの基本的な機能を提供するために TextMate 文法ファイルを使用するか、より豊富なデータを提供するために Visual Studio 機能拡張 API の完全なセットを使用するカスタム言語サービスを記述する必要がありました。 Visual Studio による LSP のサポートでは、3 番目のオプションがあります。
 
-![Visual Studio の言語サーバープロトコルサービス](media/lsp-service-in-VS.png)
+![Visual Studio での言語サーバー プロトコル サービス](media/lsp-service-in-VS.png)
 
 ## <a name="language-server-protocol"></a>言語サーバー プロトコル
 
-![言語サーバープロトコルの実装](media/lsp-implementation.png)
+![言語サーバー プロトロルの実装](media/lsp-implementation.png)
 
-この記事では、LSP ベースの言語サーバーを使用する Visual Studio 拡張機能を作成する方法について説明します。 LSP ベースの言語サーバーを既に開発しており、それを Visual Studio に統合するだけであることを前提としています。
+この記事では、LSP ベースの言語サーバーを使用する Visual Studio 拡張機能を作成する方法について説明します。 LSP ベースの言語サーバーを既に開発しており、それを Visual Studio に統合する必要だけがあることを前提としています。
 
-Visual Studio 内でのサポートのために、言語サーバーは、次のようにストリームベースの転送機構を使用してクライアント (Visual Studio) と通信できます。
+Visual Studio 内でのサポートのために、言語サーバーは、たとえば次のようなストリームベースの転送機構を使用してクライアント (Visual Studio) と通信できます。
 
 * 標準入力/出力ストリーム
 * 名前付きパイプ
 * ソケット (TCP のみ)
 
-Visual Studio での LSP とそのサポートの目的は、Visual Studio 製品に含まれていない言語サービスをオンボードすることです。 これは、Visual Studio で既存の言語サービス (C# など) を拡張するためのものではありません。 既存の言語を拡張するには、言語サービスの拡張ガイド (たとえば ["Roslyn" .NET Compiler Platform](../extensibility/dotnet-compiler-platform-roslyn-extensibility.md)) を参照するか、「 [エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)」を参照してください。
+Visual Studio での LSP とそのサポートの目的は、Visual Studio 製品に含まれていない言語サービスをオンボードすることです。 Visual Studio で既存の言語サービス (C# など) を拡張することを目的としているわけではありません。 既存の言語を拡張するには、言語サービスの拡張ガイド (たとえば ["Roslyn" .NET Compiler Platform](../extensibility/dotnet-compiler-platform-roslyn-extensibility.md)) を参照するか、[エディターと言語サービスの拡張](../extensibility/extending-the-editor-and-language-services.md)に関するページをご覧ください。
 
-プロトコル自体の詳細については、 [こちら](https://github.com/Microsoft/language-server-protocol)のドキュメントを参照してください。
+プロトコル自体の詳細については、[こちら](https://github.com/Microsoft/language-server-protocol)のドキュメントを参照してください。
 
-サンプル言語サーバーを作成する方法、または既存の言語サーバーを Visual Studio Code に統合する方法の詳細については、 [こちら](https://code.visualstudio.com/docs/extensions/example-language-server)のドキュメントを参照してください。
+サンプル言語サーバーを作成する方法、または既存の言語サーバーを Visual Studio Code に統合する方法の詳細については、[こちら](https://code.visualstudio.com/docs/extensions/example-language-server)のドキュメントを参照してください。
 
-## <a name="language-server-protocol-supported-features"></a>言語サーバープロトコルでサポートされる機能
+## <a name="language-server-protocol-supported-features"></a>言語サーバー プロトコルでサポートされる機能
 
-次の表は、Visual Studio でサポートされている LSP 機能を示しています。
+次の表には、Visual Studio でサポートされている LSP 機能が示されています。
 
-Message | Visual Studio でのサポートがある
+メッセージ | Visual Studio での IIS サポート
 --- | ---
-initialize | はい
-初期化済み | はい
-shutdown | はい
-exit | はい
-$/cancelrequest | はい
-window/showMessage | はい
-window/showMessageRequest | はい
-window/logMessage | はい
-テレメトリ/イベント |
-クライアント/registerCapability |
-クライアント/unregisterCapability |
-ワークスペース/didChangeConfiguration | はい
-ワークスペース/didChangeWatchedFiles | はい
-ワークスペース/シンボル | はい
-ワークスペース/executeCommand | はい
-ワークスペース/applyEdit | はい
-textDocument/publishDiagnostics | はい
-textDocument/didOpen | はい
-textDocument/didChange | はい
-textDocument/保存 |
-textDocument/は、 |
-textDocument/didSave | はい
-textDocument/didClose | はい
-textDocument/補完機能 | はい
-完了/解決 | はい
-textDocument/ホバー | はい
-textDocument/signatureHelp | はい
-textDocument/references | はい
-textDocument/documentHighlight | はい
-textDocument/documentSymbol | はい
-textDocument/書式設定 | はい
-textDocument/rangeFormatting 設定 | はい
-textDocument/onTypeFormatting 設定 |
-textDocument/定義 | はい
-textDocument/codeAction | はい
+initialize | ○
+初期化済み | ○
+shutdown | ○
+exit | ○
+$/cancelRequest | ○
+window/showMessage | ○
+window/showMessageRequest | ○
+window/logMessage | ○
+telemetry/event |
+client/registerCapability |
+client/unregisterCapability |
+workspace/didChangeConfiguration | ○
+workspace/didChangeWatchedFiles | ○
+workspace/symbol | ○
+workspace/executeCommand | ○
+workspace/applyEdit | ○
+textDocument/publishDiagnostics | ○
+textDocument/didOpen | ○
+textDocument/didChange | ○
+textDocument/willSave |
+textDocument/willSaveWaitUntil |
+textDocument/didSave | ○
+textDocument/didClose | ○
+textDocument/completion | ○
+completion/resolve | ○
+textDocument/hover | ○
+textDocument/signatureHelp | ○
+textDocument/references | ○
+textDocument/documentHighlight | ○
+textDocument/documentSymbol | ○
+textDocument/formatting | ○
+textDocument/rangeFormatting | ○
+textDocument/onTypeFormatting |
+textDocument/definition | ○
+textDocument/codeAction | ○
 textDocument/codeLens |
-codeLens/解決 |
+codeLens/resolve |
 textDocument/documentLink |
-documentLink/解決 |
-textDocument/名前の変更 | はい
+documentLink/resolve |
+textDocument/rename | ○
 
 ## <a name="get-started"></a>はじめに
 
 > [!NOTE]
-> Visual Studio 2017 バージョン15.8 以降では、共通言語サーバープロトコルのサポートが Visual Studio に組み込まれています。 プレビュー [言語サーバークライアントの VSIX](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview) バージョンを使用して LSP 拡張機能をビルドした場合、バージョン15.8 以降にアップグレードすると、その拡張機能が動作しなくなります。 LSP 拡張機能を再び動作させるには、次の手順を実行する必要があります。
+> Visual Studio 2017 バージョン 15.8 以降では、共通言語サーバー プロトコルのサポートが Visual Studio に組み込まれています。 [Language Server Client VSIX](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview) のプレビュー バージョンを使用して LSP 拡張機能をビルドしている場合は、バージョン 15.8 以上にアップグレードすると、その拡張機能は動作しなくなります。 LSP 拡張機能を再び動作させるには、次の手順を実行する必要があります。
 >
 > 1. Microsoft Visual Studio Language Server Protocol Preview VSIX をアンインストールします。
 >
->    バージョン15.8 以降では、Visual Studio でアップグレードを実行するたびに、プレビュー VSIX が自動的に検出され、削除されます。
+>    バージョン 15.8 以降は、Visual Studio のアップグレードを実行するたびに、VSIX のプレビューが自動的に検出され削除されます。
 >
-> 2. Nuget の参照を、 [LSP パッケージ](https://www.nuget.org/packages/Microsoft.VisualStudio.LanguageServer.Client)のプレビュー版以外の最新バージョンに更新します。
+> 2. Nuget 参照を、[LSP パッケージ](https://www.nuget.org/packages/Microsoft.VisualStudio.LanguageServer.Client)のプレビュー版以外の最新バージョンに更新します。
 >
-> 3. VSIX マニフェストの Microsoft Visual Studio Language Server Protocol Preview VSIX への依存関係を削除します。
+> 3. VSIX マニフェスト内の Microsoft Visual Studio Language Server Protocol Preview VSIX への依存関係を削除します。
 >
-> 4. VSIX で、インストールターゲットの下限として Visual Studio 2017 バージョン 15.8 Preview 3 が指定されていることを確認します。
+> 4. VSIX で、インストール ターゲットの下限として Visual Studio 2017 バージョン 15.8 Preview 3 が指定されていることを確認します。
 >
 > 5. リビルドして再デプロイします。
 
@@ -109,52 +109,52 @@ textDocument/名前の変更 | はい
 
 LSP ベースの言語サーバーを使用して言語サービス拡張機能を作成するには、まず、VS のインスタンス用に **Visual Studio 拡張機能の開発** ワークロードがインストールされていることを確認します。
 
-次に、[ファイル] [新規] [   >  **プロジェクト**] [  >  **Visual C#**] [拡張性] [  >    >  **vsix プロジェクト**] の順に移動して、新しい VSIX プロジェクトを作成します。
+次に、 **[ファイル]**  >  **[新しいプロジェクト]**  >  **[Visual C#]**  >  **[拡張性]**  >  **[VSIX プロジェクト]** の順に選択して、新しい VSIX プロジェクトを作成します。
 
-![vsix プロジェクトの作成](media/lsp-vsix-project.png)
+![VSIX プロジェクトを作成する](media/lsp-vsix-project.png)
 
 ### <a name="language-server-and-runtime-installation"></a>言語サーバーとランタイムのインストール
 
-既定では、Visual Studio で LSP ベースの言語サーバーをサポートするために作成される拡張機能には、言語サーバー自体や、それらを実行するために必要なランタイムは含まれていません。 拡張機能の開発者は、必要な言語サーバーとランタイムの配布を担当します。 これを行うには、いくつかの方法があります。
+既定では、Visual Studio で LSP ベースの言語サーバーをサポートするために作成される拡張機能には、言語サーバー自体や、それらを実行するために必要なランタイムは含まれていません。 拡張機能の開発者が、必要な言語サーバーとランタイムの配布を担当します。 それにはいくつかの方法があります。
 
-* 言語サーバーは、VSIX にコンテンツファイルとして埋め込むことができます。
-* 言語サーバーや必要なランタイムをインストールするための MSI を作成します。
-* ランタイムと言語サーバーを取得する方法をユーザーに通知する、Marketplace の手順を提供します。
+* 言語サーバーは、VSIX にコンテンツ ファイルとして埋め込むことができます。
+* MSI を作成して、言語サーバーまたは必要なランタイムをインストールします。
+* ランタイムおよび言語サーバーを取得する方法をユーザーに伝える、Marketplace での手順を指定します。
 
 ### <a name="textmate-grammar-files"></a>TextMate 文法ファイル
 
-LSP には、言語のテキストの色付け方法に関する仕様は含まれていません。 拡張機能の開発者は、Visual Studio の言語に対してカスタムの色付けを提供するために、TextMate 文法ファイルを使用できます。 カスタムの TextMate 文法またはテーマファイルを追加するには、次の手順を実行します。
+LSP には、言語にテキストの色付けを与える方法に関する仕様は含まれていません。 Visual Studio で言語にカスタムの色付けを行うために、拡張機能の開発者は、TextMate 文法ファイルを使用できます。 カスタムの TextMate 文法またはテーマ ファイルを追加するには、次の手順に従います。
 
-1. 拡張機能内に "文法" という名前のフォルダーを作成します (または、任意の名前を選択します)。
+1. "Grammars" という名前のフォルダーを拡張機能内に作成します (または選択した任意の名前にできます)。
 
-2. *文法* フォルダー内に、カスタムの色付けを提供する、任意の *\* tmlanguage*、 *\* plist*、 *\* tmlanguage*、または *\* json* ファイルを含めます。
+2. *Grammars* フォルダー内に、カスタムの色付けを与えるすべての *\*.tmlanguage*、 *\*.plist*、 *\*.tmtheme*、または *\*.json* ファイルを含めます。
 
    > [!TIP]
-   > *Tmtheme* ファイルは、スコープが Visual Studio 分類 (名前付きの色キー) にどのようにマップされるかを定義します。 ガイダンスについては、 *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ \<version> \\ \<SKU> \Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg* ディレクトリで、グローバルな *tmtheme* ファイルを参照できます。
+   > *.tmtheme* ファイルでは、スコープがどのように Visual Studio の分類 (名前付き色キー) にマップするかを定義します。 詳細については、 *%ProgramFiles(x86)%\Microsoft Visual Studio\\\<version>\\\<SKU>\Common7\IDE\CommonExtensions\Microsoft\TextMate\Starterkit\Themesg* ディレクトリにあるグローバル *.tmtheme* ファイルを参照できます。
 
-3. *Pkgdef* ファイルを作成し、次のような行を追加します。
+3. *.pkgdef* ファイルを作成し、 次のような行を追加します。
 
     ```
     [$RootKey$\TextMate\Repositories]
     "MyLang"="$PackageFolder$\Grammars"
     ```
 
-4. ファイルを右クリックし、[ **プロパティ**] を選択します。 [ **ビルド** ] アクションを [ **コンテンツ** ] に変更し、[ **VSIX に含める** ] プロパティを [ **true**] に変更します。
+4. ファイルを右クリックして、 **[プロパティ]** を選択します。 **[ビルド]** アクションを **[コンテンツ]** に変更し、 **[VSIX に含める]** プロパティを **[true]** に変更します。
 
-前の手順を完了すると、' MyLang ' という名前のリポジトリソースとして *文法* フォルダーがパッケージのインストールディレクトリに追加されます (' mylang ' はあいまいさを解消するための名前であり、任意の一意の文字列にすることができます)。 このディレクトリ内のすべての文法 (*tmlanguage* ファイル) とテーマファイル (*tmlanguage* ファイル) は、チャンスとして取得され、textmate で提供される組み込みの文法を置き換えます。 文法ファイルの宣言された拡張子が、開いているファイルの拡張子と一致する場合、TextMate がステップインします。
+前の手順を完了した後、*Grammars* フォルダーが、'MyLang' ('MyLang' は) という名前のリポジトリ ソースとして、パッケージのインストール ディレクトリに追加されます。 このディレクトリ内の文法ファイル ( *.tmlanguage* ファイル) とテーマ ファイル ( *.tmtheme* ファイル) のすべてが候補として選択され、TextMate で与えられた組み込みの文法に取って代わります。 文法ファイルの宣言された拡張子が、開かれているファイルの拡張子に一致した場合、TextMate はステップインします。
 
 ## <a name="create-a-simple-language-client"></a>単純な言語クライアントを作成する
 
-### <a name="main-interface---ilanguageclient"></a>Main インターフェイス- [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true)
+### <a name="main-interface---ilanguageclient"></a>メイン インターフェイス - [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true)
 
-VSIX プロジェクトを作成したら、次の NuGet パッケージをプロジェクトに追加します。
+VSIX プロジェクトの作成後、次の NuGet パッケージをプロジェクトに追加します。
 
-* [VisualStudio. LanguageServer](https://www.nuget.org/packages/Microsoft.VisualStudio.LanguageServer.Client)
+* [Microsoft.VisualStudio.LanguageServer.Client](https://www.nuget.org/packages/Microsoft.VisualStudio.LanguageServer.Client)
 
 > [!NOTE]
-> 前の手順を完了した後に NuGet パッケージに対する依存関係を取得すると、Newtonsoft.Jsと StreamJsonRpc パッケージもプロジェクトに追加されます。 **拡張機能が対象とする Visual Studio のバージョンに新しいバージョンがインストールされることが確実である場合を除き、これらのパッケージは更新しないで** ください。 アセンブリは VSIX に含まれません。代わりに、Visual Studio のインストールディレクトリから選択されます。 ユーザーのコンピューターにインストールされているものより新しいバージョンのアセンブリを参照している場合、拡張機能は機能しません。
+> 前の手順を終えた後に NuGet パッケージに依存すると、Newtonsoft.Json および StreamJsonRpc パッケージもプロジェクトに追加されます。 **拡張機能が対象とする Visual Studio のバージョンに、これらの新しいバージョンがインストールされることが確実でない限りは、これらのパッケージを更新しないでください**。 アセンブリは、VSIX に含まれません。代わりに、Visual Studio インストール ディレクトリから選択されます。 ユーザーのマシンにインストールされているバージョンより新しいバージョンのアセンブリを参照している場合、拡張機能は機能しません。
 
-次に、 [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装する新しいクラスを作成できます。これは、LSP ベースの言語サーバーに接続する言語クライアントに必要な主要なインターフェイスです。
+この場合、LSP ベースの言語サーバーに接続する言語クライアントに必要なメイン インターフェイスである、[ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装する新しいクラスを作成できます。
 
 サンプルを次に示します。
 
@@ -217,13 +217,13 @@ namespace MockLanguageExtension
 }
 ```
 
-実装する必要のある主なメソッドは、 [Onロード async](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) と [アクティブ非同期](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true)です。 [Onloaded async](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) は、Visual Studio によって拡張機能が読み込まれ、言語サーバーを開始する準備ができたときに呼び出されます。 このメソッドでは、 [starfinaldelegate](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) をすぐに呼び出して、言語サーバーを開始する必要があることを通知することも、追加のロジックを実行し [て後で](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) 起動することもできます。 **言語サーバーをアクティブ化するには、ある時点で StartAsync 呼び出す必要があります。**
+実装する必要のある主なメソッドは、[OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) と [ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true) です。 [OnLoadedAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.onloadedasync?view=visualstudiosdk-2017&preserve-view=true) は、Visual Studio に拡張機能が読み込まれ、言語サーバーを起動する準備が整ったときに呼び出されます。 このメソッドでは、[StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) デリゲートをすぐに呼び出して、言語サーバーを起動する必要があることを通知することも、追加のロジックを実行して後から [StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) を呼び出すこともできます。 **言語サーバーをアクティブ化するには、ある時点で StartAsync を呼び出す必要があります。**
 
-"[アクティブな非同期](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true)" は、 [startasync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true)デリゲートを呼び出すことによって、最終的に呼び出されるメソッドです。 言語サーバーを起動して接続を確立するロジックが含まれています。 サーバーへの書き込みとサーバーからの読み取りのためのストリームを含む接続オブジェクトを返す必要があります。 ここでスローされた例外は、Visual Studio の情報バーメッセージを使用してキャッチされ、ユーザーに表示されます。
+[ActivateAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.activateasync?view=visualstudiosdk-2017&preserve-view=true) は、[StartAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient.startasync?view=visualstudiosdk-2017&preserve-view=true) デリゲートを呼び出すと、最終的に呼び出されるメソッドです。 これには、言語サーバーを起動し、そこへの接続を確立するロジックが含まれています。 サーバーへの書き込みとサーバーからの読み取りのストリームを含んだ接続オブジェクトを返す必要があります。 ここでスローされた例外はキャッチされ、Visual Studio の InfoBar メッセージを介してユーザーに表示されます。
 
-### <a name="activation"></a>ライセンス認証
+### <a name="activation"></a>アクティブ化
 
-言語クライアントクラスが実装されたら、それに対して2つの属性を定義して、Visual Studio への読み込み方法とアクティブ化方法を定義する必要があります。
+言語クライアント クラスを実装した後、そのクラスを Visual Studio に読み込み、アクティブ化する方法を定義するための 2 つの属性を定義する必要があります。
 
 ```csharp
   [Export(typeof(ILanguageClient))]
@@ -232,27 +232,27 @@ namespace MockLanguageExtension
 
 ### <a name="mef"></a>MEF
 
-Visual Studio は [MEF](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (Managed Extensibility Framework) を使用して、その機能拡張ポイントを管理します。 [Export](/dotnet/api/system.componentmodel.composition.exportattribute)属性は、このクラスが拡張ポイントとして取得され、適切なタイミングで読み込まれる必要があることを Visual Studio に示します。
+Visual Studio では [MEF](https://github.com/Microsoft/vs-mef/blob/master/doc/index.md) (Managed Extensibility Framework) を使用して、その拡張ポイントを管理します。 [Export](/dotnet/api/system.componentmodel.composition.exportattribute) 属性は、このクラスを拡張ポイントとして選択し、適切な時点で読み込む必要があることを、Visual Studio に示します。
 
-MEF を使用するには、VSIX マニフェストで、MEF を資産として定義する必要もあります。
+MEF を使用するには、VSIX マニフェストで MEF をアセットとして定義する必要もあります。
 
-VSIX マニフェストデザイナーを開き、[ **アセット** ] タブに移動します。
+VSIX マニフェスト デザイナーを開き、 **[アセット]** タブに移動します。
 
-![MEF アセットの追加](media/lsp-add-asset.png)
+![MEF アセットを追加する](media/lsp-add-asset.png)
 
-新しい資産を作成するには、[ **新規** ] をクリックします。
+**[新規]** をクリックして、新しいアセットを追加します。
 
-![MEF 資産の定義](media/lsp-define-asset.png)
+![MEF アセットを定義する](media/lsp-define-asset.png)
 
-* **「** VisualStudio」と入力します。
-* **ソース**: 現在のソリューション内のプロジェクト
-* **プロジェクト**: [プロジェクト]
+* **[種類]** : Microsoft.VisualStudio.MefComponent
+* **[ソース]** : 現在のソリューションのプロジェクト
+* **[プロジェクト]** : [お使いのプロジェクト]
 
-### <a name="content-type-definition"></a>コンテンツタイプの定義
+### <a name="content-type-definition"></a>コンテンツ タイプの定義
 
-現在、LSP ベースの言語サーバー拡張機能を読み込む唯一の方法は、ファイルのコンテンツタイプです。 つまり、言語クライアントクラス ( [ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true)を実装) を定義する場合は、ファイルの種類を定義する必要があります。このクラスを開くと、拡張機能が読み込まれます。 定義されているコンテンツの種類に一致するファイルが開かれていない場合、拡張機能は読み込まれません。
+現在、LSP ベースの言語サーバー拡張機能を読み込む唯一の方法は、ファイル コンテンツ タイプによるものです。 つまり、言語クライアント クラス ([ILanguageClient](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclient?view=visualstudiosdk-2017&preserve-view=true) を実装) を定義するときに、ファイルの種類を定義する必要があり、このファイルを開くと拡張機能が読み込まれます。 定義されているコンテンツ タイプに一致するファイルが開かれていない場合、拡張機能は読み込まれません。
 
-これを行うには、1つまたは複数のクラスを定義し `ContentTypeDefinition` ます。
+これを行うには、1 つ以上の `ContentTypeDefinition` クラスを定義します。
 
 ```csharp
 namespace MockLanguageExtension
@@ -272,9 +272,9 @@ namespace MockLanguageExtension
 }
 ```
 
-前の例では、 *. bar* ファイル拡張子で終わるファイルに対して、コンテンツの種類の定義が作成されています。 コンテンツの種類の定義には "bar" という名前が付けられ、 [CodeRemoteContentTypeName](/dotnet/api/microsoft.visualstudio.languageserver.client.coderemotecontentdefinition.coderemotecontenttypename?view=visualstudiosdk-2017&preserve-view=true)から派生する必要があります。
+前の例で、 *.bar* ファイル拡張子で終わるファイルに対して、コンテンツ タイプ定義が作成されています。 コンテンツ タイプ定義には "bar" という名前が付けられ、[CodeRemoteContentTypeName](/dotnet/api/microsoft.visualstudio.languageserver.client.coderemotecontentdefinition.coderemotecontenttypename?view=visualstudiosdk-2017&preserve-view=true) から派生している必要があります。
 
-コンテンツタイプの定義を追加した後、言語クライアントの拡張機能をどのような場合に言語クライアントクラスに読み込むかを定義できます。
+コンテンツ タイプ定義を追加した後、言語クライアントの拡張機能を言語クライアントクラスに読み込むタイミングを定義できます。
 
 ```csharp
     [ContentType("bar")]
@@ -284,17 +284,17 @@ namespace MockLanguageExtension
     }
 ```
 
-LSP 言語サーバーのサポートを追加する場合、Visual Studio で独自のプロジェクトシステムを実装する必要はありません。 お客様は、Visual Studio で1つのファイルまたはフォルダーを開いて、言語サービスの使用を開始できます。 実際、LSP 言語サーバーのサポートは、開いているフォルダーやファイルのシナリオでのみ機能するように設計されています。 カスタムプロジェクトシステムが実装されている場合、一部の機能 (設定など) は機能しません。
+LSP 言語サーバーのサポートの追加には、Visual Studio に自身のプロジェクト システムを実装する必要はありません。 お客様は、Visual Studio で 1 つのファイルまたはフォルダーを開いて、言語サービスの使用を開始できます。 実際、LSP 言語サーバーのサポートは、開いているフォルダーやファイルのシナリオでのみ機能するように設計されています。 カスタム プロジェクト システムが実装されている場合、一部の機能 (設定など) は機能しません。
 
 ## <a name="advanced-features"></a>高度な機能
 
 ### <a name="settings"></a>設定
 
-カスタム言語サーバー固有の設定はサポートされていますが、引き続き改善されています。 設定は言語サーバーがサポートする内容に固有であり、通常は言語サーバーがデータを出力する方法を制御します。 たとえば、言語サーバーには、報告されるエラーの最大数の設定が含まれている場合があります。 拡張機能の作成者は、特定のプロジェクトのユーザーが変更できる既定値を定義します。
+カスタム言語サーバー固有の設定のサポートは利用できますが、まだ改善しているところです。 設定は、言語サーバーのサポート対象に固有であり、通常は言語サーバーがデータを生成する方法を制御します。 たとえば、言語サーバーには、報告されるエラーの最大数の設定が含まれている場合があります。 拡張機能の作成者が既定値を定義しますが、特定のプロジェクトについてはユーザーがこれを変更できます。
 
-次の手順に従って、LSP 言語サービス拡張機能に設定のサポートを追加します。
+下の手順に従って、設定のサポートを LSP 言語サービス拡張機能に追加します。
 
-1. 設定とその既定値を含む JSON ファイル (たとえば、 *MockLanguageExtensionSettings.js*) をプロジェクトに追加します。 次に例を示します。
+1. 設定とその既定値を含む JSON ファイル (たとえば、*MockLanguageExtensionSettings.json*) をプロジェクトに追加します。 次に例を示します。
 
     ```json
     {
@@ -302,9 +302,9 @@ LSP 言語サーバーのサポートを追加する場合、Visual Studio で�
     }
     ```
 
-2. JSON ファイルを右クリックし、[ **プロパティ**] を選択します。 **ビルド** アクションを "Content" に、"VSIX に含める" プロパティを **true** に変更します。
+2. JSON ファイルを右クリックして、 **[プロパティ]** を選択します。 **[ビルド]** アクションを "Content" に、"VSIX に含める" プロパティを **true** に変更します。
 
-3. ConfigurationSections を実装し、JSON ファイルで定義されている設定のプレフィックスの一覧を返します (Visual Studio Code では、package.jsの構成セクション名にマップされます)。
+3. ConfigurationSections を実装し、JSON ファイルで定義されている設定のプレフィックスの一覧を返します (Visual Studio Code では、これは package.js の構成セクション名にマップされています)。
 
     ```csharp
     public IEnumerable<string> ConfigurationSections
@@ -316,7 +316,7 @@ LSP 言語サーバーのサポートを追加する場合、Visual Studio で�
     }
     ```
 
-4. Pkgdef ファイルをプロジェクトに追加し (新しいテキストファイルを追加し、ファイル拡張子を pkgdef に変更します)。 .Pkgdef ファイルには、次の情報が含まれている必要があります。
+4. .pkgdef ファイルをプロジェクトに追加します (新しいテキスト ファイルを追加し、ファイル拡張子を .pkgdef に変更します)。 pkgdef ファイルには次の情報が含まれている必要があります。
 
     ```
     [$RootKey$\OpenFolder\Settings\VSWorkspaceSettings\[settings-name]]
@@ -330,21 +330,21 @@ LSP 言語サーバーのサポートを追加する場合、Visual Studio で�
     @="$PackageFolder$\MockLanguageExtensionSettings.json"
     ```
 
-5. Pkgdef ファイルを右クリックし、[ **プロパティ**] を選択します。 [ **ビルド** アクション] を [ **コンテンツ** ] に、[ **VSIX に含める** ] プロパティを [ **true**] に変更します。
+5. .pkgdef ファイルを右クリックし、 **[プロパティ]** を選択します。 **[ビルド]** アクションを **Content** に、 **[VSIX に含める]** プロパティを **true** に変更します。
 
-6. *Source.extension.vsixmanifest* ファイルを開き、[**資産**] タブに資産を追加します。
+6. *source.extension.vsixmanifest* ファイルを開いて、 **[アセット]** タブでアセットを追加します。
 
-   ![vspackage asset の編集](media/lsp-add-vspackage-asset.png)
+   ![vspackage アセットを編集する](media/lsp-add-vspackage-asset.png)
 
-   * **種類**: VisualStudio. VsPackage
-   * **ソース**: ファイルシステム上のファイル
-   * **パス**: [ *Pkgdef* ファイルのパス]
+   * **[種類]** : Microsoft.VisualStudio.VsPackage
+   * **[ソース]** : ファイルシステム上のファイル
+   * **[パス]** : [ *.pkgdef* ファイルへのパス]
 
-### <a name="user-editing-of-settings-for-a-workspace"></a>ワークスペースの設定をユーザーが編集する
+### <a name="user-editing-of-settings-for-a-workspace"></a>ユーザーによるワークスペース設定の編集
 
-1. ユーザーは、サーバーが所有しているファイルが含まれているワークスペースを開きます。
-2. ユーザーは、 *VSWorkspaceSettings.js* と呼ばれる *vs* フォルダーにファイルを追加します。
-3. ユーザーは、サーバーが提供する設定について、ファイルの *VSWorkspaceSettings.js* に行を追加します。 次に例を示します。
+1. ユーザーは、サーバーが所有するファイルを含んだワークスペースを開きます。
+2. ユーザーは、*VSWorkspaceSettings.json* と呼ばれる *.vs* フォルダーにファイルを追加します。
+3. ユーザーは、サーバーから指定された設定の行を *VSWorkspaceSettings.json* ファイルに追加します。 次に例を示します。
 
     ```json
     {
@@ -354,10 +354,10 @@ LSP 言語サーバーのサポートを追加する場合、Visual Studio で�
 
 ### <a name="enable-diagnostics-tracing"></a>診断トレースを有効にする
 
-診断トレースを有効にすると、クライアントとサーバー間のすべてのメッセージを出力できます。これは、問題をデバッグするときに役立ちます。 診断トレースを有効にするには、次の手順を実行します。
+診断トレースを有効にすると、クライアントとサーバー間のすべてのメッセージを出力でき、問題をデバッグするときに役立ちます。 診断トレースを有効にするには、次の手順を実行します。
 
-1. ワークスペース設定ファイルを開くか作成します (「ワークスペースの設定をユーザーが編集する」を参照してください)。 *VSWorkspaceSettings.js* 。
-2. 設定の json ファイルに次の行を追加します。
+1. ワークスペース設定ファイル *VSWorkspaceSettings.json* を開くか作成します (「ユーザーによるワークスペース設定の編集」を参照してください)。
+2. 設定 json ファイルに次の行を追加します。
 
 ```json
 {
@@ -365,21 +365,21 @@ LSP 言語サーバーのサポートを追加する場合、Visual Studio で�
 }
 ```
 
-トレースの詳細には、次の3つの値を指定できます。
+トレースの詳細度には次の 3 つの値を使用できます。
 
-* "Off": トレースが完全にオフになります。
-* "Messages": トレースが有効になっていますが、メソッド名と応答 ID のみがトレースされています。
-* "Verbose": トレースが有効になります。rpc メッセージ全体がトレースされます。
+* "オフ": トレースを完全にオフにします
+* "メッセージ": トレースをオンにしますが、メソッド名と応答 ID だけがトレースされます。
+* "詳細": トレースをオンにします。rpc メッセージ全体がトレースされます。
 
-トレースが有効になっている場合、コンテンツは *%temp%\VisualStudio\LSP* ディレクトリ内のファイルに書き込まれます。 このログは、 *[LanguageClientName]-[Datetime スタンプ] .log* という名前の形式に従います。 現時点では、トレースは、開いているフォルダーのシナリオに対してのみ有効にすることができます。 1つのファイルを開いて言語サーバーをアクティブ化する場合、診断トレースはサポートされません。
+トレースがオンになっている場合、 *%temp%\VisualStudio\LSP* ディレクトリ内のファイルにコンテンツが書き込まれます。 ログは、 *[LanguageClientName]-[Datetime Stamp].log* の名前付け形式に従います。 現在、トレースは、フォルダーを開くシナリオにのみ有効にできます。 単一のファイルを開いて言語サーバーをアクティブ化しても、診断トレースはサポートされません。
 
-### <a name="custom-messages"></a>カスタムメッセージ
+### <a name="custom-messages"></a>カスタム メッセージ
 
-標準言語サーバープロトコルに含まれていない言語サーバーとのメッセージの送受信を容易にする Api が用意されています。 カスタムメッセージを処理するには、言語クライアントクラスで [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装します。 [VS-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) ライブラリは、言語クライアントと言語サーバーの間でカスタムメッセージを転送するために使用されます。 LSP 言語のクライアント拡張機能は他の Visual Studio 拡張機能と同じであるため、拡張機能のカスタムメッセージを使用して、(他の Visual Studio Api を使用して) Visual Studio に追加機能を追加することもできます。
+言語サーバーとのメッセージの受け渡しを容易にする、標準の言語サーバー プロトコルには含まれていない API が用意されています。 カスタム メッセージを処理するには、言語クライアント クラスで [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装します。 [VS-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) ライブラリは、言語クライアントと言語サーバーの間でカスタム メッセージを転送するために使用されます。 LSP 言語クライアント拡張機能は他の Visual Studio 拡張機能と同様なので、拡張機能でカスタム メッセージを通じて、(他の Visual Studio API を使用した) Visual Studio に (LSP ではサポートされていない) 追加機能を追加することもできます。
 
-#### <a name="receive-custom-messages"></a>カスタムメッセージを受信する
+#### <a name="receive-custom-messages"></a>カスタム メッセージを受信する
 
-言語サーバーからカスタムメッセージを受信するには、 [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true)に[custommessagetarget](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.custommessagetarget?view=visualstudiosdk-2017&preserve-view=true)プロパティを実装し、カスタムメッセージの処理方法を認識するオブジェクトを返します。 次に例を示します。
+言語サーバーからカスタム メッセージを受信するには、[ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) に [CustomMessageTarget](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.custommessagetarget?view=visualstudiosdk-2017&preserve-view=true) プロパティを実装し、カスタム メッセージの処理方法を把握しているオブジェクトを返します。 次に例を示します。
 
 ```csharp
 internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCustomMessage
@@ -412,9 +412,9 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
 }
 ```
 
-#### <a name="send-custom-messages"></a>カスタムメッセージを送信する
+#### <a name="send-custom-messages"></a>カスタム メッセージを送信する
 
-言語サーバーにカスタムメッセージを送信するには、 [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true)に[AttachForCustomMessageAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.attachforcustommessageasync?view=visualstudiosdk-2017&preserve-view=true)メソッドを実装します。 このメソッドは、言語サーバーが開始され、メッセージを受信する準備ができたときに呼び出されます。 [Jsonrpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/src/StreamJsonRpc/JsonRpc.cs)オブジェクトはパラメーターとして渡されます。これにより、 [VS streamjsonrpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) api を使用して、メッセージを言語サーバーに送信することができます。 次に例を示します。
+言語サーバーにカスタム メッセージを送信するには、[ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) に [AttachForCustomMessageAsync](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.attachforcustommessageasync?view=visualstudiosdk-2017&preserve-view=true) メソッドを実装します。 このメソッドは、言語サーバーが起動され、メッセージを受信する準備ができたときに呼び出されます。 [JsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/src/StreamJsonRpc/JsonRpc.cs) オブジェクトはパラメーターとして渡されます。これは、[VS-StreamJsonRpc](https://github.com/Microsoft/vs-streamjsonrpc/blob/master/doc/index.md) API を使用してメッセージを言語サーバーに送信するために保持できます。 次に例を示します。
 
 ```csharp
 internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCustomMessage
@@ -447,9 +447,9 @@ internal class MockCustomLanguageClient : MockLanguageClient, ILanguageClientCus
 
 ### <a name="middle-layer"></a>中間層
 
-拡張機能の開発者が、言語サーバーとの間で送受信された LSP メッセージを傍受する場合があります。 たとえば、拡張機能の開発者は、特定の LSP メッセージに送信されるメッセージパラメーターを変更したり、LSP 機能の言語サーバーから返された結果を変更したりすることができます (入力候補など)。 これが必要な場合、拡張機能の開発者は MiddleLayer API を使用して LSP メッセージをインターセプトできます。
+拡張機能の開発者は、言語サーバーとの間で送受信された LSP メッセージを傍受することが必要になる場合があります。 たとえば、拡張機能の開発者は、特定の LSP メッセージについて送信されるメッセージ パラメーターを変更したり、LSP 機能について言語サーバーから返される結果 (入力候補など) を変更したりすることが必要になる場合があります。 これが必要な場合、拡張機能の開発者は、MiddleLayer API を使用して LSP メッセージを傍受できます。
 
-各 LSP メッセージには、傍受のための独自の中間層インターフェイスがあります。 特定のメッセージをインターセプトするには、そのメッセージの中間層インターフェイスを実装するクラスを作成します。 次に、言語クライアントクラスに [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装し、 [MiddleLayer](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.middlelayer?view=visualstudiosdk-2017&preserve-view=true) プロパティにオブジェクトのインスタンスを返します。 次に例を示します。
+それぞれの LSP メッセージには、傍受用の独自の中間層インターフェイスがあります。 特定のメッセージを傍受するには、そのメッセージの中間層インターフェイスを実装するクラスを作成します。 次に、言語クライアント クラスに [ILanguageClientCustomMessage](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage?view=visualstudiosdk-2017&preserve-view=true) インターフェイスを実装し、[MiddleLayer](/dotnet/api/microsoft.visualstudio.languageserver.client.ilanguageclientcustommessage.middlelayer?view=visualstudiosdk-2017&preserve-view=true) プロパティにオブジェクトのインスタンスを返します。 次に例を示します。
 
 ```csharp
 public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage
@@ -476,30 +476,30 @@ public class MockLanguageClient: ILanguageClient, ILanguageClientCustomMessage
 }
 ```
 
-中間層機能はまだ開発中であり、まだ包括的ではありません。
+中間層機能は開発中であり、まだ包括的ではありません。
 
-## <a name="sample-lsp-language-server-extension"></a>サンプル LSP 言語サーバー拡張機能
+## <a name="sample-lsp-language-server-extension"></a>サンプルの LSP 言語サーバー 拡張機能
 
-Visual Studio で LSP クライアント API を使用してサンプル拡張機能のソースコードを表示するには、「VSSDK-拡張性-サンプル [LSP サンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/LanguageServerProtocol)」を参照してください。
+Visual Studio で LSP クライアント API を使用したサンプルの拡張機能のソース コードを表示するには、VSSDK 拡張機能のサンプルで [LSP のサンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples/tree/master/LanguageServerProtocol)を参照してください。
 
 ## <a name="faq"></a>よく寄せられる質問
 
-**LSP 言語サーバーを補完して Visual Studio で豊富な機能サポートを提供するカスタムプロジェクトシステムを構築したいと思います。**
+**Visual Studio で豊富な機能サポートを提供するために LSP 言語サーバーを補完する カスタム プロジェクト システムを構築したいと考えています。そのためにはどうすればよいですか。**
 
-Visual Studio での LSP ベースの言語サーバーのサポートは、 [フォルダーを開く機能](https://devblogs.microsoft.com/visualstudio/open-any-folder-with-visual-studio-15-preview/) に依存しており、カスタムプロジェクトシステムを必要としないように設計されています。 [ここで](https://github.com/Microsoft/VSProjectSystem)説明する手順に従って独自のカスタムプロジェクトシステムを構築できますが、設定などの一部の機能が動作しない場合があります。 LSP 言語サーバーの既定の初期化ロジックは、現在開かれているフォルダーのルートフォルダーの場所を渡すことです。したがって、カスタムプロジェクトシステムを使用する場合は、初期化中にカスタムロジックを指定して、言語サーバーが正常に起動できるようにする必要があります。
+Visual Studio での LSP ベースの言語サーバーのサポートは、[フォルダーを開く機能](https://devblogs.microsoft.com/visualstudio/open-any-folder-with-visual-studio-15-preview/)に依存しており、カスタム プロジェクト システムが不要になるように設計されています。 [こちら](https://github.com/Microsoft/VSProjectSystem)の手順に従って独自のカスタム プロジェクト システムを構築できますが、設定などの一部の機能が動作しない可能性があります。 LSP 言語サーバーの既定の初期化ロジックは、現在開かれているフォルダーのルート フォルダーの場所を渡すというものであり、したがって、カスタム プロジェクト システムを使用する場合は、初期化中にカスタム ロジックを指定して、言語サーバーが正常に起動できるようにする必要があります。
 
-**デバッガーサポートを追加操作方法には**
+**デバッガーのサポートを追加するにはどうすればよいですか。**
 
-[共通デバッグプロトコル](https://code.visualstudio.com/docs/extensionAPI/api-debugging)のサポートは、今後のリリースで提供される予定です。
+[共通デバッグ プロトコル](https://code.visualstudio.com/docs/extensionAPI/api-debugging)のサポートは、今後のリリースで提供される予定です。
 
-**サポートされている VS サポート言語サービス (JavaScript など) が既にインストールされている場合でも、追加機能を提供する LSP 言語サーバー拡張機能をインストールすることができます (例)。**
+**VS でサポートされている言語サービス (JavaScript など) が既にインストールされている場合でも、追加機能 (リンティングなど) を提供する LSP 言語サーバー拡張機能をインストールできますか。**
 
-はい。ただし、すべての機能が正しく動作するわけではありません。 LSP 言語サーバー拡張機能の最終的な目標は、Visual Studio でネイティブにサポートされていない言語サービスを有効にすることです。 LSP 言語サーバーを使用して追加のサポートを提供する拡張機能を作成できますが、一部の機能 (IntelliSense など) はスムーズなエクスペリエンスではありません。 一般に、新しい言語エクスペリエンスを提供するために LSP 言語サーバー拡張機能を使用することをお勧めします。既存の言語を拡張することはできません。
+はい。ただし、すべての機能が正しく動作するわけではありません。 LSP 言語サーバー拡張機能の最終的な目標は、Visual Studio でネイティブにサポートされていない言語サービスを有効にすることです。 LSP 言語サーバーを使用して追加のサポートを提供する拡張機能を作成できますが、一部の機能 (IntelliSense など) は円滑に操作できません。 一般に、既存の言語を拡張するためではなく、新しい言語エクスペリエンスを提供するために LSP 言語サーバー拡張機能を使用することをお勧めします。
 
-**完成した LSP 言語サーバー VSIX を発行するにはどうすればよいですか。**
+**完成した LSP 言語サーバー VSIX はどこに発行すればよいですか。**
 
-Marketplace の手順については、 [こちら](walkthrough-publishing-a-visual-studio-extension.md)を参照してください。
+[こちら](walkthrough-publishing-a-visual-studio-extension.md)の Marketplace の手順を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio エディターの他の言語のサポートの追加](../ide/adding-visual-studio-editor-support-for-other-languages.md)

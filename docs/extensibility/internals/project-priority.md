@@ -1,6 +1,6 @@
 ---
-title: プロジェクトの優先順位 |Microsoft Docs
-description: 項目が複数のプロジェクトのメンバーである場合に、Visual Studio IDE で使用する優先順位によって、項目を開くための最適なプロジェクトが決定されます。
+title: プロジェクトの優先順位 | Microsoft Docs
+description: ある項目が複数のプロジェクトのメンバーである場合に、その項目を開くための最適なプロジェクトを特定するために Visual Studio IDE で使用する優先順位スキームについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,27 +14,27 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 6aefb6b1670da812a36efcc1baa3cb23f23e2561
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105064489"
 ---
 # <a name="project-priority"></a>プロジェクトの優先順位
-通常、プロジェクトアイテムは、ソリューション内の1つのプロジェクトのメンバーです。 そのため、IDE では、項目を開くために使用されるプロジェクトを簡単に判断できます。 ただし、1つの項目が複数のプロジェクトのメンバーである場合、IDE は優先度スキームを使用して、項目を開くのに最適なプロジェクトを決定します。
+プロジェクト項目は通常、ソリューション内の 1 つのプロジェクトのみのメンバーです。 そのため、IDE では、その項目を開くためにどのプロジェクトが使用されるかを容易に特定できます。 ただし、ある項目が複数のプロジェクトのメンバーである場合、IDE では、その項目を開くための最適なプロジェクトを特定するために優先順位スキームを使用します。
 
- 次の一覧は、プロジェクトの優先度スキームを示しています。
+ 次の一覧は、プロジェクトの優先順位スキームを示しています。
 
-- IDE は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> ソリューション内のプロジェクトごとにメソッドを呼び出して、ドキュメントがそのプロジェクトのメンバーであるかどうかを確認します。
+- IDE では、ソリューション内の各プロジェクトに対して <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject2.IsDocumentInProject%2A> メソッドを呼び出して、ドキュメントがそのプロジェクトのメンバーであるかどうかを判定します。
 
-- ドキュメントがプロジェクトのメンバーである場合、プロジェクトは、そのドキュメントの処理に従ってプロジェクトが割り当てた優先度で応答します。 たとえば、言語プロジェクトは、言語ソースファイルに対して高い優先度で応答しますが、ビルドプロセスの一部として使用されていない、認識されないファイルの種類に対しては低い優先順位で応答します。
+- ドキュメントがプロジェクトのメンバーである場合、そのプロジェクトは、そのドキュメントの処理に応じてプロジェクトで割り当てる優先順位で応答します。 たとえば、言語プロジェクトは言語ソース ファイルについては高い優先順位で応答しますが、そのビルド プロセスの一部として使用されていない認識されないファイルの種類についてはより低い優先順位で応答します。
 
-- ドキュメントに対して、プロジェクト固有のカスタムエディターまたはデザイナーを提供するプロジェクトも、優先度が高くなります。
+- ドキュメントにプロジェクト固有のカスタム エディターまたはデザイナーを提供するプロジェクトにも高い優先順位が与えられます。
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>列挙体は、ドキュメントの優先順位の値を提供します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> 列挙型は、ドキュメントの優先順位の値を提供します。
 
-- 最も高い優先順位を指定するプロジェクトには、ドキュメントを開くコンテキストが付与されます。 2つのプロジェクトが同じ優先順位値を返す場合、アクティブなプロジェクトが優先されます。 ソリューション内のプロジェクトがドキュメントを開くことができない場合、IDE はそのドキュメントを [その他のファイル] プロジェクトに配置します。 詳細については、「 [その他のファイルプロジェクト](../../extensibility/internals/miscellaneous-files-project.md)」を参照してください。
+- 最も高い優先事項を指定するプロジェクトには、ドキュメントを開くためのコンテキストが与えられます。 2 つのプロジェクトが等しい優先順位の値を返した場合は、アクティブなプロジェクトが優先されます。 ソリューション内のどのプロジェクトもドキュメントを開くことができると応答しない場合、IDE では、そのドキュメントを [その他のファイル] プロジェクトに配置します。 詳細については、「[その他のファイル プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [その他のファイル プロジェクト](../../extensibility/internals/miscellaneous-files-project.md)
 - [方法: 開いているドキュメントのエディターを開く](../../extensibility/how-to-open-editors-for-open-documents.md)
 - [プロジェクト テンプレートとプロジェクト項目テンプレートの追加](../../extensibility/internals/adding-project-and-project-item-templates.md)

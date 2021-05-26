@@ -1,6 +1,6 @@
 ---
-title: その他のファイルプロジェクト |Microsoft Docs
-description: Visual Studio プロジェクトでファイルを開くために使用できる2種類のエディターと、使用するエディターを決定するプロジェクトのロールについて説明します。
+title: その他のファイル プロジェクト | Microsoft Docs
+description: Visual Studio プロジェクトでファイルを開くために使用できる 2 種類のエディターと、使用するエディターを決定するプロジェクトのロールについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,27 +17,27 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: b79eaaeaf94954e2d3dc1bd855b56bee5b8bdae4
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105063280"
 ---
 # <a name="miscellaneous-files-project"></a>その他のファイル プロジェクト
-ユーザーがプロジェクト項目を開くと、IDE はその他のファイルプロジェクトに、ソリューション内のプロジェクトのメンバーではないすべての項目を割り当てます。
+ユーザーがプロジェクト項目を開くと、IDE はソリューション内のプロジェクトのメンバーではないすべての項目をその他のファイル プロジェクトに割り当てます。
 
  プロジェクトは、ユーザーがプロジェクト項目を開いたときにどのエディターが使用されるかを決定するうえで重要な役割を果たします。 プロジェクトは、プロジェクト固有のエディターまたは標準エディターを使用して、特定のファイルを開くように設計できます。
 
- プロジェクト固有のエディターでは、通常、ユーザーが特別な知識を持っているか、またはプロジェクトから特殊なインターフェイスを使用している必要があります。 詳細については、「 [方法: Project-Specific エディターを開く](../../extensibility/how-to-open-project-specific-editors.md)」を参照してください。
+ プロジェクト固有のエディターを使用する場合、通常、ユーザーが特別な知識を持っているか、またはプロジェクトから特殊なインターフェイスを使用している必要があります。 詳細については、「[方法: プロジェクト固有エディターを開く](../../extensibility/how-to-open-project-specific-editors.md)」を参照してください。
 
- 標準エディターでは、任意のプロジェクトで特定の拡張機能の任意のファイルを開くことができます。 ユーザーは、プロジェクトのために、テキストエディターなどの一部の標準エディターをカスタマイズでき [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ますが、パブリック文字は引き続き保持できます。 標準エディターは、メソッドを使用して作成され <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> ます。
+ 標準エディターでは、任意のプロジェクトで特定の拡張機能の任意のファイルを開くことができます。 ユーザーは、プロジェクト用に、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] テキスト エディターなどの一部の標準エディターをカスタマイズできますが、パブリック文字は引き続き保持されます。 標準エディターは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> メソッドを使用して作成されます。
 
- ソリューション内のプロジェクトがプロジェクト項目を開くことができない場合、IDE には、任意のファイルを開く "その他のファイル" プロジェクトと呼ばれる特別なプロジェクトが用意されています。
+ 応答としてプロジェクト項目を開けるプロジェクトがソリューション内にない場合に、任意のファイルを開く、その他のファイル プロジェクトと呼ばれる特別なプロジェクトが IDE に用意されています。
 
- この特別なプロジェクトでは、プロジェクトのコンテキストの外部でファイルを開くことができます。 メソッドの処理中 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> 、その他のファイルプロジェクトは常に低優先度で応答します。 そのため、その他のファイルプロジェクトは常に、ファイルを開くことができる優先度の高いプロジェクトに対して生成されます。
+ この特別なプロジェクトでは、プロジェクトのコンテキストの外部でファイルを開くことができます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> メソッドの処理中、その他のファイル プロジェクトは常に低優先度で応答します。 そのため、ファイルを開くことができる高優先度のプロジェクトがあれば、その他のファイル プロジェクトは常に処理を譲ります。
 
- その他のファイルプロジェクトでは、ユーザーが [ **新しいプロジェクト** ] ダイアログボックスを使用して明示的に作成する必要はありません。 また、その他のファイルプロジェクトでは、プロジェクトメンバーの一覧は永続的には管理されません。 また、オプションの機能を使用して、各ユーザーが最近使用したファイルの一覧を記録します。
+ その他のファイル プロジェクトでは、 **[新しいプロジェクト]** ダイアログ ボックスを使用して明示的に作成する必要はありません。 また、その他のファイル プロジェクトでは、プロジェクト メンバーの一覧は永続的には管理されません。 オプションの機能を使用して、各ユーザーが最近使用したファイルの一覧を記録します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument>
 - <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY>

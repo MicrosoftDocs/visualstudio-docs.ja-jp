@@ -1,6 +1,6 @@
 ---
-title: レガシ言語サービスの要点 |Microsoft Docs
-description: プログラミング言語を Visual Studio に統合できる、従来の言語サービスで使用できる重要な機能について説明します。
+title: 従来の言語サービスの基本情報 |Microsoft Docs
+description: 従来の言語サービスで使用できる、Visual Studio にプログラミング言語を統合するための重要な機能について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,34 +17,34 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: fa3fc358e7557360f02a80f108bcbec74ae48e5f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105074562"
 ---
 # <a name="legacy-language-service-essentials"></a>従来の言語サービスの基本情報
-プログラミング言語を Visual Studio に統合するには、言語サービスを提供する必要があります。 このトピックでは、従来の言語サービスで使用できる機能について説明します。
+Visual Studio にプログラミング言語を統合するには、言語サービスを提供する必要があります。 このトピックでは、従来の言語サービスで使用できる機能について説明します。
 
- 従来の言語サービスは VSPackage の一部として実装されていますが、言語サービス機能を実装するための新しい方法として、MEF 拡張機能を使用することをお勧めします。 言語サービスを実装する新しい方法の詳細については、「 [エディターと言語サービスの拡張機能](../../extensibility/editor-and-language-service-extensions.md)」を参照してください。
+ 従来の言語サービスは VSPackage の一部として実装されていますが、言語サービス機能の新しい実装方法では MEF 拡張機能が使用されます。 言語サービスの新しい実装方法の詳細については、「[エディターと言語サービスの拡張機能](../../extensibility/editor-and-language-service-extensions.md)」を参照してください。
 
 > [!NOTE]
-> できるだけ早く新しいエディター API の使用を開始することをお勧めします。 これにより、言語サービスのパフォーマンスが向上し、エディターの新機能を利用できるようになります。
+> 新しいエディターの API をできるだけ早く使い始めることをお勧めします。 これにより、言語サービスのパフォーマンスが向上し、新しいエディター機能を利用できるようになります。
 
- 従来の言語サービスでは、次の機能が提供されます。
+ 従来の言語サービスは、次の機能を提供します。
 
-|特徴量|Description|
+|機能|説明|
 |-------------|-----------------|
-|構文の色分け表示|エディタービューで、言語のさまざまな要素に対して異なる色とフォントスタイルを表示します。 このような違いにより、ファイルの読み取りと編集が容易になります。<br /><br /> 一般的な情報については、「 [従来の言語サービスの構文の色分け](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)表示」を参照してください。<br /><br /> Managed package framework (MPF) のこの機能の詳細については、「 [従来の言語サービスでの構文の色分け](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)」を参照してください。|
-|ステートメント入力候補|ユーザーが入力を開始したステートメントまたはキーワードを完了します。 ステートメント入力候補を使用すると、入力が少なく、エラーが発生する可能性が少なくなるため、ユーザーは複雑なステートメントを簡単に入力できます。<br /><br /> 一般的な情報については、「 [従来の言語サービスでのステートメント入力候補](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)」を参照してください。<br /><br /> MPF のこの機能の詳細については、「 [従来の言語サービスでの単語補完](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)」を参照してください。|
-|かっこの一致|中かっこなどのペアの文字を強調表示します。 ユーザーが "}" などの終了文字を入力すると、かっこの照合では、対応する開始文字 ("{" など) が強調表示されます。 囲み文字が複数ある場合、この機能を使用すると、ユーザーは、囲んでいる文字が正しくペアになっていることを確認できます。<br /><br /> MPF のこの機能の詳細については、「 [従来の言語サービスでの中かっこの一致](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)」を参照してください。|
-|パラメーター情報のヒント|ユーザーが現在入力しているオーバーロードされたメソッドに使用できるシグネチャの一覧を表示します。<br /><br /> 一般的な情報については、「 [従来の言語サービスのパラメーターヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)」を参照してください。<br /><br /> MPF のこの機能の詳細については、「 [従来の言語サービスのパラメーターヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)」を参照してください。|
-|エラーマーカー|構文が間違っているテキストの下に赤い波線 (波線) を表示します。 通常、エラーマーカーは、スペルが間違っているキーワード、閉じていないかっこ、無効な文字、および類似したエラーをユーザーに認識させるために使用されます。<br /><br /> MPF クラスでは、エラーマーカーはクラスのメソッドで自動的に処理され <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink> ます。|
+|構文の色分け表示|エディター ビューで、言語のさまざまな要素に対してさまざまな色とフォント スタイルを表示します。 このような区別により、ファイルの読み取りや編集が容易になります。<br /><br /> 一般的な情報については、「[従来の言語サービスでの構文の色分け表示](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)」を参照してください。<br /><br /> マネージド パッケージ フレームワーク (MPF) のこの機能の詳細については、「[従来の言語サービスでの構文の色分け表示](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)」を参照してください。|
+|ステートメント入力候補|ユーザーが入力を開始したステートメントまたはキーワードを補完します。 ステートメント入力候補により、入力が少なくなり、エラーが発生する可能性が低くなるため、ユーザーは難しいステートメントをより簡単に入力できます。<br /><br /> 一般的な情報については、「[従来の言語サービスでのステートメント入力候補](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)」を参照してください。<br /><br /> MPF のこの機能の詳細については、「[従来の言語サービスでの単語補完](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)」を参照してください。|
+|かっこの一致|中かっこなどのペアの文字を強調表示します。 ユーザーが "}" などの終了文字を入力すると、かっこの一致により、対応する開始文字 ("{" など) が強調表示されます。 囲み文字が複数ある場合にこの機能を使用すると、ユーザーは、囲み文字が正しくペアになっていることを確認できます。<br /><br /> MPF のこの機能の詳細については、「[従来の言語サービスでの中かっこの一致](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)」を参照してください。|
+|パラメーター ヒントのツールヒント|ユーザーが現在入力しているオーバーロードされたメソッドに使用できるシグネチャの一覧を表示します。<br /><br /> 一般的な情報については、[従来の言語サービスでのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)に関するページを参照してください。<br /><br /> MPF のこの機能の詳細については、[従来の言語サービスでのパラメーター ヒント](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)に関するページを参照してください。|
+|エラー マーカー|構文が正しくないテキストの下に赤い波形の下線 (波線とも呼ばれます) を表示します。 通常、エラー マーカーは、スペルが間違っているキーワード、閉じられていないかっこ、無効な文字、および類似したエラーをユーザーに認識させるために使用されます。<br /><br /> MPF クラスでは、エラー マーカーは <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> クラスの <xref:Microsoft.VisualStudio.Package.AuthoringSink> メソッドで自動的に処理されます。|
 
- これらの機能の多くでは、言語サービスでソースコードを解析する必要があります。 多くの場合、コンパイラまたはインタープリターのトークン化と解析コードを再利用できます。
+ これらの機能の多くでは、言語サービスでソース コードを解析する必要があります。 多くの場合、コンパイラまたはインタープリターのトークン化および解析コードを再利用できます。
 
- 次の機能は、プログラミング言語のサポートに関連していますが、言語サービスには含まれていません。
+ 次の機能はプログラミング言語のサポートに関連していますが、言語サービスには含まれていません。
 
-| 特徴量 | Description |
+| 機能 | 説明 |
 |-----------------------| - |
-| 式エバリュエーター | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]ブレークポイントを検証し、[**自動変数** デバッグ] ウィンドウに表示される式の一覧を指定することにより、デバッガーをサポートします。<br /><br /> 詳細については、「 [デバッグのための言語サービスのサポート](../../extensibility/internals/language-service-support-for-debugging.md)」を参照してください。 |
-| シンボル参照ツール | **シンボル結果** の **オブジェクトブラウザー**、**クラスビュー**、**呼び出しブラウザー**、および検索をサポートします。 |
+| 式エバリュエーター | ブレークポイントを検証し、 **[自動変数]** デバッグ ウィンドウに表示される式の一覧を指定することにより、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] デバッガーをサポートします。<br /><br /> 詳細については、「[デバッグのための言語サービスのサポート](../../extensibility/internals/language-service-support-for-debugging.md)」を参照してください。 |
+| シンボル参照ツール | "**オブジェクト ブラウザー**"、"**クラス ビュー**"、"**呼び出しブラウザー**"、および "**シンボル結果の検索**" をサポートします。 |

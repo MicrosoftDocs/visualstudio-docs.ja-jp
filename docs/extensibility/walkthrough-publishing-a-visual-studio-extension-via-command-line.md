@@ -1,6 +1,6 @@
 ---
-title: コマンドラインを使用して拡張機能を公開する
-description: コマンドラインを使用して拡張機能を Visual Studio Marketplace に発行する方法について説明します。これにより、開発者は新しい拡張機能と更新された拡張機能を参照できます。
+title: コマンド ラインを使用して拡張機能を公開する
+description: コマンド ラインを使用して拡張機能を Visual Studio Marketplace に公開する方法について説明します。こうすることで、開発者は新しい拡張機能と更新された拡張機能を参照できます。
 ms.custom: SEO-VS-2020
 ms.date: 07/12/2018
 ms.topic: how-to
@@ -15,29 +15,29 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d3548c9a206e874848756944fb48d447c34e28cc
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105078371"
 ---
-# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンドラインを使用した Visual Studio 拡張機能の発行
+# <a name="walkthrough-publishing-a-visual-studio-extension-via-command-line"></a>チュートリアル: コマンド ラインを使用して Visual Studio の拡張機能を公開する
 
-このチュートリアルでは、コマンドラインを使用して Visual Studio 拡張機能を Visual Studio Marketplace に発行する方法について説明します。 拡張機能を Marketplace に追加すると、開発者は [ [**拡張機能と更新プログラム**](../ide/finding-and-using-visual-studio-extensions.md) ] ダイアログボックスを使用して、新しい拡張機能と更新された拡張機能を参照できます。
+このチュートリアルでは、コマンド ラインを使用して Visual Studio の拡張機能を Visual Studio Marketplace に公開する方法について説明します。 拡張機能を Marketplace に追加すると、開発者は **[[拡張機能と更新プログラム](../ide/finding-and-using-visual-studio-extensions.md)]** ダイアログを使用して、新しい拡張機能と更新された拡張機能を参照できます。
 
-VsixPublisher.exe は、Visual Studio 拡張機能を Marketplace に発行するためのコマンドラインツールです。 $ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe からアクセスできます。 このツールで使用できるコマンドは、 **publish**、 **createpublisher**、 **deletepublisher**、 **deletepublisher**、 **login**、 **logout** です。
+VsixPublisher.exe は、Visual Studio の拡張機能を Marketplace に公開するためのコマンドライン ツールです。 これには、${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\VsixPublisher.exe からアクセスできます。 このツールで使用できるコマンドは、**publish**、**createPublisher**、**deletePublisher**、**deleteExtension**、**login**、**logout** です。
 
 ## <a name="commands"></a>コマンド
 
 ### <a name="publish"></a>[発行]
 
-拡張機能を Marketplace に発行します。 拡張機能には、vsix、exe/msi ファイル、またはリンクを指定できます。 同じバージョンの拡張機能が既に存在する場合は、拡張機能が上書きされます。 拡張機能がまだ存在しない場合は、新しい拡張機能が作成されます。
+拡張機能を Marketplace に公開します。 拡張機能には、vsix、exe/msi ファイル、またはリンクを指定できます。 同じバージョンの拡張機能が既に存在する場合は、拡張機能が上書きされます。 拡張機能がまだ存在しない場合は、新しい拡張機能が作成されます。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
-|ペイロード (必須) | 発行するペイロードのパス、または "more info URL" として使用するリンク。 |
-|publishManifest (必須) | 使用する発行マニフェストファイルへのパス。 |
-|ignoreWarnings | 拡張機能を公開するときに無視する警告の一覧。 これらの警告は、拡張機能を公開するときにコマンドラインメッセージとして表示されます。 (たとえば、"VSIXValidatorWarning01, VSIXValidatorWarning02")
-|personalAccessToken | 発行者の認証に使用される個人用アクセストークン (PAT)。 指定されていない場合、PAT はログインしているユーザーから取得されます。 |
+|payload (必須) | 公開するペイロードへのパス、または "詳細 URL" として使用するリンク。 |
+|publishManifest (必須) | 使用する公開マニフェスト ファイルへのパス。 |
+|ignoreWarnings | 拡張機能を公開するときに無視する警告の一覧。 これらの警告は、拡張機能を公開するときにコマンド ライン メッセージとして表示されます。 たとえば、"VSIXValidatorWarning01, VSIXValidatorWarning02" などです。
+|personalAccessToken | 公開元の認証に使用される個人用アクセス トークン (PAT)。 指定されていない場合、PAT はログインしているユーザーから取得されます。 |
 
 ```
 VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to vs-publish.json}" -ignoreWarnings "VSIXValidatorWarning01,VSIXValidatorWarning02"
@@ -45,15 +45,15 @@ VsixPublisher.exe publish -payload "{path to vsix}" -publishManifest "{path to v
 
 ### <a name="createpublisher"></a>createPublisher
 
-Marketplace で発行元を作成します。 また、は、後のアクション (拡張機能の削除/発行など) のためにパブリッシャーをコンピューターに記録します。
+Marketplace で公開元を作成します。 また、将来のアクション (拡張機能の削除/公開など) のために、公開元をコンピューターに記録します。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
-|displayName (必須) | パブリッシャーの表示名。 |
-|publisherName (必須) | 発行元の名前 (たとえば、識別子)。 |
-|personalAccessToken (必須) | 発行元の認証に使用される個人用アクセストークン。 |
-|shortDescription | 発行元の短い説明 (ファイルではありません)。 |
-|longDescription | 発行元の長い説明 (ファイルではありません)。 |
+|displayName (必須) | 公開元の表示名。 |
+|publisherName (必須) | 公開元の名前 (識別子など)。 |
+|personalAccessToken (必須) | 公開元の認証に使用される個人用アクセス トークン。 |
+|shortDescription | 公開元の簡単な説明 (ファイルではありません)。 |
+|longDescription | 公開元の詳細な説明 (ファイルではありません)。 |
 
 ```
 VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName "{Publisher Display Name}" -personalAccessToken "{Personal Access Token}"
@@ -61,12 +61,12 @@ VsixPublisher.exe createPublisher -publisherName "{Publisher Name}" -displayName
 
 ### <a name="deletepublisher"></a>deletePublisher
 
-Marketplace 上のパブリッシャーを削除します。
+Marketplace で公開元を削除します。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
-|publisherName (必須) | 発行元の名前 (たとえば、識別子)。 |
-|personalAccessToken (必須) | 発行元の認証に使用される個人用アクセストークン。 |
+|publisherName (必須) | 公開元の名前 (識別子など)。 |
+|personalAccessToken (必須) | 公開元の認証に使用される個人用アクセス トークン。 |
 
 ```
 VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAccessToken "{Personal Access Token}"
@@ -76,11 +76,11 @@ VsixPublisher.exe deletePublisher -publisherName "{Publisher Name}" -personalAcc
 
 Marketplace から拡張機能を削除します。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
 |extensionName (必須) | 削除する拡張機能の名前。 |
-|publisherName (必須) | 発行元の名前 (たとえば、識別子)。 |
-|personalAccessToken | 発行元の認証に使用される個人用アクセストークン。 指定されていない場合、pat はログインしているユーザーから取得されます。 |
+|publisherName (必須) | 公開元の名前 (識別子など)。 |
+|personalAccessToken | 公開元の認証に使用される個人用アクセス トークン。 指定されていない場合、PAT はログインしているユーザーから取得されます。 |
 
 ```
 VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherName "{Publisher Name}"
@@ -88,13 +88,13 @@ VsixPublisher.exe deleteExtension -extensionName "{Extension Name}" -publisherNa
 
 ### <a name="login"></a>ログイン (login)
 
-パブリッシャーをコンピューターに記録します。
+公開元をコンピューターに記録します。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
-|personalAccessToken (必須 | 発行元の認証に使用される個人用アクセストークン。 |
-|publisherName (必須) | 発行元の名前 (たとえば、識別子)。 |
-|overwrite | 既存の発行元を新しい個人用アクセストークンで上書きすることを指定します。 |
+|personalAccessToken (必須 | 公開元の認証に使用される個人用アクセス トークン。 |
+|publisherName (必須) | 公開元の名前 (識別子など)。 |
+|overwrite | 既存の公開元を新しい個人用アクセス トークンで上書きすることを指定します。 |
 
 ```
 VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publisherName "{Publisher Name}"
@@ -102,12 +102,12 @@ VsixPublisher.exe login -personalAccessToken "{Personal Access Token}" -publishe
 
 ### <a name="logout"></a>logout
 
-パブリッシャーをコンピューターからログアウトします。
+公開元をコンピューターからログアウトさせます。
 
-|コマンドオプション |Description |
+|コマンド オプション |説明 |
 |---------|---------|
-|publisherName (必須) | 発行元の名前 (たとえば、識別子)。 |
-|ignoreMissingPublisher | 指定されたパブリッシャーがまだログインしていない場合に、ツールがエラーにならないように指定します。 |
+|publisherName (必須) | 公開元の名前 (識別子など)。 |
+|ignoreMissingPublisher | 指定された公開元がまだログインしていない場合に、ツールがエラーにならないように指定します。 |
 
 ```
 VsixPublisher.exe logout -publisherName "{Publisher Name}"
@@ -115,9 +115,9 @@ VsixPublisher.exe logout -publisherName "{Publisher Name}"
 
 ## <a name="publishmanifest-file"></a>publishManifest ファイル
 
-PublishManifest ファイルは、 **publish** コマンドによって使用されます。 これは、Marketplace で認識する必要がある拡張機能に関するすべてのメタデータを表します。 アップロードする拡張機能が VSIX 拡張機能からのものである場合、"identity" プロパティには "internalName" のみを設定する必要があります。 これは、"identity" プロパティの残りの部分は、source.extension.vsixmanifest ファイルから生成できるためです。 拡張機能が msi/exe またはリンク拡張機能の場合、ユーザーは "identity" プロパティに必須フィールドを指定する必要があります。 マニフェストの残りの部分には、Marketplace に固有の情報が含まれています (たとえば、カテゴリ、Q&A が有効かどうかなど)。
+publishManifest ファイルは、**publish** コマンドで使用されます。 これは、Marketplace で認識する必要がある、拡張機能に関するすべてのメタデータを表します。 アップロードする拡張機能が VSIX 拡張機能からのものである場合、"identity" プロパティには "internalName" のみを設定する必要があります。 これは、"identity" プロパティの残りの部分は、vsixmanifest ファイルから生成できるためです。 拡張機能が msi/exe またはリンク拡張機能の場合、ユーザーは "identity" プロパティに必須フィールドを指定する必要があります。 マニフェストの残りの部分には、Marketplace に固有の情報が含まれています (カテゴリ、Q&A が有効かどうかなど)。
 
-VSIX 拡張機能の発行マニフェストファイルのサンプル:
+VSIX 拡張機能の publishManifest ファイルのサンプル:
 
 ```json
 {
@@ -136,7 +136,7 @@ VSIX 拡張機能の発行マニフェストファイルのサンプル:
 }
 ```
 
-MSI/EXE またはリンク publishManifest ファイルのサンプル:
+MSI/EXE またはリンクの publishManifest ファイルのサンプル:
 
 ```json
 {
@@ -167,9 +167,9 @@ MSI/EXE またはリンク publishManifest ファイルのサンプル:
 }
 ```
 
-## <a name="asset-files"></a>アセットファイル
+## <a name="asset-files"></a>資産ファイル
 
-アセットファイルは、readme ファイルの画像のようなものを埋め込むために用意されています。 たとえば、拡張機能に "概要" Markdown ドキュメントが含まれているとします。
+画像などの要素を readme ファイル内に埋め込むための資産ファイルを指定できます。 たとえば、拡張機能に以下のような "概要" Markdown ドキュメントが含まれているとします。
 
 ```markdown
 TestExtension
@@ -178,7 +178,7 @@ This is test extension.
 ![Test logo](images/testlogo.png "Test logo")
 ```
 
-前の例で "images/testlogo.png" を解決するために、ユーザーは次のように発行マニフェストに "assetFiles" を提供できます。
+前の例の "images/testlogo.png" を解決するために、ユーザーは次に示すように公開マニフェストで "assetFiles" を指定できます。
 
 ```json
 {
@@ -192,59 +192,59 @@ This is test extension.
 }
 ```
 
-## <a name="publishing-walkthrough"></a>発行のチュートリアル
+## <a name="publishing-walkthrough"></a>公開のチュートリアル
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+このチュートリアルを行うには、Visual Studio SDK をインストールする必要があります。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
-### <a name="create-a-visual-studio-extension"></a>Visual Studio 拡張機能を作成する
+### <a name="create-a-visual-studio-extension"></a>Visual Studio の拡張機能を作成する
 
-この場合は、既定の VSPackage 拡張機能を使用しますが、すべての種類の拡張機能に対して同じ手順が有効です。
+ここでは、既定の VSPackage 拡張機能を使用しますが、すべての種類の拡張機能において手順は同じです。
 
-1. メニューコマンドを含む "TestPublish" という名前の VSPackage を C# で作成します。 詳細については、「 [初めての拡張機能の作成: Hello World](../extensibility/extensibility-hello-world.md)」を参照してください。
+1. メニュー コマンドを含む "TestPublish" という名前の VSPackage を C# で作成します。 詳細については、[拡張機能 (Hello World) の初めての作成](../extensibility/extensibility-hello-world.md)に関するページを参照してください。
 
 ### <a name="package-your-extension"></a>拡張機能をパッケージ化する
 
-1. 製品名、作成者、およびバージョンに関する正しい情報を使用して、拡張機能 source.extension.vsixmanifest を更新します。
+1. 製品名、作成者、およびバージョンに関する正しい情報を使用して、拡張機能 vsixmanifest を更新します。
 
-   ![拡張機能 source.extension.vsixmanifest の更新](media/update-extension-vsixmanifest.png)
+   ![拡張機能 vsixmanifest を更新する](media/update-extension-vsixmanifest.png)
 
-2. **リリース** モードで拡張機能をビルドします。 これで、拡張機能は \bin\Release フォルダーに VSIX としてパッケージ化されます。
+2. 拡張機能を **リリース** モードでビルドします。 これで、拡張機能は \bin\Release フォルダーに VSIX としてパッケージ化されます。
 
 3. VSIX をダブルクリックして、インストールを確認できます。
 
 ### <a name="test-the-extension"></a>拡張機能をテストする
 
- 拡張機能を配布する前に、Visual Studio の実験用インスタンスに正しくインストールされていることを確認するために、拡張機能をビルドしてテストします。
+ 拡張機能を配布する前に、それをビルドしてテストし、Visual Studio の実験用インスタンスに正しくインストールされていることを確認します。
 
-1. Visual Studio で、デバッグを開始します。 Visual Studio の実験用インスタンスを開くには
+1. Visual Studio で、デバッグを開始します。 Visual Studio の実験用インスタンスが開きます。
 
-2. 実験用インスタンスで、[ **ツール** ] メニューの [ **拡張機能と更新プログラム...**] をクリックします。TestPublish 拡張機能が中央のウィンドウに表示され、有効になります。
+2. 実験用インスタンスで、 **[ツール]** メニューに移動して、 **[拡張機能と更新プログラム]** をクリックします。TestPublish 拡張機能が中央のウィンドウに表示され、有効になります。
 
-3. [ **ツール** ] メニューで、[テスト] コマンドが表示されていることを確認します。
+3. **[ツール]** メニューに、[テスト] コマンドが表示されていることを確認します。
 
-### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>コマンドラインを使用して Marketplace に拡張機能を発行する
+### <a name="publish-the-extension-to-the-marketplace-via-command-line"></a>コマンド ラインを使用して拡張機能を Marketplace に公開する
 
-1. 拡張機能のリリースバージョンがビルドされていることと、最新の状態であることを確認してください。
+1. リリース バージョンの拡張機能がビルドされていること、およびそれが最新の状態であることを確認します。
 
-2. と overview.md ファイルに publishmanifest.jsが作成されていることを確認します。
+2. publishmanifest.json と overview.md の各ファイルが作成されていることを確認します。
 
-3. コマンドラインを開き、$ {VSInstallDir} \VSSDK\VisualStudioIntegration\Tools\Bin\ ディレクトリに移動します。
+3. コマンド ラインを開き、${VSInstallDir}\VSSDK\VisualStudioIntegration\Tools\Bin\ ディレクトリに移動します。
 
-4. 新しいパブリッシャーを作成するには、次のコマンドを使用します。
+4. 新しい公開元を作成するには、次のコマンドを使用します。
 
    ```
    VsixPublisher.exe createPublisher -publisherName "TestVSIXPublisher" -displayName "Test VSIX Publisher" -personalAccessToken "{Personal Access Token that is used to authenticate the publisher. If not provided, the pat is acquired from the logged-in users.}"
    ```
 
-5. 発行元が正常に作成されると、次のコマンドラインメッセージが表示されます。
+5. 公開元が正常に作成されると、次のコマンド ライン メッセージが表示されます。
 
    ```
    Added 'Test VSIX Publisher' as a publisher on the Marketplace.
    ```
 
-6. に移動して、作成した新しいパブリッシャーを確認でき [Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers)
+6. [Visual Studio Marketplace](https://marketplace.visualstudio.com/manage/publishers) に移動して、作成した新しい公開元を確認できます
 
 7. 新しい拡張機能を公開するには、次のコマンドを使用します。
 
@@ -252,23 +252,23 @@ This is test extension.
    VsixPublisher.exe publish -payload "{Path to vsix file}"  -publishManifest "{path to publishManifest file}"
    ```
 
-8. 発行元が正常に作成されると、次のコマンドラインメッセージが表示されます。
+8. 公開元が正常に作成されると、次のコマンド ライン メッセージが表示されます。
 
    ```
    Uploaded 'MyVsixExtension' to the Marketplace.
    ```
 
-9. に移動して、公開した新しい拡張機能を確認することができ [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
+9. [Visual Studio Marketplace](https://marketplace.visualstudio.com/) に移動して、公開した新しい拡張機能を確認できます
 
-### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から拡張機能をインストールします。
+### <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio Marketplace から拡張機能をインストールする
 
 拡張機能が公開されたので、それを Visual Studio にインストールしてテストします。
 
-1. Visual Studio の [ **ツール** ] メニューで、[ **拡張機能と更新プログラム.**..] をクリックします。
+1. Visual Studio の **[ツール]** メニューで、 **[拡張機能と更新プログラム]** をクリックします。
 
-2. [ **オンライン** ] をクリックし、testpublish を検索します。
+2. **[オンライン]** をクリックして、TestPublish を検索します。
 
-3. **[Download]** をクリックします。 その後、拡張機能のインストールがスケジュールされます。
+3. **[Download]** をクリックします。 これで、拡張機能がインストール対象としてスケジュールされます。
 
 4. インストールを完了するには、Visual Studio のすべてのインスタンスを閉じます。
 
@@ -276,7 +276,7 @@ This is test extension.
 
 Visual Studio Marketplace およびコンピューターから拡張機能を削除できます。
 
-### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>コマンドラインを使用して Marketplace から拡張機能を削除するには
+### <a name="to-remove-the-extension-from-the-marketplace-via-command-line"></a>コマンド ラインを使用して Marketplace から拡張機能を削除するには
 
 1. 拡張機能を削除する場合は、次のコマンドを使用します。
 
@@ -284,7 +284,7 @@ Visual Studio Marketplace およびコンピューターから拡張機能を削
    VsixPublisher.exe deleteExtension -publisherName "TestVSIXPublisher" -extensionName "MyVsixExtension"
    ```
 
-2. 拡張機能が正常に削除されると、次のコマンドラインメッセージが表示されます。
+2. 拡張機能が正常に削除されると、次のコマンド ライン メッセージが表示されます。
 
    ```
    Removed 'MyVsixExtension' from the Marketplace.
@@ -292,8 +292,8 @@ Visual Studio Marketplace およびコンピューターから拡張機能を削
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>コンピューターから拡張機能を削除するには
 
-1. Visual Studio の [ **ツール** ] メニューで、[ **拡張機能と更新プログラム**] をクリックします。
+1. Visual Studio の **[ツール]** メニューで、 **[拡張機能と更新プログラム]** をクリックします。
 
-2. "MyVsixExtension" を選択し、[ **アンインストール**] をクリックします。 その後、拡張機能のアンインストールがスケジュールされます。
+2. [MyVsixExtension] を選択し、 **[アンインストール]** をクリックします。 これで、拡張機能がアンインストール対象としてスケジュールされます。
 
 3. アンインストールを完了するには、Visual Studio のすべてのインスタンスを閉じます。

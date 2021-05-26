@@ -1,6 +1,6 @@
 ---
-title: "\"/\" 要素 (Visual Studio テンプレート) |Microsoft Docs"
-description: '[新しい項目の追加] または [新しいプロジェクト] ダイアログボックスで Visual Studio が既定の Visual Studio 名を生成するかどうかを指定する方法と、指定する方法について説明します。'
+title: ProvideDefaultName 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: ProvideDefaultName 要素と、それを使用して、Visual Studio で [新しい項目の追加] または [新しいプロジェクト] ダイアログ ボックス内に既定の Visual Studio 名を生成するかどうかを指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d29ca3075ee6e5ef031bb360ecfd10d6cb341c26
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068636"
 ---
-# <a name="providedefaultname-element-visual-studio-templates"></a>可視 Defaultname 要素 (Visual Studio テンプレート)
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)][**新しい項目の追加**] ダイアログボックスまたは [**新しいプロジェクト**] ダイアログボックスで、プロジェクトシステムがテンプレートの既定の名前を生成するかどうかを指定します。
+# <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName 要素 (Visual Studio テンプレート)
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] プロジェクト システムで **[新しい項目の追加]** または **[新しいプロジェクト]** ダイアログ ボックス内にテンプレートの既定の名前を生成するかどうかを指定します。
 
  \<VSTemplate> \<TemplateData>
  \<ProvideDefaultName>
@@ -52,17 +52,17 @@ ms.locfileid: "105068636"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストはまたはである必要があり `true` `false` ます。これは、[ **新しい項目の追加** ] または [ **新しいプロジェクト** ] ダイアログボックスでテンプレートの既定の名前を生成するかどうかを示します。
+ このテキストは、 **[新しい項目の追加]** または **[新しいプロジェクト]** ダイアログ ボックス内にテンプレートの既定の名前を生成するかどうかを示す `true` または `false` のどちらかである必要があります。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `ProvideDefaultName` は省略可能な要素です。 既定値は `true` です。
 
- `ProvideDefaultName`要素がの場合 `false` 、[**新しい項目の追加**] ダイアログボックスと [**新しいプロジェクト**] ダイアログボックスの [**名前**] ボックスには値が含まれ `<Enter_name>` ます。
+ `ProvideDefaultName` 要素が `false` である場合、 **[新しい項目の追加]** および **[新しいプロジェクト]** ダイアログ ボックスの **[名前]** ボックスには値 `<Enter_name>` が含まれます。
 
- [**新しい項目の追加**] ダイアログボックスと [**新しいプロジェクト**] ダイアログボックスで、プロジェクトまたは項目の既定の名前を指定するには、 [defaultname](../extensibility/defaultname-element-visual-studio-templates.md)要素を使用します。 要素の値がの場合 `ProvideDefaultName` `true` 、プロジェクトの要素を省略すると、 `DefaultName` テンプレートの名前、つまり [name](../extensibility/name-element-visual-studio-templates.md) 要素の値がダイアログボックスに設定されます。
+ **[新しい項目の追加]** および **[新しいプロジェクト]** ダイアログ ボックス内のプロジェクトまたは項目の既定の名前を指定するには、[DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) 要素を使用します。 `ProvideDefaultName` 要素の値が `true` である場合は、プロジェクトの `DefaultName` 要素を省略すると、ダイアログ ボックスにはそのテンプレートの名前 (つまり、[Name](../extensibility/name-element-visual-studio-templates.md) 要素の値) が設定されます。
 
 ## <a name="example"></a>例
- 次のコード例では、 `ProvideDefaultName` 要素をに設定し `false` ます。
+ 次のコード例では、`ProvideDefaultName` 要素を `false` に設定します。
 
 ```
 <VSTemplate Type="Item" Version="3.0.0"

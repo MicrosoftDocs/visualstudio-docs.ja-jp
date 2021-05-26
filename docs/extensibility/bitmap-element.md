@@ -1,6 +1,6 @@
 ---
-title: Bitmap 要素 |Microsoft Docs
-description: Bitmap 要素はビットマップを定義します。 ビットマップは、リソースまたはファイルから読み込まれます。 この記事には例が含まれています。
+title: Bitmap 要素 | Microsoft Docs
+description: Bitmap 要素では、ビットマップを定義します。 ビットマップは、リソースまたはファイルのどちらかから読み込まれます。 この記事には例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 32f07857f2d04989b0de021988b2961d4a1553d2
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068220"
 ---
 # <a name="bitmap-element"></a>Bitmap 要素
-ビットマップを定義します。 ビットマップは、リソースまたはファイルから読み込まれます。
+ビットマップを定義します。 ビットマップは、リソースまたはファイルのどちらかから読み込まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,11 +36,11 @@ ms.locfileid: "105068220"
 
 |属性|説明|
 |---------------|-----------------|
-|guid|必須。 GUID/ID コマンド識別子の GUID。<br /><br /> ビットマップの guid 属性は、VSPackage またはその他のコマンドグループに関連付けられていません。  これはビットマップ定義に対して一意である必要があり、他の目的には使用できません。|
-|resID|GUID/ID コマンド識別子の ID。 ResID または href 属性のいずれかが必要です。<br /><br /> ResID 属性は、コマンドテーブルのマージ中に読み込まれるビットマップストリップを決定する整数リソース ID です。  コマンドテーブルを読み込むときに、リソース ID によって指定されたビットマップが、同じモジュールのリソースから読み込まれます。|
-|未使用のリスト|ResID 属性が存在する場合は必須です。 ビットマップストリップで使用可能なイメージを選択します。|
-|href|ビットマップへのパス。 ResID または href 属性のいずれかが必要です。<br /><br /> インクルードパスは、指定されたイメージファイルを検索します。これは、結果のバイナリに埋め込まれています。  コマンドテーブルのマージ中に、イメージがコピーされ、追加のリソース参照や読み込みは必要ありません。  使用リスト属性が存在しない場合は、ストリップ内のすべてのイメージを使用できます。 **注:**  イメージは、 *.bmp*、 *.png*、 *.gif* を含む複数の形式のいずれかで指定できます。  以前のバージョンのコンパイラでは、部分的な透明度のアルファ情報を持つ32ビットビットマップイメージがサポートされていませんでした。 これらのバージョンの回避策は、 *.png* 形式を使用することです。|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|guid|必須。 GUID/ID コマンド識別子の GUID。<br /><br /> ビットマップの guid 属性は、どの VSPackage またはその他のコマンド グループにも関連付けられていません。  これはビットマップ定義に対して一意である必要があり、他のどの目的にも使用できません。|
+|resID|GUID/ID コマンド識別子の ID。 resID または href 属性のどちらかが必要です。<br /><br /> resID 属性は、コマンド テーブルのマージ中に読み込まれるビットマップ ストリップを決定する整数のリソース ID です。  コマンド テーブルが読み込まれているときに、このリソース ID で指定されたビットマップが同じモジュールのリソースから読み込まれます。|
+|usedList|resID 属性が存在する場合に必要です。 ビットマップ ストリップ内の使用可能な画像を選択します。|
+|href|ビットマップのパス。 resID または href 属性のどちらかが必要です。<br /><br /> このインクルード パスは、生成されたバイナリに埋め込まれている指定された画像ファイルのために検索されます。  コマンド テーブルのマージ中に、画像がコピーされ、追加のリソース検索または読み込みは必要ありません。  usedList 属性が存在しない場合は、このストリップ内のすべての画像が使用可能になります。 **注:** 画像は、 *.bmp*、 *.png*、 *.gif* などの複数の形式のいずれかで指定できます。  以前のバージョンのコンパイラでは、部分的な透明度に関するアルファ情報を持つ 32 ビットのビットマップ画像をサポートしていませんでした。 これらのバージョンでの回避策として、 *.png* 形式を使用してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -49,7 +49,7 @@ ms.locfileid: "105068220"
 
 |要素|説明|
 |-------------|-----------------|
-|[ビットマップ要素](../extensibility/bitmaps-element.md)|ビットマップ要素をグループ化します。|
+|[Bitmaps 要素](../extensibility/bitmaps-element.md)|Bitmap 要素をグループ化します。|
 
 ## <a name="example"></a>例
 
@@ -60,4 +60,4 @@ ms.locfileid: "105068220"
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Visual Studio コマンドテーブル (vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
