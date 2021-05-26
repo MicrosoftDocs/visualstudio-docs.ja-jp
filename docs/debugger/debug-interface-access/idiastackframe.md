@@ -1,7 +1,8 @@
 ---
-title: IDiaStackFrame |Microsoft Docs
+description: スタック フレームのプロパティを公開します。
+title: IDiaStackFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 486d25b8-a590-41c1-bdb5-faff3ae35632
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a54bd52f3783bb0bedc279cffafab2f21e0b0f39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: f6f53ae3f6314a0236282f1bb664fd56618f0bad
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741558"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635295"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
-スタックフレームのプロパティを公開します。
+スタック フレームのプロパティを公開します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,31 +34,31 @@ IDiaStackFrame : IUnknown
 
 |メソッド|説明|
 |------------|-----------------|
-|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|このアドレス範囲のコードに対して基本ポインターが割り当てられていることを示すフラグを取得します。 このメソッドは非推奨です。|
-|[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|フレームのアドレスベースを取得します。|
-|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|例外処理が有効でC++あることを示すフラグを取得します。|
-|[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|ブロックに関数のエントリポイントが含まれていることを示すフラグを取得します。|
+|[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|このアドレス範囲にコードの基本ポインターが割り当てられていることを示すフラグを取得します。 このメソッドは非推奨とされます。|
+|[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|フレームのアドレス ベースを取得します。|
+|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|C++ 例外処理が有効であることを示すフラグを取得します。|
+|[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|ブロックに関数のエントリ ポイントが含まれていることを示すフラグを取得します。|
 |[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|スタックにプッシュされたローカル変数のバイト数を取得します。|
 |[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|スタックにプッシュされたパラメーターのバイト数を取得します。|
-|[IDiaStackFrame::get_lengthProlog](../../debugger/debug-interface-access/idiastackframe-get-lengthprolog.md)|ブロック内のプロローグコードのバイト数を取得します|
-|[IDiaStackFrame::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiastackframe-get-lengthsavedregisters.md)|スタックにプッシュされた、保存されたレジスタのバイト数を取得します。|
-|[IDiaStackFrame::get_localsBase](../../debugger/debug-interface-access/idiastackframe-get-localsbase.md)|ローカルのアドレスベースを取得します。|
-|[IDiaStackFrame::get_maxStack](../../debugger/debug-interface-access/idiastackframe-get-maxstack.md)|フレーム内のスタックにプッシュされる最大バイト数を取得します。|
-|[IDiaStackFrame::get_rawLVarInstanceValue](../../debugger/debug-interface-access/idiastackframe-get-rawlvarinstancevalue.md)|指定したローカル変数の値を生のバイトとして取得します。|
-|[IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)|指定したレジスタの値を取得します。|
-|[IDiaStackFrame::get_returnAddress](../../debugger/debug-interface-access/idiastackframe-get-returnaddress.md)|フレームの返信先アドレスを取得します。|
+|[IDiaStackFrame::get_lengthProlog](../../debugger/debug-interface-access/idiastackframe-get-lengthprolog.md)|ブロック内のプロローグ コードのバイト数を取得します。|
+|[IDiaStackFrame::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiastackframe-get-lengthsavedregisters.md)|スタックにプッシュされた保存済みレジスタのバイト数を取得します。|
+|[IDiaStackFrame::get_localsBase](../../debugger/debug-interface-access/idiastackframe-get-localsbase.md)|ローカルのアドレス ベースを取得します。|
+|[IDiaStackFrame::get_maxStack](../../debugger/debug-interface-access/idiastackframe-get-maxstack.md)|フレーム内のスタックにプッシュされた最大バイト数を取得します。|
+|[IDiaStackFrame::get_rawLVarInstanceValue](../../debugger/debug-interface-access/idiastackframe-get-rawlvarinstancevalue.md)|指定されたローカル変数の値を生バイトとして取得します。|
+|[IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)|指定されたレジスタの値を取得します。|
+|[IDiaStackFrame::get_returnAddress](../../debugger/debug-interface-access/idiastackframe-get-returnaddress.md)|フレームの戻りアドレスを取得します。|
 |[IDiaStackFrame::get_size](../../debugger/debug-interface-access/idiastackframe-get-size.md)|フレームのサイズをバイト単位で取得します。|
 |[IDiaStackFrame::get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md)|システム例外処理が有効であることを示すフラグを取得します。|
-|[IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)|フレームの種類を取得します。|
+|[IDiaStackFrame::get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md)|フレームの型を取得します。|
 
-## <a name="remarks"></a>Remarks
-スタックフレームは、実行中の関数呼び出しの抽象化です。
+## <a name="remarks"></a>解説
+スタック フレームは、実行中の関数呼び出しを抽象化したものです。
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md)メソッドを呼び出します。 @No__t_1 インターフェイスを取得する例については、 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)インターフェイスを参照してください。
+このインターフェイスを取得するには、[IDiaEnumStackFrames::Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) メソッドを呼び出します。 `IDiaStackFrame` インターフェイスを取得する例については、[IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) インターフェイスを参照してください。
 
 ## <a name="example"></a>例
-この例では、スタックフレームのさまざまな属性を表示します。
+この例では、スタック フレームのさまざまな属性を表示します。
 
 ```C++
 void PrintStackFrame(IDiaStackFrame* pFrame)
@@ -100,12 +101,12 @@ void PrintStackFrame(IDiaStackFrame* pFrame)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

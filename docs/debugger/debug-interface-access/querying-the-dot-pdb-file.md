@@ -1,7 +1,8 @@
-﻿---
-title: に対するクエリを実行しています。Pdb ファイル |Microsoft Docs
+---
+description: プログラム データベース ファイル (拡張子 .pdb) は、プロジェクトのコンパイルおよびリンク中に収集された型情報とシンボリック デバッグ情報を含むバイナリ ファイルです。
+title: .Pdb ファイルの照会 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -10,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 8da07d1c-2712-45f9-8fbf-f34040408a8a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a22bc8fbe65795a3c5162607a12690081e565666
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
-ms.translationtype: MT
+ms.openlocfilehash: ea69572304feb5bb2fcb2ef91c0f94a96c138cf7
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917106"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635203"
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb ファイルの照会
-プログラムデータベースファイル (拡張子 .pdb) は、プロジェクトのコンパイルとリンクの過程で収集された型とシンボリックデバッグ情報を含むバイナリファイルです。 PDB ファイルは、 **/zi**または **/zi**を使用しC++て C/プログラムをコンパイルするか、 **/debug**オプションを使用して [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] プログラムをコンパイルすると作成されます。 オブジェクトファイルには、デバッグ情報の .pdb ファイルへの参照が含まれています。 Pdb ファイルの詳細については、「 [Pdb ファイル](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100))」を参照してください。 DIA アプリケーションでは、次の一般的な手順を使用して、実行可能イメージ内のさまざまなシンボル、オブジェクト、およびデータ要素の詳細を取得できます。
+プログラム データベース ファイル (拡張子 .pdb) は、プロジェクトのコンパイルおよびリンク中に収集された型情報とシンボリック デバッグ情報を含むバイナリ ファイルです。 PDB ファイルは、 **/ZI** または **/Zi** を使用して C/C++ プログラムをコンパイルするか、 **/debug** オプションを使用して [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]、または [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] プログラムをコンパイルすると作成されます。 オブジェクト ファイルには、デバッグ情報の .pdb ファイルへの参照が含まれています。 pdb ファイルの詳細については、[PDB ファイル](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100))に関する記事を参照してください。 DIA アプリケーションでは、次の一般的な手順を使用して、実行可能イメージ内のさまざまなシンボル、オブジェクト、データ要素の詳細を取得できます。
 
-### <a name="to-query-the-pdb-file"></a>.Pdb ファイルに対してクエリを実行するには
+### <a name="to-query-the-pdb-file"></a>.pdb ファイルに対してクエリを実行するには
 
-1. [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)インターフェイスを作成して、データソースを取得します。
+1. [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) インターフェイスを作成して、データ ソースを取得します。
 
     ```C++
     CComPtr<IDiaDataSource> pSource;
@@ -41,7 +42,7 @@ ms.locfileid: "75917106"
     }
     ```
 
-2. [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)または[IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)を呼び出して、デバッグ情報を読み込みます。
+2. [IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) または [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) を呼び出して、デバッグ情報を読み込みます。
 
     ```C++
     wchar_t wszFilename[ _MAX_PATH ];
@@ -55,7 +56,7 @@ ms.locfileid: "75917106"
     }
     ```
 
-3. [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)を呼び出して[IDiaSession](../../debugger/debug-interface-access/idiasession.md)を開き、デバッグ情報にアクセスできるようにします。
+3. [IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) を呼び出して [IDiaSession](../../debugger/debug-interface-access/idiasession.md) を開き、デバッグ情報にアクセスできるようにします。
 
     ```C++
     CComPtr<IDiaSession> psession;
@@ -65,7 +66,7 @@ ms.locfileid: "75917106"
     }
     ```
 
-4. `IDiaSession` のメソッドを使用して、データソース内のシンボルを照会します。
+4. `IDiaSession` のメソッドを使用して、データ ソース内のシンボルのクエリを実行します。
 
     ```C++
     CComPtr<IDiaSymbol> pglobal;
@@ -75,7 +76,7 @@ ms.locfileid: "75917106"
     }
     ```
 
-5. `IDiaEnum*` インターフェイスを使用して、シンボルやデバッグ情報のその他の要素を列挙し、スキャンします。
+5. `IDiaEnum*` インターフェイスを使用して、デバッグ情報のシンボルや他の要素を列挙して調べます。
 
     ```C++
     CComPtr<IDiaEnumTables> pTables;
