@@ -1,6 +1,6 @@
 ---
-title: Manifest from Resources |Microsoft Docs
-description: Manifest from Resources ツールを使用して、Visual Studio イメージサービスで使用するために .png ファイルまたは .xaml ファイルを imagemanifest ファイルに追加する方法について説明します。
+title: Manifest from Resources | Microsoft Docs
+description: Manifest from Resources ツールを使用して、Visual Studio イメージサービスで使用するために .png ファイルまたは .xaml ファイルを .imagemanifest ファイルに追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,62 +12,62 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 42bd932b093ae805e8885bc9fc61324c3cadbe30
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095174"
 ---
 # <a name="manifest-from-resources"></a>リソースからのマニフェスト
-Manifest from Resources ツールは、イメージリソース (.png または .xaml ファイル) の一覧を取得し、それらのイメージを Visual Studio Image Service と共に使用できるようにする imagemanifest ファイルを生成するコンソールアプリケーションです。 また、このツールを使用して、既存の imagemanifest にイメージを追加することもできます。 このツールは、イメージの高 DPI およびテーマサポートを Visual Studio 拡張機能に追加する場合に便利です。 生成された imagemanifest ファイルは、Visual Studio 拡張機能 (.vsix) の一部としてに含まれ、配置される必要があります。
+Manifest from Resources ツールは、イメージ リソース (.png または .xaml ファイル) の一覧を取得し、それらのイメージを Visual Studio イメージ サービスで使用できるようにする .imagemanifest ファイルを生成するコンソール アプリケーションです。 また、このツールを使用して、既存の .imagemanifest にイメージを追加することもできます。 このツールは、イメージの高 DPI およびテーマ適用のサポートを Visual Studio 拡張機能に追加する場合に役立ちます。 生成された .imagemanifest ファイルは、Visual Studio 拡張機能 (.vsix) の一部に含められ、一部としてデプロイされる必要があります。
 
 ## <a name="how-to-use-the-tool"></a>ツールの使用方法
  **構文**
 
- ManifestFromResources/resources: \<Dir1> ; \<Img1> /assembly: \<AssemblyName>\<Optional Args>
+ ManifestFromResources /resources:\<Dir1>;\<Img1> /assembly:\<AssemblyName> \<Optional Args>
 
  **引数**
 
-|**スイッチ名**|**メモ**|**必須またはオプション**|
+|**スイッチ名**|**ノート**|**必須/省略可能**|
 |-|-|-|
-|/リソース|セミコロンで区切られたイメージまたはディレクトリのリスト。 この一覧には、マニフェストに含まれるイメージの完全な一覧が必ず含まれている必要があります。 部分的なリストだけを指定した場合、含まれていないエントリは失われます。<br /><br /> 指定されたリソースファイルがイメージストリップである場合は、各サブイメージをマニフェストに追加する前に、ツールによって個別のイメージに分割されます。<br /><br /> 画像が .png ファイルの場合は、次のように名前を設定して、ツールがイメージの適切な属性を入力できるようにすることをお \<Name> 勧めします \<Width> 。 \<Height>.png.|必須|
-|/assembly|マネージアセンブリの名前 (拡張子を含まない)、またはリソースをホストするネイティブアセンブリのランタイムパス (マニフェストのランタイムの場所を基準とします)。|必須|
-|/manifest|生成された imagemanifest ファイルに付ける名前。 これには、ファイルを別の場所に作成するための絶対パスまたは相対パスを含めることもできます。 既定の名前は、アセンブリ名と一致します。<br /><br /> 既定値: \<Current Directory> \\<\> imagemanifest|オプション|
-|/guidname|生成されたマニフェスト内のすべてのイメージの GUID シンボルに付ける名前。<br /><br /> 既定値: Asセット Guid|オプション|
-|/rootpath|マネージリソース Uri を作成する前に削除する必要があるルートパス。 (このフラグは、相対 URI パスが正しく取得されず、リソースの読み込みに失敗した場合に役立ちます)。<br /><br /> 既定値: \<Current Directory>|オプション|
-|/recursive|このフラグを設定すると、/resources 引数内のディレクトリを再帰的に検索するようにツールに指示します。 このフラグを省略すると、ディレクトリの最上位レベルの検索が行われます。|オプション|
-|/isnative|アセンブリ引数がネイティブアセンブリのパスである場合は、このフラグを設定します。 アセンブリ引数がマネージアセンブリの名前である場合は、このフラグを省略します。 (このフラグの詳細については、「メモ」を参照してください)。|オプション|
-|/newguid|このフラグを設定すると、既存のマニフェストにあるものをマージするのではなく、イメージの GUID シンボルに新しい値を作成するようにツールに指示します。|オプション|
-|/newIds|このフラグを設定すると、既存のマニフェストから値をマージするのではなく、すべてのイメージに対して新しい ID シンボル値を作成するようにツールに指示します。|オプション|
+|/resources|セミコロンで区切られた、画像またはディレクトリの一覧。 この一覧には、マニフェストに存在する画像の完全な一覧を常に含める必要があります。 部分的な一覧だけが与えられた場合、含まれないエントリは失われます。<br /><br /> 指定されたリソース ファイルが画像ストリップである場合、それぞれの部分画像をマニフェストに追加する前に、個別の画像に分割されます。<br /><br /> 画像が .png ファイルである場合は、画像の適切な属性をツールで入力できるように、\<Name>.\<Width>.\<Height>.png のように名前の書式を設定することをお勧めします。|必須|
+|/assembly|マネージド アセンブリの名前 (拡張子を含まない)、またはリソースをホストするネイティブ アセンブリのランタイム パス (マニフェストのランタイムの場所を基準とする)。|必須|
+|/manifest|生成された .imagemanifest ファイルに付ける名前。 これには、別の場所でファイルを作成するための絶対または相対パスも含めることができます。 既定の名前がアセンブリ名に一致します。<br /><br /> 既定値: \<Current Directory>\\<Assembly\>.imagemanifest|オプション|
+|/guidName|生成されたマニフェスト内のすべての画像の GUID シンボルに付ける名前。<br /><br /> 既定値: AssetsGuid|オプション|
+|/rootPath|管理対象リソース URI の作成前に削除する必要のあるルート パス。 (このフラグは、ツールが相対的な URI パスを間違えたためにリソースの読み込みが失敗する場合に役立てるためのものです)。<br /><br /> 既定値: \<Current Directory>|オプション|
+|/recursive|このフラグを設定すると、/resources 引数内のディレクトリを再帰的に検索するようにツールに指示します。 このフラグを省略すると、ディレクトリの最上位レベルだけが検索されます。|オプション|
+|/isNative|アセンブリ引数がネイティブ アセンブリのパスであるときにこのフラグを設定します。 アセンブリ引数がマネージド アセンブリの名前であるときにこのフラグを省略します。 (このフラグの追加情報については、「メモ」セクションを参照してください)。|オプション|
+|/newGuids|このフラグを設定すると、既存のマニフェストからの値をマージするのではなく、画像の GUID シンボルの新しい値を作成するようにツールに指示します。|オプション|
+|/newIds|このフラグを設定すると、既存のマニフェストからの値をマージするのではなく、すべての画像に対して新しい ID シンボル値を作成するようにツールに指示します。|オプション|
 |/noLogo|このフラグを設定すると、製品および著作権情報は印刷されなくなります。|オプション|
 |/?|ヘルプ情報を印刷します。|オプション|
 |/help|ヘルプ情報を印刷します。|オプション|
 
  **例**
 
-- ManifestFromResources/resources: D:\Images/assembly: My. アセンブリ名/isnative
+- ManifestFromResources /resources:D:\Images                       /assembly:My.Assembly.Name                       /isNative
 
-- ManifestFromResources/resources:D:\Images\Image1.png;D: MyImageManifest/manifest: imagemanifest/manifest: 名前/マニフェストの名前を指定します。
+- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml                       /assembly:My.Assembly.Name                       /manifest:MyImageManifest.imagemanifest
 
-- ManifestFromResources/resources:D:\Images\Image1.png;D: \ imag? image1 xaml/assembly:/newIds/guidname: MyImages/newguid
+- ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml                       /assembly:My.Assembly.Name                       /guidName:MyImages                       /newGuids                       /newIds
 
-## <a name="notes"></a>メモ
+## <a name="notes"></a>Notes
 
-- このツールでは、.png ファイルと .xaml ファイルのみがサポートされます。 その他のイメージまたはファイルの種類は無視されます。 リソースの解析中に検出された、サポートされていないすべての型に対して警告が生成されます。 ツールがリソースの解析を完了したときにサポートされているイメージが見つからない場合は、エラーが生成されます。
+- このツールでは、.png ファイルと .xaml ファイルのみがサポートされます。 他の画像またはファイルの種類は無視されます。 リソースの解析中に見つかったサポート対象外のすべての種類に対して警告が生成されます。 ツールによるリソースの解析が終了したときに、サポート対象の画像が見つからない場合は、エラーが生成されます
 
-- Png 画像に対して推奨される形式に従うことで、画像の実際のサイズと異なる場合でも、.png のサイズと次元の値が、形式指定のサイズに設定されます。
+- ツールでは、.png 画像に対して提示される形式に従って、画像の実際のサイズとは異なっている場合でも、.png のサイズ/寸法値を形式で指定されたサイズに設定します。
 
-- .Png 画像では幅/高さの形式を省略できますが、このツールでは画像の実際の幅と高さを読み取り、画像のサイズ/ディメンション値に使用します。
+- .png 画像では幅/高さの形式を無視できますが、ツールでは、画像の実際の幅/高さを読み込んで、画像のサイズ/寸法値としてそれらを使用します。
 
-- 同じイメージでこのツールを実行すると、同じ imagemanifest に対して複数回削除されます。このツールでは、イメージストリップをスタンドアロンイメージに分割し、既存のマニフェストに追加しようとするため、マニフェストエントリが重複します。
+- 同じ .imagemanifest に対し複数回同じ画像ストリップ上でこのツールを実行すると、ツールでは画像ストリップをスタンドアロン画像に分割し、既存のマニフェストに追加しようとするので、重複したマニフェスト エントリが生成されます。
 
-- マージ (/newguid または/newIds の省略) は、ツールで生成されたマニフェストに対してのみ実行する必要があります。 他の方法でカスタマイズまたは生成されたマニフェストは、正しくマージされない可能性があります。
+- マージ (/newGuids または /newIds を省略) は、ツールで生成されたマニフェストに対してのみ行ってください。 他の方法でカスタマイズまたは生成されたマニフェストは、正しくマージされない可能性があります。
 
-- ネイティブアセンブリ用に生成されるマニフェストは、ID シンボルがネイティブアセンブリの .rc ファイルのリソース Id と一致するように、生成後に手動で編集する必要がある場合があります。
+- ネイティブ アセンブリ用に生成されるマニフェストは、ID シンボルをネイティブ アセンブリの .rc ファイルのリソース ID と一致させるように、生成後に手動で編集することが必要になる場合があります。
 
 ## <a name="sample-output"></a>出力例
- **単純なイメージマニフェスト**
+ **単純な画像マニフェスト**
 
- イメージマニフェストは、次の .xml ファイルに似ています。
+ 画像マニフェストは次の .xml ファイルのようになります。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,9 +91,9 @@ Manifest from Resources ツールは、イメージリソース (.png または 
 </ImageManifest>
 ```
 
- **イメージストリップのイメージマニフェスト**
+ **画像ストリップの画像マニフェスト**
 
- イメージストリップのイメージマニフェストは、次の .xml ファイルに似ています。
+ 画像ストリップの画像マニフェストは次の .xml ファイルのようになります。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -128,9 +128,9 @@ Manifest from Resources ツールは、イメージリソース (.png または 
 </ImageManifest>
 ```
 
- **ネイティブアセンブリイメージリソースのイメージマニフェスト**
+ **ネイティブ アセンブリ画像リソースの画像マニフェスト**
 
- ネイティブイメージのイメージマニフェストは、次の .xml ファイルに似ています。
+ ネイティブ画像の画像マニフェストは次の .xml ファイルのようになります。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -1,6 +1,6 @@
 ---
-title: Project 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: プロジェクト要素について、およびプロジェクトに追加するファイルまたはディレクトリを指定する方法について説明します。
+title: Project 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: Project 要素と、それを使用して、プロジェクトに追加するファイルまたはディレクトリを指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,7 +18,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 52bfb5f65aa9d42c46eece619a21152c51e8fa28
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068805"
@@ -48,10 +48,10 @@ ms.locfileid: "105068805"
 
 |属性|説明|
 |---------------|-----------------|
-|`File`|必須の属性です。<br /><br /> テンプレート *.zip* ファイル内のプロジェクトファイルの名前を指定します。|
-|`ReplaceParameters`|省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されたときに置き換える必要があるパラメーター値をプロジェクトファイルに含めるかどうかを指定するブール値です。 既定値は `false` です。|
-|`TargetFileName`|省略可能な属性です。<br /><br /> プロジェクトがテンプレートから作成されるときのプロジェクトファイルの名前を指定します。|
-|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> 現在のソリューションにプロジェクトを追加する必要があるかどうかを指定します。 カスタムパラメーター "$*Mycustomparameter*$" の値がパラメーター置換ファイルに存在する場合、プロジェクトは作成されますが、現在開いているソリューションの一部としては追加されません。|
+|`File`|必須の属性です。<br /><br /> テンプレート *.zip* ファイル内のプロジェクト ファイルの名前を指定します。|
+|`ReplaceParameters`|省略可能な属性です。<br /><br /> このプロジェクト ファイルに、テンプレートからプロジェクトが作成されるときに置き換える必要があるパラメーター値が含まれているかどうかを指定するブール値。 既定値は `false` です。|
+|`TargetFileName`|省略可能な属性です。<br /><br /> テンプレートからプロジェクトが作成されるときのプロジェクト ファイルの名前を指定します。|
+|`IgnoreProjectParameter`|省略可能な属性です。<br /><br /> このプロジェクトを現在のソリューションに追加する必要があるかどうかを指定します。 パラメーター置換ファイル内にカスタム パラメーター "$*myCustomParameter*$" の値が存在する場合、プロジェクトは作成されますが、現在開いているソリューションの一部としては追加されません。|
 
 ### <a name="child-elements"></a>子要素
 
@@ -66,14 +66,14 @@ ms.locfileid: "105068805"
 |-------------|-----------------|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `Project` は、`TemplateContent` の子要素で、省略可能な要素です。
 
- 要素はプロジェクトを指定 `Project` するために使用されます。したがって、はプロジェクトテンプレートでのみ有効です。
+ `Project` 要素は、プロジェクトを指定するために使用されるため、プロジェクト テンプレート内でのみ有効です。
 
- `Project` 要素には [フォルダー](../extensibility/folder-element-visual-studio-project-templates.md) children 要素または [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 子要素を含めることができますが、要素 `Folder` と子要素の両方を混在させることはできません `ProjectItem` 。
+ `Project` 要素には [Folder](../extensibility/folder-element-visual-studio-project-templates.md) 子要素または [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 子要素を含めることができますが、`Folder` と `ProjectItem` の両方の子要素を混在させることはできません。
 
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [ **新しいプロジェクト** ] ダイアログボックスでユーザーが入力した名前に基づいて、プロジェクトファイル名の名前が自動的に変更されます。 `TargetFileName`テンプレートで作成されたプロジェクトファイルに別のファイル名を指定する場合は、属性を使用します。
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] では、ユーザーが **[新しいプロジェクト]** ダイアログ ボックスで入力した名前に基づいて、プロジェクト ファイルの名前を自動的に変更します。 テンプレートで作成されたプロジェクト ファイルの代替ファイル名を指定する場合は、`TargetFileName` 属性を使用します。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。
@@ -105,5 +105,5 @@ ms.locfileid: "105068805"
 ## <a name="see-also"></a>関連項目
 - [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
 - [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
-- [ProjectItem 要素 (Visual Studio プロジェクトテンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)
-- [Folder 要素 (Visual Studio プロジェクトテンプレート)](../extensibility/folder-element-visual-studio-project-templates.md)
+- [ProjectItem 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/projectitem-element-visual-studio-project-templates.md)
+- [Folder 要素 (Visual Studio プロジェクト テンプレート)](../extensibility/folder-element-visual-studio-project-templates.md)

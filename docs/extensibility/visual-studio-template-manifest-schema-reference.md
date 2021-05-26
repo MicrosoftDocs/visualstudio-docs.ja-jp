@@ -1,6 +1,6 @@
 ---
-title: Visual Studio テンプレートマニフェストスキーマリファレンス |Microsoft Docs
-description: このスキーマリファレンスでは、Visual Studio プロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレートマニフェストファイルの形式について説明します。
+title: Visual Studio テンプレート マニフェスト スキーマ リファレンス | Microsoft Docs
+description: このスキーマ リファレンスでは、Visual Studio のプロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレート マニフェスト ファイルの形式について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,15 +12,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 033e735b93a534164d96cf47d6412c609525ad8f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062500"
 ---
-# <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレートマニフェストスキーマリファレンス
-このスキーマは、Visual Studio プロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレートマニフェスト (*vstman*) ファイルの形式を記述します。 また、このスキーマでは、テンプレートに関する場所やその他の関連情報についても説明します。
+# <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ リファレンス
+このスキーマでは、Visual Studio のプロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレート マニフェスト ( *.vstman*) ファイルの形式を記述します。 このスキーマでは、テンプレートに関する場所やその他の関連情報も記述します。
 
- : 項目とプロジェクトテンプレートのディレクトリが異なるため、マニフェストには項目テンプレートとプロジェクトテンプレートが混在していてはなりません。
+ : 項目およびプロジェクト テンプレートのディレクトリは異なるため、マニフェストに項目およびプロジェクト テンプレートを混在させないでください。
 
 > [!IMPORTANT]
 > このマニフェストは、Visual Studio 2017 以降で使用できます。
@@ -30,63 +30,63 @@ ms.locfileid: "105062500"
 
 ### <a name="attributes"></a>属性
 
-- **Version**: テンプレートマニフェストのバージョンを表す文字列。 必須。
+- **Version**: テンプレート マニフェストのバージョンを表す文字列。 必須。
 
-- **Locale**: テンプレートマニフェストのロケールまたはロケールを表す文字列。 ロケール値はすべてのテンプレートに適用されます。 ロケールごとに個別のマニフェストを使用する必要があります。 省略可能。
+- **Locale**: テンプレート マニフェストのロケールを表す文字列。 このロケール値はすべてのテンプレートに適用されます。 ロケールごとに別個のマニフェストを使用する必要があります。 省略可能。
 
 ### <a name="child-elements"></a>子要素
 
-- **VSTemplateContainer** Optional.
+- **VSTemplateContainer** 省略可能。
 
-- **VSTemplateDir** Optional.
+- **VSTemplateDir** 省略可能。
 
 ### <a name="parent-element"></a>親要素
- [なし] :
+ なし。
 
 ## <a name="vstemplatecontainer"></a>VSTemplateContainer
- テンプレートマニフェスト要素のコンテナー。 マニフェストには、定義するテンプレートごとに1つのテンプレートコンテナーがあります。
+ テンプレート マニフェスト要素のコンテナー。 マニフェストには、定義するテンプレートごとに 1 つのテンプレート コンテナーが含まれています。
 
 ### <a name="attributes"></a>属性
- **VSTemplateType**: テンプレートの種類 ( `"Project"` 、 `"Item"` 、または) を指定する文字列値 `"ProjectGroup"` 。 必須
+ **VSTemplateType**: テンプレートの種類 (`"Project"`、`"Item"`、または `"ProjectGroup"`) を指定する文字列値。 必須
 
 ### <a name="child-elements"></a>子要素
 
-- **RelativePathOnDisk**: ディスク上のテンプレートファイルの相対パス。 また、この場所では、[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目** ] ダイアログボックスに表示されるテンプレートツリー内のテンプレートの配置も定義されます。 ディレクトリおよび個々のファイルとして展開されたテンプレートの場合、このパスはテンプレートファイルを含むディレクトリを参照します。 *.Zip* ファイルとして展開されたテンプレートの場合、このパスは *.zip* ファイルへのパスである必要があります。
+- **RelativePathOnDisk**: ディスク上のテンプレート ファイルの相対パス。 この場所では、 **[新しいプロジェクト]** または **[新しい項目]** ダイアログに表示されるテンプレート ツリー内のテンプレートの配置も定義されます。 ディレクトリと個々のファイルとして配置されるテンプレートの場合、このパスはテンプレート ファイルを含むディレクトリを参照します。 *.zip* ファイルとして配置されるテンプレートの場合、このパスは *.zip* ファイルへのパスである必要があります。
 
-- * * VSTemplateHeader: ヘッダーを記述する [Templatedata](../extensibility/templatedata-element-visual-studio-templates.md) 要素。
+- **VSTemplateHeader: ヘッダーを記述する [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) 要素。
 
 ### <a name="parent-element"></a>親要素
  **VSTemplateManifest**
 
 ## <a name="vstemplatedir"></a>VSTemplateDir
- テンプレートが配置されているディレクトリについて説明します。 マニフェストには複数の **VSTemplateDir** エントリを含めることができます。これにより、ディレクトリがテンプレートカテゴリツリーでの外観を制御するために、ローカライズされた名前と並べ替え順序が提供されます。
+ テンプレートが配置されているディレクトリを記述します。 マニフェストに複数の **VSTemplateDir** エントリを含めると、ディレクトリのローカライズされた名前と並べ替え順序を提供し、テンプレート カテゴリ ツリーでの表示を制御することができます。
 
- これらの設計により、 **VSTemplateDir** エントリはロケールに指定されていないマニフェストにのみ表示されます。
+ このような設計のため、**VSTemplateDir** エントリはロケールが指定されていないマニフェストにのみ含めることができます。
 
 ### <a name="attributes"></a>属性
  なし。
 
 ### <a name="child-elements"></a>子要素
 
-- **RelativePath**: テンプレートのパス。 パスごとに1つのエントリしか存在できないため、最初のエントリはすべてのマニフェストに対して優先されます。
+- **RelativePath**: テンプレートのパス。 パスごとに 1 つのエントリしか指定できないため、最初のものがすべてのマニフェストで使用されます。
 
-- **LocalizedName**: ローカライズされた名前を指定する **namedescriptionicon** 要素。 省略可能。
+- **LocalizedName**: ローカライズされた名前を指定する **NameDescriptionIcon** 要素。 省略可能。
 
-- **順序** 付け: 並べ替え順序を指定する文字列。 省略可能。
+- **SortOrder**: 並べ替え順序を指定する文字列。 省略可能。
 
-- **ParentFolderOverrideName**: 親フォルダーのオーバーライドされた名前。 省略可能。 この要素には **name 属性が** あり、これは名前を指定する文字列値です。
+- **ParentFolderOverrideName**: 親フォルダーのオーバーライドされた名前。 省略可能。 この要素には、名前を指定する文字列値である **Name** 属性が含まれています。
 
 ### <a name="parent-element"></a>親要素
  **VSTemplateManifest**
 
 ## <a name="namedescriptionicon"></a>NameDescriptionIcon
- ローカライズされたテンプレートの名前と説明を指定します。 上記の **LocalizedName** を参照してください。
+ ローカライズされたテンプレートなどの名前と説明を指定します。 上記の「**LocalizedName**」を参照してください。
 
 ### <a name="attributes"></a>属性
 
-- **Package**: パッケージを示す文字列値です。 省略可能。
+- **Package**: パッケージを指定する文字列値。 省略可能。
 
-- **Id**: id を指定する文字列値。 省略可能。
+- **ID**: ID を指定する文字列値。 省略可能。
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -95,7 +95,7 @@ ms.locfileid: "105062500"
  **LocalizedName**
 
 ## <a name="examples"></a>例
- 次のコードは、プロジェクトテンプレートの *vstman* ファイルの例です。
+ 次のコードは、プロジェクト テンプレートの *.vstman* ファイルの例です。
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
@@ -121,7 +121,7 @@ ms.locfileid: "105062500"
 
 ```
 
- 次のコードは、項目テンプレートの *vstman* ファイルの例です。
+ 次のコードは、項目テンプレートの *.vstman* ファイルの例です。
 
 ```xml
 <VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">

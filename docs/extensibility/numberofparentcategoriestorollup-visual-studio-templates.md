@@ -1,6 +1,6 @@
 ---
 title: NumberOfParentCategoriesToRollUp 要素 (テンプレート)
-description: NumberOfParentCategoriesToRollUp 要素と、[新しいプロジェクト] ダイアログボックスにテンプレートを表示する親カテゴリの数を指定する方法について説明します。
+description: NumberOfParentCategoriesToRollUp 要素と、[新しいプロジェクト] ダイアログ ボックスにテンプレートを表示する親カテゴリの数を指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 02c6f0e22429b268fb643c622ebd1f237a4721d3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090474"
 ---
 # <a name="numberofparentcategoriestorollup-element-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp 要素 (Visual Studio テンプレート)
-[ **新しいプロジェクト** ] ダイアログボックスにテンプレートを表示する親カテゴリの数を指定します。
+**[新しいプロジェクト]** ダイアログ ボックスにテンプレートを表示する親カテゴリの数を指定します。
 
  \<VSTemplate> \<TemplateData>
  \<NumberOfParentCategoriesToRollUp>
@@ -53,15 +53,15 @@ ms.locfileid: "105090474"
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックス、または **[新しい項目の追加]** ダイアログ ボックスでどのように表示させるかを定義します。|
 
 ## <a name="text-value"></a>テキスト値
- `integer`値が必要です。
+ `integer` 値は必須です。
 
- この値は、[ **新しいプロジェクト** ] ダイアログボックスにテンプレートを表示する親カテゴリの数を指定します。
+ この値では、 **[新しいプロジェクト]** ダイアログ ボックスにテンプレートを表示する親カテゴリの数を指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `NumberOfParentCategoriesToRollUp` は省略可能な要素です。
 
 ## <a name="example"></a>例
- この例は、Windows アプリケーションのメタデータを示してい [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ます。 このメタデータを持つテンプレートの最上位レベルノードの下に2つのフォルダーレベルが配置されている場合 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 、テンプレートは [ **新しいプロジェクト** ] ダイアログボックスの最上位ノードに表示されます。 が設定されて `NumberOfParentCategoriesToRollUp` いない場合、テンプレートは物理的に配置されているノードにのみ表示されます。
+ 次の例は、[!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows アプリケーションでのメタデータを示しています。 このメタデータを持つテンプレートの最上位レベルの [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ノードの下に 2 つのフォルダー レベルが配置されている場合、テンプレートは **[新しいプロジェクト]** ダイアログ ボックスの最上位ノードに表示されます。 `NumberOfParentCategoriesToRollUp` が設定されて いない場合、テンプレートは物理的に配置されているノードにのみ表示されます。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"

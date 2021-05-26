@@ -1,6 +1,6 @@
 ---
-title: Wizard インターフェイス (IDTWizard) |Microsoft Docs
-description: IDE では、IDTWizard インターフェイスを使用してウィザードと通信します。 ウィザードは、IDE にインストールするために、このインターフェイスを実装する必要があります。
+title: ウィザード インターフェイス (IDTWizard) |Microsoft Docs
+description: IDE では、IDTWizard インターフェイスを使用してウィザードと通信します。 IDE でインストールされるために、ウィザードはこのインターフェイスを実装する必要があります。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,15 +15,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: b8dc88341bc72755ae0f5011d18182c5b78bb483
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105074198"
 ---
 # <a name="wizard-interface-idtwizard"></a>ウィザード インターフェイス (IDTWizard)
-統合開発環境 (IDE: integrated development environment) は、インターフェイスを使用し <xref:EnvDTE.IDTWizard> てウィザードと通信します。 ウィザードは、IDE にインストールするために、このインターフェイスを実装する必要があります。
+統合開発環境 (IDE) では、<xref:EnvDTE.IDTWizard> インターフェイスを使用してウィザードと通信します。 IDE でインストールされるために、ウィザードはこのインターフェイスを実装する必要があります。
 
- メソッドは、 <xref:EnvDTE.IDTWizard.Execute%2A> インターフェイスに関連付けられている唯一のメソッドです <xref:EnvDTE.IDTWizard> 。 ウィザードはこのメソッドを実装し、IDE はインターフェイスに対してメソッドを呼び出します。 次の例は、メソッドのシグネチャを示しています。
+ <xref:EnvDTE.IDTWizard.Execute%2A> メソッドは、<xref:EnvDTE.IDTWizard> インターフェイスに関連付けられている唯一のメソッドです。 ウィザードではこのメソッドを実装し、IDE ではインターフェイスに対してメソッドを呼び出します。 次の例は、メソッドのシグネチャを示しています。
 
 ```
 /* IDTWizard Method */
@@ -36,27 +36,27 @@ STDMETHOD(Execute)(THIS_
    );
 ```
 
- 開始メカニズムは、 **新しいプロジェクト** と **新しい項目の追加** ウィザードの両方で似ています。 どちらかを開始するには、 <xref:EnvDTE.IDTWizard> Dteinternal. h で定義されているインターフェイスを呼び出します。 唯一の違いは、インターフェイスが呼び出されたときにインターフェイスに渡されるコンテキストとカスタムパラメーターのセットです。
+ 起動メカニズムは、 **[新しいプロジェクト]** ウィザードと **[新しい項目の追加]** ウィザードの両方で同様です。 いずれかを起動するには、Dteinternal.h で定義されている <xref:EnvDTE.IDTWizard> インターフェイスを呼び出します。 唯一の違いは、インターフェイスが呼び出されるときにインターフェイスに渡されるコンテキストとカスタム パラメーターのセットです。
 
- ここでは、 <xref:EnvDTE.IDTWizard> IDE で動作するためにウィザードで実装する必要があるインターフェイスについて説明し [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ます。 IDE は、 <xref:EnvDTE.IDTWizard.Execute%2A> ウィザードでメソッドを呼び出し、次のように渡します。
+ 以下の情報では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE で動作するためにウィザードで実装する必要がある <xref:EnvDTE.IDTWizard> インターフェイスについて説明します。 IDE では、ウィザードで <xref:EnvDTE.IDTWizard.Execute%2A> メソッドを呼び出し、以下を渡します。
 
 - DTE オブジェクト
 
-     DTE オブジェクトは、オートメーションモデルのルートです。
+     DTE オブジェクトは、オートメーション モデルのルートです。
 
-- コードセグメントに示されているように、ウィンドウダイアログボックスを表示するハンドル `hwndOwner ([in] long)` 。
+- コード セグメント `hwndOwner ([in] long)` に示されている、ウィンドウ ダイアログ ボックスのハンドル。
 
-     ウィザードでは、これを `hwndOwner` ウィザードダイアログボックスの親として使用します。
+     ウィザードでは、この `hwndOwner` をウィザード ダイアログ ボックスの親として使用します。
 
-- コードセグメントに示されているように、SAFEARRAY のバリアントとしてインターフェイスに渡されるコンテキストパラメーター `[in] SAFEARRAY (VARIANT)* ContextParams` 。
+- コード セグメント `[in] SAFEARRAY (VARIANT)* ContextParams` に示されている、SAFEARRAY のバリアントとしてインターフェイスに渡されるコンテキスト パラメーター。
 
-     コンテキストパラメーターには、開始するウィザードの種類とプロジェクトの現在の状態に固有の値の配列が含まれます。 IDE は、コンテキストパラメーターをウィザードに渡します。 詳細については、「 [コンテキストパラメーター](../../extensibility/internals/context-parameters.md)」を参照してください。
+     コンテキスト パラメーターには、起動中のウィザードの種類に固有の値の配列とプロジェクトの現在の状態が含まれます。 IDE により、コンテキスト パラメーターがウィザードに渡されます。 詳細については、「[コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)」を参照してください。
 
-- コードセグメントに示されているように、SAFEARRAY のバリアントとしてインターフェイスに渡されるカスタムパラメーター `[in] SAFEARRAY (VARIANT)* CustomParams` 。
+- コード セグメント `[in] SAFEARRAY (VARIANT)* CustomParams` に示されている、SAFEARRAY のバリアントとしてインターフェイスに渡されるカスタム パラメーター。
 
-     カスタムパラメーターには、ユーザー定義パラメーターの配列が含まれています。 .Vsz ファイルは、IDE にカスタムパラメーターを渡します。 値は、ステートメントによって決定され `Param=` ます。 詳細については、「 [カスタムパラメーター](../../extensibility/internals/custom-parameters.md)」を参照してください。
+     カスタム パラメーターには、ユーザー定義パラメーターの配列が含まれます。 .vsz ファイルにより、IDE にカスタム パラメーターが渡されます。 値は、`Param=` ステートメントによって決定されます。 詳細については、「[カスタム パラメーター](../../extensibility/internals/custom-parameters.md)」を参照してください。
 
-- インターフェイスの戻り値は、
+- インターフェイスの戻り値は次のとおりです
 
     ```
     wizardResultSuccess = -1,
@@ -65,8 +65,8 @@ STDMETHOD(Execute)(THIS_
     wizardResultBackout = 2
     ```
 
-## <a name="see-also"></a>こちらもご覧ください
-- [コンテキストパラメーター](../../extensibility/internals/context-parameters.md)
-- [カスタムパラメーター](../../extensibility/internals/custom-parameters.md)
+## <a name="see-also"></a>関連項目
+- [コンテキスト パラメーター](../../extensibility/internals/context-parameters.md)
+- [カスタム パラメーター](../../extensibility/internals/custom-parameters.md)
 - [ウィザード](../../extensibility/internals/wizards.md)
 - [ウィザード (.Vsz) ファイル](../../extensibility/internals/wizard-dot-vsz-file.md)

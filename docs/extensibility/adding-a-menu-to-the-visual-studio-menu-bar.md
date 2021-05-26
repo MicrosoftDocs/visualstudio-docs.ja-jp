@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のメニューバーにメニューを追加する |Microsoft Docs
-description: Visual Studio 統合開発環境 (IDE) のメニューバーにメニューを追加する方法について説明します。
+title: Visual Studio のメニュー バーへのメニューの追加 | Microsoft Docs
+description: Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -15,59 +15,59 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 22ce9bc00f24278fd2c0533052d7bd5e944b1ebf
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105078345"
 ---
-# <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>メニューを Visual Studio のメニューバーに追加する
+# <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio のメニュー バーへのメニューの追加
 
-このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニューバーにメニューを追加する方法について説明します。 IDE のメニューバーには、[ **ファイル**]、[ **編集**]、[ **表示**]、[ **ウィンドウ**]、[ **ヘルプ**] などのメニューカテゴリがあります。
+このチュートリアルでは、Visual Studio 統合開発環境 (IDE) のメニュー バーにメニューを追加する方法について説明します。 IDE のメニューバーには、 **[ファイル]** 、 **[編集]** 、 **[表示]** 、 **[ウィンドウ]** 、 **[ヘルプ]** などのメニュー カテゴリがあります。
 
-新しいメニューを Visual Studio のメニューバーに追加する前に、コマンドを既存のメニュー内に配置するかどうかを検討してください。 コマンドの配置の詳細については、「 [Visual Studio のメニューとコマンド](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)」を参照してください。
+新しいメニューを Visual Studio のメニュー バーに追加する前に、コマンドを既存のメニュー内に配置するかどうかを検討してください。 コマンドの配置の詳細については、「[Visual Studio のメニューとコマンド](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)」を参照してください。
 
-メニューは、プロジェクトの *vsct* ファイルで宣言されています。 メニューおよび *. vsct* ファイルの詳細については、「 [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)」を参照してください。
+メニューは、プロジェクトの *.vsct* ファイルで宣言されます。 メニューおよび *.vsct* ファイルの詳細については、「[コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)」を参照してください。
 
-このチュートリアルを完了すると、1つのコマンドを含む [ **Test Menu]** という名前のメニューを作成できます。
+このチュートリアルを終了すると、1 つのコマンドを含む "**Test Menu**" という名前のメニューを作成できます。
 
 :::moniker range=">=vs-2019"
 > [!NOTE]
-> Visual Studio 2019 以降では、拡張機能によって提供されるトップレベルのメニューが [ **拡張** ] メニューに配置されます。
+> Visual Studio 2019 以降では、拡張機能によって提供される最上位のメニューは **[拡張機能]** メニューに配置されます。
 :::moniker-end
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
-## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>カスタムコマンド項目テンプレートを持つ VSIX プロジェクトを作成する
+## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>カスタム コマンド項目テンプレートを含む VSIX プロジェクトを作成する
 
-1. という名前の VSIX プロジェクトを作成 `TopLevelMenu` します。 VSIX プロジェクトテンプレートは、"vsix" を検索することで、[ **新しいプロジェクト** ] ダイアログで見つけることができます。  詳細については、「 [メニューコマンドを使用して拡張機能を作成](../extensibility/creating-an-extension-with-a-menu-command.md)する」を参照してください。
+1. `TopLevelMenu` という名前の VSIX プロジェクトを作成します。 VSIX プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログで「vsix」と検索すると見つかります。  詳細については、「[メニュー コマンドを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください。
 
 ::: moniker range="vs-2017"
 
-2. プロジェクトが開いたら、 **Testcommand** という名前のカスタムコマンド項目テンプレートを追加します。 **ソリューションエクスプローラー** で、プロジェクトノードを右クリックし、[新しい項目の **追加**] を選択し  >   ます。 [ **新しい項目の追加** ] ダイアログで、[ **Visual C#]/[拡張機能** ] にアクセスし、[ **カスタムコマンド**] を選択します。 ウィンドウの下部にある [ **名前** ] フィールドで、[コマンドファイル名] を「 *testcommand .cs*」に変更します。
+2. プロジェクトが開いたら、**Testcommand** という名前のカスタム コマンド項目テンプレートを追加します。 **ソリューション エクスプローラー** で、プロジェクト ノードを右クリックして、 **[追加]**  >   **[新しい項目]** の順に選択します。 **[新しい項目の追加]** ダイアログで、 **[Visual C#]、[拡張機能]** の順に移動し、 **[カスタム コマンド]** を選択します。 ウィンドウの下部にある **[名前]** フィールドで、コマンド ファイル名を *TestCommand.cs* に変更します。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. プロジェクトが開いたら、 **Testcommand** という名前のカスタムコマンド項目テンプレートを追加します。 **ソリューションエクスプローラー** で、プロジェクトノードを右クリックし、[新しい項目の **追加**] を選択し  >   ます。 [ **新しい項目の追加** ] ダイアログで、[ **Visual C#]/[拡張機能** ] にアクセスし、[ **コマンド**] を選択します。 ウィンドウの下部にある [ **名前** ] フィールドで、[コマンドファイル名] を「 *testcommand .cs*」に変更します。
+2. プロジェクトが開いたら、**Testcommand** という名前のカスタム コマンド項目テンプレートを追加します。 **ソリューション エクスプローラー** で、プロジェクト ノードを右クリックして、 **[追加]**  >   **[新しい項目]** の順に選択します。 **[新しい項目の追加]** ダイアログで、 **[Visual C#]、[拡張機能]** の順に移動し、 **[コマンド]** を選択します。 ウィンドウの下部にある **[名前]** フィールドで、コマンド ファイル名を *TestCommand.cs* に変更します。
 
 ::: moniker-end
 
-## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE のメニューバーにメニューを作成する
+## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE のメニュー バーのメニューを作成する
 
 ::: moniker range="vs-2017"
 
-1. **ソリューションエクスプローラー** で、 *testcommandpackage. vsct* を開きます。
+1. **ソリューション エクスプローラー** で、*TestCommandPackage.vsct* を開きます。
 
-    ファイルの末尾には、複数のノードを `<Symbols>` 含むノードがあり `<GuidSymbol>` ます。 という名前のノードに、次のように `guidTestCommandPackageCmdSet` 新しいシンボルを追加します。
+    ファイルの末尾には、複数の `<GuidSymbol>` ノードを含む `<Symbols>` ノードがあります。 `guidTestCommandPackageCmdSet` という名前のノードで、次のように新しいシンボルを追加します。
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. ノードの直前に `<Menus>` 、空 `<Commands>` のノードを作成 `<Groups>` します。 ノードで、次のように `<Menus>` ノードを追加し `<Menu>` ます。
+2. `<Commands>` ノードの `<Groups>` の直前に、空の `<Menus>` ノードを作成します。 `<Menus>` ノードで、次のように `<Menu>` ノードを追加します。
 
    ```xml
    <Menus>
@@ -81,13 +81,13 @@ Visual Studio 2015 以降では、ダウンロードセンターから Visual St
    </Menus>
    ```
 
-    メニューのおよびの値は、コマンドセット `guid` `id` と、コマンドセット内の特定のメニューを指定します。
+    メニューの `guid` および `id` の値で、コマンド セットとコマンド セット内の特定のメニューを指定します。
 
-    [ツール] メニューと [アドイン] メニューを `guid` `id` 含む、Visual Studio のメニューバーのセクションにある親の位置の値と値。
+    親の `guid` および `id` の値により、Visual Studio のメニュー バーの、[ツール] と [アドイン] メニューを含むセクションにメニューが配置されます。
 
-    要素は、 `<ButtonText>` テキストがメニュー項目に表示されることを指定します。
+    `<ButtonText>` 要素で、テキストをメニュー項目に表示することを指定します。
 
-3. セクションで `<Groups>` 、を見つけて、追加した `<Group>` `<Parent>` メニューを指すように要素を変更します。
+3. `<Groups>` セクションで `<Group>` を探し、前の手順で追加したメニューをポイントするように `<Parent>` 要素を変更します。
 
    ```xml
    <Groups>
@@ -97,21 +97,21 @@ Visual Studio 2015 以降では、ダウンロードセンターから Visual St
    </Groups>
    ```
 
-    これにより、グループが新しいメニューに追加されます。
+    これで、グループの部分が新しいメニューに追加されます。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. **ソリューションエクスプローラー** で、 *TopLevelMenuPackage* を開きます。
+1. **ソリューション エクスプローラー** で、*TopLevelMenuPackage.vsct* を開きます。
 
-    ファイルの末尾には、複数のノードを `<Symbols>` 含むノードがあり `<GuidSymbol>` ます。 という名前のノードに、次のように `guidTopLevelMenuPackageCmdSet` 新しいシンボルを追加します。
+    ファイルの末尾には、複数の `<GuidSymbol>` ノードを含む `<Symbols>` ノードがあります。 `guidTopLevelMenuPackageCmdSet` という名前のノードで、次のように新しいシンボルを追加します。
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. ノードの直前に `<Menus>` 、空 `<Commands>` のノードを作成 `<Groups>` します。 ノードで、次のように `<Menus>` ノードを追加し `<Menu>` ます。
+2. `<Commands>` ノードの `<Groups>` の直前に、空の `<Menus>` ノードを作成します。 `<Menus>` ノードで、次のように `<Menu>` ノードを追加します。
 
    ```xml
    <Menus>
@@ -125,13 +125,13 @@ Visual Studio 2015 以降では、ダウンロードセンターから Visual St
    </Menus>
    ```
 
-    メニューのおよびの値は、コマンドセット `guid` `id` と、コマンドセット内の特定のメニューを指定します。
+    メニューの `guid` および `id` の値で、コマンド セットとコマンド セット内の特定のメニューを指定します。
 
-    [ツール] メニューと [アドイン] メニューを `guid` `id` 含む、Visual Studio のメニューバーのセクションにある親の位置の値と値。
+    親の `guid` および `id` の値により、Visual Studio のメニュー バーの、[ツール] と [アドイン] メニューを含むセクションにメニューが配置されます。
 
-    要素は、 `<ButtonText>` テキストがメニュー項目に表示されることを指定します。
+    `<ButtonText>` 要素で、テキストをメニュー項目に表示することを指定します。
 
-3. セクションで `<Groups>` 、を見つけて、追加した `<Group>` `<Parent>` メニューを指すように要素を変更します。
+3. `<Groups>` セクションで `<Group>` を探し、前の手順で追加したメニューをポイントするように `<Parent>` 要素を変更します。
 
    ```xml
    <Groups>
@@ -141,13 +141,13 @@ Visual Studio 2015 以降では、ダウンロードセンターから Visual St
    </Groups>
    ```
 
-    これにより、グループが新しいメニューに追加されます。
+    これで、グループの部分が新しいメニューに追加されます。
 
 ::: moniker-end
 
-4. セクションで、 `<Buttons>` ノードを見つけ `<Button>` ます。 次に、 `<Strings>` ノードで要素をに変更し `<ButtonText>` `Test Command` ます。
+4. `<Buttons>` セクションで、`<Button>` ノードを探します。 次に、`<Strings>` ノードで、`<ButtonText>` 要素を `Test Command` に変更します。
 
-    パッケージテンプレートによって、 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 親がに設定された要素が生成されていることに注意して `Button` `MyMenuGroup` ください。 その結果、このコマンドがメニューに表示されます。
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] パッケージ テンプレートによって、親が `MyMenuGroup` に設定されている `Button` 要素が生成されたことに注意してください。 その結果、このコマンドがメニューに表示されます。
 
 ## <a name="build-and-test-the-extension"></a>拡張機能をビルドしてテストする
 
@@ -155,20 +155,20 @@ Visual Studio 2015 以降では、ダウンロードセンターから Visual St
 
 ::: moniker range="vs-2017"
 
-2. 実験用インスタンスのメニューバーには、 **[テスト] メニュー** メニューが含まれている必要があります。
+2. 実験用インスタンスのメニュー バーには、 **[Test Menu]** メニューが含まれています。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. 実験用インスタンスの [ **拡張機能** ] メニューには、 **[テスト] メニュー** メニューが含まれている必要があります。
+2. 実験用インスタンスの **[拡張機能]** メニューには、 **[Test Menu]** メニューが含まれています。
 
 ::: moniker-end
 
-3. [ **テスト] メニュー** メニューで、[ **テストコマンド**] を選択します。
+3. **[Test Menu]** メニューで、 **[Test Command]** を選択します。
 
-    メッセージボックスが表示され、"TestCommand in TopLevelMenu ()" というメッセージが表示されます。
+    メッセージ ボックスが表示され、"TestCommand Inside TopLevelMenu.TestCommand.MenuItemCallback()" というメッセージが表示されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [コマンド、メニュー、およびツールバー](../extensibility/internals/commands-menus-and-toolbars.md)
+- [コマンド、メニュー、およびツール バー](../extensibility/internals/commands-menus-and-toolbars.md)

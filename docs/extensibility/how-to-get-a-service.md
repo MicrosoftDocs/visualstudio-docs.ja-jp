@@ -1,5 +1,5 @@
 ---
-title: '方法: サービスを取得する |Microsoft Docs'
+title: '方法: サービスを取得する | Microsoft Docs'
 description: さまざまな機能にアクセスするために Visual Studio サービスを取得する方法について説明します。 ほとんどのサービスは、VSPackage を使用して取得できます。
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
@@ -14,26 +14,26 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9096250f72e6bf64b2c6b76eeaa313ee7769dd51
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070090"
 ---
 # <a name="how-to-get-a-service"></a>方法: サービスを取得する
 
-多くの場合、さまざまな機能にアクセスするために Visual Studio サービスを取得する必要があります。 一般に、Visual Studio サービスには、使用できる1つ以上のインターフェイスが用意されています。 ほとんどのサービスは VSPackage から取得できます。
+さまざまな機能にアクセスするために Visual Studio サービスの取得がしばしば必要になります。 一般に、Visual Studio サービスには、使用できる 1 つ以上のインターフェイスが用意されています。 ほとんどのサービスは VSPackage から取得できます。
 
-から派生 <xref:Microsoft.VisualStudio.Shell.Package> し、正しく配置されているすべての VSPackage は、任意のグローバルサービスを要求できます。 クラスは `Package` を実装するため <xref:System.IServiceProvider> 、から派生するすべての VSPackage `Package` もサービスプロバイダーになります。
+<xref:Microsoft.VisualStudio.Shell.Package> から派生し、正しくサイト設定されているすべての VSPackage では、任意のグローバル サービスを要求できます。 `Package` クラスでは <xref:System.IServiceProvider> を実装するため、`Package` から派生するすべての VSPackage もサービス プロバイダーになります。
 
-Visual Studio は、を読み込むと <xref:Microsoft.VisualStudio.Shell.Package> 、 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 初期化中にオブジェクトをメソッドに渡し <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> ます。 これは、 *サイト設定* VSPackage と呼ばれます。 クラスは、 `Package` このサービスプロバイダーをラップし、 <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> サービスを取得するためのメソッドを提供します。
+Visual Studio で <xref:Microsoft.VisualStudio.Shell.Package> を読み込むと、初期化中に <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> オブジェクトを <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> メソッドに渡します。 これを、VSPackage の *サイト設定* と呼びます。 `Package` クラスでは、このサービス プロバイダーをラップし、サービスを取得するための <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> メソッドを提供します。
 
 ## <a name="getting-a-service-from-an-initialized-vspackage"></a>初期化された VSPackage からのサービスの取得
 
-1. すべての Visual Studio 拡張機能は、拡張機能アセットを含む VSIX デプロイプロジェクトから開始されます。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]という名前の VSIX プロジェクトを作成 `GetServiceExtension` します。 VSIX プロジェクトテンプレートは、"vsix" を検索することで、[ **新しいプロジェクト** ] ダイアログで見つけることができます。
+1. すべての Visual Studio 拡張機能は、拡張機能アセットを格納する VSIX デプロイ プロジェクトから始まります。 `GetServiceExtension` という名前の [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX プロジェクトを作成します。 VSIX プロジェクト テンプレートは、 **[新しいプロジェクト]** ダイアログで「vsix」と検索すると見つかります。
 
-2. 次に、 **Getservicecommand** という名前のカスタムコマンド項目テンプレートを追加します。 [**新しい項目の追加**] ダイアログで、[ **Visual C#** の  >  **機能拡張**] にアクセスし、[**カスタムコマンド**] を選択します。 ウィンドウの下部にある [ **名前** ] フィールドで、[コマンドファイル名] を「 *getservicecommand .cs*」に変更します。 カスタムコマンドを作成する方法の詳細については、「[メニューコマンドを使用して拡張機能を作成](../extensibility/creating-an-extension-with-a-menu-command.md)する」を参照してください。
+2. 次に、**GetServiceCommand** という名前のカスタム コマンド項目テンプレートを追加します。 **[新しい項目の追加]** ダイアログで、 **[Visual C#]**  >  **[機能拡張]** の順にアクセスし、 **[カスタム コマンド]** を選択します。 ウィンドウの下部にある **[名前]** フィールドで、コマンド ファイル名を *GetServiceCommand.cs* に変更します。 カスタム コマンドを作成する方法の詳細については、「[メニュー コマンドを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください
 
-3. *Getservicecommand .cs* で、メソッドの本体を削除 `MenuItemCommand` し、次のコードを追加します。
+3. *GetServiceCommand.cs* で、`MenuItemCommand` メソッドの本体を削除して次のコードを追加します。
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -42,21 +42,21 @@ Visual Studio は、を読み込むと <xref:Microsoft.VisualStudio.Shell.Packag
 
    ```
 
-    このコードは、SVsActivityLog サービスを取得し、それをインターフェイスにキャストします。これを使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> アクティビティログに書き込むことができます。 例については、「 [方法: アクティビティログを使用する](../extensibility/how-to-use-the-activity-log.md)」を参照してください。
+    このコードでは、SVsActivityLog サービスを取得し、アクティビティ ログに書き込むために使用できる <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> インターフェイスにキャストします。 例については、「[方法: アクティビティ ログを使用する](../extensibility/how-to-use-the-activity-log.md)」を参照してください。
 
 4. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。
 
-5. 実験用インスタンスの [ **ツール** ] メニューで、[ **Getservicecommand の呼び出し** ] ボタンを探します。 このボタンをクリックすると、[**アクティビティログサービスが見つかりまし** た] というメッセージボックスが表示されます。
+5. 実験用インスタンスの **[ツール]** メニューで、 **[GetServiceCommand の呼び出し]** ボタンを探します。 このボタンをクリックすると、 **[アクティビティ ログ サービスが見つかりました]** というメッセージ ボックスが表示されます。
 
-## <a name="getting-a-service-from-a-tool-window-or-control-container"></a>ツールウィンドウまたはコントロールコンテナーからサービスを取得する
+## <a name="getting-a-service-from-a-tool-window-or-control-container"></a>ツール ウィンドウまたはコントロール コンテナーからサービスを取得する
 
-場合によっては、配置されていないツールウィンドウまたはコントロールコンテナーからサービスを取得する必要があります。そうしないと、必要なサービスがわからないサービスプロバイダーが配置されていることがあります。 たとえば、コントロール内からアクティビティログに書き込むことができます。
+サイト設定されていないか、必要なサービスを認識していないサービス プロバイダーでサイト設定されているツール ウィンドウまたはコントロール コンテナーからサービスを取得する必要がある場合があります。 たとえば、コントロール内からアクティビティ ログに書き込みたい場合があります。
 
-静的メソッドは、 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> から派生したすべての VSPackage が配置されるときに初期化される、キャッシュされたサービスプロバイダーに依存し <xref:Microsoft.VisualStudio.Shell.Package> ます。
+静的 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> メソッドは、<xref:Microsoft.VisualStudio.Shell.Package> から派生した VSPackage が最初にサイト設定されるときに初期化される、キャッシュされたサービス プロバイダーに依存します。
 
-VSPackage コンストラクターは VSPackage が配置される前に呼び出されるため、通常、グローバルサービスは VSPackage コンストラクター内からは使用できません。 回避策については、「 [方法: サービスのトラブルシューティング](../extensibility/how-to-troubleshoot-services.md) 」を参照してください。
+VSPackage コンストラクターは VSPackage がサイト設定される前に呼び出されるため、通常、グローバル サービスは VSPackage コンストラクター内からは使用できません。 回避策については、「[方法: サービスのトラブルシューティング](../extensibility/how-to-troubleshoot-services.md)」を参照してください。
 
-ツールウィンドウまたはその他の非 VSPackage 要素でサービスを取得する方法の例を次に示します。
+ツール ウィンドウまたはその他の非 VSPackage 要素でサービスを取得する方法の例を次に示します。
 
 ```csharp
 IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -65,11 +65,11 @@ if (log == null) return;
 
 ## <a name="getting-a-service-from-the-dte-object"></a>DTE オブジェクトからサービスを取得する
 
-また、オブジェクトからサービスを取得することもでき <xref:EnvDTE.DTEClass> ます。 ただし、VSPackage から、または静的メソッドを呼び出すことによって、DTE オブジェクトをサービスとして取得する必要があり <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ます。
+<xref:EnvDTE.DTEClass> オブジェクトからサービスを取得することもできます。 ただし、VSPackage から、または静的 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> メソッドを呼び出すことによって、DTE オブジェクトをサービスとして取得する必要があります。
 
-DTE オブジェクトはを実装し <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ます。これを使用すると、を使用してサービスを照会でき <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> ます。
+DTE オブジェクトでは <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> を実装します。これを使用すると、<xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> を使用してサービスのクエリを実行できます。
 
-ここでは、DTE オブジェクトからサービスを取得する方法について説明します。
+DTE オブジェクトからサービスを取得する方法を次に示します。
 
 ```csharp
 // Start with the DTE object, for example: 
@@ -87,8 +87,8 @@ if (sp != null)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [方法: サービスを提供する](../extensibility/how-to-provide-a-service.md)
-- [サービスを使用して提供する](../extensibility/using-and-providing-services.md)
-- [サービスの基本事項](../extensibility/internals/service-essentials.md)
+- [サービスを使用および提供する](../extensibility/using-and-providing-services.md)
+- [サービスの基本情報](../extensibility/internals/service-essentials.md)

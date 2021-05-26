@@ -1,6 +1,6 @@
 ---
-description: この関数は、ソース管理操作のバッチシーケンスを開始します。
-title: SccBeginBatch 関数 |Microsoft Docs
+description: この関数により、ソース管理操作のバッチ シーケンスが開始されます。
+title: SccBeginBatch 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5af4d8fb1d8524f16493603bb5d46ee4bdbd03ba
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105060446"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 関数
-この関数は、ソース管理操作のバッチシーケンスを開始します。 バッチを終了するために [Sccendbatch](../extensibility/sccendbatch-function.md) が呼び出されます。 これらのバッチを入れ子にすることはできません。
+この関数により、ソース管理操作のバッチ シーケンスが開始されます。 バッチを終了するために [SccEndBatch](../extensibility/sccendbatch-function.md) が呼び出されます。 これらのバッチを入れ子にすることはできません。
 
 ## <a name="syntax"></a>構文
 
@@ -33,18 +33,18 @@ SCCRTN SccBeginBatch(void);
  [なし] :
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
-|SCC_OK|操作のバッチが正常に開始しました。|
+|SCC_OK|操作のバッチが正常に開始されました。|
 |SCC_E_UNKNOWNERROR|不特定のエラーです。|
 
-## <a name="remarks"></a>注釈
- ソース管理バッチは、複数のプロジェクトまたは複数のコンテキストで同じ操作を実行するために使用されます。 バッチ処理を使用すると、バッチ操作中のユーザーエクスペリエンスから、プロジェクトごとの冗長なダイアログボックスを削除できます。 `SccBeginBatch`関数と[Sccendbatch](../extensibility/sccendbatch-function.md)は、操作の開始と終了を示すために関数のペアとして使用されます。 入れ子にすることはできません。 `SccBeginBatch` バッチ操作が進行中であることを示すフラグを設定します。
+## <a name="remarks"></a>解説
+ ソース管理バッチは、複数のプロジェクトまたは複数のコンテキストで同じ操作を実行するために使用されます。 バッチを使用すると、バッチされた操作中に、ユーザー エクスペリエンスから冗長なプロジェクトごとのダイアログ ボックスを削除できます。 `SccBeginBatch` 関数と [SccEndBatch](../extensibility/sccendbatch-function.md) は、操作の開始と終了を示すペアとして使用されます。 入れ子にすることはできません。 `SccBeginBatch` により、バッチ操作が進行中であることを示すフラグが設定されます。
 
- バッチ操作が有効になっている間、ソース管理プラグインは、すべての質問に対して1つのダイアログボックスを表示し、後続のすべての操作にそのダイアログボックスから応答を適用する必要があります。
+ バッチ操作が有効になっている間、ソース管理プラグインでは、ユーザーに対するすべての質問に対して最大 1 つのダイアログ ボックスを表示し、後続のすべての操作にそのダイアログ ボックスから応答を適用する必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ソース管理プラグイン API 関数](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>関連項目
+- [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [SccEndBatch](../extensibility/sccendbatch-function.md)

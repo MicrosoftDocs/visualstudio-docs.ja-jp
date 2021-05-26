@@ -1,6 +1,6 @@
 ---
-title: ディレクトリ状態コード列挙子 |Microsoft Docs
-description: SccDirStatus 列挙子には、ソース管理システムのディレクトリの状態を指定し、SccDirQueryInfo によって使用される名前付き定数値が含まれています。
+title: ディレクトリ状態コード列挙子 | Microsoft Docs
+description: SccDirStatus 列挙子には、ソース管理システム内のディレクトリファイルの状態を指定する名前付き定数値が含まれ、SccDirQueryInfo によって使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3e995fb1dcb879645f59d6d8750852a790c99e90
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105091254"
 ---
-# <a name="directory-status-code-enumerator"></a>ディレクトリステータスコード列挙子
-列挙子には、 `SccDirStatus` ソース管理システム内のディレクトリの状態を指定する名前付き定数値が含まれます。 この列挙体は、 [Sccdirqueryinfo](../extensibility/sccdirqueryinfo-function.md)によって使用されます。 これは、ソース管理プラグイン API のバージョン1.2 で導入されました。
+# <a name="directory-status-code-enumerator"></a>ディレクトリの状態コードの列挙子
+`SccDirStatus` 列挙子には、ソース管理システム内のディレクトリの状態を指定する名前付き定数値が含まれます。 この列挙子は、[SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md) で使用されます。 これは、ソース管理プラグイン API のバージョン 1.2 で導入されました。
 
 ## <a name="syntax"></a>構文
 
@@ -35,14 +35,14 @@ enum SccDirStatus {
 ```
 
 ## <a name="members"></a>メンバー
- SCC_DIRSTATUS_INVALID の状態を取得できませんでした。それに依存しないでください。
+ SCC_DIRSTATUS_INVALID 状態を取得できませんでした。これに依存しないでください。
 
  SCC_DIRSTATUS_NOTCONTROLLED ディレクトリがソース管理下にありません。
 
- SCC_DIRSTATUS_CONTROLLED Directory がソース管理下にあります。
+ SCC_DIRSTATUS_CONTROLLED ディレクトリがソース管理下にあります。
 
- このディレクトリに対応する SCC_DIRSTATUS_EMPTYPROJ プロジェクトは空です。
+ このディレクトリに対応した SCC_DIRSTATUS_EMPTYPROJ プロジェクトが空です。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)
 - [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md)

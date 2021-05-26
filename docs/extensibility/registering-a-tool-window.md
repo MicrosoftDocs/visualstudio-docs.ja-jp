@@ -1,6 +1,6 @@
 ---
-title: ツールウィンドウの登録 |Microsoft Docs
-description: ProvideToolWindowVisibilityAttribute を使用して、ツールウィンドウを Visual Studio に登録する方法について説明します。
+title: ツール ウィンドウの登録 | Microsoft Docs
+description: ProvideToolWindowAttribute と ProvideToolWindowVisibilityAttribute を使用して、ツール ウィンドウを Visual Studio に登録する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 13c3035f089855f88d54ecc8b3c1e6434ac10e65
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056585"
 ---
-# <a name="register-a-tool-window"></a>ツールウィンドウを登録する
-ツールウィンドウは、およびを使用して登録でき <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute>  <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> ます。
+# <a name="register-a-tool-window"></a>ツール ウィンドウを登録する
+ツール ウィンドウは、<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> と <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> を使用して登録できます。
 
 ## <a name="example"></a>例
 
@@ -37,4 +37,4 @@ public class PackageToolWindow : Package
 {
 ```
 
- 上記のコードでは、によって <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> `PersistedWindowPane` と `DynamicWindowPane` ツールウィンドウが Visual Studio に登録されます。 永続化されたツールウィンドウはドッキングされ、 **ソリューションエクスプローラー** でタブが付けられます。また、動的ウィンドウには、既定の開始位置とサイズが指定されます。 動的ウィンドウは一時的に作成されます。これは、起動時に作成されないことを示します。 これにより、 `DontForceCreate` システムレジストリのキーに値が書き込ま `ToolWindows` れます。 詳細については、「 [ツールウィンドウの表示構成](/previous-versions/visualstudio/visual-studio-2015/extensibility/tool-window-display-configuration?preserve-view=true&view=vs-2015)」を参照してください。
+ 上記のコードでは、<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> によって `PersistedWindowPane` と `DynamicWindowPane` ツール ウィンドウが Visual Studio に登録されます。 永続化されたツール ウィンドウはドッキングされ、**ソリューション エクスプローラー** でタブが付けられます。また、動的ウィンドウでは、既定の開始位置とサイズが指定されます。 動的ウィンドウは一時的に作成されます。これは、起動時に作成されないことを示します。 これにより、システム レジストリの `ToolWindows` キーに `DontForceCreate` 値が書き込まれます。 詳細については、「[ツール ウィンドウの表示の構成](/previous-versions/visualstudio/visual-studio-2015/extensibility/tool-window-display-configuration?preserve-view=true&view=vs-2015)」を参照してください。

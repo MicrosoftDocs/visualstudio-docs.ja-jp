@@ -10,12 +10,12 @@ user.type: subscriber
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
 sap.id: 8250612f-7446-20c5-7473-16d089f2280d
-ms.openlocfilehash: 1fff22ee7b07a5c0817d0b4e0cd8fac4d2732215
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: f0b55c7bbd4138d0486d9d5df22081e782755e30
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541056"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349988"
 ---
 ## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-controls-or-buttons-while-using-the-visual-studio-subscriptions-portal"></a>Visual Studio サブスクリプション ポータルの使用中に、コントロールまたはボタンで問題が発生したとのこと、ご不便をおかけして申し訳ございません。 
 
@@ -26,4 +26,4 @@ ms.locfileid: "99541056"
 * Incognito または InPrivate ウィンドウでポータルを開きます 
 * ページを更新します  
 
-これらの簡単な解決策で問題が解決しない場合は、[サポート チケットを作成] をクリックしてサポートを受けてください。
+これらのシンプルな解決策で問題が解決しない場合は、下の [オンライン要求] をクリックして Visual Studio サブスクリプション サポートにお問い合わせください。 

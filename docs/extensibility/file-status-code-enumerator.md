@@ -1,6 +1,6 @@
 ---
-title: ファイル状態コード列挙子 |Microsoft Docs
-description: SccStatus 列挙子には、ソース管理システム内のファイルの状態を示す定数値が含まれ、SccQueryInfo および POPLISTFUNC によって使用されます。
+title: ファイル状態コード列挙子 | Microsoft Docs
+description: SccStatus 列挙子には、ソース管理システム内のファイルの状態を指定する定数値が含まれ、SccQueryInfo および POPLISTFUNC によって使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: af2ff3293a55dc76925aedd7a029e1bfdd367186
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105074952"
 ---
 # <a name="file-status-code-enumerator"></a>ファイル状態コード列挙子
-列挙子には、 `SccStatus` ソース管理システム内のファイルの状態を指定する名前付き定数値が含まれます。 この列挙体は、 [Sccqueryinfo](../extensibility/sccqueryinfo-function.md) およびコールバック関数によって使用され `POPLISTFUNC` ます (詳細については、 [POPLISTFUNC](../extensibility/poplistfunc.md) を参照してください)。
+`SccStatus` 列挙子には、ソース管理システム内のファイルの状態を指定する名前付き定数値が含まれます。 この列挙は、[SccQueryInfo](../extensibility/sccqueryinfo-function.md) および `POPLISTFUNC` コールバック関数によって使用されます (詳細については、[POPLISTFUNC](../extensibility/poplistfunc.md) を参照してください)。
 
 ## <a name="syntax"></a>構文
 
@@ -51,43 +51,43 @@ enum SccStatus {
 ```
 
 ## <a name="members"></a>メンバー
- SCC_STATUS_INVALID の状態を取得できませんでした。それに依存しないでください。
+ SCC_STATUS_INVALID 状態を取得できませんでした。それに依存しないでください。
 
- SCC_STATUS_NOTCONTROLLED ファイルがソース管理下にありません。
+ SCC_STATUS_NOTCONTROLLED ファイルはソース管理下にありません。
 
- SCC_STATUS_CONTROLLED ファイルがソース管理下にあります。
+ SCC_STATUS_CONTROLLED ファイルはソース管理下にあります。
 
- SCC_STATUS_CHECKEDOUT ローカルディスクの現在のユーザーによってチェックアウトされています。
+ SCC_STATUS_CHECKEDOUT ローカル ディスクの現在のユーザーによってチェックアウトされています。
 
- SCC_STATUS_OUTOTHER ファイルが別のユーザーによってチェックアウトされています。
+ SCC_STATUS_OUTOTHER ファイルは別のユーザーによってチェックアウトされています。
 
  SCC_STATUS_OUTEXCLUSIVE ファイルは排他的にチェックアウトされています。
 
- SCC_STATUS_OUTMULTIPLE ファイルが複数のユーザーによってチェックアウトされています。
+ SCC_STATUS_OUTMULTIPLE ファイルは複数のユーザーによってチェックアウトされています。
 
- SCC_STATUS_OUTOFDATE ファイルが最新ではありません。
+ SCC_STATUS_OUTOFDATE ファイルは最新ではありません。
 
- SCC_STATUS_DELETED ファイルがプロジェクトから削除されました。
+ SCC_STATUS_DELETED ファイルはプロジェクトから削除されています。
 
- SCC_STATUS_LOCKED ファイルがロックされています。これ以上のバージョンは使用できません。
+ SCC_STATUS_LOCKED ファイルはロックされています。これ以上のバージョンは使用できません。
 
  SCC_STATUS_MERGED ファイルはマージされましたが、まだ修正または検証されていません。
 
- SCC_STATUS_SHARED ファイルは、プロジェクト間で共有されます。
+ SCC_STATUS_SHARED ファイルはプロジェクト間で共有されます。
 
- SCC_STATUS_PINNED ファイルは、明示的なバージョンに共有されます。
+ SCC_STATUS_PINNED ファイルは明示的なバージョンに共有されます。
 
- SCC_STATUS_MODIFIED ファイルが変更されたか、壊れているか、違反になっています。
+ SCC_STATUS_MODIFIED ファイルは変更されているか、壊れているか、違反にされています。
 
- SCC_STATUS_OUTBYUSER ファイルが現在のユーザーによってチェックアウトされています。
+ SCC_STATUS_OUTBYUSER ファイルは現在のユーザーによってチェックアウトされています。
 
- SCC_STATUS_NOMERGE ファイルをにマージすることはできません。また、GET の前に保存する必要もありません。
+ SCC_STATUS_NOMERGE ファイルをマージすることはできず、GET の前に保存する必要はありません。
 
- SCC_STATUS_RESERVED_1 内部使用のために予約されています。
+ SCC_STATUS_RESERVED_1 内部使用用として予約されています。
 
- SCC_STATUS_RESERVED_2 内部使用のために予約されています。
+ SCC_STATUS_RESERVED_2 内部使用用として予約されています。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ソース管理プラグイン](../extensibility/source-control-plug-ins.md)
 - [SccQueryInfo](../extensibility/sccqueryinfo-function.md)
 - [POPLISTFUNC](../extensibility/poplistfunc.md)

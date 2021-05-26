@@ -1,6 +1,6 @@
 ---
-description: この関数は、確認するディレクトリのリストを指定して、ソース管理に格納するディレクトリと (必要に応じて) ファイルを決定します。
-title: SccPopulateDirList 関数 |Microsoft Docs
+description: この関数では、確認するディレクトリの一覧が指定されたとき、どのディレクトリとファイル (オプション) がソース管理に格納されるかを特定します。
+title: SccPopulateDirList 関数 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5d04fc7796db57dedcf8af495c67876cd4974ab1
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105063748"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList 関数
-この関数は、確認するディレクトリのリストを指定して、ソース管理に格納するディレクトリと (必要に応じて) ファイルを決定します。
+この関数では、確認するディレクトリの一覧が指定されたとき、どのディレクトリとファイル (オプション) がソース管理に格納されるかを特定します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,40 +39,40 @@ SCCRTN SccPopulateDirList(
 #### <a name="parameters"></a>パラメーター
  pContext
 
-からソース管理プラグインのコンテキストポインター。
+[入力] ソース管理プラグインのコンテキスト ポインター。
 
  nDirs
 
-から配列内のディレクトリパスの数 `lpDirPaths` 。
+[入力] `lpDirPaths` 配列内のディレクトリ パスの数。
 
  lpDirPaths
 
-から確認するディレクトリパスの配列。
+[入力] 確認するディレクトリ パスの配列。
 
  pfnPopulate
 
-からディレクトリパスと (必要に応じて) のファイル名を呼び出すためのコールバック関数 `lpDirPaths` (詳細については、「 [Popdirlistfunc](../extensibility/popdirlistfunc.md) 」を参照してください)。
+[入力] `lpDirPaths` 内のディレクトリ パスとファイル名 (オプション) ごとに呼び出すコールバック関数 (詳細については、「[POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)」を参照)。
 
  pvCallerData
 
-から変更せずにコールバック関数に渡される値。
+[入力] 変更なしでコールバック関数に渡される値。
 
- 限ら
+ fOptions
 
-からディレクトリの処理方法を制御する値の組み合わせ (有効な値については、 [特定のコマンドで使用される Bitflags](../extensibility/bitflags-used-by-specific-commands.md) の "PopulateDirList flags" セクションを参照してください)。
+[入力] ディレクトリの処理方法を制御する値の組み合わせ (指定できる値については、「[特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)」の「PopulateDirList フラグ」セクションを参照)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次の値のいずれかが返されることが想定されています。
+ この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|操作は正常に完了しました。|
 |SCC_E_UNKNOWNERROR|エラーが発生しました。|
 
-## <a name="remarks"></a>注釈
- コールバック関数に渡されるのは、ソース管理リポジトリ内のディレクトリと (必要に応じて) ファイル名だけです。
+## <a name="remarks"></a>解説
+ 実際にソース管理リポジトリ内に存在するディレクトリとファイル名 (オプション) だけがコールバック関数に渡されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ソース管理プラグインの API 関数](../extensibility/source-control-plug-in-api-functions.md)
 - [特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)
 - [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md)

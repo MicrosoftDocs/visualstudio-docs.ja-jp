@@ -1,7 +1,7 @@
 ---
-title: Assembly 要素 (Visual Studio テンプレート) |Microsoft Docs
+title: Assembly 要素 (Visual Studio テンプレート) | Microsoft Docs
 titleSuffix: ''
-description: アセンブリ要素について、およびアセンブリに関する情報をどのように指定するかについて説明します。アセンブリは、そのアセンブリの参照をプロジェクトに追加するために使用されます。
+description: Assembly 要素について説明し、そこでアセンブリに関する情報を指定する方法について説明します。テンプレートでは、その情報を使用して、そのアセンブリの参照をプロジェクトに追加します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,13 +19,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 54fc5cfccde99776136f0cb904d02bf6a4971045
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105097319"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly 要素 (Visual Studio テンプレート)
-アセンブリに関する情報を指定します。このアセンブリは、プロジェクトにアセンブリの参照を追加するためにテンプレートで使用されます。
+アセンブリに関する情報を指定します。テンプレートでは、これを使用して、そのアセンブリの参照をプロジェクトに追加します。
 
  \<VSTemplate> \<TemplateContent>
  \<References>
@@ -51,14 +51,14 @@ ms.locfileid: "105097319"
 
 |要素|説明|
 |-------------|-----------------|
-|[リファレンス](../extensibility/reference-element-visual-studio-templates.md)|項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。|
+|[参照](../extensibility/reference-element-visual-studio-templates.md)|項目がプロジェクトに追加されたときに追加するアセンブリ参照を指定します。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- このテキストは、項目テンプレートがインスタンス化されるときにプロジェクトに追加するアセンブリを指定します。 このアセンブリ名は、次のいずれかの方法で指定する必要があります。
+ このテキストでは、項目テンプレートがインスタンス化されるときにプロジェクトに追加するアセンブリを指定します。 このアセンブリの名前は、次のいずれかの方法で指定する必要があります。
 
-- 完全なアセンブリ名として指定します。 次に例を示します。
+- 完全なアセンブリ名として。 次に例を示します。
 
     ```
     <Assembly>
@@ -75,10 +75,10 @@ ms.locfileid: "105097319"
 ## <a name="remarks"></a>解説
  `Assembly` は `Reference` に必須の子要素です。
 
- 、、およびの各要素は、 `Reference` `References,` `Assembly` 属性値がである *.vstemplate* ファイルでのみ使用できます `Type` `Item` 。
+ `Reference`、`References,`、`Assembly` の各要素は、`Type` 属性値が `Item` である *.vstemplate* ファイル内でのみ使用できます。
 
 ## <a name="example"></a>例
- 次の例は、 `TemplateContent` 項目テンプレートの要素を示しています。 この XML は、 *System.dll* アセンブリおよび *System.Data.dll* アセンブリへの参照を追加します。
+ 次の例は、項目テンプレートの `TemplateContent` 要素を示しています。 この XML では、*System.dll* および *System.Data.dll* アセンブリへの参照を追加します。
 
 ```
 <TemplateContent>

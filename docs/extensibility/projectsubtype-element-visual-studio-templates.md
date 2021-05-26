@@ -1,6 +1,6 @@
 ---
-title: ProjectSubType 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: ProjectSubType 要素について、および ProjectType 要素で指定された値のサブカテゴリにテンプレートを分類する方法について説明します。
+title: ProjectSubType 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: ProjectSubType 要素と、それを使用して、テンプレートを ProjectType 要素で指定されている値のサブカテゴリに分類する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 02dd5573de12e4626c267fa014f6c7fc8f243b72
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068677"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 要素 (Visual Studio テンプレート)
-テンプレートを、要素で指定された値のサブカテゴリに分類し `ProjectType` ます。
+テンプレートを `ProjectType` 要素で指定されている値のサブカテゴリに分類します。
 
  \<VSTemplate> \<TemplateData>
  \<ProjectSubType>
@@ -55,23 +55,23 @@ ms.locfileid: "105068677"
 
  この値は、テンプレートのサブカテゴリを指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `ProjectSubType` は、`TemplateData` の子要素で、省略可能な要素です。
 
- 要素は、 `ProjectSubType` [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) 要素のサブカテゴリを提供します。 この値には次のものがあります。
+ `ProjectSubType` 要素は、[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) 要素のサブカテゴリを提供します。 この値には、次のものを含めることができます。
 
-- `SmartDevice-NETCFv1`: テンプレートがバージョン1.0 を対象とすることを指定し [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] ます。
+- `SmartDevice-NETCFv1`: このテンプレートが [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] バージョン 1.0 を対象とすることを指定します。
 
-- `SmartDevice-NETCFv2`: テンプレートがバージョン2.0 を対象とすることを指定し [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] ます。
+- `SmartDevice-NETCFv2`: このテンプレートが [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] バージョン 2.0 を対象とすることを指定します。
 
-  テンプレートに値がの要素が含まれている場合、 `ProjectType` `Web` `ProjectSubType` 要素はテンプレートのプログラミング言語を指定します。 この要素には、次の値を指定できます。
+  テンプレートに `Web` の値を持つ `ProjectType` 要素が含まれている場合、`ProjectSubType` 要素は、そのテンプレートのプログラミング言語を指定します。 この要素には、次の値を含めることができます。
 
-- `CSharp`: テンプレートが [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目を作成するように指定します。
+- `CSharp`: このテンプレートで [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Web プロジェクトまたは項目を作成することを指定します。
 
-- `VisualBasic`: テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目を作成するように指定します。
+- `VisualBasic`: このテンプレートで [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Web プロジェクトまたは項目を作成することを指定します。
 
 ## <a name="example"></a>例
- 次の例は、バージョン2.0 を対象とするデバイスアプリケーションのプロジェクトテンプレートのメタデータを示して [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] います。
+ 次の例は、[!INCLUDE[Compact](../extensibility/includes/compact_md.md)] バージョン 2.0 を対象とする [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] デバイス アプリケーションのプロジェクト テンプレートのメタデータを示しています。
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"

@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: 電球の提案を表示する |Microsoft Docs'
-description: このチュートリアルでは、現在の単語に表示される電球を Visual Studio エディターで作成する方法について説明します。また、このチュートリアルを使用して、2つの推奨される操作を行います。
+title: 'チュートリアル: 電球アイコンによる提案の表示 | Microsoft Docs'
+description: このチュートリアルを使用して、Visual Studio エディターで、現在の単語に表示され、2 つの推奨される操作を持つ電球アイコンを作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,48 +12,48 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: ad000d486b0808ea4ddc3311daa7178c6eda1231
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105080321"
 ---
-# <a name="walkthrough-display-light-bulb-suggestions"></a>チュートリアル: 電球の提案を表示する
-電球は、Visual Studio エディターのアイコンです。これは、組み込みのコードアナライザーまたはコードリファクタリングで特定された問題の修正など、一連のアクションを表示するために展開されます。
+# <a name="walkthrough-display-light-bulb-suggestions"></a>チュートリアル: 電球アイコンによる提案の表示
+電球アイコンは、Visual Studio エディターのアイコンです。これは、組み込みのコード アナライザーまたはコード リファクタリングで特定された問題の修正などの一連のアクションを表示するために展開されます。
 
- Visual C# と Visual Basic エディターでは、.NET Compiler Platform ("Roslyn") を使用して、電球を自動的に表示するアクションを使用して独自のコードアナライザーを記述し、パッケージ化することもできます。 詳細については、次を参照してください。
+ Visual C# と Visual Basic のエディターでは、.NET Compiler Platform ("Roslyn") を使用し、電球アイコンを自動的に表示するアクションを持つ独自のコード アナライザーを記述し、パッケージ化することもできます。 詳細については、次を参照してください。
 
-- [方法: C# 診断とコード修正プログラムを記述する](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
+- [方法: C# の診断とコード修正を記述する](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix.md)
 
-- [方法: Visual Basic 診断とコード修正プログラムを記述する](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix.md)
+- [方法: Visual Basic の診断とコード修正を記述する](https://github.com/dotnet/roslyn/blob/master/docs/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix.md)
 
-  C++ などの他の言語では、その機能のスタブ実装を作成するための提案など、いくつかのクイックアクションの電球も用意されています。
+  C++ などの他の言語では、その機能のスタブ実装を作成するための提案など、いくつかのクイック アクションの電球アイコンも提供されます。
 
-  電球は次のようになります。 Visual Basic または Visual C# プロジェクトでは、無効な場合、変数名の下に赤い波線が表示されます。 無効な識別子にマウスを置くと、カーソルの近くに電球が表示されます。
+  電球アイコンは次のような外観です。 Visual Basic または Visual C# プロジェクトでは、変数名が無効な場合、その下に赤い波線が表示されます。 無効な識別子の上にマウスを置くと、カーソルの近くに電球アイコンが表示されます。
 
-  ![電球](../extensibility/media/lightbulb.png "LightBulb")
+  ![電球](../extensibility/media/lightbulb.png "電球アイコン")
 
-  電球の下矢印をクリックすると、選択したアクションのプレビューと共に、一連の推奨アクションが表示されます。 この場合、アクションを実行すると、コードに加えられた変更が表示されます。
+  電球アイコンの横の下矢印をクリックすると、選択したアクションのプレビューと共に、一連の推奨アクションが表示されます。 この場合、アクションを実行すると、コードに加えられた変更が表示されます。
 
-  ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "ライトのバルクプレビュー")
+  ![電球のプレビュー](../extensibility/media/lightbulbpreview.png "電球アイコンのプレビュー")
 
-  電球を使用すると、独自の推奨アクションを提供できます。 たとえば、左中かっこを新しい行に移動したり、前の行の末尾に移動したりするアクションを指定できます。 次のチュートリアルでは、現在の単語に表示される電球を作成する方法を説明します。また、[ **大文字に変換** ] と [ **小文字に** 変換] の2つの推奨アクションがあります。
+  電球アイコンを使用すると、独自の推奨アクションを提供できます。 たとえば、左中かっこを新しい行に移動したり、前の行の末尾に移動したりするアクションを提供できます。 次のチュートリアルでは、現在の単語の上に表示され、**大文字への変換** と **小文字への変換** の 2 つの推奨アクションを持つ電球アイコンを作成する方法を示します。
 
-## <a name="prerequisites"></a>前提条件
- Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+## <a name="prerequisites"></a>必須コンポーネント
+ Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) プロジェクトを作成する
 
-1. C# VSIX プロジェクトを作成します。 ([ **新しいプロジェクト** ] ダイアログで、[Visual C#]、[ **拡張機能**]、[ **VSIX プロジェクト**] の順に選択します)。ソリューションにという名前を指定 `LightBulbTest` します。
+1. C# VSIX プロジェクトを作成します。 ( **[新しいプロジェクト]** ダイアログで、 **[Visual C#]、[拡張機能]** 、 **[VSIX プロジェクト]** の順に選択します。) ソリューションに `LightBulbTest` という名前を付けます。
 
-2. **エディター分類子** 項目テンプレートをプロジェクトに追加します。 詳細については、「 [エディター項目テンプレートを使用して拡張機能を作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)する」を参照してください。
+2. **[エディター分類子]** 項目テンプレートをプロジェクトに追加します。 詳細については、「[エディター項目テンプレートを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。
 
 3. 既存のクラス ファイルを削除します。
 
-4. 次の参照をプロジェクトに追加し、[ **ローカルにコピー** ] をに設定し `False` ます。
+4. プロジェクトに次の参照を追加し、 **[ローカルにコピーする]** を `False` に設定します。
 
      *Microsoft.VisualStudio.Language.Intellisense*
 
-5. 新しいクラスファイルを追加し、それに **電球** という名前を指定します。
+5. 新しいクラス ファイルを追加して、「**LightBulbTest**」という名前を付けます。
 
 6. ディレクティブを使用して以下を追加します。
 
@@ -72,9 +72,9 @@ ms.locfileid: "105080321"
 
     ```
 
-## <a name="implement-the-light-bulb-source-provider"></a>電球ソースプロバイダーを実装する
+## <a name="implement-the-light-bulb-source-provider"></a>電球アイコンのソース プロバイダーを実装する
 
-1. *ライト* の組み込みのクラスファイルで、ライトを削除します。 を実装する **TestSuggestedActionsSourceProvider** という名前のクラスを追加 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> します。 テストの提案された **アクション** の名前と "text" を使用してエクスポートし <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> ます。
+1. *LightBulbTest.cs* クラス ファイルで、LightBulbTest クラスを削除します。 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> を実装する **TestSuggestedActionsSourceProvider** という名前のクラスを追加します。 **Test Suggested Actions** という名前を付けて、<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> に "text" を設定して、それをエクスポートします。
 
     ```csharp
     [Export(typeof(ISuggestedActionsSourceProvider))]
@@ -83,14 +83,14 @@ ms.locfileid: "105080321"
     internal class TestSuggestedActionsSourceProvider : ISuggestedActionsSourceProvider
     ```
 
-2. ソースプロバイダークラス内で、をインポート <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> し、プロパティとして追加します。
+2. ソース プロバイダー クラス内で、<xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> をインポートし、プロパティとして追加します。
 
     ```csharp
     [Import(typeof(ITextStructureNavigatorSelectorService))]
     internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }
     ```
 
-3. オブジェクトを <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> 返すメソッドを実装し <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> ます。 ソースについては、次のセクションで説明します。
+3. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> オブジェクトを返すための <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> メソッドを実装します。 このソースについては、次のセクションで説明します。
 
     ```csharp
     public ISuggestedActionsSource CreateSuggestedActionsSource(ITextView textView, ITextBuffer textBuffer)
@@ -104,15 +104,15 @@ ms.locfileid: "105080321"
     ```
 
 ## <a name="implement-the-isuggestedactionsource"></a>ISuggestedActionSource を実装する
- 推奨されるアクションソースは、提案されたアクションのセットを収集し、適切なコンテキストで追加します。 この場合、コンテキストは現在の単語であり、推奨されるアクションは **UpperCaseSuggestedAction** と **LowerCaseSuggestedAction** です。これについては、次のセクションで説明します。
+ 推奨アクションのソースによって、一連の推奨アクションが収集され、適切なコンテキストに追加されます。 この場合、コンテキストは現在の単語であり、推奨アクションは **UpperCaseSuggestedAction** と **LowerCaseSuggestedAction** です。これについては、以降のセクションで説明します。
 
-1. を実装するクラス **TestSuggestedActionsSource** を追加 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> します。
+1. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> を実装する **TestSuggestedActionsSource** クラスを追加します。
 
     ```csharp
     internal class TestSuggestedActionsSource : ISuggestedActionsSource
     ```
 
-2. 推奨されるアクションソースプロバイダー、テキストバッファー、およびテキストビューに対して、プライベートな読み取り専用フィールドを追加します。
+2. 推奨アクションのソース プロバイダー、テキスト バッファー、テキスト ビューに、プライベートな読み取り専用フィールドを追加します。
 
     ```csharp
     private readonly TestSuggestedActionsSourceProvider m_factory;
@@ -120,7 +120,7 @@ ms.locfileid: "105080321"
     private readonly ITextView m_textView;
     ```
 
-3. プライベートフィールドを設定するコンストラクターを追加します。
+3. プライベート フィールドを設定するコンストラクターを追加します。
 
     ```csharp
     public TestSuggestedActionsSource(TestSuggestedActionsSourceProvider testSuggestedActionsSourceProvider, ITextView textView, ITextBuffer textBuffer)
@@ -131,7 +131,7 @@ ms.locfileid: "105080321"
     }
     ```
 
-4. 現在カーソルの下にある単語を返すプライベートメソッドを追加します。 次のメソッドは、カーソルの現在の位置を調べ、単語の範囲をテキスト構造ナビゲーターに要求します。 カーソルが単語上にある場合は、 <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> out パラメーターにが返されます。それ以外の場合、 `out` パラメーターはで、 `null` メソッドはを返し `false` ます。
+4. 現在カーソルの下にある単語を返すプライベート メソッドを追加します。 次のメソッドでは、カーソルの現在の位置を調べ、単語の長さをテキスト構造ナビゲーターに問い合わせます。 カーソルが単語の上にある場合は、out パラメーターに <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> が返されます。それ以外の場合、`out` パラメーターは `null` となり、メソッドによって `false` が返されます。
 
     ```csharp
     private bool TryGetWordUnderCaret(out TextExtent wordExtent)
@@ -156,9 +156,9 @@ ms.locfileid: "105080321"
     }
     ```
 
-5. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> メソッドを実装します。 エディターはこのメソッドを呼び出して、電球を表示するかどうかを確認します。 この呼び出しは頻繁に行われます。たとえば、カーソルがある行から別の行に移動した場合、またはマウスがエラーの波線の上に置かれたときなどです。 このメソッドが動作している間は、他の UI 操作を実行できるようにするために非同期です。 ほとんどの場合、このメソッドは現在の行の解析と分析を実行する必要があるため、処理に時間がかかることがあります。
+5. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> メソッドを実装します。 エディターでは、このメソッドを呼び出して、電球アイコンを表示するかどうかを判断します。 この呼び出しは頻繁に行われます。たとえば、カーソルがある行から別の行に移動されたとき、またはマウスがエラーの波線の上に置かれたときなどです。 これは非同期で行われるため、このメソッドが動作している間に他の UI 操作を行うことができます。 ほとんどの場合、このメソッドでは現在の行の解析と分析を実行する必要があるため、処理に時間がかかることがあります。
 
-     この実装では、を非同期に取得 <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> し、空白以外のテキストがあるかどうかなど、エクステントが有意であるかどうかを判断します。
+     この実装では、<xref:Microsoft.VisualStudio.Text.Operations.TextExtent> が非同期で取得され、範囲が有意であるかどうか (空白以外のテキストがあるかどうかなど) が判断されます。
 
     ```csharp
     public Task<bool> HasSuggestedActionsAsync(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)
@@ -176,10 +176,10 @@ ms.locfileid: "105080321"
     }
     ```
 
-6. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A>異なるオブジェクトを含むオブジェクトの配列を返すメソッドを実装し <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> ます。 このメソッドは、電球が拡張されたときに呼び出されます。
+6. さまざまな <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> オブジェクトを含む <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> オブジェクトの配列を返す <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> メソッドを実装します。 このメソッドは、電球アイコンが展開されたときに呼び出されます。
 
     > [!WARNING]
-    > およびの実装に一貫性があることを確認する必要があります。つまり、 `HasSuggestedActionsAsync()` `GetSuggestedActions()` がを返した場合は、 `HasSuggestedActionsAsync()` `true` `GetSuggestedActions()` 表示する何らかのアクションが必要になります。 多くの場合、は直前に呼び出されますが、常にそうである `HasSuggestedActionsAsync()` とは `GetSuggestedActions()` 限りません。 たとえば、ユーザーが (**CTRL +** .) キーを押して電球操作を呼び出す `GetSuggestedActions()` と、が呼び出されます。
+    > `HasSuggestedActionsAsync()` および `GetSuggestedActions()` の実装に一貫性があることを確認する必要があります。つまり、`HasSuggestedActionsAsync()` によって `true` が返される場合は、`GetSuggestedActions()` に表示するアクションがある必要があります。 多くの場合、`HasSuggestedActionsAsync()` は `GetSuggestedActions()` の前に呼び出されますが、常にそうであるとは限りません。 たとえば、ユーザーが (**CTRL +** .) を押して電球アイコンのアクションを呼び出すと、`GetSuggestedActions()` のみが呼び出されます。
 
     ```csharp
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)
@@ -196,13 +196,13 @@ ms.locfileid: "105080321"
     }
     ```
 
-7. イベントを定義 `SuggestedActionsChanged` します。
+7. `SuggestedActionsChanged` イベントを定義します。
 
     ```csharp
     public event EventHandler<EventArgs> SuggestedActionsChanged;
     ```
 
-8. 実装を完了するには、メソッドおよびメソッドの実装を追加し `Dispose()` `TryGetTelemetryId()` ます。 テレメトリを使用しない場合は、を返し、 `false` GUID をに設定し `Empty` ます。
+8. 実装を完了するには、`Dispose()` および `TryGetTelemetryId()` メソッドの実装を追加します。 テレメトリを使用しない場合は、単に `false` を返し、GUID を `Empty` に設定します。
 
     ```csharp
     public void Dispose()
@@ -217,9 +217,9 @@ ms.locfileid: "105080321"
     }
     ```
 
-## <a name="implement-light-bulb-actions"></a>電球アクションを実装する
+## <a name="implement-light-bulb-actions"></a>電球アイコンのアクションを実装する
 
-1. プロジェクトで *Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll* への参照を追加し、[ **ローカルにコピー** ] をに設定し `False` ます。
+1. プロジェクトで、*Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll* への参照を追加し、 **[ローカルにコピーする]** を `False` に設定します。
 
 2. 2 つのクラスを、1 つは `UpperCaseSuggestedAction` という名前で、もう 1 つは `LowerCaseSuggestedAction`という名前で作成します。 どちらのクラスも、<xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> を実装します。
 
@@ -230,7 +230,7 @@ ms.locfileid: "105080321"
 
      両クラスは似ていますが、一方は <xref:System.String.ToUpper%2A> を呼び出し、他方は <xref:System.String.ToLower%2A> を呼び出します。 次の手順では大文字操作クラスのみを対象にしていますが、両方のクラスを実装する必要があります。 小文字操作を実装するためのパターンとして、大文字操作を実装するための手順を使用します。
 
-3. これらのクラスに対して次の using ディレクティブを追加します。
+3. これらのクラスに次の using ディレクティブを追加します。
 
     ```csharp
     using Microsoft.VisualStudio.Imaging.Interop;
@@ -262,7 +262,7 @@ ms.locfileid: "105080321"
     }
     ```
 
-6. アクションの <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> プレビューを表示するようにメソッドを実装します。
+6. アクションのプレビューが表示されるように <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> メソッドを実装します。
 
     ```csharp
     public Task<object> GetPreviewAsync(CancellationToken cancellationToken)
@@ -274,7 +274,7 @@ ms.locfileid: "105080321"
     }
     ```
 
-7. 空の <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> 列挙型を返すようにメソッドを実装し <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> ます。
+7. 空の <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> 列挙型が返されるように <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> メソッドを実装します。
 
     ```csharp
     public Task<IEnumerable<SuggestedActionSet>> GetActionSetsAsync(CancellationToken cancellationToken)
@@ -328,9 +328,9 @@ ms.locfileid: "105080321"
     ```
 
     > [!WARNING]
-    > 電球のアクション **呼び出し** メソッドは、UI を表示する必要がありません。 アクションによって新しい UI が表示される場合 (たとえば、[プレビュー] または [選択] ダイアログ)、 **invoke メソッド内** から直接 ui を表示するのではなく、 **invoke** から戻ると ui を表示するようにスケジュールします。
+    > 電球アイコンのアクションである **Invoke** メソッドでは、UI を表示することが想定されていません。 アクションによって新しい UI が表示される場合 (プレビューや選択ダイアログなど)、**Invoke** メソッド内 から直接 UI を表示するのではなく、**Invoke** から戻った後に UI が表示されるようにスケジュールします。
 
-10. 実装を完了するには、 `Dispose()` メソッドとメソッドを追加し `TryGetTelemetryId()` ます。
+10. 実装を完了するには、`Dispose()` および `TryGetTelemetryId()` メソッドを追加します。
 
     ```csharp
     public void Dispose()
@@ -345,23 +345,23 @@ ms.locfileid: "105080321"
     }
     ```
 
-11. `LowerCaseSuggestedAction`表示テキストを "Convert ' {0} ' を小文字に変換する" と "の呼び出し" に変更する場合は、必ず同じことを行ってください <xref:System.String.ToUpper%2A> <xref:System.String.ToLower%2A> 。
+11. `LowerCaseSuggestedAction` に対して必ず同じことを行うことを忘れないでください。表示テキストを "Convert '{0}' to lower case" にして、<xref:System.String.ToUpper%2A> への呼び出しを <xref:System.String.ToLower%2A> に変更します。
 
 ## <a name="build-and-test-the-code"></a>コードをビルドしてテストする
- このコードをテストするには、ライトの組み込みのテストソリューションをビルドし、実験用インスタンスで実行します。
+ このコードをテストするには、LightBulbTest ソリューションをビルドし、実験用インスタンスで実行します。
 
 1. ソリューションをビルドします。
 
-2. デバッガーでこのプロジェクトを実行すると、Visual Studio の2番目のインスタンスが開始されます。
+2. デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 番目のインスタンスが開始されます。
 
-3. テキスト ファイルを作成し、いくつかのテキストを入力します。 テキストの左側に電球が表示されます。
+3. テキスト ファイルを作成し、いくつかのテキストを入力します。 テキストの左側に電球アイコンが表示されます。
 
-     ![電球のテスト](../extensibility/media/testlightbulb.png "TestLIghtBulb")
+     ![電球のテスト](../extensibility/media/testlightbulb.png "電球アイコンのテスト")
 
-4. 電球をポイントします。 下矢印が表示できます。
+4. 電球アイコンをポイントします。 下矢印が表示されます。
 
-5. 電球をクリックすると、選択したアクションのプレビューと共に、推奨される2つのアクションが表示されます。
+5. 電球アイコンをクリックすると、選択したアクションのプレビューと共に、2 つの推奨アクションが表示されます。
 
-     ![電球のテスト、展開](../extensibility/media/testlightbulbexpanded.gif "Testライトの展開")
+     ![電球のテスト、展開](../extensibility/media/testlightbulbexpanded.gif "電球アイコンの展開")
 
-6. 最初のアクションをクリックすると、現在の単語内のすべてのテキストが大文字に変換されます。 2番目のアクションをクリックすると、すべてのテキストが小文字に変換されます。
+6. 最初のアクションをクリックすると、現在の単語内のすべてのテキストが大文字に変換されます。 2 番目のアクションをクリックすると、すべてのテキストが小文字に変換されます。

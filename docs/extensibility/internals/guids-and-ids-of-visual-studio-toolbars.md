@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のツールバーの Guid と Id |Microsoft Docs
-description: Visual Studio 統合開発環境 (IDE) に含まれているツールバーとそれらに含まれるグループの GUID と ID の値の一覧を表示します。
+title: Visual Studio ツール バーの GUID および ID | Microsoft Docs
+description: Visual Studio 統合開発環境 (IDE) に含まれているツール バーおよびそれらに含まれるグループの、GUID と ID の値の一覧を確認します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,36 +20,36 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082076"
 ---
-# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio ツールバーの Guid と Id
-このトピックでは、Visual Studio 統合開発環境 (IDE: integrated development environment) に含まれるツールバーの GUID と ID の値、およびそれらに含まれるグループについて説明します。 これらの値は、Visual Studio SDK の一部としてインストールされる、 *vsct* ファイルで定義されています。 詳細については、「 [IDE で定義されたコマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)」を参照してください。
+# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio ツール バーの GUID および ID
+このトピックでは、Visual Studio 統合開発環境 (IDE) に含まれているツール バーおよびそれらに含まれるグループの、GUID と ID の値について説明します。 これらの値は、Visual Studio SDK の一部としてインストールされる *.vsct* ファイルで定義されています。 詳細については、「[IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)」を参照してください。
 
 > [!NOTE]
-> Visual Studio で使用できるツールバーの多くは、Visual Studio によって定義されていません。 GUID と ID の値はパブリックではありません。 このトピックでは、Visual Studio SDK の *vsct* ファイルで定義されているツールバーのみを示します。
+> Visual Studio で使用できるツール バーの多くは、Visual Studio では定義されていません。また、それらの GUID と ID の値はパブリックではありません。 このトピックでは、Visual Studio SDK の *.vsct* ファイルで定義されているツール バーのみを示します。
 
- *Vsct* ファイルで定義されている IDE オブジェクトを操作する方法の詳細については、「[メニューとコマンドの拡張](../../extensibility/extending-menus-and-commands.md)」を参照してください。
+ *.vsct* ファイルで定義されている IDE オブジェクトを操作する方法の詳細については、「[メニューとコマンドを拡張する](../../extensibility/extending-menus-and-commands.md)」を参照してください。
 
- Visual Studio IDE によって提供される既定のツールバーでは、GUID が使用 `guidSHLMainMenu` されます。ただし、構文を使用して指定しない場合は除き `GUID:ID` ます。
+ Visual Studio IDE で提供されている既定のツール バーでは、`GUID:ID` 構文で特に指定されている場合を除き、GUID `guidSHLMainMenu` が使用されます。
 
 ## <a name="ide-toolbars"></a>IDE ツール バー
- 次のツールバーは、Visual Studio IDE によって提供されます。 ツールバーを表示するには、[**ツール**] メニューの [ツール **バー** ] サブメニューからツールバーを選択します。 ツールウィンドウのツールバーは、このセクションには含まれていません。
+ Visual Studio IDE では、次のツール バーが提供されています。 ツール バーを表示するには、 **[ツール]** メニューの **[ツール バー]** サブメニューで選択します。 ツール ウィンドウのツール バーは、このセクションには含まれていません。
 
- グループのみが、ツールバーから直接降下できます。 グループを追加するには、その親をツールバーの GUID と ID に設定します。 ツールバーにボタンを追加するには、ツールバーの [親] を [グループ] に設定します。
+ ツール バーの直接の子になることができるのはグループだけです。 グループを追加するには、その親としてツール バーの GUID と ID を設定します。 ツール バーにボタンを追加するには、その親としてツール バー上のグループを設定します。
 
 |ツール バー|id|
 |-------------|--------|
 |Standard|IDM_VS_TOOL_STANDARD|
-|Build|IDM_VS_TOOL_BUILD|
+|ビルド|IDM_VS_TOOL_BUILD|
 |テキスト エディター|IDM_VS_TOOL_TEXTEDITOR|
-|デバッグ|guidVSDebugGroup: IDM_DEBUG_TOOLBAR|
-|デバッグの場所|guidVSDebugGroup: IDM_DEBUG_CONTEXT_TOOLBAR|
+|デバッグ|guidVSDebugGroup:IDM_DEBUG_TOOLBAR|
+|デバッグの場所|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|
 
-### <a name="special-toolbars"></a>特殊なツールバー
- これらのツールバーは、Visual Studio IDE によって定義されていますが、特化された機能を提供し、コマンドグループをホストしません。
+### <a name="special-toolbars"></a>特殊なツール バー
+ これらのツール バーは、Visual Studio IDE で定義されていますが、特化された機能を提供します。また、コマンド グループをホストしません。
 
 |ツール バー|id|
 |-------------|--------|
@@ -58,10 +58,10 @@ ms.locfileid: "105082076"
 |XML スキーマ|IDM_VS_TOOL_SCHEMA|
 |XML データ|IDM_VS_TOOL_DATA|
 
-## <a name="groups-on-the-ide-toolbars"></a>IDE ツールバーのグループ
- 標準ツールバーにボタンを追加するには、次のいずれかのグループを親として設定します。 グループは、親ツールバーで並べ替えられます。
+## <a name="groups-on-the-ide-toolbars"></a>IDE ツール バーのグループ
+ 標準ツール バーにボタンを追加するには、その親として次のいずれかのグループを設定します。 グループは、親ツール バーによって並べ替えられます。
 
-### <a name="standard-toolbar-groups"></a>標準のツールバーグループ
+### <a name="standard-toolbar-groups"></a>標準ツール バーのグループ
 
 |名前|id|
 |----------|--------|
@@ -75,14 +75,14 @@ ms.locfileid: "105082076"
 |読み込み/保存|IDG_VS_WINDOWUI_LOADSAVE|
 |ゲージ|IDG_VS_TOOLSB_GAUGE|
 
-### <a name="build-toolbar-groups"></a>ツールバーグループの作成
+### <a name="build-toolbar-groups"></a>[ビルド] ツール バーのグループ
 
 |名前|id|
 |----------|--------|
-|ビルドバー|IDG_VS_BUILDBAR|
+|ビルド バー|IDG_VS_BUILDBAR|
 |キャンセル|IDG_VS_BUILD_CANCEL|
 
-### <a name="text-editor-toolbar-groups"></a>テキストエディターのツールバーグループ
+### <a name="text-editor-toolbar-groups"></a>[テキスト エディター] ツール バーのグループ
 
 |名前|id|
 |----------|--------|
@@ -91,7 +91,7 @@ ms.locfileid: "105082076"
 |コメント|IDG_VS_EDITTOOLBAR_COMMENT|
 |ブックマーク|IDG_VS_EDITTOOLBAR_TEMPBOOKMARKS|
 
-### <a name="debug-toolbar-groups"></a>デバッグツールバーグループ
+### <a name="debug-toolbar-groups"></a>[デバッグ] ツール バーのグループ
 
 |名前|id|
 |----------|--------|
@@ -100,22 +100,22 @@ ms.locfileid: "105082076"
 |Watch|IDG_DEBUG_TOOLBAR_WATCH|
 |Windows|IDG_DEBUG_TOOLBAR_WINDOWS|
 
-### <a name="debug-location-toolbar-groups"></a>デバッグの場所のツールバーグループ
+### <a name="debug-location-toolbar-groups"></a>[デバッグの場所] ツール バーのグループ
 
 |名前|id|
 |----------|--------|
 |デバッグの場所|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>ツール ウィンドウのツール バー
- ツールバーは、IDE またはツールウィンドウ ( **ソリューションエクスプローラー** など) で直接表示できます。 ツールウィンドウは *. vsct* ファイルで定義されていないため、ツールウィンドウのツールバーには定義済みの親がありません。 代わりに、コード内に配置されます。 次の表は、IDE のツールウィンドウに表示されるツールバーと、それらに含まれるコマンドグループを示しています。
+ ツール バーは、IDE に直接表示されるか、**ソリューション エクスプローラー** のようなツール ウィンドウに表示されます。 ツール ウィンドウは *.vsct* ファイルでは定義されていないため、ツール ウィンドウのツール バーには定義された親がありません。 代わりに、コード内に記述されます。 IDE のツール ウィンドウに表示されるツール バーと、それらに含まれるコマンド グループを次の表に示します。
 
 > [!NOTE]
-> ツールバーとグループは GUID `guidSHLMainMenu` を使用します。ただし、guid: ID 構文を使用して指定した場合を除きます。 ツールバーに対して GUID が指定されている場合は、そのツールバーから下にあるグループにも適用されます。
+> ツール バーとグループでは、GUID:ID 構文で特に指定されている場合を除き、GUID `guidSHLMainMenu` が使用されます。 ツール バーに対して GUID が指定されている場合は、そのツール バーの子であるグループにも適用されます。
 
-|ツールウィンドウ|ツール バー|グループ|
+|ツール ウィンドウ|ツール バー|グループ|
 |-----------------|-------------|------------|
-|ソリューション エクスプローラー|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1..5/5|
-|[サーバー エクスプローラー]|guid_SE_MenuGroup: IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
+|ソリューション エクスプローラー|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1..5|
+|[サーバー エクスプローラー]|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
 |プロパティ|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|
 |クラス ビュー|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|
 |クラス ビュー|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|
@@ -123,20 +123,20 @@ ms.locfileid: "105082076"
 |オブジェクト ブラウザー|IDM_VS_TOOL_OBJECT_BROWSER_GO|IDG_VS_OBJBROWSER_SEARCH2|
 |出力|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
 |検索と置換|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|
-|検索結果1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
-|検索結果2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
+|検索結果 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
+|検索結果 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
 |スニペット|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
 |ブックマーク|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|
 |タスク一覧|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|
 |ユーザー タスク|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
 |エラー一覧|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|
-|呼び出しブラウザー|IDM_VS_TOOL_CALLBROWSER1..まで|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
-|ブレークポイント|guidVSDebugGroup: IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
-|逆アセンブリ|guidVSDebugGroup: IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
-|メモリ1-4|guidVSDebugGroup: IDM_MEMORY_WINDOW_TOOLBAR1...4/4|IDG_MEMORY_EXPRESSION1..4/4<br /><br /> IDG_MEMORY_COLUMNS1..4/4|
-|プロセス|guidVSDebugGroup: IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
+|呼び出しブラウザー|IDM_VS_TOOL_CALLBROWSER1..16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
+|ブレークポイント|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
+|逆アセンブリ|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
+|メモリ 1-4|guidVSDebugGroup:IDM_MEMORY_WINDOW_TOOLBAR1...4|IDG_MEMORY_EXPRESSION1..4<br /><br /> IDG_MEMORY_COLUMNS1..4|
+|処理|guidVSDebugGroup:IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 
-## <a name="see-also"></a>こちらもご覧ください
-- [ツールバーにメニューコントローラーを追加する](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)
-- [ツールウィンドウにツールバーを追加する](../../extensibility/adding-a-toolbar-to-a-tool-window.md)
-- [Visual Studio メニューの Guid と Id](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
+## <a name="see-also"></a>関連項目
+- [ツール バーにメニュー コントローラーを追加する](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)
+- [ツール ウィンドウにツール バーを追加する](../../extensibility/adding-a-toolbar-to-a-tool-window.md)
+- [Visual Studio メニューの GUID および ID](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

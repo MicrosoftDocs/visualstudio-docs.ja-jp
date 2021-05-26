@@ -10,16 +10,16 @@ user.type: subscriber, admin
 tags: no-solution
 subscription.type: vl, cloud, retail, partner
 sap.id: 34fccc61-0a31-cc35-22dd-016a1ebf1134
-ms.openlocfilehash: 47df65df2b139fa910843da3659d5a520e787d17
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: d26b75015c427d771ab91526802d9b58e3ddb5e8
+ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107589975"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349981"
 ---
 ## <a name="sorry-we-couldnt-find-a-solution-for-you"></a>申し訳ありません。解決策が見つかりませんでした。 
 
-私どものチームはぜひお役に立ちたいと願っています。Visual Studio サブスクリプション サポートでは、販売、サブスクリプション、アカウント、課金に関するサポートが提供されます。 下の [サポート チケットを作成] ボタンをクリックしてオンライン チケットを作成すると、当社のチームが 1 営業日以内に連絡を差し上げます。 
+私どものチームはぜひお役に立ちたいと願っています。Visual Studio サブスクリプション サポートでは、販売、サブスクリプション、アカウント、課金に関するサポートが提供されます。 この解決策の下部にある [オンライン要求] ボタンをクリックしてオンライン チケットを作成すると、Microsoft のチームが 1 営業日以内に連絡を差し上げます。 
 
 ## <a name="visual-studio-ide-technical-support-resources"></a>Visual Studio IDE のテクニカル サポート リソース  
 
@@ -29,7 +29,7 @@ Visual Studio IDE の技術的な問題または質問は、[Visual Studio テ�
 
 - 「[Visual Studio IDE ドキュメント](https://docs.microsoft.com/visualstudio/ide/)」に含まれているチュートリアル、トラブルシューティング ガイド、役に立つリソースを確認します。 
 
-- オンラインの[開発者コミュニティ](https://developercommunity.visualstudio.com/)を検索して、コミュニティでサポートされているフォーラムから専門家の答えを得ます。 ログインしなくても、キーワードを検索して閲覧、投票、コメントを行うことができます。  
+- オンラインの[開発者コミュニティ](https://developercommunity.visualstudio.com/)を検索して、コミュニティでサポートされているフォーラムから専門家の答えを得ます。 ログインしなくても、キーワードの検索、閲覧、投票、コメントのすべてを行うことができます。  
 
 - Stack Overflow の [visual-studio でタグ付けされた公開 Q&A](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) を検索して、既に質問されている問題の答えを得たり、アカウントにサインアップして新しい質問をしたりすることができます。  
 

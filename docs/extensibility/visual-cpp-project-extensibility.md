@@ -1,5 +1,5 @@
 ---
-description: .Vcxproj ファイルには、Visual C++ プロジェクトシステムが使用されます。
+description: Visual C++ プロジェクト システムは、.vcxproj ファイルに使用されます。
 title: Visual C++ プロジェクトの機能拡張
 ms.date: 04/23/2019
 ms.technology: vs-ide-mobile
@@ -13,16 +13,16 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: fc538402ae39753f14a3bccd8bcd17ddb0081078
 ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2021
 ms.locfileid: "102221237"
 ---
-# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio C++ プロジェクトシステムの拡張性とツールセットの統合
+# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio C++ プロジェクト システムの機能拡張とツールセットの統合
 
-.Vcxproj ファイルには、Visual C++ プロジェクトシステムが使用されます。 これは、 [Visual Studio Common Project System (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) に基づいており、新しいツールセット、ビルドアーキテクチャ、およびターゲットプラットフォームの統合を容易にするために、C++ 固有の拡張ポイントが追加されています。
+Visual C++ プロジェクト システムは、.vcxproj ファイルに使用されます。 これは、[Visual Studio Common Project System (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) に基づいており、新しいツールセット、ビルド アーキテクチャ、およびターゲット プラットフォームの統合を容易にするための追加の C++ 固有の機能拡張ポイントを提供します。
 
-## <a name="c-msbuild-targets-structure"></a>C++ MSBuild ターゲット構造体
+## <a name="c-msbuild-targets-structure"></a>C++ MSBuild ターゲットの構造
 
 すべての .vcxproj ファイルは、次のファイルをインポートします。
 
@@ -32,21 +32,21 @@ ms.locfileid: "102221237"
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
 
-これらのファイルは、単独で定義されます。 代わりに、次のプロパティ値に基づいて他のファイルをインポートします。
+これらのファイルが単独で定義されることはほとんどありません。 代わりに、次のプロパティ値に基づいて他のファイルをインポートします。
 
 - `$(ApplicationType)`
 
-   例: Windows ストア、Android、Linux
+   例: Windows Store、Android、Linux
 
 - `$(ApplicationTypeRevision)`
 
-   この形式の有効なバージョン文字列を指定してください。 major [. build [. revision]] の形式にする必要があります。
+   major.minor[.build[.revision]] 形式の有効なバージョン文字列を指定する必要があります。
 
    例: 1.0、10.0.0.0
 
 - `$(Platform)`
 
-   歴史的な理由を示す "Platform" という名前のビルドアーキテクチャ。
+   歴史的な理由で "プラットフォーム" の名前が付けられたビルド アーキテクチャ。
 
    例: Win32、x86、x64、ARM
 
@@ -54,127 +54,127 @@ ms.locfileid: "102221237"
 
    例: v140、v141、v141_xp、llvm
 
-これらのプロパティ値では、ルートフォルダーの下にフォルダー名を指定し `$(VCTargetsPath)` ます。
+これらのプロパティ値によって、`$(VCTargetsPath)` ルート フォルダーの下にフォルダー名が指定されます。
 
 > `$(VCTargetsPath)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;*アプリケーションの種類*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;*Application Type*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationType)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationTypeRevision)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*・*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Platforms*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets セット*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)` \
-&nbsp;&nbsp;&nbsp;&nbsp;*・*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;*Platforms*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets セット*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)`
 
-`$(VCTargetsPath)` \\ *プラットフォーム* \\ フォルダーは、が空のときに `$(ApplicationType)` Windows デスクトッププロジェクトに使用されます。
+`$(VCTargetsPath)`\\*Platforms*\\ フォルダーは、`$(ApplicationType)` が空のときに使用されます (Windows デスクトップ プロジェクトの場合)。
 
-### <a name="add-a-new-platform-toolset"></a>新しいプラットフォームツールセットの追加
+### <a name="add-a-new-platform-toolset"></a>新しいプラットフォーム ツールセットの追加
 
-新しいツールセット (既存の win32 プラットフォームの "mytoolset セット" など) を追加するには 、 `$(VCTargetsPath)` *\\ プラットフォーム \\ Win32 \\ platformtoolsets セット \\* の下に mytoolset セットフォルダーを作成し、そこに *ツール* セットとツールセットの *.targets* ファイルを作成します。
+新しいツールセット (既存の Win32 プラットフォーム用の "MyToolset" など) を追加するには、`$(VCTargetsPath)` *\\Platforms\\Win32\\PlatformToolsets\\* の下に *MyToolset* フォルダーを作成し、その中に *Toolset.props* および *Toolset.targets* ファイルを作成します。
 
-次に示すように、 *Platformtoolsets セット* の下にある各フォルダー名は、指定したプラットフォームの使用可能な **プラットフォームツールセット** として [**プロジェクトのプロパティ**] ダイアログボックスに表示されます。
+*PlatformToolsets* の下にある各フォルダー名が、以下に示すように、指定したプラットフォームの使用可能な **プラットフォーム ツールセット** として **[プロジェクトのプロパティ]** ダイアログに表示されます。
 
-![プロジェクトの [プロパティページ] ダイアログボックスの [プラットフォームツールセット] プロパティ](media/vc-project-extensibility-platform-toolset-property.png "プロジェクトの [プロパティページ] ダイアログボックスの [プラットフォームツールセット] プロパティ")
+![プロジェクトの [プロパティ ページ] ダイアログの [プラットフォーム ツールセット] プロパティ](media/vc-project-extensibility-platform-toolset-property.png "プロジェクトの [プロパティ ページ] ダイアログの [プラットフォーム ツールセット] プロパティ")
 
-このツールセットでサポートされている既存の各プラットフォームフォルダーに、同様の *Mytoolset セット* フォルダーと *ツール* セットファイルと *ツール* セットファイルを作成します。
+このツールセットでサポートされている既存の各プラットフォーム フォルダーに、同様の *MyToolset* フォルダーと *Toolset.props* および *Toolset.targets* ファイルを作成します。
 
-### <a name="add-a-new-platform"></a>新しいプラットフォームを追加する
+### <a name="add-a-new-platform"></a>新しいプラットフォームの追加
 
-"Myplatform" などの新しいプラットフォームを追加するには、[プラットフォーム `$(VCTargetsPath)` *\\ \\*] の下に myplatform フォルダーを作成し、その中に *platform.object*、 *platform.object、* および *platform.object* の各ファイルを作成します。 また、 `$(VCTargetsPath)` *\\ プラットフォーム \\*<strong><em>myplatform</em></strong>*\\ platformtoolsets セット \\* フォルダーを作成し、その中に少なくとも1つのツールセットを作成します。
+新しいプラットフォーム ("MyPlatform" など) を追加するには、`$(VCTargetsPath)` *\\Platforms\\* の下に *MyPlatform* フォルダーを作成し、その中に *Platform.default.props*、*Platform.props*、*Platform.targets* の各ファイルを作成します。 また、`$(VCTargetsPath)` *\\Platforms\\* <strong><em>MyPlatform</em></strong> *\\PlatformToolsets\\* フォルダーを作成し、その中にツールセットを少なくとも 1 つ作成します。
 
-各の *プラットフォーム* フォルダーにあるすべてのフォルダー名は、 `$(ApplicationType)` プロジェクトに `$(ApplicationTypeRevision)` 使用できる **プラットフォーム** の選択肢として IDE に表示されます。
+各 `$(ApplicationType)` および `$(ApplicationTypeRevision)` の *Platforms* フォルダーの下にあるすべてのフォルダー名が、プロジェクトに使用できる **プラットフォーム** の選択肢として IDE に表示されます。
 
-![[新しいプロジェクトプラットフォーム] ダイアログボックスでの新しいプラットフォームの選択](media/vc-project-extensibility-new-project-platform.png "[新しいプロジェクトプラットフォーム] ダイアログボックスでの新しいプラットフォームの選択")
+![[新しいプロジェクト プラットフォーム] ダイアログの [新しいプラットフォーム] の選択肢](media/vc-project-extensibility-new-project-platform.png "[新しいプロジェクト プラットフォーム] ダイアログの [新しいプラットフォーム] の選択肢")
 
 ### <a name="add-a-new-application-type"></a>新しいアプリケーションの種類の追加
 
-新しいアプリケーションの種類を追加するには 、アプリケーションの種類 `$(VCTargetsPath)` *\\ \\* の下に myapplicationtype フォルダーを作成し、その中に *既定の. props* ファイルを作成します。 アプリケーションの種類には少なくとも1つのリビジョンが必要であるため、アプリケーションの種類として `$(VCTargetsPath)` *\\ \\ myapplicationtype \\ 1.0* フォルダーを作成し、その中に *既定の. props* ファイルを作成します。 また、 `$(VCTargetsPath)` *\\ applicationtype \\ myapplicationtype \\ \\ 1.0* platform フォルダーを作成し、その中に少なくとも1つのプラットフォームを作成する必要があります。
+新しいアプリケーションの種類を追加するには、`$(VCTargetsPath)` *\\Application Type\\* の下に *MyApplicationType* フォルダーを作成し、その中に *Defaults.props* ファイルを作成します。 アプリケーションの種類には少なくとも 1 つのリビジョンが必要であるため、`$(VCTargetsPath)` *\\Application Type\\MyApplicationType\\1.0* フォルダーも作成し、その中に *Defaults.props* ファイルを作成します。 また、`$(VCTargetsPath)` *\\ApplicationType\\MyApplicationType\\1.0\\Platforms* フォルダーを作成し、その中にプラットフォームを少なくとも 1 つ作成する必要もあります。
 
-`$(ApplicationType)``$(ApplicationTypeRevision)`プロパティとプロパティは、ユーザーインターフェイスに表示されません。 これらはプロジェクトテンプレートで定義され、プロジェクトの作成後に変更することはできません。
+`$(ApplicationType)` および `$(ApplicationTypeRevision)` プロパティは、ユーザー インターフェイスに表示されません。 それらはプロジェクト テンプレート内に定義され、プロジェクトの作成後は変更できません。
 
-## <a name="the-vcxproj-import-tree"></a>.Vcxproj インポートツリー
+## <a name="the-vcxproj-import-tree"></a>.vcxproj インポート ツリー
 
-Microsoft C++ props およびターゲットファイルのインポートの簡略化されたツリーは次のようになります。
+Microsoft C++ の props および targets ファイルの簡略化されたインポート ツリーは次のようになります。
 
-> `$(VCTargetsPath)`\\*Microsoft .Cpp. 既定値. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. 共通* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importbefore* \\*既定値* \\ \* 。*props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*アプリケーションの種類* \\ `$(ApplicationType)` \\*既定の props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*アプリケーション* \\ `$(ApplicationType)` \\ の `$(ApplicationTypeRevision)` 種類 \\*既定の props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*アプリケーション* \\ `$(ApplicationType)` \\ の `$(ApplicationTypeRevision)` 種類 \\ \\ `$(Platform)` プラットフォーム \\*Platform. 既定値. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importafter* \\*既定値* \\ \* 。*props*
+> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*Default*\\\*.*props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Application Type*\\`$(ApplicationType)`\\*Default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Application Type*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*Default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Application Type*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*Platforms*\\`$(Platform)`\\*Platform.default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*Default*\\\*.*props*
 
-Windows デスクトッププロジェクトでは定義されない `$(ApplicationType)` ため、インポートのみ
+Windows デスクトップ プロジェクトでは `$(ApplicationType)` を定義しないため、以下だけをインポートします
 
-> `$(VCTargetsPath)`\\*Microsoft .Cpp. 既定値. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. 共通* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importbefore* \\*既定値* \\ \* 。*props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\ \\ `$(Platform)` プラットフォーム \\*Platform. 既定値. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importafter* \\*既定値* \\ \* 。*props*
+> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*Default*\\\*.*props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms*\\`$(Platform)`\\*Platform.default.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*Default*\\\*.*props*
 
-このプロパティを使用して、 `$(_PlatformFolder)` プラットフォームフォルダーの場所を保持し `$(Platform)` ます。 このプロパティはです。
+`$(Platform)` プラットフォーム フォルダーの場所を保持するには、`$(_PlatformFolder)` プロパティを使用します。 このプロパティは、
 
-> `$(VCTargetsPath)`\\ *・*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Platforms*\\`$(Platform)`
 
-Windows デスクトップアプリの場合
+(Windows デスクトップ アプリの場合)、または
 
-> `$(VCTargetsPath)`\\*アプリケーション* \\ `$(ApplicationType)` \\ の `$(ApplicationTypeRevision)` 種類 \\*プラットフォーム*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Application Type*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*Platforms*\\`$(Platform)`
 
-それ以外のすべての場合。
+(その他すべての場合) です。
 
-Props ファイルは、次の順序でインポートされます。
+props ファイルは、次の順序でインポートされます。
 
-> `$(VCTargetsPath)`\\*Microsoft .Cpp. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.object* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft .Cpp. Platform.object* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importbefore* \\ \* 。*props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platformtoolsets セット* \\ `$(PlatformToolset)` \\*ツールセット. props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importafter* \\ \* 。*props*
+> `$(VCTargetsPath)`\\*Microsoft.Cpp.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*.*props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*.*props*
 
-ターゲットファイルは、次の順序でインポートされます。
+targets ファイルは、次の順序でインポートされます。
 
-> `$(VCTargetsPath)`\\*Microsoft .Cpp. ターゲット* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft .Cpp. Current. targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.object* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft .Cpp. Platform.object* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importbefore* \\ \* 。*ターゲット* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platformtoolsets セット* \\ `$(PlatformToolset)` \\*ツールセット。ターゲット* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importafter* \\ \* 。*ターゲット*
+> `$(VCTargetsPath)`\\*Microsoft.Cpp.targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Current.targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*.*targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.target* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*.*targets*
 
-ツールセットのいくつかの既定のプロパティを定義する必要がある場合は、適切な ImportBefore および Importbefore フォルダーにファイルを追加できます。
+お使いのツールセットに既定のプロパティをいくつか定義する必要がある場合は、適切な ImportBefore および ImportAfter フォルダーにファイルを追加できます。
 
-## <a name="author-toolsetprops-and-toolsettargets-files"></a>ツールセットとツールセットの .targets ファイルを作成する
+## <a name="author-toolsetprops-and-toolsettargets-files"></a>Toolset.props および Toolset.targets ファイルの作成
 
-*ツールセット* とツールセットの *.targets* ファイルは、このツールセットの使用時にビルド中に発生する処理を完全に制御します。 また、使用可能なデバッガー、一部の IDE ユーザーインターフェイス ([ **プロパティページ** ] ダイアログの内容など)、およびプロジェクトの動作の他の側面を制御することもできます。
+*Toolset.props* および *Toolset.targets* ファイルは、このツールセットが使用されているビルド中に発生する処理を完全に制御します。 また、使用可能なデバッガー、一部の IDE ユーザー インターフェイス ( **[プロパティ ページ]** ダイアログの内容など)、およびプロジェクト動作の他の側面も制御できます。
 
-ツールセットはビルドプロセス全体をオーバーライドできますが、通常は、ツールセットでビルドステップを変更または追加するか、または既存のビルドプロセスの一部として別のビルドツールを使用する必要があります。 この目標を達成するために、ツールセットでインポートできる一般的なプロパティとターゲットファイルが多数あります。 ツールセットで実行する内容に応じて、これらのファイルをインポートまたは例として使用すると便利な場合があります。
+ツールセットはビルド プロセス全体をオーバーライドできますが、通常はお使いのツールセットで一部のビルド ステップを変更または追加したり、別のビルド ツールを既存のビルド プロセスの一部として使用したりする必要があるだけです。 この目標を達成するために、お使いのツールセットでインポートできる一般的な props および targets ファイルが多数あります。 ツールセットで実行する処理に応じて、以下のファイルをインポートまたは例として使用すると便利な場合があります。
 
-- `$(VCTargetsPath)`\\*Microsoft. CppCommon. ターゲット*
+- `$(VCTargetsPath)`\\*Microsoft.CppCommon.targets*
 
-  このファイルは、ネイティブビルドプロセスの主要部分を定義し、次のインポートも行います。
+  このファイルでは、ネイティブ ビルド プロセスの主要部分を定義し、以下のインポートも行います。
 
-  - `$(VCTargetsPath)`\\*Microsoft. CppBuild. ターゲット*
+  - `$(VCTargetsPath)`\\*Microsoft.CppBuild.targets*
 
-  - `$(VCTargetsPath)`\\*Microsoft. BuildSteps. targets*
+  - `$(VCTargetsPath)`\\*Microsoft.BuildSteps.targets*
 
-  - `$(MSBuildToolsPath)`\\*Microsoft. 共通ターゲット*
+  - `$(MSBuildToolsPath)`\\*Microsoft.Common.Targets*
 
-- `$(VCTargetsPath)`\\*Microsoft .Cpp. のプロパティ*
+- `$(VCTargetsPath)`\\*Microsoft.Cpp.Common.props*
 
-   Microsoft コンパイラとターゲットウィンドウを使用するツールセットの既定値を設定します。
+   Microsoft コンパイラを使用し、Windows を対象とするツールセットの既定値を設定します。
 
-- `$(VCTargetsPath)`\\*Microsoft .Cpp. WindowsSDK. props*
+- `$(VCTargetsPath)`\\*Microsoft.Cpp.WindowsSDK.props*
 
-   このファイルによって Windows SDK の場所が決定され、Windows を対象とするアプリの重要なプロパティがいくつか定義されます。
+   このファイルでは、Windows SDK の場所を決定し、Windows を対象とするアプリの重要なプロパティをいくつか定義します。
 
-### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>ツールセット固有のターゲットを既定の C++ ビルドプロセスと統合する
+### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>ツールセット固有のターゲットを既定の C++ ビルド プロセスと統合する
 
-既定の C++ ビルドプロセスは、 *Microsoft. CppCommon. ターゲット* で定義されています。 ターゲットは、特定のビルドツールを呼び出しません。これらは、主要なビルドステップ、順序、および依存関係を指定します。
+既定の C++ ビルド プロセスは、*Microsoft.CppCommon.targets* で定義されています。 そこにあるターゲットは特定のビルド ツールを呼び出しません。それらは主要なビルド ステップ、その順序、依存関係を指定するものです。
 
-C++ のビルドには、次のターゲットで表される3つの主要な手順があります。
+C++ ビルドには、次のターゲットで表される 3 つの主要ステップがあります。
 
 - `BuildGenerateSources`
 
@@ -182,9 +182,9 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
 
 - `BuildLink`
 
-各ビルドステップは個別に実行される可能性があるため、1つのステップで実行されるターゲットは、別の手順の一部として実行されるターゲットに定義されている項目グループおよびプロパティに依存することはできません。 この分割により、特定のビルドパフォーマンスの最適化が可能になります。 既定では使用されませんが、この分離に従うことをお勧めします。
+各ビルド ステップは個別に実行される可能性があるため、あるステップで実行されているターゲットが、別のステップの一部として実行されるターゲットで定義されている項目のグループやプロパティを利用することはできません。 こうした区分により、特定のビルド パフォーマンスの最適化が可能になります。 既定では使用されませんが、引き続きこうした区別を受け入れることをお勧めします。
 
-各ステップ内で実行されるターゲットは、次のプロパティによって制御されます。
+各ステップ内で実行されるターゲットは、以下のプロパティによって制御されます。
 
 - `$(BuildGenerateSourcesTargets)`
 
@@ -192,7 +192,7 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
 
 - `$(BeforeBuildLinkTargets)`
 
-各ステップには、プロパティの前後にもあります。
+各ステップには、Before および After プロパティもあります。
 
 ```xml
 <Target
@@ -208,7 +208,7 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
   DependsOnTargets="$(CommonBuildOnlyTargets);$(BeforeBuildLinkTargets);$(BuildLinkTargets);$(AfterBuildLinkTargets)" />
 ```
 
-各手順に含まれるターゲットの例については、「 *Microsoft. CppBuild. .targets* ファイル」を参照してください。
+各ステップに含まれているターゲットの例については、*Microsoft.CppBuild.targets* ファイルをご覧ください。
 
 ```xml
 <BuildCompileTargets Condition="'$(ConfigurationType)'\!='Utility'">
@@ -220,7 +220,7 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
 </BuildCompileTargets>
 ```
 
-などのターゲットを確認すると、それ `_ClCompile` 自体には何も行われませんが、代わりに次のような他のターゲットに依存していることがわかります `ClCompile` 。
+`_ClCompile` などのターゲットを確認すると、単独では何も行わず、その代わりに他のターゲット (`ClCompile` など) に依存していることがわかります。
 
 ```xml
 <Target Name="_ClCompile"
@@ -228,13 +228,13 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
 </Target>
 ```
 
-`ClCompile` およびその他のビルドツール固有のターゲットは、 *Microsoft. CppBuild. ターゲット* の空のターゲットとして定義されます。
+`ClCompile` とその他のビルド ツール固有のターゲットは、*Microsoft.CppBuild.targets* で空のターゲットとして定義されます。
 
 ```xml
 <Target Name="ClCompile"/>
 ```
 
-`ClCompile`ターゲットは空であるため、ツールセットによってオーバーライドされない限り、実際のビルドアクションは実行されません。 ツールセットターゲットは、ターゲットをオーバーライドすることができます。 `ClCompile` つまり、次のように、 `ClCompile` *Microsoft. cppbuild. ターゲット* をインポートした後に、別の定義を含めることができます。
+`ClCompile` ターゲットは空であるため、ツールセットによってオーバーライドされない限り、実際のビルド アクションは実行されません。 ツールセットのターゲットは `ClCompile` ターゲットをオーバーライドできます。つまり、*Microsoft.CppBuild.targets* のインポート後に、それらに別の `ClCompile` 定義を含めることができます。
 
 ```xml
 <Target Name="ClCompile"
@@ -244,15 +244,15 @@ C++ のビルドには、次のターゲットで表される3つの主要な手
 </Target>
 ```
 
-Visual Studio がクロスプラットフォームサポートを実装する前に作成された名前で `ClCompile` も、ターゲットは CL.exe を呼び出す必要がありません。 また、適切な MSBuild タスクを使用して、Clang、gcc、またはその他のコンパイラを呼び出すこともできます。
+その名前 (Visual Studio でクロスプラットフォームのサポートを実装する前に作成されたもの) にもかかわらず、`ClCompile` ターゲットでは CL.exe を呼び出す必要がありません。 また、適切な MSBuild タスクを使用して、Clang、gcc、またはその他のコンパイラを呼び出すこともできます。
 
-ターゲットは、 `ClCompile` `SelectClCompile` 1 つのファイルのコンパイルコマンドが IDE で動作するために必要なターゲット以外の依存関係を持つことはできません。
+`ClCompile` ターゲットには、`SelectClCompile` ターゲット (1 つのファイル コンパイル コマンドが IDE で動作するために必要なもの) 以外の依存関係を含めることはできません。
 
-## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>ツールセットターゲットで使用する MSBuild タスク
+## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>ツールセットのターゲット内で使用する MSBuild タスク
 
-実際のビルドツールを呼び出すには、ターゲットが MSBuild タスクを呼び出す必要があります。 実行するコマンドラインを指定できる基本的な [Exec タスク](../msbuild/exec-task.md) があります。 ただし、通常、ビルドツールには多くのオプション、入力があります。 とはインクリメンタルビルドを追跡するための出力であるため、これらに対して特別なタスクを行うことをお勧めします。 たとえば、タスクは `CL` MSBuild プロパティを CL.exe スイッチに変換し、応答ファイルに書き込み、CL.exe を呼び出します。 また、後でインクリメンタルビルドを行うために、すべての入力ファイルと出力ファイルを追跡します。 詳細については、「 [インクリメンタルビルドと](#incremental-builds-and-up-to-date-checks)最新のチェック」を参照してください。
+実際のビルド ツールを呼び出すには、ターゲットで MSBuild タスクを呼び出す必要があります。 実行するコマンド ラインを指定できる基本的な [Exec タスク](../msbuild/exec-task.md)があります。 ただし、ビルドツールには通常、 インクリメンタル ビルドに備えて追跡するオプション、入力、出力が多数あるため、それら専用のタスクを用意するほうが理にかなっています。 たとえば、`CL` タスクでは MSBuild プロパティを CL.exe スイッチに変換して応答ファイルに書き込み、CL.exe を呼び出します。 また、後でインクリメンタル ビルドを行えるように、すべての入力および出力ファイルを追跡します。 詳細については、「[インクリメンタル ビルドと最新状態チェック](#incremental-builds-and-up-to-date-checks)」をご覧ください。
 
-Microsoft.Cpp.Common.Tasks.dll には、次のタスクが実装されています。
+Microsoft.Cpp.Common.Tasks.dll には、以下のタスクが実装されています。
 
 - `BSCMake`
 
@@ -272,71 +272,71 @@ Microsoft.Cpp.Common.Tasks.dll には、次のタスクが実装されていま�
 
 - `XDCMake`
 
-- `CustomBuild` (Exec と同じですが、入力と出力の追跡があります)
+- `CustomBuild` (Exec と同じですが、入力と出力の追跡が含まれます)
 
 - `SetEnv`
 
 - `GetOutOfDateItems`
 
-既存のツールと同じアクションを実行するツールがあり、それに類似したコマンドラインスイッチ (clang-cl および CL do) がある場合は、両方に同じタスクを使用できます。
+既存のツールと同じアクションを実行するツールと、(clang-cl や CL で実行するような) 同様のコマンド ライン スイッチを備えたツールがある場合は、両方に同じタスクを使用できます。
 
-ビルドツールの新しいタスクを作成する必要がある場合は、次のいずれかのオプションを選択できます。
+ビルド ツール用の新しいタスクを作成する必要がある場合は、次のオプションから選択できます。
 
-1. このタスクをめったに使用しない場合、または数秒でビルドに関係がない場合は、MSBuild のインラインタスクを使用できます。
+1. このタスクをめったに使用しない場合、またはお使いのビルドで数秒が問題にならない場合は、MSBuild の "インライン" タスクを使用できます。
 
-   - Xaml タスク (カスタムビルド規則)
+   - Xaml タスク (カスタム ビルド規則)
 
-     Xaml タスク宣言の一例については、「buildcustomizationsmasm.xml」を参照してください。 `$(VCTargetsPath)` \\  \\ ** その使用方法については、「 `$(VCTargetsPath)` \\ *buildcustomizations* \\ *masm. targets*」を参照してください。
+     Xaml タスク宣言の一例については `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.xml* を、その使用法については `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.targets* をそれぞれご覧ください。
 
-   - [コードタスク](../msbuild/msbuild-inline-tasks.md)
+   - [Code タスク](../msbuild/msbuild-inline-tasks.md)
 
-1. タスクのパフォーマンスを向上させる必要がある場合、またはより複雑な機能が必要な場合は、通常の MSBuild [タスク書き込み](../msbuild/task-writing.md) プロセスを使用します。
+1. タスク パフォーマンスを向上させたい場合、またはより複雑な機能を必要とするだけの場合は、通常の MSBuild [タスクの作成](../msbuild/task-writing.md)プロセスを使用します。
 
-   、、およびの場合と同様に、ツールのすべての入力と出力がツールのコマンドラインに一覧表示されない場合は、 `CL` `MIDL` `RC` 自動入力および出力ファイルの追跡と tlog ファイルの作成が必要な場合は、クラスからタスクを派生させます `Microsoft.Build.CPPTasks.TrackedVCToolTask` 。 現時点では、基本 [Tooltask](/dotnet/api/microsoft.build.utilities.tooltask) クラスに関するドキュメントがありますが、クラスの詳細についての例やドキュメントはありません `TrackedVCToolTask` 。 これが特に興味深い場合は、 [開発者コミュニティ](https://aka.ms/feedback/suggest?space=62)でお客様の声を要求に追加してください。
+   `CL`、`MIDL`、`RC` の場合のように、ツールのすべての入力と出力がツールのコマンド ラインに一覧表示されるとは限らない場合で、自動入力および出力ファイルの追跡と .tlog ファイルの作成が必要な場合は、使用するタスクを `Microsoft.Build.CPPTasks.TrackedVCToolTask` クラスから派生させます。 現時点では、基底の [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) クラスに関するドキュメントはありますが、`TrackedVCToolTask` クラスの詳細についての例やドキュメントはありません。 これについて特別な関心をお持ちの場合は、[Developer Community](https://aka.ms/feedback/suggest?space=62) のリクエストにご意見をお寄せください。
 
-## <a name="incremental-builds-and-up-to-date-checks"></a>インクリメンタルビルドと最新チェック
+## <a name="incremental-builds-and-up-to-date-checks"></a>インクリメンタル ビルドと最新状態チェック
 
-既定の MSBuild インクリメンタルビルドターゲットは、 `Inputs` 属性と属性を使用し `Outputs` ます。 これらを指定すると、MSBuild は、入力のいずれかがすべての出力よりも新しいタイムスタンプを持つ場合にのみターゲットを呼び出します。 多くの場合、ソースファイルには他のファイルが含まれているかインポートされており、ビルドツールはツールのオプションに応じて異なる出力を生成するため、MSBuild ターゲットで使用可能なすべての入力と出力を指定するのは困難です。
+MSBuild インクリメンタル ビルドの既定のターゲットでは、`Inputs` および `Outputs` 属性を使用します。 これらを指定すると、MSBuild では、いずれかの入力のタイムスタンプがすべての出力よりも新しい場合にのみターゲットを呼び出します。 ソース ファイルには他のファイルが含まれていたり、インポートされていたりすることが多く、またビルド ツールではツールのオプションに応じてさまざまな出力が生成されるため、考えられるすべての入力と出力を MSBuild のターゲット内に指定することは困難です。
 
-この問題を管理するために、C++ のビルドでは、インクリメンタルビルドをサポートするためにさまざまな手法を使用します。 ほとんどのターゲットは入力と出力を指定せず、その結果、ビルド中に常に実行されます。 ターゲットによって呼び出されるタスクは、すべての入力と出力に関する情報を、tlog 拡張子を持つ *tlog* ファイルに書き込みます。 この tlog ファイルは、変更されたものと再構築が必要なもの、最新のものを確認するために、後のビルドで使用されます。 また、このファイルは、IDE の既定のビルドの最新チェックに使用される唯一のソースです。
+この問題を管理するために、C++ のビルドでは、インクリメンタル ビルドをサポートする別の手法を使用します。 ほとんどのターゲットでは入力と出力を指定せず、結果としてそれらは常にビルド中に実行されます。 ターゲットによって呼び出されるタスクでは、すべての入力と出力に関する情報を、.tlog 拡張子を持つ *tlog* ファイルに書き込みます。 この .tlog ファイルは、後のビルドで、変更されたものと再構築が必要なもの、最新のものを確認するために使用されます。 また、.tlog ファイルは、IDE での既定のビルド最新状態チェックに使用される唯一のソースです。
 
-すべての入力と出力を確認するために、ネイティブツールタスクは tracker.exe と MSBuild によって提供される [Filetracker](/dotnet/api/microsoft.build.utilities.filetracker) クラスを使用します。
+すべての入力と出力を確認するために、ネイティブ ツール タスクでは tracker.exe と、MSBuild によって提供される [FileTracker](/dotnet/api/microsoft.build.utilities.filetracker) クラスを使用します。
 
-Microsoft.Build.CPPTasks.Common.dll は、 `TrackedVCToolTask` パブリック抽象基本クラスを定義します。 ほとんどのネイティブツールタスクは、このクラスから派生します。
+Microsoft.Build.CPPTasks.Common.dll では、`TrackedVCToolTask` パブリック抽象基底クラスを定義します。 ほとんどのネイティブ ツール タスクは、このクラスから派生します。
 
-Visual Studio 2017 更新プログラム15.8 以降では、Microsoft.Cpp.Common.Tasks.dll に実装されているタスクを使用して、 `GetOutOfDateItems` 既知の入力と出力を持つカスタムターゲットの tlog ファイルを作成できます。
-または、タスクを使用して作成することもでき `WriteLinesToFile` ます。 `_WriteMasmTlogs` `$(VCTargetsPath)` \\  \\ 例として、buildcustomizations *masm* のターゲットを参照してください。
+Visual Studio 2017 Update15.8 以降では、Microsoft.Cpp.Common.Tasks.dll に実装されている `GetOutOfDateItems` タスクを使用して、既知の入力と出力を含むカスタム ターゲット用の .tlog ファイルを生成できます。
+あるいは、`WriteLinesToFile` タスクを使用してそれらを作成することもできます。 `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.targets* に含まれる `_WriteMasmTlogs` ターゲットを例としてご覧ください。
 
-## <a name="tlog-files"></a>tlog ファイル
+## <a name="tlog-files"></a>.tlog ファイル
 
-Tlog ファイルには、 *読み取り*、 *書き込み*、および *コマンドライン* の3種類があります。 ファイルの読み取りと書き込みは、インクリメンタルビルドと IDE の最新チェックによって使用されます。 コマンドラインの tlog ファイルは、インクリメンタルビルドでのみ使用されます。
+.tlog ファイルには、"*読み取り*"、"*書き込み*"、"*コマンド ライン*" の 3 つの種類があります。 読み取りと書き込みの .tlog ファイルは、インクリメンタル ビルドと IDE での最新状態チェックによって使用されます。 コマンド ラインの .tlog ファイルは、インクリメンタル ビルドでのみ使用されます。
 
-MSBuild では、次のヘルパークラスを使用して、tlog ファイルの読み取りと書き込みを行うことができます。
+MSBuild では、読み取りと書き込みの .tlog ファイルに以下のヘルパー クラスを提供します。
 
 - [CanonicalTrackedInputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedinputfiles)
 
 - [CanonicalTrackedOutputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedoutputfiles)
 
-[FlatTrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata)クラスを使用すると、読み取りと書き込みの両方のファイルにアクセスし、出力より新しい入力を識別できます。または、出力がない場合はを指定できます。 最新のチェックで使用されます。
+[FlatTrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata) クラスを使用すると、読み取りと書き込みの両方の .tlog ファイルにアクセスして、出力より新しい入力を特定できます。出力がない場合は、 最新状態チェックで使用されます。
 
-コマンドラインの tlog ファイルには、ビルドで使用されるコマンドラインに関する情報が含まれています。 これらは増分ビルドに対してのみ使用され、最新のチェックは行われません。そのため、内部形式は、それらを生成する MSBuild タスクによって決定されます。
+コマンド ラインの .tlog ファイルには、ビルドで使用されるコマンド ラインに関する情報が含まれています。 これらは、最新状態チェックではなく、インクリメンタル ビルドにのみ使用されるため、それらを生成する MSBuild タスクによって内部形式が決定されます。
 
-### <a name="read-tlog-format"></a>Tlog 形式を読み取ります。
+### <a name="read-tlog-format"></a>読み取りの .tlog の形式
 
- Tlog ファイル ( \* . read. \* .tlog) には、ソースファイルとその依存関係に関する情報が含まれています。
+"*読み取り*" の .tlog ファイル (\*.read.\*.tlog) には、ソース ファイルとその依存関係に関する情報が含まれています。
 
-**^** 行の先頭にあるカレット () は、1つ以上のソースを示します。 同じ依存関係を共有するソースは、縦棒 () で区切られ **\|** ます。
+行の先頭にあるキャレット ( **^** ) は、1 つ以上のソースを示します。 同じ依存関係を共有するソースは、縦棒 ( **\|** ) で区切られます。
 
-依存関係ファイルは、ソースの後にそれぞれ独自の行で一覧表示されます。 すべてのファイル名は完全パスです。
+依存関係ファイルは、ソースの後にそれぞれ独自の行で一覧表示されます。 ファイル名はすべて完全なパスです。
 
-たとえば、プロジェクトソースが *F: \\ test \\ ConsoleApplication1 \\ ConsoleApplication1* にあるとします。 ソースファイル ( *Class1*) に次のものが含まれている場合、
+たとえば、プロジェクトのソースが *F:\\test\\ConsoleApplication1\\ConsoleApplication1* にあるとします。 ソース ファイル (*Class1.cpp*) に以下の include が含まれている場合、
 
 ```cpp
 #include "stdafx.h" //precompiled header
 #include "Class1.h"
 ```
 
-次に *、ソース* ファイルとその後に2つの依存関係が含まれます。
+*CL.read.1.tlog* ファイルにはソース ファイルとその後にその依存関係が 2 つ含まれます。
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.CPP
@@ -344,17 +344,17 @@ F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PCH
 F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.H
 ```
 
-大文字でファイル名を書き込む必要はありませんが、一部のツールでは便利です。
+ファイル名を大文字で記述する必要はありませんが、一部のツールには便利です。
 
-### <a name="write-tlog-format"></a>Tlog 形式の書き込み
+### <a name="write-tlog-format"></a>書き込みの .tlog の形式
 
- Tlog ( \* . write. \* .tlog) ファイルは、ソースと出力を接続します。
+"*書き込み*" の .tlog (\*.write.\*.tlog) ファイルは、ソースと出力を結び付けます。
 
-**^** 行の先頭にあるカレット () は、1つ以上のソースを示します。 複数のソースは、縦棒 () で区切られ **\|** ます。
+行の先頭にあるキャレット ( **^** ) は、1 つ以上のソースを示します。 複数のソースは、縦棒 ( **\|** ) で区切られます。
 
-ソースから作成された出力ファイルは、ソースの後にそれぞれの行に表示されます。 すべてのファイル名は完全なパスである必要があります。
+ソースから作成された出力ファイルは、ソースの後にそれぞれ独自の行で一覧表示されます。 ファイル名はすべて完全なパスである必要があります。
 
-たとえば、追加のソースファイル *Class1* を持つ単純な consoleapplication プロジェクトの場合、次のよう *なファイルが含まれている* 可能性があります。
+たとえば、追加のソース ファイル *Class1.cpp* を持つ単純な ConsoleApplication プロジェクトの場合、*link.write.1.tlog* ファイルには以下が含まれている可能性があります。
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CLASS1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\STDAFX.OBJ
@@ -363,19 +363,19 @@ F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.EXE
 F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PDB
 ```
 
-## <a name="design-time-build"></a>デザイン時ビルド
+## <a name="design-time-build"></a>デザイン時のビルド
 
-IDE では、.vcxproj プロジェクトは一連の MSBuild ターゲットを使用して、プロジェクトから追加情報を取得し、出力ファイルを再生成します。 これらのターゲットの一部は、デザイン時ビルドでのみ使用されますが、その多くは、通常のビルドとデザイン時のビルドの両方で使用されます。
+IDE では、.vcxproj プロジェクトは一連の MSBuild ターゲットを使用して、プロジェクトから追加情報を取得し、出力ファイルを再生成します。 これらのターゲットの一部はデザイン時のビルドでのみ使用されますが、その多くは通常のビルドとデザイン時のビルドの両方で使用されます。
 
-デザイン時ビルドに関する一般的な情報については、 [デザイン時ビルド](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)の CPS ドキュメントを参照してください。 このドキュメントは、Visual C++ プロジェクトにのみ適用されます。
+デザイン時のビルドに関する一般的な情報については、[デザイン時のビルド](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)の CPS ドキュメントをご覧ください。 このドキュメントは、Visual C++ プロジェクトに部分的に適用されます。
 
-`CompileDesignTime`デザイン時のビルドドキュメントに記載されているとのターゲットは、 `Compile` .vcxproj プロジェクトに対しては実行されません。 Visual C++ .vcxproj プロジェクトは、さまざまなデザイン時のターゲットを使用して、IntelliSense 情報を取得します。
+デザイン時のビルドのドキュメントに記載されている `CompileDesignTime` および `Compile` ターゲットは、.vcxproj プロジェクトでは実行されません。 Visual C++ の .vcxproj プロジェクトでは、さまざまなデザイン時のターゲットを使用して、IntelliSense の情報を取得します。
 
-### <a name="design-time-targets-for-intellisense-information"></a>IntelliSense 情報のデザイン時ターゲット
+### <a name="design-time-targets-for-intellisense-information"></a>IntelliSense の情報のためのデザイン時のターゲット
 
-.Vcxproj プロジェクトで使用されるデザイン時のターゲットは、デザイン時で定義されています。 `$(VCTargetsPath)` \\ 
+.vcxproj プロジェクトで使用されるデザイン時のターゲットは、`$(VCTargetsPath)`\\*Microsoft.Cpp.DesignTime.targets* で定義されています。
 
-ターゲットは、 `GetClCommandLines` IntelliSense のコンパイラオプションを収集します。
+`GetClCommandLines` ターゲットでは、IntelliSense のコンパイラ オプションを収集します。
 
 ```xml
 <Target
@@ -384,39 +384,39 @@ IDE では、.vcxproj プロジェクトは一連の MSBuild ターゲットを�
   DependsOnTargets="$(DesignTimeBuildInitTargets);$(ComputeCompileInputsTargets)">
 ```
 
-- `DesignTimeBuildInitTargets` –デザイン時のビルドの初期化に必要な、デザイン時のみのターゲット。 特に、これらのターゲットは、パフォーマンスを向上させるために通常のビルド機能の一部を無効にします。
+- `DesignTimeBuildInitTargets` – デザイン時のビルドの初期化に必要な、デザイン時のみのターゲット。 特に、これらのターゲットでは、パフォーマンスを向上させるために通常のビルド機能の一部を無効にします。
 
-- `ComputeCompileInputsTargets` –コンパイラオプションと項目を変更するターゲットのセット。 これらのターゲットは、デザイン時と通常のビルドの両方で実行されます。
+- `ComputeCompileInputsTargets` – コンパイラのオプションと項目を変更する一連のターゲット。 これらのターゲットは、デザイン時と通常の両方のビルドで実行されます。
 
-ターゲットはタスクを呼び出して、 `CLCommandLine` IntelliSense に使用するコマンドラインを作成します。 この場合も、名前にかかわらず、CL オプションだけでなく、Clang オプションと gcc オプションも処理できます。 コンパイラスイッチの型は、プロパティによって制御され `ClangMode` ます。
+このターゲットでは `CLCommandLine` タスクを呼び出して、IntelliSense に使用するコマンド ラインを作成します。 この場合も、その名前にかかわらず、CL オプションだけでなく、Clang や gcc オプションも処理できます。 コンパイラ スイッチの型は、`ClangMode` プロパティによって制御されます。
 
-現在、タスクによって生成されるコマンドラインは、 `CLCommandLine` IntelliSense エンジンが解析しやすくなるため、常に (Clang モードでも) CL スイッチを使用しています。
+現在、`CLCommandLine` タスクによって生成されるコマンド ラインでは、IntelliSense エンジンが解析しやすくなるように、常に (Clang モードでも) CL スイッチを使用しています。
 
-コンパイル前に実行されるターゲットを追加する場合は、標準またはデザイン時のどちらでも、デザイン時のビルドが中断されないようにするか、パフォーマンスに影響を与えないようにしてください。 ターゲットをテストする最も簡単な方法は、開発者コマンドプロンプトを開き、次のコマンドを実行することです。
+コンパイル前に実行されるターゲットを追加する場合は、通常またはデザイン時のどちらであっても、それによってデザイン時のビルドが中断されたり、パフォーマンスに影響したりしないようにしてください。 ターゲットをテストする最も簡単な方法は、開発者コマンド プロンプトを開き、以下のコマンドを実行することです。
 
 ```
 msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuration=Debug;Platform=Win32;BuildingInsideVisualStudio=true;DesignTimebuild=true /t:\_PerfIntellisenseInfo /v:d /fl /fileloggerparameters:PerformanceSummary \*.vcxproj
 ```
 
-このコマンドを実行すると、詳細なビルドログ ( *msbuild.exe*) が生成されます。このログには、最後のターゲットとタスクのパフォーマンスの概要が示されます。
+このコマンドによって詳細なビルド ログ (*msbuild.log*) が生成されます。これには、ターゲットとタスクのパフォーマンスの概要が最後に示されます。
 
-`Condition ="'$(DesignTimeBuild)' != 'true'"`デザイン時のビルドではなく、通常のビルドにのみ意味を持つすべての操作でを使用してください。
+デザイン時のビルドではなく、通常のビルドにのみ意味を持つすべての操作では必ず `Condition ="'$(DesignTimeBuild)' != 'true'"` を使用してください。
 
-### <a name="design-time-targets-that-generate-sources"></a>ソースを生成するデザイン時ターゲット
+### <a name="design-time-targets-that-generate-sources"></a>ソースを生成するデザイン時のターゲット
 
-*この機能はデスクトップネイティブプロジェクトでは既定で無効になっており、キャッシュされたプロジェクトでは現在サポートされていません*。
+"*この機能はデスクトップのネイティブ プロジェクトでは既定で無効になっており、キャッシュされたプロジェクトでは現在サポートされていません。* "
 
-`GeneratorTarget`プロジェクト項目に対してメタデータが定義されている場合、プロジェクトが読み込まれるときとソースファイルが変更されるときの両方で、ターゲットが自動的に実行されます。
+プロジェクト項目に `GeneratorTarget` メタデータが定義されている場合は、プロジェクトが読み込まれるときとソース ファイルが変更されるときに、ターゲットが自動的に実行されます。
 
 ::: moniker range="vs-2017"
 
-たとえば、.xaml ファイルから .cpp ファイルまたは .h ファイルを自動的に生成するために、 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *windowsxaml* \\ *v 15.0* \\ \* \\ ファイルでは次のエンティティが定義されています。
+たとえば、.xaml ファイルから .cpp または .h ファイルを自動的に生成する場合は、`$(VSInstallDir)`\\*MSBuild*\\*Microsoft*\\*WindowsXaml*\\*v15.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* ファイルで以下のエンティティを定義します。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-たとえば、.xaml ファイルから .cpp ファイルまたは .h ファイルを自動的に生成するために、 `$(VSInstallDir)` \\ *MSBuild* \\ *microsoft* \\ *windowsxaml* \\ *v 16.0* \\ \* \\ ファイルでは次のエンティティが定義されています。
+たとえば、.xaml ファイルから .cpp または .h ファイルを自動的に生成する場合は、`$(VSInstallDir)`\\*MSBuild*\\*Microsoft*\\*WindowsXaml*\\*v16.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* ファイルで以下のエンティティを定義します。
 
 ::: moniker-end
 
@@ -436,7 +436,7 @@ msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuratio
 </Target>
 ```
 
-を使用し `Task.HostObject` てソースファイルの保存されていないコンテンツを取得するには、ターゲットとタスクを、pkgdef 内の特定のプロジェクトの [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017&preserve-view=true) として登録する必要があります。
+`Task.HostObject` を使用してソース ファイルの未保存のコンテンツを取得するには、ターゲットとタスクを、指定されたプロジェクトの [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017&preserve-view=true) として pkgdef に登録する必要があります。
 
 ```reg
 \[$RootKey$\\Projects\\{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}\\MSBuildHostObjects\]
@@ -444,17 +444,17 @@ msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuratio
 @="{83046B3F-8984-444B-A5D2-8029DEE2DB70}"
 ```
 
-## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE でのプロジェクト拡張機能の Visual C++
+## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE での Visual C++ プロジェクトの機能拡張
 
-Visual C++ プロジェクトシステムは、 [VS プロジェクトシステム](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)に基づいており、その機能拡張ポイントを使用します。 ただし、プロジェクト階層の実装は Visual C++ に固有であり、CPS に基づくものではないため、階層の拡張性はプロジェクト項目に限定されます。
+Visual C++ プロジェクト システムは [VS Project System](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) に基づいており、その機能拡張ポイントが使用されます。 ただし、プロジェクト階層の実装は Visual C++ に固有であり、CPS に基づくものではないため、階層の機能拡張はプロジェクト項目に限定されます。
 
 ### <a name="project-property-pages"></a>[プロジェクト プロパティ] ページ
 
-一般的な設計情報については、「 [VC + + プロジェクトのフレームワークのマルチターゲット](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/)」を参照してください。
+一般的な設計情報については、[VC++ プロジェクト用のフレームワークのマルチ ターゲット](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/)に関するページをご覧ください。
 
-簡単に言うと、C++ プロジェクトの [プロジェクトの **プロパティ** ] ダイアログに表示されるプロパティページは、 *規則* ファイルによって定義されます。 ルールファイルでは、プロパティページに表示する一連のプロパティを指定します。また、プロジェクトファイルに保存するプロパティを指定します。 ルールファイルは、Xaml 形式を使用する .xml ファイルです。 これらの型をシリアル化するために使用される型については、 [「」を参照して](/dotnet/api/microsoft.build.framework.xamltypes)ください。 プロジェクトでの規則ファイルの使用の詳細については、「 [プロパティページの XML 規則ファイル](/cpp/build/reference/property-page-xml-files)」を参照してください。
+簡単に言えば、C++ プロジェクトの **[プロジェクト プロパティ]** ダイアログに表示されるプロパティ ページは、"*規則*" ファイルによって定義されます。 規則ファイルでは、プロパティ ページに表示する一連のプロパティ、およびそれらをプロジェクト ファイル内に保存する方法と場所を指定します。 規則ファイルは、Xaml 形式を使用する .xml ファイルです。 それらをシリアル化するために使用される型については、[Microsoft.Build.Framework.XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes) に関するページをご覧ください。 プロジェクトでの規則ファイルの使用について詳しくは、「[プロパティ ページの XML 規則ファイル](/cpp/build/reference/property-page-xml-files)」をご覧ください。
 
-規則ファイルを項目グループに追加する必要があり `PropertyPageSchema` ます。
+規則ファイルは、`PropertyPageSchema` 項目グループに追加する必要があります。
 
 ```xml
 <ItemGroup>
@@ -465,13 +465,13 @@ Visual C++ プロジェクトシステムは、 [VS プロジェクトシステ�
 </ItemGroup>
 ```
 
-`Context` メタデータ制限ルールの可視性は、ルールの種類によっても制御され、次のいずれかの値を持つことができます。
+`Context` メタデータは規則の可視性を制限し (規則の可視性は規則の種類によっても制御される)、これには以下の値のいずれかを指定できます。
 
 `Project` | `File` | `PropertySheet`
 
-CPS は、コンテキスト型の他の値をサポートしますが、Visual C++ プロジェクトでは使用されません。
+CPS ではコンテキストの種類を表す他の値をサポートしていますが、Visual C++ プロジェクトでは使用されません。
 
-ルールを複数のコンテキストで表示する必要がある場合は、次に示すように、セミコロン (**;**) を使用してコンテキスト値を区切ります。
+規則が複数のコンテキストで表示されるようにする必要がある場合は、以下に示すように、コンテキスト値をセミコロン ( **;** ) で区切ります。
 
 ```xml
 <PropertyPageSchema Include="$(MyFolder)\MyRule.xml">
@@ -481,7 +481,7 @@ CPS は、コンテキスト型の他の値をサポートしますが、Visual 
 
 #### <a name="rule-format-and-main-types"></a>規則の形式と主な種類
 
-規則の形式は簡単であるため、このセクションでは、ユーザーインターフェイスでの規則の表示方法に影響する属性についてのみ説明します。
+規則形式は単純であるため、このセクションでは、ユーザー インターフェイスでの規則の表示方法に影響する属性についてのみ説明します。
 
 ```xml
 <Rule
@@ -492,34 +492,34 @@ CPS は、コンテキスト型の他の値をサポートしますが、Visual 
   xmlns="http://schemas.microsoft.com/build/2009/properties">
 ```
 
-属性は、 `PageTemplate` [ **プロパティページ** ] ダイアログボックスでのルールの表示方法を定義します。 属性には、次のいずれかの値を指定できます。
+`PageTemplate` 属性は、 **[プロパティ ページ]** ダイアログでの規則の表示方法を定義します。 この属性には、以下の値のいずれかを指定できます。
 
 | 属性 | 説明 |
 |------------| - |
-| `generic` | すべてのプロパティは、[カテゴリ見出し] の下の1ページに表示されます。<br/>ルールは、コンテキストおよびコンテキストでは表示できますが、表示することはでき `Project` `PropertySheet` ません `File` 。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033* \\ *general.xml* |
-| `tool` | カテゴリはサブページとして表示されます。<br/>ルールは `Project` 、、、およびのすべてのコンテキストで表示できます `PropertySheet` `File` 。<br/>規則がプロジェクトのプロパティに表示されるのは、その `ItemType` `Rule.DataSource` 規則名が項目グループに含まれていない場合に、プロジェクトにで定義されたを持つ項目がある場合のみです `ProjectTools` 。<br/><br/>例: `$(VCTargetsPath)` \\ *1033* \\ *clang.xml* |
-| `debugger` | ページは、[デバッグ] ページの一部として表示されます。<br/>カテゴリは現在無視されています。<br/>ルール名は、デバッグランチャー MEF オブジェクトの属性と一致している必要があり `ExportDebugger` ます。<br/><br/>例: `$(VCTargetsPath)` \\ *1033* \\ *デバッガー \_ ローカル \_windows.xml* |
-| *ショー* | カスタムテンプレート。 テンプレートの名前は、MEF オブジェクトの属性と一致している必要があり `ExportPropertyPageUIFactoryProvider` `PropertyPageUIFactoryProvider` ます。 「 **VisualStudio. IPropertyPageUIFactoryProvider**」を参照してください。<br/><br/> 例: `$(VCTargetsPath)` \\ *1033* \\ *userMacros.xml* |
+| `generic` | すべてのプロパティが、カテゴリの見出しの下の 1 ページに表示されます。<br/>`Project` および `PropertySheet` コンテキストでは規則を表示できますが、`File` では表示できません。<br/><br/> 例: `$(VCTargetsPath)`\\*1033*\\*general.xml* |
+| `tool` | カテゴリがサブページとして表示されます。<br/>すべてのコンテキスト (`Project`、`PropertySheet`、`File`) で規則を表示できます。<br/>規則が [プロジェクト プロパティ] に表示されるのは、その規則名が `ProjectTools` 項目グループに含まれている場合を除いて、`Rule.DataSource` で定義された `ItemType` を持つ項目がプロジェクトにある場合のみです。<br/><br/>例: `$(VCTargetsPath)`\\*1033*\\*clang.xml* |
+| `debugger` | ページが、[デバッグ] ページの一部として表示されます。<br/>現在、カテゴリは無視されています。<br/>規則名は、デバッグ ランチャーの MEF オブジェクトの `ExportDebugger` 属性と一致している必要があり ます。<br/><br/>例: `$(VCTargetsPath)`\\*1033*\\*debugger\_local\_windows.xml* |
+| *custom* | カスタム テンプレート。 テンプレートの名前は、`PropertyPageUIFactoryProvider` MEF オブジェクトの `ExportPropertyPageUIFactoryProvider` 属性と一致している必要があります。 **Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider** をご覧ください。<br/><br/> 例: `$(VCTargetsPath)`\\*1033*\\*userMacros.xml* |
 
-ルールでプロパティグリッドベースのテンプレートの1つを使用している場合は、次の機能拡張ポイントをそのプロパティに使用できます。
+規則でプロパティ グリッド ベースのテンプレートの 1 つを使用している場合は、以下の機能拡張ポイントをそのプロパティに使用できます。
 
-- [プロパティ値エディター](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/property_value_editors.md)
+- [プロパティ値のエディター](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/property_value_editors.md)
 
-- [動的列挙値プロバイダー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
+- [列挙値の動的プロバイダー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
 
-#### <a name="extend-a-rule"></a>ルールを拡張する
+#### <a name="extend-a-rule"></a>規則の拡張
 
-既存の規則を使用するが、いくつかのプロパティだけを追加または削除する必要がある場合は、 [拡張規則](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md)を作成できます。
+既存の規則を使用したいが、いくつかのプロパティだけを追加または削除する必要がある場合は、[拡張規則](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md)を作成できます。
 
-#### <a name="override-a-rule"></a>ルールを上書きする
+#### <a name="override-a-rule"></a>規則のオーバーライド
 
-ほとんどの場合、ツールセットでほとんどのプロジェクトの既定の規則を使用しますが、そのうちの1つまたは一部を置き換えることができます。 たとえば、C/c + + の規則のみを変更して、異なるコンパイラスイッチを表示したいとします。 既存の規則と同じ名前と表示名を持つ新しい規則を指定し、 `PropertyPageSchema` 既定の cpp ターゲットのインポート後に項目グループに含めることができます。 プロジェクトでは、指定した名前の規則が1つだけ使用され、項目グループに含まれる最後の規則が優先され `PropertyPageSchema` ます。
+お使いのツールセットで、プロジェクトの既定の規則のほとんどを使用するが、そのうちの 1 つまたは一部だけは置き換えたいと考える場合があります。 たとえば、異なるコンパイラ スイッチを表示するように C/C++ の規則のみを変更するとします。 既存の規則と同じ名前と表示名を持つ新しい規則を指定し、既定の cpp ターゲットのインポート後にそれを `PropertyPageSchema` 項目グループに含めることができます。 プロジェクトでは所定の名前を持つ規則が 1 つだけ使用され、`PropertyPageSchema` 項目グループに含められた最後のものが優先されます。
 
 #### <a name="project-items"></a>プロジェクト項目
 
-*ProjectItemsSchema.xml* ファイルは、 `ContentType` `ItemType` プロジェクト項目として扱われる項目のおよびの値を定義し、 `FileExtension` 新しいファイルの追加先となる項目グループを決定する要素を定義します。
+*ProjectItemsSchema.xml* ファイルでは、プロジェクト項目として扱われる項目の `ContentType` および `ItemType` 値を定義し、新しいファイルの追加先となる項目グループを決定する `FileExtension` 要素を定義します。
 
-既定の ProjectItemsSchema ファイルは `$(VCTargetsPath)` \\ *1033* \\ *ProjectItemsSchema.xml* にあります。 拡張するには、 *MyProjectItemsSchema.xml* のように、新しい名前でスキーマファイルを作成する必要があります。
+既定の ProjectItemsSchema ファイルは `$(VCTargetsPath)`\\*1033*\\*ProjectItemsSchema.xml* にあります。 それを拡張するには、新しい名前 (*MyProjectItemsSchema.xml* など) でスキーマ ファイルを作成する必要があります。
 
 ```xml
 <ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
@@ -537,7 +537,7 @@ CPS は、コンテキスト型の他の値をサポートしますが、Visual 
 </ProjectSchemaDefinitions>
 ```
 
-次に、ターゲットファイルに以下を追加します。
+次に、ターゲット ファイルに以下を追加します。
 
 ```xml
 <ItemGroup>
@@ -545,29 +545,29 @@ CPS は、コンテキスト型の他の値をサポートしますが、Visual 
 </ItemGroup>
 ```
 
-例: `$(VCTargetsPath)` \\ *buildcustomizations* \\ *masm.xml*
+例: `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.xml*
 
 ### <a name="debuggers"></a>デバッガー
 
-Visual Studio のデバッグサービスは、デバッグエンジンの機能拡張をサポートしています。 詳細については、次のサンプルを参照してください。
+Visual Studio のデバッグ サービスでは、デバッグ エンジンの機能拡張をサポートしています。 詳細については、以下のサンプルをご覧ください。
 
-- [Lldb デバッグをサポートする MIEngine のオープンソースプロジェクト](https://github.com/Microsoft/MIEngine)
+- [MIEngine (lldb デバッグをサポートするオープン ソース プロジェクト)](https://github.com/Microsoft/MIEngine)
 
-- [Visual Studio デバッグエンジンのサンプル](https://code.msdn.microsoft.com/windowsdesktop/Visual-Studio-Debug-Engine-c2e21c0e)
+- [Visual Studio デバッグ エンジンのサンプル](https://code.msdn.microsoft.com/windowsdesktop/Visual-Studio-Debug-Engine-c2e21c0e)
 
-デバッグセッションのデバッグエンジンとその他のプロパティを指定するには、 [デバッグランチャー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) MEF コンポーネントを実装し、ルールを追加する必要があり `debugger` ます。 例については、 `$(VCTargetsPath)` \\ 1033 \\ デバッガー \_ ローカル \_windows.xml ファイルを参照してください。
+デバッグ セッション用のデバッグ エンジンとその他のプロパティを指定するには、[デバッグ ランチャー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md)の MEF コンポーネントを実装し、`debugger` 規則を追加する必要があります。 例については、`$(VCTargetsPath)`\\1033\\debugger\_local\_windows.xml ファイルをご覧ください。
 
-### <a name="deploy"></a>配置
+### <a name="deploy"></a>デプロイ
 
-.vcxproj プロジェクトは、Visual Studio のプロジェクトシステムの拡張機能を使用して、 [プロバイダーを配置](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md)します。
+.vcxproj プロジェクトでは、[デプロイ プロバイダー](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md)に Visual Studio プロジェクト システムの機能拡張を使用します。
 
-### <a name="build-up-to-date-check"></a>最新のチェックをビルドする
+### <a name="build-up-to-date-check"></a>ビルドの最新状態チェック
 
-既定では、ビルドの最新のチェックでは、 `$(TlogLocation)` すべてのビルド入力と出力のビルド時にフォルダーに作成される tlog ファイルと書き込みファイルが必要です。
+既定では、ビルドの最新状態チェックには、ビルド中に `$(TlogLocation)` フォルダーに作成される、すべてのビルド入力および出力用の読み取り .tlog および書き込み .tlog ファイルが必要です。
 
-カスタムの最新のチェックを使用するには、次のようにします。
+カスタムの最新状態チェックを使用するには:
 
-1. `NoVCDefaultBuildUpToDateCheckProvider`*ツールセットの .targets* ファイルに機能を追加して、既定の最新のチェックを無効にします。
+1. *Toolset.targets* ファイルに `NoVCDefaultBuildUpToDateCheckProvider` 機能を追加して、既定の最新状態チェックを無効にします。
 
    ```xml
    <ItemGroup>
@@ -575,31 +575,31 @@ Visual Studio のデバッグサービスは、デバッグエンジンの機能
    </ItemGroup>
    ```
 
-1. 独自の [IBuildUpToDateCheckProvider](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md)を実装します。
+1. 独自の [IBuildUpToDateCheckProvider](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md) を実装します。
 
 ## <a name="project-upgrade"></a>プロジェクトのアップグレード
 
-### <a name="default-vcxproj-project-upgrader"></a>既定の .vcxproj プロジェクト upgrader (
+### <a name="default-vcxproj-project-upgrader"></a>既定の .vcxproj プロジェクト アップグレード プログラム
 
-既定の .vcxproj プロジェクト upgrader (は、、 `PlatformToolset` `ApplicationTypeRevision` 、MSBuild ツールセットのバージョン、および .net framework を変更します。 最後の2つは常に Visual Studio のバージョンの既定値に変更されますが、 `PlatformToolset` とは `ApplicationTypeRevision` 特別な MSBuild プロパティによって制御できます。
+既定の .vcxproj プロジェクト アップグレード プログラムでは、`PlatformToolset`、`ApplicationTypeRevision`、MSBuild ツールセットのバージョン、.Net Framework を変更します。 最後の 2 つは常に Visual Studio バージョンの既定値に変更されますが、`PlatformToolset` と `ApplicationTypeRevision` は特別な MSBuild プロパティによって制御できます。
 
-Upgrader (は、次の基準を使用して、プロジェクトをアップグレードできるかどうかを判断します。
+このアップグレード プログラムでは、以下の基準を使用して、プロジェクトをアップグレードできるかどうかを判断します。
 
-1. およびを定義するプロジェクトでは `ApplicationType` `ApplicationTypeRevision` 、現在のバージョンよりも高いリビジョン番号を持つフォルダーが存在します。
+1. `ApplicationType` と `ApplicationTypeRevision` を定義するプロジェクトの場合、リビジョン番号が現在のものよりも高いフォルダーが存在する。
 
-1. 現在の `_UpgradePlatformToolsetFor_<safe_toolset_name>` ツールセットに対してプロパティが定義されていますが、その値が現在のツールセットと等しくありません。
+1. 現在のツールセットに `_UpgradePlatformToolsetFor_<safe_toolset_name>` プロパティが定義されており、その値が現在のツールセットと等しくない。
 
-   これらのプロパティ名では、は、 *\<safe_toolset_name>* すべての英数字以外の文字がアンダースコア () で置き換えられたツールセットの名前を表し **\_** ます。
+   これらのプロパティ名で、 *\<safe_toolset_name>* は英数字以外のすべて文字がアンダースコア ( **\_** ) で置き換えられたツールセット名を表します。
 
-プロジェクトをアップグレードできる場合は、 *ソリューション再ターゲット* に参加します。 詳細については、「 [IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2)」を参照してください。
+プロジェクトをアップグレードできる場合は、"*ソリューションの再ターゲット*" に加えられます。 詳細については、[IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2) に関するページをご覧ください。
 
-プロジェクトが特定のツールセットを使用する場合 **ソリューションエクスプローラー** でプロジェクト名を装飾するには、プロパティを定義 `_PlatformToolsetShortNameFor_<safe_toolset_name>` します。
+プロジェクトで特定のツールセットを使用する場合に **ソリューション エクスプローラー** でプロジェクト名を装飾するには、`_PlatformToolsetShortNameFor_<safe_toolset_name>` プロパティを定義します。
 
-`_UpgradePlatformToolsetFor_<safe_toolset_name>`プロパティ定義とプロパティ定義の例につい `_PlatformToolsetShortNameFor_<safe_toolset_name>` ては、「」を参照して *ください*。 使用例については、「」を参照してください。 `$(VCTargetPath)` \\ 
+`_UpgradePlatformToolsetFor_<safe_toolset_name>` および `_PlatformToolsetShortNameFor_<safe_toolset_name>` プロパティの定義の例については、*Microsoft.Cpp.Default.props* ファイルをご覧ください。 使用例については、`$(VCTargetPath)`\\*Microsoft.Cpp.Platform.targets* ファイルをご覧ください。
 
-### <a name="custom-project-upgrader"></a>カスタムプロジェクト upgrader (
+### <a name="custom-project-upgrader"></a>カスタムのプロジェクト アップグレード プログラム
 
-カスタム project upgrader (オブジェクトを使用するには、次に示すように MEF コンポーネントを実装します。
+カスタムのプロジェクト アップグレード プログラム オブジェクトを使用するには、以下に示すように MEF コンポーネントを実装します。
 
 ```csharp
 /// </summary>
@@ -615,7 +615,7 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 }
 ```
 
-コードでは、既定の .vcxproj upgrader (オブジェクトをインポートして呼び出すことができます。
+コードでは、既定の .vcxproj アップグレード プログラム オブジェクトをインポートして呼び出すことができます。
 
 ```csharp
 // ...
@@ -626,9 +626,9 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 // ...
 ```
 
-`IProjectRetargetHandler` は *Microsoft.VisualStudio.ProjectSystem.VS.dll* で定義され、に似てい `IVsRetargetProjectAsync` ます。
+`IProjectRetargetHandler` は *Microsoft.VisualStudio.ProjectSystem.VS.dll* で定義され、`IVsRetargetProjectAsync` に似ています。
 
-プロパティを定義して、 `VCProjectUpgraderObjectName` カスタム upgrader (オブジェクトを使用するようにプロジェクトシステムに指示します。
+`VCProjectUpgraderObjectName` プロパティを定義して、プロジェクト システムにカスタムのアップグレード プログラム オブジェクトを使用するよう指示します。
 
 ```xml
 <PropertyGroup>
@@ -636,9 +636,9 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 </PropertyGroup>
 ```
 
-#### <a name="disable-project-upgrade"></a>プロジェクトのアップグレードを無効にする
+#### <a name="disable-project-upgrade"></a>プロジェクトのアップグレードの無効化
 
-プロジェクトのアップグレードを無効にするには、次の値を使用し `NoUpgrade` ます。
+プロジェクトのアップグレードを無効にするには、`NoUpgrade` 値を使用します。
 
 ```xml
 <PropertyGroup>
@@ -646,32 +646,32 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 </PropertyGroup>
 ```
 
-## <a name="project-cache-and-extensibility"></a>プロジェクトキャッシュと拡張性
+## <a name="project-cache-and-extensibility"></a>プロジェクト キャッシュと機能拡張
 
-Visual Studio 2017 で大規模な C++ ソリューションを使用するときのパフォーマンスを向上させるために、 [プロジェクトキャッシュ](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/) が導入されました。 これは、プロジェクトデータを格納する SQLite データベースとして実装され、MSBuild または CPS プロジェクトをメモリに読み込まずにプロジェクトを読み込むために使用されます。
+Visual Studio 2017 で大規模な C++ ソリューションを使用するときのパフォーマンスを向上させるために、[プロジェクト キャッシュ](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/)が導入されました。 これは、プロジェクト データを格納する SQLite データベースとして実装された後、MSBuild または CPS プロジェクトをメモリに読み込まずにプロジェクトを読み込むために使用されます。
 
-.Vcxproj プロジェクトには CPS オブジェクトが存在しないため、キャッシュから読み込まれた拡張子の MEF コンポーネントは、インポート `UnconfiguredProject` または `ConfiguredProject` 作成できません。 拡張機能をサポートするために、プロジェクトが MEF 拡張を使用する (または使用する可能性がある) かどうかを Visual Studio が検出するときに、プロジェクトキャッシュは使用されません。
+キャッシュから読み込まれた .vcxproj プロジェクトには CPS オブジェクトが存在しないため、`UnconfiguredProject` または `ConfiguredProject` をインポートする拡張機能の MEF コンポーネントを作成できません。 機能拡張をサポートするため、プロジェクトで MEF 拡張機能が使用される (または使用される可能性がある) かどうかを Visual Studio で検出するときに、プロジェクト キャッシュは使用されません。
 
-これらのプロジェクトの種類は常に完全に読み込まれ、メモリ内に CPS オブジェクトがあるため、すべての MEF 拡張が作成されます。
+以下の種類のプロジェクトは常に完全に読み込まれ、メモリ内に CPS オブジェクトが存在するため、すべての MEF 拡張機能が作成されます。
 
-- スタートアッププロジェクト
+- スタートアップ プロジェクト
 
-- カスタムプロジェクトが upgrader (されている (つまり、プロパティを定義する) プロジェクト `VCProjectUpgraderObjectName`
+- カスタムのプロジェクト アップグレード プログラムを持つ (つまり、`VCProjectUpgraderObjectName` プロパティが定義されている) プロジェクト
 
-- デスクトップウィンドウを対象としない、つまりプロパティを定義するプロジェクト `ApplicationType`
+- Desktop Windows を対象としない (つまり、`ApplicationType` プロパティが定義されている) プロジェクト
 
 - 共有項目プロジェクト (.vcxitems) と、.vcxitems プロジェクトのインポートによってそれらを参照するすべてのプロジェクト。
 
-これらの条件がいずれも検出されない場合は、プロジェクトキャッシュが作成されます。 キャッシュには、インターフェイスのクエリに応答するために必要な MSBuild プロジェクトのすべてのデータが含まれてい `get` `VCProjectEngine` ます。 これは、拡張機能によって実行されるファイルレベルの MSBuild props およびターゲットへの変更はすべて、キャッシュから読み込まれたプロジェクトでのみ機能する必要があることを意味します。
+これらの条件がいずれも検出されない場合は、プロジェクト キャッシュが作成されます。 このキャッシュには、`VCProjectEngine` インターフェイス上で `get` クエリに応答するために必要な MSBuild プロジェクトからのデータがすべて含まれています。 これは、拡張機能によって実行される、MSBuild の props および targets ファイル レベルでの変更がすべて、キャッシュから読み込まれたプロジェクトでのみ機能する必要があることを意味します。
 
-## <a name="shipping-your-extension"></a>拡張機能を配布する
+## <a name="shipping-your-extension"></a>拡張機能の配布
 
-VSIX ファイルを作成する方法の詳細については、「 [Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)」を参照してください。 特別なインストール場所にファイルを追加する方法 (の下にファイルを追加する方法など) については `$(VCTargetsPath)` 、「 [extensions フォルダー以外にインストール](../extensibility/set-install-root.md)する」を参照してください。
+VSIX ファイルを作成する方法については、「[Visual Studio 拡張機能の配布](../extensibility/shipping-visual-studio-extensions.md)」をご覧ください。 特別なインストール場所にファイルを追加する (たとえば、`$(VCTargetsPath)` の下にファイルを追加する) 方法については、「[拡張機能フォルダー外でのインストール](../extensibility/set-install-root.md)」をご覧ください。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 
-Microsoft Build System ([MSBuild](../msbuild/msbuild.md)) は、プロジェクトファイルのビルドエンジンと拡張可能な XML ベースの形式を提供します。 Msbuild の基本的な [概念](../msbuild/msbuild-concepts.md) と、Visual C++ プロジェクトシステムを拡張するため [の msbuild Visual C++ の](/cpp/build/reference/msbuild-visual-cpp-overview) 動作方法について理解しておく必要があります。
+Microsoft Build System ([MSBuild](../msbuild/msbuild.md)) は、ビルド エンジンと拡張可能な XML ベースの形式をプロジェクト ファイルに提供します。 Visual C++ プロジェクト システムを拡張するためには、基本的な [MSBuild の概念](../msbuild/msbuild-concepts.md)と [Visual C++ 向け MSBuild](/cpp/build/reference/msbuild-visual-cpp-overview) のしくみを理解しておく必要があります。
 
-Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) には、CPS および Visual C++ プロジェクトシステムで使用される拡張 api が用意されています。 CPS での MEF の使用方法の概要については、「 [mef の Vsprojectsystem の概要](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md)」の「 [CPS and mef](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) 」を参照してください。
+Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)) には、CPS および Visual C++ プロジェクト システムで使用される拡張機能 API が用意されています。 CPS による MEF の使用方法の概要については、[VSProjectSystem での MEF の 概要](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md)のページに記載されている [CPS と MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) に関するセクションをご覧ください。
 
-既存のビルドシステムをカスタマイズして、ビルドステップまたは新しいファイルの種類を追加できます。 詳細については、「 [MSBuild (Visual C++) の概要](/cpp/build/reference/msbuild-visual-cpp-overview) 」および「 [プロジェクトプロパティの操作](/cpp/build/working-with-project-properties)」を参照してください。
+既存のビルド システムをカスタマイズして、ビルド ステップまたは新しいファイルの種類を追加できます。 詳細については、[MSBuild (Visual C++) の概要](/cpp/build/reference/msbuild-visual-cpp-overview)と[プロジェクト プロパティの操作](/cpp/build/working-with-project-properties)に関するそれぞれのページをご覧ください。

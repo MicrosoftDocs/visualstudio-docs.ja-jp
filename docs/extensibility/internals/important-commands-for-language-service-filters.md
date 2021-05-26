@@ -1,6 +1,6 @@
 ---
-title: 言語サービスフィルターの重要なコマンド |Microsoft Docs
-description: Visual Studio でフル機能の言語サービスフィルターを作成するときにサポートする必要がある重要なコマンドについて説明します。
+title: 言語サービス フィルターの重要なコマンド | Microsoft Docs
+description: Visual Studio でフル機能の言語サービス フィルターを作成するときにサポートする必要がある重要なコマンドについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,30 +15,30 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5d27f1c3057266d1b167999f3178a3e554a78ddb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105069557"
 ---
 # <a name="important-commands-for-language-service-filters"></a>言語サービス フィルターの重要なコマンド
-完全に機能する言語サービスフィルターを作成する場合は、次のコマンドを処理することを検討してください。 コマンド識別子の完全な一覧は、マネージ <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> コードの列挙と、アンマネージコードの Stdidcmd ヘッダーファイルで定義されてい [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] ます。 Stdidcmd ファイルは、 *Visual STUDIO SDK のインストールパス*\VisualStudioIntegration\Common\Inc. にあります。
+フル機能の言語サービス フィルターを作成する場合は、次のコマンドの処理について検討してください。 コマンド識別子の完全なリストは、マネージ コードの場合は <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> 列挙型で、アンマネージド [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] コードの場合は Stdidcmd.h ヘッダー ファイルで定義されます。 Stdidcmd.h ファイルは、*Visual Studio SDK のインストール パス*\VisualStudioIntegration\Common\Inc にあります。
 
 ## <a name="commands-to-handle"></a>処理するコマンド
 
 > [!NOTE]
-> 次の表の各コマンドに対してフィルター処理を行うことは必須ではありません。
+> 次の表のすべてのコマンドについてフィルター処理を行うことは必須ではありません。
 
 |コマンド|説明|
 |-------------|-----------------|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが右クリックしたときに送信されます。 このコマンドは、ショートカットメニューを提供する時間を示します。 このコマンドを処理しない場合、テキストエディターには、言語固有のコマンドを使用せずに既定のショートカットメニューが表示されます。 このメニューに独自のコマンドを追加するには、コマンドを処理し、自分でショートカットメニューを表示します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーが CTRL + J キーを押したときに送信されます。 でメソッドを呼び出して、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ステートメント入力候補ボックスを表示します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが文字を入力したときに送信されます。 このコマンドを監視して、トリガー文字がいつ入力されたかを確認し、ステートメント入力候補、メソッドのヒント、およびテキストマーカー (構文の色分け、かっこの一致、エラーマーカーなど) を指定します。 ステートメントの入力候補に対してメソッドを呼び出し、メソッドのヒントに対してメソッドを呼び出し <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> ます。 テキストマーカーをサポートするには、このコマンドを監視して、入力されている文字がマーカーを更新する必要があるかどうかを判断します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが Enter キーを入力したときに送信されます。 このコマンドを監視して、でメソッドを呼び出して、メソッドのヒントウィンドウを閉じるタイミングを決定し <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> ます。 既定では、このコマンドはテキストビューによって処理されます。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが Backspace キーを入力したときに送信されます。 でメソッドを呼び出して、メソッドのヒントウィンドウを閉じるタイミングを監視し <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> ます。 既定では、このコマンドはテキストビューによって処理されます。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|メニューまたはショートカットキーから送信されます。 のメソッドを呼び出して、 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> パラメーター情報を使用して tip ウィンドウを更新します。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが変数に移動したとき、または変数にカーソルを置いて、[**編集**] メニューの **IntelliSense** から **クイックヒント** を選択したときに送信されます。 でメソッドを呼び出して、ヒントの変数の型を返し <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ます。 デバッグがアクティブな場合は、ヒントにも変数の値が表示されます。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーが CTRL + SPACE キーを押したときに送信されます。 このコマンドは、でメソッドを呼び出すように言語サービスに指示し <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ます。|
-|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|メニューから送信されます。通常は、[**編集**] メニューの **[詳細設定**] を **選択** するか、選択 **項目** をコメント解除します。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> ユーザーが選択したテキストをコメントアウトすることを示します。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> ユーザーが選択したテキストのコメントを解除することを示します。 これらのコマンドは、言語サービスによってのみ実装できます。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが右クリックすると送信されます。 このコマンドは、ショートカット メニューを表示するタイミングであることを示します。 このコマンドを処理しない場合、テキスト エディターは、言語固有のコマンドを含まない既定のショートカット メニューを表示します。 独自のコマンドをこのメニューに含めるには、このコマンドを処理して独自にショートカット メニューを表示します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーが Ctrl + J キーを押すと送信されます。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> メソッドを呼び出して、ステートメント入力候補ボックスを表示します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが文字を入力すると送信されます。 このコマンドを監視して、トリガー文字が入力されたタイミングを判断したり、ステートメント入力候補、メソッド ヒント、およびテキスト マーカー (構文の色分け、かっこの一致、エラーマーカーなど) を提供したりします。 ステートメント入力候補については <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> メソッドを、メソッド ヒントについては <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> メソッドを呼び出します。 テキスト マーカーをサポートするには、このコマンドを監視し、入力された文字に呼応してマーカーを更新する必要があるかどうかを判断します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが Enter キーを押すと送信されます。 このコマンドを監視して、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> メソッドを呼び出してメソッド ヒント ウィンドウを閉じるタイミングを判断します。 既定では、このコマンドはテキスト ビューによって処理されます。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーが Backspace キーを押すと送信されます。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> メソッドを呼び出してメソッド ヒント ウィンドウを閉じるタイミングを判断するために監視します。 既定では、このコマンドはテキスト ビューによって処理されます。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|メニューまたはショートカット キーから送信されます。 パラメーター情報を使用してヒント ウィンドウを更新するには、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> メソッドを呼び出します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|ユーザーがマウス カーソルを変数に合わせて (変数の位置まで動かして) **[編集]** メニューの **[IntelliSense]** から **[クイック ヒント]** を選択すると送信されます。 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> メソッドを呼び出して、変数の型をヒントに返します。 デバッグがアクティブな場合、ヒントには変数の値も表示されます。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|通常、ユーザーが Ctrl + Space キーを押すと送信されます。 このコマンドは、<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> の <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> メソッドを呼び出すよう言語サービスに指示します。|
+|<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID><br /><br /> <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>|メニュー (通常は、 **[編集]** メニューの **[詳細設定]** の **[選択範囲のコメント]** または **[選択範囲のコメントを解除]** ) から送信されます。 <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> は、選択したテキストをユーザーがコメント アウトすることを示します。<xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> は、選択したテキストをユーザーがコメント解除することを示します。 これらのコマンドは、言語サービスによる実装のみが可能です。|
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [従来の言語サービスの開発](../../extensibility/internals/developing-a-legacy-language-service.md)

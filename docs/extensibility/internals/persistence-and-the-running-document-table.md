@@ -1,6 +1,6 @@
 ---
-title: 永続化と実行中のドキュメントテーブル |Microsoft Docs
-description: プロジェクトが、Visual Studio IDE でドキュメントの状態を追跡する、実行中のドキュメントテーブルでのドキュメントのオープン、保存、および名前変更をコーディネートする方法について説明します。
+title: 永続性と実行中のドキュメント テーブル | Microsoft Docs
+description: Visual Studio IDE でドキュメントの状態を追跡する実行中のドキュメント テーブルでのドキュメントのオープン、保存、名前変更をプロジェクトで調整する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,19 +17,19 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5244e14498da0f556a71b8d710ccbaa8b9b03e65
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095122"
 ---
 # <a name="persistence-and-the-running-document-table"></a>ドキュメント テーブルの保存と実行
-IDE で [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、プロジェクトは、サービスを使用して実行するプロジェクト項目の永続化を完全に管理し <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> ます。 ドキュメントは、Visual Studio 環境における永続化の基本単位です。 プロジェクトは、開いているすべてのドキュメントの状態を追跡するリソースである、実行中のドキュメントテーブル (RDT) を使用して、ドキュメントのオープン、保存、および名前変更を調整します。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE では、プロジェクト項目の永続化の管理はすべてプロジェクトで担っており、プロジェクトでは <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> のサービスを使用してこの項目を実行します。 ドキュメントは Visual Studio 環境での永続化の基本単位です。 プロジェクトでは、開いているすべてのドキュメントの状態を追跡するリソースである実行中のドキュメント テーブル (RDT) を使用して、ドキュメントのオープン、保存、名前変更を調整します。
 
 ## <a name="managing-persistence"></a>永続化の管理
- プロジェクトは、インターフェイスを実装することによって、環境の永続性サービスを制御し <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> ます。 環境はドキュメントを直接保存するように要求することはありませんが、所有するプロジェクト (または階層) にドキュメントを保存するように要求します。 これにより、プロジェクトは、プロジェクトアイテムデータをローカルファイル、リモートファイル、データベース、リポジトリ、またはその他のメディアに保存することができます。
+ プロジェクトでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> インターフェイスを実装して、環境の永続化サービスを制御します。 環境では、ドキュメントが永続化するように直接要求されることはありませんが、所有しているプロジェクト (または階層) がドキュメントを保存するように要求されます。 これにより、プロジェクトで、プロジェクト項目データをローカル ファイル、リモート ファイル、データベース、リポジトリ、またはその他のメディアに保存できるようになります。
 
- グローバル環境では、RDT が維持されます。 この環境では、RDT 内の開いているすべてのウィンドウとドキュメントのエントリを保持します。これにより、ソリューションが閉じられたときなど、特別な通知を受け取ることができます。 さらに、RDT を使用すると、環境が **ソリューションエクスプローラー** 内の対応するノードを追跡できるようになります。 RDT は、プロジェクトファイルとプロジェクト項目ドキュメントの両方を含めて、開いている持続可能なオブジェクトごとに1つのレコードを保持します。
+ グローバル環境で RDT が保持されます。 この環境では、すべての開いているウィンドウとドキュメントのエントリが RDT で保持され、これにより、ソリューションが閉じられたときなどに特別な通知を受け取れるようになります。 さらに、RDT により、環境で **ソリューション エクスプローラー** 内の対応するノードを追跡できるようになります。 RDT では、プロジェクト ファイルとプロジェクト項目ドキュメントの両方を含む、開かれた永続化可能なオブジェクトごとに 1 つのレコードが保持されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [ドキュメント テーブルの実行](../../extensibility/internals/running-document-table.md)
 - [IDE での選択と通貨](../../extensibility/internals/selection-and-currency-in-the-ide.md)

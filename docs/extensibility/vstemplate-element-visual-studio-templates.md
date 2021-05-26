@@ -1,6 +1,6 @@
 ---
-title: .Vstemplate 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: .Vstemplate 要素について、およびプロジェクトテンプレート、項目テンプレート、またはスタートキットに関するすべてのメタデータがどのように含まれているかについて説明します。
+title: VSTemplate 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: VSTemplate 要素と、そこにプロジェクト テンプレート、項目テンプレート、またはスタート キットに関するすべてのメタデータがどのように含まれているかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 7509614613ac80bc4f697f7f93358819eb9ecde4
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062214"
 ---
-# <a name="vstemplate-element-visual-studio-templates"></a>.Vstemplate 要素 (Visual Studio テンプレート)
-プロジェクトテンプレート、項目テンプレート、またはスタートキットに関するすべてのメタデータが含まれます。
+# <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate 要素 (Visual Studio テンプレート)
+プロジェクト テンプレート、項目テンプレート、またはスタート キットに関するすべてのメタデータが含まれています。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ ms.locfileid: "105062214"
 
 | 属性 | 説明 |
 |-----------| - |
-| `Type` | テンプレートをプロジェクトテンプレートまたは項目テンプレートとして識別します。 この属性には、またはの値を指定でき `Project` `Item` ます。 |
-| `Version` | テンプレートのバージョン番号を指定します。 およびの [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] テンプレート [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] `Version` の属性値は `3.0.0` です。 |
+| `Type` | テンプレートをプロジェクト テンプレートまたは項目テンプレートとして識別します。 この属性には、`Project` または `Item` の値を指定できます。 |
+| `Version` | テンプレートのバージョン番号を指定します。 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] および [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] のテンプレートでは、`Version` 属性の値は `3.0.0` です。 |
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類するデータを指定し、[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスでの表示方法を定義します。|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートを分類するデータを指定し、 **[新しいプロジェクト]** または **[新しい項目の追加]** ダイアログ ボックスでの表示方法を定義します。|
 |[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|必須の要素です。<br /><br /> テンプレートの内容を指定します。|
 |[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|省略可能な要素です。|
 |[WizardData](../extensibility/wizarddata-element-visual-studio-templates.md)|省略可能な要素です。|
@@ -58,7 +58,7 @@ ms.locfileid: "105062214"
  [なし] :
 
 ## <a name="remarks"></a>解説
- `VSTemplate`要素は *.vstemplate* ファイルのルート要素です。
+ `VSTemplate` 要素は *.vstemplate* ファイルのルート要素です。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。

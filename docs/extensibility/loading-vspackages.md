@@ -1,6 +1,6 @@
 ---
-title: Vspackage | を読み込んでいますMicrosoft Docs
-description: パフォーマンスを向上させるために使用される遅延読み込みなど、Visual Studio での Vspackage の読み込みについて説明します。
+title: VSPackage の読み込み | Microsoft Docs
+description: パフォーマンスを向上させるために可能な限り使用される遅延読み込みなど、Visual Studio での VSPackage の読み込みについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,22 +15,22 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 39a58bcbad79191f54a7b4eeb2aa12e90d8a6e44
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105073288"
 ---
-# <a name="load-vspackages"></a>Load Vspackage
-Vspackage は、機能が必要な場合にのみ、Visual Studio に読み込まれます。 たとえば、VSPackage は、Visual Studio がプロジェクトファクトリまたは VSPackage が実装するサービスを使用するときに読み込まれます。 この機能は遅延読み込みと呼ばれます。これは、パフォーマンス向上のために可能な場合に使用されます。
+# <a name="load-vspackages"></a>VSPackage を読み込む
+VSPackage は、機能が必要な場合にのみ Visual Studio に読み込まれます。 たとえば、VSPackage は、VSPackage で実装されるプロジェクト ファクトリまたはサービスが Visual Studio で使用されるときに読み込まれます。 この機能は遅延読み込みと呼ばれ、パフォーマンス向上のために可能な場合は常に使用されます。
 
 > [!NOTE]
-> Visual Studio では、VSPackage を読み込まずに VSPackage が提供するコマンドなど、特定の VSPackage 情報を確認できます。
+> Visual Studio では、VSPackage で提供されるコマンドなどの特定の VSPackage 情報を、VSPackage を読み込まずに確認できます。
 
- Vspackage は、ソリューションが開いているときなど、特定のユーザーインターフェイス (UI) コンテキストで自動読み込みするように設定できます。 属性は、 <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> このコンテキストを設定します。
+ VSPackage は、ソリューションを開いたときなど、特定のユーザー インターフェイス (UI) コンテキストで自動読み込みするように設定できます。 このコンテキストは <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> 属性で設定されます。
 
-### <a name="autoload-a-vspackage-in-a-specific-context"></a>特定のコンテキストで VSPackage を自動読み込みします。
+### <a name="autoload-a-vspackage-in-a-specific-context"></a>特定のコンテキストで VSPackage を自動読み込みする
 
-- `ProvideAutoLoad`属性を VSPackage 属性に追加します。
+- VSPackage 属性に `ProvideAutoLoad` 属性を追加します。
 
     ```csharp
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]
@@ -41,22 +41,22 @@ Vspackage は、機能が必要な場合にのみ、Visual Studio に読み込�
     {. . .}
     ```
 
-     <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>UI コンテキストとその GUID 値の一覧については、の列挙型フィールドを参照してください。
+     UI コンテキストとその GUID 値の一覧については、<xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> の列挙型フィールドを参照してください。
 
-- メソッドにブレークポイントを設定 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> します。
+- <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドにブレークポイントを設定します。
 
 - VSPackage をビルドし、デバッグを開始します。
 
-- ソリューションを読み込むか、ソリューションを作成します。
+- ソリューションを読み込むか、作成します。
 
-     VSPackage は、ブレークポイントで読み込みと停止を行います。
+     VSPackage が読み込まれ、ブレークポイントで停止します。
 
 ## <a name="force-a-vspackage-to-load"></a>VSPackage を強制的に読み込む
- 状況によっては、VSPackage が別の VSPackage を強制的に読み込む必要がある場合があります。 たとえば、簡易 VSPackage は、CMDUIContext として使用できないコンテキストで、より大きな VSPackage を読み込む場合があります。
+ 状況によっては、VSPackage で別の VSPackage を強制的に読み込むことが必要な場合もあります。 たとえば、CMDUIContext として使用できないコンテキストで、軽量な VSPackage がより大きな VSPackage を読み込む場合があります。
 
- メソッドを使用して <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> 、VSPackage に強制的に読み込むことができます。
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> メソッドを使用して、VSPackage を強制的に読み込むことができます。
 
-- 次のコードを <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> VSPackage のメソッドに挿入して、別の VSPackage を強制的に読み込みます。
+- 別の VSPackage を強制的に読み込む VSPackage の <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> メソッドに、次のコードを挿入します。
 
     ```csharp
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;
@@ -69,9 +69,9 @@ Vspackage は、機能が必要な場合にのみ、Visual Studio に読み込�
 
     ```
 
-     VSPackage が初期化されると、強制的 `PackageToBeLoaded` に読み込まれます。
+     VSPackage が初期化されるとき、`PackageToBeLoaded` を強制的に読み込みます。
 
-     VSPackage 通信には、強制読み込みを使用しないでください。 代わりに [、を使用してサービスを提供して](../extensibility/using-and-providing-services.md) ください。
+     VSPackage 通信には強制読み込みを使用しないでください。 代わりに、[サービスの使用および提供](../extensibility/using-and-providing-services.md)を使用してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [VSPackages](../extensibility/internals/vspackages.md)

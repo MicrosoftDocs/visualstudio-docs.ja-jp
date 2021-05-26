@@ -1,6 +1,6 @@
 ---
-title: Visual Studio SDK リファレンス |Microsoft Docs
-description: これらの記事には、visual studio の名前空間、関連する名前空間、Visual Studio SDK を使用する開発者にとって関心のあるその他の領域に関する情報が含まれています。
+title: Visual Studio SDK のリファレンス | Microsoft Docs
+description: これらの記事には、Visual Studio の名前空間、関連する名前空間、および Visual Studio SDK を使用する開発者にとって関心のあるその他の分野に関する情報が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,14 +15,14 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d07a1148911347d4ff8bdb94e1de4625877872d3
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062539"
 ---
-# <a name="visual-studio-sdk-reference"></a>Visual Studio SDK リファレンス
+# <a name="visual-studio-sdk-reference"></a>Visual Studio SDK のリファレンス
 
-このセクションでは、visual studio の名前空間、関連する名前空間、Visual Studio SDK を使用する開発者にとって関心のあるその他の領域について説明します。
+このセクションには、Visual Studio の名前空間、関連する名前空間、および Visual Studio SDK を使用する開発者にとって関心のあるその他の分野に関する情報が含まれています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -36,31 +36,31 @@ ms.locfileid: "105062539"
 
 - <xref:Microsoft.VisualStudio.Text> 新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Adornments> 修飾のために新しいエディターで使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Adornments> 表示要素用の新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Classification> 新しいエディターで分類に使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Classification> 分類用の新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Differencing> 新しいエディターで差分に使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Differencing> 差分用の新しいエディターで使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Text.Document> ドキュメント用の新しいエディターで使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Text.Editor> 新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Editor.DragDrop> ドラッグアンドドロップ用の新しいエディターで使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Editor.DragDrop> ドラッグ アンド ドロップ用の新しいエディターで使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods> 新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Formatting> 新しいエディターで書式設定のために使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Formatting> 書式設定用の新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.IncrementalSearch> インクリメンタル検索のために新しいエディターで使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.IncrementalSearch> インクリメンタル検索用の新しいエディターで使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Text.Operations> 新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Outlining> 新しいエディターでアウトラインに使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Outlining> アウトライン用の新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Projection> プロジェクションのために新しいエディターで使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Projection> プロジェクション用の新しいエディターで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.Text.Tagging> タグ付けのために新しいエディターで使用されるクラス。
+- <xref:Microsoft.VisualStudio.Text.Tagging> タグ付け用の新しいエディターで使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Utilities> 新しいエディターで使用されるクラス。
 
@@ -70,13 +70,13 @@ ms.locfileid: "105062539"
 
 - <xref:Microsoft.VisualStudio> Visual Studio の定数とヘルパーのクラス。
 
-- <xref:Microsoft.VisualStudio.CommandBars> Visual Studio のコマンドバーのクラス。
+- <xref:Microsoft.VisualStudio.CommandBars> Visual Studio のコマンド バーのクラス。
 
 - <xref:Microsoft.VisualStudio.ComponentModelHost> Visual Studio の Managed Extensibility Framework (MEF) に使用されるクラス。
 
 - <xref:Microsoft.VisualStudio.Designer.Interfaces> Visual Studio デザイナーで使用されるインターフェイス。
 
-- <xref:Microsoft.VisualStudio.ManagedInterfaces.ProjectDesigner> Visual Studio プロジェクトデザイナーで使用されるインターフェイス。
+- <xref:Microsoft.VisualStudio.ManagedInterfaces.ProjectDesigner> Visual Studio プロジェクト デザイナーで使用されるインターフェイス。
 
 - <xref:Microsoft.VisualStudio.ManagedInterfaces.Publish> アプリケーションの発行に使用されるクラス。
 
@@ -86,7 +86,7 @@ ms.locfileid: "105062539"
 
 - <xref:Microsoft.VisualStudio.PlatformUI> Visual Studio シェルで使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.PlatformUI.OleComponentSupport> Microsoft 内部でのみ使用します。
+- <xref:Microsoft.VisualStudio.PlatformUI.OleComponentSupport> Microsoft 内部でのみ使用。
 
 - <xref:Microsoft.VisualStudio.ProjectAggregator> Visual Studio プロジェクトに使用されるクラス。
 
@@ -108,108 +108,108 @@ ms.locfileid: "105062539"
 
 - <xref:Microsoft.VisualStudio.VSHelp> ヘルプに使用されるクラス。
 
-- <xref:VSLangProj> 言語サービスプロジェクトに使用されるクラス。
+- <xref:VSLangProj> 言語サービス プロジェクトに使用されるクラス。
 
-- <xref:XamlGeneratedNamespace> Microsoft 内部でのみ使用します。
+- <xref:XamlGeneratedNamespace> Microsoft 内部でのみ使用。
 
 - <xref:Microsoft.VisualStudio.ManagedInterfaces9> Visual Studio に使用されるインターフェイス。
 
 - <xref:Microsoft.VisualStudio.WCFReference.Interop> Windows Communication Framework に使用されるクラス。
 
-- テストツールで使用される[VisualStudio](/previous-versions/aa993343(v=vs.120))クラス。
+- [Microsoft.VisualStudio.TestTools.Vsip](/previous-versions/aa993343(v=vs.120)) テスト ツールで使用されるクラス。
 
-- <xref:EnvDTE> Visual Studio オートメーションに使用されます。
+- <xref:EnvDTE> Visual Studio オートメーションに使用。
 
-- <xref:Extensibility> Visual Studio オートメーションに使用されます。
+- <xref:Extensibility> Visual Studio オートメーションに使用。
 
-- <xref:EnvDTE80> Visual Studio オートメーションに使用されます。
+- <xref:EnvDTE80> Visual Studio オートメーションに使用。
 
-- <xref:EnvDTE90> Visual Studio オートメーションに使用されます。
+- <xref:EnvDTE90> Visual Studio オートメーションに使用。
 
-- <xref:EnvDTE90a> Visual Studio オートメーションに使用されます。
+- <xref:EnvDTE90a> Visual Studio オートメーションに使用。
 
-- <xref:EnvDTE100> Visual Studio オートメーションに使用されます。
+- <xref:EnvDTE100> Visual Studio オートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.VCCodeModel> プロジェクトの自動化の Visual C++ に使用されます。
+- <xref:Microsoft.VisualStudio.VCCodeModel> Visual C++ プロジェクトのオートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.VCProject> プロジェクトオートメーションの Visual C++ に使用されるクラス。
+- <xref:Microsoft.VisualStudio.VCProject> Visual C++ プロジェクトのオートメーションに使用されるクラス。
 
-- <xref:Microsoft.VisualStudio.VCProjectEngine> プロジェクトの自動化の Visual C++ に使用されます。
+- <xref:Microsoft.VisualStudio.VCProjectEngine> Visual C++ プロジェクトのオートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.VsWizard> Visual Studio ウィザードで使用されます。
+- <xref:Microsoft.VisualStudio.VsWizard> Visual Studio ウィザードに使用。
 
-- <xref:VSLangProj> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VSLangProj> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VSLangProj2> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VSLangProj2> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VSLangProj80> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VSLangProj80> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VslangProj90> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VslangProj90> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VslangProj100> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VslangProj100> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VSLangProj110> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VSLangProj110> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:VSLangProj140> C# および Visual Basic プロジェクトオートメーションに使用されます。
+- <xref:VSLangProj140> C# および Visual Basic プロジェクトのオートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.Language.CallHierarchy> C# および Visual Basic オートメーションに使用されます。
+- <xref:Microsoft.VisualStudio.Language.CallHierarchy> C# および Visual Basic のオートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces> C# および Visual Basic オートメーションに使用されます。
+- <xref:Microsoft.VisualStudio.Language.NavigateTo.Interfaces> C# および Visual Basic のオートメーションに使用。
 
-- <xref:Microsoft.VisualStudio.Threading> Visual Studio のスレッド処理に使用されます。
+- <xref:Microsoft.VisualStudio.Threading> Visual Studio のスレッド処理に使用。
 
-- [VisualStudio 名前空間](/dotnet/api/microsoft.visualstudio.connectedservices) Visual Studio 接続済みサービスに使用されます。
+- [Microsoft.VisualStudio.ConnectedServices Namespace](/dotnet/api/microsoft.visualstudio.connectedservices) Visual Studio 接続済みサービスに使用。
 
-- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) 列挙は、IntelliSense ホストフラグを指定します。
+- [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md) 列挙型 IntelliSense ホスト フラグを指定。
 
-- [Vsct XML スキーマリファレンス](../extensibility/vsct-xml-schema-reference.md) 各に許可されている子要素と属性を持つ Visual Studio コマンドテーブルスキーマ要素のテーブルを提供します。
+- [Vsct XML スキーマ リファレンス](../extensibility/vsct-xml-schema-reference.md) それぞれの許可されている子要素と属性を持つ Visual Studio コマンド テーブル スキーマ要素のテーブルを提供。
 
-- [Guid と定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md) SDK 全体で使用される Guid の一覧を示します。
+- [一意識別子 と定数](../extensibility/guids-and-constants-in-the-visual-studio-sdk.md) SDK 全体で使用される GUID の一覧を提供。
 
-- [マネージコードの COM 定数](../extensibility/com-constants-in-managed-code.md) 環境 SDK 全体で使用されるユーザーインターフェイス要素の識別子の一覧を示します。
+- [マネージ コードの COM 定数](../extensibility/com-constants-in-managed-code.md) Environment SDK 全体で使用されるユーザー インターフェイス要素の識別子の一覧を提供。
 
 - [ソース管理プラグイン](../extensibility/source-control-plug-ins.md) ソース管理プラグイン API に関するトピックへのリンク。
 
-- [コマンドラインスイッチ](../extensibility/command-line-switches-visual-studio-sdk.md) 開発者がコマンドラインからいくつかのタスクを自動化する方法について説明するトピックへのリンクを示します。
+- [コマンドライン スイッチ](../extensibility/command-line-switches-visual-studio-sdk.md) 開発者がコマンドラインからいくつかのタスクを自動化する方法について説明するトピックへのリンク。
 
-- [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md) Vspackage のエラーアーキテクチャについて説明します。これは、他の Windows プログラミングで採用されているものと同じです。
+- [エラー処理と戻り値](../extensibility/error-handling-and-return-values.md) Vspackage のエラー アーキテクチャに関する説明。これは、他の Windows プログラミングで採用されているものと同じです。
 
-- [オブジェクト](../extensibility/objects.md) 環境で使用されるオブジェクトの一覧を示します。
+- [オブジェクト](../extensibility/objects.md) 環境で使用されるオブジェクトの一覧を提供。
 
-- [用語集](../extensibility/visual-studio-sdk-glossary.md) Visual Studio SDK のドキュメントを読むときに使用する便利な用語とその定義の一覧を示します。
+- [用語集](../extensibility/visual-studio-sdk-glossary.md) Visual Studio SDK のドキュメントを読むときに使用できる用語とその定義の一覧を提供。
 
-- <xref:Microsoft.Build.BuildEngine> MSBuild に使用されます。
+- <xref:Microsoft.Build.BuildEngine> MSbuild に使用。
 
-- <xref:Microsoft.Build.Construction> MSBuild に使用されます。
+- <xref:Microsoft.Build.Construction> MSbuild に使用。
 
-- <xref:Microsoft.Build.Conversion> MSBuild に使用されます。
+- <xref:Microsoft.Build.Conversion> MSbuild に使用。
 
-- <xref:Microsoft.Build.Debugging> MSBuild に使用されます。
+- <xref:Microsoft.Build.Debugging> MSbuild に使用。
 
-- <xref:Microsoft.Build.Evaluation> MSBuild に使用されます。
+- <xref:Microsoft.Build.Evaluation> MSbuild に使用。
 
-- <xref:Microsoft.Build.Exceptions> MSBuild に使用されます。
+- <xref:Microsoft.Build.Exceptions> MSbuild に使用。
 
-- <xref:Microsoft.Build.Execution> MSBuild に使用されます。
+- <xref:Microsoft.Build.Execution> MSbuild に使用。
 
-- <xref:Microsoft.Build.Framework> MSBuild に使用されます。
+- <xref:Microsoft.Build.Framework> MSbuild に使用。
 
-- <xref:Microsoft.Build.Framework.XamlTypes> MSBuild に使用されます。
+- <xref:Microsoft.Build.Framework.XamlTypes> MSbuild に使用。
 
-- <xref:Microsoft.Build.Logging> MSBuild に使用されます。
+- <xref:Microsoft.Build.Logging> MSbuild に使用。
 
-- <xref:Microsoft.Build.Tasks> MSBuild に使用されます。
+- <xref:Microsoft.Build.Tasks> MSbuild に使用。
 
-- <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper> MSBuild に使用されます。
+- <xref:Microsoft.Build.Tasks.Deployment.Bootstrapper> MSbuild に使用。
 
-- <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities> MSBuild に使用されます。
+- <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities> MSbuild に使用。
 
-- <xref:Microsoft.Build.Tasks.Hosting> MSBuild に使用されます。
+- <xref:Microsoft.Build.Tasks.Hosting> MSbuild に使用。
 
-- <xref:Microsoft.Build.Tasks.Xaml> MSBuild に使用されます。
+- <xref:Microsoft.Build.Tasks.Xaml> MSbuild に使用。
 
-- <xref:Microsoft.Build.Utilities> MSBuild に使用されます。
+- <xref:Microsoft.Build.Utilities> MSbuild に使用。
 
 ## <a name="related-sections"></a>関連項目
 
-[Visual STUDIO SDK](../extensibility/visual-studio-sdk.md) には、visual studio と統合する製品の開発に役立つドキュメント、サンプル、コードが含まれています。
+[Visual Studio SDK](../extensibility/visual-studio-sdk.md) には、Visual Studio と統合する製品の開発に役立つドキュメント、サンプル、コードが含まれています。
