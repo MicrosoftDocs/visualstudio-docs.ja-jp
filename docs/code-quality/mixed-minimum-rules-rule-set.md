@@ -1,7 +1,7 @@
 ---
 title: "\"混合最小規則\" 規則セット"
 ms.date: 11/04/2016
-description: Visual Studio での "混合最小規則" 規則セットについて説明します。 共通言語ランタイムをサポートする C++ プロジェクトの規則の説明を参照してください。
+description: Visual Studio の "混合最小規則" 規則セットについて説明します。 共通言語ランタイムをサポートする C++ プロジェクトの規則の説明をご覧ください。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: bc8df61c-19af-40ab-a871-315807e5f4bf
@@ -12,16 +12,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 54ba61f3d4f82a5db25d0079193955a5569afa8a
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867881"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>"混合最小規則" 規則セット
 
-Microsoft Mixed Minimum ルールは、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題 (潜在的なセキュリティホールやアプリケーションのクラッシュなど) に焦点を当てています。
+Microsoft 混合最小規則は、共通言語ランタイムをサポートする C++ プロジェクトの最も重大な問題 (潜在的なセキュリティ ホールやアプリケーションのクラッシュなど) に関するものです。
 
-共通言語ランタイムをサポートする C++ プロジェクト用に作成したカスタム規則セットには、この規則セットを含めます。
+共通言語ランタイムをサポートする C++ プロジェクトにカスタムの規則セットを作成する場合は、この規則セットを含めます。
 
 |ルール|説明|
 |----------|-----------------|
@@ -88,18 +88,18 @@ Microsoft Mixed Minimum ルールは、共通言語ランタイムをサポー�
 |[C28182](/cpp/code-quality/c28182)|Null ポインターの逆参照 このポインターは、もう 1 つのポインターと同じ Null 値を持ちます。|
 |[C28202](/cpp/code-quality/c28202)|静的でないメンバーへの参照が正しくありません|
 |[C28203](/cpp/code-quality/c28203)|クラス メンバーへのあいまいな参照です。|
-|[C28205](/cpp/code-quality/c28205)|\_\_ \_ \_ 無効なコンテキストでの成功または失敗時の \_ 使用|
+|[C28205](/cpp/code-quality/c28205)|\_Success\_ または \_On\_failure\_ が無効なコンテキスト内で使用されています|
 |[C28206](/cpp/code-quality/c28206)|左側のオペランドは構造体をポイントするため、'-> ' を使用します|
 |[C28207](/cpp/code-quality/c28207)|左側のオペランドは構造体であるため、'.' を使用します|
 |[C28210](/cpp/code-quality/c28210)|__on_failure コンテキストの注釈を明示的なプリ コンテキストに含めることはできません|
 |[C28211](/cpp/code-quality/c28211)|SAL_context には静的コンテキスト名が必要です|
 |[C28212](/cpp/code-quality/c28212)|注釈にはポインター式が必要です|
-|[C28213](/cpp/code-quality/c28213)|\_以前の \_ \_ \_ 宣言を変更せずに参照するには、宣言注釈を使用する注釈を使用する必要があります。|
+|[C28213](/cpp/code-quality/c28213)|\_Use\_decl\_annotations\_ 注釈は、変更、先行する宣言なしで、参照に使用される必要があります。|
 |[C28214](/cpp/code-quality/c28214)|属性パラメーター名は、p1...p9 である必要があります|
 |[C28215](/cpp/code-quality/c28215)|typefix は、既に typefix のあるパラメーターには適用できません|
 |[C28216](/cpp/code-quality/c28216)|checkReturn 注釈は、特定の関数パラメーターの事後条件にのみ適用されます。|
 |[C28217](/cpp/code-quality/c28217)|関数について、注釈へのパラメーター数がファイルで検出されたものと一致しません|
-|[C28218](/cpp/code-quality/c28218)|関数パラメーターの場合、注釈のパラメーターがファイルで見つかったものと一致しません|
+|[C28218](/cpp/code-quality/c28218)|関数パラメーターについて、注釈のパラメーターがファイルで検出されたものと一致しません|
 |[C28219](/cpp/code-quality/c28219)|注釈 (注釈のパラメーター) には列挙型のメンバーが必要です|
 |[C28220](/cpp/code-quality/c28220)|注釈 (注釈のパラメーター) には整数式が必要です|
 |[C28221](/cpp/code-quality/c28221)|注釈のパラメーターには文字列式が必要です|
@@ -136,7 +136,7 @@ Microsoft Mixed Minimum ルールは、共通言語ランタイムをサポー�
 |[C28267](/cpp/code-quality/c28267)|注釈での構文エラーが、関数の注釈で見つかりました。|
 |[C28272](/cpp/code-quality/c28272)|検査中の関数とパラメーターに対する注釈に関数宣言との一貫性がありません|
 |[C28273](/cpp/code-quality/c28273)|関数について、手がかりには関数宣言との一貫性がありません。|
-|[C28275](/cpp/code-quality/c28275)|\_マクロ値への \_ パラメーター \_ が null です|
+|[C28275](/cpp/code-quality/c28275)|\_Macro\_value\_ のパラメーターは null です|
 |[C28279](/cpp/code-quality/c28279)|シンボルについて、'begin' はありましたが、対応する 'end' がありません|
 |[C28280](/cpp/code-quality/c28280)|シンボルについて、'end' はありましたが、対応する 'begin' がありません|
 |[C28282](/cpp/code-quality/c28282)|書式指定文字列は、前提条件の中に存在する必要があります|

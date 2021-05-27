@@ -1,6 +1,6 @@
 ---
 title: T4 アセンブリ ディレクティブ
-description: Visual Studio のデザイン時テキストテンプレートでは、アセンブリディレクティブがアセンブリを読み込み、テンプレートコードがその型を使用できるようにすることを説明します。
+description: Visual Studio のデザイン時テキスト テンプレートでは、テンプレート コードでアセンブリの型を使用できるように、アセンブリ ディレクティブによってアセンブリが読み込まれることについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,19 +11,19 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 0d214764e8067e1165eeacc044bddc1994230562
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99899678"
 ---
 # <a name="t4-assembly-directive"></a>T4 アセンブリ ディレクティブ
 
-Visual Studio のデザイン時テキストテンプレートでは、 `assembly` ディレクティブはアセンブリを読み込み、テンプレートコードがその型を使用できるようにします。 効果は、Visual Studio プロジェクトにアセンブリ参照を追加することに似ています。
+Visual Studio のデザイン時テキスト テンプレートでは、テンプレート コードでアセンブリの型を使用できるように、`assembly` ディレクティブによってアセンブリが読み込まれます。 結果は、Visual Studio プロジェクトでアセンブリ参照を追加した場合と同様です。
 
- テキストテンプレートの記述の概要については、「 [T4 テキストテンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。
+ テキスト テンプレートの作成方法の概要については、「[T4 テキスト テンプレートの作成](../modeling/writing-a-t4-text-template.md)」を参照してください。
 
 > [!NOTE]
-> 実行時 (前処理された) テキスト テンプレートでは、`assembly` ディレクティブは不要です。 代わりに、必要なアセンブリを Visual Studio プロジェクトの **参照** に追加します。
+> 実行時 (前処理された) テキスト テンプレートでは、`assembly` ディレクティブは不要です。 代わりに、必要なアセンブリを Visual Studio プロジェクトの **[参照]** に追加します。
 
 ## <a name="using-the-assembly-directive"></a>assembly ディレクティブの使用
  ディレクティブの構文は次のとおりです。
@@ -38,13 +38,13 @@ Visual Studio のデザイン時テキストテンプレートでは、 `assembl
 
 - アセンブリの絶対パス。
 
-  構文を使用し `$(variableName)` て、などの Visual Studio 変数を参照 `$(SolutionDir)` したり、 `%VariableName%` 環境変数を参照したりすることができます。 次に例を示します。
+  `$(variableName)` 構文を使用して、Visual Studio の変数 (`$(SolutionDir)` など) を参照し、`%VariableName%` を使用して環境変数を参照できます。 次に例を示します。
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
 ```
 
- assembly ディレクティブは、前処理されたテキスト テンプレートでは無効です。 代わりに、必要な参照を Visual Studio プロジェクトの [ **参照** ] セクションに含めます。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
+ assembly ディレクティブは、前処理されたテキスト テンプレートでは無効です。 必要な参照は、Visual Studio プロジェクトの **[参照]** セクションで追加してください。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
 
 ## <a name="standard-assemblies"></a>標準アセンブリ
  次のアセンブリは自動的に読み込まれるので、これらのアセンブリのアセンブリ ディレクティブを記述する必要はありません。
@@ -65,8 +65,8 @@ Visual Studio のデザイン時テキストテンプレートでは、 `assembl
 
 - DSL を含むアセンブリ
 
-## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild と Visual Studio の両方でのプロジェクトプロパティの使用
- $ (SolutionDir) などの Visual Studio マクロは、MSBuild では動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild および Visual Studio の両方でのプロジェクト プロパティの使用
+ $(SolutionDir) などの Visual Studio のマクロは、MSBuild では動作しません。 ビルド コンピューターでテンプレートを変換する場合、代わりにプロジェクトのプロパティを使用する必要があります。
 
  .csproj ファイルまたは .vbproj ファイルを編集してプロジェクトのプロパティを定義します。 この例では、`myLibFolder` という名前のプロパティを定義します。
 

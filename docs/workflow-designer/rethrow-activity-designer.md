@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナー-再スローアクティビティデザイナー
-description: 再スローアクティビティについて、および再スローアクティビティデザイナーを使用して再スローアクティビティを作成および構成する方法について説明します。
+title: ワークフロー デザイナー - Rethrow アクティビティ デザイナー
+description: Rethrow アクティビティと、Rethrow アクティビティ デザイナーを使用して Rethrow アクティビティを作成し、構成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,30 +14,30 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 2e3615c73583e8c5c313d23fd5f9aa6d9fcd5ff4
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99847324"
 ---
 # <a name="rethrow-activity-designer"></a>Rethrow アクティビティ デザイナー
 
-再 **スロー** アクティビティデザイナーは、アクティビティを作成および構成するために使用され <xref:System.Activities.Statements.Rethrow> ます。
+**Rethrow** アクティビティ デザイナーは、<xref:System.Activities.Statements.Rethrow> アクティビティを作成および構成するために使用します。
 
-## <a name="the-rethrow-activity"></a>再スローアクティビティ
+## <a name="the-rethrow-activity"></a>Rethrow アクティビティ
 
 <xref:System.Activities.Statements.Rethrow> アクティビティでは、以前にスローされた例外をスローします。 このアクティビティは、<xref:System.Activities.Statements.Catch> アクティビティの <xref:System.Activities.Statements.TryCatch> ハンドラーでのみ使用できます。
 
-### <a name="use-the-rethrow-activity-designer"></a>再スローアクティビティデザイナーの使用
+### <a name="use-the-rethrow-activity-designer"></a>ReThrow アクティビティ デザイナーを使用する
 
-**ツールボックス** の **エラー処理** カテゴリの再 **スロー** アクティビティデザイナーにアクセスします。 再 **スロー** アクティビティデザイナーは、[ **ツールボックス** ] からドラッグして、アクティビティを通常配置している任意の場所 (内など) にワークフローデザイナー画面にドロップできます <xref:System.Activities.Statements.Sequence> 。 アクティビティデザイナーを削除すると、Throw という <xref:System.Activities.Statements.Rethrow> 既定の **DisplayName** を持つアクティビティが作成されます。 値は、再 <xref:System.Activities.Activity.DisplayName%2A> **スロー** アクティビティデザイナーのヘッダー、またはプロパティグリッドの [ **DisplayName** ] ボックスで編集できます。
+**[ツールボックス]** の **[エラー処理]** カテゴリにある **Rethrow** アクティビティ デザイナーにアクセスします。 **Rethrow** アクティビティ デザイナーを **[ツールボックス]** からドラッグして、アクティビティが配置される通常のワークフロー デザイナー画面 (<xref:System.Activities.Statements.Sequence> 内など) にドロップできます。 アクティビティ デザイナーをドロップすると、Throw という既定の **DisplayName** を持つ <xref:System.Activities.Statements.Rethrow> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A> 値は、**Rethrow** アクティビティ デザイナーのヘッダー、またはプロパティ グリッドの **[DisplayName]** ボックスで編集できます。
 
-### <a name="the-rethrow-properties"></a>再スロープロパティ
+### <a name="the-rethrow-properties"></a>Rethrow のプロパティ
 
-次の表に、 <xref:System.Activities.Statements.Rethrow> プロパティを示し、デザイナーでのそれらの使用方法について説明します。
+次の表に、<xref:System.Activities.Statements.Rethrow> のプロパティと、それらがデザイナーでどのように使用されるかを示します。
 
-|プロパティ名|必須|使用|
+|プロパティ名|必須|使用方法|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.Rethrow> アクティビティの表示名を指定します (省略可能)。 既定値は Rethrow です。|
+|<xref:System.Activities.Activity.DisplayName%2A>|いいえ|<xref:System.Activities.Statements.Rethrow> アクティビティの表示名を指定します (省略可能)。 既定値は Rethrow です。|
 
 ## <a name="see-also"></a>関連項目
 

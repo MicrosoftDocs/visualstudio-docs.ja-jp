@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "基本正確性規則" 規則セット
 ms.date: 11/04/2016
-description: Visual Studio での "基本的な正確性規則" 規則セットについて説明します。これは、ロジックエラーと一般的なフレームワーク API の誤りに焦点を当てています。 ルールの説明を参照してください。
+description: Visual Studio に設定されている "基本正確性規則" 規則セットについて説明します。これは、論理エラーと、フレームワーク API の一般的なエラーを特に取り上げています。 規則の説明をご覧ください。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 631f0daf-1d42-4c90-a7dc-1a6a9de64c93
@@ -12,16 +12,16 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: 491226cf9c9c708804bca1bd4e075c8e5ff160be
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99843710"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>マネージド コードの "基本正確性規則" 規則セット
 
-"基本的な正確性規則" 規則セットは、フレームワーク Api の使用におけるロジックエラーと一般的な誤りに焦点を当てます。 基本的な正確性規則には、" [マネージ推奨規則](managed-recommended-rules-rule-set-for-managed-code.md) " 規則セットの規則が含まれます。
+"基本正確性規則" 規則セットは、論理エラーと、フレームワーク API の使用における一般的なエラーを特に取り上げています。 基本正確性規則には、[マネージド推奨規則](managed-recommended-rules-rule-set-for-managed-code.md)規則セットの規則が含まれています。
 
-次の表では、Microsoft の基本的な正確性規則の規則セットに含まれるすべての規則について説明します。
+次の表に、"Microsoft 基本正確性規則" 規則セットのすべての規則を示します。
 
 |ルール|説明|
 |----------|-----------------|
@@ -65,7 +65,7 @@ ms.locfileid: "99843710"
 |[CA2137](../code-quality/ca2137.md)|透過的メソッドは、検証可能な IL のみを含まなければならない|
 |[CA2138](../code-quality/ca2138.md)|透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない|
 |[CA2140](../code-quality/ca2140.md)|透過的コードは、セキュリティ上重要な項目を参照してはならない|
-|[CA2141](../code-quality/ca2141.md)|透過的メソッドは Linkdemand を満たしてはならない|
+|[CA2141](../code-quality/ca2141.md)|透過的メソッドは LinkDemand を満たしてはならない|
 |[CA2146](../code-quality/ca2146.md)|型は、基本型およびインターフェイスと同程度以上、重要でなければならない|
 |[CA2147](../code-quality/ca2147.md)|透過コードは、セキュリティ アサートを使用してはならない|
 |[CA2149](../code-quality/ca2149.md)|透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない|

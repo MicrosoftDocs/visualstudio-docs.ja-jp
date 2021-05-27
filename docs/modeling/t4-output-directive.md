@@ -1,6 +1,6 @@
 ---
 title: T4 出力ディレクティブ
-description: Visual Studio テキストテンプレートでは、出力ディレクティブを使用して、変換されたファイルのファイル名拡張子とエンコーディングを定義します。
+description: Visual Studio テキスト テンプレートでは、出力ディレクティブを使用してファイル名の拡張子と変換ファイルのエンコードを定義することについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,20 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 58e7c255d767e9b35764e03a76f9cda516dbe606
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99899607"
 ---
 # <a name="t4-output-directive"></a>T4 出力ディレクティブ
 
-Visual Studio テキストテンプレートでは、ディレクティブを使用して、 `output` 変換されたファイルのファイル名拡張子とエンコーディングを定義します。
+Visual Studio テキスト テンプレートでは、`output` ディレクティブを使用してファイル名の拡張子と変換ファイルのエンコードを定義します。
 
- たとえば、Visual Studio プロジェクトに、次のディレクティブを含む **MyTemplate.tt** という名前のテンプレートファイルが含まれているとします。
+ たとえば、Visual Studio プロジェクトに含まれている **MyTemplate.tt** という名前のテンプレート ファイルに次のディレクティブが含まれているとします。
 
  `<#@output extension=".cs"#>`
 
- 次に、Visual Studio によって **MyTemplate.cs** という名前のファイルが生成されます。
+ その場合、Visual Studio によって **MyTemplate.cs** という名前のファイルが生成されます。
 
  `output` ディレクティブは、実行時 (前処理済み) のテキスト テンプレートには必要ありません。 その代わりに、アプリケーションは `TextTransform()` を呼び出して、生成済みの文字列を取得します。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
 
@@ -36,10 +36,10 @@ Visual Studio テキストテンプレートでは、ディレクティブを使
 
  各テキスト テンプレートには複数の `output` ディレクティブを含めてはいけません。
 
-## <a name="extension-attribute"></a>拡張属性
+## <a name="extension-attribute"></a>拡張子属性
  生成されたテキスト出力ファイルのファイル名の拡張子を指定します。
 
- 既定値は **.cs です。**
+ 既定値は **.cs** です
 
  例: `<#@ output extension=".txt" #>`
 
@@ -49,16 +49,16 @@ Visual Studio テキストテンプレートでは、ディレクティブを使
 
  `<#@ output extension=".vb" #>`
 
- 使用できる値: 任意の有効なファイル名拡張子。
+ 許容される値: あらゆる有効なファイル名拡張子。
 
-## <a name="encoding-attribute"></a>encoding 属性
+## <a name="encoding-attribute"></a>エンコード属性
  出力ファイルが生成されるときに使用するエンコードを指定します。 次に例を示します。
 
  `<#@ output encoding="utf-8"#>`
 
  既定値は、テキスト テンプレート ファイルが使用するエンコードです。
 
- 使用可能な値: `us-ascii`
+ 許容される値: `us-ascii`
 
  `utf-16BE`
 
