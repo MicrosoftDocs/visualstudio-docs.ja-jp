@@ -1,6 +1,6 @@
 ---
 title: 特定のロケールを持つプロジェクトを発行する
-description: マクロを使用して、いくつかの異なるロケールのプロジェクトを含むソリューション内の最初のプロジェクトを発行する方法について説明します。
+description: マクロを使用し、複数の異なるロケールのプロジェクトが含まれるソリューションで最初のプロジェクトを発行する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -24,7 +24,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 4059d2d4b8a5d69c0c3433699c42c5e88bc6b668
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99900528"
@@ -149,22 +149,22 @@ ms.locfileid: "99900528"
 
      ローカライズされたリソース DLL は必要になるまで作成されません。 たとえば、新しいロケールを指定した後で、フォームやそのコントロールのテキストを変更した場合などに作成されます。
 
-4. Visual Studio IDE を使用して *Publishlocales* を発行します。
+4. Visual Studio IDE を使用して、*PublishLocales* を発行します。
 
-     **ソリューション エクスプローラー** で *PublishLocales* を選択します。 **[プロジェクト]** メニューの **[プロパティ]** を選択します。 プロジェクトデザイナーの [ **発行** ] ページで、発行場所を指定し、 **http://localhost/PublishLocales** [ **今すぐ発行**] をクリックします。
+     **ソリューション エクスプローラー** で *PublishLocales* を選択します。 **[プロジェクト]** メニューの **[プロパティ]** を選択します。 プロジェクト デザイナーの **[発行]** ページで、発行場所として「 **http://localhost/PublishLocales** 」を指定し、 **[今すぐ発行]** をクリックします。
 
      発行 Web ページが表示されたら、そのページを終了します。 (この手順では、プロジェクトを発行するだけで、インストールする必要はありません。)
 
-5. Visual Studio の [コマンドプロンプト] ウィンドウでマクロを呼び出して、 *Publishlocales* を再度発行します。 コマンドプロンプトウィンドウを表示するには、[**表示**] メニューの [**その他のウィンドウ**] をポイントし、[**コマンドウィンドウ**] をクリックするか、 **Ctrl** + **Alt** + **A** キーを押します。 コマンドプロンプトウィンドウで、「」と入力すると、 `macros` 使用可能なマクロの一覧が表示されます。 次のマクロを選択し、Enter キーを押します。
+5. [Visual Studio コマンド プロンプト] ウィンドウでマクロを呼び出し、*PublishLocales* をもう一度発行します。 コマンド プロンプト ウィンドウを表示するには、 **[表示]** メニューの **[その他のウィンドウ]** をクリックし、 **[コマンド ウィンドウ]** をクリックするか、**Ctrl** キーと **Alt** キーを押しながら **A** キーを押します。 コマンド プロンプト ウィンドウで「`macros`」と入力すると、使用可能なマクロがオートコンプリートによって一覧表示されます。 次のマクロを選択し、Enter キーを押します。
 
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`
 
-6. 発行プロセスが成功すると、"発行が成功しました。" というメッセージが生成 *されます*。 発行言語は ' en ' でした。 "メッセージボックスで [ **OK]** をクリックします。 発行 Web ページが表示されたら、**[インストール]** をクリックします。
+6. 発行プロセスが正常に完了すると、"*PublishLocales\PublishLocales.vbproj* の発行は成功しました" というメッセージが生成されます。 発行言語は 'en' でした。メッセージ ボックスで **[OK]** をクリックします。 発行 Web ページが表示されたら、**[インストール]** をクリックします。
 
-7. *C:\Inetpub\wwwroot\PublishLocales\en* を検索します。 ローカライズされたリソース DLL に加えて、マニフェスト、 *setup.exe*、発行 Web ページファイルなどのインストールされたファイルが表示されます。 (既定では、ClickOnce は EXE ファイルおよび DLL ファイルに *.deploy* という拡張子を追加します。この拡張子は配置後に削除できます。)
+7. *C:\Inetpub\wwwroot\PublishLocales\en* にアクセスします。 ローカライズされたリソース DLL に加えて、マニフェスト、*setup.exe*、発行 Web ページ ファイルなどのインストールされたファイルがあります。 (既定では、ClickOnce は EXE ファイルおよび DLL ファイルに *.deploy* という拡張子を追加します。この拡張子は配置後に削除できます。)
 
 ## <a name="see-also"></a>関連項目
 - [ClickOnce アプリケーションの発行](../deployment/publishing-clickonce-applications.md)
 - [マクロ開発環境](/previous-versions/visualstudio/visual-studio-2010/fb30sxt3(v=vs.100))
 - [[マクロ エクスプローラー] ウィンドウ](/previous-versions/visualstudio/visual-studio-2010/wwkx67sw(v=vs.100))
-- [方法: マクロを編集し、プログラムで作成する](/previous-versions/visualstudio/visual-studio-2010/k91y6132(v=vs.100))
+- [方法: マクロを編集および手動で作成する](/previous-versions/visualstudio/visual-studio-2010/k91y6132(v=vs.100))
