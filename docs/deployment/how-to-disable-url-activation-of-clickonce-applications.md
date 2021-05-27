@@ -1,6 +1,6 @@
 ---
 title: ClickOnce アプリの URL アクティベーションを無効にする
-description: ユーザーが [スタート] メニューからアプリケーションを起動できるようにする場合に、ClickOnce アプリケーションのインストール時に自動開始を無効にする方法について説明します。
+description: ユーザーに [スタート] メニューからアプリケーションを起動してもらう場合、ClickOnce アプリケーションのインストール時に自動起動を無効する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,7 +20,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 1e721199716abc47e89dc9fd2c7c510926853439
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99900699"
@@ -31,13 +31,13 @@ ms.locfileid: "99900699"
 
 この手法は、Web サーバーからユーザーのコンピューターにインストールされた [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションにのみ使用できます。 URL を使用する方法でのみ起動できるオンライン専用のアプリケーションには使用できません。 オンライン専用アプリケーションとインストールされたアプリケーションの違いの詳細については、「[ClickOnce 配置ストラテジの選択](../deployment/choosing-a-clickonce-deployment-strategy.md)」を参照してください。
 
-この手順では、Windows Software Development Kit (SDK) ツール MageUI.exe を使用します。 このツールの詳細については、「 [MageUI.exe (マニフェスト生成および編集ツール、グラフィカルクライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)」を参照してください。 この手順は、Visual Studio を使用して実行することもできます。
+この手順では Windows ソフトウェア開発キット (SDK) ツール MageUI.exe を使用します。 このツールの詳細については、「[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)」を参照してください。 この手順は、Visual Studio を使用して実行することもできます。
 
-## <a name="procedure"></a>プロシージャ
+## <a name="procedure"></a>手順
 
 ### <a name="to-disable-url-activation-for-your-application"></a>アプリケーションの URL アクティベーションを無効にするには
 
-1. MageUI.exe で配置マニフェストを開きます。 まだ作成していない場合は、「 [チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」の手順に従います。
+1. MageUI.exe で配置マニフェストを開きます。 まだ作成していない場合は、「[チュートリアル: ClickOnce アプリケーションを手動で配置する](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)」の手順に従います。
 
 2. **[配置オプション]** タブを選択します。
 

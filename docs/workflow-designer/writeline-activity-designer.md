@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナー-WriteLine アクティビティデザイナー
-description: Writeline アクティビティと、writeline アクティビティデザイナーを使用して、writeline アクティビティを作成および構成する方法について説明します。
+title: ワークフロー デザイナー - WriteLine アクティビティ デザイナー
+description: WriteLine アクティビティと、WriteLine アクティビティ デザイナーを使用し、WriteLine アクティビティを作成して構成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,14 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 7cb4806949b21a6c92548b91623e63306f2a7722
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99875108"
 ---
 # <a name="writeline-activity-designer"></a>WriteLine アクティビティ デザイナー
 
-**WriteLine** アクティビティデザイナーは、アクティビティを作成および構成するために使用され <xref:System.Activities.Statements.WriteLine> ます。
+**WriteLine** アクティビティ デザイナーは、<xref:System.Activities.Statements.WriteLine> アクティビティを作成および構成するために使用します。
 
 ## <a name="the-writeline-activity"></a>WriteLine アクティビティ
 
@@ -29,17 +29,17 @@ ms.locfileid: "99875108"
 
 ### <a name="using-the-writeline-activity-designer"></a>WriteLine アクティビティ デザイナーの使用
 
-**WriteLine** アクティビティデザイナーにアクセスするには、**ツールボックス** の [**プリミティブ**] カテゴリを使用します。 **WriteLine** アクティビティデザイナーは、[**ツールボックス**] からドラッグして、アクティビティを通常配置している任意の場所 (内など) にワークフローデザイナー画面にドロップできます <xref:System.Activities.Statements.Sequence> 。 この操作により、WriteLine という既定の <xref:System.Activities.Statements.WriteLine> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 は、 <xref:System.Activities.Activity.DisplayName%2A> **WriteLine** アクティビティデザイナーのヘッダー、またはプロパティグリッドの [ **DisplayName** ] ボックスで編集できます。
+**[ツールボックス]** の **[プリミティブ]** カテゴリで、**WriteLine** アクティビティ デザイナーにアクセスします。 **WriteLine** アクティビティ デザイナーを **[ツールボックス]** からドラッグして、アクティビティが配置される通常のワークフロー デザイナー画面 (<xref:System.Activities.Statements.Sequence> 内など) にドロップできます。 この操作により、WriteLine という既定の <xref:System.Activities.Statements.WriteLine> を持つ <xref:System.Activities.Activity.DisplayName%2A> アクティビティが作成されます。 <xref:System.Activities.Activity.DisplayName%2A> は、**WriteLine** アクティビティ デザイナーのヘッダー、またはプロパティ グリッドの **[DisplayName]** ボックスで編集できます。
 
 ### <a name="the-writeline-properties"></a>WriteLine プロパティ
 
-次の表に、<xref:System.Activities.Statements.WriteLine> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティグリッドで編集することができ、一部のプロパティはワークフローデザイナー画面で編集できます。
+次の表に、<xref:System.Activities.Statements.WriteLine> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドで編集でき、一部のプロパティは、ワークフロー デザイナー画面で編集できます。
 
-|プロパティ名|必須|使用|
+|プロパティ名|必須|使用方法|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|<xref:System.Activities.Statements.WriteLine> アクティビティの表示名。 既定値は WriteLine です。 <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|False|書き込むテキスト。 プロパティを設定するには、 **WriteLine** アクティビティデザイナーまたはプロパティグリッドの **テキスト** ボックスに Visual Basic 式を入力します。|
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|False|<xref:System.IO.TextWriter> による <xref:System.Activities.Statements.WriteLine> の書き込み先の <xref:System.Activities.Statements.WriteLine.Text%2A>。 既定はコンソールです。|
+|<xref:System.Activities.Activity.DisplayName%2A>|いいえ|<xref:System.Activities.Statements.WriteLine> アクティビティの表示名。 既定値は WriteLine です。 <xref:System.Activities.Activity.DisplayName%2A> は必須ではありませんが、使用することをお勧めします。|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|いいえ|書き込むテキスト。 このプロパティを設定するには、**WriteLine** アクティビティ デザイナーの **[テキスト]** ボックスまたはプロパティ グリッドに、Visual Basic の式を入力します。|
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|いいえ|<xref:System.IO.TextWriter> による <xref:System.Activities.Statements.WriteLine> の書き込み先の <xref:System.Activities.Statements.WriteLine.Text%2A>。 既定はコンソールです。|
 
 ## <a name="see-also"></a>関連項目
 

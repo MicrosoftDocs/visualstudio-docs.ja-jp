@@ -1,5 +1,5 @@
 ---
-title: クラウドサービスへの web アプリケーションの移行と発行
+title: クラウド サービスに Web アプリケーションを移行および発行する
 description: Visual Studio を使用して、Azure クラウド サービスに Web アプリケーションを移行および発行する方法について説明します。
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -10,24 +10,24 @@ ms.date: 11/10/2017
 ms.author: ghogen
 ms.openlocfilehash: 3154ffd50043ecc824ca44fcae86e54e511ab5bf
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99844087"
 ---
-# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>方法: Visual Studio から Azure クラウドサービスに web アプリケーションを移行および発行する
+# <a name="how-to-migrate-and-publish-a-web-application-to-an-azure-cloud-service-from-visual-studio"></a>方法: Visual Studio から Azure クラウド サービスへの Web アプリケーションの移行および発行
 
 Azure のホスティング サービスとスケーラビリティを利用するには、Web アプリケーションを Azure クラウド サービスに 移行してデプロイします。 変更は最小限ですみます。 この記事ではクラウド サービスへのデプロイのみを説明します。App Service については、[Azure App Service での Web アプリのデプロイ](/azure/app-service/app-service-deploy-local-git)に関する記事をご覧ください。
 
 > [!Important]
-> この移行は、特定の ASP.NET、WCF、および WCF ワークフロープロジェクトでのみサポートされています。 ASP.NET Core プロジェクトではサポートされません。 「[サポートされているプロジェクト テンプレート](#supported-project-templates)」のセクションをご覧ください。
+> この移行は特定の ASP.NET、WCF、および WCF ワークフロー プロジェクトでのみサポートされます。 ASP.NET Core プロジェクトではサポートされません。 「[サポートされているプロジェクト テンプレート](#supported-project-templates)」のセクションをご覧ください。
 
 ## <a name="migrate-a-project-to-cloud-services"></a>クラウド サービスにプロジェクトを移行する
 
-1. ソリューションノードを右クリックし、[ **追加] [新しいプロジェクト** ] の順に選択して、既存のソリューションに新しい **Azure クラウドサービス (クラシック)** プロジェクトを追加し > ます。
-1. [ **新しい Microsoft Azure クラウドサービス (クラシック)** ] ダイアログで、プロジェクトにロールを追加せずに [OK] をクリックします。
-1. 新しく追加した Cloud Services プロジェクトの [ロール] ノードを右クリックし、[ **ソリューションに Web ロールプロジェクトを追加...**] を選択します。
-1. [ **ロールプロジェクトとの関連付け** ] ダイアログボックスで、web ロールとして関連付けるプロジェクトを選択します。
+1. ソリューション ノードを右クリックし、 **[追加]、[新しいプロジェクト]** の順に選択して、既存のソリューションに新しい **Azure クラウド サービス (クラシック)** プロジェクトを追加します。
+1. **[新しい Microsoft Azure クラウド サービス (クラシック)]** ダイアログで、プロジェクトにロールを追加せずに [OK] をクリックします。
+1. 新しく追加したクラウド サービス プロジェクトの下でロール ノードを右クリックし、 **[Add Web Role Project in solution...]\(ソリューションに Web ロール プロジェクトを追加する\)** を選択します。
+1. **[ロール プロジェクトとの関連付け]** ダイアログで、Web ロールとして関連付けるプロジェクトを選択します。
 
    > [!Important]
    > この Web アプリケーションに必要な他のアセンブリまたはファイルがある場合は、それらのファイルのプロパティを手動で設定する必要があります。 これらのプロパティを設定する方法については、「[Include Files in the Service Package (サービス パッケージにファイルを取り込む)](vs-azure-tools-publishing-a-cloud-service.md#include-files-in-the-service-package)」をご覧ください。
@@ -120,7 +120,7 @@ Azure のホスティング サービスとスケーラビリティを利用す�
 | WCF | WCF ワークフロー サービス アプリケーション |
 | ワークフロー | WCF ワークフロー サービス アプリケーション |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Visual Studio からの Azure アプリケーションの発行またはデプロイの準備](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
-- [名前付き認証資格情報を設定](vs-azure-tools-setting-up-named-authentication-credentials.md)しています。
+- [名前付き認証資格情報の設定](vs-azure-tools-setting-up-named-authentication-credentials.md)

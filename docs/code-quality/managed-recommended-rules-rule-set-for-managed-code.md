@@ -1,7 +1,7 @@
 ---
 title: マネージド コードの "マネージ推奨規則" 規則セット
 ms.date: 11/04/2016
-description: Visual Studio での "マネージ推奨規則" 規則セットについて説明します。 セキュリティ、堅牢性、およびその他の重要な問題に焦点を当てたルールの説明を参照してください。
+description: Visual Studio の "マネージド推奨規則" 規則セットについて説明します。 セキュリティ、堅牢性、およびその他の重要な問題を中心に取り上げた規則に関する説明をご覧ください。
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 1d1160f8-4e51-4e70-99cd-82ad10ee7b32
@@ -12,16 +12,16 @@ ms.workload:
 - dotnet
 ms.openlocfilehash: e691e6dc48b33ff00f6824436b80e5f49721db98
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99867907"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>マネージド コードの "マネージ推奨規則" 規則セット
 
-"Microsoft マネージ推奨規則" 規則セットを使用して、マネージコードの最も重大な問題 (潜在的なセキュリティホール、アプリケーションのクラッシュ、その他の重要なロジックや設計エラーなど) に焦点を当てることができます。 この規則セットには、" [マネージ最小規則](managed-minimum-rules-rule-set-for-managed-code.md) " 規則セット内のすべての規則が含まれます。
+"Microsoft マネージド推奨規則" 規則セットを使用し、潜在的なセキュリティ ホール、アプリケーション クラッシュ、その他の重要な論理上または設計上のエラーなど、マネージド コードで最も深刻な問題に集中的に取り組みます。 この規則セットには、"[マネージド最小規則](managed-minimum-rules-rule-set-for-managed-code.md)" 規則セット内のすべての規則が含まれます。
 
-この規則セットは、プロジェクト用に作成するカスタム規則セットに含めます。
+プロジェクトにカスタムの規則セットを作成する場合は、この規則セットを含めます。
 
 |ルール|説明|
 |----------|-----------------|
@@ -65,7 +65,7 @@ ms.locfileid: "99867907"
 |[CA2137](../code-quality/ca2137.md)|透過的メソッドは、検証可能な IL のみを含まなければならない|
 |[CA2138](../code-quality/ca2138.md)|透過的メソッドは、SuppressUnmanagedCodeSecurity 属性を持つメソッドを呼び出してはならない|
 |[CA2140](../code-quality/ca2140.md)|透過的コードは、セキュリティ上重要な項目を参照してはならない|
-|[CA2141](../code-quality/ca2141.md)|透過的メソッドは Linkdemand を満たしてはならない|
+|[CA2141](../code-quality/ca2141.md)|透過的メソッドは LinkDemand を満たしてはならない|
 |[CA2146](../code-quality/ca2146.md)|型は、基本型およびインターフェイスと同程度以上、重要でなければならない|
 |[CA2147](../code-quality/ca2147.md)|透過コードは、セキュリティ アサートを使用してはならない|
 |[CA2149](../code-quality/ca2149.md)|透過的メソッドは、ネイティブ コード内に呼び出しを行ってはならない|
