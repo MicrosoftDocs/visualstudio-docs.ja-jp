@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: e05a94ecf9cf690f46299684c82f2b3961a783c8
-ms.sourcegitcommit: 585547ea7363ab1b6bb9d41f6d008cbe478d1a3b
+ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
+ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98912569"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "109782609"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio と Unity の使用を開始する
 
@@ -34,7 +34,7 @@ Visual Studio Tools for Unity は、C# などの記述とデバッグをサポ�
 > [!NOTE]
 > このインストール ガイドは Visual Studio を対象としています。 Visual Studio Code を使用している場合は、[VS Code を使用した Unity 開発に関するドキュメント](https://code.visualstudio.com/docs/other/unity)をご覧ください。
 
-1. [Visual Studio インストーラーをダウンロード](/visualstudio/docs/install/install-visual-studio.md)します。既にインストールされている場合は、それを実行します。
+1. [Visual Studio インストーラーをダウンロード](/visualstudio/install/install-visual-studio.md)します。既にインストールされている場合は、それを実行します。
 2. **[変更]** をクリックします (既にインストールされている場合)。または、 **[インストール]** をクリックして、目的のバージョンの Visual Studio をインストールします (新規インストール)。
 3. **[ワークロード]** タブで、 **[ゲーム]** セクションまでスクロールし、 **[Unity によるゲーム開発]** ワークロードを選択します。
 
