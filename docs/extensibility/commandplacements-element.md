@@ -1,6 +1,6 @@
 ---
-title: CommandPlacements 要素 |Microsoft Docs
-description: Commandplacements 要素は、Commandplacements 要素とその他のコマンド配置グループをグループ化します。 CommandPlacements 要素は省略可能です。
+title: CommandPlacements 要素 | Microsoft Docs
+description: CommandPlacements 要素では、CommandPlacement 要素とその他の CommandPlacements グループをグループ化します。 CommandPlacements 要素は省略可能です。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,15 +17,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3547d1c5b94285ce113b3a3c112568aa5a9a5f65
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089603"
 ---
 # <a name="commandplacements-element"></a>CommandPlacements 要素
-Commandplacements 要素は、Commandplacements 要素とその他のコマンド配置グループをグループ化します。
+CommandPlacements 要素では、CommandPlacement 要素とその他の CommandPlacements グループをグループ化します。
 
- CommandPlacements 要素は省略可能です。 コマンド、グループ、またはメニューが2次拠点に含まれていない場合は、このセクションを *vsct* ファイルに含める必要はありません。
+ CommandPlacements 要素は省略可能です。 コマンド、グループ、メニューをセカンダリの場所に含める必要がない場合は、このセクションを *vsct* ファイルに含める必要はありません。
 
 ## <a name="syntax"></a>構文
 
@@ -43,14 +43,14 @@ Commandplacements 要素は、Commandplacements 要素とその他のコマン�
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|CommandPlacements|CommandPlacement 要素とその他のコマンド配置グループをグループ化します。|
-|[CommandPlacement 要素](../extensibility/commandplacement-element.md)|ボタン、グループ、およびメニューを複数のグループまたはメニューに含めることができるようにします。|
+|CommandPlacements|CommandPlacement 要素とその他の CommandPlacements をグループ化します。|
+|[CommandPlacement 要素](../extensibility/commandplacement-element.md)|ボタン、グループ、およびメニューを複数のグループまたはメニューに含められるようにします。|
 
 ### <a name="parent-elements"></a>親要素
 
@@ -71,4 +71,4 @@ Commandplacements 要素は、Commandplacements 要素とその他のコマン�
 
 ## <a name="see-also"></a>関連項目
 - [CommandPlacement 要素](../extensibility/commandplacement-element.md)
-- [Visual Studio コマンドテーブル (vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

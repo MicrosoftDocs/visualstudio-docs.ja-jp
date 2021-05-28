@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSession:: findSymbolsByRVAForAcceleratorPointerTag |Microsoft Docs'
+description: 対応するタグ値を指定すると、このメソッドは、指定された相対仮想アドレスにある指定された親アクセラレータ スタブ関数に含まれているシンボルの列挙を返します。
+title: IDiaSession::findSymbolsByRVAForAcceleratorPointerTag | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a073cc45-0c7b-417e-b5fc-a3b08beccdbc
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: eb1b24d24de35de30b24937a6cfbf59d12f69482
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 50545be4b99c273b7019931463883efacbb683fb
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742003"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634811"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
-このメソッドは、対応するタグ値を指定して、指定された相対仮想アドレスで、指定された親アクセラレータのスタブ関数に含まれるシンボルの列挙体を返します。
+対応するタグ値を指定すると、このメソッドは、指定された相対仮想アドレスにある指定された親アクセラレータ スタブ関数に含まれているシンボルの列挙を返します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
+HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
    IDiaSymbol*           parent,
    DWORD                 tagValue,
    DWORD                 rva,
@@ -34,25 +35,25 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>パラメーター
  `parent`
 
-から検索対象のアクセラレータスタブ関数に対応する `IDiaSymbol`。
+[入力] 検索するアクセラレータ スタブ関数に対応する `IDiaSymbol`。
 
  `tagValue`
 
-からポインターのタグ値。
+[入力] ポインター タグ値。
 
  `rva`
 
-から相対仮想アドレス。
+[入力] 相対仮想アドレス。
 
  `ppResult`
 
-入出力結果を使用して初期化される `IDiaEnumSymbols` インターフェイスポインターへのポインター。
+[出力] 結果で初期化される `IDiaEnumSymbols` インターフェイス ポインターへのポインター。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- このメソッドは、アクセラレータスタブ関数に対応する `IDiaSymbol` インターフェイスでのみ呼び出します。
+## <a name="remarks"></a>解説
+ このメソッドは、アクセラレータ スタブ関数に対応する `IDiaSymbol` インターフェイスに対してのみ呼び出します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

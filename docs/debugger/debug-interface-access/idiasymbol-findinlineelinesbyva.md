@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSymbol:: findInlineeLinesByVA |Microsoft Docs'
+description: IDiaSymbol::findInlineeLinesByVA は、指定された仮想アドレス (VA) 内でこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復できるようにする列挙を取得します。
+title: IDiaSymbol::findInlineeLinesByVA | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 61427d33-30d2-4ac9-9bd6-c58c6c705072
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: de092109282506747606799b45b89059bf41fd8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 24b0eeb503e49f4fd9cda3c9cb7404e712e3c626
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741197"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634761"
 ---
 # <a name="idiasymbolfindinlineelinesbyva"></a>IDiaSymbol::findInlineeLinesByVA
-指定した仮想アドレス (VA) 内のこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復処理できるようにする列挙体を取得します。
+指定された仮想アドレス (VA) 内でこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復できるようにする列挙を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findInlineeLinesByVA ( 
+HRESULT findInlineeLinesByVA ( 
    ULONGLONG             va,
    DWORD                 length,
    IDiaEnumLineNumbers** ppResult
@@ -33,18 +34,18 @@ HRESULT findInlineeLinesByVA ( 
 #### <a name="parameters"></a>パラメーター
  `va`
 
-からアドレスを VA として指定します。
+[入力] アドレスを VA として指定します。
 
  `length`
 
-からこのクエリでカバーするアドレス範囲をバイト数で指定します。
+[入力] このクエリでカバーするアドレス範囲をバイト数で指定します。
 
  `ppResult`
 
-入出力取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
+[出力] 取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
