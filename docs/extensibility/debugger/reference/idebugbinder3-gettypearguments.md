@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、このオブジェクトに関連付けられている引数の型のリストを取得します。
-title: 'IDebugBinder3:: GetTypeArguments |Microsoft Docs'
+description: このメソッドでは、このオブジェクトに関連付けられている引数の型の一覧を取得します。
+title: IDebugBinder3::GetTypeArguments | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: cf360e85f4fdc2d641b00c6cd2252e58fa0d06cb
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089005"
 ---
 # <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
-このメソッドは、このオブジェクトに関連付けられている引数の型のリストを取得します。
+このメソッドでは、このオブジェクトに関連付けられている引数の型の一覧を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,23 +48,23 @@ int GetTypeArguments(
 
 ## <a name="parameters"></a>パラメーター
 `skip`\
-から引数の型を取得する前にスキップするフィールドの数。
+[入力] 引数の型を取得する前にスキップするフィールドの数。
 
 `count`\
-から返される引数フィールドの数 (も配列のサイズを指定し `ppFields` ます)。
+[入力] 返される引数フィールドの数 (`ppFields` 配列のサイズも指定します)。
 
 `ppFields`\
-[入力、出力]このメソッドの戻り値として格納されるフィールドの配列。
+[入力、出力] このメソッドの戻り時に入力されるフィールドの配列。
 
 `pFetched`\
 [出力] \(省略可能) 実際に返された引数の型フィールドの数。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 引数の型の数は、 [Gettypeargumentcount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)で事前に取得できます。
+## <a name="remarks"></a>解説
+ 引数の型の数は、[GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md) で事前に取得できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)

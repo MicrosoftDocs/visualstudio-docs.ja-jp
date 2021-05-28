@@ -1,6 +1,6 @@
 ---
-title: Hidden 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: Hidden 要素について、また、[新しいプロジェクト] ダイアログボックスまたは [新しい項目の追加] ダイアログボックスにテンプレートを表示するかどうかを指定する方法について説明します。
+title: Hidden 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: Hidden 要素と、それを使用して、[新しいプロジェクト] と [新しい項目の追加] のどちらのダイアログ ボックスにテンプレートを表示するかを指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 04/17/2019
 ms.technology: vs-ide-general
@@ -17,14 +17,14 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d4f673e7efe7f118f32056f02ef51bbbe7cf402a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105057391"
 ---
 # <a name="hidden-element-visual-studio-templates"></a>Hidden 要素 (Visual Studio テンプレート)
 
-[新しいプロジェクト] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスにテンプレートを表示するかどうかを指定します。
+[新しいプロジェクト] と **[新しい項目の追加]** のどちらのダイアログ ボックスにテンプレートを表示するかを指定します。
 
 ```xml
 <VSTemplate>
@@ -61,17 +61,17 @@ ms.locfileid: "105057391"
 
 テキスト値が必要です。
 
-テキストはまたはのいずれかである必要があります。これは、[ `true` `false` **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスにテンプレートが表示されるかどうかを示します。
+テキストは `true` または `false` のいずれかにする必要があります。これは、テンプレートを **[新しいプロジェクト]** と **[新しい項目の追加]** のどちらのダイアログ ボックスに表示するかを示します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `Hidden` は省略可能な要素です。
 
-指定した場合、要素の他の子要素は必要ありません `TemplateData` 。
+指定した場合、`TemplateData` 要素の他の子要素は必要ありません。
 
 ## <a name="example"></a>例
 
-次の例は、C# テンプレートのメタデータを示しています。
+C# テンプレートのメタデータの例を次に示します。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -98,7 +98,7 @@ ms.locfileid: "105057391"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
 - [プロジェクト テンプレートと項目テンプレートを作成する](../ide/creating-project-and-item-templates.md)

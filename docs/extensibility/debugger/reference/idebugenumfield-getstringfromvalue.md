@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、値を指定して、列挙定数の名前を取得します。
-title: 'IDebugEnumField:: GetStringFromValue |Microsoft Docs'
+description: このメソッドでは、値を指定して列挙定数の名前を取得します。
+title: IDebugEnumField::GetStringFromValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 41d004a9b226646dd1196f1debc244cdf11efe32
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092580"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-このメソッドは、値を指定して、列挙定数の名前を取得します。
+このメソッドでは、値を指定して列挙定数の名前を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>パラメーター
 `value`\
-から列挙定数の名前を取得する対象の値。
+[入力] 列挙定数の名前を取得する対象の値。
 
 `pbstrValue`\
-入出力列挙定数の名前を返します。
+[出力] 列挙定数の名前を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返し `S_OK` ます。それ以外の場合は、 `S_FALSE` 値に関連付けられた名前がない場合はを返し、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、値に名前が関連付けられていなければ `S_FALSE`、またはエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 同じ値に複数の名前が関連付けられている場合は、列挙体で定義されている最初の名前が返されます。
+## <a name="remarks"></a>解説
+ 同じ値に複数の名前が関連付けられている場合は、列挙型で定義されている最初の名前が返されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

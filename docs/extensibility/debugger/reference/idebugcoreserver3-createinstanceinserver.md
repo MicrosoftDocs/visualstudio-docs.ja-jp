@@ -1,6 +1,6 @@
 ---
-description: サーバー上にデバッグエンジンのインスタンスを作成します。
-title: 'IDebugCoreServer3:: CreateInstanceInServer |Microsoft Docs'
+description: サーバー上にデバッグ エンジンのインスタンスを作成します。
+title: IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3511e67300725dc46e6d0e3978b2cb034b92d84e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105058691"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-サーバー上にデバッグエンジンのインスタンスを作成します。
+サーバー上にデバッグ エンジンのインスタンスを作成します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,23 +50,23 @@ int CreateInstanceInServer(
 
 ## <a name="parameters"></a>パラメーター
 `szDll`\
-からパラメーターで指定された CLSID を実装する dll へのパス `clsidObject` 。 がの場合 `NULL` 、COM の `CoCreateInstance` 関数が呼び出されます。
+[入力] `clsidObject` で指定されたパラメーター CLSID を実装する dll へのパス。 これが `NULL`の場合、COM の `CoCreateInstance` が呼び出されます。
 
 `wLangId`\
-からデバッグエンジンのロケール。 [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)メソッドを呼び出さない場合は、0を指定できます。
+[入力] デバッグ エンジンのロケール。 [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) メソッドを呼び出す必要がない場合、これを 0 にすることができます。
 
 `clsidObject`\
-から作成するデバッグエンジンの CLSID。
+[入力] 作成するデバッグ エンジンの CLSID。
 
 `riid`\
-からクラスオブジェクトから取得する特定のインターフェイスのインターフェイス ID。
+[入力] クラス オブジェクトから取得する特定のインターフェイスのインターフェイス ID。
 
 `ppvObject`\
-[出力] `IUnknown` インスタンス化されたオブジェクトからのインターフェイス。 このオブジェクトを目的のインターフェイスにキャストまたはマーシャリングします。
+[出力] インスタンスを作成したオブジェクトからの `IUnknown` インターフェイス。 このオブジェクトを目的のインターフェイスにキャストまたはマーシャリングします。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)
 - [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

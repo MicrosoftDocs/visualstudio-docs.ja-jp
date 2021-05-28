@@ -1,6 +1,6 @@
 ---
-description: 指定したバインドされたブレークポイントが作成された、保留中のブレークポイントを取得します。
-title: 'IDebugBoundBreakpoint2:: GetPendingBreakpoint ポイント |Microsoft Docs'
+description: 指定したバインド ブレークポイントの作成元である、保留中のブレークポイントを取得します。
+title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 15b053515268c16bfacdeee08e40390950542e38
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105095837"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-指定したバインドされたブレークポイントが作成された、保留中のブレークポイントを取得します。
+指定したバインド ブレークポイントの作成元である、保留中のブレークポイントを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int GetPendingBreakpoint(
 
 ## <a name="parameters"></a>パラメーター
 `ppPendingBreakpoint`\
-入出力このバインドされたブレークポイントの作成に使用された保留中のブレークポイントを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) オブジェクトを返します。
+[出力] このバインド ブレークポイントの作成に使用された保留中のブレークポイントを表す [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-保留中のブレークポイントは、1つまたは複数のプログラムに適用できるコードにブレークポイントをバインドするために必要なすべての情報のコレクションと考えることができます。
+## <a name="remarks"></a>解説
+保留中のブレークポイントは、1 つまたは複数のプログラムに適用できるコードにブレークポイントをバインドするために必要なすべての情報のコレクションと考えることができます。
 
 ## <a name="example"></a>例
-次の例は、IDebugBoundBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CBoundBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
+次の例は、[IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを公開するシンプルな `CBoundBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(
@@ -85,6 +85,6 @@ HRESULT CBoundBreakpoint::GetPendingBreakpoint(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

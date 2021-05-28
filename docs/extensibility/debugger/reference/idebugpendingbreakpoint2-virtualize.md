@@ -1,6 +1,6 @@
 ---
-description: この保留中のブレークポイントの仮想化された状態を切り替えます。
-title: 'IDebugPendingBreakpoint2:: 仮想化 |Microsoft Docs'
+description: この保留中のブレークポイントの仮想化状態を切り替えます。
+title: IDebugPendingBreakpoint2::Virtualize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,13 +19,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: fa2d3dcab7e5e71140b308dc825417c03e79d356
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084520"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
-この保留中のブレークポイントの仮想化された状態を切り替えます。 保留中のブレークポイントが仮想化されると、デバッグエンジンは、新しいコードがプログラムに読み込まれるたびにバインドを試行します。
+この保留中のブレークポイントの仮想化状態を切り替えます。 保留中のブレークポイントが仮想化されると、新しいコードがプログラムに読み込まれるたびに、デバッグ エンジンによってブレークポイントのバインドが試みられます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,16 +43,16 @@ int Virtualize(
 
 ## <a name="parameters"></a>パラメーター
 `fVirtualize`\
-から`TRUE`保留中のブレークポイントを仮想化する場合は0以外 () に設定し、仮想化を無効にする場合はゼロ () に設定し `FALSE` ます。
+[入力] 保留中のブレークポイントを仮想化する場合は 0 以外 (`TRUE`) に設定し、仮想化を無効にする場合は 0 (`FALSE`) に設定します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。 `E_BP_DELETED`ブレークポイントが削除されている場合は、を返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 ブレークポイントが削除されている場合は、`E_BP_DELETED` を返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 仮想化されたブレークポイントは、コードが読み込まれるたびにバインドされます。
 
 ## <a name="example"></a>例
-次の例は、IDebugPendingBreakpoint2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CPendingBreakpoint` います。 [](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)
+次の例は、[IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスを公開するシンプルな `CPendingBreakpoint` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
@@ -86,5 +86,5 @@ HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

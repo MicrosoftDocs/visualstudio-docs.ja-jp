@@ -1,6 +1,6 @@
 ---
 description: オブジェクトとそのスコープ内またはコンテナー内の位置を記述する構造体を返します。
-title: 'IDebugAddress:: GetAddress |Microsoft Docs'
+title: IDebugAddress::GetAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 92e616ded029c22b16b81ccd5f25086b11be6ff4
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094400"
@@ -42,13 +42,13 @@ int GetAddress(
 
 ## <a name="parameters"></a>パラメーター
 `pAddress`\
-[入力、出力]このメソッドによって格納される [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) 構造体。
+[入力、出力] このメソッドによって入力される [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)構造体がこのメソッドに渡され、その後、適切な情報が入力されます。 この情報の解釈方法は、返される情報の種類とシンボルハンドラー自体によって異なります。 詳細については、「 [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) 」を参照してください。
+## <a name="remarks"></a>解説
+ [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) 構造体がこのメソッドに渡されてから、このメソッドによって適切な情報が入力されます。 この情報の解釈方法は、返される情報の種類とシンボル ハンドラー自体によって異なります。 詳細については、「[DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)

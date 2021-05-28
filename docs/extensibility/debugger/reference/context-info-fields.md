@@ -1,6 +1,6 @@
 ---
-description: メモリコンテキストについて取得する情報を指定します。
-title: CONTEXT_INFO_FIELDS |Microsoft Docs
+description: メモリ コンテキストについて取得する情報を指定します。
+title: CONTEXT_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 878dfb4e2f684b7a28b06820e110b22cdae962b9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096448"
 ---
 # <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
-メモリコンテキストについて取得する情報を指定します。
+メモリ コンテキストについて取得する情報を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_CONTEXT_INFO_FIELDS {
@@ -55,34 +55,34 @@ public enum enum_CONTEXT_INFO_FIELDS {
 
 ## <a name="fields"></a>フィールド
 `CIF_MODULEURL`\
-`bstrModuleUrl` [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)構造体のフィールドを初期化/使用します。
+[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 構造体の `bstrModuleUrl` フィールドを初期化および使用します。
 
 `CIF_FUNCTION`\
-構造体のフィールドを初期化/使用し `bstrFunction` `CONTEXT_INFO` ます。
+`CONTEXT_INFO` 構造体の `bstrFunction` フィールドを初期化または使用します。
 
 `CIF_FUNCTIONOFFSET`\
-構造体のフィールドを初期化/使用し `posFunctionOffset` `CONTEXT_INFO` ます。
+`CONTEXT_INFO` 構造体の `posFunctionOffset` フィールドを初期化または使用します。
 
 `CIF_ADDRESS`\
-構造体のフィールドを初期化/使用し `bstrAddress` `CONTEXT_INFO` ます。
+`CONTEXT_INFO` 構造体の `bstrAddress` フィールドを初期化または使用します。
 
 `CIF_ADDRESSOFFSET`\
-構造体のフィールドを初期化/使用し `bstrAddressOffset` `CONTEXT_INFO` ます。
+`CONTEXT_INFO` 構造体の `bstrAddressOffset` フィールドを初期化または使用します。
 
 `CIF_ALLFIELDS`\
-構造体のすべてのフィールドを初期化/使用し `CONTEXT_INFO` ます。
+`CONTEXT_INFO` 構造体のすべてのフィールドを初期化または使用します。
 
-## <a name="remarks"></a>注釈
-これらの値は、 [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)構造体のどのフィールドを初期化するかを示すために、 [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)メソッドにパラメーターを渡します。
+## <a name="remarks"></a>解説
+これらの値は、[CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) 構造体のどのフィールドを初期化するかを示すために、[GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) メソッドにパラメーターとして渡されます。
 
-これらのフラグは、構造体のどのフィールドが `CONTEXT_INFO` 使用され、構造体が返されたときに有効であるかを示すためにも使用されます。
+これらのフラグは、`CONTEXT_INFO` 構造体のどのフィールドが使用されているか、またこの構造体が返されるときにどのフィールドが有効であるかを示すためにも使用されます。
 
-これらの値は、ビットごとの OR と組み合わせることができます。
+これらの値は、ビットごとの OR で組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

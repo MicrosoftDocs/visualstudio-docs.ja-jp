@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、大文字と小文字を区別しない検索を使用して、列挙定数の名前に関連付けられている値を返します。
-title: 'IDebugEnumField:: GetValueFromStringCaseInsensitive |Microsoft Docs'
+description: このメソッドは、大文字と小文字を区別しない検索を使用して、列挙型定数の名前に関連付けられている値を返します。
+title: IDebugEnumField::GetValueFromStringCaseInsensitive | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 80ded5237cfc0fe1b03ae5175ca0c92a188538ab
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065991"
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
-このメソッドは、大文字と小文字を区別しない検索を使用して、列挙定数の名前に関連付けられている値を返します。
+このメソッドは、大文字と小文字を区別しない検索を使用して、列挙型定数の名前に関連付けられている値を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,17 +44,17 @@ int GetValueFromStringCaseInsensitive(
 
 ## <a name="parameters"></a>パラメーター
 `pszValue`\
-から値を取得する対象の名前を指定する文字列。 C++ では、これはワイド文字列です。
+[入力] 値を取得する対象の名前を指定する文字列。 C++ では、これはワイド文字列です。
 
 `pValue`\
-入出力関連付けられている数値を返します。
+[出力] 関連付けられている数値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はを返します。 `S_FALSE` 名前が列挙に含まれていない場合は、またはエラーコードを返します。
+ 成功した場合は `S_OK` を返します。それ以外の場合は、名前が列挙型に含まれていなければ `S_FALSE`、またはエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドでは、大文字と小文字は区別されません。 大文字と小文字を区別する検索が必要な場合 (たとえば、C++ などの言語で名前に大文字と小文字が区別される場合) は、 [Getvaluefromstring](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)を使用します。
+## <a name="remarks"></a>解説
+ このメソッドは、大文字と小文字を区別しません。 大文字と小文字を区別する検索が必要な場合 (たとえば、C++ のように、名前の大文字と小文字を区別する言語の場合) は、[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md) を使用します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)
 - [GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)

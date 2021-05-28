@@ -1,6 +1,6 @@
 ---
 description: この構造体は、クラスのメソッドのアドレスを表します。
-title: METADATA_ADDRESS_METHOD |Microsoft Docs
+title: METADATA_ADDRESS_METHOD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 40047dbdb35ad5958e923bb9a3ec18faa0d69be6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105075472"
@@ -48,25 +48,25 @@ public struct METADATA_ADDRESS_METHOD {
  `tokMethod`\
  メソッドの ID。
 
- [C++] `_mdToken` は、 `typedef` 32 ビットのです `int` 。
+ [C++] `_mdToken` は、32 ビット `int` の `typedef` です。
 
  `dwOffset`\
- クラスからのオフセットは、このメソッドから開始されます (vtable へのオフセットを表すことができます)。
+ クラスの開始からこのメソッドへのオフセット (vtable へのオフセットを表すことができます)。
 
  `dwVersion`\
- メソッドのバージョン (この値はシンボルプロバイダーに固有です)。
+ メソッドのバージョン (この値はシンボル プロバイダーに固有です)。
 
-## <a name="remarks"></a>注釈
- この構造体は、構造体のフィールドがに設定されている場合に、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部になり `dwKind` `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_METHOD` ます ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型の値)。
+## <a name="remarks"></a>解説
+ この構造体は、`DEBUG_ADDRESS_UNION` 構造体の `dwKind` フィールドが `ADDRESS_KIND_METHOD` ([ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型) に設定されている場合、[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部です。
 
-## <a name="requirements"></a>要件
- ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: sh.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)
 - [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

@@ -1,6 +1,6 @@
 ---
-title: Icon 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: Icon 要素について、およびアイコンとして機能するイメージファイルのパスとファイル名を指定する方法について説明します。
+title: Icon 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: Icon 要素とはどのようなもので、それによりアイコンとして機能する画像ファイルのパスとファイル名がどのように指定されるかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: c3241457fc23a0df369c1ebc78546a5045e89975
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082154"
 ---
 # <a name="icon-element-visual-studio-templates"></a>Icon 要素 (Visual Studio テンプレート)
-アイコンとして機能するイメージファイルのパスとファイル名を指定します。このアイコンは、 **新しいプロジェクト** または [ **新しい項目の追加** ] ダイアログボックスで、テンプレートに対して表示されます。
+アイコンとして機能する画像ファイルのパスとファイル名を指定します。これは、 **[新しいプロジェクト]** または **[新しい項目の追加]** ダイアログ ボックスで、テンプレートに対して表示されます。
 
  \<VSTemplate> \<TemplateData>
  \<Icon>
@@ -47,8 +47,8 @@ ms.locfileid: "105082154"
 
 |属性|説明|
 |---------------|-----------------|
-|`Package`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
-|`ID`|高度なユーザーシナリオ用の省略可能な属性です。<br /><br /> Visual Studio のリソース ID を指定します。|
+|`Package`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のパッケージ ID を指定する GUID です。|
+|`ID`|高度なユーザー シナリオ用の省略可能な属性。<br /><br /> Visual Studio のリソース ID を指定します。|
 
 ### <a name="child-elements"></a>子要素
  なし。
@@ -62,9 +62,9 @@ ms.locfileid: "105082154"
 ## <a name="text-value"></a>テキスト値
  `Package` と `ID` 属性を使わない限り、テキスト値が必要です。
 
- テキストは、[ **新しいプロジェクト** ] ダイアログボックスに表示されるテンプレートアイコンのパスとファイル名を提供します。
+ このテキストで、 **[新しいプロジェクト]** ダイアログ ボックスに表示されるテンプレート アイコンのパスとファイル名を指定します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `Icon` は `TemplateData` に必須の子要素です。
 
 ## <a name="example"></a>例

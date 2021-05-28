@@ -1,6 +1,6 @@
 ---
 description: この構造体は、メソッドまたは関数からの戻り値を表します。
-title: METADATA_ADDRESS_RETVAL |Microsoft Docs
+title: METADATA_ADDRESS_RETVAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5e28e0c32d5039ba0deda9a8c6801e6969c4ad96
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079888"
@@ -51,25 +51,25 @@ public struct METADATA_ADDRESS_RETVAL {
  この戻り値の対象となるメソッドの ID。
 
  `dwCorType`\
- 戻り値の基本型。 これは `CorElementType` .NET FRAMEWORK SDK corhdr .h ファイルで定義されている列挙体の値です。
+ 戻り値の基本データ型。 これは、.NET Framework SDK の corhdr.h ファイルで定義されている `CorElementType` 列挙型の値です。
 
  `dwSigSize`\
- 戻り値のシグネチャのサイズ (に格納されている `rgSig` )。
+ 戻り値のシグネチャ (`rgSig` に格納されている) のサイズ。
 
  `rgSig`\
- 戻り値の署名を形成するバイト配列。
+ 戻り値のシグネチャを形成するバイト配列。
 
-## <a name="remarks"></a>注釈
- この構造体は、構造体のフィールドがに設定されている場合に、 [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部になり `dwKind` `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_RETVAL` ます ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型の値)。
+## <a name="remarks"></a>解説
+ この構造体は、`DEBUG_ADDRESS_UNION` 構造体の `dwKind` フィールドが `ADDRESS_KIND_RETVAL` ([ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) 列挙型) に設定されている場合、[DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) 構造体の和集合の一部です。
 
-## <a name="requirements"></a>要件
- ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ ヘッダー: sh.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)
 - [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

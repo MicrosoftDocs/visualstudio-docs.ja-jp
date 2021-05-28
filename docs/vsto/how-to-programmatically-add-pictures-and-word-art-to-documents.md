@@ -1,6 +1,6 @@
 ---
-title: プログラムによってドキュメントに画像とワードアートを追加する
-description: デザイン時または実行時に、ドキュメントに画像および描画オブジェクトを追加する方法について説明します。
+title: プログラムによって文書に画像およびワードアートを追加する
+description: デザイン時または実行時に、画像および描画オブジェクトを文書に追加する方法について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -21,12 +21,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 445857200dfb269dd71f7cb3d446d025048cb3ac
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828437"
 ---
-# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>方法: プログラムによって文書に画像とワードアートを追加する
+# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>方法: プログラムによって文書に画像およびワードアートを追加する
   デザイン時または実行時に、画像および描画オブジェクトをドキュメントに追加できます。 ワードアートでは、Microsoft Office Word ドキュメントに装飾的なテキストを追加することができます。 これらの特別なテキスト効果は、ドキュメントに挿入できる、カスタマイズ可能な描画オブジェクトです。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "107828437"
 
 1. ドキュメント内の画像を挿入する場所にカーソルを置きます。
 
-2. リボンの [ **挿入** ] タブをクリックします。
+2. リボンの **[挿入]** タブをクリックします。
 
-3. [図 **] グループの** [ **画像**] をクリックします。
+3. **[図]** グループで、 **[画像]** をクリックします。
 
-4. [ **画像の挿入** ] ダイアログボックスで、挿入する画像に移動し、[ **挿入**] をクリックします。
+4. **[図の挿入]** ダイアログ ボックスで、挿入する画像に移動し、 **[挿入]** をクリックします。
 
      画像が、ドキュメントの現在のカーソル位置に追加されます。
 
@@ -63,11 +63,11 @@ ms.locfileid: "107828437"
 
 1. ドキュメント内のワードアートを挿入する場所にカーソルを置きます。
 
-2. リボンの [ **挿入** ] タブをクリックします。
+2. リボンの **[挿入]** タブをクリックします。
 
-3. [ **テキスト** ] グループの [ **ワードアート**] をクリックし、ワードアートのスタイルを選択します。
+3. **[テキスト]** グループで、 **[ワードアート]** をクリックし、ワードアートのスタイルをクリックします。
 
-4. ドキュメントに表示するテキストを [ **ワードアートテキストの編集** ] ダイアログボックスに追加し、[ **OK**] をクリックします。
+4. 文書内に表示するテキストを、 **[ワードアート テキストの編集]** ダイアログ ボックスに追加し、 **[OK]** をクリックします。
 
      選択したワードアート スタイルが適用されたテキストが、ドキュメントに追加されます。
 
@@ -100,10 +100,10 @@ ms.locfileid: "107828437"
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-- *SamplePicture.jpg* という名前の画像が C ドライブに存在している必要があります。
+- ドライブ C 上に *SamplePicture.jpg* という名前の画像が存在する必要があります。
 
 ## <a name="see-also"></a>関連項目
-- [方法: プログラムによって既存のドキュメントを開く](../vsto/how-to-programmatically-open-existing-documents.md)
+- [方法: プログラムによって既存の文書を開く](../vsto/how-to-programmatically-open-existing-documents.md)
 - [方法: プログラムによって Word 文書にテキストを挿入する](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [方法: プログラムによって検索後に選択を復元する](../vsto/how-to-programmatically-restore-selections-after-searches.md)
 - [方法: プログラムによって文書を保存する](../vsto/how-to-programmatically-save-documents.md)

@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって文書内の範囲を拡張する'
-description: ドキュメントレベルまたはアプリケーションレベルで Microsoft Word 文書内の開始点と終了点の範囲をプログラムによって拡張する方法について説明します。
+description: ドキュメント レベルまたはアプリケーション レベルで Microsoft Word 文書内の開始点と終了点の範囲をプログラムによって拡張する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,13 +17,13 @@ ms.workload:
 - office
 ms.openlocfilehash: 7a539bbbc4ad8d73477e660ef9903ac51dce712f
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826526"
 ---
 # <a name="how-to-programmatically-extend-ranges-in-documents"></a>方法: プログラムによって文書内の範囲を拡張する
-  Microsoft Office Word ドキュメントで <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義した後、その始点と終点を <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> メソッドを使用して変更します。 <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A>メソッドと <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> メソッドは、同じ2つの引数 ( *Unit* と *Count*) を受け取ります。 *Count* 引数は移動する単位の数で、 *Unit* 引数には次のいずれかの値を指定でき <xref:Microsoft.Office.Interop.Word.WdUnits> ます。
+  Microsoft Office Word ドキュメントで <xref:Microsoft.Office.Interop.Word.Range> オブジェクトを定義した後、その始点と終点を <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> メソッドを使用して変更します。 <xref:Microsoft.Office.Interop.Word.Range.MoveStart%2A> と <xref:Microsoft.Office.Interop.Word.Range.MoveEnd%2A> のメソッドは、同じ 2 つの引数 (*Unit* と *Count*) を取ります。 *Count* 引数は、移動する単位の数です。*Unit* 引数は、次の <xref:Microsoft.Office.Interop.Word.WdUnits> 値のいずれかです。
 
 - <xref:Microsoft.Office.Interop.Word.WdUnits.wdCharacter>
 
@@ -51,7 +51,7 @@ ms.locfileid: "107826526"
 
 ## <a name="to-extend-a-range"></a>範囲を拡張するには
 
-1. 文字の範囲を定義します。 詳細については、「 [方法: ドキュメント内の範囲をプログラムによって定義および選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)」を参照してください。
+1. 文字の範囲を定義します。 詳細については、「[方法: プログラムによって文書内の範囲を定義して選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)」を参照してください。
 
      次のコード例はドキュメント レベルのカスタマイズで使用できます。
 
@@ -73,7 +73,7 @@ ms.locfileid: "107826526"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet41":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet41":::
 
-## <a name="document-level-customization-code"></a>ドキュメントレベルのカスタマイズコード
+## <a name="document-level-customization-code"></a>ドキュメント レベルのカスタマイズ コード
 
 ### <a name="to-extend-a-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで範囲を拡張するには
 
@@ -95,5 +95,5 @@ ms.locfileid: "107826526"
 - [方法: プログラムによって Word 文書の範囲をリセットする](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
 - [方法: プログラムによって文書内の範囲または選択項目を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
 - [方法: プログラムによって文書内の範囲を定義および選択する](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [方法: プログラムによって範囲内の開始文字と終了文字を取得する](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [方法: 範囲の開始および終了文字をプログラムで取得する](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
 - [方法: 範囲を作成するときにプログラムによって段落記号を除外する](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)

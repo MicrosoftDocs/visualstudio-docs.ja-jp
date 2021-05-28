@@ -1,6 +1,6 @@
 ---
-title: イベントソース (Visual Studio SDK) |Microsoft Docs
-description: Visual Studio デバッグでの2つのイベントソース (デバッグエンジンとセッションデバッグマネージャー) について説明します。
+title: イベント ソース (Visual Studio SDK) | Microsoft Docs
+description: Visual Studio デバッグでのイベントの 2 つのソース (デバッグ エンジンとセッション デバッグ マネージャー) について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,16 +14,16 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: ec6213a1462c391d13bbdf8a20ac61e232cafb49
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105097007"
 ---
-# <a name="event-sources-visual-studio-sdk"></a>イベントソース (Visual Studio SDK)
-イベントには、デバッグエンジン (DE) とセッションデバッグマネージャー (SDM) の2つのソースがあります。 DE から送信されるイベントには NULL 以外のエンジンがありますが、SDM から送信されるイベントには NULL のエンジンがあります。
+# <a name="event-sources-visual-studio-sdk"></a>イベント ソース (Visual Studio SDK)
+イベントには、デバッグ エンジン (DE) とセッション デバッグ マネージャー (SDM) の 2 つのソースがあります。 DE から送信されるイベントには NULL 以外のエンジンが含まれ、SDM から送信されるイベントには NULL エンジンが含まれます。
 
 ## <a name="example"></a>例
-次の例は、DE から SDM に **IDebugProgramCreateEvent2** を送信する方法を示しています。
+次の例は、**IDebugProgramCreateEvent2** を DE から SDM に送信する方法を示しています。
 
 ```csharp
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();
@@ -74,5 +74,5 @@ HRESULT CEvent::SendAsynchronousEvent(IDebugEventCallback2 *pCallback, IDebugEng
 
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [イベントの送信](../../extensibility/debugger/sending-events.md)

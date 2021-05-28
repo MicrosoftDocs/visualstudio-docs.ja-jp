@@ -1,6 +1,6 @@
 ---
-title: ドキュメントの位置 |Microsoft Docs
-description: Visual Studio のデバッグでドキュメントの位置を確認して、IDE で認識されているソースファイル内の位置を抽象化する方法について説明します。
+title: ドキュメントの位置 | Microsoft Docs
+description: Visual Studio デバッグでのドキュメントの位置により、IDE で認識されるソース ファイル内の位置を抽象化する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,23 +14,23 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5d14f9619059735aaecabf72adef248c69ed247e
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105097254"
 ---
 # <a name="document-position"></a>ドキュメントの位置
-デバッグでは [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 、 *ドキュメントの位置* は次のようになります。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のデバッグにおける "*ドキュメントの位置*":
 
-- IDE で認識されているソースファイル内の位置の抽象化を提供します。 現在、ほとんどの言語では、ドキュメントの位置はソースファイル内の位置と考えることができます。
+- IDE で認識されるソース ファイル内の位置を抽象化します。 現在、ほとんどの言語では、ドキュメントの位置をソース ファイル内の位置と見なすことができます。
 
-- ソースドキュメント内のデバッグエンジンへの位置を記述します。
+- デバッグ エンジンに対するソース ドキュメント内の位置を記述します。
 
-- は、 [IDebugDocumentPosition2](../../extensibility/debugger/reference/idebugdocumentposition2.md) インターフェイスによって実装されます。
+- [IDebugDocumentPosition2](../../extensibility/debugger/reference/idebugdocumentposition2.md) インターフェイスによって実装されます。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [コードコンテキスト](../../extensibility/debugger/code-context.md)
-- [ドキュメントのコンテキスト](../../extensibility/debugger/document-context.md)
-- [シンボルプロバイダー](../../extensibility/debugger/symbol-provider.md)
-- [シンボルプロバイダーインターフェイス](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
-- [デバッガーコンテキスト](../../extensibility/debugger/debugger-contexts.md)
+## <a name="see-also"></a>関連項目
+- [コード コンテキスト](../../extensibility/debugger/code-context.md)
+- [ドキュメント コンテキスト](../../extensibility/debugger/document-context.md)
+- [シンボル プロバイダー](../../extensibility/debugger/symbol-provider.md)
+- [シンボル プロバイダー インターフェイス](../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+- [デバッガー コンテキスト](../../extensibility/debugger/debugger-contexts.md)
