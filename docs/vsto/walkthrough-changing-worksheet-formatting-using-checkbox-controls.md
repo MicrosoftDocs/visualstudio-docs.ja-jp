@@ -1,6 +1,6 @@
 ---
-title: チェックボックスコントロールを使用してワークシートの書式を変更する
-description: Visual Studio の Office 開発ツールを使用して、プロジェクトにコードを作成して追加する方法について説明します。
+title: CheckBox コントロールを使用してワークシート書式を変更する
+description: Visual Studio の Office 開発ツールを使ってコードを作成し、プロジェクトに追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,23 +18,23 @@ ms.workload:
 - office
 ms.openlocfilehash: 6f649fad99b8d94cc650ecda57e10b423b14194e
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826435"
 ---
-# <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用したワークシートの書式設定の変更
-  このチュートリアルでは、Microsoft Office Excel ワークシートでチェックボックスを使用して書式を変更する方法の基本について説明します。 プロジェクトにコードを作成して追加するには、Visual Studio の Office 開発ツールを使用します。 完成したサンプルとして結果を表示するには、「 [Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」の Excel コントロールのサンプルを参照してください。
+# <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>チュートリアル: CheckBox コントロールを使用してワークシートの書式を変更する
+  このチュートリアルでは、Microsoft Office Excel ワークシートでチェック ボックスを使って書式を変更する基本的な方法について説明します。 コードを作成してプロジェクトに追加するには、Visual Studio の Office 開発ツールを使用します。 完全なサンプルの結果を確認するには、「[Office 開発のサンプルとチュートリアル](../vsto/office-development-samples-and-walkthroughs.md)」にある Excel コントロールのサンプルを参照してください。
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  このチュートリアルでは、次の作業を行う方法について説明します。
 
-- ワークシートにテキストとコントロールを追加します。
+- ワークシートにテキストとコントロールを追加する。
 
-- オプションを選択したときにテキストの書式を設定します。
+- オプションが選択されたときにテキストを書式設定する。
 
-- プロジェクトをテストします。
+- プロジェクトをテストする。
 
 > [!NOTE]
 > 次の手順で参照している Visual Studio ユーザー インターフェイス要素の一部は、お使いのコンピューターでは名前や場所が異なる場合があります。 これらの要素は、使用している Visual Studio のエディションや独自の設定によって決まります。 詳細については、「[Visual Studio IDE のカスタマイズ](../ide/personalizing-the-visual-studio-ide.md)」を参照してください。
@@ -47,122 +47,122 @@ ms.locfileid: "107826435"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。
 
 ## <a name="create-the-project"></a>プロジェクトを作成する
- この手順では、Visual Studio を使用して Excel ブックプロジェクトを作成します。
+ この手順では、Visual Studio を使って Excel ブック プロジェクトを作成します。
 
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには
 
-1. 「 **My excel の書式設定**」という名前の excel ブックプロジェクトを作成します。 [ **新しいドキュメントを作成** する。 詳細については、「 [方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。
+1. **My Excel Formatting** という名前で Excel ブック プロジェクトを作成します。 **[新しいドキュメントの作成]** が選択されていることを確認してください。 詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。
 
-     新しい Excel ブックがデザイナーで開き、 **[My Excel 書式** ] プロジェクトが **ソリューションエクスプローラー** に追加されます。
+     Visual Studio によって、新しい Excel ブックがデザイナーで開かれ、**My Excel Formatting** プロジェクトが **ソリューション エクスプローラー** に追加されます。
 
 ## <a name="add-text-and-controls-to-the-worksheet"></a>ワークシートにテキストとコントロールを追加する
- このチュートリアルでは、コントロールに3つの <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロールといくつかのテキストが必要です <xref:Microsoft.Office.Tools.Excel.NamedRange> 。
+ このチュートリアルでは、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールに 3 つの <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロールといくつかのテキストが必要になります。
 
-### <a name="to-add-three-check-boxes"></a>3つのチェックボックスを追加するには
+### <a name="to-add-three-check-boxes"></a>3 つのチェック ボックスを追加するには
 
-1. ブックが Visual Studio デザイナーで開かれていて、開いていることを確認し `Sheet1` ます。
+1. Visual Studio デザイナーでブックが開かれていて、`Sheet1` が開いていることを確認します。
 
-2. **ツールボックス** の [**コモンコントロール**] タブから、 <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロールを **Sheet1** 内またはセル **B2** の近くにドラッグします。
+2. **ツールボックス** の **[コモン コントロール]** タブから、<xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> コントロールを **Sheet1** のセル **B2** 内か、その近くにドラッグします。
 
-3. [ **表示** ] メニューの [ **プロパティ** ウィンドウ] をクリックします。
+3. **[表示]** メニューから、**プロパティ** ウィンドウを選択します。
 
-4. [**プロパティ**] ウィンドウの [オブジェクト名] ボックスの一覧に **Checkbox1** が表示されていることを確認し、次のプロパティを変更します。
+4. **プロパティ** ウィンドウのオブジェクト名リスト ボックスに **Checkbox1** が表示されていることを確認し、次のプロパティを変更します。
 
     |プロパティ|値|
     |--------------|-----------|
-    |**名前**|**Applybold フォント**|
+    |**名前**|**applyBoldFont**|
     |**[テキスト]**|**太字**|
 
-5. セル **B4** の横にある2つ目のチェックボックスをドラッグし、次のプロパティを変更します。
+5. 2 つ目のチェック ボックスをセル **B4** またはその近くにドラッグし、次のプロパティを変更します。
 
     |プロパティ|値|
     |--------------|-----------|
-    |**名前**|**Applybold フォント**|
+    |**名前**|**applyItalicFont**|
     |**[テキスト]**|**斜体**|
 
-6. セル **B6** の横にある3番目のチェックボックスをドラッグし、次のプロパティを変更します。
+6. 3 つ目のチェック ボックスをセル **B6** またはその近くにドラッグし、次のプロパティを変更します。
 
     |プロパティ|値|
     |--------------|-----------|
     |**名前**|**applyUnderlineFont**|
-    |**[テキスト]**|**強調**|
+    |**[テキスト]**|**下線**|
 
-7. **Ctrl** キーを押しながら、3つのチェックボックスコントロールをすべて選択します。
+7. **Ctrl** キーを押しながら、3 つのチェック ボックス コントロールをすべて選択します。
 
-8. Excel の [書式] タブの [配置] グループで、[ **配置**] をクリックし、[ **左揃え**] をクリックします。
+8. Excel の [書式] タブの [配置] グループで、 **[配置]** をクリックし、 **[左揃え]** をクリックします。
 
-     3つのチェックボックスコントロールは、選択した最初のコントロールの位置で左側に配置されます。
+     3 つのチェック ボックス コントロールが、選択した最初のコントロールの位置に、左揃えで配置されます。
 
-     次に、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートにドラッグします。
+     次に、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをワークシートにドラッグします。
 
     > [!NOTE]
-    > また、 <xref:Microsoft.Office.Tools.Excel.NamedRange> [**名前**] ボックスに「 **textfont** 」と入力してコントロールを追加することもできます。
+    > **[名前]** ボックスに「**textFont**」と入力して <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールを追加することもできます。
 
 #### <a name="to-add-text-to-a-namedrange-control"></a>NamedRange コントロールにテキストを追加するには
 
-1. ツールボックスの [ **Excel コントロール** ] タブから、 <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル **B9** にドラッグします。
+1. ツールボックス の **[Excel コントロール]** タブから、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル **B9** にドラッグします。
 
-2. 編集可能なテキストボックスに **$B $9** が表示され、セル **B9** が選択されていることを確認します。 そうでない場合は、セル **B9** をクリックして選択します。
+2. 編集可能なテキスト ボックスに **$B$9** と表示され、セル **B9** が選択されていることを確認します。 そうなっていない場合は、セル **B9** をクリックして選択します。
 
 3. **[OK]** をクリックします。
 
-4. セル **B9** は、という名前の範囲になり `NamedRange1` ます。
+4. セル **B9** が、`NamedRange1` という名前の範囲になります。
 
-    ワークシートには表示されませんが、 `NamedRange1` セル **B9** を選択すると、[**名前] ボックス**(左側のワークシートのすぐ上) に表示されます。
+    ワークシート上には表示されませんが、セル **B9** を選択すると、**名前ボックス** (ワークシートの真上の左側) に `NamedRange1` と表示されます。
 
-5. [**プロパティ**] ウィンドウの [オブジェクト名] ボックスの一覧に **NamedRange1** が表示されていることを確認し、次のプロパティを変更します。
+5. **プロパティ** ウィンドウのオブジェクト名リスト ボックスに **NamedRange1** が表示されていることを確認し、次のプロパティを変更します。
 
    |プロパティ|値|
    |--------------|-----------|
    |**名前**|**textFont**|
-   |**Value2**|**このテキストの書式を変更するには、チェックボックスをオンにします。**|
+   |**Value2**|**このテキストの書式を変更するには、チェック ボックスをオンにします。**|
 
-   次に、オプションを選択したときにテキストの書式を設定するコードを記述します。
+   次に、オプションが選択されたときにテキストの書式を設定するためのコードを記述します。
 
-## <a name="format-the-text-when-an-option-is-selected"></a>オプションを選択したときにテキストの書式を設定する
- このセクションでは、ユーザーが書式設定オプションを選択したときに、ワークシート内のテキストの書式が変更されるようにコードを記述します。
+## <a name="format-the-text-when-an-option-is-selected"></a>オプションが選択されたときにテキストを書式設定する
+ このセクションでは、ユーザーが書式設定オプションを選択したときに、ワークシート内のテキストの書式が変更されるようにするためのコードを記述します。
 
-### <a name="to-change-formatting-when-a-check-box-is-selected"></a>チェックボックスをオンにしたときに書式を変更するには
+### <a name="to-change-formatting-when-a-check-box-is-selected"></a>チェック ボックスがオンになったときに書式設定を変更するには
 
-1. [ **Sheet1**] を右クリックし、ショートカットメニューの [ **コードの表示** ] をクリックします。
+1. **Sheet1** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。
 
-2. <xref:System.Windows.Forms.Control.Click>チェックボックスのイベントハンドラーに次のコードを追加し `applyBoldFont` ます。
+2. `applyBoldFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに、次のコードを追加します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet7":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet7":::
 
-3. <xref:System.Windows.Forms.Control.Click>チェックボックスのイベントハンドラーに次のコードを追加し `applyItalicFont` ます。
+3. `applyItalicFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに、次のコードを追加します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet8":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet8":::
 
-4. <xref:System.Windows.Forms.Control.Click>チェックボックスのイベントハンドラーに次のコードを追加し `applyUnderlineFont` ます。
+4. `applyUnderlineFont` チェック ボックスの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに、次のコードを追加します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb" id="Snippet9":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet9":::
 
-5. C# では、次に示すように、チェックボックスのイベントハンドラーをイベントに追加する必要があり <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> ます。 イベントハンドラーの作成の詳細については、「 [方法: Office プロジェクトでイベントハンドラーを作成](../vsto/how-to-create-event-handlers-in-office-projects.md)する」を参照してください。
+5. C# では、次に示すように、チェック ボックスのイベント ハンドラーを <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベントに追加する必要があります。 イベント ハンドラーの作成方法について詳しくは、「[方法: Office プロジェクトでイベント ハンドラーを作成する](../vsto/how-to-create-event-handlers-in-office-projects.md)」をご覧ください。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs" id="Snippet10":::
 
 ## <a name="test-the-application"></a>アプリケーションをテストする
- これで、チェックボックスをオンまたはオフにしたときに、テキストが正しく書式設定されていることを確認するために、ブックをテストできるようになりました。
+ それでは、ブックをテストして、チェック ボックスがオンまたはオフになったときにテキストが正しく書式設定されることを確認しましょう。
 
 ### <a name="to-test-your-workbook"></a>ブックをテストするには
 
-1. **F5** キーを押して、プロジェクトを実行します。
+1. **F5** キーを押してプロジェクトを実行します。
 
 2. チェック ボックスをオンまたはオフにします。
 
-3. テキストが正しく書式設定されていることを確認します。
+3. テキストが正しく書式設定されることを確認します。
 
 ## <a name="next-steps"></a>次のステップ
- このチュートリアルでは、Excel ワークシートでチェックボックスを使用してテキストを書式設定する方法の基本について説明します。 ここでは、次の作業を行います。
+ このチュートリアルでは、Excel ワークシートでチェック ボックスを使って、テキストを書式設定する基本的な方法について説明しました。 ここでは、次の作業を行います。
 
-- プロジェクトを配置しています。 詳細については、「 [ClickOnce を使用した Office ソリューションの配置](../vsto/deploying-an-office-solution-by-using-clickonce.md)」を参照してください。
-- ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、「 [チュートリアル: ボタンを使用してワークシートのテキストボックスにテキストを表示](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)する」を参照してください。
+- プロジェクトを配置する。 詳しくは、「[ClickOnce を使用して Office ソリューションを配置する](../vsto/deploying-an-office-solution-by-using-clickonce.md)」をご覧ください。
+- ボタンを使用してテキスト ボックスへデータを挿入する。 詳細については、「[チュートリアル: ボタンを使用してワークシートのテキスト ボックスにテキストを表示する](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [Excel を使用したチュートリアル](../vsto/walkthroughs-using-excel.md)
 - [NamedRange コントロール](../vsto/namedrange-control.md)
-- [Office ドキュメントの Windows フォームコントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Office ドキュメントでの Windows フォーム コントロールの制限事項](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: VSTO アドインのコードを VBA から呼び出す'
-description: VSTO アドインのオブジェクトを、Visual Basic for Applications (VBA) アドインや COM VSTO アドインなど、他の Microsoft Office ソリューションに公開する方法について説明します。
+title: 'チュートリアル : VSTO アドイン内のコードを VBA から呼び出す'
+description: VSTO アドイン内のオブジェクトを、Visual Basic for Applications (VBA) アドインや COM VSTO アドインなど、他の Microsoft Office ソリューションに公開する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -22,12 +22,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 21e0928396327911ea794c6270340c6efd27a43e
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107824602"
 ---
-# <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>チュートリアル: VSTO アドインのコードを VBA から呼び出す
+# <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>チュートリアル : VSTO アドイン内のコードを VBA から呼び出す
   このチュートリアルでは、VSTO アドインのオブジェクトを Visual Basic for Applications (VBA) アドインや COM VSTO アドインなど、他の Microsoft Office ソリューションに公開する方法について説明します。
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "107824602"
 
 - Microsoft Excel
 
-## <a name="create-the-vsto-add-in-project"></a>VSTO アドインプロジェクトを作成する
+## <a name="create-the-vsto-add-in-project"></a>VSTO アドイン プロジェクトを作成する
  まず、Excel 用の VSTO アドイン プロジェクトを作成します。
 
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには
 
 1. Excel VSTO アドイン プロジェクト テンプレートを使用して、 **ExcelImportData** という名前の Excel VSTO アドイン プロジェクトを作成します。 詳細については、「 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**thisaddin** または **thisaddin** コードファイルを開き、**ソリューションエクスプローラー** に **ExcelImportData** プロジェクトを追加します。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、 **ThisAddIn.cs** コード ファイルまたは **ThisAddIn.vb** コード ファイルが開かれ、 **ソリューション エクスプローラー** に **ExcelImportData** プロジェクトが追加されます。
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>他の Office ソリューションに公開できるクラスを定義する
  このチュートリアルの目的は、VSTO アドインの `ImportData` というクラスの `AddInUtilities` メソッドを VBA コードから呼び出すことです。 このメソッドは、アクティブなワークシートのセル A1 に文字列を書き込みます。
@@ -73,7 +73,7 @@ ms.locfileid: "107824602"
 
      コード エディターで **AddInUtilities.cs** ファイルまたは **AddInUtilities.vb** ファイルが開きます。
 
-3. ファイルの先頭に次のディレクティブを追加します。
+3. 次のディレクティブをファイルの先頭に追加します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet2":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet2":::
@@ -85,7 +85,7 @@ ms.locfileid: "107824602"
 
      このコードは、 `AddInUtilities` クラスを COM から参照できるようにし、このクラスに `ImportData` メソッドを追加します。 また、 [クラスは](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch `AddInUtilities` インターフェイスを公開するために <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性を持ち、COM から参照できるインターフェイスを実装します。
 
-## <a name="expose-the-class-to-other-office-solutions"></a>クラスを他の Office ソリューションに公開する
+## <a name="expose-the-class-to-other-office-solutions"></a>他の Office ソリューションにクラスを公開する
  `AddInUtilities` クラスを他の Office ソリューションに公開するには、 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> クラスの `ThisAddIn` メソッドをオーバーライドします。 オーバーライドでは、 `AddInUtilities` クラスのインスタンスを返します。
 
 ### <a name="to-expose-the-addinutilities-class-to-other-office-solutions"></a>他の Office ソリューションに AddInUtilities クラスを公開するには
@@ -104,18 +104,18 @@ ms.locfileid: "107824602"
      ソリューションがエラーなしでビルドされることを確認します。
 
 ## <a name="test-the-vsto-add-in"></a>VSTO アドインをテストする
- `AddInUtilities` クラスをさまざまな種類の Office ソリューションから呼び出すことができます。 このチュートリアルでは、Excel ブック内の VBA コードを使用します。 使用できるその他の種類の Office ソリューションの詳細については、「 [他の office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」を参照してください。
+ `AddInUtilities` クラスをさまざまな種類の Office ソリューションから呼び出すことができます。 このチュートリアルでは、Excel ブック内の VBA コードを使用します。 使用できる他の種類の Office ソリューションについて詳しくは、「[他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)」をご覧ください。
 
 ### <a name="to-test-your-vsto-add-in"></a>VSTO アドインをテストするには
 
-1. **F5** キーを押して、プロジェクトを実行します。
+1. **F5** キーを押してプロジェクトを実行します。
 
 2. Excel で、アクティブ ブックを Excel マクロ有効ブック (*.xlsm) として保存します。 このブックは、デスクトップなどの便利な場所に保存します。
 
 3. リボンの **[開発]** タブをクリックします。
 
     > [!NOTE]
-    > **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳細については、「 [方法: リボンに [開発者] タブを表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」を参照してください。
+    > **[開発]** タブが表示されていない場合は、最初にこれを表示する必要があります。 詳しくは、「[方法: [開発者] タブをリボンに表示する](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)」をご覧ください。
 
 4. **[コード]** グループの **[Visual Basic]** をクリックします。
 
@@ -125,7 +125,7 @@ ms.locfileid: "107824602"
 
      `ThisWorkbook` オブジェクトのコード ファイルが開きます。
 
-6. コード ファイルに次の VBA コードを追加します。 このコードは、最初に **ExcelImportData** VSTO アドインを表す comaddin オブジェクトを取得します。 次に、COMAddIn オブジェクトの Object プロパティを使用して、メソッドを呼び出し `ImportData` ます。
+6. コード ファイルに次の VBA コードを追加します。 このコードでは、まず **ExcelImportData** VSTO アドインを表す COMAddIn オブジェクトを取得します。 次に、COMAddIn オブジェクトの Object プロパティを使って、`ImportData` メソッドを呼び出します。
 
     ```vb
     Sub CallVSTOMethod()
@@ -146,14 +146,14 @@ ms.locfileid: "107824602"
 ## <a name="next-steps"></a>次のステップ
  VSTO アドインのプログラミングの詳細については、次の各トピックを参照してください。
 
-- `ThisAddIn` クラスを使用して、ホスト アプリケーションを自動化し、VSTO アドイン プロジェクトの他のタスクを実行する。 詳細については、「 [プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)」を参照してください。
+- `ThisAddIn` クラスを使用して、ホスト アプリケーションを自動化し、VSTO アドイン プロジェクトの他のタスクを実行する。 詳しくは、「[VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)」をご覧ください。
 
-- VSTO アドインにカスタム作業ウィンドウを作成する。 詳細については、「 [カスタム作業](../vsto/custom-task-panes.md) ウィンドウ」および「 [方法: カスタム作業ウィンドウをアプリケーションに追加する](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)」を参照してください。
+- VSTO アドインにカスタム作業ウィンドウを作成する。 詳しくは、「[カスタム作業ウィンドウ](../vsto/custom-task-panes.md)」と「[方法: カスタム作業ウィンドウをアプリケーションに追加する](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)」をご覧ください。
 
-- VSTO アドインでリボンをカスタマイズします。 詳細については、「 [リボンの概要](../vsto/ribbon-overview.md) 」および「 [方法: リボンのカスタマイズを開始する](../vsto/how-to-get-started-customizing-the-ribbon.md)」を参照してください。
+- VSTO アドインでリボンをカスタマイズする。 詳しくは、「[リボンの概要](../vsto/ribbon-overview.md)」と「[方法: リボンのカスタマイズの概要](../vsto/how-to-get-started-customizing-the-ribbon.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
-- [プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)
+- [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)
 - [他の Office ソリューションから VSTO アドインのコードを呼び出す](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [Office ソリューションの開発](../vsto/developing-office-solutions.md)
 - [方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)
