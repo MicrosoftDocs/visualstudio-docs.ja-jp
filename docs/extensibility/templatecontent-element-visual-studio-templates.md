@@ -1,6 +1,6 @@
 ---
-title: TemplateContent 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: TemplateContent 要素と、テンプレートの内容をどのように指定するかについて説明します。
+title: TemplateContent 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: TemplateContent 要素と、それを使用してテンプレートの内容を指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,7 +17,7 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 389f8e0ab6c6c7254b34721d20da40cc2d33df59
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056026"
@@ -26,7 +26,7 @@ ms.locfileid: "105056026"
 
 テンプレートの内容を指定します。
 
-要素階層:
+要素の階層:
 
 ```xml
 <VSTemplate>
@@ -48,7 +48,7 @@ ms.locfileid: "105056026"
 
 |属性|説明|
 |---------------|-----------------|
-|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|プロジェクトがテンプレートから作成されたときにソリューションをビルドするかどうかを指定します。|
+|[BuildOnLoad](../extensibility/buildonload-visual-studio-templates.md)|テンプレートからプロジェクトを作成するときにソリューションをビルドするかどうかを指定します。|
 
 ### <a name="child-elements"></a>子要素
 
@@ -58,15 +58,15 @@ ms.locfileid: "105056026"
 |[プロジェクト](../extensibility/project-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> プロジェクトに追加するファイルまたはディレクトリを指定します。|
 |[参照](../extensibility/references-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> 項目テンプレートに必要なアセンブリ参照を指定します。|
 |[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|省略可能な要素です。<br /><br /> テンプレートに含まれるファイルを指定します。|
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> プロジェクトまたは項目がテンプレートから作成されるときに使用されるカスタムパラメーターを指定します。|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|省略可能な要素です。<br /><br /> プロジェクトまたは項目をテンプレートから作成するときに使用するカスタム パラメーターを指定します。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必須の要素です。<br /><br /> プロジェクトテンプレート、項目テンプレート、またはスタートキットのすべてのメタデータが含まれます。|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|必須の要素です。<br /><br /> プロジェクト テンプレート、項目テンプレート、またはスタート キットのすべてのメタデータが含まれます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `TemplateContent` は必須の要素です。
 
 ## <a name="example"></a>例
@@ -96,7 +96,7 @@ ms.locfileid: "105056026"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [Visual Studio テンプレートスキーマリファレンス](../extensibility/visual-studio-template-schema-reference.md)
-- [プロジェクトテンプレートと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
+- [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)
+- [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)

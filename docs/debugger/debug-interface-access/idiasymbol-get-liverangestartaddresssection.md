@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_liveRangeStartAddressSection |Microsoft Docs'
+---
+description: ローカル シンボルが有効な範囲の開始アドレスのセクション部分を返します。
+title: IDiaSymbol::get_liveRangeStartAddressSection | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 892b80ff-5957-4233-b4d7-6144167be289
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a23f0661d8af6417d754fd7a71c66c5dd3ef1135
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 73060b77eddff157d24194c1051bece2fa67d4b0
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739907"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634254"
 ---
 # <a name="idiasymbolget_liverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
-ローカルシンボルが有効な範囲の開始アドレスのセクション部分を返します。
+ローカル シンボルが有効な範囲の開始アドレスのセクション部分を返します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_liveRangeStartAddressSection ( 
+HRESULT get_liveRangeStartAddressSection ( 
    DWORD* section
 );
 ```
@@ -33,25 +34,25 @@ HRESULT get_liveRangeStartAddressSection ( 
 #### <a name="parameters"></a>パラメーター
  `section`
 
-入出力開始アドレス範囲のセクション部分を返します。
+[出力] 開始アドレス範囲のセクション部分を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 > [!NOTE]
-> 返されるエラーコードは、シンボルにライブ範囲情報が含まれていないことを意味します。
+> エラー コードが返された場合、シンボルに有効範囲の情報が含まれていないことを意味します。
 
-## <a name="remarks"></a>Remarks
- セクションとオフセットによって形成されるアドレスは、記号が有効な範囲の先頭です。
+## <a name="remarks"></a>解説
+ セクションとオフセットによって形成されるアドレスは、シンボルが有効な範囲の先頭です。
 
- アドレスのオフセット部分を取得するには、 [IDiaSymbol:: get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md)を使用します。
+ アドレスのオフセット部分を取得するには、[IDiaSymbol:: get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md) を使用します。
 
-## <a name="requirements"></a>［要件］
- ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ ヘッダー: Dia2.h
 
- ライブラリ: diaguids
+ ライブラリ: diaguids.lib
 
- DLL: msdia100
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

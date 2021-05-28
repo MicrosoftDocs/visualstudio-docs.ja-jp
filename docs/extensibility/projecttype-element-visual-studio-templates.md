@@ -1,6 +1,6 @@
 ---
-title: ProjectType 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: ProjectType 要素と、[新しいプロジェクト] ダイアログボックスまたは [新しい項目の追加] ダイアログボックスに表示されるようにプロジェクトテンプレートを分類する方法について説明します。
+title: ProjectType 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: ProjectType 要素について説明し、これにより、[新しいプロジェクト] ダイアログ ボックスまたは [新しい項目の追加] ダイアログ ボックスに表示されるようにプロジェクト テンプレートをカテゴリ化する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: d494d27b2a3302d0beff68b770d0172edb520f35
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068688"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType 要素 (Visual Studio テンプレート)
-[ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスで指定したグループの下に表示されるように、プロジェクトテンプレートを分類します。
+プロジェクト テンプレートをカテゴリに分類し、 **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスの指定したグループ内にテンプレートを表示するようにします。
 
 > [!WARNING]
 > プロジェクト テンプレートは、Visual Studio 2012 以降の C++ でサポートされています。 これらは、Visual Studio 2010 以前のバージョンの C++ ではサポートされていません。
@@ -61,14 +61,14 @@ ms.locfileid: "105068688"
 
 - `VisualBasic` : テンプレートが [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] のプロジェクトまたはアイテムを作成するよう指定します。
 
-- `Web`: テンプレートが Web プロジェクトまたは項目を作成するように指定します。 要素に `ProjectType` この値が含まれている場合は、プロジェクトまたは項目の言語が [Projectsubtype 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md)で定義されます。
+- `Web`: テンプレートが Web プロジェクトまたは Web アイテムを作成するよう指定します。 `ProjectType` 要素にこの値が含まれている場合、プロジェクトまたは項目の言語は [ProjectSubType 要素 (Visual Studio テンプレート)](../extensibility/projectsubtype-element-visual-studio-templates.md) で定義されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `ProjectType` は `TemplateData` に必須の子要素です。
 
- 要素の値は、 `ProjectType` [ **新しいプロジェクト** ] ダイアログボックスまたは [ **新しい項目の追加** ] ダイアログボックスでテンプレートを配置する場所を指定します。 たとえば、値がのテンプレートは、 `ProjectType` `CSharp` [**新しいプロジェクト**] ダイアログボックスの [ **Visual C#** ] ノードの下に表示されます。
+ `ProjectType` 要素の値は、 **[新しいプロジェクト]** ダイアログ ボックスまたは **[新しい項目の追加]** ダイアログ ボックスのどの場所にテンプレートを置くかを示します。 たとえば、`CSharp` の `ProjectType` 値を持つテンプレートは、 **[新しいプロジェクト]** ダイアログ ボックスの **[Visual C#]** ノードに表示されます。
 
- テンプレートのサブタイプは、 [Projectsubtype](../extensibility/projectsubtype-element-visual-studio-templates.md) 要素を使用して指定できます。
+ テンプレートのサブタイプは、[ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) 要素を使用して指定できます。
 
 ## <a name="example"></a>例
  [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] アプリケーションでのプロジェクト テンプレートのメタデータの例を次に示します。

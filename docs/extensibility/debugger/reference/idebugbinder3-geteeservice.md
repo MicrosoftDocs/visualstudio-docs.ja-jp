@@ -1,6 +1,6 @@
 ---
 description: このメソッドは、要求されたサービスを返します。
-title: 'IDebugBinder3:: GetEEService |Microsoft Docs'
+title: IDebugBinder3::GetEEService | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ccc4d28a06d87d7c17d16470e10f259657083cc9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094303"
@@ -48,24 +48,24 @@ Int GetEEService(
 
 ## <a name="parameters"></a>パラメーター
 `vendor`\
-[入力] `GUID` ベンダーの (null 値は許容されます)。
+[入力] ベンダーの `GUID` (null 値は許容されます)。
 
 `language`\
-[入力] `GUID` 言語の (null 値は許容されます)。
+[入力] 言語の `GUID` (null 値は許容されます)。
 
 `iid`\
-[入力] `IID` 取得するサービスの。
+[入力] 取得するサービスの `IID`。
 
 `ppService`\
-入出力要求されたサービスへのインターフェイス。
+[出力] 要求されたサービスへのインターフェイス。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- `IID` [Ieevisualizerserviceprovider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)インターフェイス () のを渡して、 `IID_IEEVisualizerServiceProvider` 型ビジュアライザーサービスが使用可能かどうかを確認します。 その場合、式エバリュエーターは、型ビジュアライザーをサポートする [Ieevisualizerservice](../../../extensibility/debugger/reference/ieevisualizerservice.md) インターフェイスを取得できます。 詳細については [、「データの視覚化と表示](../../../extensibility/debugger/visualizing-and-viewing-data.md) 」を参照してください。
+## <a name="remarks"></a>解説
+ [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) インターフェイスの `IID` (`IID_IEEVisualizerServiceProvider`) を渡して、型ビジュアライザー サービスが使用可能かどうかを確認します。 その場合、式エバリュエーターでは、型ビジュアライザーをサポートする [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) インターフェイスを取得できます。 詳細については、「[データの視覚化と表示](../../../extensibility/debugger/visualizing-and-viewing-data.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

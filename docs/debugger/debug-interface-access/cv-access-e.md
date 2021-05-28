@@ -1,7 +1,9 @@
 ---
-title: CV_access_e |Microsoft Docs
+title: CV_access_e | Microsoft Docs
+description: Debug Interface Access SDK のメンバーの可視性のスコープ (アクセス レベル) を指定する CV_access_e 列挙型に関する情報を取得します。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 33c05d65-abb4-4800-a382-54a3805ea7b0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe338ba9d3aa6cbc795606c3fa285526afdfd36
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 68dc8ca76e9250cd06009a990c0136912b0d31e3
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745369"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634196"
 ---
 # <a name="cv_access_e"></a>CV_access_e
-メンバー関数と変数の可視性 (アクセスレベル) のスコープを指定します。
+メンバー関数と変数の可視性のスコープ (アクセス レベル) を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,18 +34,18 @@ typedef enum CV_access_e {
 } CV_access_e;
 ```
 
-## <a name="elements"></a>Elements
-CV_private メンバーにはプライベートアクセスがあります。
+## <a name="elements"></a>要素
+CV_private メンバーにはプライベート アクセス権があります。
 
-CV_protected メンバーは、保護されたアクセス権を持っています。
+CV_protected メンバーには保護されたアクセス権があります。
 
-CV_public メンバーにはパブリックアクセスがあります。
+CV_public メンバーにはパブリック アクセス権があります。
 
-## <a name="remarks"></a>Remarks
-@No__t_0 アクセス指定子は、クラスのプライベート要素と保護された要素の両方にアクセスできる非メンバー関数によって使用されることが多いため、ここには含まれていません。 [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)メソッドを使用して、`SymTagFriend` アクセス権を持つシンボルを検索します。
+## <a name="remarks"></a>解説
+`friend` アクセス指定子は、クラスのプライベート要素と保護された要素の両方にアクセスできる非メンバー関数によって使用されることが多いため、ここでは含まれていません。 [IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) メソッドを使用して、`SymTagFriend` アクセス権のあるシンボルを検索します。
 
-## <a name="requirements"></a>［要件］
-ヘッダー: cvconst. h
+## <a name="requirements"></a>必要条件
+ヘッダー: cvconst.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)

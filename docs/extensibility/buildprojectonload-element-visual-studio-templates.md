@@ -1,6 +1,6 @@
 ---
-title: Buildの Tonload 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: 作成してソリューションに追加するときに、Buildて Tonload 要素と、新しいプロジェクトだけをビルドする方法について説明します。
+title: BuildProjectOnload 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: BuildProjectOnload 要素について、また、それによって、プロジェクトを作成してソリューションに追加するときに、新しいプロジェクトのみがビルドされるしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -13,15 +13,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: f9d50d33824be70a7df09cee878d516ddaaf9f8d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068168"
 ---
-# <a name="buildprojectonload-element-visual-studio-templates"></a>Buildの Tonload 要素 (Visual Studio テンプレート)
-は、新しいプロジェクトを作成してソリューションに追加するときにのみビルドします。 ソリューション全体がビルドされていません。
+# <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload 要素 (Visual Studio テンプレート)
+プロジェクトを作成してソリューションに追加するときに新しいプロジェクトのみをビルドします。 ソリューション全体がビルドされるのではありません。
 
-要素階層:
+要素の階層:
 
 ```xml
 <VSTemplate>
@@ -48,18 +48,18 @@ ms.locfileid: "105068168"
 
 |要素|説明|
 |-------------|-----------------|
-|`TemplateData`|テンプレートを分類し、[ **新しいプロジェクト** ] ダイアログボックスと [ **新しい項目の追加** ] ダイアログボックスの両方に表示する方法を定義します。|
+|`TemplateData`|テンプレートを分類し、 **[新しいプロジェクト]** および **[新しい項目の追加]** の両方のダイアログ ボックスにどのように表示させるかを定義します。|
 
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストは、 `true` `false` テンプレートから作成されたときに新しいプロジェクトのみをビルドするかどうかを示す、またはのいずれかにする必要があります。
+ テキストは `true` または `false` のいずれかで、テンプレートから作成されるときに新しいプロジェクトのみをビルドするかどうかを示します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `BuildProjectOnLoad` は省略可能な要素です。 既定値は `false` です。
 
 ## <a name="example"></a>例
- 次の例は、Visual C# テンプレートのメタデータを示しています。
+ 次の例は、Visual C# テンプレートのメタデータの例を示しています。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,8 +86,8 @@ ms.locfileid: "105068168"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [BuildOnLoad 属性と要素](buildonload-visual-studio-templates.md)
+- [BuildOnLoad 属性および要素](buildonload-visual-studio-templates.md)
 - [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
 - [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

@@ -1,6 +1,6 @@
 ---
 description: このクラスのコンストラクターの列挙子を作成します。
-title: 'IDebugClassField:: EnumConstructors |Microsoft Docs'
+title: IDebugClassField::EnumConstructors | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 8efba9ecb25259b6aa4998a1f22fedf443c1281a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084975"
@@ -44,20 +44,20 @@ int EnumConstructors(
 
 ## <a name="parameters"></a>パラメーター
 `cMatch`\
-から列挙するコンストラクターの型を指定する [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) 列挙の値。
+[入力] 列挙するコンストラクターの型を指定する [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) 列挙型の値。
 
 `ppEnum`\
-入出力コンストラクターのリストを表す [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) オブジェクトを返します。 コンストラクターが存在しない場合は、null 値を返します。
+[出力] コンストラクターのリストを表す [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) オブジェクトを返します。 コンストラクターがない場合は、null 値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、S_OK を返すか、コンストラクターが存在しない場合は S_FALSE を返します。 それ以外の場合はエラー コードを返します。
+ 成功した場合は、S_OK を返します。コンストラクターがない場合は、S_FALSE を返します。 それ以外の場合はエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 列挙体の各要素は、コンストラクターメソッドを記述する [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) オブジェクトです。
+## <a name="remarks"></a>解説
+ 列挙の各要素は、コンストラクター メソッドが記述されている [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) オブジェクトです。
 
- 通常、コンストラクターの一覧には、コンパイラによって提供される既定のコンストラクターは含まれません。
+ 通常、コンストラクターのリストには、コンパイラによって提供される既定のコンストラクターは含まれません。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)
 - [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

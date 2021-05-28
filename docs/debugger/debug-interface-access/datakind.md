@@ -1,7 +1,8 @@
 ---
-title: DataKind |Microsoft Docs
+description: データ値の特定のスコープを示します。
+title: DataKind | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b64be708-22d6-4360-99e7-8f4e6b196de7
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 31be0615fd7d1da279ecf414260af21cb8239dc8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 24f13fc1157dd7f3de723474091a1f80e3717504
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745288"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634550"
 ---
 # <a name="datakind"></a>DataKind
 データ値の特定のスコープを示します。
@@ -25,7 +26,7 @@ ms.locfileid: "72745288"
 ## <a name="syntax"></a>構文
 
 ```C++
-enum DataKind {
+enum DataKind {
     DataIsUnknown,
     DataIsLocal,
     DataIsStaticLocal,
@@ -39,32 +40,32 @@ enum DataKind {
 };
 ```
 
-## <a name="elements"></a>Elements
-DataIsUnknown データシンボルを特定できません。
+## <a name="elements"></a>要素
+DataIsUnknown データ シンボルを特定できません。
 
-DataIsLocal データ項目はローカル変数です。
+DataIsLocal データ項目は、ローカル変数です。
 
-DataIsStaticLocal データ項目は静的なローカル変数です。
+DataIsStaticLocal データ項目は、静的なローカル変数です。
 
-Dataisparc Am データ項目は、仮パラメーターです。
+DataIsParam データ項目は、仮パラメーターです。
 
-DataIsObjectPtr Data item はオブジェクトポインター (`this`) です。
+DataIsObjectPtr データ項目は、オブジェクト ポインター (`this`) です。
 
 DataIsFileStatic データ項目は、ファイルスコープの変数です。
 
-DataIsGlobal データ項目はグローバル変数です。
+DataIsGlobal データ項目は、グローバル変数です。
 
-DataIsMember データ項目はオブジェクトメンバー変数です。
+DataIsMember データ項目は、オブジェクト メンバー変数です。
 
 DataIsStaticMember データ項目は、クラスの静的変数です。
 
-DataIsConstant データ項目は定数値です。
+DataIsConstant データ項目は、定数値です。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaSymbol:: get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md)メソッドによって返されます。
+## <a name="remarks"></a>解説
+この列挙型の値は、[IDiaSymbol::get_dataKind](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) メソッドによって返されます。
 
-## <a name="requirements"></a>［要件］
-ヘッダー: cvconst. h
+## <a name="requirements"></a>必要条件
+ヘッダー: cvconst.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)
