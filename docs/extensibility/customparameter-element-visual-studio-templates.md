@@ -1,6 +1,6 @@
 ---
-title: CustomParameter 要素 (Visual Studio テンプレート) |Microsoft Docs
-description: CustomParameter 要素と、テンプレートからプロジェクトまたは項目を作成するときに使用するカスタムパラメーターの名前と値がどのように含まれているかについて説明します。
+title: CustomParameter 要素 (Visual Studio テンプレート) | Microsoft Docs
+description: CustomParameter 要素について示し、プロジェクトまたは項目がテンプレートから作成されるときに使用するカスタム パラメーター名と値がどのように含まれているかを説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 6190dc96501221a31c9a51f59e1bd734b9e08260
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055597"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>CustomParameter 要素 (Visual Studio テンプレート)
-プロジェクトまたは項目がテンプレートから作成されるときに使用する、カスタムパラメーターの名前と値を格納します。
+プロジェクトまたは項目がテンプレートから作成されるときに使用する、カスタム パラメーターの名前と値が含まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -48,13 +48,13 @@ ms.locfileid: "105055597"
 
 |要素|説明|
 |-------------|-----------------|
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|ウィザードがパラメーター置換を行うときに、テンプレートウィザードに渡すカスタムパラメーターをグループ化します。|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|テンプレート ウィザードでパラメーターの置換を行うときにウィザードに渡されるカスタム パラメーターをグループ化します。|
 
-## <a name="remarks"></a>注釈
- テンプレートに要素が含まれている場合 `CustomParameter` 、すべてのインスタンス `Name` は、作成された `Value` プロジェクトまたは項目ファイルの属性で属性を置き換えます。
+## <a name="remarks"></a>解説
+ テンプレートに `CustomParameter` 要素が含まれるとき、`Name` 属性のすべてのインスタンスが、作成されたプロジェクトまたは項目ファイルの `Value` 属性で置換されます。
 
 ## <a name="example"></a>例
- 次の例は、テンプレートでいくつかのカスタムパラメーターを使用する方法を示しています。 次のカスタムパラメーターを使用してテンプレートからプロジェクトまたは項目が作成されると、テンプレートファイル内のとのすべてのインスタンス `$color1$` が、それぞれとに置き換えられ `$color2$` `Red` `Blue` ます。
+ 次の例は、テンプレートでいくつかのカスタム パラメーターを使用する方法を示しています。 次のカスタム パラメーターを使用してテンプレートからプロジェクトまたは項目が作成されると、テンプレート ファイル内の `$color1$` と `$color2$` のすべてのインスタンスがそれぞれ `Red` と `Blue` に置き換えられます。
 
 ```
 <CustomParameters>

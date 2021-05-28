@@ -1,6 +1,6 @@
 ---
-title: ワークフローデザイナー FlowSwitch &lt; T &gt; アクティビティデザイナー
-description: FlowSwitch <T> アクティビティが条件付きノードであり、一致条件に基づいて制御フローの分岐を提供する方法について説明します。
+title: ワークフロー デザイナー - FlowSwitch&lt;T&gt; アクティビティ デザイナー
+description: FlowSwitch<T> アクティビティがどのように一致条件に基づいて制御フローの分岐を提供する条件ノードであるかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,7 +17,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 6f61dd3f14ba527e9f5be0e009825902e683fb1d
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99876564"
@@ -26,27 +26,27 @@ ms.locfileid: "99876564"
 
 <xref:System.Activities.Statements.FlowSwitch%601> アクティビティは、3 つ以上の代替分岐が必要な場合に、一致条件に基づいて制御フローの分岐を提供する条件ノードです。 フローの分岐に必要なパスが 2 つのみである場合は、代わりに <xref:System.Activities.Statements.FlowDecision> アクティビティを使用します。
 
-## <a name="the-flowswitcht-activity"></a>FlowSwitch \<T> アクティビティ
+## <a name="the-flowswitcht-activity"></a>FlowSwitch\<T> アクティビティ
 
-<xref:System.Activities.Statements.FlowSwitch%601>アクティビティには、 <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 評価時に *T* 型 (ジェネリックパラメーターで指定) の値を返すが含まれています。 アクティビティには、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> のセットも含まれます。これは、この評価の想定される結果から、<xref:System.Activities.Statements.FlowNode> オブジェクトへの一意のマッピングを指定します。 実行されるは、 <xref:System.Activities.Statements.FlowNode> *T* 型のオブジェクトが評価されたの値と一致するものです <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 。 <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> case は、一致が取得されない case に対して (必要に応じて) 提供できます。
+<xref:System.Activities.Statements.FlowSwitch%601> アクティビティには、評価時に *T* 型の値 (ジェネリック パラメーターにより指定される) を返す <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> が含まれます。 アクティビティには、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> のセットも含まれます。これは、この評価の想定される結果から、<xref:System.Activities.Statements.FlowNode> オブジェクトへの一意のマッピングを指定します。 実行された <xref:System.Activities.Statements.FlowNode> は、その *T* 型のオブジェクトが、評価された <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の値と一致します。 <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> case は、一致が取得されない case に対して (必要に応じて) 提供できます。
 
-### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch \<T> アクティビティデザイナーの使用
+### <a name="using-the-flowswitcht-activity-designer"></a>FlowSwitch\<T> アクティビティ デザイナーの使用
 
-**FlowSwitch \<T>** アクティビティデザイナーは、[**ツールボックス**] の [**フローチャート**] カテゴリにあります。このカテゴリにアクセスするには、ワークフローデザイナーの左側にある [**ツールボックス**] タブをクリックします。 または、[**表示**] メニューの [**ツールボックス**] を選択するか、 **Ctrl** + **Alt** + **X** キーを押します。
+**FlowSwitch\<T>** デザイナーは、 **[ツールボックス]** の **[フローチャート]** カテゴリにあります。ワークフロー デザイナーの左側にある **[ツールボックス]** タブをクリックすることでアクセスできます。 または、 **[表示]** メニューの **[ツールボックス]** を選択するか、**Ctrl** +**Alt**+ **X** キーを押します。
 
-**FlowSwitch \<T>** アクティビティデザイナーは、[**ツールボックス**] からドラッグして、 **Flowchart** アクティビティデザイナー内のワークフローデザイナー画面にドロップできます。 表示される **[型の選択** ] ウィンドウを使用して、の評価から取得した型 (コードに関連付けられている、その <xref:System.Activities.Statements.FlowSwitch%601> ジェネリックパラメーターによって関連付けられる) を指定し <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> ます。 この手順では <xref:System.Activities.Statements.FlowSwitch%601> 、アクティビティ内に **Switch** という名前のアクティビティを作成し <xref:System.Activities.Statements.Flowchart> ます。 をクリックすると、[ <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> **プロパティ**] ウィンドウの [**式**] ボックスに "VB の式を入力してください" というヒントテキストが表示されます。
+**FlowSwitch\<T>** デザイナーは、 **[ツールボックス]** からドラッグして、**Flowchart** アクティビティ デザイナー内のワークフロー デザイナー画面にドロップできます。 表示される **[型の選択]** ウィンドウを使用して、<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価から取得される型 (コード内でそのジェネリック パラメーターにより <xref:System.Activities.Statements.FlowSwitch%601> に関連付けられる) を指定します。 この手順により、<xref:System.Activities.Statements.Flowchart> アクティビティ内に、**Switch** というラベルの付いた <xref:System.Activities.Statements.FlowSwitch%601> アクティビティが作成されます。 "VB の式を入力してください" というヒント テキストが表示される場所をクリックすると、 **[プロパティ]** ウィンドウの **[式]** ボックスに <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> を入力できます。
 
-**\<T> FlowSwitch** アクティビティデザイナーの上にマウスポインターを置くと、リンクするために使用される正方形ハンドルが端に表示され <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> ます。 **FlowSwitch<T \>** アクティビティデザイナーとその他のアクティビティデザイナーを **フローチャート** にドラッグすると、 <xref:System.Activities.Activity> それらが表すオブジェクトを相互にリンクして、実行の順序を指定できます。 に関連付けられたのいずれかを作成するには、 <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> <xref:System.Activities.Statements.FlowSwitch%601> **FlowSwitch<T \>** の境界上にあるいずれかの case ハンドルをクリックし、マウスボタンを押したままドラッグして、そのデザイナー上にマウスを移動したときに、対象アクティビティの周囲に同様の方法で表示されるハンドルのいずれかにドラッグします。 マウスボタンを放すと、 **FlowSwitch<T \>** から変換先デザイナーへの矢印が表示され、このケースを表すことができます。 このケースの既定値は矢印に表示され、[**プロパティ**] ウィンドウの [**ケース**] ボックスで編集できます。
+**FlowSwitch\<T>** アクティビティ デザイナーにマウス ポインターを重ねると、正方形のハンドルが端に表示されます。これを使って、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> をリンクできます。 **FlowSwitch<T\>** などのアクティビティ デザイナーを **Flowchart** にドラッグすると、それらが表す <xref:System.Activities.Activity> オブジェクトを相互にリンクして、実行の順序を指定できるようになります。 <xref:System.Activities.Statements.FlowSwitch%601> に関連付けられた <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> の 1 つを作成するには、**FlowSwitch<T\>** の周囲にある正方形の case ハンドルの 1 つをクリックし、マウス ボタンを押したまま、接続先のアクティビティの周囲にある同様のハンドルの 1 つにドラッグします。このハンドルは、デザイナーにマウス ポインターを置くと表示されます。 マウス ボタンを放すと、**FlowSwitch<T\>** から接続先のデザイナーに向かう、この case を表す矢印が表示されます。 この case の既定値が矢印に表示されます。その値は、 **[プロパティ]** ウィンドウの **[Case]** ボックスで編集できます。
 
-### <a name="the-flowswitcht-properties"></a>FlowSwitch の \<T> プロパティ
+### <a name="the-flowswitcht-properties"></a>FlowSwitch\<T> のプロパティ
 
 次の表に、<xref:System.Activities.Statements.FlowSwitch%601> のプロパティと、デザイナーでのその使用方法を示します。 これらのプロパティは、プロパティ グリッドまたはデザイナー画面で編集できます。
 
-|プロパティ名|必須|使用|
+|プロパティ名|必須|使用方法|
 |-|--------------|-|
-|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|True|実行パスのどの <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> に切り替えるかを決定するために評価される式を指定します。|
-|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|False|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価によって得られる可能性のある結果から、<xref:System.Activities.Statements.FlowNode> オブジェクトのセットへの一意のマッピングを指定します。|
-|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|True|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価が、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> オブジェクトに含まれる値のいずれにも一致しない場合のマッピングを指定します。|
+|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>|はい|実行パスのどの <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> に切り替えるかを決定するために評価される式を指定します。|
+|<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>|いいえ|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価によって得られる可能性のある結果から、<xref:System.Activities.Statements.FlowNode> オブジェクトのセットへの一意のマッピングを指定します。|
+|<xref:System.Activities.Statements.FlowSwitch%601.Default%2A>|はい|<xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> の評価が、<xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> オブジェクトに含まれる値のいずれにも一致しない場合のマッピングを指定します。|
 
 ## <a name="see-also"></a>関連項目
 

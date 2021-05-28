@@ -1,6 +1,6 @@
 ---
-description: 指定されたプロキシ ID のプロパティプロキシインターフェイスを取得します。
-title: 'IPropertyProxyProvider:: GetPropertyProxy |Microsoft Docs'
+description: 指定されたプロキシ ID のプロパティ プロキシ インターフェイスを取得します。
+title: IPropertyProxyProvider::GetPropertyProxy | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: a1e18001b0db7c254f7e69bcb5adfc1a35a513b5
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082362"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
-指定されたプロキシ ID のプロパティプロキシインターフェイスを取得します。
+指定されたプロキシ ID のプロパティ プロキシ インターフェイスを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,16 +44,16 @@ int GetPropertyProxy(
 
 ## <a name="parameters"></a>パラメーター
 `dwID`\
-から目的のプロパティプロキシの ID。
+[入力] 目的のプロパティ プロキシの ID。
 
 `proxy`\
-入出力 [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) オブジェクトを返します。
+[出力] [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 外部型ビジュアライザーをサポートするために、このメソッドは通常、呼び出しを [Getpropertyproxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) メソッドに転送します。 IEEVisualizerService の取得方法の詳細については、「 [データの視覚化と表示](../../../extensibility/debugger/visualizing-and-viewing-data.md) 」を参照してください。
+## <a name="remarks"></a>解説
+ 外部の型ビジュアライザーをサポートするには、通常、このメソッドを使用して呼び出しを [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) メソッドに転送します。 IEEVisualizerService の取得方法の詳細については、「[データの視覚化と表示](../../../extensibility/debugger/visualizing-and-viewing-data.md)」を参照してください。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)

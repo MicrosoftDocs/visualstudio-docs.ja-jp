@@ -15,7 +15,7 @@ ms.workload:
 zone_pivot_groups: platform
 ms.openlocfilehash: 9a89f83ecaa4545eb6151c7a92e76a08708c3855
 ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/05/2020
 ms.locfileid: "94341287"
@@ -26,9 +26,9 @@ ms.locfileid: "94341287"
 
 ## <a name="open-unity-scripts-in-visual-studio"></a>Visual Studio で Unity スクリプトを開く
 
-Visual Studio が [unity の外部エディターとして設定](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-to-use-visual-studio)されたら、unity エディターからスクリプトをダブルクリックすると自動的に起動するか、visual studio に切り替えて、選択したスクリプトを開きます。
+Visual Studio を [Unity の外部エディターとして設定](getting-started-with-visual-studio-tools-for-unity.md#configure-unity-to-use-visual-studio)した後、Unity エディターからスクリプトをダブルクリックすると、自動的に Visual Studio が起動するか Visual Studio に切り替わり、選択したスクリプトが開きます。
 
-または、[ **アセット > [C# プロジェクトを開く** ] メニューの [Unity] を選択して、ソースエディターでスクリプトを開いた状態で Visual Studio を開くこともできます。
+または、Unity の **[Assets]\(アセット\) > [Open C# Project]\(C# プロジェクトを開く\)** メニューを選択することで、ソース エディターでスクリプトを開かずに Visual Studio を起動できます。
 
 :::zone pivot="windows"
 ![Visual Studio で C# プロジェクトを開く](../media/vs/vstu-open-csharp-project.png)
@@ -42,14 +42,14 @@ Visual Studio が [unity の外部エディターとして設定](getting-starte
 Visual Studio から簡単に Unity スクリプトに関するドキュメントにアクセスできます。 Visual Studio Tools for Unity は、ローカルの API ドキュメントを見つけられない場合、ドキュメントをオンラインで検索することを試みます。
 
 :::zone pivot="windows"
-- Visual Studio で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、 **Ctrl**+**Alt**+**M** キー、 **Ctrl**+**H** キーの順に押します。
-- キーバインドの代わりに、 **Help > UNITY API リファレンス** メニューを使用することもできます。
-![Visual Studio の Unity API リファレンスメニュー](../media/vs/help-unity-documentation.png)
+- Visual Studio で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、**Ctrl**+**Alt**+**M** キー、**Ctrl**+**H** キーの順に押します。
+- キー バインドの代わりに **[ヘルプ] > [Unity API リファレンス]** メニューを使用することもできます。
+![Visual Studio の [Unity API リファレンス] メニュー](../media/vs/help-unity-documentation.png)
 :::zone-end
 :::zone pivot="macos"
-- Visual Studio for Mac で、学習する Unity API の上にカーソルを強調表示または配置し、 **Cmd** キーを押します。 + **'**
-- キーバインドの代わりに、 **Help > UNITY API リファレンス** メニューを使用することもできます。
-![Visual Studio for Mac の Unity API リファレンスメニュー](../media/vsm/help-unity-documentation.png)
+- Visual Studio for Mac で、情報を必要とする Unity API を選択するか、その上にカーソルを置き、**Cmd**+ **'** キーを押します。
+- キー バインドの代わりに **[ヘルプ] > [Unity API リファレンス]** メニューを使用することもできます。
+![Visual Studio for Mac の [Unity API リファレンス] メニュー](../media/vsm/help-unity-documentation.png)
 :::zone-end
 
 ## <a name="intellisense-for-unity-api-messages"></a>Unity API メッセージ用の IntelliSense
@@ -60,7 +60,7 @@ IntelliSense コード補完により、MonoBehaviour スクリプト内に Unit
 
 2. Unity メッセージの名前 (`OnTriggerEnter` など) の入力を始めます。
 
-3. 「 **ontri** 」まで入力すると、IntelliSense による候補の一覧が表示されます。
+3. 「**ontri**」まで入力すると、IntelliSense による候補の一覧が表示されます。
 
 :::zone pivot="windows"
 
@@ -96,7 +96,7 @@ MonoBehavior ウィザードを使用して、Unity API のすべてのメソッ
 
 MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定義を作成するには:
 
-1. Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、 **Ctrl**+**Shift**+**M** キーを押して MonoBehavior ウィザードを起動します。 Visual Studio for Mac で、 **Cmd** + **Shift** + **M** キーを押します。
+1. Visual Studio で、メソッドの挿入位置にカーソルを合わせてから、**Ctrl**+**Shift**+**M** キーを押して MonoBehavior ウィザードを起動します。 Visual Studio for Mac で、**Cmd**+**Shift**+**M** キーを押します。
 
 2. **[スクリプト メソッドの作成]** ウィンドウで、追加する各メソッドの名前の横にあるチェック ボックスをオンにします。
 
@@ -110,22 +110,22 @@ MonoBehavior ウィザードを使用して空の MonoBehavior メソッド定�
 
 :::zone pivot="windows"
 
-![Visual Studio の [モノの動作] ウィザードダイアログ。](../media/vs/vstu-monobehavior-wizard.png)
+![Visual Studio の MonoBehavior ウィザードのダイアログ。](../media/vs/vstu-monobehavior-wizard.png)
 :::zone-end
 :::zone pivot="macos"
 
-![Visual Studio for Mac の [モノの動作] ウィザードダイアログ。](../media/vsm/vstu-monobehavior-wizard.png)
+![Visual Studio for Mac の MonoBehavior ウィザードのダイアログ。](../media/vsm/vstu-monobehavior-wizard.png)
 :::zone-end   
 
 ## <a name="unity-project-explorer"></a>Unity プロジェクト エクスプローラー
 Unity Project Explorer にはすべての Unity プロジェクト ファイルとディレクトリが、Unity エディターで表示されるのと同じ方法で表示されます。 これは、通常の Visual Studio ソリューション エクスプローラーを使用して Unity スクリプト間を移動するのとは異なります。そこではそれらが Visual Studio によって生成されるプロジェクトとソリューションに編成されます。
 
 :::zone pivot="windows"
-- Visual Studio のメイン メニューで、 **[表示] > [Unity プロジェクト エクスプローラー]** を選択します。 キーボードショートカット: **Alt** + **Shift** * + **E** 
- ![ Unity の [プロジェクトエクスプローラー] ウィンドウを表示します。](../media/vs/unity-project-explorer.png)
+- Visual Studio のメイン メニューで、 **[表示] > [Unity プロジェクト エクスプローラー]** を選択します。 キーボード ショートカット: **Alt**+**Shift**+**E**
+![[Unity プロジェクト エクスプローラー] ウィンドウを表示する。](../media/vs/unity-project-explorer.png)
 :::zone-end
 :::zone pivot="macos"
-- Visual Studio for Mac では、Unity プロジェクトを開いたときに、Solution Pad は次のように自動的に動作します。
+- Visual Studio for Mac では、Unity プロジェクトを開くと、Solution Pad がこのように自動的に動作します。
 :::zone-end
 ## <a name="unity-debugging"></a>Unity のデバッグ
 
@@ -142,17 +142,17 @@ Visual Studio Tools for Unity では、Visual Studio の強力なデバッガー
 :::zone-end
 :::zone pivot="macos"
 
-1. **[再生]** ボタンをクリックするか、 **Command + Return** キーまたは **F5** キーを押して、Visual Studio を Unity に接続します。
-![[Play in Visual Studio for Mac] をクリックします。](../media/vsm/using-vsmac-tools-unity-image5.png)
+1. **[再生]** ボタンをクリックするか、**Command + Return** キーまたは **F5** キーを押して、Visual Studio を Unity に接続します。
+![Visual Studio for Mac で [再生] をクリックする](../media/vsm/using-vsmac-tools-unity-image5.png)
 
 :::zone-end
 
 2. Unity に切り替えた後、 **[Play]\(再生\)** ボタンをクリックしてエディターでゲームを実行します。
 :::zone pivot="windows"
-![Windows で [Unity で再生] をクリックする](../media/vs/vstu-unity-play-button.png)
+![Windows 上の Unity で [Play]\(再生\) をクリックする](../media/vs/vstu-unity-play-button.png)
 :::zone-end
 :::zone pivot="macos"
-![MacOS で [Unity で再生] をクリックする](../media/vsm/using-vsmac-tools-unity-image6.png)
+![macOS 上の Unity で [Play]\(再生\) をクリックする](../media/vsm/using-vsmac-tools-unity-image6.png)
 :::zone-end
 
 3. Visual Studio に接続しながら Unity エディターでゲームを実行しているときに、ブレークポイントに達すると、ゲームの実行は一時停止し、ゲームがブレークポイントにヒットしたコード行が Visual Studio に表示されます。
@@ -167,8 +167,8 @@ Visual Studio の **[停止]** ボタンをクリックするか、キーボー�
 :::zone-end
 :::zone pivot="macos"
 
-Visual Studio for Mac で **[停止]** ボタンをクリックするか、 **Shift + Command + Return** キーを押します。
-![[停止] をクリックし Visual Studio for Mac](../media/vsm/using-vsmac-tools-unity-image7.png)
+Visual Studio for Mac で **[停止]** ボタンをクリックするか、**Shift + Command + Return** キーを押します。
+![Visual Studio for Mac で [停止] をクリックする](../media/vsm/using-vsmac-tools-unity-image7.png)
 
 :::zone-end
 
@@ -182,7 +182,7 @@ Visual Studio でのデバッグの詳細については、「[First look at the
 
 1. **[Unity にアタッチ]** ボタンの横の小さな **下向き矢印** をクリックします。
 2. ドロップダウン メニューから **[Unity にアタッチして再生]** を選択します。
-   ![Visual Studio でのアタッチと再生](../media/vs/vstu-attach-and-play.png)
+   ![Visual Studio のアタッチして再生のオプション](../media/vs/vstu-attach-and-play.png)
 
 [再生] ボタンのラベルが **[Unity にアタッチして再生]** になります。 これで、このボタンをクリックするか、キーボード ショートカット **F5** を使用すると、Visual Studio デバッガーにアタッチされるだけでなく、自動的に Unity エディターに切り替わり、エディターでゲームが実行されます。
 
@@ -190,15 +190,15 @@ Visual Studio でのデバッグの詳細については、「[First look at the
 :::zone pivot="macos"
 Visual Studio for Mac から直接 **[Unity にアタッチして再生]** 構成を選択すると、デバッグの開始と Unity エディターでの再生を 1 回の手順でを完了できます。
 
-![[Unity にアタッチして再生] を選択し Visual Studio for Mac](../media/vsm/using-vsmac-tools-unity-image8.png)
+![Visual Studio for Mac で [Unity にアタッチして再生] を選択する](../media/vsm/using-vsmac-tools-unity-image8.png)
 :::zone-end
 
 > [!NOTE]
-> [ **Unity にアタッチ] と [再生** ] 構成を使用してデバッグを開始した場合は、[ **停止** ] ボタンをクリックしても unity エディターが停止します。
+> **[Unity にアタッチして再生]** 構成を使用してデバッグを開始した場合、 **[停止]** ボタンでも Unity エディターを停止できます。
 
 ### <a name="debug-unity-player-builds"></a>Unity プレーヤー ビルドのデバッグ
 
-Visual Studio を使用して、Unity プレーヤーの開発ビルドをデバッグできます。
+Unity プレーヤーの開発ビルドを Visual Studio でデバッグできます。
 
 #### <a name="enable-script-debugging-in-a-unity-player"></a>Unity プレーヤーでのスクリプトのデバッグを有効にする
 
@@ -230,14 +230,14 @@ Visual Studio を使用して、Unity プレーヤーの開発ビルドをデバ
    **ポート** Unity のこのインスタンスが通信に使用している UDP ソケットのポート番号。
 
 > [!IMPORTANT]
-> Visual Studio Tools for Unity と Unity インスタンスは UDP ネットワークソケットを介して通信しているため、ファイアウォールで許可する規則が必要になる場合があります。 必要に応じてプロンプトが表示される場合は、VSTU と Unity が通信できるように、接続を承認する必要があります。
+> Visual Studio Tools for Unity と Unity インスタンスは UDP ネットワーク ソケット上で通信を行っているため、それを許可するルールがファイアウォールで必要になる場合があります。 その場合は、プロンプトが表示され、VSTU と Unity が通信できるように、接続を承認する必要があります。
 
 :::zone-end
 :::zone pivot="macos"
 
-- Visual Studio for Mac の上部のメニューで、[実行] をクリックして [ **プロセスにアタッチ >** ます。 
-- [ **プロセスにアタッチ** ] ダイアログボックスの下部にあるデバッガーのドロップダウンメニューで [ **Unity デバッガー** ] オプションを選択します。
-- 一覧から Unity インスタンスを選択し、[ **アタッチ** ] ボタンをクリックします。
+- Visual Studio for Mac の上部のメニューで、 **[実行] > [プロセスにアタッチ]** を選択します。 
+- **[プロセスにアタッチ]** ダイアログの下部にある [デバッガー] ドロップダウン メニューで **[Unity デバッガー]** オプションを選択します。
+- 一覧から Unity インスタンスを選択し、 **[アタッチ]** ボタンをクリックします。
 
 :::zone-end
 
@@ -297,9 +297,9 @@ Visual Studio を使用して、Unity プレーヤーの開発ビルドをデバ
 
 |コマンド|ショートカット|シュートカット コマンド名|
 |-------------|--------------|---------------------------|
-|MonoBehavior ウィザードを開く|**Cmd** +**Shift** +**M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
-|Unity のドキュメントにアクセスする|**Cmd + '**|**Help.UnityAPIReference**|
+|MonoBehavior ウィザードを開く|**Cmd**+**Shift**+**M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
+|Unity のドキュメントにアクセスする|**Cmd+'**|**Help.UnityAPIReference**|
 
-既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「 [IDE のカスタマイズ](/mac/customizing-the-ide#key-bingings)」を参照してください。
+既定値では不便な場合は、ショートカット キーの組み合わせを変更できます。 変更方法については、「[IDE のカスタマイズ](/mac/customizing-the-ide#key-bingings)」を参照してください。
 
 :::zone-end

@@ -1,6 +1,6 @@
 ---
-title: QUERYて FUNC |Microsoft Docs
-description: QUERYを使用して、ファイル名のコレクションを列挙し、各ファイルの状態を確認します。
+title: QUERYCHANGESFUNC | Microsoft Docs
+description: QUERYCHANGESFUNC コールバック関数は、ファイル名のコレクションを列挙し、各ファイルの状態を判断するために使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,15 +17,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: cc797d68f6df6d9aab93554ba95955a7d9f45eea
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068623"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
-これは、ファイル名のコレクションを列挙し、各ファイルの状態を特定するために [Sccquerychanges](../extensibility/sccquerychanges-function.md) 操作によって使用されるコールバック関数です。
+これは、ファイル名のコレクションを列挙し、各ファイルの状態を判断するために [SccQueryChanges](../extensibility/sccquerychanges-function.md) 操作で使用されるコールバック関数です。
 
- `SccQueryChanges`関数には、ファイルの一覧とコールバックへのポインターが指定されてい `QUERYCHANGESFUNC` ます。 ソース管理プラグインは、指定されたリストを列挙し、リスト内の各ファイルについて (このコールバックによって) 状態を提供します。
+ `SccQueryChanges` 関数には、ファイルの一覧と `QUERYCHANGESFUNC` コールバックへのポインターが指定されます。 ソース管理プラグインにより、指定された一覧が列挙され、(このコールバックを介して) 一覧内の各ファイルの状態が表示されます。
 
 ## <a name="signature"></a>署名
 
@@ -39,23 +39,23 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 ## <a name="parameters"></a>パラメーター
  pvCallerData
 
-から `pvCallerData` 呼び出し元 (IDE) によって [Sccquerychanges](../extensibility/sccquerychanges-function.md)によって渡されるパラメーター。 ソース管理プラグインは、この値の内容についての想定を行いません。
+[入力] 呼び出し元 (IDE) から [SccQueryChanges](../extensibility/sccquerychanges-function.md) に渡される `pvCallerData` パラメーター。 ソース管理プラグイン側では、この値の内容について何も想定しないでください。
 
- Pにデータを
+ pChangesData
 
-からファイルへの変更を記述する [querychanges データ構造](#LinkQUERYCHANGESDATA) 体へのポインター。
+[入力] ファイルへの変更を記述する [QUERYCHANGESDATA 構造体](#LinkQUERYCHANGESDATA)構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
- IDE から適切なエラーコードが返されます。
+ IDE によって適切なエラー コードが返されます。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|処理し続けます。|
 |SCC_I_OPERATIONCANCELED|処理を停止します。|
-|SCC_E_xxx|適切な SCC エラーが発生すると処理が停止します。|
+|SCC_E_xxx|適切な SCC エラーが発生すると、処理が停止します。|
 
-## <a name="querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a> QUERYのデータ構造
- 各ファイルに渡される構造は、次のようになります。
+## <a name="querychangesdata-structure"></a><a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA 構造体
+ 各ファイルに渡される構造体は、次のようになります。
 
 ```cpp
 struct QUERYCHANGESDATA_A
@@ -79,26 +79,26 @@ struct QUERYCHANGESDATA_W
 
  この構造体の dwSize サイズ (バイト単位)。
 
- lpFileName この項目の元のファイル名。
+ lpFileName: この項目の元のファイル名。
 
  ファイルの状態を示す dwChangeType コード:
 
 |コード|説明|
 |----------|-----------------|
 |`SCC_CHANGE_UNKNOWN`|変更内容を識別できません。|
-|`SCC_CHANGE_UNCHANGED`|このファイルの名前を変更することはできません。|
-|`SCC_CHANGE_DIFFERENT`|ファイルの id が異なりますが、同じ名前がデータベース内に存在します。|
-|`SCC_CHANGE_NONEXISTENT`|ファイルがデータベースまたはローカルに存在しません。|
-|`SCC_CHANGE_DATABASE_DELETED`|ファイルがデータベースで削除されました。|
-|`SCC_CHANGE_LOCAL_DELETED`|ファイルはローカルで削除されましたが、ファイルはデータベースにまだ存在します。 これを特定できない場合は、を返し `SCC_CHANGE_DATABASE_ADDED` ます。|
+|`SCC_CHANGE_UNCHANGED`|このファイルの名前は変更されません。|
+|`SCC_CHANGE_DIFFERENT`|データベース内に、ID は異なりますが、同じ名前のファイルが存在します。|
+|`SCC_CHANGE_NONEXISTENT`|ファイルはデータベース内にもローカルにも存在しません。|
+|`SCC_CHANGE_DATABASE_DELETED`|データベース内のファイルは削除されました。|
+|`SCC_CHANGE_LOCAL_DELETED`|ローカルでファイルは削除されましたが、データベース内にはまだファイルが存在します。 これを判断できない場合は、`SCC_CHANGE_DATABASE_ADDED` を返します。|
 |`SCC_CHANGE_DATABASE_ADDED`|ファイルはデータベースに追加されましたが、ローカルには存在しません。|
-|`SCC_CHANGE_LOCAL_ADDED`|ファイルがデータベースに存在せず、新しいローカルファイルです。|
-|`SCC_CHANGE_RENAMED_TO`|ファイル名が変更されたか、データベースでとして移動されました `lpLatestName` 。|
-|`SCC_CHANGE_RENAMED_FROM`|データベース内のファイルの名前が変更または移動されまし `lpLatestName` た。この値を追跡するにはコストがかかりすぎる場合は、などの別のフラグを返し `SCC_CHANGE_DATABASE_ADDED` ます。|
+|`SCC_CHANGE_LOCAL_ADDED`|ファイルはデータベース内に存在せず、新しいローカル ファイルです。|
+|`SCC_CHANGE_RENAMED_TO`|データベース内のファイル名は `lpLatestName` に変更されたか、移動されました。|
+|`SCC_CHANGE_RENAMED_FROM`|データベース内のファイル名は `lpLatestName` から変更されたか、移動されました。この追跡にコストがかかりすぎる場合は、`SCC_CHANGE_DATABASE_ADDED` などの別のフラグを返します。|
 
- lpLatestName この項目の現在のファイル名を指定します。
+ lpLatestName: この項目の現在のファイル名。
 
 ## <a name="see-also"></a>こちらもご覧ください
-- [IDE によって実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)
+- [IDE で実装されるコールバック関数](../extensibility/callback-functions-implemented-by-the-ide.md)
 - [SccQueryChanges](../extensibility/sccquerychanges-function.md)
 - [エラー コード](../extensibility/error-codes.md)

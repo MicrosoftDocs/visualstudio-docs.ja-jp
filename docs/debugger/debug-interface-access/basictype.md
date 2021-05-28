@@ -1,7 +1,9 @@
 ---
-title: BasicType |Microsoft Docs
+title: BasicType | Microsoft Docs
+description: Visual Studio Debug Interface Access SDK でシンボルの基本型を指定する、BasicType 列挙型に関する参照情報を検索します。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fff76abdecdd8613a462225278053ef4f6d9694
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: a86a25d02b1aa51e49d80b71dbd37b2aa4c2d103
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745476"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634225"
 ---
 # <a name="basictype"></a>BasicType
 シンボルの基本型を指定します。
@@ -49,34 +51,34 @@ enum BasicType {
 };
 ```
 
-## <a name="elements"></a>Elements
-btNoType には基本型が指定されていません。
+## <a name="elements"></a>要素
+btNoType 基本型が指定されていません。
 
 btVoid 基本型は `void` です。
 
-btChar 基本型は `char` (C/C++型) です。
+btChar 基本型は `char` (C/C++ 型) です。
 
 btWChar 基本型はワイド (Unicode) 文字 (`WCHAR`) です。
 
-btInt 基本型は `signed int` (C/C++ type) です。
+btInt 基本型は `signed int` (C/C++ 型) です。
 
-btUInt 基本型は `unsigned int` (C/C++ type) です。
+btUInt 基本型は `unsigned int` (C/C++ 型) です。
 
-btFloat 基本型は、浮動小数点数 (`FLOAT`) です。
+btFloat 基本型は浮動小数点数 (`FLOAT`) です。
 
-btBCD 基本型は、バイナリでコード化された10進数 (`BCD`) です。
+btBCD 基本型は、2 進化 10 進数 (`BCD`) です。
 
 btBool 基本型はブール値 (`BOOL`) です。
 
-btLong 基本型は `long int` (C/C++型) です。
+btLong 基本型は `long int` (C/C++ 型) です。
 
-btULong 基本型は `unsigned long int` (C/C++型) です。
+btULong 基本型は `unsigned long int` (C/C++ 型) です。
 
-btCurrency 基本型は currency です。
+btCurrency 基本型は通貨です。
 
-btDate 基本型は日付/時刻 (`DATE`) です。
+btDate 基本型は日時 (`DATE`) です。
 
-btVariant 基本型は、変数型の構造体 (`VARIANT`) です。
+btVariant 基本型は変数型の構造体 (`VARIANT`) です。
 
 btComplex 基本型は複素数です。
 
@@ -86,13 +88,13 @@ btBSTR 基本型は、基本またはバイナリ文字列 (`BSTR`) です。
 
 btHresult 基本型は `HRESULT` です。
 
-## <a name="remarks"></a>Remarks
-この列挙体の値は、 [IDiaSymbol:: get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)メソッドによって返されます。
+## <a name="remarks"></a>解説
+この列挙型の値は、[IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) メソッドによって返されます。
 
-## <a name="requirements"></a>［要件］
-ヘッダー: cvconst. h
+## <a name="requirements"></a>要件
+ヘッダー: cvconst.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)
 - [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)
 - [IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)

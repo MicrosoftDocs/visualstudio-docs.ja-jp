@@ -1,6 +1,6 @@
 ---
-description: METADATA_TYPE 構造体は、メタデータから取得したフィールド型に関する情報を指定します。
-title: METADATA_TYPE |Microsoft Docs
+description: METADATA_TYPE 構造体は、メタデータから取得したフィールドの型に関する情報を指定します。
+title: METADATA_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 5a76e051e146985338564d497323b6232b35a4a1
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079853"
 ---
 # <a name="metadata_type"></a>METADATA_TYPE
-この構造体は、メタデータから取得されたフィールド型に関する情報を指定します。
+この構造体は、メタデータから取得したフィールドの型に関する情報を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,22 +49,22 @@ public struct METADATA_TYPE {
  シンボルの取得元のアプリケーションの ID。 これは、アプリケーションのインスタンスを一意に識別するために使用されます。
 
  `guidModule`\
- このフィールドを含むモジュールの GUID。
+ このフィールドが含まれるモジュールの GUID。
 
  `tokClass`\
- この型のメタデータトークン ID。
+ この型のメタデータ トークン ID。
 
- [C++] `_mdToken` は、 `typedef` 32 ビットのです `int` 。
+ [C++] `_mdToken` は、32 ビット `int` の `typedef` です。
 
-## <a name="remarks"></a>注釈
- この構造体は、構造体のフィールドがに設定されている場合に、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) 構造体の共用体の一部として表示され `dwKind` `TYPE_INFO` `TYPE_KIND_METADATA` ます ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) 列挙型の値)。
+## <a name="remarks"></a>解説
+ この構造体は、`TYPE_INFO` 構造体の `dwKind` フィールドを `TYPE_KIND_METADATA` ([dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) 列挙型の値) に設定した場合、[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) 構造体に含まれる共用体の一部になります。
 
- `tokClass`値は、型を一意に識別するメタデータトークンです。 メタデータトークン ID の上位ビットを解釈する方法の詳細については、 `CorTokenType` .NET FRAMEWORK SDK の corhdr .h ファイルの列挙体を参照してください。
+ `tokClass` 値は、型を一意に識別するメタデータ トークンです。 メタデータ トークン ID の上位ビットを解釈する方法の詳細については、.NET Framework SDK の corhdr.h ファイルの `CorTokenType` 列挙型を参照してください。
 
 ## <a name="requirements"></a>要件
- ヘッダー: sh. h
+ ヘッダー: sh.h
 
- 名前空間: VisualStudio。
+ 名前空間: Microsoft.VisualStudio.Debugger.Interop
 
  アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

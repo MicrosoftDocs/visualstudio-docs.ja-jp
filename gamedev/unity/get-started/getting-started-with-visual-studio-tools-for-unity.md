@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Tools for Unity の使用を開始する | Microsoft Docs
-description: Visual Studio for Unity の開発をインストールしてセットアップする方法について説明します。
+description: Visual Studio Tools for Unity をインストールして開発環境を設定する方法について説明します。
 ms.custom: ''
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
@@ -15,50 +15,50 @@ ms.workload:
 zone_pivot_groups: platform
 ms.openlocfilehash: e05a94ecf9cf690f46299684c82f2b3961a783c8
 ms.sourcegitcommit: 585547ea7363ab1b6bb9d41f6d008cbe478d1a3b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/27/2021
 ms.locfileid: "98912569"
 ---
-# <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio と Unity を使ってみる
+# <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio と Unity の使用を開始する
 
 > [!NOTE]
-> このガイドでは、unity Hub プログラムを使用して Unity が既にインストールされていることを前提としています。 Unity [を初めて](https://learn.unity.com/pathway/unity-essentials) 使用する場合は、Unity の学習方法をお勧めします。
+> このガイドでは、Unity Hub プログラムを使用して Unity が既にインストールされていることを前提としています。 Unity を初めて使用する場合は、Unity Learn にアクセスして、[Unity Essentials のラーニング パス](https://learn.unity.com/pathway/unity-essentials)を修了しておくことをお勧めします。
 
-## <a name="install-unity-support-for-visual-studio"></a>Unity support for Visual Studio のインストール
+## <a name="install-unity-support-for-visual-studio"></a>Visual Studio 向けの Unity のサポートをインストールする
 
-Visual Studio Tools for Unity は、C# などの記述とデバッグをサポートする無料の拡張機能です。 拡張機能に含まれる内容の完全な一覧については、 [「Tools For Unity の概要」](./visual-studio-tools-for-unity.md) を参照してください。
+Visual Studio Tools for Unity は、C# などの記述とデバッグをサポートする無料の拡張機能です。 この拡張機能に含まれる内容の一覧については、[Tools for Unity の概要](./visual-studio-tools-for-unity.md)をご覧ください。
 
 :::zone pivot="windows"
 
 > [!NOTE]
-> このインストールガイドは、Visual Studio を対象としています。 Visual Studio Code を使用している場合は、 [VS Code のドキュメントを使用した Unity 開発に関する](https://code.visualstudio.com/docs/other/unity)ページを参照してください。
+> このインストール ガイドは Visual Studio を対象としています。 Visual Studio Code を使用している場合は、[VS Code を使用した Unity 開発に関するドキュメント](https://code.visualstudio.com/docs/other/unity)をご覧ください。
 
-1. [Visual Studio インストーラーをダウンロードする](/visualstudio/docs/install/install-visual-studio.md)か、既にインストールされている場合は実行します。
+1. [Visual Studio インストーラーをダウンロード](/visualstudio/docs/install/install-visual-studio.md)します。既にインストールされている場合は、それを実行します。
 2. **[変更]** をクリックします (既にインストールされている場合)。または、 **[インストール]** をクリックして、目的のバージョンの Visual Studio をインストールします (新規インストール)。
-3. [ **ワークロード** ] タブで、[ **ゲーム** ] セクションまでスクロールし、[ **Unity を使用したゲーム開発** ] ワークロードを選択します。
+3. **[ワークロード]** タブで、 **[ゲーム]** セクションまでスクロールし、 **[Unity によるゲーム開発]** ワークロードを選択します。
 
-    ![インストーラーの [Unity を使用したゲーム開発] ワークロードボックス](../media/vs/unity-workload.png)
+    ![インストーラーの [Unity によるゲーム開発] ワークロード ボックス](../media/vs/unity-workload.png)
 
 :::zone-end
 :::zone pivot="macos"
 
 > [!NOTE]
-> このインストールガイドは Visual Studio for Mac を対象としています。 Visual Studio Code を使用している場合は、 [VS Code のドキュメントを使用した Unity 開発に関する](https://code.visualstudio.com/docs/other/unity)ページを参照してください。
+> このインストール ガイドは Visual Studio for Mac を対象としています。 Visual Studio Code を使用している場合は、[VS Code を使用した Unity 開発に関するドキュメント](https://code.visualstudio.com/docs/other/unity)をご覧ください。
 
-Tools for Unity は Visual Studio for Mac のインストールに含まれており、個別のインストール手順は必要ありません。 これは、[ **Visual Studio for Mac > 拡張機能 > ゲーム開発** ] メニューで確認できます。 **Visual Studio for Mac Tools For Unity** が有効になっている必要があります。
+Tools for Unity は Visual Studio for Mac のインストールに含まれており、個別のインストール手順は必要ありません。 これは、 **[Visual Studio for Mac] > [拡張機能] > [ゲーム開発]** メニューで確認できます。 **[Visual Studio for Mac Tools for Unity]** が有効になっている必要があります。
 
-![Visual Studio for Mac Tools for Unity が有効になっている拡張機能マネージャービュー](../media/vsm/unity-workload.png)
+![Visual Studio for Mac Tools for Unity が有効になった状態の拡張機能マネージャー ビュー](../media/vsm/unity-workload.png)
 
 :::zone-end
 
 ## <a name="check-for-updates"></a>更新プログラムをチェックする
 
-最新のバグ修正、機能、および Unity サポートを利用できるように、Visual Studio と Visual Studio for Mac を更新しておくことをお勧めします。 これには、Unity バージョンの更新は必要ありません。
+Visual Studio と Visual Studio for Mac を更新して、最新のバグ修正プログラム、機能、および Unity サポートを利用できるようにしておくことをお勧めします。 これには Unity バージョンの更新は必要ありません。
 
 :::zone pivot="windows"
 
-1. [ **ヘルプ > [更新プログラムの確認** ] メニューをクリックします。
+1. **[ヘルプ] > [更新プログラムの確認]** メニューをクリックします。
 
     ![Visual Studio 2019 の [更新プログラムの確認] メニュー](../media/vs/check-for-updates.png)
 
@@ -67,35 +67,35 @@ Tools for Unity は Visual Studio for Mac のインストールに含まれて�
 :::zone-end
 :::zone pivot="macos"
 
-1. [ **Visual Studio for Mac > [更新プログラムの確認** ] メニューをクリックして、 **Visual Studio の更新** ダイアログを開きます。
-2. 利用可能な更新プログラムがある場合は、[ **インストール** ] ボタンをクリックします。
+1. **[Visual Studio for Mac] > [更新プログラムの確認...]** メニューをクリックして、 **[Visual Studio の更新]** ダイアログを開きます。
+2. 利用可能な更新プログラムがある場合は、 **[インストール]** ボタンをクリックします。
 
 :::zone-end
 
 ## <a name="configure-unity-to-use-visual-studio"></a>Visual Studio を使用するように Unity を構成する
 
-既定では、Unity は、Visual Studio または Visual Studio for Mac をスクリプトエディターとして使用するように構成されている必要があります。 これを確認するか、Unity エディターから外部スクリプトエディターを Visual Studio の特定のバージョンに変更することができます。
+既定では、Visual Studio または Visual Studio for Mac をスクリプト エディターとして使用するように Unity を構成しておく必要があります。 Unity エディターからこれを確認したり、外部スクリプト エディターを特定のバージョンの Visual Studio に変更したりできます。
 
 :::zone pivot="windows"
 
-1. Unity エディターで、[ **> 設定の編集** ] メニューを選択します。
-2. 左側の [ **外部ツール** ] タブを選択します。
-3. [ **外部スクリプトエディター** ] ドロップダウンリストには、Visual Studio のさまざまなインストールを選択する方法が用意されています。 ドロップダウンリストから [ **参照...** ] をクリックして、一覧にないバージョンを追加することもできます。
+1. Unity エディターで、 **[Edit]\(編集\) > [Preferences]\(ユーザー設定\)** メニューを選択します。
+2. 左側にある **[External Tools]\(外部ツール\)** タブを選択します。
+3. **[External Script Editor]\(外部スクリプト エディター\)** ドロップダウン リストでは、使用する Visual Studio のバージョンを選択できます。 ドロップダウン リストから **[Browse...]\(参照...\)** をクリックして、一覧にないバージョンを追加することもできます。
 
-    ![Windows 上の Unity エディターの [外部ツール] 基本設定メニュー](../media/vs/preferences-external-tools.png)
+    ![Windows 上の Unity エディターの [External Tools]\(外部ツール\) ユーザー設定メニュー](../media/vs/preferences-external-tools.png)
 
-4. **[Browse...]\(参照...\)** を選択した場合は、Visual Studio インストール ディレクトリの中の **Common7/IDE** ディレクトリに移動し、**devenv.exe** を選択します。 次に、[ **開く**] をクリックします。
+4. **[Browse...]\(参照...\)** を選択した場合は、Visual Studio インストール ディレクトリの中の **Common7/IDE** ディレクトリに移動し、**devenv.exe** を選択します。 次に、 **[Open]\(開く\)** をクリックします。
 5. **[External Script Editor]\(外部スクリプト エディター\)** の一覧から Visual Studio を選択した後、 **[Editor Attaching]\(エディターのアタッチ\)** チェックボックスがオンになっていることを確認します。
 6. **[Preferences]\(ユーザー設定\)** ダイアログを閉じて、構成プロセスを完了します。
 
 :::zone-end
 :::zone pivot="macos"
 
-1. Unity エディターで、[ **unity > 基本設定** ] メニューを選択します。
-2. 左側の [ **外部ツール** ] タブを選択します。
-3. [ **外部スクリプトエディター** ] ドロップダウンリストには、Visual Studio のさまざまなインストールを選択する方法が用意されています。 ドロップダウンリストから [ **参照...** ] をクリックして、一覧にないバージョンを追加することもできます。
+1. Unity エディターで、 **[Unity]\(Unity\) > [Preferences]\(ユーザー設定\)** メニューを選択します。
+2. 左側にある **[External Tools]\(外部ツール\)** タブを選択します。
+3. **[External Script Editor]\(外部スクリプト エディター\)** ドロップダウン リストでは、使用する Visual Studio のバージョンを選択できます。 ドロップダウン リストから **[Browse...]\(参照...\)** をクリックして、一覧にないバージョンを追加することもできます。
 
-    ![MacOS の Unity エディターの [外部ツール] 基本設定メニュー](../media/vsm/preferences-external-tools.png)
+    ![macOS 上の Unity エディターの [External Tools]\(外部ツール\) ユーザー設定メニュー](../media/vsm/preferences-external-tools.png)
 
 4. **[Preferences]\(ユーザー設定\)** ダイアログを閉じて、構成プロセスを完了します。
 
@@ -103,4 +103,4 @@ Tools for Unity は Visual Studio for Mac のインストールに含まれて�
 
 ## <a name="next-steps"></a>次のステップ
 
- Visual Studio で Unity プロジェクトを操作およびデバッグする方法については、 [Visual Studio Tools for Unity の使用](using-visual-studio-tools-for-unity.md)に関するページを参照してください。
+ Visual Studio で Unity プロジェクトを操作およびデバッグする方法については、「[Visual Studio Tools for Unity を使用する](using-visual-studio-tools-for-unity.md)」をご覧ください。

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaLoadCallback:: NotifyDebugDir |Microsoft Docs'
+description: .exe ファイル内でデバッグ ディレクトリが見つかったときに呼び出されます。
+title: IDiaLoadCallback::NotifyDebugDir | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: bd04e2f6-0dbf-4742-a556-96f2cd99aa19
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6618440cab9b9042ec371383f6c809ca1d0d11f7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: ed83b79dea8f488be79a2161968876c9aa2a9a11
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743086"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634395"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
-デバッグディレクトリが .exe ファイルで見つかったときに呼び出されます。
+.exe ファイル内でデバッグ ディレクトリが見つかったときに呼び出されます。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT NotifyDebugDir ( 
+HRESULT NotifyDebugDir ( 
    BOOL  fExecutable,
    DWORD cbData,
    BYTE  data[]
@@ -35,26 +36,26 @@ HRESULT NotifyDebugDir ( 
 #### <a name="parameters"></a>パラメーター
  `fExecutable`
 
-[in] デバッグディレクトリが (dbg ファイルではなく) 実行可能ファイルから読み取られる場合は `TRUE` します。
+[in] デバッグ ディレクトリが、.dbg ファイルからではなく、実行可能ファイルから読み取られる場合は `TRUE`。
 
  `cbData`
 
-からデバッグディレクトリ内のデータのバイト数。
+[in] デバッグ ディレクトリ内のデータのバイト数。
 
  `data[]`
 
-からデバッグディレクトリを使用して入力された配列。
+[in] デバッグ ディレクトリが格納される配列。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 通常、リターンコードは無視されます。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 リターン コードは、通常無視されます。
 
-## <a name="remarks"></a>Remarks
- [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)メソッドは、実行可能ファイルの処理中にデバッグディレクトリを検出すると、このコールバックを呼び出します。
+## <a name="remarks"></a>解説
+ [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) メソッドは、実行可能ファイルの処理中にデバッグ ディレクトリを検出すると、このコールバックを呼び出します。
 
- このメソッドを使用すると、.pdb ファイルに存在しないデバッグ情報をサポートするために、クライアントが実行可能ファイルやデバッグファイルをリバースエンジニアリングする必要がなくなります。 このデータを使用すると、クライアントは使用可能なデバッグ情報の種類と、実行可能ファイルまたは dbg ファイルのどちらに存在するかを認識できます。
+ このメソッドを使用すると、.pdb ファイルに存在しないデバッグ情報をサポートするために、クライアントで実行可能ファイルやデバッグ ファイルをリバース エンジニアリングする必要がなくなります。 このデータがあれば、クライアントは利用可能なデバッグ情報の種類を把握し、その情報が実行可能ファイルと dbg ファイルのどちらに存在するかを認識できます。
 
- @No__t_0 メソッドは、シンボルの提供に必要なときに .pdb ファイルと dbg ファイルの両方を透過的に開くため、ほとんどのクライアントはこのコールバックを必要としません。
+ `IDiaDataSource::loadDataForExe` メソッドは、シンボルでの必要性に応じて .pdb と dbg の両方のファイルを透過的に開くので、ほとんどのクライアントでは、このコールバックは必要になりません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
 - [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)
