@@ -1,6 +1,6 @@
 ---
 description: ダンプをファイルに書き込みます。
-title: 'IDebugProgram2:: WriteDump |Microsoft Docs'
+title: IDebugProgram2::WriteDump | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 8eca50eb6e828841a247ed51d7f73f61cb63e0e9
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105084429"
@@ -44,16 +44,16 @@ int WriteDump(
 
 ## <a name="parameters"></a>パラメーター
 `DumpType`\
-からダンプの種類 (short、long など) を指定する [dumptype](../../../extensibility/debugger/reference/dumptype.md) 列挙の値です。
+[入力] ダンプの型 (short、long など) を指定する [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) 列挙型の値。
 
 `pszDumpUrl`\
-からダンプの書き込み先の URL。 通常、これはの形式です `file://c:\path\filename.ext` が、任意の有効な URL にすることができます。
+[入力] ダンプの書き込み先の URL。 通常、これは `file://c:\path\filename.ext` の形式ですが、任意の有効な URL を使用できます。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 通常、プログラムダンプには、現在のスタックフレーム、スタック自体、プログラムで実行されているスレッドの一覧、およびプログラムが所有するメモリが含まれます。
+## <a name="remarks"></a>解説
+ 通常、プログラム ダンプには、現在のスタック フレーム、スタック自体、プログラムで実行されているスレッドのリスト、および可能な場合はプログラムによって所有されるメモリが含まれます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

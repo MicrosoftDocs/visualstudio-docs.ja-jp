@@ -1,6 +1,6 @@
 ---
-description: このプロパティの値を設定し、必要に応じてエラーメッセージを返します。
-title: 'IDebugProperty3:: SetValueAsStringWithError |Microsoft Docs'
+description: このプロパティの値を設定し、必要に応じてエラー メッセージを返します。
+title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 021d2fed674408e1aa9ab6a7e71be83c1c2737ce
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105083922"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-このプロパティの値を設定し、必要に応じてエラーメッセージを返します。
+このプロパティの値を設定し、必要に応じてエラー メッセージを返します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,25 +48,25 @@ int SetValueAsStringWithError(
 
 ## <a name="parameters"></a>パラメーター
 `pszValue`\
-から設定する値。
+[入力] 設定する値。
 
 `dwRadix`\
-から設定される値の基数。
+[入力] 設定する値の基数。
 
 `dwTimeout`\
-から値が設定されるまで待機する時間の長さ ( `INFINITE` 無期限に待機することを意味します)。
+[入力] 値が設定されるまで待機する時間の長さ (`INFINITE` は無期限に待機することを意味します)。
 
 `errorString`\
-入出力値の設定中にエラーが発生した場合は、失敗の原因が保持されます。
+[出力] 値の設定中にエラーが発生した場合は、失敗の原因がここに保持されます。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 入力値には、評価する式を指定できます。
 
 ## <a name="example"></a>例
-次の例は、 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)インターフェイスを公開する **cproperty** オブジェクトに対してこのメソッドを実装する方法を示しています。
+次の例は、[IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) インターフェイスを公開する **CProperty** オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CProperty::SetValueAsStringWithError(
@@ -170,5 +170,5 @@ HRESULT CProperty::SetValueAsStringWithError(
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)

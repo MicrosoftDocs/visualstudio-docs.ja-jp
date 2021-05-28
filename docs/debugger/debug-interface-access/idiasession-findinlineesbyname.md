@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSession:: findInlineesByName |Microsoft Docs'
+description: クライアントが反復処理できるように、指定された名前に一致するすべてのインライン関数の行番号情報の列挙を取得します。
+title: IDiaSession::findInlineesByName | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9860336d-f703-4ecb-bfc4-3f5beb175a76
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a7fd74707284e32471bad1da27e288139ea617a1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 6c5f39638c16444f7a60df028813c66525b0d025
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742176"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634318"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
-指定した名前に一致するすべてのインライン関数の行番号情報をクライアントが反復処理できるようにする列挙体を取得します。
+クライアントが反復処理できるように、指定された名前に一致するすべてのインライン関数の行番号情報の列挙を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findInlineesByName ( 
+HRESULT findInlineesByName ( 
    LPCOLESTR             name,
    DWORD                 option,
    IDiaEnumLineNumbers** ppResult
@@ -33,18 +34,18 @@ HRESULT findInlineesByName ( 
 #### <a name="parameters"></a>パラメーター
  `name`
 
-から比較に使用する名前を指定します。
+[入力] 比較に使用する名前を指定します。
 
  `option`
 
-から名前検索に適用される比較オプションを指定します。 [Namesearchoptions 列挙](../../debugger/debug-interface-access/namesearchoptions.md)列挙の値は、単独で、または組み合わせて使用できます。
+[入力] 名前の検索に適用する比較オプションを指定します。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)に関するページの列挙型の値は、単独で使用することも、組み合わせて使用することもできます。
 
  `ppResult`
 
-入出力取得された行番号の一覧を含む[IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)オブジェクトを返します。
+[出力] 取得された行番号の一覧を含む [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
