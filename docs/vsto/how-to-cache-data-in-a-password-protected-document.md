@@ -1,6 +1,6 @@
 ---
-title: '方法: パスワードで保護されたドキュメントでデータをキャッシュする'
-description: パスワードで保護されているドキュメントまたはブックのデータキャッシュにデータを追加する場合、プロジェクトの2つのメソッドをオーバーライドすることによって、キャッシュされたデータへの変更を保存できます。
+title: '方法: パスワードで保護されたドキュメントにデータをキャッシュする'
+description: パスワードで保護されたドキュメントやブック内のデータ キャッシュにデータを追加する場合は、プロジェクトで 2 つのメソッドをオーバーライドすることで、キャッシュされたデータへの変更を保存できます。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,64 +18,64 @@ ms.workload:
 - office
 ms.openlocfilehash: ccdb906022d4dcfc321af294eec59afa36832773
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107824186"
 ---
-# <a name="how-to-cache-data-in-a-password-protected-document"></a>方法: パスワードで保護されたドキュメントでデータをキャッシュする
-  パスワードで保護されているドキュメントまたはブックのデータキャッシュにデータを追加した場合、キャッシュされたデータへの変更は自動的には保存されません。 キャッシュされたデータへの変更を保存するには、プロジェクト内の2つのメソッドをオーバーライドします。
+# <a name="how-to-cache-data-in-a-password-protected-document"></a>方法: パスワードで保護されたドキュメントにデータをキャッシュする
+  パスワードで保護されたドキュメントやブック内のデータ キャッシュにデータを追加した場合、キャッシュされたデータへの変更は自動的には保存されません。 キャッシュされたデータへの変更を保存するには、プロジェクトで 2 つのメソッドをオーバーライドします。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 ## <a name="caching-in-word-documents"></a>Word 文書でのキャッシュ
 
-### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>パスワードで保護されている Word 文書にデータをキャッシュするには
+### <a name="to-cache-data-in-a-word-document-that-is-protected-with-a-password"></a>パスワードで保護された Word 文書にデータをキャッシュするには
 
-1. クラスで `ThisDocument` 、パブリックフィールドまたはキャッシュされるプロパティをマークします。 詳細については、「 [データのキャッシュ](../vsto/caching-data.md)」を参照してください。
+1. `ThisDocument` クラスで、パブリックのフィールドまたはプロパティをキャッシュ対象としてマークします。 詳細については、「[データのキャッシュ](../vsto/caching-data.md)」を参照してください。
 
-2. クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> メソッドをオーバーライド `ThisDocument` し、ドキュメントから保護を削除します。
+2. `ThisDocument` クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> メソッドをオーバーライドし、ドキュメントから保護を削除します。
 
-     ドキュメントが保存されると、は [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] このメソッドを呼び出してドキュメントの保護を解除できるようにします。 これにより、キャッシュされたデータへの変更を保存できます。
+     ドキュメントが保存されると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によってこのメソッドが呼び出され、ドキュメントの保護を解除できるようになります。 これにより、キャッシュされたデータへの変更を保存できるようになります。
 
-3. クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> メソッドをオーバーライド `ThisDocument` し、文書に保護を適用し直します。
+3. `ThisDocument` クラスの <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> メソッドをオーバーライドし、ドキュメントに保護を再適用します。
 
-     ドキュメントが保存されると、は [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] このメソッドを呼び出して、文書に保護を再適用する機会を与えます。
+     ドキュメントが保存されると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によってこのメソッドが呼び出され、ドキュメントに保護を再適用できるようになります。
 
 ### <a name="example"></a>例
- 次のコード例は、パスワードで保護されている Word 文書にデータをキャッシュする方法を示しています。 メソッドで保護を削除する前に、メソッドで <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> 同じ種類の保護を再適用できるように、現在の値が保存され <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> ます。
+ 次のコード例は、パスワードで保護された Word 文書にデータをキャッシュする方法を示したものです。 このコードでは、<xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> メソッドで保護を削除する前に、現在の <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> の値を保存します。これにより、<xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> メソッドで同じ種類の保護を再適用できるようになります。
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs" id="Snippet1":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedDocument/ThisDocument.vb" id="Snippet1":::
 
 ### <a name="compile-the-code"></a>コードのコンパイル
- プロジェクトのクラスに次のコードを追加 `ThisDocument` します。 このコードでは、パスワードがという名前のフィールドに格納されていることを前提としてい `securelyStoredPassword` ます。
+ このコードを、プロジェクトの `ThisDocument` クラスに追加します。 このコードでは、パスワードが `securelyStoredPassword` という名前のフィールドに格納されていることを前提としています。
 
-## <a name="cache-in-excel-workbooks"></a>Excel ブック内のキャッシュ
- Excel プロジェクトでは、メソッドを使用してブック全体をパスワードで保護する場合にのみ、この手順が必要になり <xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> ます。 メソッドを使用して特定のワークシートだけをパスワードで保護する場合、この手順は必要ありません <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> 。
+## <a name="cache-in-excel-workbooks"></a>Excel ブックでのキャッシュ
+ Excel プロジェクトでは、<xref:Microsoft.Office.Tools.Excel.Workbook.Protect%2A> メソッドを使ってブック全体をパスワードで保護する場合にのみ、この手順が必要になります。 <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> メソッドを使って特定のワークシートだけをパスワードで保護する場合、この手順は必要ありません。
 
-### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>パスワードで保護されている Excel ブックにデータをキャッシュするには
+### <a name="to-cache-data-in-an-excel-workbook-that-is-protected-with-a-password"></a>パスワードで保護された Excel ブックにデータをキャッシュするには
 
-1. `ThisWorkbook`クラスまたは n クラスのいずれかで `Sheet`  、パブリックフィールドまたはキャッシュされるプロパティをマークします。 詳細については、「 [データのキャッシュ](../vsto/caching-data.md)」を参照してください。
+1. `ThisWorkbook` クラス、またはいずれかの `Sheet`*n* クラスで、パブリックのフィールドまたはプロパティをキャッシュ対象としてマークします。 詳細については、「[データのキャッシュ](../vsto/caching-data.md)」を参照してください。
 
-2. クラスの <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> メソッドをオーバーライド `ThisWorkbook` し、ブックから保護を削除します。
+2. `ThisWorkbook` クラスの <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> メソッドをオーバーライドし、ブックから保護を削除します。
 
-     ブックが保存されると、は [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] このメソッドを呼び出して、ブックの保護を解除する機会を与えます。 これにより、キャッシュされたデータへの変更を保存できます。
+     ブックが保存されると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によってこのメソッドが呼び出され、ブックの保護を解除できるようになります。 これにより、キャッシュされたデータへの変更を保存できるようになります。
 
-3. クラスの <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> メソッドをオーバーライド `ThisWorkbook` し、文書に保護を適用し直します。
+3. `ThisWorkbook` クラスの <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> メソッドをオーバーライドし、ドキュメントに保護を再適用します。
 
-     ブックが保存されると、は [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] このメソッドを呼び出して、ブックに保護を再適用する機会を与えます。
+     ブックが保存されると、[!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] によってこのメソッドが呼び出され、ブックに保護を再適用できるようになります。
 
 ### <a name="example"></a>例
- 次のコード例は、パスワードで保護されている Excel ブックにデータをキャッシュする方法を示しています。 メソッドで保護を削除する前に、メソッドで <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> 同じ種類の保護を再適用できるように、現在のとの値が保存 <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> され <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> ます。
+ 次のコード例は、パスワードで保護された Excel ブックにデータをキャッシュする方法を示したものです。 このコードでは、<xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> メソッドで保護を削除する前に、現在の <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> および <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> の値を保存します。これにより、<xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> メソッドで同じ種類の保護を再適用できるようになります。
 
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb" id="Snippet1":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_CachedDataProtectedWorkbook/ThisWorkbook.cs" id="Snippet1":::
 
 ### <a name="compile-the-code"></a>コードのコンパイル
- プロジェクトのクラスに次のコードを追加 `ThisWorkbook` します。 このコードでは、パスワードがという名前のフィールドに格納されていることを前提としてい `securelyStoredPassword` ます。
+ このコードを、プロジェクトの `ThisWorkbook` クラスに追加します。 このコードでは、パスワードが `securelyStoredPassword` という名前のフィールドに格納されていることを前提としています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [キャッシュ データ](../vsto/caching-data.md)
-- [方法: オフラインまたはサーバーで使用するデータをキャッシュする](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
-- [方法: Office ドキュメント内のデータソースをプログラムによってキャッシュする](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
+- [方法: オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
+- [方法: Office ドキュメント内のデータ ソースをプログラムでキャッシュする](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)

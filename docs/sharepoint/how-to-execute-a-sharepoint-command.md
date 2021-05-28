@@ -1,6 +1,6 @@
 ---
 title: '方法: SharePoint コマンドを実行する |Microsoft Docs'
-description: 「SharePoint ツールの拡張機能からサーバーオブジェクトモデル API を呼び出すカスタム SharePoint コマンドを作成する方法」を参照してください。
+description: SharePoint ツールの拡張機能からサーバー オブジェクト モデル API を呼び出すためのカスタム SharePoint コマンドを作成する方法について確認してください。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,63 +16,63 @@ ms.workload:
 - office
 ms.openlocfilehash: 4e22ade9b2414e1d598065bb9e417c4706f75a07
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106217178"
 ---
 # <a name="how-to-execute-a-sharepoint-command"></a>方法: SharePoint コマンドを実行する
-  SharePoint ツールの拡張機能でサーバーオブジェクトモデルを使用する場合は、API を呼び出すカスタム *SharePoint コマンド* を作成する必要があります。 コマンドを定義し、SharePoint ツールの拡張機能を使用して配置した後、コマンドを実行して、SharePoint サーバーオブジェクトモデルを呼び出すことができます。 コマンドを実行するには、オブジェクトの ExecuteCommand メソッドのいずれかを使用し <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> ます。
+  SharePoint ツールの拡張機能でサーバー オブジェクト モデルを使用する場合は、API を呼び出すためのカスタム *SharePoint コマンド* を作成する必要があります。 コマンドを定義し、SharePoint ツールの拡張機能と共に配置したら、拡張機能でコマンドを実行して、SharePoint サーバー オブジェクト モデルを呼び出すことができます。 コマンドを実行するには、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> オブジェクトの ExecuteCommand メソッドのいずれかを使用します。
 
- SharePoint コマンドの目的の詳細については、「 [sharepoint オブジェクトモデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)」を参照してください。
+ SharePoint コマンドの目的について詳しくは、「[SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)」をご覧ください。
 
 ### <a name="to-execute-a-sharepoint-command"></a>SharePoint コマンドを実行するには
 
-1. SharePoint ツールの拡張機能で、オブジェクトを取得 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> します。 オブジェクトを取得する方法は、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 作成する拡張機能の種類によって異なります。
+1. SharePoint ツールの拡張機能で、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> オブジェクトを取得します。 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> オブジェクトを取得する方法は、作成する拡張機能の種類によって異なります。
 
-    - SharePoint プロジェクトシステムの拡張機能で、プロパティを使用し <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> ます。
+    - SharePoint プロジェクト システムの拡張機能では、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> プロパティを使用します。
 
-         プロジェクトシステムの拡張機能の詳細については、「 [SharePoint プロジェクトシステムの拡張](../sharepoint/extending-the-sharepoint-project-system.md)」を参照してください。
+         プロジェクト システムの拡張機能について詳しくは、「[SharePoint プロジェクト システムを拡張する](../sharepoint/extending-the-sharepoint-project-system.md)」をご覧ください。
 
-    - **サーバーエクスプローラー** の [ **SharePoint 接続**] ノードの拡張機能で、プロパティを使用し <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> ます。 オブジェクトを取得するには <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> 、プロパティを使用し <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> ます。
+    - **サーバー エクスプローラー** の **[SharePoint 接続]** ノードの拡張機能では、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> プロパティを使用します。 <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> オブジェクトを取得するには、<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> プロパティを使用します。
 
-         **サーバーエクスプローラー** 拡張機能の詳細については、[サーバーエクスプローラーの「SharePoint 接続ノードの拡張](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)」を参照してください。
+         **サーバー エクスプローラー** の拡張機能について詳しくは、「[サーバー エクスプローラーで SharePoint 接続ノードを拡張する](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)」をご覧ください。
 
-    - プロジェクトテンプレートウィザードなど、SharePoint ツールの拡張機能の一部ではないコードでは、プロパティを使用し <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> ます。
+    - SharePoint ツールの拡張機能の一部ではないコード (プロジェクト テンプレート ウィザードなど) では、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> プロパティを使用します。
 
-         プロジェクトサービスの取得の詳細については、「 [SharePoint プロジェクトサービスの使用](../sharepoint/using-the-sharepoint-project-service.md)」を参照してください。
+         プロジェクト サービスの取得について詳しくは、「[SharePoint プロジェクト サービスの使用](../sharepoint/using-the-sharepoint-project-service.md)」をご覧ください。
 
-2. オブジェクトの ExecuteCommand メソッドのいずれかを呼び出し <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> ます。 実行するコマンドの名前を、ExecuteCommand メソッドの最初の引数に渡します。 コマンドにカスタムパラメーターがある場合は、そのパラメーターを ExecuteCommand メソッドの2番目の引数に渡します。
+2. <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> オブジェクトの ExecuteCommand メソッドのいずれかを呼び出します。 実行するコマンドの名前を、ExecuteCommand メソッドの 1 つ目の引数に渡します。 コマンドにカスタム パラメーターがある場合は、そのパラメーターを ExecuteCommand メソッドの 2 つ目の引数に渡します。
 
-     サポートされているコマンド署名ごとに異なる ExecuteCommand オーバーロードがあります。 次の表に、サポートされている署名と、各署名に使用するオーバーロードを示します。
+     サポートされているコマンド シグネチャごとに、異なる ExecuteCommand オーバーロードがあります。 次の表に、サポートされているシグネチャと、各シグネチャに使用するオーバーロードを示します。
 
-    |コマンド署名|使用する ExecuteCommand のオーバーロード|
+    |コマンド シグネチャ|使用する ExecuteCommand オーバーロード|
     |-----------------------|------------------------------------|
-    |コマンドは、既定のパラメーターのみを持ち、 <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> 戻り値はありません。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |コマンドには、既定のパラメーターと戻り値のみが含まれてい <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> ます。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |このコマンドには2つのパラメーター (既定の <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターとカスタムパラメーター) があり、戻り値はありません。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |このコマンドには、2つのパラメーターと戻り値があります。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |コマンドには既定の <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターのみがあり、戻り値はない。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |コマンドには既定の <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターのみがあり、戻り値がある。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |コマンドに 2 つのパラメーター (既定の <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターとカスタム パラメーター) があり、戻り値はない。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |コマンドには、2 つのパラメーターと戻り値がある。|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
 
 ## <a name="example"></a>例
- 次のコード例は、「 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> `Contoso.Commands.UpgradeSolution` [方法: SharePoint コマンドを作成](../sharepoint/how-to-create-a-sharepoint-command.md)する」で説明されているコマンドをオーバーロードを使用して呼び出す方法を示しています。
+ 次のコード例は、「[方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)」で説明されている `Contoso.Commands.UpgradeSolution` コマンドを、<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> オーバーロードを使って呼び出す方法を示したものです。
 
  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs" id="Snippet6":::
  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb" id="Snippet6":::
 
- `Execute`この例に示すメソッドは、 <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> カスタム配置手順でインターフェイスのメソッドを実装したものです。 このコードをより大きな例のコンテキストで表示するには、「 [チュートリアル: SharePoint プロジェクトのカスタム配置手順を作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)する」を参照してください。
+ この例に示す `Execute` メソッドは、カスタムの配置手順での、<xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> インターフェイスの <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> メソッドの実装です。 このコードをより詳細な例のコンテキストで確認したい場合は、「[チュートリアル: SharePoint プロジェクトのカスタム配置手順の作成](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)」を参照してください。
 
- メソッドの呼び出しの詳細については、次の点に注意して <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> ください。
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> メソッドの呼び出しについては、次の点に注意してください。
 
-- 最初のパラメーターは、呼び出すコマンドを識別します。 この文字列は、コマンド定義のに渡す値と一致し <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> ます。
+- 1 つ目のパラメーターは、呼び出すコマンドを識別するものです。 この文字列は、コマンド定義で <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> に渡す値と一致します。
 
-- 2番目のパラメーターは、コマンドのカスタム2番目のパラメーターに渡す値です。 この場合、SharePoint サイトにアップグレードされる *.wsp* ファイルの完全なパスになります。
+- 2 つ目のパラメーターは、コマンドのカスタム (2 つ目の) パラメーターに渡す値です。 今回の場合は、SharePoint サイトにアップグレードされる *.wsp* ファイルの完全なパスになります。
 
-- このコードは、暗黙的な <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターをコマンドに渡しません。 このパラメーターは、SharePoint プロジェクトシステムの拡張機能からコマンドを呼び出したとき、または **サーバーエクスプローラー** の [ **sharepoint 接続**] ノードの拡張機能からコマンドを呼び出すと、コマンドに自動的に渡されます。 インターフェイスを実装するプロジェクトテンプレートウィザードなど、他の種類のソリューションで <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> は、このパラメーターは **null** になります。
+- このコードでは、暗黙的な <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> パラメーターはコマンドに渡されません。 このパラメーターは、SharePoint プロジェクト システムの拡張機能から、または **サーバー エクスプローラー** の **[SharePoint 接続**] ノードの拡張機能からコマンドを呼び出すときに、コマンドに自動的に渡されます。 他の種類のソリューション (<xref:Microsoft.VisualStudio.TemplateWizard.IWizard> インターフェイスを実装するプロジェクト テンプレート ウィザードなど) では、このパラメーターは **null** になります。
 
 ## <a name="compile-the-code"></a>コードのコンパイル
- この例では、VisualStudio アセンブリへの参照が必要です。
+ この例では、Microsoft.VisualStudio.SharePoint アセンブリへの参照が必要です。
 
-## <a name="see-also"></a>関連項目
-- [SharePoint オブジェクトモデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)
+## <a name="see-also"></a>こちらもご覧ください
+- [SharePoint オブジェクト モデルの呼び出し](../sharepoint/calling-into-the-sharepoint-object-models.md)
 - [方法: SharePoint コマンドを作成する](../sharepoint/how-to-create-a-sharepoint-command.md)
-- [チュートリアル: サーバーエクスプローラーを拡張して web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [チュートリアル: サーバー エクスプローラーを拡張して Web パーツを表示する](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

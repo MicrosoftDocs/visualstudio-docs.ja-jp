@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: 初めての Excel 用 VSTO アドインの作成'
-description: Microsoft Excel 用のアプリケーションレベルのアドインを作成します。 作成した機能は、どのブックが開いているかに関係なく、アプリケーション自体で使用できます。
+title: 'チュートリアル: 初めての Excel 用 VSTO アドインを作成する'
+description: Microsoft Excel 用の、アプリケーションレベルのアドインを作成します。 作成した機能は、どのブックが開いているかにかかわらず、アプリケーション自体に対して使用できます。
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.workload:
 - office
 ms.openlocfilehash: fcb2bcc91eb1d19309904caae16701b814113089
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107824407"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>チュートリアル: 初めての Excel 用 VSTO アドインの作成
+# <a name="walkthrough-create-your-first-vsto-add-in-for-excel"></a>チュートリアル: 初めての Excel 用 VSTO アドインを作成する
   この入門チュートリアルでは、Microsoft Office Excel 用のアプリケーション レベルのアドインを作成する方法について説明します。 この種のソリューションに作成した機能は、どのブックが開いているかにかかわらず、アプリケーション自体に対して使用できます。
 
  [!INCLUDE[appliesto_xlallapp](../vsto/includes/appliesto-xlallapp-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "107824407"
 
 7. **[OK]** をクリックします。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Firstexceladdin** プロジェクトが作成され、ThisAddIn コードファイルがエディターで開かれます。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] により **FirstExcelAddIn** プロジェクトが作成され、ThisAddIn コード ファイルがエディターで開かれます。
 
-## <a name="write-code-to-add-text-to-the-saved-workbook"></a>保存されたブックにテキストを追加するコードを記述する
+## <a name="write-code-to-add-text-to-the-saved-workbook"></a>保存するブックにテキストを追加するためのコードを記述する
  次に、ThisAddIn コード ファイルにコードを追加します。 この新しいコードでは、Excel のオブジェクト モデルを使用して、アクティブなワークシートの最初の行に定型句を挿入します。 アクティブなワークシートとは、ユーザーがブックを保存したときに開いているワークシートのことです。 ThisAddIn コード ファイルには、次の生成されたコードが既定で含まれています。
 
-- `ThisAddIn` クラスの部分定義。 このクラスは、コードのエントリ ポイントを提供し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、「 [プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)」を参照してください。クラスの残りの部分 `ThisAddIn` は、変更しない非表示のコードファイルで定義されています。
+- `ThisAddIn` クラスの部分定義。 このクラスは、コードのエントリ ポイントを提供し、Excel のオブジェクト モデルへのアクセスを提供します。 詳しくは、「[VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)」をご覧ください。`ThisAddIn` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。
 
-- `ThisAddIn_Startup` および `ThisAddIn_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel が VSTO アドインを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときには VSTO アドインを初期化し、アンロードされるときにはアドインが使用したリソースをクリーンアップします。 詳細については、「 [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)」を参照してください。
+- `ThisAddIn_Startup` および `ThisAddIn_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel が VSTO アドインを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときには VSTO アドインを初期化し、アンロードされるときにはアドインが使用したリソースをクリーンアップします。 詳しくは、「[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)」をご覧ください。
 
 ### <a name="to-add-a-line-of-text-to-the-saved-workbook"></a>保存するブックにテキストの行を追加するには
 
@@ -94,7 +94,7 @@ ms.locfileid: "107824407"
 
 - `Application` クラスの `ThisAddIn` フィールド。 `Application` フィールドは Excel の現在のインスタンスを表す <xref:Microsoft.Office.Interop.Excel.Application> オブジェクトを返します。
 
-- `Wb` イベントのイベント ハンドラーの <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> パラメーター。 `Wb` パラメーターは、保存されるブックを表す <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトです。 詳細については、「 [Excel オブジェクトモデルの概要](../vsto/excel-object-model-overview.md)」を参照してください。
+- `Wb` イベントのイベント ハンドラーの <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookBeforeSave> パラメーター。 `Wb` パラメーターは、保存されるブックを表す <xref:Microsoft.Office.Interop.Excel.Workbook> オブジェクトです。 詳しくは、「[Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)」をご覧ください。
 
 ## <a name="test-the-project"></a>プロジェクトをテストする
 
@@ -102,7 +102,7 @@ ms.locfileid: "107824407"
 
 1. **F5** キーを押して、プロジェクトをビルドおよび実行します。
 
-     プロジェクトをビルドすると、プロジェクトのビルド出力フォルダーに含まれるアセンブリにコードがコンパイルされます。 さらに Visual Studio は、Excel が VSTO アドインを検出して読み込めるようにする一連のレジストリ エントリを作成し、VSTO アドインを実行できるように開発用コンピューター上のセキュリティを設定します。 詳細については、「 [Office ソリューションのビルド](../vsto/building-office-solutions.md)」を参照してください。
+     プロジェクトをビルドすると、プロジェクトのビルド出力フォルダーに含まれるアセンブリにコードがコンパイルされます。 さらに Visual Studio は、Excel が VSTO アドインを検出して読み込めるようにする一連のレジストリ エントリを作成し、VSTO アドインを実行できるように開発用コンピューター上のセキュリティを設定します。 詳しくは、「[Office ソリューションのビルド](../vsto/building-office-solutions.md)」をご覧ください。
 
 2. Excel で、ブックを保存します。
 
@@ -122,24 +122,24 @@ ms.locfileid: "107824407"
 ## <a name="next-steps"></a>次のステップ
  これで Excel 用の基本的な VSTO アドインが作成されました。VSTO アドインの開発方法の詳細について、以下のトピックを参照してください。
 
-- VSTO アドインで実行できる一般的なプログラミングタスク: [プログラム Vsto アドイン](../vsto/programming-vsto-add-ins.md)。
+- VSTO アドインで実行できる一般的なプログラミング タスク: [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)。
 
-- Excel VSTO アドインに固有のプログラミングタスク: [excel ソリューション](../vsto/excel-solutions.md)。
+- Excel VSTO アドインに固有のプログラミング タスク: [Excel ソリューション](../vsto/excel-solutions.md)。
 
-- Excel のオブジェクトモデルの使用: [excel オブジェクトモデルの概要](../vsto/excel-object-model-overview.md)。
+- Excel のオブジェクト モデルの使用: [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)。
 
-- Excel のユーザーインターフェイス (UI) のカスタマイズ (リボンへのカスタムタブの追加や独自のカスタム作業ウィンドウの作成など): [OFFICE UI のカスタマイズ](../vsto/office-ui-customization.md)。
+- Excel のユーザー インターフェイス (UI) のカスタマイズ (リボンへのカスタム タブの追加や独自のカスタム作業ウィンドウの作成など): [Office UI のカスタマイズ](../vsto/office-ui-customization.md)。
 
-- Excel 用の VSTO アドインのビルドとデバッグ: [Office ソリューションのビルド](../vsto/building-office-solutions.md)。
+- Excel 用 VSTO アドインのビルドとデバッグ: [Office ソリューションのビルド](../vsto/building-office-solutions.md)。
 
-- Excel 用の VSTO アドインの配置: [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。
+- Excel 用の VSTO アドインの配置: [Office ソリューションを配置する](../vsto/deploying-an-office-solution.md)。
 
 ## <a name="see-also"></a>関連項目
 - [Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Excel ソリューション](../vsto/excel-solutions.md)
-- [プログラム VSTO アドイン](../vsto/programming-vsto-add-ins.md)
-- [Excel オブジェクトモデルの概要](../vsto/excel-object-model-overview.md)
+- [VSTO アドインのプログラミング](../vsto/programming-vsto-add-ins.md)
+- [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)
 - [Office UI のカスタマイズ](../vsto/office-ui-customization.md)
 - [Office ソリューションのビルド](../vsto/building-office-solutions.md)
-- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)
-- [Office プロジェクトテンプレートの概要](../vsto/office-project-templates-overview.md)
+- [Office ソリューションを配置する](../vsto/deploying-an-office-solution.md)
+- [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)
