@@ -1,7 +1,8 @@
 ---
-title: 'IDiaSession:: findFile |Microsoft Docs'
+description: コンパイル単位と名前を指定してソース ファイルを取得します。
+title: IDiaSession::findFile | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: a215dc21-b316-40d7-9923-55bfa014976b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d9751127007b4e7823cf6d2ae35ed2fe80cb83b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: af547f9e504e9d832968bd18a370cb43e816e786
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742277"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635015"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
-コンパイル単位と名前を指定してソースファイルを取得します。
+コンパイル単位と名前を指定してソース ファイルを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findFile ( 
+HRESULT findFile ( 
    IDiaSymbol*           pCompiland,
    LPCOLESTR             name,
    DWORD                 option,
@@ -36,22 +37,22 @@ HRESULT findFile ( 
 #### <a name="parameters"></a>パラメーター
  `pCompiland`
 
-から検索のコンテキストとして使用されるコンパイル単位を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクト。 すべての compilands でソースファイルを検索するには、このパラメーターを `NULL` に設定します。
+[入力] 検索のコンテキストとして使用されるコンパイル単位を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクト。 すべてのコンパイル単位でソース ファイルを検索するには、このパラメーターを `NULL` に設定します。
 
  `name`
 
-から取得するソースファイルの名前を指定します。 すべてのソースファイルを取得するには、このパラメーターを `NULL` に設定します。
+[入力] 取得するソース ファイルの名前を指定します。 取得するすべてのソース ファイルに対して、このパラメーターを `NULL` に設定します。
 
  `option`
 
-から名前検索に適用される比較オプションを指定します。 [Namesearchoptions 列挙](../../debugger/debug-interface-access/namesearchoptions.md)列挙の値は、単独で、または組み合わせて使用できます。
+[入力] 名前の検索に適用する比較オプションを指定します。 [NameSearchOptions 列挙型](../../debugger/debug-interface-access/namesearchoptions.md)に関するページの列挙型の値は、単独で使用することも、組み合わせて使用することもできます。
 
  `ppResult`
 
-入出力取得したソースファイルのリストを格納している[IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)オブジェクトを返します。
+[出力] 取得したソース ファイルの一覧を含む [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
 

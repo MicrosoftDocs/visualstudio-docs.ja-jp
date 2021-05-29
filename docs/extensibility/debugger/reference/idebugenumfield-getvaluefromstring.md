@@ -1,6 +1,6 @@
 ---
 description: このメソッドは、列挙定数の名前に関連付けられている値を返します。
-title: 'IDebugEnumField:: GetValueFromString |Microsoft Docs'
+title: IDebugEnumField::GetValueFromString | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ec1070948685c69ce8615e2bef836c4d721e1cb0
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105092541"
@@ -44,17 +44,17 @@ int GetValueFromString(
 
 ## <a name="parameters"></a>パラメーター
 `pszValue`\
-から値を取得する対象の名前を指定する文字列。 C++ では、これはワイド文字列です。
+[入力] 値を取得する対象の名前を指定する文字列。 C++ では、これはワイド文字列です。
 
 `pValue`\
-入出力関連付けられている数値を返します。
+[出力] 関連付けられている数値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はを返します。 `S_FALSE` 名前が列挙に含まれていない場合は、またはエラーコードを返します。
+ 成功した場合は `S_OK` を返します。それ以外の場合は、名前が列挙型に含まれていなければ `S_FALSE`、またはエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドでは、大文字と小文字が区別されます。 大文字と小文字を区別しない検索が必要な場合 (たとえば、名前が大文字と小文字を区別しない Visual Basic などの言語) は、 [Getvaluefromstringcaseinsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)を使用します。
+## <a name="remarks"></a>解説
+ このメソッドでは大文字と小文字が区別されます。 大文字と小文字が区別されない検索が必要な場合 (たとえば、名前の大文字と小文字が区別されない Visual Basic などの言語) は、[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md) を使用します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)
 - [GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)

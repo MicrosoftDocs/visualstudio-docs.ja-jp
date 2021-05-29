@@ -1,7 +1,8 @@
 ---
-title: IDiaEnumSourceFiles |Microsoft Docs
+description: データ ソースに含まれているさまざまなソース ファイルを列挙します。
+title: IDiaEnumSourceFiles | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,45 +10,45 @@ helpviewer_keywords:
 ms.assetid: 5c0779a6-a2ea-408a-90da-ebdecf2b83c0
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 091d2f5996d53341e57c5c1b2125609642a156eb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 4f6ebef58f2746ac99e2836ae486a45bdbebcedd
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744028"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635041"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
-データソースに格納されているさまざまなソースファイルを列挙します。
+データ ソースに含まれているさまざまなソース ファイルを列挙します。
 
 ## <a name="syntax"></a>構文
 
 ```
-IDiaEnumSourceFiles : IUnknown
+IDiaEnumSourceFiles : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable 順序のメソッド
-次の表は、`IDiaEnumSourceFiles` のメソッドを示しています。
+次の表に、`IDiaEnumSourceFiles` のメソッドを示します。
 
 |メソッド|説明|
 |------------|-----------------|
 |[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|この列挙子の `IEnumVARIANT Interface` バージョンを取得します。|
-|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|ソースファイルの数を取得します。|
-|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|インデックスを使ってソースファイルを取得します。|
-|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|列挙シーケンス内の指定された数のソースファイルを取得します。|
-|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|列挙シーケンス内の指定された数のソースファイルをスキップします。|
-|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|列挙シーケンスを先頭にリセットします。|
+|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|ソース ファイルの数を取得します。|
+|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|インデックスを使ってソース ファイルを取得します。|
+|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|列挙シーケンス内の指定された数のソース ファイルを取得します。|
+|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|列挙型シーケンス内の指定された数のソース ファイルをスキップします。|
+|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|列挙型シーケンスを先頭にリセットします。|
 |[IDiaEnumSourceFiles::Clon](../../debugger/debug-interface-access/idiaenumsourcefiles-clone.md)|現在の列挙子と同じ列挙状態を含む列挙子を作成します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ## <a name="notes-for-callers"></a>呼び出し元に関する注意事項
-このインターフェイスを取得するには、 [IDiaTable](../../debugger/debug-interface-access/idiatable.md)オブジェクトの `QueryInterface` メソッドを呼び出します。 詳細については、例を参照してください。
+このインターフェイスを取得するには、[IDiaTable](../../debugger/debug-interface-access/idiatable.md) オブジェクトに対して `QueryInterface` メソッドを呼び出します。 詳細についての例を参照してください。
 
 ## <a name="example"></a>例
-この例では、DIA session オブジェクトのテーブルの一覧から `IDiaEnumSourceFiles` インターフェイスを取得する方法を示します。 ソースファイルの情報にアクセスする例については、 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)インターフェイスを参照してください。
+この例は、DIA セッション オブジェクトのテーブルの一覧から `IDiaEnumSourceFiles` インターフェイスを取得する方法を示しています。 ソース ファイル情報にアクセスする例については、[IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) インターフェイスを参照してください。
 
 ```C++
 
@@ -79,12 +80,12 @@ IDiaEnumSourceFiles* GetEnumSourceFiles(IDiaSession *pSession)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: Dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: Dia2.h
 
-ライブラリ: diaguids
+ライブラリ: diaguids.lib
 
-DLL: msdia80
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>関連項目
 - [インターフェイス (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

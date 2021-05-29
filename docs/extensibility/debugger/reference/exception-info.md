@@ -1,6 +1,6 @@
 ---
-description: デバッグ中のプログラムによってスローされた例外または実行時エラーを記述します。
-title: EXCEPTION_INFO |Microsoft Docs
+description: デバッグ中のプログラムによってスローされた例外またはランタイム エラーを説明します。
+title: EXCEPTION_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 1ec97b56cc7fca8c2185d7180a8d34e87b084b11
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059471"
 ---
 # <a name="exception_info"></a>EXCEPTION_INFO
-デバッグ中のプログラムによってスローされた例外または実行時エラーを記述します。
+デバッグ中のプログラムによってスローされた例外またはランタイム エラーを説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,25 +61,25 @@ public struct EXCEPTION_INFO {
 例外の名前。
 
 `dwCode`\
-例外または実行時エラーの識別コード。
+例外またはランタイム エラーの識別コード。
 
 `dwState`\
-例外の状態を定義する [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) 列挙の値。
+例外の状態を定義する [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) 列挙体の値。
 
 `guidType`\
-GUID 言語識別子 `guidLang` 。またはのいずれか `guidEng` です。
+GUID 言語識別子 (`guidLang` または `guidEng`)。
 
-## <a name="remarks"></a>注釈
-この構造体は、パラメーターとして [setexception](../../../extensibility/debugger/reference/idebugengine2-setexception.md) および [removesetexception](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) メソッドに渡されます。 この構造体は、入力される [Getexception](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) メソッドにも渡されます。
+## <a name="remarks"></a>解説
+この構造体は、パラメーターとして [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) メソッドと [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) メソッドに渡されます。 また、入力対象の [GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md) メソッドにも渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md)
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
