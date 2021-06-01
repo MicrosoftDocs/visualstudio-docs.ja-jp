@@ -1,7 +1,8 @@
 ---
+description: イメージのレイアウトの変換をサポートするアドレス マップを提供します。
 title: IDiaAddressMap::set_addressMap | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 81e82073-089b-43d5-af39-49d7a4907c7a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8414788af44d78943088b78b2d3e42a5a8d8c50b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: b9b00147f4ea8b2313e49e86795c36ec33aae9f1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745029"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634989"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
-画像レイアウトの翻訳をサポートするアドレスマップを提供します。
+イメージのレイアウトの変換をサポートするアドレス マップを提供します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT set_addressMap ( 
+HRESULT set_addressMap ( 
    DWORD                     cbData,
    struct DiaAddressMapEntry data[],
    BOOL                      imagetoSymbols
@@ -35,23 +36,23 @@ HRESULT set_addressMap ( 
 #### <a name="parameters"></a>パラメーター
  `cbData`
 
-から@No__t_0 パラメーター内の要素の数。
+[入力] `data` パラメーター内の要素の数。
 
  `data[]`
 
-から変換マップを定義する[DiaAddressMapEntry 構造](../../debugger/debug-interface-access/diaaddressmapentry.md)体の配列。
+[入力] 変換マップを定義する [DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md)の配列。
 
  `imagetoSymbols`
 
-[in] `data` パラメーターが、デバッグシンボルによって記述されているように、新しいイメージレイアウトから元のレイアウトへのマップを定義する場合は `TRUE` します。 `data` が元のレイアウトから作成された新しいイメージレイアウトへのマップである場合に `FALSE` します。
+[入力] `data` パラメーターで (デバッグ シンボルの記述に従って) 新しいイメージ レイアウトから元のレイアウトへのマップを定義する場合は `TRUE`。 `data` が元のレイアウトから取得された新しいイメージ レイアウトへのマップである場合は `FALSE`。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- 通常、DIA は、プログラムデータベース (.pdb) ファイルからアドレス変換マップを取得します。 これらの値が欠落している場合は、 [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)メソッドが2回呼び出されます。1回は、`imagetoSymbols` パラメーターを `TRUE` に設定し、1回は `imagetoSymbols` パラメーターを `FALSE` に設定します。 両方の変換マップが指定されていない限り、 [IDiaAddressMap::P ut_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)メソッドを使用してアドレスマップの翻訳を有効にすることはできません。
+## <a name="remarks"></a>解説
+ 通常、DIA はプログラム データベース (.pdb) ファイルからアドレス変換マップを取得します。 これらの値が見つからない場合は、[IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) メソッドが 2 回呼び出されます。1 回は `imagetoSymbols` パラメーターが `TRUE` に設定され、もう 1 回は `imagetoSymbols` パラメーターが `FALSE` に設定されます。 両方の変換マップが指定されていない限り、[IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) メソッドを使用してアドレス マップの変換を有効にすることはできません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [DiaAddressMapEntry 構造体](../../debugger/debug-interface-access/diaaddressmapentry.md)
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)
 - [IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)

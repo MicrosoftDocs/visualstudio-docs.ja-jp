@@ -1,7 +1,7 @@
 ---
-title: 'IDiaSymbol:: get_baseType |Microsoft Docs'
+title: IDiaSymbol::get_baseType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 5c69a241-a8d3-48ed-8b36-27463a196572
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a3d1bb8b2f3095fd35488c47f823e7b3603995b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 4e41b8f3825da25878ac81ba91b59106ac60d857
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740917"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634212"
 ---
 # <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
-このシンボルの基本型を取得し<em>ます。</em>
+このシンボルの基本データ型を取得します<em>。</em>
 
 ## <a name="syntax"></a>構文
 
@@ -33,16 +33,16 @@ HRESULT get_baseType (
 #### <a name="parameters"></a>パラメーター
 `pRetVal`
 
-入出力シンボルの基本型を指定する[Basictype 列挙](../../debugger/debug-interface-access/basictype.md)型の値を返します。
+[out] シンボルの基本データ型を指定する [BasicType Enumeration](../../debugger/debug-interface-access/basictype.md) 列挙型の値を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
-シンボルの基本型を決定するには、最初にシンボルの型を取得し、次に基本型に対して返された型を問い合わせるします。 一部のシンボルには、構造体の名前など、基本型を使用できない場合があることに注意してください。
+## <a name="remarks"></a>解説
+シンボルの基本型を確認するには、まずシンボルの型を取得し、その後、その返された型の基本型を調べます。 一部のシンボルには、基本型がない場合があることに注意してください (構造体名など)。
 
 ## <a name="example"></a>例
 
@@ -59,14 +59,14 @@ if (pType->get_type( &pBaseType ) == S_OK)
 }
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-|必要条件|説明|
+|要件|説明|
 |-----------------|-----------------|
-|ヘッダー:|dia2|
-|バージョン:|DIA SDK v1.0|
+|ヘッダー:|dia2.h|
+|バージョン:|DIA SDK v7.0|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
 - [BasicType 列挙型](../../debugger/debug-interface-access/basictype.md)
 - [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

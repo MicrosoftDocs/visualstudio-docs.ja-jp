@@ -1,6 +1,6 @@
 ---
 description: プロセスのプロパティを記述または指定します。
-title: PROCESS_INFO_FLAGS |Microsoft Docs
+title: PROCESS_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,7 +17,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 66b986fa16f406223c919c6938182b37e1864e98
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079671"
@@ -26,7 +26,7 @@ ms.locfileid: "105079671"
 
 プロセスのプロパティを記述または指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_PROCESS_INFO_FLAGS { 
@@ -50,28 +50,28 @@ enum enum_PROCESS_INFO_FLAGS {
 ## <a name="fields"></a>フィールド
 
 `PIFLAG_SYSTEM_PROCESS`\
-プロセスがシステムプロセスであることを示します。
+プロセスがシステム プロセスであることを示します。
 
 `PIFLAG_DEBUGGER_ATTACHED`\
-プロセスがデバッガーによってデバッグされていることを示します。 デバッガーの場合もあれば、 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 他のデバッガー (WinDbg など) の場合もあります。
+プロセスがデバッガーによってデバッグ中であることを示します。 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] デバッガーの場合もあれば、他のデバッガー (WinDbg など) の場合もあります。
 
 `PIFLAG_PROCESS_STOPPED`\
-プロセスが停止されたことを示します。 が指定されている場合にのみ有効です `PIFLAG_DEBUGGER_ATTACHED` 。 Visual Studio 2005 以降で使用できます。
+プロセスが停止していることを示します。 同時に `PIFLAG_DEBUGGER_ATTACHED` も指定されている場合にだけ有効です。 Visual Studio 2005 以降で使用できます。
 
 `PIFLAG_PROCESS_RUNNING`\
-プロセスが実行中であることを示します。 が指定されている場合にのみ有効です `PIFLAG_DEBUGGER_ATTACHED` 。 Visual Studio 2005 以降で使用できます。
+プロセスが実行中であることを示します。 同時に `PIFLAG_DEBUGGER_ATTACHED` も指定されている場合にだけ有効です。 Visual Studio 2005 以降で使用できます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-`Flags` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)構造体のメンバーに使用されます。
+[PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) 構造体の `Flags` メンバーに使用されます。
 
-これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-ヘッダー: msdbg. h
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

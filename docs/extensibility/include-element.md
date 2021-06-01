@@ -1,6 +1,6 @@
 ---
-title: Include Element |Microsoft Docs
-description: Include 要素は、現在のファイルに挿入するために指定されたインクルードパスにあるファイルを指定します。
+title: Include 要素 | Microsoft Docs
+description: Include 要素では、現在のファイルに挿入するために指定されているインクルード パス上に存在する可能性があるファイルを指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,13 +17,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: fd64f897dc2a089a2e94f5e0c53e3ef116f7b385
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082102"
 ---
 # <a name="include-element"></a>Include 要素
-Include 要素は、現在のファイルに挿入するために指定されたインクルードパスにあるファイルを指定します。  定義されているすべてのシンボルと型は、コンパイルされた結果の一部になります。
+Include 要素では、現在のファイルに挿入するために指定されているインクルード パス上に存在する可能性があるファイルを指定します。  定義されているすべてのシンボルと型が、コンパイルされた結果の一部になります。
 
 ## <a name="syntax"></a>構文
 
@@ -38,20 +38,20 @@ Include 要素は、現在のファイルに挿入するために指定された
 
 |属性|説明|
 |---------------|-----------------|
-|href|必須。 ヘッダーファイルのパス:<br /><br /> href = "stdidcmd"|
-|条件|省略可能。 「 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|href|必須。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[なし] :|[なし] :|
+|[なし] :|なし。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage が IDE に提供するコマンド (メニュー項目、メニュー、ツールバー、およびコンボボックス) を表すすべての要素を定義します。|
+|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage によって IDE に提供されるコマンドを表すすべての要素 (つまり、メニュー項目、メニュー、ツール バー、コンボ ボックス) を定義します。|
 
 ## <a name="example"></a>例
 
@@ -60,4 +60,4 @@ Include 要素は、現在のファイルに挿入するために指定された
 ```
 
 ## <a name="see-also"></a>関連項目
-- [Visual Studio コマンドテーブル (vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -1,7 +1,8 @@
 ---
-title: 'IDiaPropertyStorage:: ReadPropertyNames |Microsoft Docs'
+description: 指定されたプロパティ識別子に対応する文字列名を取得します。
+title: IDiaPropertyStorage::ReadPropertyNames | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: f8bcab77-afca-4a8f-8710-697842f8a518
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f554485ae56a9d5f190c749879545165d299531c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: cbb6d511a6be9ed408b076162a3d00d22705075a
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742868"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634373"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
-指定されたプロパティ識別子の対応する文字列名を取得します。
+指定されたプロパティ識別子に対応する文字列名を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,21 +36,21 @@ HRESULT ReadPropertyNames (
 #### <a name="parameters"></a>パラメーター
  `cpropid`
 
-から@No__t_0 内のプロパティ id の数。
+[入力] `rgpropid` に格納されているプロパティ ID の数。
 
  `rgpropid`
 
-から名前を取得する対象のプロパティ id の配列 (`PROPID` は、WTypes .h で `ULONG` として定義されています)。
+[入力] 名前を取得するプロパティ ID の配列 (`PROPID` は、WTypes.h で `ULONG` として定義されています)。
 
  `rglpwstrName`
 
-[入力、出力]指定されたプロパティ id のプロパティ名の配列。 配列は、要求された数のプロパティ名を保持するために事前に割り当てられている必要があり、少なくとも `cpropid``BSTR` の文字列を保持できる必要があります。
+[入力、出力] 指定されたプロパティ ID に対するプロパティ名の配列。 要求する数のプロパティ名を保持するための配列を、事前に割り当てておく必要があり、この配列は少なくとも `cpropid``BSTR` 個の文字列を保持できる必要があります。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- 返されたプロパティ名は、不要になったときに (`SysFreeString` 関数を呼び出すことによって) 解放する必要があります。
+## <a name="remarks"></a>解説
+ 返されたプロパティ名は、不要になったら (`SysFreeString` 関数を呼び出すことによって) 解放する必要があります。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

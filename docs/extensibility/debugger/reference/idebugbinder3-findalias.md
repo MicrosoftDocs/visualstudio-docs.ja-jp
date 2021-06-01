@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、名前を指定してエイリアスを検索します。
-title: 'IDebugBinder3:: FindAlias |Microsoft Docs'
+description: このメソッドでは、名前を指定してエイリアスを検索します。
+title: IDebugBinder3::FindAlias | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9958c1c2b93d6547f1f3453bafc9e331f9061844
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089057"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
-このメソッドは、名前を指定してエイリアスを検索します。 これにより、プログラム内のすべてのエイリアスが検索されます。
+このメソッドでは、名前を指定してエイリアスを検索します。 これにより、プログラム内のすべてのエイリアスが検索されます。
 
 ## <a name="syntax"></a>構文
 
@@ -44,17 +44,17 @@ int FindAlias(
 
 ## <a name="parameters"></a>パラメーター
 `pcstrName`\
-から検索するエイリアスの名前。
+[入力] 検索するエイリアスの名前。
 
 `ppAlias`\
-入出力 [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) インターフェイスによって表されるエイリアス (存在する場合) が見つかりました。
+[出力] [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) インターフェイスによって表される検出されたエイリアス (存在する場合)。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は、を返し `S_OK` ます。それ以外の場合はを返します `S_FALSE` 。エイリアスが見つからない場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は `S_FALSE` (エイリアスが見つからない場合) またはエラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、を呼び出す前に、対象のオブジェクトを null に初期化します。次に、エイリアスが見つかったかどうかを判断するために、後で null 値をテストします。
+## <a name="remarks"></a>解説
+ このメソッドでは、呼び出す前に対象オブジェクトを null に初期化します。その後、null 値をテストし、エイリアスが見つかったかどうかを判断します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

@@ -1,6 +1,6 @@
 ---
-description: BUILT_TYPE 構造体は、メタデータから取得したフィールド型に関する情報を指定します。
-title: BUILT_TYPE |Microsoft Docs
+description: BUILT_TYPE 構造体は、メタデータから取得したフィールドの型に関する情報を指定します。
+title: BUILT_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 00a031d02bba7ffcc1dca6f2cf73cfceeed04838
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096578"
 ---
 # <a name="built_type"></a>BUILT_TYPE
-この構造体は、メタデータから取得されたフィールド型に関する情報を指定します。
+この構造体は、メタデータから取得したフィールドの型に関する情報を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,22 +49,22 @@ public struct BUILT_TYPE {
 シンボルの取得元のアプリケーションの ID。 これは、アプリケーションのインスタンスを一意に識別するために使用されます。
 
 `guidModule`\
-このフィールドを含むモジュールの GUID。
+このフィールドが含まれるモジュールの GUID。
 
 `pUnderlyingField`\
-この構築されたフィールドに関連付けられている基になるフィールドを識別する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクト。
+このビルト フィールドに関連付けられた基になるフィールドを識別する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクト。
 
-## <a name="remarks"></a>注釈
-この構造体は、構造体のフィールドがに設定されている場合に、 [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) 構造体の共用体の一部として表示され `dwKind` `TYPE_INFO` `TYPE_KIND_BUILT` ます ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) 列挙型の値)。
+## <a name="remarks"></a>解説
+この構造体は、`TYPE_INFO` 構造体の `dwKind` フィールドを `TYPE_KIND_BUILT` ([dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) 列挙型の値) に設定した場合、[TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) 構造体に含まれる共用体の一部になります。
 
-## <a name="requirements"></a>要件
-ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md)
 - [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md)

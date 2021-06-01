@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackWalkHelper:: get_registerValue |Microsoft Docs'
+description: IDiaStackWalkHelper::get_registerValue を使用すると、レジスタの値を取得できます。
+title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 46ac5eee-73a3-44a1-8635-6c58ba193cb6
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfb3e219012effe47a2352f7c22c6cf51b4617f9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: fa87529f90b20d7d9099dd76e294e406ae0c7a08
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741414"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635183"
 ---
 # <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 レジスタの値を取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72741414"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_registerValue ( 
+HRESULT get_registerValue ( 
    DWORD      index,
    ULONGLONG* pRetVal
 );
@@ -34,17 +35,17 @@ HRESULT get_registerValue ( 
 #### <a name="parameters"></a>パラメーター
  `index`
 
-から値を取得するレジスタを指定する[CV_HREG_e 列挙](../../debugger/debug-interface-access/cv-hreg-e.md)列挙の値です。
+[入力] 値を取得するレジスタを指定する [CV_HREG_e 列挙型](../../debugger/debug-interface-access/cv-hreg-e.md)の列挙体の値。
 
  `pRetVal`
 
-入出力レジスタの現在の値を返します。
+[出力] レジスタの現在の値を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- @No__t_0 パラメーターのサイズにかかわらず、実装には、通常、レジスタが保持しているものだけを格納する必要があります。 たとえば、8ビットレジスタは、指定された値のうち最も下位の8ビットだけを保持します。 この8ビット値は、このメソッドから返された場合は64ビットに拡張されます。
+## <a name="remarks"></a>解説
+ `pRetVal` パラメーターのサイズに関係なく、通常、レジストリに保持されるものだけ実装で格納します。 たとえば、8 ビットのレジスタであれば、指定の値の下位 8 ビットだけ保持します。 この 8 ビット値は、このメソッドから返されるときに 64 ビットに拡張されます。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

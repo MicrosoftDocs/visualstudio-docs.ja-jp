@@ -1,7 +1,8 @@
 ---
-title: 'IDiaStackWalkFrame:: readMemory |Microsoft Docs'
+description: イメージからメモリを読み取ります。
+title: IDiaStackWalkFrame::readMemory | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7ab0b525-a5a7-4692-acad-e8c00fa9ab9a
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae1201fca1fc25cce19b40b47d6435d02d80e1b4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: edfe15c8303236f31ab50a948a8b5506cee0356b
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741473"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635005"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
 イメージからメモリを読み取ります。
@@ -25,7 +26,7 @@ ms.locfileid: "72741473"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT readMemory ( 
+HRESULT readMemory ( 
    MemoryTypeEnum type,
    ULONGLONG va,
    DWORD     cbData,
@@ -37,26 +38,26 @@ HRESULT readMemory ( 
 #### <a name="parameters"></a>パラメーター
  `type`
 
-からアクセスするメモリの種類を指定する[Memorytypeenum 列挙](../../debugger/debug-interface-access/memorytypeenum.md)値の1つ。
+[入力] アクセスするメモリの種類を指定する [MemoryTypeEnum Enumeration](../../debugger/debug-interface-access/memorytypeenum.md) 列挙値のいずれか。
 
  `va`
 
-から読み取りを開始するイメージ内の仮想アドレスの場所。
+[入力] 読み取りを開始するイメージ内の仮想アドレスの位置。
 
  `cbData`
 
-からデータバッファーのサイズ (バイト単位)。
+[入力] データ バッファーのサイズ (バイト単位)。
 
  `pcbData`
 
-入出力返されたバイト数を返します。 @No__t_0 が `NULL` 場合、`pcbData` には、使用可能なデータの合計バイト数が含まれます。
+[出力] 返されるバイト数を返します。 `data` が `NULL` の場合、`pcbData` には利用可能な合計データ バイト数が格納されます。
 
  `data`
 
-入出力指定された場所からデータを格納するバッファー。
+[出力] 指定された位置からのデータが格納されるバッファー。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

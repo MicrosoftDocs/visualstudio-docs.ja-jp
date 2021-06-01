@@ -1,7 +1,7 @@
 ---
-title: BuildOnLoad 属性と要素 (Visual Studio テンプレート)
+title: BuildOnLoad 属性および要素 (Visual Studio テンプレート)
 titleSuffix: ''
-description: BuildOnLoad の属性と要素について、およびプロジェクトを作成した直後にビルドするかどうかを指定する方法について説明します。
+description: BuildOnLoad 属性および要素について、およびプロジェクトを作成した直後にビルドするかどうかを指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -19,16 +19,16 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8eb563e765c3d50950f61a0ca49e5349a0e7249a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105068181"
 ---
-# <a name="buildonload-attribute-and-element"></a>BuildOnLoad 属性と要素
+# <a name="buildonload-attribute-and-element"></a>BuildOnLoad 属性および要素
 
-プロジェクトを作成した直後にビルドするかどうかを指定します。 **BuildOnLoad** は、属性と要素の両方です。
+プロジェクトを作成した直後にビルドするかどうかを指定します。 **BuildOnLoad** は、属性でもあり要素でもあります。
 
-要素階層:
+要素の階層:
 
 ```xml
 <VSTemplate>
@@ -50,15 +50,15 @@ ms.locfileid: "105068181"
 
 ## <a name="text-value"></a>テキスト値
 
-**BuildOnLoad** 要素にはテキスト値が必要です。 テキストはまたはのいずれかである必要があり `true` `false` ます。これは、プロジェクトを作成した直後にビルドするかどうかを示します。
+**BuildOnLoad** 要素にはテキスト値が必要です。 テキストは `true` または `false` のいずれかである必要があります。これは、プロジェクトを作成した直後にビルドするかどうかを示します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **BuildOnLoad** は省略可能な属性です。 既定値は `false` です。
 
 ## <a name="example"></a>例
 
-次の例は、 **BuildOnLoad** が要素として使用されている場合の C# テンプレートのメタデータを示しています。
+次の例は、**BuildOnLoad** が要素として使用されている場合の C# テンプレートのメタデータを示しています。
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -85,9 +85,9 @@ ms.locfileid: "105068181"
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [Buildの Tonload 要素](buildprojectonload-element-visual-studio-templates.md)
+- [BuildProjectOnload 要素](buildprojectonload-element-visual-studio-templates.md)
 - [TemplateContent 要素](../extensibility/templatecontent-element-visual-studio-templates.md)
 - [プロジェクトと項目テンプレートの作成](../ide/creating-project-and-item-templates.md)
 - [Visual Studio テンプレート スキーマ参照](../extensibility/visual-studio-template-schema-reference.md)

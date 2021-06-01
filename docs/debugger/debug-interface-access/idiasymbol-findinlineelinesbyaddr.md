@@ -1,29 +1,30 @@
 ---
-title: 'IDiaSymbol:: findInlineeLinesByAddr |Microsoft Docs'
+description: IDiaSymbol::findInlineeLinesByAddr 指定されたアドレス範囲内でこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復できるようにする列挙を取得します。
+title: IDiaSymbol::findInlineeLinesByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f1ab47ca-c851-48ea-9c12-47fb80b31102
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1709120dfa8e115f4b14a4ee4e2d1c7ffb293329
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: c8bdb7ad39d5f3dec7f4d3710f28fee94b6ff9fa
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741215"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634764"
 ---
 # <a name="idiasymbolfindinlineelinesbyaddr"></a>IDiaSymbol::findInlineeLinesByAddr
-クライアントが、指定されたアドレス範囲内のこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報を反復処理できるようにする列挙体を取得します。
+指定されたアドレス範囲内でこのシンボルに直接または間接的にインライン化されているすべての関数の行番号情報をクライアントが反復できるようにする列挙を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT findInlineeLinesByAddr ( 
+HRESULT findInlineeLinesByAddr ( 
    DWORD                 isect,
    DWORD                 offset,
    DWORD                 length,
@@ -34,22 +35,22 @@ HRESULT findInlineeLinesByAddr ( 
 #### <a name="parameters"></a>パラメーター
  `isect`
 
-からアドレスのセクション部分を指定します。
+[入力] アドレスのセクション部分を指定します。
 
  `offset`
 
-からアドレスのオフセットコンポーネントを指定します。
+[入力] アドレスのオフセット部分を指定します。
 
  `length`
 
-からこのクエリでカバーするアドレス範囲をバイト数で指定します。
+[入力] このクエリでカバーするアドレス範囲をバイト数で指定します。
 
  `ppResult`
 
-入出力取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
+[出力] 取得された行番号の一覧を含む `IDiaEnumLineNumbers` オブジェクトを保持します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

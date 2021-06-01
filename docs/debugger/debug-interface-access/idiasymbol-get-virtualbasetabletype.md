@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_virtualBaseTableType |Microsoft Docs'
+---
+description: 仮想ベース テーブル ポインターの型を取得します。
+title: IDiaSymbol::get_virtualBaseTableType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: e0581c4f-0343-49b5-9754-a48477460e9f
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aaddb8b71ba96511af3682b442c1e5c8e84a409c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: f67affafd1984f811432a0b69fdcdfec0521e377
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738835"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634586"
 ---
 # <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
-仮想ベーステーブルポインターの型を取得します。
+仮想ベース テーブル ポインターの型を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,25 +35,25 @@ HRESULT get_virtualBaseTableType(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`pRetVal`|入出力ベーステーブルの種類を指定する[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。|
+|`pRetVal`|[出力] ベース テーブルの型を指定する [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。|
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
- 仮想ベーステーブルポインター (`vbtptr`) は、仮想基底クラスからの継承を処理する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 内の非表示のポインターです。 @No__t_0 のサイズは、継承されたクラスによって異なる場合があります。
+## <a name="remarks"></a>解説
+ 仮想ベース テーブル ポインター (`vbtptr`) は、仮想基底クラスからの継承を処理する [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 内の非表示ポインターです。 `vbtptr` は、継承されたクラスにより、サイズが異なる場合があります。
 
- このメソッドは、vbtptr のサイズを決定するために使用できる[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+ このメソッドから返される [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを使用して、vbtptr のサイズを特定できます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|必要条件|説明|
+|要件|説明|
 |-----------------|-----------------|
-|ヘッダー:|dia2|
-|バージョン:|DIA SDK v1.0|
+|ヘッダー:|dia2.h|
+|バージョン:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>関連項目
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,6 +1,6 @@
 ---
-description: プロセス内のすべてのプログラムをデタッチして、このプロセスからデバッガーをデタッチします。
-title: IDebugProcess2::D etach |Microsoft Docs
+description: プロセス内のすべてのプログラムをデタッチすることにより、デバッガーをこのプロセスからデタッチします。
+title: IDebugProcess2::Detach | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: b4d75f9dd58e2a26f6d465fc93988fa3d3785a0d
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071663"
 ---
 # <a name="idebugprocess2detach"></a>IDebugProcess2::Detach
-プロセス内のすべてのプログラムをデタッチして、このプロセスからデバッガーをデタッチします。
+プロセス内のすべてのプログラムをデタッチすることにより、デバッガーをこのプロセスからデタッチします。
 
 ## <a name="syntax"></a>構文
 
@@ -39,10 +39,10 @@ int Detach();
 ```
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- すべてのプログラムとプロセスは引き続き実行されますが、デバッグセッションの一部ではなくなります。 デタッチ操作が完了すると、このプロセス (およびそのプログラム) のデバッグイベントは送信されなくなります。
+## <a name="remarks"></a>解説
+ すべてのプログラムとプロセスは引き続き実行されますが、デバッグ セッションの一部ではなくなります。 デタッチ操作が完了すると、このプロセス (およびそのプログラム) のデバッグ イベントは送信されなくなります。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

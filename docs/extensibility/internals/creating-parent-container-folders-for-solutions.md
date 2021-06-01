@@ -1,6 +1,6 @@
 ---
-title: ソリューションの親コンテナーフォルダーを作成する |Microsoft Docs
-description: ソース管理プラグイン API バージョン1.2 を使用して、ソリューション内のすべての web プロジェクトに対して単一のルートソース管理ターゲットを指定する方法について説明します。
+title: ソリューションの親コンテナー フォルダーの作成 | Microsoft Docs
+description: ソース管理プラグイン API バージョン 1.2 を使用して、ソリューション内のすべての Web プロジェクトに対して 1 つのルート ソース管理ターゲットを指定する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,15 +15,15 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 2c9b3b5c01e9c1ad5de9fbb0a44398d3f7963295
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056841"
 ---
-# <a name="create-parent-container-folders-for-solutions"></a>ソリューションの親コンテナーフォルダーを作成する
-ソース管理プラグイン API バージョン1.2 では、ユーザーは、ソリューション内のすべての web プロジェクトに対して単一のルートソース管理のターゲットを指定できます。 この1つのルートは、スーパー統合ルート (.SUR) と呼ばれます。
+# <a name="create-parent-container-folders-for-solutions"></a>ソリューションの親コンテナー フォルダーを作成する
+ソース管理プラグイン API バージョン 1.2 では、ユーザーが、ソリューション内のすべての Web プロジェクトに対して 1 つのルート ソース管理ターゲットを指定できます。 この 1 つのルートは、スーパー統合ルート (SUR) と呼ばれます。
 
- ソース管理プラグイン API バージョン1.1 では、ユーザーがマルチプロジェクトソリューションをソース管理に追加した場合、ユーザーは各 web プロジェクトに対して1つのソース管理の宛先を指定するように求められました。
+ ソース管理プラグイン API バージョン 1.1 では、ユーザーがマルチプロジェクト ソリューションをソース管理に追加すると、各 Web プロジェクトに対して 1 つのソース管理ターゲットを指定するようにユーザーが求められました。
 
 ## <a name="new-capability-flags"></a>新しい機能フラグ
  `SCC_CAP_CREATESUBPROJECT`
@@ -35,36 +35,36 @@ ms.locfileid: "105056841"
 
 - [SccGetParentProjectPath](../../extensibility/sccgetparentprojectpath-function.md)
 
- IDE では、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース管理にソリューションを追加するときに、ほとんどの場合、.sur フォルダーが作成されます。 具体的には、次のような場合に実行されます。
+ ソリューションをソース管理に追加するとき、ほとんどの場合、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE によって SUR フォルダーが作成されます。 具体的には、次の場合に行われます。
 
-- プロジェクトはファイル共有 web プロジェクトです。
+- プロジェクトがファイル共有 Web プロジェクトです。
 
-- プロジェクトとソリューションファイルには異なるドライブがあります。
+- プロジェクトとソリューション ファイルのドライブが異なります。
 
-- プロジェクトとソリューションファイルには異なる共有があります。
+- プロジェクトとソリューション ファイルの共有が異なります。
 
-- プロジェクトは、(ソース管理ソリューションで) 個別に追加されました。
+- プロジェクトが (ソース管理ソリューションに) 個別に追加されました。
 
-で [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、.sur フォルダーの名前は、拡張子のないソリューション名と同じにすることをお勧めします。 次の表は、2つのバージョンの動作をまとめたものです。
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、SUR フォルダーの名前を拡張子なしのソリューション名と同じにすることをお勧めします。 次の表に、2 つのバージョンの動作をまとめています。
 
-|特徴量|ソース管理プラグイン API バージョン1.1|ソース管理プラグイン API バージョン1.2|
+|特徴量|ソース管理プラグイン API バージョン 1.1|ソース管理プラグイン API バージョン 1.2|
 |-------------| - | - |
-|SCC へのソリューションの追加|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> SccGetProjPath ()<br /><br /> SccOpenProject ()|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> SccCreateSubProject()<br /><br /> SccCreateSubProject()<br /><br /> SccOpenProject ()|
-|ソース管理ソリューションへのプロジェクトの追加|SccGetProjPath ()<br /><br /> OpenProject ()|SccGetParentProjectPath()<br /><br /> SccOpenProject ()<br /><br />  **注:**  Visual Studio では、ソリューションが .SUR の直接の子であることを前提としています。|
+|SCC へのソリューションの追加|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccGetProjPath()<br /><br /> SccOpenProject()|SccInitialize()<br /><br /> SccGetProjPath()<br /><br /> SccCreateSubProject()<br /><br /> SccCreateSubProject()<br /><br /> SccOpenProject()|
+|ソース管理されているソリューションへのプロジェクトの追加|SccGetProjPath()<br /><br /> OpenProject()|SccGetParentProjectPath()<br /><br /> SccOpenProject()<br /><br />  **注:** Visual Studio では、ソリューションが SUR の直接の子であることが前提とされます。|
 
 ## <a name="examples"></a>例
- 次の表は、2つの例を示しています。 どちらの場合も、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  *user_choice* が変換先として指定されるまで、ユーザーにはソース管理下のソリューションの宛先の場所を入力するように求められます。 User_choice が指定されている場合、ソリューションと2つのプロジェクトは、ユーザーにソース管理の変換先の入力を求めずに追加されます。
+ 2 つの例を次の表に示します。 どちらのケースでも、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ユーザーは、*user_choice* にターゲットを指定するまで、ソース管理されているソリューションのターゲット場所の指定を求められます。 user_choice が指定されると、ソース管理ターゲットの指定をユーザーに求めずに、ソリューションと 2 つのプロジェクトが追加されます。
 
-|ソリューションに含まれるもの|ディスクの場所|データベースの既定の構造|
+|ソリューションの内容|ディスク上の場所|データベースの既定の構造|
 |-----------------------|-----------------------|--------------------------------|
-|*sln1*<br /><br /> Web1<br /><br /> Web2|*C:\ ソリューション \ n1*<br /><br /> *C:\Inetpub\wwwroot\Web1*<br /><br /> \\\ \ _ wwwroot $ \ web2|$/<user_choice>/sln1<br /><br /> $/<user_choice>/C/Web1<br /><br /> $/<user_choice>/web2|
-|*sln1*<br /><br /> Web1<br /><br /> Win1|*C:\ ソリューション \ n1*<br /><br /> *D:\Inetpub\wwwroot\Web1*<br /><br /> *C:\solutions\sln1\Win1*|$/<user_choice>/sln1<br /><br /> $/<user_choice>/D/web1<br /><br /> $/<user_choice>/sln1/win1|
+|*sln1.sln*<br /><br /> Web1<br /><br /> Web2|*C:\Solutions\sln1*<br /><br /> *C:\Inetpub\wwwroot\Web1*<br /><br /> \\\server\wwwroot$\Web2|$/<user_choice>/sln1<br /><br /> $/<user_choice>/C/Web1<br /><br /> $/<user_choice>/Web2|
+|*sln1.sln*<br /><br /> Web1<br /><br /> Win1|*C:\Solutions\sln1*<br /><br /> *D:\Inetpub\wwwroot\Web1*<br /><br /> *C:\solutions\sln1\Win1*|$/<user_choice>/sln1<br /><br /> $/<user_choice>/D/web1<br /><br /> $/<user_choice>/sln1/win1|
 
- .SUR フォルダーとサブフォルダーは、操作が取り消されたか、エラーが原因で失敗したかに関係なく作成されます。 これらは、キャンセルまたはエラー条件で自動的に削除されることはありません。
+ SUR フォルダーとサブフォルダーは、操作が取り消されてもエラーが原因で失敗しても、関係なく作成されます。 これらは、キャンセルまたはエラー条件で自動的に削除されることはありません。
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ソース管理プラグインによってとの機能フラグが返されない場合、バージョン1.1 の動作が既定値に `SCC_CAP_CREATESUBPROJECT` `SCC_CAP_GETPARENTPROJECT` なります。 さらに、のユーザー [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] は、次のキーの値を *dword: 00000001* に設定することにより、バージョン1.1 の動作に戻すことができます。
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] が既定でバージョン 1.1 の動作になるのは、ソース管理プラグインによって `SCC_CAP_CREATESUBPROJECT` および `SCC_CAP_GETPARENTPROJECT` 機能フラグが返されない場合です。 また、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のユーザーは、次のキーの値を *dword:00000001* に設定して、バージョン 1.1 の動作に戻すことを選択できます。
 
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl**  = *dword: 00000001*
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] DoNotCreateSolutionRootFolderInSourceControl** = *dword:00000001*
 
 ## <a name="see-also"></a>こちらもご覧ください
-- [ソース管理プラグイン API バージョン1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+- [ソース管理プラグイン API バージョン 1.2 の新機能](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

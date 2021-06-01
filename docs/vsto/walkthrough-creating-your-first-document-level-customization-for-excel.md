@@ -1,6 +1,6 @@
 ---
-title: Excel 用のドキュメントレベルのカスタマイズを初めて作成する
-description: Microsoft Excel のドキュメントレベルのカスタマイズを作成します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。
+title: Excel 用のドキュメント レベルのカスタマイズを初めて作成する
+description: Microsoft Excel 用のドキュメント レベルのカスタマイズを作成します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -19,12 +19,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 9254aa5fd465c14e24133df59bbcee46f3c1acf4
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826903"
 ---
-# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: 初めての Excel 用ドキュメントレベルのカスタマイズの作成
+# <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>チュートリアル: Excel のドキュメント レベルのカスタマイズを初めて作成する
 
   この入門編のチュートリアルでは、Microsoft Office Excel 用のドキュメント レベルのカスタマイズを作成する方法について説明します。 この種のソリューションで作成した機能は、特定のブックが開いている場合にのみ使用可能です。 ドキュメント レベルのカスタマイズでは、ブックが開いたときに新しいリボン タブを表示するなどの、アプリケーション全体の変更を行うことはできません。
 
@@ -62,38 +62,38 @@ ms.locfileid: "107826903"
 ::: moniker range="vs-2017"
 3. テンプレート ペインで、 **[Visual C#]** または **[Visual Basic]** を展開してから、 **[Office/SharePoint]** を展開します。
 
-4. 拡張された **Office/SharePoint** ノードの下で、[ **VSTO アドイン** ] ノードを選択します。
+4. 展開した **[Office/SharePoint]** ノードの下で、 **[VSTO Add-ins]** ノードを選択します。
 
-5. プロジェクトテンプレートの一覧で、Excel VSTO ブックプロジェクトを選択します。
+5. プロジェクト テンプレートの一覧で、Excel VSTO ブック プロジェクトを選択します。
 
-6. [ **名前** ] ボックスに「 **FirstWorkbookCustomization**」と入力します。
+6. **[名前]** ボックスに「**FirstWorkbookCustomization**」と入力します。
 
 7. **[OK]** をクリックします。
 
-8. **Visual Studio Tools for Office プロジェクトウィザード** で [**新しいドキュメントの作成**] を選択し、[ **OK**] をクリックします。
+8. **Visual Studio Tools for Office プロジェクト ウィザード** で **[新しいドキュメントを作成]** を選択し、 **[OK]** をクリックします。
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-3. [ **新しいプロジェクトの作成** ] ダイアログで、[ **Excel VSTO ブック** ] プロジェクトを選択します。
+3. **[新しいプロジェクトを作成]** ダイアログで、 **[Excel VSTO ブック]** プロジェクトを選択します。
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
 4. **[次へ]** をクリックします。
 
-5. [**新しいプロジェクトの構成**] ダイアログの [**名前**] ボックスに「 **FirstWorkbookCustomization** 」と入力し、[**作成**] をクリックします。
+5. **[新しいプロジェクトを構成します]** ダイアログの **[名前]** ボックスに「**FirstWorkbookCustomization**」と入力し、 **[作成]** をクリックします。
 
-6. **Visual Studio Tools for Office プロジェクトウィザード** で [**新しいドキュメントの作成**] を選択し、[ **OK**] をクリックします。
+6. **Visual Studio Tools for Office プロジェクト ウィザード** で **[新しいドキュメントを作成]** を選択し、 **[OK]** をクリックします。
 ::: moniker-end
-   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstWorkbookCustomization** プロジェクトを作成し、次のファイルをプロジェクトに追加します。
+   - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって **FirstWorkbookCustomization** プロジェクトが作成され、次のファイルがプロジェクトに追加されます。
 
-   - *FirstWorkbookCustomization*-プロジェクト内の Excel ブックを表します。 すべてのワークシートとグラフが含まれます。
+   - *FirstWorkbookCustomization*.xlsx - プロジェクト内の Excel ブックを表します。 すべてのワークシートとグラフが含まれます。
 
-   - Sheet1 (Visual Basic または Visual C# の *.cs* ファイル用の *.vb* ファイル)-ブックの最初のワークシートのデザイン画面とコードを提供するワークシート。 詳細については、「 [ワークシートホスト項目](../vsto/worksheet-host-item.md)」を参照してください。
+   - Sheet1 (Visual Basic の場合は *.vb* ファイル、Visual C# の場合は *.cs* ファイル) - ブックの最初のワークシートのデザイン画面とコードを提供するワークシート。 詳しくは、「[Worksheet ホスト項目](../vsto/worksheet-host-item.md)」をご覧ください。
 
-   - Sheet2 (Visual Basic または Visual C# の *.cs* ファイルの *.vb* ファイル)-ブックの2番目のワークシートのデザイン画面とコードを提供するワークシート。
+   - Sheet2 (Visual Basic の場合は *.vb* ファイル、Visual C# の場合は *.cs* ファイル) - ブックの 2 番目のワークシートのデザイン画面とコードを提供するワークシート。
 
-   - Sheet3 (Visual C# の Visual Basic または *.cs* ファイルの *.vb* ファイル)-ブックの3番目のワークシートのデザイン画面とコードを提供するワークシート。
+   - Sheet3 (Visual Basic の場合は *.vb* ファイル、Visual C# の場合は *.cs* ファイル) - ブックの 3 番目のワークシートのデザイン画面とコードを提供するワークシート。
 
-   - ThisWorkbook (Visual C# の Visual Basic または *.cs* ファイルの *.vb* ファイル)-ブックレベルのカスタマイズのデザインサーフェイスとコードが含まれています。 詳細については、「 [Workbook host item](../vsto/workbook-host-item.md)」を参照してください。
+   - ThisWorkbook (Visual Basic の場合は *.vb* ファイル、Visual C# の場合は *.cs* ファイル) - ブック レベルのカスタマイズのデザイン画面とコードが格納されます。 詳しくは、「[ブックのホスト項目](../vsto/workbook-host-item.md)」をご覧ください。
 
      デザイナーで、Sheet1 コード ファイルが自動的に開かれます。
 
@@ -103,38 +103,38 @@ ms.locfileid: "107826903"
 
 ### <a name="to-close-and-reopen-a-worksheet-in-the-designer"></a>デザイナーでワークシートを閉じ、再び開くには
 
-1. デザイナーウィンドウの [ **閉じる** ] ボタン (X) をクリックして、ブックを閉じます。
+1. デザイナー ウィンドウの **[閉じる]** ボタン (X) をクリックしてブックを閉じます。
 
-2. **ソリューションエクスプローラー** で、 **Sheet1** コードファイルを右クリックし、[**デザイナーの表示**] をクリックします。
+2. **ソリューション エクスプローラー** で、**Sheet1** コード ファイルを右クリックし、 **[デザイナーの表示]** をクリックします。
 
      \- または
 
-     **ソリューションエクスプローラー** で、 **Sheet1** コードファイルをダブルクリックします。
+     **ソリューション エクスプローラー** で、**Sheet1** コード ファイルをダブルクリックします。
 
 ## <a name="add-text-to-a-worksheet-in-the-designer"></a>デザイナーでワークシートにテキストを追加する
 
- デザイナーで開いたワークシートを変更することで、カスタマイズのユーザー インターフェイス (UI) をデザインできます。 たとえば、セルにテキストを追加したり、式を適用したり、Excel のコントロールを追加したりできます。 デザイナーの使用方法の詳細については、「 [Visual Studio 環境の Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)」を参照してください。
+ デザイナーで開いたワークシートを変更することで、カスタマイズのユーザー インターフェイス (UI) をデザインできます。 たとえば、セルにテキストを追加したり、式を適用したり、Excel のコントロールを追加したりできます。 デザイナーの使用方法について詳しくは、「[Visual Studio 環境における Office プロジェクト](../vsto/office-projects-in-the-visual-studio-environment.md)」をご覧ください。
 
 ### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>デザイナーを使用してワークシートにテキストを追加するには
 
-1. デザイナーで開いているワークシートで、セル **A1** を選択し、次のテキストを入力します。
+1. デザイナーで開かれているワークシートで、セル **A1** を選択してから、次のテキストを入力します。
 
      **このテキストは、デザイナーを使用して追加されました。**
 
 > [!WARNING]
-> このテキスト行をセル **A2** に追加すると、この例の他のコードによって上書きされます。
+> このテキスト行をセル **A2** に追加した場合、テキストはこの例の他のコードによって上書きされます。
 
 ## <a name="add-text-to-a-worksheet-programmatically"></a>プログラムによってワークシートにテキストを追加する
 
  次に、Sheet1 コード ファイルにコードを追加します。 この新しいコードでは、Excel のオブジェクト モデルを使用して、ブックに 2 行目のテキストを追加します。 Sheet1 コード ファイルには、次の生成コードが既定で含まれています。
 
-- `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳細については、「 [ワークシートホスト項目](../vsto/worksheet-host-item.md) [」および「Word オブジェクトモデルの概要」](../vsto/word-object-model-overview.md)を参照してください。 `Sheet1` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。
+- `Sheet1` クラスの部分定義。このクラスは、ワークシートのプログラミング モデルを表し、Excel のオブジェクト モデルへのアクセスを提供します。 詳しくは、「[Worksheet ホスト項目](../vsto/worksheet-host-item.md)」および「[Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)」をご覧ください。 `Sheet1` クラスの残りの部分は、変更することができない非表示のコード ファイルに定義されています。
 
-- `Sheet1_Startup` および `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳細については、「 [Office プロジェクトのイベント](../vsto/events-in-office-projects.md)」を参照してください。
+- `Sheet1_Startup` および `Sheet1_Shutdown` イベント ハンドラー。 これらのイベント ハンドラーは、Excel がユーザーのカスタマイズを読み込むときとアンロードするときに呼び出されます。 これらのイベント ハンドラーを使用して、読み込まれるときにはカスタマイズを初期化し、アンロードされるときにはカスタマイズが使用したリソースをクリーンアップします。 詳しくは、「[Office プロジェクトのイベント](../vsto/events-in-office-projects.md)」をご覧ください。
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>コードを使用してワークシートに 2 行目のテキストを追加するには
 
-1. **ソリューションエクスプローラー** で、[ **Sheet1**] を右クリックし、[**コードの表示**] をクリックします。
+1. **ソリューション エクスプローラー** で **Sheet1** を右クリックし、 **[コードの表示]** をクリックします。
 
      Visual Studio でコード ファイルが開かれます。
 
@@ -149,7 +149,7 @@ ms.locfileid: "107826903"
 
 1. **F5** キーを押して、プロジェクトをビルドおよび実行します。
 
-     プロジェクトをビルドすると、コードがアセンブリにコンパイルされ、ブックに関連付けられます。 Visual Studio は、ブックおよびアセンブリのコピーをプロジェクトのビルド出力フォルダーに格納し、カスタマイズを実行できるように開発用コンピューターのセキュリティ設定を行います。 詳細については、「 [Office ソリューションのビルド](../vsto/building-office-solutions.md)」を参照してください。
+     プロジェクトをビルドすると、コードがアセンブリにコンパイルされ、ブックに関連付けられます。 Visual Studio は、ブックおよびアセンブリのコピーをプロジェクトのビルド出力フォルダーに格納し、カスタマイズを実行できるように開発用コンピューターのセキュリティ設定を行います。 詳しくは、「[Office ソリューションのビルド](../vsto/building-office-solutions.md)」をご覧ください。
 
 2. 次のテキストがブックに表示されることを確認します。
 
@@ -171,28 +171,28 @@ ms.locfileid: "107826903"
 
  Excel 用の基本的なドキュメント レベルのカスタマイズを作成したので、カスタマイズ開発の詳細な方法について、以下のトピックを参照してください。
 
-- ドキュメントレベルのカスタマイズで実行できる一般的なプログラミングタスク: [ドキュメントレベルのカスタマイズをプログラム](../vsto/programming-document-level-customizations.md)します。
+- ドキュメント レベルのカスタマイズで実行できる一般的なプログラミング タスク: [ドキュメント レベルのカスタマイズのプログラミング](../vsto/programming-document-level-customizations.md)。
 
-- Excel のドキュメントレベルのカスタマイズに固有のプログラミングタスク: [excel ソリューション](../vsto/excel-solutions.md)。
+- Excel 用のドキュメント レベルのカスタマイズに固有のプログラミング タスク: [Excel ソリューション](../vsto/excel-solutions.md)。
 
-- Excel のオブジェクトモデルの使用: [excel オブジェクトモデルの概要](../vsto/excel-object-model-overview.md)。
+- Excel のオブジェクト モデルの使用: [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)。
 
-- Excel の UI のカスタマイズ (リボンへのカスタムタブの追加や独自の操作ウィンドウの作成など): [OFFICE ui のカスタマイズ](../vsto/office-ui-customization.md)。
+- Excel の UI のカスタマイズ (リボンへのカスタム タブの追加や、独自のカスタム作業ウィンドウの作成など): [Office UI のカスタマイズ](../vsto/office-ui-customization.md)。
 
-- Visual Studio の Office 開発ツールによって提供される拡張 Excel オブジェクトを使用して、Excel オブジェクトモデルを使用して不可能なタスクを実行します (たとえば、ドキュメントでマネージコントロールをホストし、Windows フォームデータバインディングモデルを使用して Excel コントロールをデータにバインドする): [拡張オブジェクトを使用して excel を自動化](../vsto/automating-excel-by-using-extended-objects.md)します。
+- Visual Studio の Office 開発ツールで提供される拡張 Excel オブジェクトを使用して、Excel オブジェクト モデルを使用して実行できないタスクを実行する (たとえば、ドキュメント上でマネージド コントロールをホストする、Windows フォーム データ バインディング モデルを使用して Excel コントロールをデータにバインドするなど): [拡張オブジェクトを使用して Excel を自動化する](../vsto/automating-excel-by-using-extended-objects.md)。
 
-- Excel 用のドキュメントレベルのカスタマイズのビルドとデバッグ: [Office ソリューションのビルド](../vsto/building-office-solutions.md)。
+- Excel 用のドキュメント レベルのカスタマイズのビルドとデバッグ: [Office ソリューションをビルドする](../vsto/building-office-solutions.md)。
 
-- Excel 用のドキュメントレベルのカスタマイズの配置: [Office ソリューションを配置](../vsto/deploying-an-office-solution.md)します。
+- Excel 用のドキュメント レベルのカスタマイズの配置: [Office ソリューションを配置する](../vsto/deploying-an-office-solution.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [Office ソリューションの開発の概要 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 - [Excel ソリューション](../vsto/excel-solutions.md)
-- [プログラムドキュメントレベルのカスタマイズ](../vsto/programming-document-level-customizations.md)
-- [Excel オブジェクトモデルの概要](../vsto/excel-object-model-overview.md)
+- [プログラムのドキュメントレベルのカスタマイズ](../vsto/programming-document-level-customizations.md)
+- [Excel オブジェクト モデルの概要](../vsto/excel-object-model-overview.md)
 - [拡張オブジェクトを使用して Excel を自動化する](../vsto/automating-excel-by-using-extended-objects.md)
 - [Office UI のカスタマイズ](../vsto/office-ui-customization.md)
 - [Office ソリューションのビルド](../vsto/building-office-solutions.md)
-- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)
-- [Office プロジェクトテンプレートの概要](../vsto/office-project-templates-overview.md)
+- [Office ソリューションを配置する](../vsto/deploying-an-office-solution.md)
+- [Office プロジェクト テンプレートの概要](../vsto/office-project-templates-overview.md)

@@ -1,6 +1,6 @@
 ---
-description: オブジェクトの場所または64ビットのメモリアドレスをメモリコンテキストに変換します。
-title: 'IDebugBinder3:: GetMemoryContext64 |Microsoft Docs'
+description: オブジェクトの場所または 64 ビットのメモリ アドレスをメモリ コンテキストに変換します。
+title: IDebugBinder3::GetMemoryContext64 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,13 +17,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 263d50a0c9f3f9b2ab0aa74a05647abc1930970c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105094225"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-オブジェクトの場所または64ビットのメモリアドレスをメモリコンテキストに変換します。
+オブジェクトの場所または 64 ビットのメモリ アドレスをメモリ コンテキストに変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,19 +45,19 @@ int GetMemoryContext64 (
 
 ## <a name="parameters"></a>パラメーター
 `pField`\
-から検索するオブジェクトを記述する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 。 の場合は `NULL` 、代わりにを使用し `dwConstant` ます。
+[入力] 検索するオブジェクトを記述する [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)。 `NULL` の場合は、代わりに `dwConstant` を使用してください。
 
 `uConstant`\
-から64ビットのメモリアドレス (0x50000000 など)。
+[入力] 64 ビットのメモリ アドレス (0x50000000 など)。
 
 `ppMemCxt`\
-入出力オブジェクトのアドレス、またはメモリ内のアドレスを表す [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) インターフェイスを返します。
+[出力] オブジェクトのアドレス、またはメモリ内のアドレスを表す [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) インターフェイスを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
 ## <a name="example"></a>例
-次の例では、 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) インターフェイスを実装するオブジェクトを作成し、このメソッドを使用してメモリコンテキストを取得します。
+次の例では、[IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) インターフェイスを実装するオブジェクトを作成し、このメソッドを使用してメモリ コンテキストを取得します。
 
 ```cpp
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )
@@ -130,5 +130,5 @@ HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryCo
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

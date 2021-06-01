@@ -1,6 +1,6 @@
 ---
-title: 特殊化されたデプロイの処理 |Microsoft Docs
-description: Visual Studio でアプリケーションプロジェクトの特化された展開を処理する方法について説明します。 たとえば、Web サーバーまたはデバイスへのデプロイです。
+title: 特別な配置の処理 | Microsoft Docs
+description: Visual Studio でのアプリケーション プロジェクトの特別な配置を処理する方法について説明します。 たとえば、Web サーバーまたはデバイスへの配置です。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,13 +15,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9fcba9e5f63497ad81dc6729a3fb757038fc7776
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105056637"
 ---
-# <a name="handle-specialized-deployment"></a>特化した展開を処理する
-配置は、プロジェクトのオプションの操作です。 たとえば、Web プロジェクトでは、プロジェクトで Web サーバーを更新できる配置をサポートしています。 同様に、 **スマートデバイス** プロジェクトは、ビルドされたアプリケーションをターゲットデバイスにコピーするための配置をサポートしています。 プロジェクトのサブタイプは、インターフェイスを実装することによって、特殊な配置動作を提供でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> ます。 このインターフェイスは、デプロイ操作の完全なセットを定義します。
+# <a name="handle-specialized-deployment"></a>特別な配置を処理する
+配置は、プロジェクトのオプションの操作です。 たとえば、Web プロジェクトでサポートされる配置では、プロジェクトによって Web サーバーを更新できます。 同様に、**スマート デバイス** プロジェクトでは、ビルドされたアプリケーションをターゲット デバイスにコピーする配置がサポートされます。 プロジェクト サブタイプでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> インターフェイスを実装して特別な配置動作を提供できます。 このインターフェイスによって、配置操作の完全なセットが定義されます。
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>
 
@@ -39,13 +39,13 @@ ms.locfileid: "105056637"
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>
 
-  実際の配置操作は、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ユーザーの操作に対する応答性をさらに高めるために、個別のスレッドで実行する必要があります。 によって提供されるメソッド <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> は、によって非同期的に呼び出され、 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] バックグラウンドで動作します。これにより、環境はいつでもデプロイ操作の状態を照会したり、必要に応じて操作を停止したりできます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg>インターフェイス配置操作は、ユーザーが配置コマンドを選択したときに環境によって呼び出されます。
+  ユーザーの操作に対する [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の応答性をさらに高めるために、実際の配置操作は別のスレッドで実行する必要があります。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> によって提供されるメソッドは、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] から非同期で呼び出され、バックグラウンドで動作するため、環境によって配置操作の状態をいつでもクエリでき、必要な場合には操作を停止できます。 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> インターフェイスの配置操作は、ユーザーが配置コマンドを選択したときに環境によって呼び出されます。
 
-  配置操作が開始または終了したことを環境に通知するには、プロジェクトのサブタイプがメソッドとメソッドを呼び出す必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> ます。
+  配置操作が開始または終了したことを環境に通知するために、プロジェクト サブタイプは <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> メソッドや <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> メソッドを呼び出す必要があります。
 
-## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>サブタイププロジェクトによって特殊な配置を処理するには
+## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>サブタイプ プロジェクトによって特別な配置を処理するには
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>デプロイステータスイベントの通知を受信するように環境を登録するには、メソッドを実装します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> メソッドを実装して、配置状態イベントの通知を受け取るように環境を登録します。
 
     ```vb
     Private adviseSink As Microsoft.VisualStudio.Shell.EventSinkCollection = New Microsoft.VisualStudio.Shell.EventSinkCollection()
@@ -76,7 +76,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>デプロイステータスイベントの通知を受信するために、環境の登録をキャンセルするメソッドを実装します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> メソッドを実装して、配置状態イベントの通知を受け取る環境の登録を取り消します。
 
     ```vb
     Public Function UnadviseDeployStatusCallback(ByVal dwCookie As UInteger) As Integer
@@ -94,7 +94,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A>アプリケーションに固有のコミット操作を実行するには、メソッドを実装します。  このメソッドは、主にデータベースの配置に使用されます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> メソッドを実装して、アプリケーション固有のコミット操作を実行します。  このメソッドは、主にデータベースの配置に使用されます。
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -112,7 +112,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A>ロールバック操作を実行するには、メソッドを実装します。 このメソッドが呼び出されると、配置プロジェクトは、変更をロールバックし、プロジェクトの状態を復元するために適切な処理を行う必要があります。 このメソッドは、主にデータベースの配置に使用されます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> メソッドを実装して、ロールバック操作を実行します。 このメソッドが呼び出されると、配置プロジェクトは、変更をロールバックし、プロジェクトの状態を復元するために適切な処理をすべて行う必要があります。 このメソッドは、主にデータベースの配置に使用されます。
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -130,7 +130,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A>プロジェクトが配置操作を開始できるかどうかを判断するために、メソッドを実装します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> メソッドを実装して、プロジェクトが配置操作を開始できるかどうかを判別します。
 
     ```vb
     Public Function QueryStartDeploy(ByVal dwOptions As UInteger, ByVal pfSupported As Integer(), ByVal pfReady As Integer()) As Integer
@@ -163,7 +163,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A>配置操作が正常に完了したかどうかを確認するには、メソッドを実装します。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> メソッドを実装して、配置操作が正常に完了したかどうかを確認します。
 
     ```vb
     Public Function QueryStatusDeploy(ByRef pfDeployDone As Integer) As Integer
@@ -186,7 +186,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- メソッドを実装して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> 別のスレッドで配置操作を開始します。 アプリケーションの配置に固有のコードをメソッド内に配置し `Deploy` ます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> メソッドを実装して、別のスレッドで配置操作を開始します。 アプリケーションの配置に固有のコードを `Deploy` メソッド内に配置します。
 
     ```vb
     Public Function StartDeploy(ByVal pIVsOutputWindowPane As IVsOutputWindowPane, ByVal dwOptions As UInteger) As Integer
@@ -243,7 +243,7 @@ ms.locfileid: "105056637"
 
     ```
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A>配置操作を停止するには、メソッドを実装します。 このメソッドは、展開プロセス中にユーザーが **[キャンセル** ] ボタンをクリックしたときに呼び出されます。
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> メソッドを実装して、配置操作を停止します。 このメソッドが呼び出されるのは、配置プロセス中にユーザーが **[キャンセル]** ボタンをクリックしたときです。
 
     ```vb
     Public Function StopDeploy(ByVal fSync As Integer) As Integer
@@ -289,7 +289,7 @@ ms.locfileid: "105056637"
     ```
 
 > [!NOTE]
-> このトピックで説明するすべてのコード例は、 [Vssdk サンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples)の大きな例の一部です。
+> このトピックで取り上げるすべてのコード例は、[VSSDK サンプル](https://github.com/Microsoft/VSSDK-Extensibility-Samples)の大きな例の一部です。
 
 ## <a name="see-also"></a>こちらもご覧ください
-- [プロジェクトのサブタイプ](../../extensibility/internals/project-subtypes.md)
+- [プロジェクト サブタイプ](../../extensibility/internals/project-subtypes.md)

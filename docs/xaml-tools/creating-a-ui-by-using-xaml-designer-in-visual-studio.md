@@ -1,6 +1,6 @@
 ---
 title: XAML デザイナーの概要
-description: XAML ベースのアプリの設計に役立つビジュアルインターフェイスを提供する、Blend for Visual Studio の XAML デザイナーのワークスペース UI と機能について説明します。
+description: XAML ベースのアプリのデザインに役立つビジュアル インターフェイスを提供する、Blend for Visual Studio の XAML デザイナーのワークスペース UI と機能について説明します。
 ms.date: 03/03/2020
 ms.topic: conceptual
 ms.custom: contperf-fy21q4; SEO-VS-2020
@@ -16,19 +16,19 @@ ms.author: tglee
 manager: jmartens
 ms.openlocfilehash: 3d5584380b78bba05f1596a99aa2298789df018f
 ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/22/2021
 ms.locfileid: "107879357"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML デザイナーを使用して UI を作成する
 
-Visual Studio および Blend for Visual Studio の XAML デザイナーは、WPF や UWP などの XAML ベースのアプリを設計するのに役立つビジュアルインターフェイスを提供します。 アプリのユーザー インターフェイスを作成するには、[ツールボックス] ウィンドウ (Blend for Visual Studio の場合、[アセット] ウィンドウ) からコントロールをドラッグし、プロパティ ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。
+Visual Studio の XAML デザイナーと Blend for Visual Studio には、XAML ベースのアプリのデザインに役立つビジュアル インターフェイスが用意されています (WPF、UWP など)。 アプリのユーザー インターフェイスを作成するには、[ツールボックス] ウィンドウ (Blend for Visual Studio の場合、[アセット] ウィンドウ) からコントロールをドラッグし、プロパティ ウィンドウでプロパティを設定します。 また、XAML ビューで直接、XAML を編集することもできます。
 
 上級ユーザーの場合、[XAML デザイナーをカスタマイズする](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md)こともできます。
 
 > [!NOTE]
-> Xamarin. フォームは、XAML デザイナーをサポートしていません。 Xamarin の XAML Ui を表示し、アプリの実行中に編集するには、Xamarin. フォームに XAML ホットリロードを使用します。 詳細については、「 [Xamarin. Forms (プレビュー) の XAML ホットリロード](/xamarin/xamarin-forms/xaml/hot-reload/) 」ページを参照してください。
+> Xamarin.Forms は、XAML デザイナーをサポートしていません。 Xamarin.Forms の XAML UI を表示し、アプリの実行中にそれらを編集するには、Xamarin.Forms 用の XAML ホット リロードを使用します。 詳しくは、「[Xamarin.Forms の XAML ホット リロード (プレビュー)](/xamarin/xamarin-forms/xaml/hot-reload/)」ページをご覧ください。
 
 ## <a name="xaml-designer-workspace"></a>XAML デザイナーのワークスペース
 
@@ -82,7 +82,7 @@ XAML デザイナーは、アプリでレンダリングされる XAML マーク
 
 このツール バーでは、次のコマンドを使用できます。
 
-**[ズーム]**
+**Zoom**
 
 ズームでは、デザイン画面のサイズを変更できます。 12.5% から 800% の範囲でズームしたり、**[選択範囲をズーム]** や **[すべてを合わせる]** などのオプションを選択したりできます。
 
@@ -92,7 +92,7 @@ XAML デザイナーは、アプリでレンダリングされる XAML マーク
 
 **グリッド線へのスナップをオン/オフにする**
 
-**グリッド線へのスナップ** が有効になっている場合、要素は、アートボード上にドラッグすると、最も近い水平および垂直のグリッド線に配置されます。
+**[グリッド線へのスナップ]** がオンの場合、アートボードで要素をドラッグすると、要素は、最も近い位置にある縦と横のグリッド線に沿って整列されます。
 
 **アートボードの背景を切り替える**
 
@@ -118,26 +118,26 @@ Visual Studio の [ドキュメント アウトライン] ウィンドウは、B
 
 - アートボード上のすべての要素の階層構造を表示する。
 
-- 要素を選択して変更できるようにします。 たとえば、階層内で移動したり、プロパティウィンドウでそれらのプロパティを設定したりできます。 詳細については、「[XAML デザイナーで要素を操作する](../xaml-tools/working-with-elements-in-xaml-designer.md)」を参照してください。
+- 要素を選択して変更を加える。 たとえば、階層構造内の別の場所に移動したり、プロパティ ウィンドウでプロパティを設定したりできます。 詳細については、「[XAML デザイナーで要素を操作する](../xaml-tools/working-with-elements-in-xaml-designer.md)」を参照してください。
 
 - コントロールである要素のテンプレートを作成および変更する。
 
 - [アニメーションを作成する](animate-objects-in-xaml-designer.md) (Blend for Visual Studio のみ)。
 
-Visual Studio で [ドキュメントアウトライン] ウィンドウを表示するには、メニュー バーで [  >  **その他の Windows**  >  **ドキュメントアウトライン** の表示] を選択します。
-Blend for Visual Studio でオブジェクトとタイムラインウィンドウを表示するには、メニューバーで[  >  **ドキュメントアウトライン** の表示] を選択します。
+Visual Studio で [ドキュメント アウトライン] ウィンドウを表示するには、メニュー バーで **[表示]** 、 **[その他のウィンドウ]** 、 **[ドキュメント アウトライン]** の順に選択します。
+Blend for Visual Studio で [オブジェクトとタイムライン] ウィンドウを表示するには、メニューバーで **[表示]** 、 **[ドキュメント アウトライン]** の順に選択します。
 
 ![Visual Studio の [ドキュメント アウトライン] ウィンドウ](media/document-outline-window.png)
 
-[ドキュメント アウトライン]/[オブジェクトとタイムライン] ウィンドウのメインビューには、ドキュメントの階層がツリー構造で表示されます。 ドキュメント アウトラインの階層状の特性を利用して、さまざまな詳細レベルでドキュメントを調査し、要素を 1 つずつ、またはまとめてロックしたり非表示にしたりできます。 ドキュメントアウトライン/オブジェクトとタイムラインウィンドウでは、次のオプションを使用できます。
+[ドキュメント アウトライン]/[オブジェクトとタイムライン] ウィンドウのメインビューには、ドキュメントの階層がツリー構造で表示されます。 ドキュメント アウトラインの階層状の特性を利用して、さまざまな詳細レベルでドキュメントを調査し、要素を 1 つずつ、またはまとめてロックしたり非表示にしたりできます。 次に示すのは、[ドキュメント アウトライン]/[オブジェクトとタイムライン] ウィンドウで使用可能なオプションです。
 
 **表示/非表示**
 
-アートボード要素を表示するか、非表示にします。 表示される場合、目の形をした記号として表示されます。 **Ctrl** h キーを押して + 要素を非表示にし **たり、** + **ctrl** + **h** キーを押して表示したりすることもできます。
+アートボード要素を表示するか、非表示にします。 表示される場合、目の形をした記号として表示されます。 **Ctrl**+**H** を押して要素を非表示にし、**Shift**+**Ctrl**+**H** を押して要素を表示する方法もあります。
 
 **ロック/ロック解除**
 
-アートボード要素をロックまたはロック解除します。 ロックされている要素は変更できません。 ロックされると、南京錠の形をした記号として表示されます。 **Ctrl** l キーを押して + 要素をロックしたり **、** + **ctrl** + **l** キーを押してロックを解除したりすることもできます。
+アートボード要素をロックまたはロック解除します。 ロックされている要素は変更できません。 ロックされると、南京錠の形をした記号として表示されます。 **Ctrl**+**L** を押して要素をロックし、**Shift**+**Ctrl**+**L** を押してロックを解除する方法もあります。
 
 **スコープを pageRoot に戻す**
 
@@ -163,7 +163,7 @@ Blend for Visual Studio でオブジェクトとタイムラインウィンド�
 
 プロパティの使用とイベントの処理の詳細については、「[コントロールとパターンの概要](/windows/uwp/design/controls-and-patterns/controls-and-events-intro)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [XAML デザイナーで要素を操作する](../xaml-tools/working-with-elements-in-xaml-designer.md)
 - [リソースを作成して適用する方法](../xaml-tools/how-to-create-and-apply-a-resource.md)

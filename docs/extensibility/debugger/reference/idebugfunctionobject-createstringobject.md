@@ -1,6 +1,6 @@
 ---
 description: 文字列オブジェクトを作成します。
-title: 'IDebugFunctionObject:: CreateStringObject |Microsoft Docs'
+title: IDebugFunctionObject::CreateStringObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 15ad52d990492d7f78f3f8246e786dc0b037e23f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105072898"
@@ -44,16 +44,16 @@ int CreateStringObject(
 
 ## <a name="parameters"></a>パラメーター
 `pcstrString`\
-から文字列オブジェクトの文字列値。
+[入力] 文字列オブジェクトの文字列値。
 
 `ppObject`\
-入出力新しく作成された文字列オブジェクトを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトを返します。
+[出力] 新しく作成された文字列オブジェクトを表す [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は S_OK を返します。それ以外の場合は、エラーコードを返します。
+ 正常に終了した場合は、S_OK を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)インターフェイスによって表される関数のパラメーターである文字列を表すオブジェクトを作成するには、このメソッドを呼び出します。
+## <a name="remarks"></a>解説
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) インターフェイスによって表される関数のパラメーターである文字列を表すオブジェクトを作成するには、このメソッドを呼び出します。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

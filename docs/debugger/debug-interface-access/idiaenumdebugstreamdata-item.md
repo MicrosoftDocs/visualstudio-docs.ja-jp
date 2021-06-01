@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumDebugStreamData:: Item |Microsoft Docs'
+description: 指定されたレコードを取得します。
+title: IDiaEnumDebugStreamData::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 761e61a5-44a6-4d5d-a98e-c2e9b89d2343
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e221516198d186dd08c353123ce4236f0be1383c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 22c03beccb60d4ef5848dbc973f3a67c2b0fade9
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744821"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635081"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
 指定されたレコードを取得します。
@@ -25,7 +26,7 @@ ms.locfileid: "72744821"
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    DWORD  index,
    DWORD  cbData,
    DWORD* pcbData,
@@ -36,22 +37,22 @@ HRESULT Item ( 
 #### <a name="parameters"></a>パラメーター
  インデックス
 
-から取得するレコードのインデックス。 インデックスは 0 ~ `count`-1 の範囲にあり、`count` は[IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)によって返されます。
+[入力] 取得するレコードのインデックス。 インデックスは 0 から `count`-1 の範囲です。`count` は [IDiaEnumDebugStreamData::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md) から返されます。
 
  cbData
 
-からデータバッファーのサイズ (バイト単位)。
+[入力] データ バッファーのサイズ (バイト単位)。
 
  pcbData
 
-入出力返されたバイト数を返します。 @No__t_0 が `NULL` 場合、`pcbData` には、指定されたレコードで使用可能なデータの合計バイト数が含まれます。
+[出力] 返されるバイト数を返します。 `data` が `NULL` の場合、`pcbData` には、指定されたレコード内の使用可能なデータの合計バイト数が格納されます。
 
  data[]
 
-入出力デバッグストリームレコードデータを格納するバッファー。
+[出力] デバッグ ストリーム レコード データが格納されるバッファー。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。 無効なパラメーターの場合は `E_INVALIDARG` を返し、`index` パラメーターが範囲外の場合はを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。 無効なパラメーターの場合と、`index` パラメーターが範囲外の場合は `E_INVALIDARG` を返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

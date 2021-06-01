@@ -1,6 +1,6 @@
 ---
-title: ブレークポイントのエラー |Microsoft Docs
-description: ブレークポイントがコードにバインドしようとして失敗し、ブレークポイントエラーのトラブルシューティングを行う方法について説明します。
+title: ブレークポイント エラー | Microsoft Docs
+description: ブレークポイントによりコードのバインドが試行され、失敗する場合のプロセスと、ブレークポイント エラーのトラブルシューティング方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,23 +16,23 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 12e8efc7fc110f3f5c20c92d97cf3692094ef6aa
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055240"
 ---
-# <a name="breakpoint-errors"></a>ブレークポイントエラー
-ブレークポイントがコードにバインドしようとして失敗した場合のプロセスを次に示します。
+# <a name="breakpoint-errors"></a>ブレークポイント エラー
+ここでは、ブレークポイントによりコードのバインドが試行され、失敗する場合のプロセスについて説明します。
 
-## <a name="troubleshoot-a-breakpoint-error"></a>ブレークポイントエラーのトラブルシューティング
+## <a name="troubleshoot-a-breakpoint-error"></a>ブレークポイント エラーのトラブルシューティング
 
-1. デバッグエンジン (DE) は、セッションデバッグマネージャー (SDM) に [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) を送信します。
+1. デバッグ エンジン (DE) からセッション デバッグ マネージャー (SDM) に [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) が送信されます。
 
-2. SDM は [IDebugBreakpointErrorEvent2:: GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * * `ppErrorBP` ) を呼び出して、エラーのブレークポイントを取得します。
+2. SDM により [IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2** `ppErrorBP`) が呼び出され、エラー ブレークポイントが取得されます。
 
-3. SDM は、 [IDebugErrorBreakpoint2:: GetPendingBreakpoint ポイント](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) を呼び出して、エラーブレークポイントが発生した保留中のブレークポイントを取得します。
+3. SDM により [IDebugErrorBreakpoint2::GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) が呼び出され、エラー ブレークポイントの発生元である保留中のブレークポイントが取得されます。
 
-4. SDM は [IDebugErrorBreakpoint2:: GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) を呼び出して、エラーブレークポイントのバインドに失敗した理由を取得します。
+4. SDM により [IDebugErrorBreakpoint2::GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) が呼び出され、エラー ブレークポイントのバインドに失敗した理由が取得されます。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [呼び出し (デバッガーイベントを)](../../extensibility/debugger/calling-debugger-events.md)
+## <a name="see-also"></a>関連項目
+- [デバッガー イベントの呼び出し](../../extensibility/debugger/calling-debugger-events.md)

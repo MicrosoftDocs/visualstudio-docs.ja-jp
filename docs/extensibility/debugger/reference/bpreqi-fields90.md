@@ -1,6 +1,6 @@
 ---
 description: ブレークポイント要求について取得する情報を指定する有効な値を列挙します。
-title: BPREQI_FIELDS90 |Microsoft Docs
+title: BPREQI_FIELDS90 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: e977d6e85430dbd9f1931bd4fb62c02f22181d5a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067609"
 ---
 # <a name="bpreqi_fields90"></a>BPREQI_FIELDS90
-ブレークポイント要求について取得する情報を指定する有効な値を列挙します。 この列挙体は [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙体を拡張します。
+ブレークポイント要求について取得する情報を指定する有効な値を列挙します。 列挙することで、[BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) 列挙型を拡張します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BPREQI_FIELDS90
@@ -79,54 +79,54 @@ public enum enum_BPREQI_FIELDS90
 
 ## <a name="fields"></a>フィールド
 `BPREQI90_BPLOCATION`\
-`bpLocation` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)または[BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)構造の (ブレークポイントの場所) フィールドを初期化または使用します。
+[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) または [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体の `bpLocation` (ブレークポイント位置) フィールドを初期化または使用します。
 
 `BPREQI90_LANGUAGE`\
-`guidLanguage`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `guidLanguage` フィールドを初期化または使用します。
 
 `BPREQI90_PROGRAM`\
-`pProgram`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `pProgram` フィールドを初期化または使用します。
 
 `BPREQI90_PROGRAMNAME`\
-`bstrProgramName`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `bstrProgramName` フィールドを初期化または使用します。
 
 `BPREQI90_THREAD`\
-`pThread`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `pThread` フィールドを初期化または使用します。
 
 `BPREQI90_THREADNAME`\
-`bstrThreadName`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `bstrThreadName` フィールドを初期化または使用します。
 
 `BPREQI90_PASSCOUNT`\
-`bpPassCount`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `bpPassCount` フィールドを初期化または使用します。
 
 `BPREQI90_CONDITION`\
-`bpCondition`または構造体の (ブレークポイント条件) フィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `bpCondition` (ブレークポイント条件) フィールドを初期化または使用します。
 
 `BPREQI90_FLAGS`\
-`dwFlags`または構造体のフィールドを初期化または使用し `BP_REQUEST_INFO` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO` または `BP_REQUEST_INFO2` 構造体の `dwFlags` フィールドを初期化または使用します。
 
 `BPREQI90_ALLOLDFIELDS`\
-構造体ののすべてのフィールドを初期化または使用し `BP_REQUEST_INFO` ます。
+`BP_REQUEST_INFO` 構造体のすべてのフィールドを初期化または使用します。
 
 `BPREQI90_VENDOR`\
-構造体のフィールドを初期化または使用し `guidVendor` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO2` 構造体の `guidVendor` フィールドを初期化または使用します。
 
 `BPREQI90_CONSTRAINT`\
-構造体のフィールドを初期化または使用し `bstrConstraint` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO2` 構造体の `bstrConstraint` フィールドを初期化または使用します。
 
 `BPREQI90_TRACEPOINT`\
-構造体のフィールドを初期化または使用し `bstrTracepoint` `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO2` 構造体の `bstrTracepoint` フィールドを初期化または使用します。
 
 `BPREQI90_MACROTRACEPOINT`\
-構造体のフィールドを初期化または使用し `bstrMacroTracepoint` `BP_REQUEST_INFO2` ます。 BPREQI_ALLFIELDS には、このフィールドは含まれません。
+`BP_REQUEST_INFO2` 構造体の `bstrMacroTracepoint` フィールドを初期化または使用します。 このフィールドは、BPREQI_ALLFIELDS には含まれません。
 
 `BPREQI90_ALLFIELDS`\
-構造体のすべてのフィールドを指定し `BP_REQUEST_INFO2` ます。
+`BP_REQUEST_INFO2` 構造体のすべてのフィールドを指定します。
 
-## <a name="requirements"></a>要件
-ヘッダー: Msdbg90
+## <a name="requirements"></a>必要条件
+ヘッダー: Msdbg90.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

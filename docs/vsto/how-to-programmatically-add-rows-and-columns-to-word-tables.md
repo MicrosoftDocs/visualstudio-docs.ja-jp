@@ -19,7 +19,7 @@ ms.workload:
 - office
 ms.openlocfilehash: 7cac3e11f73e53441f1bcf20c67dd5659a49a1b0
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828424"
@@ -29,7 +29,7 @@ ms.locfileid: "107828424"
 
  [!INCLUDE[appliesto_wdalldocapp](includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="document-level-customization-examples"></a>ドキュメントレベルのカスタマイズの例
+## <a name="document-level-customization-examples"></a>ドキュメント レベルのカスタマイズの例
  次のコード例はドキュメント レベルのカスタマイズで使用できます。 これらの例を使用するには、プロジェクトの `ThisDocument` クラスからコードを実行します。 これらの例は、カスタマイズに関連するドキュメントに、少なくとも 1 つの表が既にあることを前提としています。
 
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.locfileid: "107828424"
 > - Word 2010 ドキュメント
 > - Word 2010 テンプレート
 >
->   このタスクを他の種類のプロジェクトで実行する場合は、 **そのアセンブリへ** の参照を追加する必要があります。その後、そのアセンブリのクラスを使用して、行と列をテーブルに追加する必要があります。 詳細については、「 [方法: プライマリ相互運用機能アセンブリを使用して Office アプリケーションを対象にする](how-to-target-office-applications-through-primary-interop-assemblies.md) 」および「 [Word 2010 プライマリ相互運用機能アセンブリリファレンス](office-primary-interop-assemblies.md)」を参照してください。
+>   他の種類のプロジェクトでこのタスクを実行する場合は、**Microsoft.Office.Interop.Word** アセンブリへの参照を追加しなければならず、そのアセンブリのクラスを使用して表に行と列を追加する必要があります。 詳細については、「[方法: プライマリ相互運用機能アセンブリを使用して Office アプリケーションを対象にする](how-to-target-office-applications-through-primary-interop-assemblies.md)」と [Word 2010 プライマリ相互運用機能アセンブリのリファレンス](office-primary-interop-assemblies.md)を参照してください。
 
 ### <a name="to-add-a-row-to-a-table"></a>表に行を追加するには
 
@@ -62,7 +62,7 @@ ms.locfileid: "107828424"
 > [!IMPORTANT]
 > このコードは、Word VSTO アドイン テンプレートを使用して作成したプロジェクトでのみ実行されます。
 >
-> このタスクを他の種類のプロジェクトで実行する場合は、 **そのアセンブリへ** の参照を追加する必要があります。その後、そのアセンブリのクラスを使用して、行と列をテーブルに追加する必要があります。 詳細については、「 [方法: プライマリ相互運用機能アセンブリを使用して Office アプリケーションを対象にする](how-to-target-office-applications-through-primary-interop-assemblies.md) 」および「 [Word 2010 プライマリ相互運用機能アセンブリリファレンス](office-primary-interop-assemblies.md)」を参照してください。
+> 他の種類のプロジェクトでこのタスクを実行する場合は、**Microsoft.Office.Interop.Word** アセンブリへの参照を追加しなければならず、そのアセンブリのクラスを使用して表に行と列を追加する必要があります。 詳細については、「[方法: プライマリ相互運用機能アセンブリを使用して Office アプリケーションを対象にする](how-to-target-office-applications-through-primary-interop-assemblies.md)」と [Word 2010 プライマリ相互運用機能アセンブリのリファレンス](office-primary-interop-assemblies.md)を参照してください。
 
 ### <a name="to-add-a-row-to-a-table"></a>表に行を追加するには
 
@@ -81,4 +81,4 @@ ms.locfileid: "107828424"
 ## <a name="see-also"></a>関連項目
 - [方法: プログラムによって Word の表を作成する](how-to-programmatically-create-word-tables.md)
 - [方法: プログラムによって Word の表のセルにテキストと書式設定を追加する](how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
-- [方法: プログラムによって document プロパティを Word の表に読み込む](how-to-programmatically-populate-word-tables-with-document-properties.md)
+- [方法: プログラムによってドキュメント プロパティを Word の表に読み込む](how-to-programmatically-populate-word-tables-with-document-properties.md)

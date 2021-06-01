@@ -1,6 +1,6 @@
 ---
 title: CreateInPlace 要素 (Visual Studio テンプレート)
-description: CreateInPlace 要素について、および、プロジェクトを作成して特定の場所または一時的な場所でパラメーター置換を実行するかどうかを指定する方法について説明します。
+description: CreateInPlace 要素についてと、プロジェクトを作成し、特定の場所と一時的な場所のどちらでパラメーター置換を実行するかを指定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -18,13 +18,13 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 3da93439b245c2f8f23a8fa5b79d9fef3a48a9d2
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089486"
 ---
 # <a name="createinplace-element-visual-studio-templates"></a>CreateInPlace 要素 (Visual Studio テンプレート)
-プロジェクトを作成し、指定した場所でパラメーター置換を実行するか、一時的な場所でパラメーター置換を実行し、指定した場所にプロジェクトを保存するかを指定します。
+プロジェクトを作成し、指定された場所でパラメーター置換を実行するか、一時的な場所でパラメーター置換を実行してから指定された場所にそのプロジェクトを保存するかを指定します。
 
  \<VSTemplate> \<TemplateData>
  \<CreateInPlace>
@@ -53,9 +53,9 @@ ms.locfileid: "105089486"
 ## <a name="text-value"></a>テキスト値
  テキスト値が必要です。
 
- テキストは、`true` または `false` である必要があります。 の場合、 `true` プロジェクトが作成され、[ **新しいプロジェクト** ] ダイアログボックスで指定された場所でパラメーター置換が実行されます。 `false`の場合、パラメーター置換は一時的な場所で実行され、プロジェクトは指定された場所にコピーされます。
+ テキストは、`true` または `false` である必要があります。 `true` の場合は、プロジェクトが作成され、 **[新しいプロジェクト]** ダイアログボックスで指定された場所でパラメーター置換が実行されます。 `false` の場合は、パラメーター置換が一時的な場所で実行されてから、プロジェクトが指定された場所にコピーされます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
  `CreateInPlace` は省略可能な要素です。 既定値は `true` です。
 
 ## <a name="example"></a>例

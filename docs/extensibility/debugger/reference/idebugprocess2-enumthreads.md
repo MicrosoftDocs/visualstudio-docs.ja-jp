@@ -1,6 +1,6 @@
 ---
-description: プロセスで実行されているすべてのスレッドの一覧を取得します。
-title: 'IDebugProcess2:: EnumThreads |Microsoft Docs'
+description: プロセスで実行されているすべてのスレッドのリストを取得します。
+title: IDebugProcess2::EnumThreads | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 6c502504b3a31f3e4689db34f907f9596b214877
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105071611"
 ---
 # <a name="idebugprocess2enumthreads"></a>IDebugProcess2::EnumThreads
-プロセスで実行されているすべてのスレッドの一覧を取得します。
+プロセスで実行されているすべてのスレッドのリストを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,17 +42,17 @@ int EnumThreads(
 
 ## <a name="parameters"></a>パラメーター
 `ppEnum`\
-入出力プロセス内のすべてのプログラム内のすべてのスレッドの一覧を含む [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md) オブジェクトを返します。
+[出力] プロセス内のすべてのプログラムのすべてのスレッドのリストを含む [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- このメソッドは、各プログラムで実行されているスレッドを列挙し、それらをスレッドのプロセスビューに結合します。 1つのスレッドが複数のプログラムで実行される場合があります。このメソッドは、そのスレッドを1回だけ列挙します。
+## <a name="remarks"></a>解説
+ このメソッドでは、各プログラムで実行されているスレッドが列挙され、それらがスレッドのプロセス ビューに結合されます。 1 つのスレッドが複数のプログラムで実行される場合があります。そのようなスレッドは、このメソッドによって 1 回だけ列挙されます。
 
- このメソッドは、重複しないプロセスのスレッドの一覧を表示します。 それ以外の場合、特定のプログラムで実行されているスレッドを列挙するには、 [Enumthreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) メソッドを使用します。
+ このメソッドでは、プロセス内の重複しないスレッドのリストが表示されます。 そうではなく、特定のプログラムで実行されているスレッドを列挙するには、[EnumThreads](../../../extensibility/debugger/reference/idebugprogram2-enumthreads.md) メソッドを使用します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

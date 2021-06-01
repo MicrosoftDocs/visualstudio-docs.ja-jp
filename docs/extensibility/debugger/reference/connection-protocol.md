@@ -1,6 +1,6 @@
 ---
-description: デバッグサーバーとデバッグパッケージ (DE) 間の通信に使用されるプロトコルを示します。
-title: CONNECTION_PROTOCOL |Microsoft Docs
+description: デバッグ サーバーとデバッグ パッケージ (DE) 間の通信に使用されるプロトコルを示します。
+title: CONNECTION_PROTOCOL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d514b9aa0e37e90e99f21b5b4906cff9d32472db
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059497"
 ---
 # <a name="connection_protocol"></a>CONNECTION_PROTOCOL
-デバッグサーバーとデバッグパッケージ (DE) 間の通信に使用されるプロトコルを示します。
+デバッグ サーバーとデバッグ パッケージ (DE) 間の通信に使用されるプロトコルを示します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 typedef enum tagCONNECTION_PROTOCOL {
@@ -54,33 +54,33 @@ public enum CONNECTION_PROTOCOL {
 
 ## <a name="fields"></a>フィールド
 `CONNECTION_NONE`\
-サーバーへの接続が確立されていません。
+サーバーに接続されていません。
 
 `CONNECTION_UNKNOWN`\
-接続が確立されましたが、これは不明な種類です。
+接続されていますが、不明な種類です。
 
 `CONNECTION_LOCAL`\
-ローカルサーバーへの接続です。
+ローカル サーバーに接続されます。
 
 `CONNECTION_PIPE`\
-接続は名前付きパイプを介して行われます。
+名前付きパイプを介して接続されます。
 
 `CONNECTION_TCPIP`\
-接続は TCP/IP を使用します。
+接続では TCP/IP が使用されます。
 
 `CONNECTION_HTTP`\
-接続は HTTP (Web サーバー経由) を使用します。
+接続では、HTTP (Web サーバー経由) が使用されます。
 
 `CONNECTION_OTHER`\
-他の種類の接続が確立されています (この値は現在使用されていません)。
+その他の種類の何らかの接続が確立されました (この値は現在使用されていません)。
 
-## <a name="remarks"></a>注釈
-これらの値は、 [Getconnectionprotocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) メソッドから返されます。
+## <a name="remarks"></a>解説
+これらの値は、[GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) メソッドから返されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

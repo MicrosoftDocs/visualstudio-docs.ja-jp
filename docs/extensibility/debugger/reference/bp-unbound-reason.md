@@ -1,6 +1,6 @@
 ---
-description: ブレークポイントがバインド解除された理由を示します。
-title: BP_UNBOUND_REASON |Microsoft Docs
+description: ブレークポイントのバインドが解除された理由を示します。
+title: BP_UNBOUND_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 13f723c6395b8b271d6f097d811c5a31569c5853
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105067700"
 ---
 # <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
-ブレークポイントがバインド解除された理由を示します。
+ブレークポイントのバインドが解除された理由を示します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BP_UNBOUND_REASON {
@@ -52,21 +52,21 @@ public enum enum_BP_UNBOUND_REASON {
 理由は不明です。
 
 `BPUR_CODE_UNLOADED`\
-ブレークポイントを含むコードはアンロードされました。
+このブレークポイントを含むコードがアンロードされました。
 
 `BPUR_BREAKPOINT_REBIND`\
-ブレークポイントは別の場所に再バインドされています。 これは、ブレークポイントが移動したとき、または無効になったパスを持つファイルにブレークポイントがバインドされたときに発生する可能性があります。
+このブレークポイントは別の場所に再バインドされました。 これは、編集および続行操作の後、ブレークポイントが移動したときや、パスが有効でなくなったファイルにブレークポイントがバインドされているときに発生する可能性があります。
 
 `BPUR_ BREAKPOINT_ERROR`\
-ブレークポイントは、バインド後にエラーが発生していると判断されます。 これは、条件が有効でなくなったマネージブレークポイントに発生します。
+このブレークポイントは、バインドされた後、エラーと判定されました。 これは、条件が有効でなくなったマネージド ブレークポイントに発生します。
 
-## <a name="remarks"></a>注釈
-[Getreason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)メソッドによって返されます。
+## <a name="remarks"></a>解説
+[GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) メソッドから返されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

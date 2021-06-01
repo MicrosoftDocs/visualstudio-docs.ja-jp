@@ -1,6 +1,6 @@
 ---
-title: VSCodeWindowManager オブジェクト |Microsoft Docs
-description: VSCodeWindowManager オブジェクトについて説明します。このオブジェクトは、表示要素の管理を担当します。たとえば、ドロップダウンバーなどです。
+title: VSCodeWindowManager オブジェクト | Microsoft Docs
+description: VSCodeWindowManager オブジェクトについて説明します。これは、ドロップダウン バーなどの修飾を管理する責任を担います。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,17 +17,17 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 60093d237ed2aa7a14e5695efc66fe8edd515f4a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105062396"
 ---
 # <a name="vscodewindowmanager-object"></a>VSCodeWindowManager オブジェクト
 
-言語サービスはコードウィンドウマネージャーを実装し、修飾 (ドロップダウンバーなど) の管理を担当します。 詳細については、「 [従来の API を使用してコードウィンドウをカスタマイズする](/previous-versions/visualstudio/visual-studio-2015/extensibility/customizing-code-windows-by-using-the-legacy-api?preserve-view=true&view=vs-2015)」を参照してください。
+この言語サービスにより、コード ウィンドウ マネージャーが実装されます。これは、修飾 (たとえば、ドロップダウン バー) を管理する責任を担います。 詳細については、「[レガシ API を使用したコード ウィンドウのカスタマイズ](/previous-versions/visualstudio/visual-studio-2015/extensibility/customizing-code-windows-by-using-the-legacy-api?preserve-view=true&view=vs-2015)」を参照してください。
 
-次の表は、オブジェクト内のインターフェイスを示して `VSCodeWindowManager` います。
+次の表は、`VSCodeWindowManager` オブジェクト内のインターフェイスを示しています。
 
 |インターフェイス|説明|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|コードウィンドウに対する修飾 (ドロップダウンバーなど) の追加または削除を許可します。|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|コード ウィンドウとの間で修飾 (ドロップダウン バーなど) の追加または削除を許可します。|

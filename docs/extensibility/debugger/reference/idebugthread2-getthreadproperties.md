@@ -1,6 +1,6 @@
 ---
 description: このスレッドを記述するプロパティを取得します。
-title: 'IDebugThread2:: GetThreadProperties |Microsoft Docs'
+title: IDebugThread2::GetThreadProperties | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: fc681ff8258988c5a7f708d9ae2342f013010bd6
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070935"
@@ -44,19 +44,19 @@ int GetThreadProperties (
 
 ## <a name="parameters"></a>パラメーター
 `dwFields`\
-からに入力するフィールドを決定する、 [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) 列挙のフラグの組み合わせ `ptp` 。
+[入力] 入力する `ptp` のフィールドを決定する、[THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) 列挙型のフラグの組み合わせ。
 
 `ptp`\
-[入力、出力]スレッドのプロパティを使用して入力される [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) 構造体。
+[入力、出力] スレッドのプロパティを使用して入力される [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) 構造体。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-このメソッドから返される情報は、通常、[ **スレッド** デバッグ] ウィンドウに表示されます。
+## <a name="remarks"></a>解説
+このメソッドから返される情報は、通常、 **[スレッド]** デバッグ ウィンドウに表示されます。
 
 ## <a name="example"></a>例
-次の例は、IDebugThread2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CProgram` います。 [](../../../extensibility/debugger/reference/idebugthread2.md)
+次の例は、[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) インターフェイスを実装する単純な `CProgram` オブジェクトに対してこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,
@@ -94,7 +94,7 @@ HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)
 - [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)
 - [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

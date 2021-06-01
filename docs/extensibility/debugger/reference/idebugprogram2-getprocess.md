@@ -1,6 +1,6 @@
 ---
 description: このプログラムが実行されているプロセスを取得します。
-title: 'IDebugProgram2:: GetProcess |Microsoft Docs'
+title: IDebugProgram2::GetProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 1d87d863b954a9865ff3960f2f2cdd45ac40ce58
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065399"
@@ -42,17 +42,17 @@ int GetProcess(
 
 ## <a name="parameters"></a>パラメーター
 `ppProcess`\
-入出力プロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) インターフェイスを返します。
+[出力] プロセスを表す [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) インターフェイスを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- デバッグエンジン (DE) が [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) インターフェイスを実装していない限り、このメソッドの de 実装は常にを返す必要があります。これは、de が実行している `E_NOTIMPL` プロセスを特定できないため、このメソッドの実装を満たすことができないためです。
+## <a name="remarks"></a>解説
+ デバッグ エンジン (DE) が [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) インターフェイスを実装している場合を除き、DE のこのメソッドの実装は常に `E_NOTIMPL` を返すはずです。なぜなら、DE は、実行されているプロセスを特定できないため、このメソッドの実装を満たすことができないからです。
 
- インターフェイスを実装することは `IDebugEngineLaunch2` 、プロセスの作成方法を de が知る必要があることを意味します。したがって、 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスの de 実装では、実行されているプロセスを知ることができます。
+ `IDebugEngineLaunch2` インターフェイスを実装することは、DE がプロセスの作成方法を知っている必要があるということであり、したがって、DE の [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) インターフェイスの実装は、実行されているプロセスを知ることができます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

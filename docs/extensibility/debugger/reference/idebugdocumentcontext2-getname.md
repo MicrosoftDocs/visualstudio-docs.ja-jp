@@ -1,6 +1,6 @@
 ---
-description: このドキュメントコンテキストを含むドキュメントの表示可能な名前を取得します。
-title: 'IDebugDocumentContext2:: GetName |Microsoft Docs'
+description: このドキュメント コンテキストを含むドキュメントの表示可能な名前を取得します。
+title: IDebugDocumentContext2::GetName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 96f0130b09a98c4064f53337aaa2e54ad7ed887b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105066608"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
-このドキュメントコンテキストを含むドキュメントの表示可能な名前を取得します。
+このドキュメント コンテキストを含むドキュメントの表示可能な名前を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,19 +44,19 @@ int GetName(
 
 ## <a name="parameters"></a>パラメーター
 `gnType`\
-から返される名前の型を指定する [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) 列挙の値です。
+[入力] 取得する名前の種類を指定する [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) 列挙型の値。
 
 `pbstrFileName`\
-入出力ファイルの名前を返します。
+[出力] ファイルの名前を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-このメソッドは、通常、ドキュメントの名前そのものを格納するためにドキュメントコンテキストが記述されている場合 (例のように)、 [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) メソッドへの呼び出しを転送します。
+## <a name="remarks"></a>解説
+このメソッドは、通常、ドキュメント コンテキストがドキュメントの名前自体を格納するように記述されている場合 (次の例のように) を除き、この呼び出しを [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) メソッドに転送します。
 
 ## <a name="example"></a>例
-次の例は、IDebugDocumentContext2 インターフェイスを公開する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CDebugContext` います。 [](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
+次の例は、[IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) インターフェイスを公開するシンプルな `CDebugContext` オブジェクトにこのメソッドを実装する方法を示しています。
 
 ```cpp
 HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)
@@ -95,6 +95,6 @@ HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)
 - [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)

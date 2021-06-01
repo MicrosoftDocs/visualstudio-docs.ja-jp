@@ -1,6 +1,6 @@
 ---
-title: Office Excel キーボード、[設定]、[オプション] ダイアログボックス
-description: '[動的キーボードスキーム] を選択して、ドキュメントにフォーカスがあるときに Microsoft Excel がショートカットキーコマンドを受け取る方法について説明します。'
+title: Office Excel キーボード ([オプション] ダイアログ ボックス - [設定])
+description: '[ダイナミック キーボード スキーム] を選択してドキュメントにフォーカスがあるときに、Microsoft Excel でショートカット キー コマンドを受け取れるようにする方法について説明します。'
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -21,22 +21,22 @@ ms.workload:
 - office
 ms.openlocfilehash: 914b86e6e2b27d18e2089d44ce97810f82294c5e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99880347"
 ---
-# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>Microsoft Office Excel キーボード、[設定]、[オプション] ダイアログボックス
-  Microsoft Office Excel と Visual Studio の両方で、ショートカットキーが処理されます。 同じショートカットキーの組み合わせは、Excel や Visual Studio のさまざまなコマンドに使用できます。 Excel が Visual Studio のドキュメントレベルのプロジェクトで開かれている場合、一度に1つのアプリケーションだけがショートカットキーコマンドを受け取ります。 既定では、Visual Studio はすべてのショートカットキーコマンドを受け取りますが、[ **動的キーボードスキーム**] を選択して、ドキュメントにフォーカスがあるときに Excel を受け取るようにすることができます。
+# <a name="microsoft-office-excel-keyboard-settings-options-dialog-box"></a>[Microsoft Office Excel キーボード] ([オプション] ダイアログ ボックス - [設定])
+  Microsoft Office Excel と Visual Studio の両方で、ショートカット キーが処理されます。 同じショートカット キーの組み合わせによって表されるコマンドが、Excel と Visual Studio で異なる場合があります。 Visual Studio のドキュメント レベルのプロジェクトで Excel が 開かれている場合、ショートカット キーのコマンドを受け取るアプリケーションは一度に 1 つだけです。 既定では、Visual Studio がすべてのショートカット キー コマンドを受け取りますが、**ダイナミック キーボード スキーム** を選択することによってドキュメントにフォーカスがあるときは、Excel でそれらを受け取れるようにすることができます。
 
- 現在ショートカットキーを処理しているアプリケーションのコマンドに割り当てられていないショートカットキーを使用すると、ショートカットキーが他のアプリケーションに渡されます。
+ 現在ショートカット キーを処理しているアプリケーションのコマンドに割り当てられていないショートカット キーを使用すると、そのショートカット キーは他のアプリケーションに渡されます。
 
- 選択したオプションは、Excel プロジェクトが変更されるまで有効なままになります。 選択内容は Microsoft Office Word プロジェクトには影響しません。word の Microsoft Office Word のキーボードオプションを使用して、すべての変更を行う必要があります。
+ 選択したオプションは、変更するまで、Excel プロジェクトに対して有効なままになります。 この選択は、Microsoft Office Word プロジェクトには影響しません。Word に対する変更は、Microsoft Office Word のキーボード オプションを使用して行う必要があります。
 
 ## <a name="uielement-list"></a>UIElement の一覧
- **Visual Studio キーボードスキーム** Excel にフォーカスがある場合でも、Visual Studio はすべてのショートカットキーコマンドを受け取ります。 たとえば、Excel にフォーカスがあるときにファンクションキー **F5** キーを押すと、Visual Studio によってソリューションのデバッグが開始されます。
+ **[Visual Studio キーボード スキーム]** Excel にフォーカスがある場合でも、Visual Studio がすべてのショートカット キー コマンドを受け取ります。 たとえば、Excel にフォーカスがある状態でファンクション キー **F5** を押すと、Visual Studio によってソリューションのデバッグが開始されます。
 
- **動的キーボードスキーム** Visual Studio は、フォーカスがあるときにのみショートカットキーコマンドを受け取ります。 Excel にフォーカスがある場合、Excel はすべてのショートカットキーコマンドを受け取ります。 たとえば、Excel にフォーカスがあるときにファンクションキー **F5** キーを押すと、[ **ジャンプ** ] ダイアログボックスが表示されます。 Visual Studio にフォーカスがあるときに **F5** キーを押すと、ソリューションのデバッグが開始されます。
+ **[ダイナミック キーボード スキーム]** Visual Studio は、フォーカスがあるときにのみショートカット キー コマンドを受け取ります。 Excel にフォーカスがあるときは、Excel がすべてのショートカット キー コマンドを受け取ります。 たとえば、Excel にフォーカスがあるときにファンクション キー **F5** を押すと、Excel の **[ジャンプ]** ダイアログ ボックスが開きます。 Visual Studio にフォーカスがあるときに **F5** キーを押すと、ソリューションのデバッグが開始されます。
 
 ## <a name="see-also"></a>関連項目
-- [Microsoft Office Word キーボード、Microsoft Office キーボード設定、[オプション] ダイアログボックス](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [[Microsoft Office Word Keyboard] ([オプション] ダイアログ ボックス - [Microsoft Office Keyboard 設定])](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)

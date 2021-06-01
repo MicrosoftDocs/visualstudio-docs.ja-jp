@@ -1,6 +1,6 @@
 ---
-title: ステータスバーの拡張 |Microsoft Docs
-description: IDE の下部にある Visual Studio のステータスバーを拡張して、情報を表示する方法について説明します。
+title: ステータス バーの拡張 | Microsoft Docs
+description: IDE の下部にある Visual Studio のステータス バーを拡張して、情報を表示する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,28 +15,28 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 5ab87f9c8b54d9c31466068668eb8dd5a1857a06
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105070103"
 ---
-# <a name="extend-the-status-bar"></a>ステータスバーを拡張する
-IDE の下部にある Visual Studio のステータスバーを使用して、情報を表示できます。
+# <a name="extend-the-status-bar"></a>ステータス バーを拡張する
+IDE の下部にある Visual Studio のステータス バーを使用して、情報を表示できます。
 
- ステータスバーを拡張すると、フィードバック領域、進行状況バー、アニメーション領域、およびデザイナー領域の4つの領域に情報と UI を表示できます。 フィードバック領域では、テキストを表示したり、表示されているテキストを強調表示したりすることができます。 進行状況バーには、ファイルの保存など、実行時間の短い操作の進行状況が表示されます。 アニメーション領域には、ソリューション内での複数のプロジェクトのビルドなど、長時間実行される操作や不定な長さの操作に対して、連続ループアニメーションが表示されます。 デザイナー領域には、カーソル位置の行番号と列番号が表示されます。
+ ステータス バーを拡張すると、フィードバック領域、進行状況バー、アニメーション領域、およびデザイナー領域の 4 つの領域に情報と UI を表示できます。 フィードバック領域を使用すると、テキストを表示したり、表示されているテキストを強調表示したりすることができます。 進行状況バーには、ファイルの保存など、実行時間の短い操作の増分の進行状況が表示されます。 アニメーション領域には、ソリューション内での複数のプロジェクトのビルドなど、実行時間の長い操作や長さが不確定の操作のために、連続的にループするアニメーションが表示されます。 また、デザイナー領域には、カーソル位置の行番号と列番号が表示されます。
 
- ステータスバーは、(サービスの) インターフェイスを使用して取得でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> ます。 また、ウィンドウフレームに配置されているオブジェクトは、インターフェイスを実装することによって、ステータスバークライアントオブジェクトとして登録でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> ます。 ウィンドウがアクティブになるたびに、Visual Studio はそのウィンドウに配置されているオブジェクトにインターフェイスを照会し `IVsStatusbarUser` ます。 見つかった場合は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> 返されたインターフェイスでメソッドを呼び出します。オブジェクトは、そのメソッド内からステータスバーを更新できます。 たとえば、ドキュメントウィンドウでは、メソッドを使用して、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> デザイナー領域がアクティブになったときに情報を更新できます。
+ ステータス バーは、(<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> サービスから) <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> インターフェイスを使用して取得できます。 さらに、ウィンドウ フレームに配置されるオブジェクトは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> インターフェイスの実装によりステータス バーのクライアント オブジェクトとして登録できます。 ウィンドウがアクティブにされるたびに、Visual Studio からそのウィンドウに配置されているオブジェクトに対して `IVsStatusbarUser` インターフェイスが照会されます。 見つかった場合は、返されたインターフェイスで <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> メソッドが呼び出され、オブジェクトにより、そのメソッド内からステータス バーを更新できるようになります。 たとえば、ドキュメント ウィンドウで、<xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> メソッドを使用して、デザイナー領域がアクティブになったときにその中の情報を更新できます。
 
- 次の手順では、VSIX プロジェクトを作成し、カスタムメニューコマンドを追加する方法について理解していることを前提としています。 詳細については、「 [メニューコマンドを使用して拡張機能を作成](../extensibility/creating-an-extension-with-a-menu-command.md)する」を参照してください。
+ 次の手順は、VSIX プロジェクトを作成し、カスタム メニュー コマンドを追加する方法について理解していることを前提としています。 詳細については、「[メニュー コマンドを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-a-menu-command.md)」を参照してください。
 
-## <a name="modify-the-status-bar"></a>ステータスバーを変更する
- この手順では、ステータスバーのフィードバック領域にテキストを設定して取得し、静的なテキストを表示し、表示されているテキストを強調表示する方法について説明します。
+## <a name="modify-the-status-bar"></a>ステータス バーを変更する
+ この手順では、ステータス バーのフィードバック領域におけるテキストの設定と取得、静的なテキストの表示、表示されているテキストの強調表示を行う方法について説明します。
 
-### <a name="read-and-write-to-the-status-bar"></a>ステータスバーの読み取りと書き込み
+### <a name="read-and-write-to-the-status-bar"></a>ステータス バーの読み取りと書き込み
 
-1. **TestStatusBarExtension** という名前の VSIX プロジェクトを作成し、 **TestStatusBarCommand** という名前のメニューコマンドを追加します。
+1. **TestStatusBarExtension** という名前の VSIX プロジェクトを作成し、**TestStatusBarCommand** という名前のメニュー コマンドを追加します。
 
-2. *TestStatusBarCommand* で、コマンドハンドラーのメソッドコード () を次のコードに置き換え `MenuItemCallback` ます。
+2. *TestStatusBarCommand.cs* で、コマンド ハンドラーのメソッド コード (`MenuItemCallback`) を次の内容に置き換えます。
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -72,15 +72,15 @@ IDE の下部にある Visual Studio のステータスバーを使用して、�
 
 3. コードをコンパイルし、デバッグを開始します。
 
-4. Visual Studio の実験用インスタンスで [ **ツール** ] メニューを開きます。 [ **Invoke TestStatusBarCommand** ] ボタンをクリックします。
+4. Visual Studio の実験用インスタンスで **[ツール]** メニューを開きます。 **[Invoke TestStatusBarCommand]\(TestStatusBarCommand の呼び出し\)** ボタンをクリックします。
 
-     ステータスバーのテキストが、**ステータスバーに書き込んだばかり** のものであることがわかります。 表示されるメッセージボックスには同じテキストが表示されます。
+     ステータス バーのテキストに "**We just wrote to the status bar.** " と表示され、 表示されるメッセージ ボックスも同じテキストになります。
 
 ### <a name="update-the-progress-bar"></a>進行状況バーを更新する
 
 1. この手順では、進行状況バーを初期化して更新する方法について説明します。
 
-2. *TestStatusBarCommand* ファイルを開き、 `MenuItemCallback` メソッドを次のコードに置き換えます。
+2. *TestStatusBarCommand.cs* ファイルを開き、`MenuItemCallback` メソッドを次のコードに置き換えます。
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -106,19 +106,19 @@ IDE の下部にある Visual Studio のステータスバーを使用して、�
 
 3. コードをコンパイルし、デバッグを開始します。
 
-4. Visual Studio の実験用インスタンスで [ **ツール** ] メニューを開きます。 [ **TestStatusBarCommand の呼び出し** ] ボタンをクリックします。
+4. Visual Studio の実験用インスタンスで **[ツール]** メニューを開きます。 **[Invoke TestStatusBarCommand]\(TestStatusBarCommand の呼び出し\)** ボタンをクリックします。
 
-     ステータスバーのテキストが **進行状況バーへの書き込み** を読み取ることがわかります。 また、進行状況バーが20秒間、1秒ごとに更新されていることがわかります。 その後、ステータスバーと進行状況バーがクリアされます。
+     ステータス バーのテキストに "**Writing to the progress bar**" と表示されます。 また、20 秒間、進行状況バーが 1 秒ごとに更新されていることがわかります。 その後、ステータス バーと進行状況バーがクリアされます。
 
 ### <a name="display-an-animation"></a>アニメーションを表示する
 
-1. ステータスバーには、実行時間の長い操作 (ソリューションでの複数のプロジェクトのビルドなど) を示すループアニメーションが表示されます。 このアニメーションが表示されない場合は、適切な **ツール**  >  **オプション** の設定があることを確認してください。
+1. ステータス バーには、実行時間の長い操作 (ソリューション内での複数のプロジェクトのビルドなど) を示すループするアニメーションが表示されます。 このアニメーションが表示されない場合は、 **[ツール]**  >  **[オプション]** の設定が適切であることを確認します。
 
-     [**ツール**  >  **]**  >  **[オプション] [全般**] タブにアクセスし、 **[クライアントのパフォーマンスに基づいて視覚的効果を自動的に調整** する] をオフにします。 次に、[ **リッチクライアントの視覚エクスペリエンスを有効にする**] サブオプションをオンにします。 これで、Visual Studio の実験用インスタンスでプロジェクトをビルドするときにアニメーションが表示されるようになります。
+     **[ツール]**  >  **[オプション]**  >  **[全般]** タブに移動し、 **[クライアントのパフォーマンスに基づいて視覚的効果を自動的に調整する]** をオフにします。 次に、 **[リッチ クライアントの視覚的効果を有効にする]** サブ オプションをオンにします。 これで、Visual Studio の実験用インスタンスでプロジェクトをビルドするときにアニメーションが表示されるようになります。
 
-     この手順では、プロジェクトまたはソリューションのビルドを表す標準の Visual Studio アニメーションを表示します。
+     この手順で、プロジェクトまたはソリューションのビルドを表す標準の Visual Studio アニメーションを表示します。
 
-2. *TestStatusBarCommand* ファイルを開き、 `MenuItemCallback` メソッドを次のコードに置き換えます。
+2. *TestStatusBarCommand.cs* ファイルを開き、`MenuItemCallback` メソッドを次のコードに置き換えます。
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -141,6 +141,6 @@ IDE の下部にある Visual Studio のステータスバーを使用して、�
 
 3. コードをコンパイルし、デバッグを開始します。
 
-4. 実験用インスタンスの Visual Studio で [ **ツール** ] メニューを開き、[ **TestStatusBarCommand の呼び出し**] をクリックします。
+4. Visual Studio の実験用インスタンスで **[ツール]** メニューを開き、 **[Invoke TestStatusBarCommand]\(TestStatusBarCommand の呼び出し\)** をクリックします。
 
-     メッセージボックスが表示されたら、右端にあるステータスバーにもアニメーションが表示されます。 メッセージボックスを閉じると、アニメーションは表示されなくなります。
+     メッセージ ボックスが表示されると、右端にあるステータス バーにアニメーションが表示されます。 メッセージ ボックスを閉じると、アニメーションは表示されなくなります。

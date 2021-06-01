@@ -1,7 +1,9 @@
 ---
-title: 定数 (Debug Interface Access SDK) |Microsoft Docs
+title: 定数 (Debug Interface Access SDK) | Microsoft Docs
+description: Debug Interface Access (DIA) SDK を使用してプログラム デバッグ データベース (PDB) ファイルのさまざまなセクションを識別するために使用できる文字列定数の一覧をご覧ください。
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -10,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: aca4ec77-bc08-4cdd-a6ce-8d4a28ea5ea3
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b10ab87f056bc153ec41c125b0e01ddefa139b80
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 89af4172a09631cfc63065cd5c49144c42d41a6d
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745399"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "108634217"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>定数 (Debug Interface Access SDK)
-これらの文字列定数を使用すると、プログラムデバッグデータベース (PDB) ファイルのさまざまなセクションを DIA SDK で識別できます。
+これらの文字列定数は、DIA SDK を使用してプログラム デバッグ データベース (PDB) ファイルのさまざまなセクションを識別するために使用できます。
 
 ## <a name="constants"></a>定数
-次のは C/C++マクロとして宣言されています。
+次のものは C/C++ マクロとして宣言されています。
 
-|マクロ|[値]|
+|マクロ|値|
 |-----------|-----------|
-|`DiaTable_Symbols`|L "記号"|
-|`DiaTable_Sections`|L "セクション"|
-|`DiaTable_SrcFiles`|L "SourceFiles"|
+|`DiaTable_Symbols`|L"Symbols"|
+|`DiaTable_Sections`|L"Sections"|
+|`DiaTable_SrcFiles`|L"SourceFiles"|
 |`DiaTable_LineNums`|L"LineNumbers"|
-|`DiaTable_SegMap`|L "SegmentMap"|
+|`DiaTable_SegMap`|L"SegmentMap"|
 |`DiaTable_Dbg`|L"Dbg"|
-|`DiaTable_InjSrc`|L "InjectedSource"|
-|`DiaTable_FrameData`|L "フレームデータ"|
+|`DiaTable_InjSrc`|L"InjectedSource"|
+|`DiaTable_FrameData`|L"FrameData"|
 
 ## <a name="example"></a>例
 次に、これらのシンボルのいずれかを使用する例を示します。
@@ -52,8 +54,8 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 }
 ```
 
-## <a name="requirements"></a>［要件］
-ヘッダー: dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: dia2.h
 
 ## <a name="see-also"></a>関連項目
 - [参照](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)

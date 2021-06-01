@@ -1,7 +1,8 @@
 ---
-title: 'IDiaImageData:: get_relativeVirtualAddress |Microsoft Docs'
+description: アプリケーションを基準とする、モジュールの仮想メモリ内の場所を取得します。
+title: IDiaImageData::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: e6d6deee-dc12-4b38-af15-f917b2d4368e
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfc7a808da6bb11907fc239f4b320e4dd93a2d19
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 98b3b6eaf0296d03d0120605eec69ee6c308426f
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743426"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634417"
 ---
 # <a name="idiaimagedataget_relativevirtualaddress"></a>IDiaImageData::get_relativeVirtualAddress
-アプリケーションを基準として、モジュールの仮想メモリ内の場所を取得します。
+アプリケーションを基準とする、モジュールの仮想メモリ内の場所を取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_relativeVirtualAddress ( 
+HRESULT get_relativeVirtualAddress ( 
    DWORD* pRetVal
 );
 ```
@@ -33,10 +34,10 @@ HRESULT get_relativeVirtualAddress ( 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
 
-入出力モジュールの相対仮想メモリオフセットを返します。
+[出力] モジュールの相対仮想メモリのオフセットを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

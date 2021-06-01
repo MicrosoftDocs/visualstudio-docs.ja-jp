@@ -1,7 +1,8 @@
-﻿---
-title: 'IDiaSymbol:: get_upperBoundId |Microsoft Docs'
+---
+description: FORTRAN 配列次元の上限のシンボル識別子を取得します。
+title: IDiaSymbol::get_upperBoundId | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: ddfa1617-bd0f-4187-ba77-a225bab93a95
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 640bce657df53bec66ab75575f35fcd68131a82a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 6a510a11ce0df3397027af13f908c50b18c649af
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738938"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635099"
 ---
 # <a name="idiasymbolget_upperboundid"></a>IDiaSymbol::get_upperBoundId
 FORTRAN 配列次元の上限のシンボル識別子を取得します。
@@ -25,23 +26,23 @@ FORTRAN 配列次元の上限のシンボル識別子を取得します。
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT get_upperBoundId ( 
+HRESULT get_upperBoundId ( 
    DWORD* pRetVal
 );
 ```
 
 #### <a name="parameters"></a>パラメーター
  `pRetVal`
-- [out,]FORTRAN 配列次元の上限を表すシンボルの ID を返します。
+- [出力] FORTRAN 配列次元の上限を表すシンボルの ID を返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、`S_FALSE` またはエラー コードを返します。
 
 > [!NOTE]
-> @No__t_0 の戻り値は、そのシンボルに対してプロパティを使用できないことを意味します。
+> 戻り値 `S_FALSE` は、プロパティをそのシンボルに使用できないことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  識別子は、すべてのシンボルを一意としてマークするために DIA SDK によって作成される一意の値です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

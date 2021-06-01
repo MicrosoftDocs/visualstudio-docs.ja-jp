@@ -1,6 +1,6 @@
 ---
-title: 出力のプロジェクト構成 |Microsoft Docs
-description: 各構成がサポートできるビルドプロセス、および出力項目を使用できるようにするためのインターフェイスとメソッドについて説明します。
+title: 出力のプロジェクト構成 | Microsoft Docs
+description: 各構成でサポート可能なビルド プロセス、および出力項目を使用できるようにするためのインターフェイスとメソッドについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,39 +14,39 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 13e37999ad9f3bada375c1897207e1e4c15546e8
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105082011"
 ---
 # <a name="project-configuration-for-output"></a>出力のためのプロジェクト構成
-すべての構成で、実行可能ファイルやリソースファイルなどの出力項目を生成する一連のビルドプロセスをサポートできます。 これらの出力項目はユーザーに対してプライベートであり、実行可能ファイル (.exe、.dll、.lib) やソースファイル (.idl、.h ファイル) など、関連する種類の出力をリンクするグループに配置できます。
+すべての構成は、実行可能ファイルやリソース ファイルなどの出力項目を生成する一連のビルド プロセスをサポートできます。 これらの出力項目はユーザーには非公開であり、実行可能ファイル (.exe、.dll、.lib) やソース ファイル (.idl、.h ファイル) などの関連する種類の出力をリンクするグループに配置することができます。
 
- 出力項目は、メソッドを使用して取得 <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> し、メソッドで列挙でき <xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> ます。 出力項目をグループ化する場合は、プロジェクトでもインターフェイスを実装する必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> ます。
+ 出力項目は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsOutput2> メソッドを使用して使用可能にし、<xref:Microsoft.VisualStudio.Shell.Interop.IVsEnumOutputs> メソッドを使用して列挙することができます。 出力項目をグループ化する場合、プロジェクトに <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> インターフェイスも実装する必要があります。
 
- を実装することによって開発されたコンストラクトでは、 `IVsOutputGroup` プロジェクトが使用法に従って出力をグループ化できます。 たとえば、DLL がプログラムデータベース (PDB) と共にグループ化されている場合があります。
+ `IVsOutputGroup` を実装して開発されたコンストラクトを使用することで、用途に応じてプロジェクトの出力をグループ化することができます。 たとえば、DLL をそのプログラム データベース (PDB) とグループ化することができます。
 
 > [!NOTE]
-> PDB ファイルにはデバッグ情報が含まれており、.dll または .exe をビルドするときに [デバッグ情報の生成] オプションを指定した場合に作成されます。 .Pdb ファイルは、通常、デバッグプロジェクト構成に対してのみ生成されます。
+> PDB ファイルにはデバッグ情報が含まれており、.dll または .exe のビルド時に [デバッグ情報の生成] オプションが指定されている場合に作成されます。 通常、.pdb ファイルはデバッグ プロジェクト構成の場合にのみ生成されます。
 
- グループ内に含まれる出力の数が構成によって異なる場合でも、プロジェクトはサポートされている構成ごとに同じ数のグループを返す必要があります。 たとえば、プロジェクトの mattd の DLL には、デバッグ構成で mattd.dll とが含まれている場合がありますが、リテール構成では matt.dll のみが含まれます。
+ グループ内に含まれる出力の数が構成ごとに異なる場合でも、プロジェクトでは、サポートする構成ごとに同じ数のグループを返す必要があります。 たとえば、プロジェクト Matt の DLL の場合、デバッグ構成には mattd.dll と mattd.pdb が含まれ、リテール構成には Matt.dll のみが含まれます。
 
- また、グループには、プロジェクト内の構成から構成まで、正規名、表示名、グループ情報など、同じ識別子情報が含まれています。 この一貫性により、構成が変更された場合でも、展開およびパッケージ化を継続できます。
+ また、グループには、プロジェクト内のそれぞれの構成で同じ識別子情報 (正規名、表示名、グループ情報など) も含まれています。 この一貫性により、構成が変更された場合でも、配置とパッケージが引き続き機能します。
 
- グループには、パッケージ化ショートカットが意味のあるものを指すようにするキー出力を含めることもできます。 特定の構成では、どのグループも空になる可能性があるため、グループのサイズについての前提条件を考慮する必要はありません。 構成に含まれる各グループのサイズ (出力の数) は、同じ構成内の別のグループのサイズとは異なる場合があります。 また、別の構成で同じグループのサイズと異なる場合もあります。
+ また、グループには、パッケージのショートカットが意味のあるものを指すように、キー出力を含めることができます。 ある構成で任意のグループが空になる可能性があるため、グループのサイズについては想定しないでください。 任意の構成の各グループのサイズ (出力数) は、同じ構成の別のグループのサイズとは異なることがあります。 また、別の構成の同じグループのサイズとは異なることがあります。
 
- ![出力グループグラフィック](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups") 出力グループ
+ ![出力グループの図](../../extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")出力グループ
 
- インターフェイスの主な用途 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> は、管理オブジェクトのビルド、配置、デバッグへのアクセスを提供し、プロジェクトが自由に出力をグループ化できるようにすることです。 このインターフェイスの使用方法の詳細については、「 [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)」を参照してください。
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> インターフェイスの主な用途は、管理オブジェクトをビルド、配置、およびデバッグするためのアクセスを提供し、プロジェクトから自由に出力をグループ化できるようにするためです。 このインターフェイスの用途の詳細については、「[プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)」を参照してください。
 
- 上の図では、グループに組み込まれている構成 (bD.exe または b.exe) の間にキー出力があるため、ユーザーは、展開された構成に関係なく、ショートカットを作成して理解することができます。 グループソースにはキー出力がないため、ユーザーはそのショートカットを作成できません。 構築されたデバッググループにキー出力があり、構築された小売グループがない場合は、実装が正しくありません。 次に、いずれかの構成に出力が含まれていないグループがあり、その結果、キーファイルがない場合は、そのグループを持つその他の構成にキーファイルを含めることはできません。 インストーラーエディターでは、正規名とグループの表示名、およびキーファイルの存在は、構成に基づいて変更されないと想定しています。
+ 前の図で、"Group Built" (ビルドされたグループ) には構成 (bD.exe または b.exe) 全体のキー出力があるため、ユーザーは "Built" (ビルド済み) へのショートカットを作成して、配置された構成に関係なくショートカットが機能することを把握することができます。 "Group Source" (グループ ソース) にはキー出力がないため、ユーザーはそのショートカットを作成できません。 "Debug Group Built" (ビルドされたデバッグ グループ) にはキー出力があり、"Retail Group Built" (ビルドされたリテール グループ) にはない場合、それは誤った実装になります。 そのため、いずれかの構成に出力を含まないグループがあり、その結果、キー ファイルがない場合、出力を含むそのグループがある他の構成にはキー ファイルを含めることができません。 インストーラーのエディターは、グループの正規名と表示名、およびキー ファイルの存在が、構成によって変わらないことを前提としています。
 
- プロジェクトにパッケージ化または配置しないが含まれている場合は `IVsOutputGroup` 、その出力をグループに配置してはいけないことに注意してください。 出力は、 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> グループ化に関係なく、すべての構成の出力を返すメソッドを実装することで、通常どおり列挙できます。
+ パッケージ化または配置しない `IVsOutputGroup` がプロジェクト内にある場合は、その出力をグループに入れなければ十分であることに注意してください。 グループ化に関係なく、構成のすべての出力を返す <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg.EnumOutputs%2A> メソッドを実装することにより、通常どおり出力を列挙できます。
 
- 詳細については、「 `IVsOutputGroup` カスタムプロジェクトのサンプル」の「 [](https://github.com/tunnelvisionlabs/MPFProj10)の実装」を参照してください。
+ 詳細については、「[MPF for Projects (プロジェクト用 MPF)](https://github.com/tunnelvisionlabs/MPFProj10)」のカスタム プロジェクト サンプルに含まれる `IVsOutputGroup` の実装を参照してください。
 
 ## <a name="see-also"></a>こちらもご覧ください
 - [構成オプションの管理](../../extensibility/internals/managing-configuration-options.md)
 - [ビルドのためのプロジェクト構成](../../extensibility/internals/project-configuration-for-building.md)
 - [プロジェクト構成オブジェクト](../../extensibility/internals/project-configuration-object.md)
-- [ソリューションの構成](../../extensibility/internals/solution-configuration.md)
+- [ソリューション構成](../../extensibility/internals/solution-configuration.md)

@@ -1,6 +1,6 @@
 ---
-title: 起動後のアタッチ |Microsoft Docs
-description: プログラムが起動すると、デバッグセッションはデバッグエンジンをプログラムにアタッチする準備ができています。 デバッグエンジンとの通信に使用するデザイン手法を選択します。
+title: 起動後のアタッチ | Microsoft Docs
+description: プログラムが起動したとき、デバッグ セッションはデバッグ エンジンをプログラムにアタッチする準備ができています。 デバッグ エンジンとの通信のために設計方法を選択します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,41 +14,41 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 9010d2619b76c2932ca1a8a5aed8db6c6a5cf075
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055324"
 ---
 # <a name="attach-after-a-launch"></a>起動後にアタッチする
-プログラムが起動した後、デバッグセッションはデバッグエンジン (DE) をプログラムにアタッチする準備ができています。
+プログラムが起動すると、デバッグ セッションはデバッグ エンジン (DE) をそのプログラムにアタッチする準備ができています。
 
 ## <a name="design-decisions"></a>設計上の決定
- 通信は共有アドレス空間内で簡単に行うことができるため、2つのデザイン方法を選択する必要があります。デバッグセッションと DE の間の通信を設定する方法です。 または、DE とプログラムの間の通信を設定します。 次のいずれかを選択します。
+ 通信は共有アドレス空間の方が行いやすいため、2 つの設計方法から選択する必要があります。つまり、デバッグ セッションと DE の間の通信を設定します。 あるいは、DE とプログラムの間の通信を設定します。 以下のいずれかを選択します。
 
-- デバッグセッションと DE との間の通信を設定する方が合理的な場合は、デバッグセッションによって DE が作成され、プログラムへのアタッチを解除するように求められます。 この設計では、1つのアドレス空間、および実行時の環境とプログラムを別のアドレス空間にまとめて、デバッグセッションと逆の組み合わせを作成します。
+- デバッグ セッションと DE との間の通信を設定する方が合理的な場合は、デバッグ セッションによって DE が共同作成され、DE がプログラムにアタッチするように求められます。 この設計では、デバッグ セッションと DE が一緒に 1 つのアドレス空間を使用し、実行時環境とプログラムが一緒にもう 1 つを使用します。
 
-- DE とプログラムの間の通信を設定する方が合理的な場合は、実行時環境によって DE が作成されます。 この設計では、SDM を1つのアドレス空間に残し、逆に、実行時環境、およびプログラムを別のアドレス空間にまとめます。 この設計は、スクリプト化された言語を実行するインタープリターで実装される DE の一般的なものです。
+- DE とプログラムの間の通信を設定する方が合理的な場合は、実行時環境によって DE が共同作成されます。 この設計では、SDM が 1 つのアドレス空間を使用し、DE、実行時環境およびプログラムが一緒にもう 1 つを使用します。 この設計は、インタープリターで実装される DE がスクリプト化された言語を実行する際に一般的です。
 
     > [!NOTE]
-    > プログラムへの DE のアタッチは、実装に依存します。 また、DE とプログラムの間の通信も実装に依存します。
+    > DE がプログラムにアタッチする方法は、実装によって異なります。 また、DE とプログラムの間の通信も実装によって異なります。
 
 ## <a name="implementation"></a>実装
- プログラムによって、セッションデバッグマネージャー (SDM) は、最初に起動するプログラムを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) オブジェクトを受け取るときに、 [Attach](../../extensibility/debugger/reference/idebugprogram2-attach.md) メソッドを呼び出し、 [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクトを渡します。これは、後でデバッグイベントを SDM に渡すために使用されます。 次に、 `IDebugProgram2::Attach` メソッドは [onattach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。 SDM がインターフェイスを受信する方法の詳細につい `IDebugProgram2` ては、「 [ポートへの通知](../../extensibility/debugger/notifying-the-port.md)」を参照してください。
+ プログラムでは、セッション デバッグ マネージャー (SDM) が、起動するプログラムを表す [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) オブジェクトを最初に受け取ると、[Attach](../../extensibility/debugger/reference/idebugprogram2-attach.md) メソッドを呼び出して、[IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) オブジェクトを渡します。これは後からデバッグ イベントを SDM に渡すために使用されます。 次に、`IDebugProgram2::Attach` メソッドが [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) メソッドを呼び出します。 SDM が `IDebugProgram2` インターフェイスを受け取る方法の詳細については、「[ポートへの通知](../../extensibility/debugger/notifying-the-port.md)」を参照してください。
 
- デバッグ中のプログラムと同じアドレス空間で DE を実行する必要がある場合: DE は通常、スクリプトを実行しているインタープリターの一部であるため、 `IDebugProgramNodeAttach2::OnAttach` メソッドはを返し `S_FALSE` ます。 `S_FALSE`戻り値は、アタッチプロセスが完了したことを示します。
+ デバッグ中のプログラムと同じアドレス空間で DE を実行する必要がある場合: 通常 DE はスクリプトを実行しているインタープリターの一部であるため、`IDebugProgramNodeAttach2::OnAttach` メソッドによって `S_FALSE` が返されます。 `S_FALSE` 戻り値は、アタッチ プロセスが完了したことを示します。
 
- ただし、DE が SDM のアドレス空間で実行される場合、メソッドは `IDebugProgramNodeAttach2::OnAttach` を返します。 `S_OK` または、 [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) インターフェイスが、デバッグ中のプログラムに関連付けられている [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクトに実装されていません。 この場合、 [attach メソッドが呼び出されて、](../../extensibility/debugger/reference/idebugengine2-attach.md) アタッチ操作が完了します。
+ ただし、DE が SDM のアドレス空間で実行されている場合: `IDebugProgramNodeAttach2::OnAttach` メソッドによって `S_OK` が返されます。そうでない場合、[IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) インターフェイスが、デバッグしているプログラムに関連付けられた [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) オブジェクトにまったく実装されていません。 このケースでは、[Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) メソッドがやがて呼び出されて、アタッチ操作が完了します。
 
- 後者の場合は、メソッドに渡されたオブジェクトで [Getprogramid](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) メソッド `IDebugProgram2` `IDebugEngine2::Attach` を呼び出し、 `GUID` ローカルプログラムオブジェクトにを格納して、この `GUID` `IDebugProgram2::GetProgramId` オブジェクトでメソッドが呼び出されたときにこれを返す必要があります。 は、 `GUID` さまざまなデバッグコンポーネントに対してプログラムを一意に識別するために使用されます。
+ 後のケースでは、[GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) メソッドを `IDebugEngine2::Attach` メソッドに渡された `IDebugProgram2` オブジェクトに対して呼び出し、`GUID` をローカル プログラム オブジェクトに格納し、`IDebugProgram2::GetProgramId` メソッドがこのオブジェクトに対して後から呼び出されたときに、この `GUID` を返す必要があります。 `GUID` は、さまざまなデバッグ コンポーネントに対してプログラムを一意に識別するために使用されます。
 
- メソッドがを返す場合 `IDebugProgramNodeAttach2::OnAttach` `S_FALSE` 、 `GUID` プログラムに使用するは、そのメソッドに渡されます。これは、 `IDebugProgramNodeAttach2::OnAttach` `GUID` ローカルプログラムオブジェクトでを設定するメソッドです。
+ `IDebugProgramNodeAttach2::OnAttach` メソッドによって `S_FALSE` が返されるケースでは、プログラムで使用される `GUID` がそのメソッドに渡されます。また、ローカル プログラム オブジェクトに `GUID` を設定するのは `IDebugProgramNodeAttach2::OnAttach` メソッドです。
 
- これで、DE がプログラムにアタッチされ、スタートアップイベントを送信する準備が整いました。
+ これで、DE がプログラムにアタッチされ、スタートアップ イベントを送信する準備が整いました。
 
 ## <a name="see-also"></a>こちらもご覧ください
-- [プログラムに直接アタッチする](../../extensibility/debugger/attaching-directly-to-a-program.md)
+- [プログラムへ直接アタッチする](../../extensibility/debugger/attaching-directly-to-a-program.md)
 - [ポートへの通知](../../extensibility/debugger/notifying-the-port.md)
-- [デバッグタスク](../../extensibility/debugger/debugging-tasks.md)
+- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)
 - [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md)
 - [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)
 - [[アタッチ]](../../extensibility/debugger/reference/idebugprogram2-attach.md)

@@ -1,6 +1,6 @@
 ---
-description: ブレークポイントが発生する条件について説明します。
-title: BP_CONDITION |Microsoft Docs
+description: ブレークポイントが発生する条件を記述します。
+title: BP_CONDITION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 560cf7184e5fa7b25e35410313535675713742aa
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105085339"
 ---
 # <a name="bp_condition"></a>BP_CONDITION
-ブレークポイントが発生する条件について説明します。
+ブレークポイントが発生する条件を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,10 +50,10 @@ public struct BP_CONDITION {
 
 ## <a name="members"></a>メンバー
 `pThread`\
-ブレークポイントを含むアプリケーションのアクティブスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。
+ブレークポイントが含まれるアプリケーションのアクティブなスレッドを表す [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) オブジェクト。
 
 `styleCondition`\
-このブレークポイント条件のスタイルを記述する [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) 列挙体の値。
+このブレークポイント条件のスタイルを説明する [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) 列挙型の値。
 
 `bstrContext`\
 ブレークポイントの位置。
@@ -64,19 +64,19 @@ public struct BP_CONDITION {
 `nRadix`\
 数値情報の評価に使用される基数。
 
-## <a name="remarks"></a>注釈
-この構造体は、 [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) および [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体のメンバーです。
+## <a name="remarks"></a>解説
+この構造体は、[BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) および [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) 構造体のメンバーです。
 
-この構造体は、 [setcondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) メソッドおよび [setcondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) メソッドにパラメーターとしても渡されます。
+この構造体は、[SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) および [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) メソッドへのパラメーターとしても渡されます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [構造体と共用体](../../../extensibility/debugger/reference/structures-and-unions.md)
 - [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
 - [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

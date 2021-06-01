@@ -1,6 +1,6 @@
 ---
-description: ブレークポイントが正常に解決されたかどうかを取得するための情報を指定します。
-title: BPRESI_FIELDS |Microsoft Docs
+description: ブレークポイントの解決に成功した場合に取得する情報を指定します。
+title: BPRESI_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 652d1423b95f923a8413bdec6fbbed528e9f624a
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096695"
 ---
 # <a name="bpresi_fields"></a>BPRESI_FIELDS
-ブレークポイントが正常に解決されたかどうかを取得するための情報を指定します。
+ブレークポイントの解決に成功した場合に取得する情報を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_BPRESI_FIELDS {
@@ -49,28 +49,28 @@ public enum enum_BPRESI_FIELDS {
 
 ## <a name="fields"></a>フィールド
 `BPRESI_BPRESLOCATION`\
-`bpResLocation` [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造体の (ブレークポイント解決の場所) フィールドを初期化または使用します。
+[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) 構造体の `bpResLocation` (ブレークポイントの解決位置) フィールドを初期化または使用します。
 
 `BPRESI_PROGRAM`\
-構造体のフィールドを初期化/使用し `pProgram` `BP_RESOLUTION_INFO` ます。
+`BP_RESOLUTION_INFO` 構造体の `pProgram` フィールドを初期化または使用します。
 
 `BPRESI_THREAD`\
-構造体のフィールドを初期化/使用し `pThread` `BP_RESOLUTION_INFO` ます。
+`BP_RESOLUTION_INFO` 構造体の `pThread` フィールドを初期化または使用します。
 
 `BPRESI_ALLFIELDS`\
 すべてのフィールドを指定します。
 
-## <a name="remarks"></a>注釈
-[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md)構造体のどのフィールドを初期化するかを示すために[get解決情報](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)メソッドに渡されます。
+## <a name="remarks"></a>解説
+[BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) 構造体のどのフィールドを初期化するかを示すために、[GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) メソッドに渡されます。
 
-これらのフラグは、構造体のどのフィールドが使用され、その構造が返されたときに有効であるかを示すためにも使用され `BP_RESOLUTION_INFO` ます。
+これらのフラグは、`BP_RESOLUTION_INFO` 構造体のどのフィールドが使用されているか、またこの構造体が返されるときにどのフィールドが有効であるかを示すためにも使用されます。
 
-これらの値は、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらの値は、ビットごとの `OR` で組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

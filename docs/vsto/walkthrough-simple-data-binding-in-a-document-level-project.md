@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: ドキュメントレベルのプロジェクトでの単純データバインディング'
-description: ドキュメントレベルのプロジェクトでのデータバインディングの基本について説明します。また、SQL Server データベースの1つのデータフィールドが Microsoft Excel の名前付き範囲にバインドされていることを確認します。
+title: 'チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング'
+description: ドキュメント レベルのプロジェクトにおけるデータ バインディングの基本について説明します。また、SQL Server データベース内の単一のデータ フィールドは、Microsoft Excel の名前付き範囲にバインドされるということについても説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -21,23 +21,23 @@ ms.workload:
 - office
 ms.openlocfilehash: 36d4da65a6cd39c53f1f9d8edf4f9d9b1fe46284
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107826851"
 ---
-# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメントレベルのプロジェクトでの単純データバインディング
-  このチュートリアルでは、ドキュメントレベルのプロジェクトでのデータバインディングの基本について説明します。 SQL Server データベースの単一のデータフィールドは、Microsoft Office Excel の名前付き範囲にバインドされます。 このチュートリアルでは、テーブル内のすべてのレコードをスクロールできるようにするコントロールを追加する方法についても説明します。
+# <a name="walkthrough-simple-data-binding-in-a-document-level-project"></a>チュートリアル: ドキュメント レベルのプロジェクトでの単純データ バインディング
+  このチュートリアルでは、ドキュメント レベルのプロジェクトにおけるデータバインディングの基本について説明します。 SQL Server データベース内の単一のデータ フィールドは、Microsoft Office Excel の名前付き範囲にバインドされます。 このチュートリアルでは、コントロールを追加して、テーブル内のすべてのレコードをスクロールできるようにする方法についても説明します。
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  このチュートリアルでは、次の作業について説明します。
 
-- Excel プロジェクトのデータソースを作成する。
+- Excel プロジェクト用のデータソースを作成する。
 
 - ワークシートにコントロールを追加する。
 
-- データベースレコードをスクロールしています。
+- データベース レコードをスクロールする。
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -48,72 +48,72 @@ ms.locfileid: "107826851"
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] または [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)]。
 
-- Northwind SQL Server サンプルデータベースを使用したサーバーへのアクセス。
+- Northwind SQL Server サンプル データベースがあるサーバーへのアクセス。
 
-- SQL Server データベースに対する読み取りと書き込みの権限。
+- SQL Server データベースに対する読み取りと書き込みのアクセス許可。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
- この手順では、Excel ブックプロジェクトを作成します。
+ この手順では、Excel ブック プロジェクトを作成します。
 
 ### <a name="to-create-a-new-project"></a>新しいプロジェクトを作成するには
 
-1. Visual Basic または C# のいずれかを使用して、 **My Simple Data Binding** という名前の Excel ブックプロジェクトを作成します。 [ **新しいドキュメントを作成** する。 詳細については、「 [方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。
+1. Visual Basic または C# のいずれかを使用して、**My Simple Data Binding** という名前の Excel ブック プロジェクトを作成します。 **[新しいドキュメントを作成]** が選択されていることを確認してください。 詳細については、「[方法: Visual Studio で Office プロジェクトを作成する](../vsto/how-to-create-office-projects-in-visual-studio.md)」を参照してください。
 
-   新しい Excel ブックがデザイナーで開き、 **[My Simple Data Binding** ] プロジェクトが **ソリューションエクスプローラー** に追加されます。
+   Visual Studio によって、新しい Excel ブックがデザイナーで開かれ、**My Simple Data Binding** プロジェクトが **ソリューション エクスプローラー** に追加されます。
 
 ## <a name="create-the-data-source"></a>データ ソースを作成する
  **[データ ソース]** ウィンドウを使用して、型指定されたデータセットをプロジェクトに追加します。
 
 ### <a name="to-create-the-data-source"></a>データ ソースを作成するには
 
-1. [**データソース**] ウィンドウが表示されていない場合は、メニューバーの [   >  **他の Windows**  >  **データソース** の表示] をクリックして表示します。
+1. **[データ ソース]** ウィンドウが表示されていない場合は、メニュー バーで **[表示]**  >  **[その他のウィンドウ]**  >  **[データ ソース]** をクリックして表示します。
 
 2. **[新しいデータ ソースの追加]** をクリックして **データ ソース構成ウィザード** を開始します。
 
-3. [ **データベース** ] を選択し、[ **次へ**] をクリックします。
+3. **[データベース]** を選択し、 **[次へ]** をクリックします。
 
-4. Northwind サンプル SQL Server データベースへのデータ接続を選択するか、[ **新しい接続** ] ボタンを使用して新しい接続を追加します。
+4. SQL Server の Northwind サンプル データベースへのデータ接続を選択するか、または **[新しい接続]** ボタンをクリックして新しい接続を追加します。
 
-5. 接続を選択または作成したら、[ **次へ**] をクリックします。
+5. 接続を選択または作成したら、 **[次へ]** をクリックします。
 
-6. 選択されている場合は、接続を保存するオプションをオフにして、[ **次へ**] をクリックします。
+6. 接続を保存するオプションがオンになっている場合は、それをオフにして、 **[次へ]** をクリックします。
 
-7. [**データベースオブジェクト**] ウィンドウで、[**テーブル**] ノードを展開します。
+7. **[データベース オブジェクト]** ウィンドウで、 **[Tables]** ノードを展開します。
 
-8. **Customers** テーブルの横にあるチェックボックスをオンにします。
+8. **Customers** テーブルの隣にあるチェック ボックスをオンにします。
 
 9. **[完了]** をクリックします。
 
-   [**データソース**] ウィンドウに **Customers** テーブルが追加されます。 また、 **ソリューションエクスプローラー** に表示される、型指定されたデータセットをプロジェクトに追加します。
+   ウィザードによって、**Customers** テーブルが **[データ ソース]** ウィンドウに追加されます。 また、**ソリューション エクスプローラー** に表示される、型指定されたデータセットがプロジェクトに追加されます。
 
 ## <a name="add-controls-to-the-worksheet"></a>ワークシートにコントロールを追加する
- このチュートリアルでは、最初のワークシートに2つの名前付き範囲と4つのボタンが必要です。 まず、[ **データソース** ] ウィンドウから2つの名前付き範囲を追加して、データソースに自動的にバインドされるようにします。 次に、[ **ツールボックス**] からボタンを追加します。
+ このチュートリアルでは、最初のワークシートに 2 つの名前付き範囲と 4 つのボタンが必要です。 まず、 **[データ ソース]** ウィンドウから 2 つの名前付き範囲を追加して、データ ソースに自動的にバインドされるようにします。 次に、**ツールボックス** からボタンを追加します。
 
-### <a name="to-add-two-named-ranges"></a>2つの名前付き範囲を追加するには
+### <a name="to-add-two-named-ranges"></a>2 つの名前付き範囲を追加するには
 
-1. Visual Studio デザイナーで *[My Simple Data Binding.xlsx* ] ブックが開いていることを確認します。 **Sheet1** が表示されます。
+1. *My Simple Data Binding.xlsx* ブックが Visual Studio デザイナーで開かれ、**Sheet1** が表示されていることを確認します。
 
-2. [ **データソース** ] ウィンドウを開き、[ **Customers** ] ノードを展開します。
+2. **[データ ソース]** ウィンドウを開き、 **[Customers]** ノードを展開します。
 
-3. [ **CompanyName** ] 列を選択し、表示されるドロップダウン矢印をクリックします。
+3. **[CompanyName]** 列を選択し、表示されるドロップダウン矢印をクリックします。
 
-4. ドロップダウンリストから [ **NamedRange** ] を選択し、[ **CompanyName** ] 列をセル **A1** にドラッグします。
+4. ドロップダウン リストから **[NamedRange]** を選択し、 **[CompanyName]** 列をセル **A1** にドラッグします。
 
-     <xref:Microsoft.Office.Tools.Excel.NamedRange>という名前のコントロール `companyNameNamedRange` がセル **A1** に作成されます。 同時に、と <xref:System.Windows.Forms.BindingSource> いう名前 `customersBindingSource` のテーブルアダプターと <xref:System.Data.DataSet> インスタンスがプロジェクトに追加されます。 コントロールは、にバインドされ <xref:System.Windows.Forms.BindingSource> 、さらにインスタンスにバインドされ <xref:System.Data.DataSet> ます。
+     `companyNameNamedRange` という名前の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールが、セル **A1** に作成されます。 同時に、`customersBindingSource` という名前の <xref:System.Windows.Forms.BindingSource>、テーブル アダプター、および <xref:System.Data.DataSet> インスタンスがプロジェクトに追加されます。 コントロールは <xref:System.Windows.Forms.BindingSource> にバインドされ、さらにこれが <xref:System.Data.DataSet> インスタンスにバインドされます。
 
-5. [**データソース**] ウィンドウで [ **CustomerID** ] 列を選択し、表示されるドロップダウン矢印をクリックします。
+5. **[データ ソース]** ウィンドウで **[CustomerID]** 列を選択し、表示されるドロップダウン矢印をクリックします。
 
-6. ドロップダウンリストで [ **NamedRange** ] をクリックし、[ **CustomerID** ] 列をセル **B1** にドラッグします。
+6. ドロップダウン リストで **[NamedRange]** をクリックし、 **[CustomerID]** 列をセル **B1** にドラッグします。
 
-7. と <xref:Microsoft.Office.Tools.Excel.NamedRange> いう名前の別のコントロール `customerIDNamedRange` がセル **B1** に作成され、にバインドされ <xref:System.Windows.Forms.BindingSource> ます。
+7. `customerIDNamedRange` という名前の別の <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールがセル **B1** に作成され、<xref:System.Windows.Forms.BindingSource> にバインドされます。
 
-### <a name="to-add-four-buttons"></a>4つのボタンを追加するには
+### <a name="to-add-four-buttons"></a>4 つのボタンを追加するには
 
-1. **ツールボックス** の [**コモンコントロール**] タブから、 <xref:System.Windows.Forms.Button> ワークシートのセル **A3** にコントロールを追加します。
+1. **[ツールボックス]** の **[コモン コントロール]** タブから、<xref:System.Windows.Forms.Button> コントロールをワークシートのセル **A3** に追加します。
 
-    このボタンにはという名前が付けら `Button1` れます。
+    このボタンには `Button1` という名前が付けられます。
 
-2. この順序で次のセルに3つのボタンを追加して、名前が表示されるようにします。
+2. 以下の順序で、後続のセルに 3 つのボタンを追加し、下記の名前になるようにします。
 
    |Cell (セル)|[(名前)]|
    |----------|--------------|
@@ -121,80 +121,80 @@ ms.locfileid: "107826851"
    |C3|Button3|
    |D3|Button4|
 
-   次の手順では、ボタンにテキストを追加し、C# ではイベントハンドラーを追加します。
+   次の手順では、ボタンにテキストを追加します。また、C# の場合はイベント ハンドラーも追加します。
 
-## <a name="initialize-the-controls"></a>コントロールを初期化します
- ボタンテキストを設定し、イベントの発生時にイベントハンドラーを追加し <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> ます。
+## <a name="initialize-the-controls"></a>コントロールを初期化する
+ ボタン テキストを設定し、<xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> イベントの際のイベント ハンドラーを追加します。
 
 ### <a name="to-initialize-the-controls"></a>コントロールを初期化するには
 
-1. **ソリューションエクスプローラー** で、 **Sheet1** または **sheet1** を右クリックし、ショートカットメニューの [**コードの表示**] をクリックします。
+1. **ソリューション エクスプローラー** で **Sheet1.vb** または **Sheet1.cs** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。
 
-2. 次のコードをメソッドに追加して、 `Sheet1_Startup` 各ボタンのテキストを設定します。
+2. `Sheet1_Startup` メソッドに次のコードを追加して、各ボタンのテキストを設定します。
 
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet2":::
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet2":::
 
-3. C# の場合のみ、ボタンクリックイベントのイベントハンドラーをメソッドに追加し `Sheet1_Startup` ます。
+3. C# の場合のみ、ボタン クリック イベントのイベント ハンドラーを `Sheet1_Startup` メソッドに追加します。
 
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet3":::
 
-   次に <xref:System.Windows.Forms.Control.Click> 、ユーザーがレコードを参照できるように、ボタンのイベントを処理するコードを追加します。
+   次は、ボタンの <xref:System.Windows.Forms.Control.Click> イベントを処理するコードを追加して、ユーザーがレコードを参照できるようにします。
 
 ## <a name="add-code-to-enable-scrolling-through-the-records"></a>レコードのスクロールを有効にするコードを追加する
- <xref:System.Windows.Forms.Control.Click>各ボタンのイベントハンドラーにコードを追加して、レコード間を移動します。
+ レコード間を移動するためのコードを、各ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに追加します。
 
 ### <a name="to-move-to-the-first-record"></a>最初のレコードに移動するには
 
-1. ボタンのイベントのイベントハンドラーを追加 <xref:System.Windows.Forms.Control.Click> `Button1` し、最初のレコードに移動する次のコードを追加します。
+1. `Button1` ボタンの <xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを追加し、最初のレコードに移動するための次のコードを追加します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet4":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet4":::
 
 ### <a name="to-move-to-the-previous-record"></a>前のレコードに移動するには
 
-1. ボタンのイベントのイベントハンドラーを追加 <xref:System.Windows.Forms.Control.Click> `Button2` し、次のコードを追加して位置を1つずつ移動します。
+1. `Button2` ボタンの <xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを追加し、位置を 1 つ前に戻すための次のコードを追加します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet5":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet5":::
 
 ### <a name="to-move-to-the-next-record"></a>次のレコードに移動するには
 
-1. ボタンのイベントのイベントハンドラーを追加 <xref:System.Windows.Forms.Control.Click> `Button3` し、次のコードを追加して位置を1つずつ進めます。
+1. `Button3` ボタンの <xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを追加し、位置を 1 つ先へ進めるための次のコードを追加します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet6":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet6":::
 
 ### <a name="to-move-to-the-last-record"></a>最後のレコードに移動するには
 
-1. ボタンのイベントのイベントハンドラーを追加 <xref:System.Windows.Forms.Control.Click> `Button4` し、次のコードを追加して最後のレコードに移動します。
+1. `Button4` ボタンの <xref:System.Windows.Forms.Control.Click> イベントのイベント ハンドラーを追加し、最後のレコードに移動するための次のコードを追加します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet7":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet7":::
 
 ## <a name="test-the-application"></a>アプリケーションをテストする
- これで、ブックをテストして、データベース内のレコードを参照できるかどうかを確認できます。
+ それでは、ブックをテストして、データベース内のレコードを参照できるかどうか確認しましょう。
 
 ### <a name="to-test-your-workbook"></a>ブックをテストするには
 
-1. **F5** キーを押して、プロジェクトを実行します。
+1. **F5** キーを押してプロジェクトを実行します。
 
 2. 最初のレコードがセル **A1** と **B1** に表示されることを確認します。
 
-3. **>**( `Button3` ) ボタンをクリックし、次のレコードがセル **A1** と **B1** に表示されることを確認します。
+3. **>** (`Button3`) ボタンをクリックし、次のレコードがセル **A1** と **B1** に表示されることを確認します。
 
-4. 他のスクロールボタンをクリックして、レコードが想定どおりに変更されていることを確認します。
+4. 他のスクロール ボタンをクリックして、レコードが意図したとおりに変更されることを確認します。
 
 ## <a name="next-steps"></a>次のステップ
- このチュートリアルでは、データベースのフィールドに名前付き範囲をバインドする方法の基本について説明します。 ここでは、次の作業を行います。
+ このチュートリアルでは、名前付き範囲をデータベースのフィールドにバインドする方法の基本について説明しました。 ここでは、次の作業を行います。
 
-- データをキャッシュして、オフラインで使用できるようにします。 詳細については、「 [方法: オフラインまたはサーバー上で使用するデータをキャッシュ](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)する」を参照してください。
+- データをキャッシュして、オフラインで使用できるようにする。 詳細については、「[方法: オフラインで使用するデータまたはサーバー上で使用するデータをキャッシュする](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)」を参照してください。
 
-- 1つのフィールドではなく、テーブル内の複数の列にセルをバインドします。 詳細については、「 [チュートリアル: ドキュメントレベルのプロジェクトでの複合データバインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)」を参照してください。
+- 1 つのフィールドではなく、テーブル内の複数の列にセルをバインドする。 詳しくは、「[チュートリアル: ドキュメント レベルのプロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)」をご覧ください。
 
-- コントロールを使用し <xref:System.Windows.Forms.BindingNavigator> てレコードをスクロールします。 詳細については、「 [方法: Windows フォーム BindingNavigator コントロールを使用してデータを移動する](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)」を参照してください。
+- <xref:System.Windows.Forms.BindingNavigator> コントロールを使用してレコードをスクロールする。 詳しくは、「[方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
-- [Office ソリューションのコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Office ソリューションのデータ](../vsto/data-in-office-solutions.md)
-- [チュートリアル: ドキュメントレベルのプロジェクトでの複合データバインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)
+## <a name="see-also"></a>こちらもご覧ください
+- [Office ソリューションでコントロールにデータをバインドする](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office ソリューションにおけるデータ](../vsto/data-in-office-solutions.md)
+- [チュートリアル: ドキュメント レベルのプロジェクトでの複合データ バインディング](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)

@@ -1,6 +1,6 @@
 ---
-description: GUID のリストを保持する構造体。
-title: CONST_GUID_ARRAY |Microsoft Docs
+description: GUID の一覧を保持する構造体。
+title: CONST_GUID_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: d6bcaff422702b9c1c381c1d4e9199bb4578a0f7
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059510"
 ---
 # <a name="const_guid_array"></a>CONST_GUID_ARRAY
-のリストを保持する構造体 `GUID` 。
+`GUID` の一覧を保持する構造体。
 
 ## <a name="syntax"></a>構文
 
@@ -44,20 +44,20 @@ public struct CONST_GUID_ARRAY {
 
 ## <a name="members"></a>メンバー
 `dwCount`\
-`GUID`配列内のの数 `Members` 。
+`Members` 配列内の `GUID` の数。
 
 `Members`\
-の配列 `GUID` 。
+`GUID` の配列。
 
-## <a name="remarks"></a>注釈
-この構造体は、 [Publishprogram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) メソッドに渡され、 [Getproviderprocessdata](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドと [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) メソッドから返されます。
+## <a name="remarks"></a>解説
+この構造体は、[PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) メソッドに渡され、[GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) メソッドと [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) メソッドから返されます。
 
-この構造体のインスタンスの所有者は、割り当てられたメモリを解放します。
+この構造体のインスタンスの所有者は、割り当てられたメモリの解放に責任を持ちます。
 
 ## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

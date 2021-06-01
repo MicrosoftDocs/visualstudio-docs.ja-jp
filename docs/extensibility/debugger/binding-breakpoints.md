@@ -1,6 +1,6 @@
 ---
-title: ブレークポイントのバインド |Microsoft Docs
-description: IDE がブレークポイントの要求を使用しし、ユーザーがブレークポイントを設定したときにブレークポイントを作成するようにデバッグセッションに要求する方法について説明します。
+title: ブレークポイントのバインド | Microsoft Docs
+description: ユーザーがブレークポイントを設定している場合に、IDE でどのようにブレークポイントの要求を作成し、デバッグ セッションにブレークポイントの作成を促すかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,46 +14,46 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 622d61c6083288f7293258feb3743ef7cfdd0b8b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105055285"
 ---
 # <a name="bind-breakpoints"></a>ブレークポイントのバインド
-ユーザーが **F9** キーを押してブレークポイントを設定した場合、IDE は要求を使用しし、ブレークポイントを作成するようにデバッグセッションに指示します。
+ユーザーがブレークポイントを設定している場合、たとえば **F9** キーを押すと、IDE によって要求が作成され、デバッグ セッションにブレークポイントの作成が促されます。
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
- ブレークポイントの設定は、ブレークポイントの影響を受けるコードまたはデータがまだ使用できない場合があるため、2段階のプロセスです。 まず、ブレークポイントが記述されている必要があります。次に、コードまたはデータが使用可能になったら、次のようにそのコードまたはデータにバインドする必要があります。
+ ブレークポイントの設定は 2 段階のプロセスです。ブレークポイントの影響を受けるコードまたはデータがまだ使用できないことがあるためです。 まず、ブレークポイントを記述する必要があります。次に、コードまたはデータが使用可能になったら、そのコードまたはデータに次のようにバインドする必要があります。
 
-1. ブレークポイントが関連するデバッグエンジン (DEs) から要求され、ブレークポイントは使用可能になるとコードまたはデータにバインドされます。
+1. ブレークポイントは関連するデバッグ エンジン (DE) から要求されます。その後、コードまたはデータが使用可能になった時点でブレークポイントがバインドされます。
 
-2. ブレークポイント要求は、関連するすべての DEs に送信されるデバッグセッションに送信されます。 ブレークポイントを処理するように選択すると、対応する保留中のブレークポイントが作成されます。
+2. ブレークポイント要求はデバッグ セッションに送信され、そこから関連するすべての DE に送信されます。 ブレークポイントの処理を選択した DE によって、対応する保留中ブレークポイントが作成されます。
 
-3. デバッグセッションでは、保留中のブレークポイントが収集され、デバッグパッケージ (Visual Studio のデバッグコンポーネント) に送信されます。
+3. デバッグ セッションによって、保留中ブレークポイントが収集され、それらがデバッグ パッケージ (Visual Studio のデバッグ コンポーネント) に送り返されます。
 
-4. デバッグパッケージは、保留中のブレークポイントをコードまたはデータにバインドするようにデバッグセッションに要求します。 デバッグセッションは、関連するすべての DEs にこの要求を送信します。
+4. デバッグ パッケージにより、保留中ブレークポイントをコードまたはデータにバインドするようにデバッグ セッションが促されます。 デバッグ セッションによって、関連するすべての DE にこの要求が送信されます。
 
-5. DE がブレークポイントをバインドできる場合は、ブレークポイントにバインドされたイベントをデバッグセッションに送り返します。 そうでない場合は、代わりにブレークポイントエラーイベントが送信されます。
+5. DE でブレークポイントをバインドできる場合は、ブレークポイントにバインドされたイベントがデバッグ セッションに送り返されます。 そうでない場合は、ブレークポイント エラー イベントが代わりに送信されます。
 
-## <a name="pending-breakpoints"></a>保留中のブレークポイント
- 保留中のブレークポイントは、複数のコードの場所にバインドできます。 たとえば、C++ テンプレートのソースコードの行は、テンプレートから生成されたすべてのコードシーケンスにバインドできます。 デバッグセッションでは、ブレークポイントバインドイベントを使用して、イベントの送信時にブレークポイントにバインドされたコードコンテキストを列挙できます。 後でより多くのコードコンテキストをバインドできるため、DE は各バインド要求に対して複数のブレークポイントバインドイベントを送信できます。 ただし、DE は、バインド要求ごとに1つのブレークポイントエラーイベントのみを送信する必要があります。
+## <a name="pending-breakpoints"></a>保留中ブレークポイント
+ 保留中ブレークポイントは、コードの複数の場所にバインドできます。 たとえば、C++ テンプレート用のソース コード行は、そのテンプレートから生成されるすべてのコード シーケンスにバインドできます。 デバッグ セッションでは、ブレークポイントがバインドされたイベントを使用して、そのイベントの送信時にブレークポイントにバインドされるコード コンテキストを列挙できます。 さらに多くのコード コンテキストを後でバインドできるため、DE は各バインド要求でブレークポイントがバインドされたイベントを複数送信できます。 ただし、DE によって、ブレークポイント エラー イベントはバインド要求ごとに 1 つしか送信できません。
 
 ## <a name="implementation"></a>実装
- プログラムによってデバッグパッケージは、セッションデバッグマネージャー (SDM) を呼び出し、設定するブレークポイントを記述する[BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md)構造体をラップする[IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md)インターフェイスを提供します。 ブレークポイントは多くの形式にすることができますが、最終的にはコードまたはデータコンテキストに解決されます。
+ デバッグ パッケージはプログラムによって、セッション デバッグ マネージャー (SDM) を呼び出して、[BP_REQUEST_INFO](../../extensibility/debugger/reference/bp-request-info.md) 構造体 (設定対象のブレークポイントが記述されている) をラップする [IDebugBreakpointRequest2](../../extensibility/debugger/reference/idebugbreakpointrequest2.md) インターフェイスを提供できます。 ブレークポイントはさまざまな形式にすることができますが、最終的にはコードまたはデータ コンテキストに解決されます。
 
- SDM は、 [Creatependingbreakpoint ポイント](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) メソッドを呼び出すことによって、関連する各 DE にこの呼び出しを渡します。 逆に、ブレークポイントを処理するように選択すると、 [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスが作成されて返されます。 SDM はこれらのインターフェイスを収集し、1つのインターフェイスとしてデバッグパッケージに戻し `IDebugPendingBreakpoint2` ます。
+ SDM は、[CreatePendingBreakpoint](../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) メソッドを呼び出すことで、関連する各 DE にこの呼び出しを渡します。 DE によってブレークポイントの処理が選択される場合、[IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) インターフェイスが作成されて返されます。 SDM によって、これらのインターフェイスが収集され、1 つの `IDebugPendingBreakpoint2` インターフェイスとしてデバッグ パッケージに送り返されます。
 
- これまでは、イベントは生成されませんでした。
+ ここまで、イベントは生成されていません。
 
- 次に、デバッグパッケージは、DE によって実装される [bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)を呼び出して、保留中のブレークポイントをコードまたはデータにバインドしようとします。
+ 次に、デバッグ パッケージによって、[Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) (DE によって実装される) が呼び出され、コードまたはデータへの保留中ブレークポイントのバインドが試行されます。
 
- ブレークポイントがバインドされている場合、DE は [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) イベントインターフェイスをデバッグパッケージに送信します。 デバッグパッケージは、このインターフェイスを使用して、1つ以上の[IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)インターフェイスを返す[enumboundbreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)ポイントを呼び出すことによって、ブレークポイントにバインドされているすべてのコードコンテキスト (または単一のデータコンテキスト) を列挙します。 [Getbreakpointresolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md)インターフェイスは[IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md)インターフェイスを返し、 [getresolution INFO](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)はコードまたはデータコンテキストを含む[BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md)の共用体を返します。
+ ブレークポイントがバインドされると、DE によって [IDebugBreakpointBoundEvent2](../../extensibility/debugger/reference/idebugbreakpointboundevent2.md) イベント インターフェイスがデバッグ パッケージに送信されます。 デバッグ パッケージで、1 つ以上の [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) インターフェイスを返す [EnumBoundBreakpoints](../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md) を呼び出すことで、このインターフェイスが使用され、ブレークポイントにバインドされたすべてのコード コンテキスト (または 1 つのデータ コンテキスト) が列挙されます。 [GetBreakpointResolution](../../extensibility/debugger/reference/idebugboundbreakpoint2-getbreakpointresolution.md) インターフェイスは [IDebugBreakpointResolution2](../../extensibility/debugger/reference/idebugbreakpointresolution2.md) インターフェイスを返し、[GetResolutionInfo](../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md) はコードまたはデータ コンテキストを含む [BP_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-resolution-info.md) 共用体を返します。
 
- DE がブレークポイントをバインドできない場合は、単一の [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) イベントインターフェイスをデバッグパッケージに送信します。 デバッグパッケージは、 [GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)を呼び出してエラーの種類 (エラーまたは警告) と情報メッセージを取得し、その後に [Getbreakpointresolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) と [getresolution info](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)を呼び出します。 これにより、エラーの種類とメッセージを含む [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) 構造体が返されます。
+ DE によってブレークポイントがバインドできない場合、1 つの [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) イベント インターフェイスがデバッグ パッケージに送信されます。 デバッグ パッケージによって、[GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md)、[GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) および [GetResolutionInfo](../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) を続けて呼び出すことで、エラーの種類 (エラーまたは警告) と情報メッセージが取得されます。 これによって、エラーの種類とメッセージを含む [BP_ERROR_RESOLUTION_INFO](../../extensibility/debugger/reference/bp-error-resolution-info.md) 構造体が返されます。
 
- DE がブレークポイントを処理するが、バインドできない場合は、型のエラーが返さ `BPET_TYPE_ERROR` れます。 デバッグパッケージはエラーダイアログボックスを表示することによって応答し、IDE はソースコード行の左側のブレークポイントグリフの内側に感嘆符を配置します。
+ DE によってブレークポイントが処理されるがバインドできなかった場合、種類が `BPET_TYPE_ERROR` のエラーが返されます。 デバッグ パッケージではエラー ダイアログ ボックスを表示してこれに応答し、IDE ではソース コード行の左側のブレークポイント グリフ内に感嘆符のグリフが表示されます。
 
- DE がブレークポイントを処理する場合、バインドできませんが、他の DE によってバインドされる場合は、警告が返されます。 IDE は、ブレークポイントのグリフの内側に、ソースコード行の左側に疑問符を配置することで応答します。
+ ある DE によってブレークポイントが処理されてバインドできなかったが、別の DE でバインドされる可能性がある場合は、警告が返されます。 IDE によって、ソース コード行の左側のブレークポイント グリフ内に疑問符のグリフが表示されます。
 
 ## <a name="see-also"></a>こちらもご覧ください
-- [デバッグタスク](../../extensibility/debugger/debugging-tasks.md)
+- [タスクのデバッグ](../../extensibility/debugger/debugging-tasks.md)

@@ -1,6 +1,6 @@
 ---
 title: Workflow Foundation プロジェクトを作成する
-description: Visual Studio で使用できるプロジェクトテンプレートを使用してライブラリとアプリケーションを作成する方法について説明します。
+description: Visual Studio で使用できるプロジェクト テンプレートで、ライブラリとアプリケーションを作成する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 06/25/2018
 ms.topic: conceptual
@@ -15,61 +15,61 @@ ms.workload:
 - multiple
 ms.openlocfilehash: cf8c0fe0b716cecee19c00bb0b300d4ffdc99355
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99894362"
 ---
-# <a name="workflow-project-templates"></a>ワークフロープロジェクトテンプレート
+# <a name="workflow-project-templates"></a>ワークフロー プロジェクト テンプレート
 
-ワークフロー、Windows Communication Foundation (WCF) ワークフローサービス、カスタムアクティビティ、およびカスタムアクティビティデザイナーは、Visual Studio プロジェクトテンプレートを使用して作成できます。 この記事では、Visual Studio で使用できるプロジェクトテンプレートを使用してライブラリとアプリケーションを作成する方法について説明します。
+Visual Studio のプロジェクト テンプレートを使用して、ワークフロー、Windows Communication Foundation (WCF) ワークフロー サービス、カスタム アクティビティ、カスタム アクティビティ デザイナーを作成できます。 この記事では、Visual Studio で使用できるプロジェクト テンプレートで、ライブラリとアプリケーションを作成する方法について説明します。
 
 ## <a name="create-a-workflow-project"></a>ワークフロー プロジェクトを作成する
 
-Visual Studio には、次の4つの異なるワークフロープロジェクトテンプレートが用意されています。
+Visual Studio には、4 つの異なるワークフロー プロジェクト テンプレートが用意されています。
 
-- ワークフローコンソールアプリ
+- ワークフロー コンソール アプリ
 
-- WCF ワークフローサービスアプリ
+- WCF ワークフロー サービス アプリ
 
-- 活動ライブラリ
+- アクティビティ ライブラリ
 
-- アクティビティデザイナーライブラリ
+- アクティビティ デザイナー ライブラリ
 
-これらのテンプレートにアクセスするには、最初に Visual Studio の **Windows Workflow Foundation** コンポーネントをインストールします。 詳細については、「 [Install Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation)」を参照してください。
+これらのテンプレートにアクセスするには、最初に Visual Studio の **Windows Workflow Foundation** コンポーネントをインストールします。 詳細については、「[Windows Workflow Foundation をインストールする](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation)」を参照してください。
 
-1. **Windows Workflow Foundation** コンポーネントをインストールしたら、[**ファイル**] [  >  **新規作成**] [プロジェクト] を選択し  >  ます。
+1. **Windows Workflow Foundation** コンポーネントをインストールした後、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
-1. ワークフロープロジェクトテンプレート ( **ワークフローコンソールアプリケーション** テンプレートなど) を検索して選択します。
+1. ワークフロー プロジェクト テンプレート (**ワークフロー コンソール アプリケーション** テンプレートなど) を検索して選択します。
 
-1. 続行してプロジェクトを作成します。
+1. 続けてプロジェクトを作成します。
 
    > [!NOTE]
-   > 既存のソリューションに新しいプロジェクトを追加する場合は、Visual Studio でそのソリューションを開き、**ソリューションエクスプローラー** でソリューションを右クリックして、[   >  **新しいプロジェクト** の追加] を選択します。
+   > 既存のソリューションに新しいプロジェクトを追加する場合は、Visual Studio でそのソリューションを開き、**ソリューション エクスプローラー** でソリューションを右クリックして、 **[追加]**  >  **[新しいプロジェクト]** を選択します。
 
-## <a name="workflow-console-app"></a>ワークフローコンソールアプリ
+## <a name="workflow-console-app"></a>ワークフロー コンソール アプリ
 
-**ワークフローコンソールアプリケーション** テンプレートを選択すると、Visual Studio によって XAML にワークフロー定義が作成されます。 ワークフローデザイナーが開き、作成したワークフローのキャンバスが表示されます。 ワークフローを作成するには、[ **ツールボックス** ] からアクティビティまたはその他のワークフローアイテムをデザイン画面にドラッグします。
+**ワークフロー コンソール アプリケーション** テンプレートを選択すると、Visual Studio によって XAML にワークフロー定義が作成されます。 ワークフロー デザイナーが開き、作成したワークフロー用のキャンバスが表示されます。 ワークフローを作成するには、アクティビティなどのワークフロー項目を **[ツールボックス]** からデザイン サーフェイスにドラッグします。
 
-## <a name="wcf-workflow-service-app"></a>WCF ワークフローサービスアプリ
+## <a name="wcf-workflow-service-app"></a>WCF ワークフロー サービス アプリ
 
-**WCF ワークフローサービスアプリケーション** テンプレートを選択すると、Visual Studio によってサービス定義が XAML として作成されます。 ワークフローデザイナーが開き、アクティビティと <xref:System.Activities.Statements.Sequence> アクティビティのセットを含むアクティビティが表示さ <xref:System.ServiceModel.Activities.Receive> れ <xref:System.ServiceModel.Activities.SendReply> ます。
+**WCF ワークフロー サービス アプリケーション** テンプレートを選択すると、Visual Studio によってサービス定義が XAML として作成されます。 ワークフロー デザイナーのデザイン ビューが開かれ、<xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.SendReply> アクティビティのセットを含む <xref:System.Activities.Statements.Sequence> アクティビティが表示されます。
 
-## <a name="activity-library"></a>活動ライブラリ
+## <a name="activity-library"></a>アクティビティ ライブラリ
 
-[ **アクティビティライブラリ** ] テンプレートを選択すると、Visual Studio によって XAML にアクティビティ定義が作成されます。 ワークフローデザイナーが開き、カスタムアクティビティのキャンバスが表示されます。 アクティビティを [ **ツールボックス** ] からデザイン画面にドラッグして、カスタムアクティビティに追加します。
-
-> [!NOTE]
-> カスタムアクティビティの本文で使用できる子アクティビティは1つだけです。 ただし、その子アクティビティは、アクティビティやアクティビティなどの複合アクティビティである可能性があり <xref:System.Activities.Statements.Sequence> <xref:System.Activities.Statements.Flowchart> ます。
-
-## <a name="activity-designer-library"></a>アクティビティデザイナーライブラリ
-
-**アクティビティデザイナーライブラリ** テンプレートを選択すると、Visual Studio によって、アクティビティデザイナー定義が XAML と分離コード実装ファイルに作成されます。 ワークフローデザイナーが開き、アクティビティデザイナーのキャンバスが表示されます。 **ツールボックス** から WINDOWS PRESENTATION FOUNDATION (WPF) コントロールをデザイン画面にドラッグして、カスタムアクティビティデザイナーで使用できるようにします。
-
-カスタムアクティビティデザイナーを実装する方法の例については、「 [方法: カスタムアクティビティデザイナーを作成](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer)する」を参照してください。
+**アクティビティ ライブラリ** テンプレートを選択すると、Visual Studio によって XAML でアクティビティ定義が作成されます。 ワークフロー デザイナーが開き、カスタム アクティビティ用のキャンバスが表示されます。 **[ツールボックス]** のアクティビティをデザイン サーフェイスにドラッグし、カスタム アクティビティに含めます。
 
 > [!NOTE]
-> カスタムアクティビティデザイナーは、カスタムアクティビティおよび既定の .NET アクティビティに使用できます。
+> カスタム アクティビティの本体に含めることができる子アクティビティは 1 つだけです。 ただし、その子アクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティや <xref:System.Activities.Statements.Flowchart> アクティビティなどの複合アクティビティでもかまいません。
+
+## <a name="activity-designer-library"></a>アクティビティ デザイナー ライブラリ
+
+**アクティビティ デザイナー ライブラリ** テンプレートを選択すると、Visual Studio によって、アクティビティ デザイナー定義が XAML と分離コード実装ファイルで作成されます。 ワークフロー デザイナーが開き、アクティビティ デザイナー用のキャンバスが表示されます。 **[ツールボックス]** から Windows Presentation Foundation (WPF) コントロールをデザイン サーフェイスにドラッグして、カスタム アクティビティ デザイナーで使用できるようにします。
+
+カスタム アクティビティ デザイナーを実装する方法の例については、「[方法: カスタム アクティビティ デザイナーを作成する](/dotnet/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer)」を参照してください。
+
+> [!NOTE]
+> カスタム アクティビティ デザイナーは、カスタム アクティビティと既定の .NET アクティビティに使用できます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,6 +1,6 @@
 ---
-description: IDebugField オブジェクトについて取得する情報を指定します。
-title: FIELD_INFO_FIELDS |Microsoft Docs
+description: IDebugField オブジェクトに関して取得する情報を指定します。
+title: FIELD_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 0bd13473be5817e821f61b646bd1634cfe06388b
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105059431"
 ---
 # <a name="field_info_fields"></a>FIELD_INFO_FIELDS
-[IDebugField](../../../extensibility/debugger/reference/idebugfield.md)オブジェクトについて取得する情報を指定します。
+[IDebugField](../../../extensibility/debugger/reference/idebugfield.md) オブジェクトに関して取得する情報を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_FIELD_INFO_FIELDS { 
@@ -53,28 +53,28 @@ public enum enum_FIELD_INFO_FIELDS {
 
 ## <a name="fields"></a>フィールド
 `FIF_FULLNAME`\
-FIELD_INFO 構造体のフィールドを初期化/使用し `bstrFullName` ます。 [](../../../extensibility/debugger/reference/field-info.md)
+[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) 構造体内の `bstrFullName` フィールドを初期化および使用します。
 
 `FIF_NAME`\
-構造体のフィールドを初期化/使用し `bstrName` `FIELD_INFO` ます。
+`FIELD_INFO` 構造体内の `bstrName` フィールドを初期化および使用します。
 
 `FIF_TYPE`\
-構造体のフィールドを初期化/使用し `bstrType` `FIELD_INFO` ます。
+`FIELD_INFO` 構造体内の `bstrType` フィールドを初期化および使用します。
 
 `FIF_MODIFIERS`\
-構造体のフィールドを初期化/使用し `bstrModifiers` `FIELD_INFO` ます。
+`FIELD_INFO` 構造体内の `bstrModifiers` フィールドを初期化および使用します。
 
-## <a name="remarks"></a>注釈
-また、これらの値は、 [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)構造体を初期化するフィールドを指定するために、 [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)メソッドに引数として渡されます。
+## <a name="remarks"></a>解説
+これらの値は、引数として [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) メソッドにも渡され、[FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) 構造体内のどのフィールドを初期化するかを指定します。
 
-これらの値は `dwFields` 、使用される `FIELD_INFO` フィールドと有効なフィールドを示すために、構造体のメンバーでも使用されます。
+また、`FIELD_INFO` 構造体の `dwFields` メンバーでも使用され、どのフィールドが使用され有効になっているかが示されます。
 
-これらのフラグは、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらのフラグは、ビットごとの `OR` と組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: sh. h
+## <a name="requirements"></a>必要条件
+ヘッダー: sh.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

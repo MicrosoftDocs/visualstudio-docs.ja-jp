@@ -1,6 +1,6 @@
 ---
-description: このメソッドにより、プログラムがデバッグエンジン (DEs) とセッションデバッグマネージャーで使用できるようになります。
-title: IDebugProgramPublisher2::P ublishProgram |Microsoft Docs
+description: このメソッドは、プログラムをデバッグ エンジン (DE) とセッション デバッグ マネージャーで使用できるようにします。
+title: IDebugProgramPublisher2::PublishProgram | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ba1ac74813ea0c3ae5b7eadb26d540b7bfe20707
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105065230"
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-このメソッドにより、プログラムがデバッグエンジン (DEs) とセッションデバッグマネージャーで使用できるようになります。
+このメソッドは、プログラムをデバッグ エンジン (DE) とセッション デバッグ マネージャーで使用できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -46,20 +46,20 @@ int PublishProgram(
 
 ## <a name="parameters"></a>パラメーター
 `Engines`\
-からこのプログラムに対して起動またはアタッチできる DEs の Guid の配列。
+[入力] このプログラムを起動またはアタッチできる DE の GUID の配列。
 
 `szFriendlyName`\
-からプログラムのフレンドリ名です (これは、ユーザーに表示されるメニューまたはダイアログで表示されます)。
+[入力] プログラムのフレンドリ名 (これは、ユーザーに示されるメニューまたはダイアログに表示されます)。
 
 `pDebuggeeInterface`\
-[入力] `IUnknown` プログラムのインターフェイス (この値はプログラムを一意に識別するためにクッキーとして使用されます。この同じ値を使用してプログラムを "発行解除" します)
+[入力] プログラムの `IUnknown` インターフェイス (この値はプログラムを一意に識別するために Cookie として使用されます。この同じ値は、プログラムの "発行取り消し" に使用されます)
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- プログラムをデバッグに使用できないようにするには、 [Unpublishprogram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)を呼び出します。
+## <a name="remarks"></a>解説
+ プログラムをデバッグに使用できないようにするには、[UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md) を呼び出します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)
 - [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)

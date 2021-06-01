@@ -1,6 +1,6 @@
 ---
-description: このメソッドは、フィールドに関する拡張情報を取得します。
-title: 'IDebugField:: GetExtendedInfo |Microsoft Docs'
+description: このメソッドを使用すると、フィールドに関する拡張情報を取得できます。
+title: IDebugField::GetExtendedInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,13 +18,13 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 3e17c824d2be7ff12e3e967b953e25359b650b1c
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105077071"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
-このメソッドは、フィールドに関する拡張情報を取得します。
+このメソッドを使用すると、フィールドに関する拡張情報を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,24 +46,24 @@ int GetExtendedInfo(
 
 ## <a name="parameters"></a>パラメーター
 `guidExtendedInfo`\
-から返される情報を選択します。 次の値を指定できます。
+[入力] 返される情報を選択します。 有効な値は次のとおりです。
 
 |値|説明|
 |-----------|-----------------|
-|`guidConstantValue`|バイトシーケンスとしての値。|
-|`guidConstantType`|型のシグネチャとしての型。|
+|`guidConstantValue`|バイト シーケンスとしての値。|
+|`guidConstantType`|型シグネチャとしての型。|
 
 `prgBuffer`\
-入出力拡張された情報を返します。
+[出力] 拡張情報を返します。
 
 `pdwLen`\
-[入力、出力]拡張情報のサイズをバイト単位で返します。
+[入力、出力] 拡張情報のサイズをバイト単位で返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
- 現在、このメソッドは定数の型または値のみを返します。 呼び出し元は、 `prgBuffer` COM の `CoTaskMemFree` 関数 (C++) または (C#) を呼び出すことによって、で返されたバッファーを解放する必要があり <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> ます。
+## <a name="remarks"></a>解説
+ 現在、このメソッドからは定数の型または値のみが返されます。 呼び出し元は、`prgBuffer` で返されたバッファーを、COM の `CoTaskMemFree` 関数 (C++) または <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#) を呼び出すことによって解放する必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

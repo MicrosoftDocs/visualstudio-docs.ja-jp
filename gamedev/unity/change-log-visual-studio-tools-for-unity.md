@@ -14,7 +14,7 @@ ms.workload:
 - unity
 ms.openlocfilehash: a03d0fc896fcbc971bc62cd9391c4f38d0aad06c
 ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/22/2021
 ms.locfileid: "107879383"
@@ -24,7 +24,7 @@ ms.locfileid: "107879383"
 Visual Studio Tools for Unity の変更ログです。
 
 ## <a name="4910"></a>4.9.1.0
-リリース日2021年3月2日
+リリース日: 2021 年 3 月 2 日
 
 ### <a name="new-features"></a>新機能
 
@@ -61,7 +61,7 @@ Visual Studio Tools for Unity の変更ログです。
   - 例外をスローする古いプロパティのフィルター処理を修正しました。
 
 ## <a name="4900"></a>4.9.0.0
-2021年1月20日にリリース
+リリース日: 2021 年 1 月 20 日
 
 ### <a name="new-features"></a>新機能
 
@@ -69,7 +69,7 @@ Visual Studio Tools for Unity の変更ログです。
 
   - `raytrace shaders`、`UXML`、および `USS` のファイルのサポートを追加しました。
 
-  - `.vsconfig`生成サポートを追加しました。 Visual Studio では、不足しているコンポーネントを検出し、Unity プロジェクトを使用するときにインストールするように求めるメッセージが表示されます。
+  - `.vsconfig` 生成のサポートを追加しました。 Unity プロジェクトを使用するときに、Visual Studio で不足しているコンポーネントが検出され、それらをインストールするように求められるようになりました。
 
   - (コルーチンとして使用されているすべてのメソッドの) Unity メッセージ API を更新しました。
 
@@ -79,58 +79,58 @@ Visual Studio Tools for Unity の変更ログです。
 
 - **統合:**
 
-  - インスタンス選択ダイアログを使用するときのプロセスの更新を修正します。
+  - インスタンス選択ダイアログを使用するときの、プロセスの更新を修正しました。
 
   - コルーチンと `AssetPostprocessor.OnAssignMaterialModel` に対して間違った警告を出す、[`UNT0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0006.md) 診断を修正しました。
 
 ## <a name="4820"></a>4.8.2.0
-リリース日2020年11月10日
+リリース日: 2020 年 11 月 10 日
 
 ### <a name="new-features"></a>新機能
 
 - **統合:**
 
-  - [`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) `Component` だけでなく、から継承されたすべてに適用される診断機能が向上しました `MonoBehaviour` 。
+  - `MonoBehaviour` だけでなく `Component` を継承するすべてに適用されるように、[`UNT0010`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0010.md) 診断を改善しました。
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - CodeLens メッセージの無効化を修正します。
+  - CodeLens メッセージの無効化を修正しました。
 
 ## <a name="4810"></a>4.8.1.0
-リリース日-2020 年10月13日
+リリース日: 2020 年 10 月 13 日
 
 ### <a name="new-features"></a>新機能
 
 - **評価:**
 
-  - 呼び出しによる暗黙的な変換のサポートが追加されました。 以前は、エバリュエーターに厳密な型チェックが適用され、警告メッセージが生成されていま `Failed to find a match for method([parameters...])` した。
+  - 呼び出しによる暗黙的な変換のサポートが追加されました。 以前は、エバリュエーターによって厳密な型チェックが適用され、`Failed to find a match for method([parameters...])` 警告メッセージが生成されていました。
 
 - **統合:**
 
-  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) 診断が追加されました。 、、、など `System.Reflection` のパフォーマンスクリティカルなメッセージでは、機能を使用しないでください `Update` `FixedUpdate` `LateUpdate` `OnGUI` 。
+  - [`UNT0018`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0018.md) 診断が追加されました。 `Update`、`FixedUpdate`、`LateUpdate`、または `OnGUI` のようなパフォーマンスが重要なメッセージでは、`System.Reflection` 機能を使用しないでください。
 
-  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) すべての静的メソッドがサポートされるようになり、suppressors が改善されました `AssetPostprocessor` 。
+  - [`USP0003`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0003.md) および [`USP0005`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0005.md) サプレッサーを改善し、すべての `AssetPostprocessor` 静的メソッドがサポートされるようになりました。
 
-  - `CS8618` 用の [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) サプレッサーが追加されました。 `C# 8.0` null 許容の参照型と null 非許容の参照型について説明します。 から継承する型の初期化検出はサポートされて `UnityEngine.Object` いないため、エラーが発生します。
+  - `CS8618` 用の [`USP0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0016.md) サプレッサーが追加されました。 `C# 8.0` によって、null 許容参照型と null 非許容参照型が導入されます。 `UnityEngine.Object` から継承する型の初期化検出はサポートされず、エラーが発生します。
 
-  - Unity 2019. x と 2020. x + の両方に同じプレーヤーと asmdef プロジェクト生成メカニズムを使用するようになりました。
+  - 現在、Unity 2019.x と 2020.x+ の両方で、同じプレーヤーおよび asmdef プロジェクト生成メカニズムを使用しています。
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - コメント内のメッセージの予期しない完了を修正します。
+  - コメント内のメッセージが予期せずに完了することを修正しました。
 
 ## <a name="4800"></a>4.8.0.0 
-2020年9月14日にリリース
+リリース日: 2020 年 9 月 14 日
 
 ### <a name="bug-fixes"></a>バグ修正
 
 - **統合:**
 
-  - Unity 2019. x でのプレーヤープロジェクトの生成を修正します。
+  - Unity 2019.x でのプレーヤー プロジェクト生成を修正しました。
 
 ## <a name="4710"></a>4.7.1.0
 リリース日: 2020 年 8 月 5 日

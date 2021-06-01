@@ -1,7 +1,8 @@
-﻿---
-title: 名前空間 | をお持ちの場合Microsoft Docs
+---
+description: 一部のシンボルは名前空間によって参照される場合があり、その後は SymTagUsingNameSpace タグによって識別されます。
+title: UsingNameSpace | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: e8e1beb5-7cb9-43b4-9ff4-760d5f91ea2d
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d078e8af5f579556fb865a4d92084220afecc83
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 1fde0be17059342c3b00ba43cab93f4464e31f1e
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738434"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635192"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
-一部のシンボルは名前空間によって参照される場合があり、その後、`SymTagUsingNameSpace` タグによって識別されます。
+一部のシンボルは名前空間によって参照される場合があり、その後は `SymTagUsingNameSpace` タグによって識別されます。
 
 > [!NOTE]
-> 名前空間シンボルタグはマネージコードでのみ表示されます。
+> UsingNamespace シンボル タグはマネージド コードでのみ表示されます。
 
-## <a name="properties"></a>プロパティ
- 次の表は、このシンボルの種類に対して有効なプロパティを示しています。
+## <a name="properties"></a>Properties
+ 次の表に、このシンボル型に対して有効なプロパティを示します。
 
-|property|データの種類|説明|
+|プロパティ|データ型|説明|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|外側のコンパイル単位、block、または function のシンボル。|
-|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|構文の親シンボルの ID。|
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|外側のコンパイル単位、ブロック、または関数のシンボル。|
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|構文上の親シンボルの ID。|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|名前空間の名前。|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|シンボルのインデックス ID。|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|@No__t_0 ( [Symtagenum 列挙](../../debugger/debug-interface-access/symtagenum.md)値のいずれか) を返します。|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|`SymTagNameSpace` ([SymTagEnum 列挙型](../../debugger/debug-interface-access/symtagenum.md)の値の 1 つ) を返します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 - [シンボル型の構文階層](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

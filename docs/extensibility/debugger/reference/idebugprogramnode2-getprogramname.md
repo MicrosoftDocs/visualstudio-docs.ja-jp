@@ -1,6 +1,6 @@
 ---
-description: 'IDebugProgramNode2:: GetProgramName プログラムの名前を取得します。'
-title: 'IDebugProgramNode2:: GetProgramName |Microsoft Docs'
+description: IDebugProgramNode2::GetProgramName では、プログラムの名前を取得します。
+title: IDebugProgramNode2::GetProgramName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 376054406d0c127a0bbdcd5ee0a90bc694f9cd02
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105087237"
@@ -42,16 +42,16 @@ int GetProgramName (
 
 ## <a name="parameters"></a>パラメーター
 `pbstrProgramName`\
-入出力プログラムの名前を返します。
+[出力] プログラムの名前を返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合はを返し `S_OK` ます。それ以外の場合はエラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>注釈
-プログラムの名前は、プログラムのパスと同じではありませんが、プログラムの名前はそのようなパスの一部である場合があります。
+## <a name="remarks"></a>解説
+プログラムの名前はプログラムのパスと同じではありませんが、プログラムの名前はそのようなパスの一部である場合があります。
 
 ## <a name="example"></a>例
-次の例は、IDebugProgramNode2 インターフェイスを実装する単純なオブジェクトに対してこのメソッドを実装する方法を示して `CProgram` います。 [](../../../extensibility/debugger/reference/idebugprogramnode2.md) 関数は、 `MakeBstr` 指定された文字列のコピーを BSTR として割り当てます。
+次の例は、[IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) インターフェイスを実装するシンプルな `CProgram` オブジェクトに対してこのメソッドを実装する方法を示しています。 `MakeBstr` 関数では、指定された文字列のコピーを BSTR として割り当てます。
 
 ```cpp
 HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
@@ -64,5 +64,5 @@ HRESULT CProgram::GetProgramName(BSTR* pbstrProgramName) {
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 - [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

@@ -1,7 +1,8 @@
 ---
+description: シンボルを一意の識別子ごとに取得します。
 title: IDiaSession::symbolById | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 062e4b5a-9c4d-4703-88da-ec13102c2b66
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b0ffcb6c438150bff82f17a66c3347c300b17d72
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: 979825cd3e62c97334d55676b3bf32bf874f8445
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741875"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634297"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
-一意の識別子によって記号を取得します。
+シンボルを一意の識別子ごとに取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,22 +35,22 @@ HRESULT symbolById (
 #### <a name="parameters"></a>パラメーター
 `id`
 
-から一意の識別子。
+[入力] 一意の識別子。
 
 `ppSymbol`
 
-入出力取得されたシンボルを表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)オブジェクトを返します。
+[出力] 取得されたシンボルを表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
-成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
-指定された識別子は、すべての記号を一意にするために DIA SDK によって内部的に使用される一意の値です。
+## <a name="remarks"></a>解説
+指定された識別子は、すべてのシンボルを一意にするために DIA SDK によって内部的に使用される一意の値です。
 
-たとえば、このメソッドを使用すると、別のシンボルの型を表すシンボルを取得できます (例を参照)。
+たとえば、このメソッドを使用すると、別のシンボルの種類を表すシンボルを取得できます (例を参照)。
 
 ## <a name="example"></a>例
-この例では、別のシンボルの型を表す[IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)を取得します。 この例では、セッションで `symbolById` メソッドを使用する方法を示します。 より簡単な方法は、 [IDiaSymbol:: get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)メソッドを呼び出して、型シンボルを直接取得することです。
+この例では、別のシンボルの種類を表す [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) を取得しています。 セッションの `symbolById` メソッドの使用方法を次の例に示します。 より簡単な方法は、[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) メソッドを呼び出して、種類のシンボルを直接取得することです。
 
 ```C++
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)

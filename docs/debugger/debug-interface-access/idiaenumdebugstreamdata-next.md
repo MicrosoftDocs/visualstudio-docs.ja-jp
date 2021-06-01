@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumDebugStreamData:: Next |Microsoft Docs'
+description: 列挙シーケンス内の指定された数のレコードを取得します。
+title: IDiaEnumDebugStreamData::Next | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 114171dd-38fd-4bd7-a702-8ff887ffc99b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: acdab0a565613194c67aa85484316a235c91dbf6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: e854a4bbcd7c1429ef14a90f705f80afc92e75bc
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744789"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108635080"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
-列挙されたシーケンス内の指定した数のレコードを取得します。
+列挙シーケンス内の指定された数のレコードを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Next ( 
+HRESULT Next ( 
    ULONG  celt,
    DWORD  cbData,
    DWORD* pcbData,
@@ -37,26 +38,26 @@ HRESULT Next ( 
 #### <a name="parameters"></a>パラメーター
  celt
 
-から取得するレコードの数。
+[入力] 取得するレコードの数。
 
  cbData
 
-からデータバッファーのサイズ (バイト単位)。
+[入力] データ バッファーのサイズ (バイト単位)。
 
  pcbData
 
-入出力返されたバイト数を返します。 @No__t_0 が NULL の場合、`pcbData` には、要求されたすべてのレコードで使用可能なデータの合計バイト数が含まれます。
+[出力] 返されるバイト数を返します。 `data` が NULL の場合、`pcbData` には、要求されたすべてのレコードに使用できるデータの合計バイト数が格納されます。
 
  data[]
 
-入出力デバッグストリームレコードデータを格納するバッファー。
+[出力] デバッグ ストリーム レコード データが格納されるバッファー。
 
  pceltFetched
 
-[入力、出力]@No__t_0 内のレコードの数を返します。
+[入力、出力] `data` 内のレコードの数を返します。
 
 ## <a name="return-value"></a>戻り値
- 正常に終了した場合は、`S_OK` を返します。 レコードがなくなった場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
+ 正常に終了した場合は、`S_OK` を返します。 レコードがそれ以上ない場合は `S_FALSE` を返します。 それ以外の場合はエラー コードを返します。
 
 ## <a name="see-also"></a>関連項目
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

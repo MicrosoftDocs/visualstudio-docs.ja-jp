@@ -1,7 +1,8 @@
 ---
-title: 'IDiaEnumTables:: Item |Microsoft Docs'
+description: インデックスまたは名前を使用してテーブルを取得します。
+title: IDiaEnumTables::Item | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: d65ab262-10c6-48ce-95a3-b5e4cb2c85af
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf2d6b14f17d42a128e59446e27bfc251de40d17
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: dc222672b0ba52f19f153a8e0c9e97137a069607
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743747"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634436"
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
-インデックスまたは名前を使ってテーブルを取得します。
+インデックスまたは名前を使用してテーブルを取得します。
 
 ## <a name="syntax"></a>構文
 
 ```C++
-HRESULT Item ( 
+HRESULT Item ( 
    VARIANT     index,
    IDiaTable** table
 );
@@ -34,17 +35,17 @@ HRESULT Item ( 
 #### <a name="parameters"></a>パラメーター
  `index`
 
-から取得する[IDiaTable](../../debugger/debug-interface-access/idiatable.md)のインデックスまたは名前。 整数バリアントを使用する場合は、0 ~ `count`-1 の範囲で指定する必要があります。この場合 `count` は[IDiaEnumTables:: get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md)メソッドによって返されます。
+[入力] 取得する [IDiaTable](../../debugger/debug-interface-access/idiatable.md) のインデックスまたは名前。 整数バリアントが使用される場合、それは 0 から `count`-1 までの範囲に含まれる必要があります。`count` は、[IDiaEnumTables::get_Count](../../debugger/debug-interface-access/idiaenumtables-get-count.md) メソッドによって返されるものです。
 
  `table`
 
-入出力目的のテーブルを表す[IDiaTable](../../debugger/debug-interface-access/idiatable.md)オブジェクトを返します。
+[出力] 目的のテーブルを表す [IDiaTable](../../debugger/debug-interface-access/idiatable.md) オブジェクトを返します。
 
 ## <a name="return-value"></a>戻り値
- 成功した場合は `S_OK` を返します。それ以外の場合は、エラーコードを返します。
+ 成功した場合は、`S_OK` を返します。それ以外の場合は、エラー コードを返します。
 
-## <a name="remarks"></a>Remarks
- 文字列バリアントが指定されている場合、文字列は特定のテーブルに名前を指定します。 名前は、[定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)で定義されているテーブル名のいずれかである必要があります。
+## <a name="remarks"></a>解説
+ 文字列バリアントが指定されている場合、文字列は特定のテーブルの名前を表します。 名前は、[定数 (Debug Interface Access SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md) で定義されているテーブル名のいずれかである必要があります。
 
 ## <a name="example"></a>例
 

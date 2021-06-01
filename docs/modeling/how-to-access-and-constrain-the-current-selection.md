@@ -1,6 +1,6 @@
 ---
 title: '方法: 現在の選択項目を表示および制限する'
-description: ドメイン固有言語のコマンドまたはジェスチャハンドラーを記述するときに、ユーザーが右クリックした要素を確認する方法について説明します。
+description: ドメイン固有言語用のコマンドまたはジェスチャ ハンドラーを記述するときに、ユーザーが右クリックした要素を特定する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,55 +13,55 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 83903c8ff911fdd1d4900714137a7f6976513dad
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99890566"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>方法: 現在の選択項目を表示および制限する
 
-ドメイン固有言語のコマンドまたはジェスチャハンドラーを記述する場合は、ユーザーが右クリックした要素を確認できます。 また、一部の図形またはフィールドが選択されないようにすることもできます。 たとえば、ユーザーがアイコンデコレータをクリックしたときに、そのアイコンが含まれている図形が選択されていることを示すことができます。 この方法で選択を制限すると、記述する必要があるハンドラーの数が減ります。 また、デコレータを避けなくても、図形内の任意の場所をクリックできるようになります。
+ドメイン固有言語用のコマンドまたはジェスチャ ハンドラーを記述するときに、ユーザーが右クリックした要素を特定できます。 また、一部の図形またはフィールドが選択されないようにすることもできます。 たとえば、ユーザーがアイコン デコレーターをクリックしたときに、それが含まれる図形が代わりに選択されるようにすることができます。 この方法で選択を制限すると、記述する必要のあるハンドラーの数が減ります。 また、それによってユーザーも楽になり、デコレーターを避けることなく、図形内の任意の場所をクリックできるようになります。
 
-## <a name="access-the-current-selection-from-a-command-handler"></a>コマンドハンドラーから現在の選択項目にアクセスする
+## <a name="access-the-current-selection-from-a-command-handler"></a>コマンド ハンドラーから現在の選択項目にアクセスする
 
-ドメイン固有言語のコマンドセットクラスには、カスタムコマンドのコマンドハンドラーが含まれています。 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>ドメイン固有言語のコマンドセットクラスが派生するクラスは、現在の選択項目にアクセスするためのいくつかのメンバーを提供します。
+ドメイン固有言語のコマンド セット クラスには、カスタム コマンド用のコマンド ハンドラーが含まれています。 ドメイン固有言語のコマンド セット クラスの派生元である <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスにより、現在の選択項目にアクセスするためのいくつかのメンバーが提供されています。
 
-コマンドハンドラーでは、コマンドに応じて、モデルデザイナー、モデルエクスプローラー、またはアクティブウィンドウでの選択が必要になる場合があります。
+コマンド ハンドラーでは、コマンドに応じて、モデル デザイナー、モデル エクスプローラー、またはアクティブ ウィンドウに選択項目が含まれることが必要になる場合があります。
 
 ### <a name="to-access-selection-information"></a>選択情報にアクセスするには
 
-1. クラスは、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> 現在の選択にアクセスするために使用できる次のメンバーを定義します。
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスで定義されている次のメンバーを使用して、現在の選択項目にアクセスできます。
 
     |メンバー|説明|
     |-|-|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> メソッド|`true`モデルデザイナーで選択されているいずれかの要素がコンパートメントシェイプの場合はを返します。それ以外の場合はを返します `false` 。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> メソッド|`true`モデルデザイナーでダイアグラムが選択されている場合はを返します。それ以外の場合はを返します `false` 。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> メソッド|`true`モデルデザイナーで要素が1つだけ選択されている場合はを返します。それ以外の場合はを返します `false` 。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> メソッド|`true`アクティブウィンドウで要素が1つだけ選択されている場合はを返します。それ以外の場合はを返します `false` 。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> プロパティ|モデルデザイナーで選択されている要素の読み取り専用のコレクションを取得します。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> プロパティ|アクティブウィンドウで選択されている要素の読み取り専用のコレクションを取得します。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> プロパティ|モデルデザイナーで選択のプライマリ要素を取得します。|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> プロパティ|アクティブウィンドウ内の選択範囲のプライマリ要素を取得します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> メソッド|モデル デザイナーで選択されているいずれかの要素がコンパートメント シェイプである場合は、`true` を返します。それ以外の場合は `false` を返します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> メソッド|モデル デザイナーでダイアグラムが選択されている場合は、`true` を返します。それ以外の場合は `false` を返します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> メソッド|モデル デザイナーで厳密に 1 つの要素が選択されている場合は、`true` を返します。それ以外の場合は `false` を返します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> メソッド|アクティブ ウィンドウで厳密に 1 つの要素が選択されている場合は、`true` を返します。それ以外の場合は `false` を返します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentDocumentSelection%2A> プロパティ|モデル デザイナーで選択されている要素の読み取り専用のコレクションを取得します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.CurrentSelection%2A> プロパティ|アクティブ ウィンドウで選択されている要素の読み取り専用のコレクションを取得します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleDocumentSelection%2A> プロパティ|モデル デザイナーでの選択のプライマリ要素を取得します。|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.SingleSelection%2A> プロパティ|アクティブ ウィンドウでの選択のプライマリ要素を取得します。|
 
-2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A>クラスのプロパティは、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> モデルデザイナーウィンドウを表すオブジェクトへのアクセスを提供 <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> し、モデルデザイナーで選択した要素に追加のアクセスを提供します。
+2. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet.CurrentDocView%2A> クラスの <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> プロパティを使用すると、 モデル デザイナー ウィンドウを表す <xref:Microsoft.VisualStudio.Modeling.Shell.DiagramDocView> オブジェクトにアクセスでき、さらにモデル デザイナーで選択されている要素にもアクセスできます。
 
-3. さらに、生成されたコードでは、ドメイン固有言語用のコマンドセットクラスにエクスプローラーツールウィンドウプロパティとエクスプローラー選択プロパティが定義されています。
+3. さらに、生成されたコードでは、ドメイン固有言語用のコマンド セット クラスでエクスプローラー ツール ウィンドウ プロパティとエクスプローラー選択プロパティが定義されています。
 
-    - エクスプローラーのツールウィンドウプロパティは、ドメイン固有言語のエクスプローラーツールウィンドウクラスのインスタンスを返します。 エクスプローラーツールウィンドウクラスはクラスから派生 <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> し、ドメイン固有言語のモデルエクスプローラーを表します。
+    - エクスプローラー ツール ウィンドウ プロパティからは、ドメイン固有言語用のエクスプローラー ツール ウィンドウ クラスのインスタンスが返されます。 エクスプローラー ツール ウィンドウ クラスは <xref:Microsoft.VisualStudio.Modeling.Shell.ModelExplorerToolWindow> クラスから派生し、ドメイン固有言語用のモデル エクスプローラーを表します。
 
-    - プロパティは、 `ExplorerSelection` ドメイン固有言語の [モデルエクスプローラー] ウィンドウで選択されている要素を返します。
+    - `ExplorerSelection` プロパティからは、ドメイン固有言語用のモデル エクスプローラー ウィンドウで選択されている要素が返されます。
 
-## <a name="determine-which-window-is-active"></a>アクティブなウィンドウを確認する
+## <a name="determine-which-window-is-active"></a>アクティブなウィンドウを特定する
 
-インターフェイスには、 <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> シェルの現在の選択状態へのアクセスを提供するメンバーが定義されています。 <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> `MonitorSelection` 各の基本クラスで定義されているプロパティを使用して、ドメイン固有言語のパッケージクラスまたはコマンドセットクラスからオブジェクトを取得できます。 パッケージクラスはクラスから派生 <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> し、コマンドセットクラスはクラスから派生し <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> ます。
+<xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> インターフェイスには、シェルの現在の選択状態にアクセスできるメンバーが定義されています。 ドメイン固有言語用のパッケージ クラスまたはコマンド セット クラスの基底クラスで定義されている `MonitorSelection` プロパティを使用して、それぞれのクラスから <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> オブジェクトを取得できます。 パッケージ クラスは <xref:Microsoft.VisualStudio.Modeling.Shell.ModelingPackage> クラスから派生し、コマンド セット クラスは <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスから派生しています。
 
-### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>コマンドハンドラーから、どの種類のウィンドウがアクティブであるかを判断するには
+### <a name="to-determine-from-a-command-handler-what-type-of-window-is-active"></a>アクティブになっているウィンドウの種類をコマンド ハンドラーから特定するには
 
-1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A>クラスのプロパティは、 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> シェルの <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> 現在の選択状態へのアクセスを提供するオブジェクトを返します。
+1. <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> クラスの <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.MonitorSelection%2A> プロパティからは、シェルの現在の選択状態にアクセスできる <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> オブジェクトが返されます。
 
-2. インターフェイスのプロパティは、アクティブな <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> 選択コンテナーを取得します。アクティブなウィンドウとは異なる場合があります。
+2. <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService> インターフェイスの <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService.CurrentSelectionContainer%2A> プロパティを使用すると、アクティブな選択コンテナーを取得できます。これは、アクティブなウィンドウとは異なる場合があります。
 
-3. 次のプロパティをドメイン固有言語のコマンドセットクラスに追加して、アクティブなウィンドウの種類を判別します。
+3. アクティブなウィンドウの種類を特定するには、次のプロパティをドメイン固有言語用のコマンド セット クラスに追加します。
 
     ```csharp
     // using Microsoft.VisualStudio.Modeling.Shell;
@@ -89,29 +89,29 @@ ms.locfileid: "99890566"
     }
     ```
 
-## <a name="constrain-the-selection"></a>選択範囲を制限する
+## <a name="constrain-the-selection"></a>選択を制約する
 
-選択規則を追加することにより、ユーザーがモデル内の要素を選択したときにどの要素を選択するかを制御できます。 たとえば、ユーザーが複数の要素を1つの単位として扱うことができるようにするには、選択ルールを使用します。
+選択規則を追加することにより、ユーザーがモデル内の要素を選択したときに選択される要素を制御できます。 たとえば、ユーザーが複数の要素を 1 つの単位として扱うことができるようにするには、選択規則を使用します。
 
-### <a name="to-create-a-selection-rule"></a>選択ルールを作成するには
+### <a name="to-create-a-selection-rule"></a>選択規則を作成するには
 
-1. DSL プロジェクトでカスタムコードファイルを作成する
+1. DSL プロジェクトでカスタム コード ファイルを作成します
 
-2. クラスから派生した選択規則クラスを定義 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> します。
+2. <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules> クラスから派生する選択規則クラスを定義します。
 
-3. 選択 <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> 条件を適用するには、選択規則クラスのメソッドをオーバーライドします。
+3. 選択条件を適用するには、選択規則クラスの <xref:Microsoft.VisualStudio.Modeling.Diagrams.DiagramSelectionRules.GetCompliantSelection%2A> メソッドをオーバーライドします。
 
-4. ClassDiagram クラスの部分クラス定義をカスタムコードファイルに追加します。
+4. ClassDiagram クラスの部分クラス定義を、カスタム コード ファイルに追加します。
 
-     クラスは、 `ClassDiagram` クラスから派生 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> し、DSL プロジェクトの生成されたコードファイル Diagram.cs で定義されます。
+     `ClassDiagram` クラスは、<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram> クラスから派生し、DSL プロジェクトの生成されたコード ファイル (Diagram.cs) で定義されています。
 
-5. クラスのプロパティをオーバーライドして、 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> `ClassDiagram` カスタム選択規則を返します。
+5. カスタム選択規則を返すように、`ClassDiagram` クラスの <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> プロパティをオーバーライドします。
 
-     プロパティの既定の実装では、選択を <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> 変更しない選択ルールオブジェクトを取得します。
+     <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> プロパティの既定の実装では、選択を変更しない選択規則オブジェクトが取得されます。
 
 ### <a name="example"></a>例
 
-次のコードファイルは、選択範囲を拡張して、最初に選択された各ドメイン図形のすべてのインスタンスを含む選択規則を作成します。
+次のコード ファイルでは、最初に選択されていた各ドメイン シェイプのすべてのインスタンスが含まれるように選択範囲を拡張する選択規則が作成されます。
 
 ```csharp
 using System;

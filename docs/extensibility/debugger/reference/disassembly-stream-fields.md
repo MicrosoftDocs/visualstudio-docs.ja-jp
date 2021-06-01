@@ -1,6 +1,6 @@
 ---
-description: 逆アセンブリフィールドについて取得する情報を指定します。
-title: DISASSEMBLY_STREAM_FIELDS |Microsoft Docs
+description: 逆アセンブリ フィールドについて取得する情報を指定します。
+title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: 9241331e4e66c4a34a3afb29b54cf2ce6aab0e0f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105096188"
 ---
 # <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
-逆アセンブリフィールドについて取得する情報を指定します。
+逆アセンブリ フィールドについて取得する情報を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 enum enum_DISASSEMBLY_STREAM_FIELDS {
@@ -67,55 +67,55 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
 
 ## <a name="fields"></a>フィールド
 `DSF_ADDRESS`\
-フィールドを初期化/使用 `bstrAddress` します。
+`bstrAddress` フィールドを初期化および使用します。
 
 `DSF_ADDRESSOFFSET`\
-フィールドを初期化/使用 `bstrAddressOffset` します。
+`bstrAddressOffset` フィールドを初期化および使用します。
 
 `DSF_CODEBYTES`\
-フィールドを初期化/使用 `bstrCodeBytes` します。
+`bstrCodeBytes` フィールドを初期化および使用します。
 
 `DSF_OPCODE`\
-フィールドを初期化/使用 `bstrOpCode` します。
+`bstrOpCode` フィールドを初期化および使用します。
 
 `DSF_OPERANDS`\
-フィールドを初期化/使用 `bstrOperands` します。
+`bstrOperands` フィールドを初期化および使用します。
 
 `DSF_SYMBOL`\
-フィールドを初期化/使用 `bstrSymbol` します。
+`bstrSymbol` フィールドを初期化および使用します。
 
 `DSF_CODELOCATIONID`\
-フィールドを初期化/使用 `uCodeLocationId` します。
+`uCodeLocationId` フィールドを初期化および使用します。
 
 `DSF_POSITION`\
-フィールドとフィールドを初期化/使用し `posBeg` `posEnd` ます。
+`posBeg` フィールドと `posEnd` フィールドを初期化および使用します。
 
 `DSF_DOCUMENTURL`\
-フィールドを初期化/使用 `bstrDocumentUrl` します。
+`bstrDocumentUrl` フィールドを初期化および使用します。
 
 `DSF_BYTEOFFSET`\
-フィールドを初期化/使用 `dwByteOffset` します。
+`dwByteOffset` フィールドを初期化および使用します。
 
 `DSF_FLAGS`\
-`dwFlags`([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) フィールドを初期化/使用します。
+`dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) フィールドを初期化および使用します。
 
 `DSF_OPERANDS_SYMBOLS`\
-フィールドにシンボル名を含め `bstrOperands` ます。
+`bstrOperands` フィールドにシンボル名を含めます。
 
 `DSF_ALL`\
-逆アセンブリストリームのすべてのフィールドを指定します。
+逆アセンブリ ストリームのすべてのフィールドを指定します。
 
-## <a name="remarks"></a>注釈
-[Disassemblydata](../../../extensibility/debugger/reference/disassemblydata.md)構造体内で初期化されるフィールドを示すために、 [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)メソッドにパラメーターとして渡されます。
+## <a name="remarks"></a>解説
+[DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) 構造体内で初期化されるフィールドを示すために、[Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) メソッドにパラメーターとして渡されます。
 
-構造体 `dwFields` のメンバーに、 `DisassemblyData` 構造体が返されるときに使用されるフィールドと有効なフィールドを示すために使用されます。
+`DisassemblyData` 構造体の `dwFields` メンバーに使用され、構造体が返されるときに、どのフィールドが使用され、有効であるかを示します。
 
-これらの値は、ビットごとのを使用して組み合わせることができ `OR` ます。
+これらの値は、ビットごとの `OR` で組み合わせることができます。
 
-## <a name="requirements"></a>要件
-ヘッダー: msdbg. h
+## <a name="requirements"></a>必要条件
+ヘッダー: msdbg.h
 
-名前空間: VisualStudio。
+名前空間: Microsoft.VisualStudio.Debugger.Interop
 
 アセンブリ: Microsoft.VisualStudio.Debugger.Interop.dll
 

@@ -1,7 +1,8 @@
-﻿---
-title: NameSearchOptions |Microsoft Docs
+---
+description: シンボルおよびファイルの名前の検索オプションを指定します。
+title: NameSearchOptions | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 67dfbede-2678-47df-b664-5c49841d0b9b
 author: mikejo5000
 ms.author: mikejo
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61905c0c6c40d893cc8723b711d67690133a7155
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
-ms.translationtype: MT
+ms.openlocfilehash: bd074de0c44803a06d5399f2bd4dc1e3c43618a1
+ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738611"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "108634563"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
-シンボルとファイル名の検索オプションを指定します。
+シンボルおよびファイルの名前の検索オプションを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,21 +43,21 @@ enum NameSearchOptions {
 };
 ```
 
-## <a name="elements"></a>Elements
+## <a name="elements"></a>要素
 `nsNone` オプションは指定されていません。
 
-`nsfCaseSensitive` では、大文字と小文字が区別されます。
+`nsfCaseSensitive` 大文字と小文字を区別した名前の一致を適用します。
 
-`nsfCaseInsensitive` では、大文字と小文字を区別しない名前の一致が適用されます。
+`nsfCaseInsensitive` 大文字と小文字を区別しない名前の一致を適用します。
 
-`nsfFNameExt` は、名前をパスとして扱い、ファイル名を適用します。 ext 名と一致します。
+`nsfFNameExt` 名前をパスとして扱い、filename.ext の名前の一致を適用します。
 
-`nsfRegularExpression` は、アスタリスク (*) と疑問符 (?) をワイルドカードとして使用して、大文字と小文字を区別した名前の一致を適用します。 (その他の一般的な正規表現文字はサポートされていません)。
+`nsfRegularExpression` アスタリスク (*) と疑問符 (?) をワイルドカードとして使用して、大文字と小文字を区別した名前の一致を適用します。 (その他の一般的な正規表現文字はサポートされていません。)
 
-`nsfUndecoratedName` は、非装飾名と装飾名の両方を持つシンボルにのみ適用されます。
+`nsfUndecoratedName` 非装飾名と装飾名の両方を持つシンボルにのみ適用されます。
 
-## <a name="remarks"></a>Remarks
-この列挙の値は、次のメソッドに渡されます。
+## <a name="remarks"></a>解説
+この列挙型の値は次のメソッドに渡されます。
 
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 
@@ -64,8 +65,8 @@ enum NameSearchOptions {
 
 - [IDiaSymbol::findChildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md)
 
-## <a name="requirements"></a>［要件］
-ヘッダー: dia2
+## <a name="requirements"></a>必要条件
+ヘッダー: dia2.h
 
 ## <a name="see-also"></a>関連項目
 - [列挙型と構造体](../../debugger/debug-interface-access/enumerations-and-structures.md)
