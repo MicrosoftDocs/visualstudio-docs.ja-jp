@@ -22,37 +22,37 @@ ms.workload:
 - office
 ms.openlocfilehash: 1a65e99712658567996598d2190447ff09cf9b05
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99888889"
 ---
-# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>方法: アクセス許可が制限されたドキュメントの背後でコードの実行を許可する
-  Microsoft Office の Information Rights Management (IRM) 機能を使用して、ドキュメントまたはブックへのアクセス許可を制限できます。 既定では、制限された Microsoft Office Word 文書または Microsoft Office Excel ブックの背後にあるコードは実行できません。 マネージコード拡張機能がオブジェクトモデルにアクセスできるように、既定値を変更することができます。これにより、ソリューションが機能します。
+# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>方法: アクセス許可が制限されたドキュメントの背後でのコードの実行を許可する
+  Microsoft Office の Information Rights Management (IRM) 機能を使用して、ドキュメントまたはブックへのアクセス許可を制限できます。 既定では、制限された Microsoft Office Word 文書または Microsoft Office Excel ブックの背後にあるコードは実行できません。 既定値を変更して、マネージド コード拡張機能からオブジェクト モデルにアクセスできるようにすると、ソリューションが正常に機能します。
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- アクセス許可の設定を変更できるようにするには、ドキュメントまたはブックの作成者であるか、フルコントロールアクセス権を持っている必要があります。
+ アクセス許可の設定を変更できるようにするには、ドキュメントまたはブックの作成者であるか、フル コントロール アクセス権を持っている必要があります。
 
-## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>アクセス許可が制限されたドキュメントの背後でコードを実行できるようにするには
+## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>アクセス許可が制限されたドキュメントの背後でのコードの実行を許可するには
 
 1. Word または Excel で文書またはブックを開きます。
 
-2. [ **ファイル** ] タブをクリックし、[ **準備**] をポイントして、[ **アクセス許可の制限**] をポイントし、[ **制限付きアクセス**] をクリックします。
+2. **[ファイル]** タブをクリックし、 **[準備]** 、 **[アクセスの制限]** の順にポイントしてから、 **[アクセス制限あり]** をクリックします。
 
    > [!NOTE]
-   > 初回使用時には、Windows Rights Management クライアントをインストールするように求められます。 クライアントをインストールした後、手順を繰り返すことが必要になる場合があります。
+   > 初回使用時には、Windows Rights Management クライアントをインストールするように求められます。 クライアントをインストールした後、場合によってはこれらの手順を繰り返す必要があります。
 
-3. [ **アクセス許可** ] ダイアログボックスで、[ **このドキュメントに対するアクセス許可を制限する**] を選択し、[ **その他のオプション**] をクリックします。
+3. **[アクセス許可]** ダイアログ ボックスで、 **[このドキュメントへのアクセスを制限する]** を選択してから、 **[その他のオプション]** をクリックします。
 
-4. [ **ユーザーの追加のアクセス許可**] で、[ **プログラムによるコンテンツへのアクセス**] を選択します。
+4. **[ユーザーの追加権限]** で、 **[プログラムを使ってコンテンツにアクセスする]** を選択します。
 
-   Word または Excel では、オブジェクトモデルへのプログラムによるアクセスが許可されます。
+   Word または Excel で、プログラムによるオブジェクト モデルへのアクセスが許可されます。
 
 ## <a name="see-also"></a>関連項目
-- [Information rights management とマネージコード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
-- [ドキュメントレベルのソリューションにおけるドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)
+- [Information Rights Management とマネージド コード拡張機能の概要](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [ドキュメント レベルのソリューションにおけるドキュメントの保護](../vsto/document-protection-in-document-level-solutions.md)
 - [Office ドキュメントのパスワード保護](../vsto/password-protection-on-office-documents.md)
-- [Office ソリューションの設計と作成](../vsto/designing-and-creating-office-solutions.md)
-- [セキュリティで保護された Office ソリューション](../vsto/securing-office-solutions.md)
-- [Office ソリューションの配置](../vsto/deploying-an-office-solution.md)
+- [Office ソリューションを設計して作成する](../vsto/designing-and-creating-office-solutions.md)
+- [Office ソリューションをセキュリティで保護する](../vsto/securing-office-solutions.md)
+- [Office ソリューションを配置する](../vsto/deploying-an-office-solution.md)

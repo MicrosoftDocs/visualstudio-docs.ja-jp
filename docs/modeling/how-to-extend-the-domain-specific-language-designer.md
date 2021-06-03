@@ -11,16 +11,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: f56385a5ddcede66e886899ce03f213f1e665db6
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99881595"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>方法: ドメイン固有言語デザイナーを拡張する
 
-DSL 定義を編集するために使用するデザイナーの拡張機能を作成できます。 拡張の種類としては、メニューコマンドの追加、ドラッグアンドクリックによるジェスチャのハンドラーの追加、特定の種類の値や関係が変更されたときにトリガーされるルールなどがあります。 拡張機能は、Visual Studio Integration Extension (VSIX) としてパッケージ化し、他のユーザーに配布することができます。
+DSL 定義を編集するために使用するデザイナーの拡張機能を作成できます。 作成できる拡張機能の種類としては、メニュー コマンドの追加、ドラッグやダブルクリックのジェスチャに対するハンドラーの追加、特定の種類の値や関係が変更されたときにトリガーされるルールなどがあります。 拡張機能は、Visual Studio Integration Extension (VSIX) としてパッケージ化し、他のユーザーに配布することができます。
 
-サンプルコードとこの機能の詳細については、「Visual Studio の [視覚化およびモデリング SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)」を参照してください。
+この機能のサンプル コードと詳細については、Visual Studio の [Visualization and Modeling SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) に関するページをご覧ください。
 
 ## <a name="set-up-the-solution"></a>ソリューションを設定する
 
@@ -28,31 +28,31 @@ DSL 定義を編集するために使用するデザイナーの拡張機能を�
 
 ### <a name="to-create-a-dsl-designer-extension-solution"></a>DSL デザイナー拡張機能ソリューションを作成するには
 
-1. **クラスライブラリ** プロジェクトテンプレートを使用して、新しいプロジェクトを作成します。 このプロジェクトには、拡張機能のコードが含まれます。
+1. **クラス ライブラリ** プロジェクト テンプレートを使用して新しいプロジェクトを作成します。 このプロジェクトには、拡張機能のコードが含められます。
 
 2. 新しい **VSIX プロジェクト** プロジェクトを作成します。
 
-     [ **ソリューションに追加**] を選択します。
+     **[ソリューションに追加]** を選択します。
 
-     *Source.extension.vsixmanifest* が VSIX マニフェストエディターで開きます。
+     VSIX マニフェスト エディターで *source.extension.vsixmanifest* ファイルが開きます。
 
-3. [コンテンツ] フィールドの上にある [ **コンテンツの追加**] をクリックします。
+3. [コンテンツ] フィールドの上にある **[コンテンツの追加]** をクリックします。
 
-4. [ **コンテンツの追加** ] ダイアログボックスで、 **[コンテンツの種類** を **MEF コンポーネント** に選択] を設定し、[ **プロジェクト** ] をクラスライブラリプロジェクトに設定します。
+4. **[コンテンツの追加]** ダイアログ ボックスで、 **[コンテンツの種類の選択]** を **[MEF コンポーネント]** に設定し、 **[プロジェクト]** をこのクラス ライブラリ プロジェクトに設定します。
 
-5. [ **エディションの選択** ] をクリックし、 **Visual Studio Enterprise** がオンになっていることを確認します。
+5. **[エディションの選択]** をクリックし、 **[Visual Studio Enterprise]** がオンになっていることを確認します。
 
-6. VSIX プロジェクトがソリューションのスタートアッププロジェクトであることを確認します。
+6. この VSIX プロジェクトがソリューションのスタートアップ プロジェクトであることを確認します。
 
-7. クラスライブラリプロジェクトで、次のアセンブリへの参照を追加します。
+7. クラス ライブラリ プロジェクトで、次のアセンブリへの参照を追加します。
 
-     VisualStudio. CoreUtility
+     Microsoft.VisualStudio.CoreUtility
 
-     VisualStudio. 11.0. 11.0
+     Microsoft.VisualStudio.Modeling.Sdk.11.0
 
-     VisualStudio (Microsoft. モデル図)
+     Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0
 
-     VisualStudio (Microsoft. モデルの作成)
+     Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.11.0
 
      Microsoft.VisualStudio.Modeling.Sdk.Integration.11.0
 
@@ -66,27 +66,27 @@ DSL 定義を編集するために使用するデザイナーの拡張機能を�
 
 ## <a name="test-and-deployment"></a>テストと配置
 
-このトピックのすべての拡張機能をテストするには、ソリューションをビルドして実行します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスでは、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。
+このトピックのいずれかの拡張機能をテストするには、ソリューションをビルドして実行します。 Visual Studio の実験用インスタンスが開きます。 このインスタンスで、DSL ソリューションを開きます。 DslDefinition ダイアグラムを編集します。 拡張機能の動作を確認できます。
 
 拡張機能をメインの Visual Studio と他のコンピューターに配置するには、次の手順を実行します。
 
-1. .Vsix の vsix プロジェクトで、vsix のインストールファイルを見つけ \\ * \\ \* ます。
+1. VSIX のインストール ファイル (VSIX プロジェクトの bin\\*\\\*.vsix) を見つけます
 
-2. このファイルを対象のコンピュータにコピーし、Windows エクスプローラ (またはファイルエクスプローラー) でダブルクリックします。
+2. このファイルを対象のコンピューターにコピーしてから、Windows エクスプローラー (またはエクスプローラー) でそれをダブルクリックします。
 
      Visual Studio 拡張機能マネージャーが開き、拡張機能がインストールされていることを確認できます。
 
-拡張機能をアンインストールするには、次の手順を実行します。
+機能拡張をアンインストールするには、次の手順を実行します。
 
-1. Visual Studio の [ **ツール** ] メニューで、[ **拡張機能マネージャー**] をクリックします。
+1. Visual Studio の **[ツール]** メニューで、 **[拡張機能マネージャー]** をクリックします。
 
-2. 拡張機能を選択して削除します。
+2. 機能拡張を選択して削除します。
 
-## <a name="add-a-shortcut-menu-command"></a>ショートカットメニューのコマンドを追加する
+## <a name="add-a-shortcut-menu-command"></a>ショートカット メニュー コマンドを追加する
 
-DSL デザイナー画面または DSL エクスプローラーウィンドウにショートカットメニューコマンドを表示するには、次のようなクラスを記述します。
+DSL デザイナー画面または DSL エクスプローラー ウィンドウにショートカット メニュー コマンドを表示するには、次のようなクラスを記述します。
 
-クラスはを実装 `ICommandExtension` し、属性を持つ必要があり `DslDefinitionModelCommandExtension` ます。
+このクラスでは、`ICommandExtension` を実装し、属性 `DslDefinitionModelCommandExtension` を指定する必要があります。
 
 ```csharp
 using System.Collections.Generic;
@@ -148,9 +148,9 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }
 ```
 
-## <a name="handle-mouse-gestures"></a>マウスジェスチャを処理する
+## <a name="handle-mouse-gestures"></a>マウス ジェスチャを処理する
 
-このコードは、メニューコマンドのコードに似ています。
+このコードは、メニュー コマンドのコードに似ています。
 
 ```csharp
 [DslDefinitionModelGestureExtension]
@@ -212,7 +212,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 
 ## <a name="respond-to-value-changes"></a>値の変更に応答する
 
-このハンドラーでは、ドメインモデルを正常に動作させる必要があります。 単純なドメインモデルを提供します。
+このハンドラーでは、ドメイン モデルが正常に機能する必要があります。 ここでは、単純なドメイン モデルを提供します。
 
 ```csharp
 using System.Diagnostics;
@@ -252,7 +252,7 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
-次のコードは、単純なモデルを実装しています。 新しい GUID を作成して、プレースホルダーを置き換えます。
+次のコードでは、単純なモデルを実装しています。 新しい GUID を作成して、プレースホルダーを置き換えてください。
 
 ```csharp
 using System;

@@ -1,6 +1,6 @@
 ---
-title: '方法: サービスのトラブルシューティング |Microsoft Docs'
-description: Visual Studio SDK でサービスを取得しようとしたときに発生する可能性のあるいくつかの一般的な問題のトラブルシューティング方法について説明します。
+title: '方法: サービスのトラブルシューティング | Microsoft Docs'
+description: Visual Studio SDK でサービスを取得しようとしたときに発生する可能性のあるいくつかの一般的な問題をトラブルシューティングする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -14,23 +14,23 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: a105f38166ecea958bb0e5bbfe790170b020e354
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105079216"
 ---
 # <a name="how-to-troubleshoot-services"></a>方法: サービスのトラブルシューティング
-サービスを取得しようとすると、いくつかの一般的な問題が発生する可能性があります。
+サービスを取得しようとしたときに、いくつかの一般的な問題が発生する可能性があります。
 
-- サービスはに登録されていません [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。
+- サービスが [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] に登録されていない。
 
-- サービスは、サービスの種類ではなく、インターフェイスの種類によって要求されます。
+- サービスが、サービスの種類ではなく、インターフェイスの種類によって要求された。
 
-- サービスを要求している VSPackage が配置されていません。
+- サービスを要求している VSPackage が配置されていない。
 
-- 間違ったサービスプロバイダーが使用されています。
+- 間違ったサービス プロバイダーが使用されている。
 
-  要求されたサービスを取得できない場合、を呼び出すと <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> null が返されます。 サービスを要求した後、必ず null をテストする必要があります。
+  要求されたサービスを取得できない場合、<xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> を呼び出すと null が返されます。 サービスを要求した後に、必ず null をテストする必要があります。
 
 ```csharp
 IVsActivityLog log =
@@ -38,11 +38,11 @@ IVsActivityLog log =
 if (log == null) return;
 ```
 
-## <a name="to-troubleshoot-a-service"></a>サービスのトラブルシューティングを行うには
+## <a name="to-troubleshoot-a-service"></a>サービスをトラブルシューティングするには
 
-1. システムレジストリを調べて、サービスが正しく登録されているかどうかを確認します。 詳細については、「 [方法: サービスを提供する](../extensibility/how-to-provide-a-service.md)」を参照してください。
+1. システム レジストリを調べて、サービスが正しく登録されているかどうかを確認します。 詳細については、「[方法: サービスを提供する](../extensibility/how-to-provide-a-service.md)」を参照してください。
 
-    次の *.reg* ファイルフラグメントは、SVsTextManager サービスを登録する方法を示しています。
+    次の *.reg* ファイルの断片は、SVsTextManager サービスを登録する方法を示しています。
 
    ```
    [HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\<version number>\Services\{F5E7E71D-1401-11d1-883B-0000F87579D2}]
@@ -50,26 +50,26 @@ if (log == null) return;
    "Name"="SVsTextManager"
    ```
 
-    上記の例では、バージョン番号は12.0 や14.0 などののバージョンです [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。キー {F5E7E71D-1401-11d1-883B-0000F87579D2} はサービスのサービス識別子 (SID)、SVsTextManager、既定値 {F5E7E720-1401-11d1-883B-0000F87579D2} は、サービスを提供するテキストマネージャー VSPackage のパッケージ GUID です (既定値 {})。
+    上記の例で、バージョン番号は [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] のバージョン (12.0 や 14.0 など)、キー {F5E7E71D-1401-11d1-883B-0000F87579D2} は SVsTextManager サービスのサービス識別子 (SID)、既定値 {F5E7E720-1401-11d1-883B-0000F87579D2} はサービスを提供するテキスト マネージャー VSPackage のパッケージ GUID です。
 
-2. GetService を呼び出すときは、インターフェイスの種類ではなくサービスの種類を使用します。 からサービスを要求するときに [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 、 <xref:Microsoft.VisualStudio.Shell.Package> 型から GUID を抽出します。 次の条件が存在する場合、サービスは見つかりません。
+2. GetService を呼び出すときは、インターフェイスの種類ではなくサービスの種類を使用します。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] からサービスを要求するときに、<xref:Microsoft.VisualStudio.Shell.Package> によって種類から GUID が推論されます。 次の状況の場合、サービスは見つかりません。
 
-   1. インターフェイス型は、サービス型ではなく、GetService に渡されます。
+   1. サービスの種類ではなく、インターフェイスの種類が GetService に渡された。
 
-   2. インターフェイスに明示的に割り当てられている GUID はありません。 そのため、必要に応じて、システムによってオブジェクトの既定の GUID が作成されます。
+   2. インターフェイスに明示的に割り当てられている GUID がない。 そのため、必要に応じて、システムによってオブジェクトの既定の GUID が作成される。
 
-3. サービスを要求している VSPackage が配置されていることを確認してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] サイトを構築した後、を呼び出す前に VSPackage し <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> ます。
+3. サービスを要求する VSPackage を確実に配置してください。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって、VSPackage の作成後にそれが配置され、その後、<xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> が呼び出されます。
 
-    サービスを必要とする VSPackage コンストラクターにコードがある場合は、それをメソッドに移動し `Initialize` ます。
+    サービスを必要とする VSPackage コンストラクターにコードがある場合は、それを `Initialize` メソッドに移動します。
 
-4. 正しいサービスプロバイダーを使用していることを確認してください。
+4. 正しいサービス プロバイダーを使用していることを確認してください。
 
-    すべてのサービスプロバイダーが似ているわけではありません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]ツールウィンドウに渡すサービスプロバイダーは、VSPackage に渡されるものとは異なります。 ツールウィンドウサービスプロバイダーはを認識し <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> ますが、については理解していません <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> 。 を呼び出して、 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> ツールウィンドウ内から VSPackage service プロバイダーを取得できます。
+    すべてのサービス プロバイダーが同じというわけではありません。 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によってツール ウィンドウに渡されるサービス プロバイダーは、VSPackage に渡されるものとは異なります。 ツール ウィンドウのサービス プロバイダーでは、<xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> が認識されていますが、<xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> は認識されません。 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> を呼び出すことによって、ツール ウィンドウ内から VSPackage サービス プロバイダーを取得できます。
 
-    ツールウィンドウがユーザーコントロールまたはその他のコントロールコンテナーをホストしている場合、コンテナーは Windows コンポーネントモデルによって配置され、どのサービスにもアクセスできません [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 。 を呼び出して、 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> コントロールコンテナー内から VSPackage service プロバイダーを取得できます。
+    ツール ウィンドウでユーザー コントロールまたはその他のコントロールのコンテナーをホストしている場合、このコンテナーは Windows コンポーネント モデルによって配置され、どの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] サービスにもアクセスできません。 <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> を呼び出すことによって、コントロールのコンテナー内から VSPackage サービス プロバイダーを取得できます。
 
-## <a name="see-also"></a>こちらもご覧ください
-- [利用可能なサービスの一覧](../extensibility/internals/list-of-available-services.md)
-- [サービスを使用して提供する](../extensibility/using-and-providing-services.md)
-- [サービスの基本事項](../extensibility/internals/service-essentials.md)
+## <a name="see-also"></a>関連項目
+- [使用可能なサービスの一覧](../extensibility/internals/list-of-available-services.md)
+- [サービスを使用および提供する](../extensibility/using-and-providing-services.md)
+- [サービスの基本情報](../extensibility/internals/service-essentials.md)
 - [Visual Studio トラブルシューティング](/troubleshoot/visualstudio/welcome-visual-studio/)

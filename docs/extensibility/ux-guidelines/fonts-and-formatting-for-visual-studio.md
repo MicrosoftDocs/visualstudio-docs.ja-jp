@@ -1,6 +1,6 @@
 ---
-title: Visual Studio のフォントと書式設定 |Microsoft Docs
-description: 環境フォントの使用方法など、Visual Studio 向けに設計された新機能のフォントと書式設定について説明します。
+title: Visual Studio のフォントと書式設定 | Microsoft Docs
+description: 環境フォントの使用方法など、Visual Studio 用に設計する新しい機能のためのフォントおよび書式設定について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
 ms.topic: conceptual
@@ -12,40 +12,40 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 8a55ad867e91a79689a1983837f5ba0030e10a35
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105089928"
 ---
 # <a name="fonts-and-formatting-for-visual-studio"></a>Visual Studio のフォントと書式設定
-## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a> 環境フォント
- カスタマイズするには、Visual Studio 内のすべてのフォントがユーザーに公開されている必要があります。 これは、主に [**ツール > オプション**] ダイアログボックスの [**フォントおよび色**] ページで行います。 フォント設定には、主に次の3つのカテゴリがあります。
+## <a name="the-environment-font"></a><a name="BKMK_TheEnvironmentFont"></a>環境フォント
+ Visual Studio 内のすべてのフォントは、カスタマイズのためにユーザーに公開する必要があります。 これは主に、 **[ツール] > [オプション]** ダイアログの **[フォントおよび色]** ページを使用して行います。 フォント設定には、主に次の 3 つのカテゴリがあります。
 
-- **環境フォント** -IDE (統合開発環境) の主要フォント。ダイアログ、メニュー、ツールウィンドウ、ドキュメントウィンドウを含むすべてのインターフェイス要素に使用されます。 既定では、環境フォントは、現在のバージョンの Windows で 9 pt Segoe UI として表示されるシステムフォントに関連付けられています。 すべてのインターフェイス要素に1つのフォントを使用すると、IDE 全体で一貫したフォントの外観を確保できます。
+- **環境フォント** - IDE (統合開発環境) 用のプライマリ フォントで、ダイアログ、メニュー、ツール ウィンドウ、ドキュメント ウィンドウなど、すべてのインターフェイス要素に使用されます。 既定では、環境フォントは、現在のバージョンの Windows では 9 ポイントの Segoe UI で表示されるシステム フォントに関連付けられています。 すべてのインターフェイス要素に 1 つのフォントを使用すると、IDE 全体で一貫したフォントの外観を確保できます。
 
-- **テキストエディター** -コードおよびその他のテキストベースのエディターで表示される要素は、[ **ツール > オプション]** の [テキストエディター] ページでカスタマイズできます。
+- **テキスト エディター** - コードやその他のテキストベース エディターに表出する要素は、 **[ツール] > [オプション]** の [テキスト エディター] ページでカスタマイズできます。
 
-- **特定のコレクション** -インターフェイス要素のユーザーカスタマイズを提供するデザイナーウィンドウは、[ **ツール > オプション]** の [独自の設定] ページでデザインサーフェイスに固有のフォントを公開する場合があります。
+- **特定のコレクション** - ユーザーによるインターフェイス要素のカスタマイズを提供するデザイナー ウィンドウでは、そのデザイン サーフェイスに固有のフォントを、 **[ツール] > [オプション]** にある独自の設定ページで公開することができます。
 
 ### <a name="editor-font-customization-and-resizing"></a>エディターのフォントのカスタマイズとサイズ変更
- ユーザーは、一般的なユーザーインターフェイスに関係なく、エディター内のテキストのサイズや色を設定に応じて拡大または縮小することがよくあります。 環境フォントは、エディターまたはデザイナーの一部としてまたはの一部として表示される要素で使用されるため、これらのフォント分類のいずれかが変更された場合は、予期される動作に注意する必要があります。
+ 一般的なユーザー インターフェイスとは別に、ユーザーが自分の好みに合わせてエディター内でテキストの拡大縮小や色の変更を行うことはよくあります。 環境フォントは、エディターやデザイナー内で、またはそれらの一部として表示される可能性がある要素で使用されるため、これらのフォント分類のいずれかが変更されたときに予想される動作に注意することは重要です。
 
- エディターに表示されるが *コンテンツ* に含まれない UI 要素を作成する場合は、要素が予測可能な方法でサイズ変更されるように、テキストフォントではなく環境フォントを使用することが重要です。
+ エディターに表示されるが *コンテンツ* の一部ではない UI 要素を作成するときは、要素のサイズを変更しても動作が予測できるよう、テキスト フォントではなく環境フォントを使用することが重要です。
 
-1. エディターのコードテキストの場合は、[コードテキストのフォント] 設定でサイズを変更し、エディターのテキストのズームレベルに応答します。
+1. エディター内のコード テキストについては、コード テキストのフォント設定でサイズを変更し、エディター テキストのズームレベルに応答します。
 
-2. インターフェイスの他のすべての要素は、環境のフォント設定に関連付けられており、環境内のグローバルな変更に対応している必要があります。 たとえば、次のようなものが挙げられます。
+2. インターフェイスの他のすべての要素は、環境のフォント設定に関連付けられて環境のグローバルな変更に応答するようにしします。 たとえば、次のようなものが挙げられます。
 
-    - コンテキストメニュー内のテキスト
+    - コンテキスト メニュー内のテキスト
 
-    - 電球のメニューテキスト、クイック検索エディターペイン、ウィンドウへの移動など、エディターの表示要素内のテキスト
+    - エディターの表示要素内のテキスト (電球メニューのテキスト、クイック検索エディター ペイン、ナビゲーション ペインなど)
 
-    - [フォルダーを選択して **検索**] や [**リファクター** ] など、ダイアログボックス内のテキストにラベルを付ける
+    - ダイアログ ボックス内のラベル テキスト ( **[フォルダーを指定して検索]** や **[リファクター]** など)
 
 ### <a name="accessing-the-environment-font"></a>環境フォントへのアクセス
- ネイティブコードまたは WinForms コードでは、 `IUIHostLocale::GetDialogFont` サービスからインターフェイスを照会した後にメソッドを呼び出すことによって、環境フォントにアクセスでき `SID_SUIHostLocale` ます。
+ ネイティブまたは WinForms コードで、環境フォントには、`SID_SUIHostLocale` サービスからインターフェイスをクエリした後に `IUIHostLocale::GetDialogFont` メソッドを呼び出してアクセスできます。
 
- Windows Presentation Foundation (WPF) の場合は、WPF のクラスではなく、シェルのクラスからダイアログウィンドウクラスを派生させ `DialogWindow` `Window` ます。
+ Windows Presentation Foundation (WPF) の場合、ダイアログ ウィンドウ クラスは、WPF の `Window` クラスではなくシェルの `DialogWindow` クラスから派生させます。
 
  XAML では、コードは次のようになります。
 
@@ -69,9 +69,9 @@ internal partial class WebConfigModificationWindow : DialogWindow
 }
 ```
 
- (は `Microsoft.VisualStudio.Shell.11.0` 、MPF dll の現在のバージョンに置き換えてください)。
+ (`Microsoft.VisualStudio.Shell.11.0` は、MPF DLL の現在のバージョンに置き換えます。)
 
- ダイアログを表示するには、でクラスの "" を呼び出し `ShowModal()` `ShowDialog()` ます。 `ShowModal()` シェルで正しいモーダル状態を設定し、ダイアログが親ウィンドウの中央に配置されるようにします。
+ ダイアログを表示するには、クラスの "`ShowModal()`" を `ShowDialog()` よりも優先して呼び出します。 `ShowModal()` は、正しいモーダル状態をシェルで設定し、親ウィンドウなどの中でダイアログが中央に位置するようにします。
 
  コードは次のとおりです。
 
@@ -80,46 +80,46 @@ MyWindow window = new MyWindow();
 window.ShowModal()
 ```
 
- `ShowModal` ブール値を返します。 (null 許容のブール値) `DialogResult` 。必要に応じて使用できます。 ダイアログが **OK** で閉じられた場合、戻り値は true になります。
+ `ShowModal` は bool? (null 許容ブール値) を `DialogResult` と共に返します (後者は必要に応じて使用できます)。 ダイアログが **[OK]** で閉じられた場合、戻り値は true です。
 
- ダイアログではなく、独自にホストされている WPF UI ( `HwndSource` ポップアップウィンドウや Win32/WinForms 親ウィンドウの wpf 子ウィンドウなど) を表示する必要がある場合は、 `FontFamily` `FontSize` wpf 要素のルート要素でおよびを設定する必要があります。 (シェルはメインウィンドウのプロパティを設定しますが、を超えると継承されません `HWND` )。 シェルには、次のようなプロパティをバインドできるリソースが用意されています。
+ ダイアログではなく、その独自の `HwndSource` でホストされる何らかの WPF UI (ポップアップ ウィンドウや、Win32/WinForms 親ウィンドウの WPF 子ウィンドウなど) を表示する必要がある場合、WPF 要素のルート要素で `FontFamily` および `FontSize` を設定することが必要になります (メイン ウィンドウのプロパティはシェルによって設定されますが、`HWND` を越えて継承されることはありません)。 次のようにして、シェルが提供するリソースにプロパティをバインドできます。
 
 ```xaml
 <Setter Property="FontFamily" Value="{DynamicResource VsFont.EnvironmentFontFamily}" />
 <Setter Property="FontSize" Value="{DynamicResource VsFont.EnvironmentFontSize}" />
 ```
 
-### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a> 書式設定 (倍率/太字) のリファレンス
- 一部のダイアログでは、特定のテキストが太字になっている必要があります。または、環境フォント以外のサイズが必要です。 以前は、環境フォントより大きいフォントは、" `environment font +2` " または同様の形式で記述されていました。 指定されたコードスニペットを使用すると、高 DPI モニターがサポートされ、表示テキストが常に正しいサイズと太さ (ライトや Semilight など) で表示されるようになります。
+### <a name="formatting-scalingbolding-reference"></a><a name="BKMK_Formatting"></a>書式設定 (拡大縮小/太字) 参照
+ 一部のダイアログでは、特定のテキストを太字または環境フォントと異なるサイズにする必要があります。 以前は、環境フォントよりも大きいフォントを "`environment font +2`" のようにコード化していました。 提供されているコード スニペットを使用すると、高 DPI モニターがサポートされ、表示テキストが常に正しいサイズと太さ (細字や準細字など) で表示されるようになります。
 
 > [!NOTE]
-> 書式設定を適用する前に、「 [テキストスタイル](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)」に記載されているガイダンスに従っていることを確認してください。 * *
+> 書式設定を適用する前に、「[テキスト スタイル](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle)」に記載のガイダンスに従っていることを確認してください。**
 
- 環境フォントをスケーリングするには、TextBlock またはラベルのスタイルを、示されているとおりに設定します。 適切に使用されたこれらの各コードスニペットでは、適切なサイズと重みのバリエーションを含む正しいフォントが生成されます。
+ 環境フォントを拡大縮小するには、示されているように TextBlock または Label のスタイルを設定します。 これらの各コード スニペットを適切に使用すると、適切なサイズと太さのバリエーションを含む正しいフォントが生成されます。
 
- ここで `vsui` 、"" は名前空間への参照です `Microsoft.VisualStudio.Shell` 。
+ "`vsui`" は名前空間 `Microsoft.VisualStudio.Shell` への参照です。
 
 ```xaml
 xmlns:vsui="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
 ```
 
-#### <a name="375-environment-font--light"></a>375% 環境フォント + ライト
+#### <a name="375-environment-font--light"></a>375% 環境フォント + 細字
 
-**次のように表示されます:** 34 Pt Segoe UI ライト
+**表示:** 34 ポイント Segoe UI Light
 
 ::: moniker range="vs-2017"
 
-For: (まれな) 一意のブランド化 UI (スタートページなど) を **使用します。**
+**用途:** (まれ) 独自ブランド UI (スタート ページなど)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-**用途:** (まれ) 一意のブランド化 UI
+**用途:** (まれ) 独自ブランド UI
 
 ::: moniker-end
 
-**手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+**手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -128,17 +128,17 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey);
 ```
 
-**XAML:** 以下に示すように、TextBlock またはラベルのスタイルを設定します。
+**XAML:** 次のように、TextBlock または Label のスタイルを設定します。
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment375PercentFontSizeStyleKey}}">TextBlock: 375 Percent Scaling</TextBlock> 
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey}}">Label: 375 Percent Scaling</Label>
 ```
 
-#### <a name="310-environment-font--light"></a>310% 環境フォント + ライト
- 次の **ように表示されます**:28 Pt Segoe UI ライト **使用方法:** 大きな署名ダイアログタイトル、レポートのメインの見出し
+#### <a name="310-environment-font--light"></a>310% 環境フォント + 細字
+ **表示:** 28 ポイント Segoe UI Light **用途:** 大きい主要なダイアログのタイトル、レポートの主見出し
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -147,17 +147,17 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment310PercentFontSizeStyleKey);
 ```
 
- **XAML:** 以下に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します。
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}">TextBlock: 310 Percent Scaling</TextBlock> 
 <Label Style="{DynamicResource {x:Static vsui:VsResourceKeys.LabelEnvironment310PercentFontSizeStyleKey}}">Label: 310 Percent Scaling</Label>
 ```
 
-#### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight
- 次の **ように表示されます:** 18 Pt Segoe UI Semilight **Use for:** 小見出し、s/medium ダイアログのタイトル
+#### <a name="200-environment-font--semilight"></a>200% 環境フォント + 準細字
+ **表示:** 18 ポイント Segoe UI Semilight **用途:** 小見出し、中ぐらいか小さいダイアログのタイトル
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -166,7 +166,7 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment200PercentFontSizeStyleKey);
 ```
 
- **XAML:** 次に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment200PercentFontSizeStyleKey}}">TextBlock: 200 Percent Scaling</TextBlock> 
@@ -174,9 +174,9 @@ label.SetResourceReference(Label.StyleProperty,
 ```
 
 #### <a name="155-environment-font"></a>155% 環境フォント
- 次の **ように表示されます:** 14 Pt Segoe UI **使用する:** ドキュメントウェル UI またはレポートのセクション見出し
+ **表示:** 14 ポイント Segoe UI **用途:** ドキュメント ウェル UI またはレポートのセクション見出し
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -185,7 +185,7 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment155PercentFontSizeStyleKey);
 ```
 
- **XAML:** 次に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment155PercentFontSizeStyleKey}}">TextBlock: 155 Percent Scaling</TextBlock> 
@@ -193,9 +193,9 @@ label.SetResourceReference(Label.StyleProperty,
 ```
 
 #### <a name="133-environment-font"></a>133% 環境フォント
- 次の **ように表示されます:** 12 pt Segoe UI **に使用** されます。署名ダイアログの下位小見出し、ドキュメントウェル UI
+ **表示:** 12 ポイント Segoe UI **用途:** 主要なダイアログやドキュメント ウェル UI の比較的小さな小見出し
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -204,7 +204,7 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment133PercentFontSizeStyleKey);
 ```
 
- **XAML:** 次に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment133PercentFontSizeStyleKey}}">TextBlock: 133 Percent Scaling</TextBlock> 
@@ -212,9 +212,9 @@ label.SetResourceReference(Label.StyleProperty,
 ```
 
 #### <a name="122-environment-font"></a>122% 環境フォント
- **次のように表示されます:** 11 Pt Segoe UI **使用対象:** 署名ダイアログのセクション見出し、ツリービューの最上位ノード、垂直タブナビゲーション
+ **表示:** 11 ポイント Segoe UI **用途:** 主要なダイアログのセクション見出し、ツリー ビューのトップ ノード、縦方向のタブ ナビゲーション
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -223,7 +223,7 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironment122PercentFontSizeStyleKey);
 ```
 
- **XAML:** 次に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironment122PercentFontSizeStyleKey}}">TextBlock: 122 Percent Scaling</TextBlock> 
@@ -231,9 +231,9 @@ label.SetResourceReference(Label.StyleProperty,
 ```
 
 #### <a name="environment-font--bold"></a>環境フォント + 太字
- **表示される形式: 太字で表示される** 9 pt Segoe UI: 署名ダイアログ、レポート、ドキュメントウェル UI で **の** ラベルと小見出し
+ **表示:** 太字 9 ポイント Segoe UI **用途:** 主要なダイアログ、レポート、およびドキュメント ウェル UI のラベルと小見出し
 
- **手続き型コード:** は以前に定義された TextBlock で、 `textBlock` `label` 以前に定義されたラベルです。
+ **手続き型コード:** `textBlock` は以前に定義した TextBlock、`label` は以前に定義した Label:
 
 ```csharp
 textBlock.SetResourceReference(TextBlock.StyleProperty,  
@@ -242,7 +242,7 @@ label.SetResourceReference(Label.StyleProperty,
         VsResourceKeys.LabelEnvironmentBoldStyleKey);
 ```
 
- **XAML:** 次に示すように、TextBlock またはラベルのスタイルを設定します。
+ **XAML:** 次のように、TextBlock または Label のスタイルを設定します:
 
 ```xaml
 <TextBlock Style="{DynamicResource {x:Static vsui:VsResourceKeys.TextBlockEnvironmentBoldStyleKey}}"> Bold TextBlock</TextBlock> 
@@ -250,9 +250,9 @@ label.SetResourceReference(Label.StyleProperty,
 ```
 
 ### <a name="localizable-styles"></a>ローカライズ可能なスタイル
- 場合によっては、ローカライザーが東アジア言語のテキストから太字を削除するなど、さまざまなロケールのフォントスタイルを変更する必要があります。 フォントスタイルをローカライズできるようにするには、そのスタイルを .resx ファイル内に配置する必要があります。 これを実行し、Visual Studio フォームデザイナーで引き続きフォントスタイルを編集する最善の方法は、デザイン時にフォントスタイルを明示的に設定することです。 これにより、完全なフォントオブジェクトが作成され、親フォントの継承が解除されているように見えますが、フォントを設定するために使用されるのは FontStyle プロパティだけです。
+ ローカライザーは、東アジア言語のテキストから太字を削除するなど、さまざまなロケールのフォント スタイルを変更する必要に迫られる場合があります。 フォント スタイルのローカライズを可能にするには、スタイルが .resx ファイル内になければなりません。 これを実現した上で、Visual Studio のフォーム デザイナーでもフォント スタイルを編集するには、デザイン時にフォント スタイルを明示的に設定するのが最良の方法です。 これにより完全なフォント オブジェクトが作成されるため、親フォントの継承が途切れるように思われるかもしれませんが、フォントを設定するために使用されるのは FontStyle プロパティだけです。
 
- この問題を解決するには、ダイアログフォームのイベントをフックし `FontChanged` ます。 イベントでは `FontChanged` 、すべてのコントロールをウォークし、フォントが設定されているかどうかを確認します。 設定されている場合は、フォームのフォントおよびコントロールの前のフォントスタイルに基づいて新しいフォントに変更します。 コードでのこの例を次に示します。
+ 解決法は、ダイアログ フォームの `FontChanged` イベントをフックすることです。 `FontChanged` イベントでは、すべてのコントロールについて順次、そのフォントが設定されているかどうかを確認します。 設定されている場合、フォームのフォントとコントロールの以前のフォント スタイルに基づいて新しいフォントに変更します。 コードでのこの例は次のとおりです。
 
 ```csharp
 private void Form1_FontChanged(object sender, System.EventArgs e)
@@ -288,202 +288,202 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 }
 ```
 
- このコードを使用すると、フォームのフォントが更新されたときに、コントロールのフォントも更新されることが保証されます。 このメソッドは、フォームのコンストラクターからも呼び出す必要があります。これは、ダイアログがのインスタンスを取得できず、イベントが起動しない場合があるため `IUIService` `FontChanged` です。 フックを `FontChanged` 使用すると、ダイアログが既に開いている場合でも、ダイアログが新しいフォントを動的に選択できます。
+ このコードを使用すると、フォームのフォントが更新されたときにコントロールのフォントも更新されることが保証されます。 ダイアログで `IUIService` のインスタンスを取得できず、`FontChanged` イベントが発生しない可能性があるため、このメソッドは、フォームのコンストラクターからも呼び出す必要があります。 `FontChanged` をフックすると、ダイアログが既に開いている場合でも、ダイアログで新しいフォントを動的に選択できるようになります。
 
 ### <a name="testing-the-environment-font"></a>環境フォントのテスト
- UI が環境フォントを使用し、サイズ設定を考慮していることを確認するには、[ **ツール > オプション > 環境] > フォントおよび色** を開き、[設定の表示] ドロップダウンメニューで [環境フォント] を選択します。
+ UI で環境フォントを使用しており、サイズ設定に適合していることを確認するには、 **[ツール] > [オプション] > [環境] > [フォントおよび色]** を開き、[設定の表示:] ドロップダウン メニュー下の [環境フォント] を選択します。
 
- ![[ツール &gt; オプション] ダイアログのフォントおよび色の設定](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />[ツール &gt; オプション] ダイアログのフォントおよび色の設定
+ ![[ツール] &gt; [オプション] ダイアログの [フォントおよび色] 設定](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />[ツール] &gt; [オプション] ダイアログの [フォントおよび色] 設定
 
- フォントを既定値とは異なるものに設定します。 更新されない UI を明確にするには、セリフ付きのフォント ("Times New Roman" など) を選択し、非常に大きなサイズを設定します。 次に、UI をテストして、環境を尊重するようにします。 ライセンスダイアログの使用例を次に示します。
+ フォントを、既定値とは大きく異なっているものに設定します。 どの UI が更新されないかを明らかにするには、"Times New Roman" などのセリフ体フォントを選択し、非常に大きなサイズを設定します。 次に、UI をテストして、環境に適合していることを確認します。 ライセンス ダイアログを使用した例を次に示します。
 
- ![環境フォントを考慮しない UI テキストの例](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />環境フォントを考慮しない UI テキストの例
+ ![環境フォントに適合していない UI テキストの例](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />環境フォントに適合していない UI テキストの例
 
- この場合、"ユーザー情報" と "製品情報" は、フォントを考慮していません。 場合によっては、これが明示的なデザイン選択である場合がありますが、赤線仕様の一部として明示的なフォントが指定されていないと、バグになることがあります。
+ この場合、"User Information" と "Product Information" はフォントが適合していません。 これは、デザインで明示的に選択する場合もありますが、レッドライン仕様の一部として明示的フォントが指定されていない場合はバグである可能性があります。
 
- フォントをリセットするには、[ツール > オプション] の [既定値を使用] をクリックし、[ **フォントおよび色] > > 環境**] をクリックします。
+ フォントを再設定するには、 **[ツール] > [オプション] > [環境] > [フォントおよび色]** で [既定値を使用] をクリックします。
 
-## <a name="text-style"></a><a name="BKMK_TextStyle"></a> テキストスタイル
- テキストスタイルは、フォントサイズ、太さ、および大文字小文字の区別を表します。 実装のガイダンスについては、 [環境のフォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)に関する説明を参照してください。
+## <a name="text-style"></a><a name="BKMK_TextStyle"></a>テキストのスタイル
+ テキストのスタイルとは、フォント サイズ、太さ、文字種のことです。 実装ガイダンスについては、「[環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)」を参照してください。
 
 ### <a name="text-casing"></a>テキストの文字種
 
 #### <a name="all-caps"></a>すべて大文字
- Visual Studio のタイトルやラベルには、すべて大文字を使用しないでください。
+ "すべて大文字" は、Visual Studio のタイトルまたはラベルには使用しないでください。
 
 #### <a name="all-lowercase"></a>すべて小文字
- Visual Studio でタイトルまたはラベルに小文字を使用しないようにします。
+ "すべて小文字" は、Visual Studio のタイトルまたはラベルには使用しないでください。
 
-#### <a name="sentence-and-title-case"></a>文とタイトルの大文字小文字の区別
- Visual Studio のテキストでは、状況に応じて、タイトルの大文字/小文字を使用する必要があります。
+#### <a name="sentence-and-title-case"></a>"文の先頭文字を大文字にする" と "各単語の先頭文字を大文字にする"
+ Visual Studio のテキストでは、状況に応じて、"各単語の先頭文字を大文字にする" と "文の先頭文字を大文字にする" のどちらかを使用する必要があります。
 
-|次の場合にタイトルの文字を使用する:|次の場合に文の大文字を使用します。|
+|"各単語の先頭文字を大文字にする" を使用するもの|"文の先頭文字を大文字にする" を使用するもの|
 |-------------------------|----------------------------|
-|ダイアログタイトル|ラベル|
-|グループボックス|チェック ボックス|
+|ダイアログ タイトル|ラベル|
+|グループ ボックス|チェック ボックス|
 |メニュー項目|ラジオ ボタン|
-|コンテキスト メニュー項目|リストボックスの項目|
+|コンテキスト メニュー項目|リスト ボックス項目|
 |ボタン|ステータス バー|
-|テーブルラベル||
+|表のラベル||
 |列見出し||
 |ヒント||
 
 ##### <a name="title-case"></a>先頭文字が大文字
- Title case は、語句内の単語の大部分または全部の最初の文字が大文字になるスタイルです。 Visual Studio では、次のような多くの項目にタイトルケースが使用されます。
+ "各単語の先頭文字を大文字にする" は、語句内のほとんどまたは全部の単語の先頭文字を大文字にするスタイルです。 Visual Studio では、以下を含む多くの項目で "各単語の先頭文字を大文字にする" を使用します。
 
-- **ツールヒント.** 例: "選択した項目をプレビューする"
+- **ツールヒント。** 例: "Preview Selected Items"
 
-- **列ヘッダー。** 例: "システム応答"
+- **列見出し。** 例: "System Response"
 
-- **メニュー項目。** 例: "すべて保存"
+- **メニュー項目。** 例: "Save All"
 
-  Title ケースを使用する場合、単語を大文字にするタイミングと小文字を省略するタイミングのガイドラインは次のとおりです。
+  "各単語の先頭文字を大文字にする" を使用する場合、単語の先頭文字を大文字にするか、それとも小文字のままにするかに関しては、次のガイドラインがあります。
 
-|大文字|コメントと例|
+|大文字|説明と例|
 |---------------|---------------------------|
 |すべての名詞||
-|すべての動詞|"Is" とその他の形式の "to be" を含める|
-|すべての副詞|"Than" と "When" を含める|
-|すべての形容詞|"This" と "This" を含む|
-|すべての代名詞|"省略形" と "the the 代名詞" (it) と動詞 "is" のような所有者を含めます。|
-|音声の一部に関係なく、最初と最後の単語||
-|動詞句の一部である前置詞|[すべてのウィンドウを閉じる] または [システムのシャットダウン]|
+|すべての動詞|"Is" や "to be" のその他の形式を含む|
+|すべての副詞|"Than" や "When" を含む|
+|すべての形容詞|"This" や "That" を含む|
+|すべての代名詞|所有格の "Its" や、代名詞 "it" と動詞 "is" の縮約形である "It's" を含む|
+|最初と最後の単語 (品詞不問)||
+|動詞句の一部である前置詞|"Closing Out All Windows" または "Shutting Down the System"|
 |頭字語のすべての文字|HTML、XML、URL、IDE、RGB|
-|名詞が名詞または適切な形容詞の場合、または単語の重みが等しい場合は、複合語の2番目の単語|相互参照、マイクロソフト以前のソフトウェア、読み取り/書き込みアクセス、Run-Time|
+|複合語の 2 番目の単語 (名詞または固有形容詞の場合、あるいは単語の重みが等しい場合)|Cross-Reference、Pre-Microsoft Software、Read/Write Access、Run-Time|
 
 |小文字|例|
 |---------------|--------------|
-|2番目の単語が音声の別の部分である場合、または分詞が最初の単語を変更する場合は、その単語。|方法、実行方法|
-|タイトルの最初の単語以外の記事|a、an、the|
-|座標接続詞|および、、、、または|
-|動詞句の外側に4文字以上の単語を含む前置詞|に対して、on、on、out、|
-|無限直線句で使用されている場合は "To"|「ハードディスクをフォーマットする方法」|
+|複合語の 2 番目の単語 (別の品詞であるか、最初の単語を修飾する分詞である場合)|How-to、Take-off|
+|冠詞 (タイトルの最初の単語である場合を除く)|a、an、the|
+|等位接続詞|and、but、for、nor、or|
+|動詞句の外側に 4 文字以下の単語がある前置詞|into、onto、as for、out of、on top of|
+|不定詞句で使用する場合の "To"|"How to Format Your Hard Disk"|
 
-##### <a name="sentence-case"></a>文の大文字/小文字
- 文の大文字と小文字は、文の最初の単語だけを大文字にし、適切な名詞と代名詞 "I" を使用します。 一般に、文の大文字と小文字の区別は、特にコンピューターによってコンテンツが翻訳される場合に、世界中のユーザーが読みやすくなります。 次の場合に文の大文字を使用します。
+##### <a name="sentence-case"></a>文の先頭文字を大文字にする
+ "文の先頭文字を大文字にする" は、文章を書くときの標準的な大文字小文字の使い分けであり、文の最初の単語と固有名詞の先頭文字、および代名詞 "I" のみを大文字にします。 一般には、"文の先頭文字を大文字にする" のほうが、世界中の読者にとって (内容を機械翻訳する場合は特に) 読みやすくなります。 "文の先頭文字を大文字にする" を使用するもの
 
-1. **ステータスバーのメッセージ。** これらは単純で簡単で、ステータス情報のみを提供します。 例: "プロジェクトファイルの読み込み"
+1. **ステータス バーのメッセージ。** これらは単純で、短く、ステータス情報のみを提供します。 例: "Loading project file"
 
-2. ラベル、チェックボックス、オプションボタン、リストボックス項目など、**他のすべての UI 要素**。 例: "リスト内のすべての項目を選択する"
+2. **その他すべての UI 要素。** ラベル、チェック ボックス、ラジオ ボタン、リスト ボックス項目など。 例: "Select all items in list"
 
 ### <a name="text-formatting"></a>テキストの書式設定
- Visual Studio 2013 での既定のテキストの書式設定は [、環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)によって制御されます。 このサービスは、IDE (統合開発環境) 全体で一貫したフォントの外観を保証するのに役立ちます。ユーザーに一貫したエクスペリエンスを保証するには、このサービスを使用する必要があります。
+ Visual Studio 2013 の既定のテキスト書式設定は、[環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)によって制御されます。 このサービスは、IDE (統合開発環境) 全体でフォントの外観の一貫性を保つために役立ち、ユーザー エクスペリエンスの一貫性を保証するために使用する必要があります。
 
- Visual Studio のフォントサービスによって使用される既定のサイズは、Windows から取得され、9 pt と表示されます。
+ Visual Studio フォント サービスで使用される既定のサイズは Windows と同じ 9 ポイント表示です。
 
- 環境フォントに書式を適用できます。 このトピックでは、スタイルを使用する方法と場所について説明します。 実装情報については、 [環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)を参照してください。
+ 環境フォントに書式を適用できます。 このトピックでは、スタイルを使用する方法と場面について説明します。 実装に関する情報は、「[環境フォント](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont)」を参照してください。
 
-#### <a name="bold-text"></a>太字のテキスト
- 太字のテキストは Visual Studio では控えめに使用され、次のものに対して予約されている必要があります。
+#### <a name="bold-text"></a>太字テキスト
+ 太字のテキストは Visual Studio ではあまり使用されず、次の目的に限定する必要があります。
 
-- ウィザードの質問ラベル
+- 質問ラベル (ウィザード)
 
-- ソリューションエクスプローラーでアクティブなプロジェクトを指定する
+- ソリューション エクスプローラーでアクティブなプロジェクトを示す
 
-- プロパティツールウィンドウのオーバーライドされた値
+- オーバーライドされた値 (プロパティ ツール ウィンドウ)
 
-- Visual Basic エディターのドロップダウンリストに表示される特定のイベント
+- 特定のイベント (Visual Basic エディターのドロップダウン リスト)
 
-- web ページのドキュメントアウトラインのサーバーで生成されたコンテンツ
+- サーバーによって生成されたコンテンツ (Web ページのドキュメント アウトライン)
 
-- 複雑なダイアログまたはデザイナー UI のセクションヘッダー
+- セクション見出し (複雑なダイアログまたはデザイナー UI)
 
 #### <a name="italics"></a>斜体
- Visual Studio では、斜体または太字の斜体テキストは使用されません。
+ Visual Studio では、斜体または太字斜体のテキストは使用しません。
 
 #### <a name="color"></a>Color
 
-- Blue はハイパーリンク (ナビゲーションとコマンド) 用に予約されており、向きには使用しないでください。
+- 青色はハイパーリンク (ナビゲーションとコマンド実行) 用に予約されています。オリエンテーションには使用しないでください。
 
-- 次の目的では、より大きな見出し (環境フォント x 155% 以上) に色を設定できます。
+- 次の目的で、(環境フォント x 155% 以上の) 大きな見出しに色を付けることができます。
 
-  - Visual Studio の UI に視覚的な魅力を与えるには
+  - 主要な Visual Studio UI を視覚的に強調する
 
-  - 特定の領域に注意を向けるには
+  - 特定の領域に注意を引く
 
-  - 標準の濃い灰色/黒の環境テキストの色からレリーフを提供するには
+  - 標準の濃い灰色/黒の環境テキスト色から目立たせる
 
-- 見出しの色は、既存の Visual Studio ブランドの色を活用する必要があります。主に、紫色の主な #FF68217A です。
+- 見出しの色には、既存の Visual Studio ブランド カラー (主に、メイン紫の #FF68217A) を使用します。
 
-- 見出しに色を使用する場合は、コントラスト比率やその他のアクセシビリティの考慮事項など、 [Windows の色のガイドライン](/windows/desktop/uxguide/vis-color)に従う必要があります。
+- 見出しで色を使用するときは、コントラスト比や、アクセシビリティに関するその他の考慮事項など、[色に関する Windows のガイドライン](/windows/desktop/uxguide/vis-color)に従う必要があります。
 
 ### <a name="font-size"></a>フォント サイズ
- Visual Studio UI のデザイン機能により、より多くの空白を持つ外観が薄くなります。 可能な場合は、chrome とタイトルバーが縮小または削除されています。 情報密度は Visual Studio の要件であるのに対し、さらにオープンな行間隔とフォントサイズと太さのバリエーションを強調することで、文字体裁は引き続き重要になります。
+ Visual Studio の UI デザインの特徴は、明るく、余白が多い外観です。 可能な場合、クロムとタイトル バーは縮小または削除されます。 情報の密度は Visual Studio の要件ですが、文字体裁も重要であり、広めの行間隔と、フォントのサイズおよび太さのバリエーションに重点が置かれています。
 
- 次の表には、Visual Studio で使用される表示フォントのデザインの詳細と視覚的な例が含まれています。 一部の表示フォントバリエーションには、Semilight や Light などのサイズと太さの両方が表示されます。
+ 以下の表では、Visual Studio で使用される表示フォントについて、デザインの詳細と視覚的な例を示しています。 一部の表示フォントのバリエーションでは、準細字 (Semilight) や細字 (Light) のように、サイズと太さの両方が外観に組み込まれています。
 
- すべての表示フォントの実装コードスニペットは、 [「書式設定 (スケール/太字) の参照](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting)」にあります。
+ すべての表示フォント用の実装コード スニペットは、「[書式設定 (倍率/太字) のリファレンス](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_Formatting)」にあります。
 
-#### <a name="375-environment-font--light"></a>375% 環境フォント + ライト
+#### <a name="375-environment-font--light"></a>375% 環境フォント + 細字
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:** 珍しい. 一意のブランド化 UI のみ。<br /><br /> **ください**<br /><br /> -文の大文字小文字を使用する<br />-常にライトウェイトを使用する<br /><br /> **できません：**<br /><br /> -スタートページなどの署名 UI 以外の UI に使用します<br />-太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-ツールウィンドウで使用する|**次のように表示されます:** 34 Pt Segoe UI ライト<br /><br /> **ビジュアルの例:**<br /><br /> *現在使用されていません。は、Visual Studio 2017 のスタートページで使用できます。*|
+|**用途:** まれ。 独自ブランド UI のみ。<br /><br /> **推奨事項:**<br /><br /> -   "文の先頭文字を大文字にする" を使用する<br />-   太さは常に細字を使用する<br /><br /> **禁止事項:**<br /><br /> -   スタート ページなどの主要 UI 以外の UI に使用する<br />-   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   ツール ウィンドウで使用する|**表示:** 34 ポイント Segoe UI Light<br /><br /> **表示例:**<br /><br /> *現在使用されていません。Visual Studio 2017 のスタート ページで使用される場合があります。*|
 
-#### <a name="310-environment-font--light"></a>310% 環境フォント + ライト
+#### <a name="310-environment-font--light"></a>310% 環境フォント + 細字
 
 ::: moniker range="vs-2017"
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -署名ダイアログの大きな見出し<br />-メインレポートの見出し<br /><br /> **ください**<br /><br /> -文の大文字小文字を使用する<br />-常にライトウェイトを使用する<br /><br /> **できません：**<br /><br /> -スタートページなどの署名 UI 以外の UI に使用します<br />-太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-ツールウィンドウで使用する|**表示形式:** 28 Pt Segoe UI ライト<br /><br /> **ビジュアルの例:**<br /><br /> ![&#43; 明るい見出しの310% 環境フォントの例](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
+|**使用法:**<br /><br /> -   主要ダイアログ内の比較的大きな見出し<br />-   レポートの主見出し<br /><br /> **推奨事項:**<br /><br /> -   "文の先頭文字を大文字にする" を使用する<br />-   太さは常に細字を使用する<br /><br /> **禁止事項:**<br /><br /> -   スタート ページなどの主要 UI 以外の UI に使用する<br />-   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   ツール ウィンドウで使用する|**表示:** 28 ポイント Segoe UI Light<br /><br /> **表示例:**<br /><br /> ![310% 環境フォント + 細字の見出しの例](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -署名ダイアログの大きな見出し<br />-メインレポートの見出し<br /><br /> **ください**<br /><br /> -文の大文字小文字を使用する<br />-常にライトウェイトを使用する<br /><br /> **できません：**<br /><br /> -署名 UI 以外の UI に使用します<br />-太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-ツールウィンドウで使用する|**表示形式:** 28 Pt Segoe UI ライト<br /><br /> **ビジュアルの例:**<br /><br /> ![&#43; 明るい見出しの310% 環境フォントの例](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
+|**使用法:**<br /><br /> -   主要ダイアログ内の比較的大きな見出し<br />-   レポートの主見出し<br /><br /> **推奨事項:**<br /><br /> -   "文の先頭文字を大文字にする" を使用する<br />-   太さは常に細字を使用する<br /><br /> **禁止事項:**<br /><br /> -   主要 UI 以外の UI に使用する<br />-   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   ツール ウィンドウで使用する|**表示:** 28 ポイント Segoe UI Light<br /><br /> **表示例:**<br /><br /> ![310% 環境フォント + 細字の見出しの例](../../extensibility/ux-guidelines/media/0202-a_ef310.png "0202-a_EF310")|
 
 ::: moniker-end
 
-#### <a name="200-environment-font--semilight"></a>200% 環境フォント + Semilight
+#### <a name="200-environment-font--semilight"></a>200% 環境フォント + 準細字
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -小見出し<br />-小規模および中規模のダイアログのタイトル<br /><br /> **ください**<br /><br /> -文の大文字小文字を使用する<br />-常に Semilight weight を使用する<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-ツールウィンドウで使用する|**次のように表示:** 18 Pt Segoe UI Semillight<br /><br /> **ビジュアルの例:**<br /><br /> ![200% 環境フォント &#43; Semilight の例](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202-b_EF200")|
+|**使用法:**<br /><br /> -   小見出し<br />-   小さいか中ぐらいのダイアログのタイトル<br /><br /> **推奨事項:**<br /><br /> -   "文の先頭文字を大文字にする" を使用する<br />-   太さは常に準細字を使用する<br /><br /> **禁止事項:**<br /><br /> -   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   ツール ウィンドウで使用する|**表示:** 18 ポイント Segoe UI Semillight<br /><br /> **表示例:**<br /><br /> ![200% 環境フォント + 準細字の例](../../extensibility/ux-guidelines/media/0202-b_ef200.png "0202-b_EF200")|
 
 #### <a name="155-environment-font"></a>155% 環境フォント
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -ドキュメントウェル UI のセクション見出し<br />-レポート<br /><br /> **操作:** 文の大文字と小文字を区別する<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-標準の Visual Studio コントロールで使用する<br />-ツールウィンドウで使用する|**次のように表示:** 14 pt Segoe UI<br /><br /> **ビジュアルの例:**<br /><br /> ![155% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|
+|**使用法:**<br /><br /> -   ドキュメント ウェル UI のセクション見出し<br />-   レポート<br /><br /> **推奨事項:** "文の先頭文字を大文字にする" を使用する<br /><br /> **禁止事項:**<br /><br /> -   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   標準の Visual Studio コントロールで使用する<br />-   ツール ウィンドウで使用する|**表示:** 14 ポイント Segoe UI<br /><br /> **表示例:**<br /><br /> ![155% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|
 
 #### <a name="133-environment-font"></a>133% 環境フォント
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -署名ダイアログの小さいサブ見出し<br />-ドキュメントウェル UI の下位のサブ見出し<br /><br /> **操作:** 文の大文字と小文字を区別する<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-標準の Visual Studio コントロールで使用する<br />-ツールウィンドウで使用する|**次のように表示:** 12 pt Segoe UI<br /><br /> **ビジュアルの例:**<br /><br /> ![133% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202-d_EF133")|
+|**使用法:**<br /><br /> -   主要ダイアログの比較的小さな小見出し<br />-   ドキュメント ウェル UI の比較的小さな小見出し<br /><br /> **推奨事項:** "文の先頭文字を大文字にする" を使用する<br /><br /> **禁止事項:**<br /><br /> -   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   標準の Visual Studio コントロールで使用する<br />-   ツール ウィンドウで使用する|**表示:** 12 ポイント Segoe UI<br /><br /> **表示例:**<br /><br /> ![133% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-d_ef133.png "0202-d_EF133")|
 
 #### <a name="122-environment-font"></a>122% 環境フォント
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -署名ダイアログのセクション見出し<br />-ツリービューの最上位ノード<br />-垂直タブナビゲーション<br /><br /> **操作:** 文の大文字と小文字を区別する<br /><br /> **できません：**<br /><br /> -太字、斜体、または太字の斜体<br />-本文のテキストに使用<br />-標準の Visual Studio コントロールで使用する<br />-ツールウィンドウで使用する|**次のように表示:** 11 pt Segoe UI<br /><br /> **ビジュアルの例:**<br /><br /> ![122% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202-e_EF122")|
+|**使用法:**<br /><br /> -   主要ダイアログのセクション見出し<br />-   ツリー ビューのトップ ノード<br />-   縦方向のタブ ナビゲーション<br /><br /> **推奨事項:** "文の先頭文字を大文字にする" を使用する<br /><br /> **禁止事項:**<br /><br /> -   太字、斜体、または太字斜体<br />-   本文のテキストに使用する<br />-   標準の Visual Studio コントロールで使用する<br />-   ツール ウィンドウで使用する|**表示:** 11 ポイント Segoe UI<br /><br /> **表示例:**<br /><br /> ![122% 環境フォントの見出しの例](../../extensibility/ux-guidelines/media/0202-e_ef122.png "0202-e_EF122")|
 
 #### <a name="environment-font--bold"></a>環境フォント + 太字
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:**<br /><br /> -署名ダイアログのラベルと小見出し<br />-レポートのラベルと小見出し<br />-ドキュメントウェル UI のラベルと小見出し<br /><br /> **ください**<br /><br /> -文の大文字小文字を使用する<br />-太字の太さを使用します<br /><br /> **できません：**<br /><br /> -斜体または太字斜体<br />-本文のテキストに使用<br />-標準の Visual Studio コントロールで使用する<br />-ツールウィンドウで使用する|太字で **表示:** 9 pt Segoe UI<br /><br /> **ビジュアルの例:**<br /><br /> ![環境フォント &#43; 太字の見出しの例](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202-f_EFB")|
+|**使用法:**<br /><br /> -   主要ダイアログのラベルと小見出し<br />-   レポートのラベルと小見出し<br />-   ドキュメント ウェル UI のラベルと小見出し<br /><br /> **推奨事項:**<br /><br /> -   "文の先頭文字を大文字にする" を使用する<br />-   太さは太字を使用する<br /><br /> **禁止事項:**<br /><br /> -   斜体または太字斜体<br />-   本文のテキストに使用する<br />-   標準の Visual Studio コントロールで使用する<br />-   ツール ウィンドウで使用する|**表示:** 太字 9 ポイント Segoe UI<br /><br /> **表示例:**<br /><br /> ![環境フォント + 太字の見出しの例](../../extensibility/ux-guidelines/media/0202-f_efb.png "0202-f_EFB")|
 
 #### <a name="environment-font"></a>環境フォント
 
-|使用|外観|
+|使用方法|外観|
 |-|-|
-|**使用法:** その他のすべてのテキスト<br /><br /> **操作:** 文の大文字と小文字を区別する<br /><br /> **ありません。** 斜体または太字斜体|**次のように表示:** 9 pt Segoe UI<br /><br /> **ビジュアルの例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202-g_EF")|
+|**用途:** その他のすべてのテキスト<br /><br /> **推奨事項:** "文の先頭文字を大文字にする" を使用する<br /><br /> **禁止事項:** 斜体または太字斜体|**表示:** 9 ポイント Segoe UI<br /><br /> **表示例:**<br /><br /> ![環境フォントの例](../../extensibility/ux-guidelines/media/0202-g_ef.png "0202-g_EF")|
 
-### <a name="padding-and-spacing"></a>余白と間隔
- 見出しには、適切な強調を付けるための領域が必要です。 この領域は、ポイントのサイズと、環境フォントの水平方向のルールやテキストの行など、見出しの近くにある内容によって異なります。
+### <a name="padding-and-spacing"></a>パディングと間隔
+ 見出しの周囲には、適度な強調のためのスペースが必要です。 このスペースはポイント サイズによって異なり、環境フォントの水平規則やテキスト行など、見出しの近くにある他の要素によっても異なります。
 
-- 見出しの理想的な埋め込みは、大文字/小文字の高さ空間の90% にする必要があります。 たとえば、28 pt Segoe UI 明るい見出しのキャップの高さは 26 pt で、余白は約 23 pt、つまり約31ピクセルになります。
+- 見出し自体の理想的なパディングは、文字の高さのスペースの 90% です。 たとえば、28 ポイント Segoe UI Light の見出しは文字の高さが 26 ポイントであるため、パディングは約 23 ポイント (約 31 ピクセル) にします。
 
-- 見出しの周囲の最小値は、大文字/小文字の高さの50% である必要があります。 見出しにルールやその他のきつい要素が付随する場合は、スペースを使用することはできません。
+- 見出しの周囲の最小スペースは、文字の高さの 50% にします。 罫線や、その他のぴったり収めるための要素が見出しに付属している場合は、スペースを減らすことができます。
 
-- 太字で表示される環境のフォントテキストは、行の高さの既定の間隔と余白に従う必要があります。
+- 太字の環境フォント テキストは、既定の行の高さの行間とパディングに従う必要があります。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [フォント (Windows)](/windows/desktop/uxguide/vis-fonts)
-- [ユーザーインターフェイスのテキスト (Windows)](/windows/desktop/uxguide/text-ui)
+- [ユーザー インターフェイスのテキスト (Windows)](/windows/desktop/uxguide/text-ui)

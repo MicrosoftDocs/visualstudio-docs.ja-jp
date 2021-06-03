@@ -1,6 +1,6 @@
 ---
 title: ドメイン固有言語における検証
-description: 検証制約を定義して、ユーザーが作成したモデルが意味を持つかどうかを確認する方法について説明します。
+description: 検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 44ee0d9e10a4f96979362d8613dc6ca949ff2fd7
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99924258"
@@ -22,19 +22,19 @@ ms.locfileid: "99924258"
 # <a name="validation-in-a-domain-specific-language"></a>ドメイン固有言語における検証
 ドメイン固有言語 (DSL) の作成者は、検証制約を定義して、ユーザーが作成したモデルが意味を持つことを確認できます。 たとえば、DSL でユーザーが人々とその先祖の家系図を描くことができる場合、子の誕生日が親の誕生日よりも後であることを確認する制約を作成できます。
 
- 検証制約は、モデルが保存されているとき、開いたとき、ユーザーが明示的に [ **検証** ] メニューコマンドを実行したときに実行できます。 検証をプログラム制御の下で実行することもできます。 たとえば、プロパティ値またはリレーションシップの変更に応じて検証を実行できます。
+ 検証制約は、モデルを保存するとき、モデルを開くとき、およびユーザーが明示的に **[検証]** メニュー コマンドを実行するときに実行することができます。 検証をプログラム制御の下で実行することもできます。 たとえば、プロパティ値またはリレーションシップの変更に応じて検証を実行できます。
 
- テキストテンプレートや、ユーザーのモデルを処理するその他のツールを作成する場合は、検証が特に重要になります。 検証により、そうしたツールが仮定する事前条件をモデルが満たすことが保証されます。
+ 検証はユーザーのモデルを処理するテキスト テンプレートまたは他のツールを作成する場合に特に重要です。 検証により、そうしたツールが仮定する事前条件をモデルが満たすことが保証されます。
 
 > [!WARNING]
-> 検証制約は、拡張機能メニュー コマンドおよびジェスチャ ハンドラーとともに、DSL の別個の拡張機能内で定義することもできます。 ユーザーは DSL に加えて、こうした拡張機能を選択的にインストールできます。 詳細については、「 [MEF を使用した DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)」を参照してください。
+> 検証制約は、拡張機能メニュー コマンドおよびジェスチャ ハンドラーとともに、DSL の別個の拡張機能内で定義することもできます。 ユーザーは DSL に加えて、こうした拡張機能を選択的にインストールできます。 詳細については、「[MEF による DSL の拡張](../modeling/extend-your-dsl-by-using-mef.md)」を参照してください。
 
 ## <a name="running-validation"></a>検証の実行
  ユーザーがモデル、つまりドメイン固有言語のインスタンスを編集しているとき、次の操作により検証を実行できます。
 
-- ダイアグラムを右クリックし、[ **すべて検証**] を選択します。
+- 図を右クリックし、 **[すべて検証]** を選択します。
 
-- DSL のエクスプローラーで最上位のノードを右クリックし、[**すべて検証**] を選択します。
+- DSL のエクスプローラーで最上部のノードを右クリックし、 **[すべて検証]** を選択します。
 
 - モデルを保存します。
 
@@ -42,7 +42,7 @@ ms.locfileid: "99924258"
 
 - さらに、たとえばメニュー コマンドの一部として、または変更に応じて検証を実行するプログラム コードを作成できます。
 
-  検証エラーは、[ **エラー一覧** ] ウィンドウに表示されます。 ユーザーはエラー メッセージをダブルクリックして、エラーの原因であるモデル要素を選択できます。
+  すべての検証エラーは、 **[エラー一覧]** ウィンドウに表示されます。 ユーザーはエラー メッセージをダブルクリックして、エラーの原因であるモデル要素を選択できます。
 
 ## <a name="defining-validation-constraints"></a>検証制約の定義
  DSL のドメイン クラスまたはリレーションシップに検証メソッドを追加することにより、検証制約を定義します。 ユーザーまたはプログラム制御のいずれかにより検証が実行されると、検証メソッドの一部または全部が実行されます。 各メソッドはそのクラスの各インスタンスに適用され、各クラスにはいくつかの検証メソッドを含めることができます。
@@ -50,21 +50,21 @@ ms.locfileid: "99924258"
  各検証メソッドは発見したすべてのエラーを報告します。
 
 > [!NOTE]
-> 検証メソッドはエラーを報告しますが、モデルを変更しません。 特定の変更を調整または防止する場合は、「 [検証の代替手段](#alternatives)」を参照してください。
+> 検証メソッドはエラーを報告しますが、モデルを変更しません。 特定の変更を調整または防止する場合は、「[検証の代替手段](#alternatives)」を参照してください。
 
 #### <a name="to-define-a-validation-constraint"></a>検証制約を定義するには
 
-1. [ **Editor\ 検証** ] ノードで検証を有効にします。
+1. **[エディター\検証]** ノードで検証を有効にします。
 
-   1. [ **Ds**] を開きます。
+   1. **Dsl\DslDefinition.dsl** を開きます。
 
-   2. DSL エクスプローラーで、[ **エディター** ] ノードを展開し、[ **検証**] を選択します。
+   2. DSL エクスプローラーで、 **[エディター]** ノードを展開し、 **[検証]** を選択します。
 
-   3. プロパティウィンドウで、[ **使用**  ] プロパティをに設定し `true` ます。 これらのプロパティをすべて設定すると利便性が最高になります。
+   3. [プロパティ] ウィンドウで、 **[使用]** プロパティを `true` に設定します。 これらのプロパティをすべて設定すると利便性が最高になります。
 
-   4. **ソリューションエクスプローラー** ツールバーの [**すべてのテンプレートの変換**] をクリックします。
+   4. **ソリューション エクスプローラー** のツールバーで **[すべてのテンプレートの変換]** をクリックします。
 
-2. 1 つ以上のドメイン クラスまたはドメイン リレーションシップに対して部分クラス定義を作成します。 これらの定義は、 **Dsl** プロジェクトの新しいコードファイルに記述します。
+2. 1 つ以上のドメイン クラスまたはドメイン リレーションシップに対して部分クラス定義を作成します。 これらの定義を、**Dsl** プロジェクト内の新しいコード ファイルに作成します。
 
 3. 各クラスのプレフィックスとして次の属性を使用します。
 
@@ -127,7 +127,7 @@ public partial class ParentsHaveChildren
 
  このコードについては次の点に注意してください。
 
-- 検証メソッドをドメイン クラスまたはドメイン リレーションシップに追加できます。 これらの型のコードは、 **Code\Domain に生成 \* さ** れます。
+- 検証メソッドをドメイン クラスまたはドメイン リレーションシップに追加できます。 これらの型のコードは、**Dsl\Generated Code\Domain\*.cs** にあります。
 
 - 各検証メソッドはそのクラスおよびサブクラスのすべてのインスタンスに適用されます。 ドメイン リレーションシップの場合、各インスタンスは 2 つのモデル要素間のリンクです。
 
@@ -137,11 +137,11 @@ public partial class ParentsHaveChildren
 
 - LogError 呼び出しでは、ユーザーがエラー メッセージをダブルクリックしたときに選択される、モデル要素またはリレーションシップ リンクの一覧を指定できます。
 
-- プログラムコードでモデルを読み取る方法の詳細については、「 [プログラムコードでのモデルのナビゲーションと更新](../modeling/navigating-and-updating-a-model-in-program-code.md)」を参照してください。
+- プログラム コード内のモデルを読み取る方法については、「[プログラム コードでのモデルのナビゲーションと更新](../modeling/navigating-and-updating-a-model-in-program-code.md)」を参照してください。
 
   例は次のドメイン モデルに適用されます。 ParentsHaveChildren リレーションシップは Child および Parent という名前のロールを含みます。
 
-  ![DSL 定義図 &#45; ファミリツリーモデル](../modeling/media/familyt_person.png)
+  ![DSL 定義図 &#45; ファミリ ツリー モデル](../modeling/media/familyt_person.png)
 
 ## <a name="validation-categories"></a>検証カテゴリ
  <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 属性で、検証メソッドをいつ実行するかを指定します。
@@ -152,7 +152,7 @@ public partial class ParentsHaveChildren
 |<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|モデル ファイルが開くとき。|
 |<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ファイルが保存されるとき。 検証エラーがある場合、ユーザーは保存操作を取り消すことができます。|
 |<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ファイルが保存されるとき。 このカテゴリでメソッドからのエラーがある場合、ユーザーはファイルを再度開くことができない可能性があることを警告されます。<br /><br /> このカテゴリは、読み込みエラーを引き起こす可能性がある、複製された名前または ID、またはその他の条件をテストする検証メソッドに使用します。|
-|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ValidateCustom メソッドが呼び出されるとき。 このカテゴリの検証はプログラム コードからのみ呼び出すことができます。<br /><br /> 詳細については、「 [カスタム検証カテゴリ](#custom)」を参照してください。|
+|<xref:Microsoft.VisualStudio.Modeling.Validation.ValidationCategories>|ValidateCustom メソッドが呼び出されるとき。 このカテゴリの検証はプログラム コードからのみ呼び出すことができます。<br /><br /> 詳細については、「[カスタム検証カテゴリ](#custom)」を参照してください。|
 
 ## <a name="where-to-place-validation-methods"></a>検証メソッドを配置する場所
  多くの場合、異なる型に 1 つの検証メソッドを配置することで、同じ効果を得ることができます。 たとえば、次のように、ParentsHaveChildren リレーションシップの代わりに Person クラスにメソッドを追加し、リンクを通して反復することができます。
@@ -191,14 +191,14 @@ if (erroneousLinks.Count < 5) { context.LogError( ... ); }
 ```
 
 ## <a name="validation-of-multiplicities"></a>多重度の検証
- 最小多重度をチェックするための検証メソッドは DSL 用に自動生成されます。 このコードは、 **生成された Code\MultiplicityValidation.cs** に書き込まれます。 これらのメソッドは、DSL エクスプローラーの [ **Editor\ 検証** ] ノードで検証を有効にしたときに有効になります。
+ 最小多重度をチェックするための検証メソッドは DSL 用に自動生成されます。 このコードは、**Dsl\Generated Code\MultiplicityValidation.cs** に書き込まれます。 これらのメソッドは、DSL エクスプローラーの **[エディター\検証]** ノードで検証を有効にすると効力を発します。
 
  ドメイン リレーションシップのロールの多重度を 1..* または 1..1 に設定し、ユーザーがこのリレーションシップのリンクを作成しない場合、検証エラー メッセージが表示されます。
 
- たとえば、DSL にクラス Person と町村があり、リレーションシップが PersonLivesInTown で **\\** あるとします。* 町の役割では、町を持たない人物ごとにエラーメッセージが表示されます。
+ たとえば、DSL にクラス Person および Town と、Town ロールでリレーションシップ **1..\\** * を持つリレーションシップ PersonLivesInTown がある場合、Town を持たない Person のそれぞれに対してエラー メッセージが表示されます。
 
 ## <a name="running-validation-from-program-code"></a>プログラム コードからの検証の実行
- ValidationController をアクセスまたは作成することにより検証を実行できます。 エラーウィンドウでユーザーにエラーを表示する場合は、ダイアグラムの DocData にアタッチされている ValidationController を使用します。 たとえば、メニュー コマンドを作成する場合、コマンド セット クラスで `CurrentDocData.ValidationController` を使用できます。
+ ValidationController をアクセスまたは作成することにより検証を実行できます。 エラーをユーザーに対するエラー ウィンドウ内に表示する場合、図の DocData にアタッチされる ValidationController を使用します。 たとえば、メニュー コマンドを作成する場合、コマンド セット クラスで `CurrentDocData.ValidationController` を使用できます。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -213,7 +213,7 @@ partial class MyLanguageCommandSet
 ...
 ```
 
- 詳細については、「 [方法: ショートカットメニューにコマンドを追加](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)する」を参照してください。
+ 詳細については、「[方法: ショートカット メニューにコマンドを追加する](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)」を参照してください。
 
  別個の検証コントローラーを作成して、独自にエラーを管理することもできます。 次に例を示します。
 
@@ -233,9 +233,9 @@ if (!validator.Validate(store, ValidationCategories.Save))
 ```
 
 ## <a name="running-validation-when-a-change-occurs"></a>変更発生時の検証実行
- モデルが無効になった直後にユーザーへの警告を表示する場合、検証を実行するストア イベントを定義できます。 ストアイベントの詳細については、「 [イベントハンドラーによって変更がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)」を参照してください。
+ モデルが無効になった直後にユーザーへの警告を表示する場合、検証を実行するストア イベントを定義できます。 ストア イベントの詳細については、「[イベント ハンドラーによって変更がモデル外に反映される](../modeling/event-handlers-propagate-changes-outside-the-model.md)」を参照してください。
 
- 検証コードに加えて、次の例のようなコンテンツを含むカスタムコードファイルを **Dslpackage** プロジェクトに追加します。 このコードはドキュメントにアタッチされる `ValidationController` を使用します。 このコントローラーでは、Visual Studio の [エラー一覧] に検証エラーが表示されます。
+ 検証コードに加えて、次の例に似た内容のカスタム コード ファイルを **DslPackage** プロジェクトに追加します。 このコードはドキュメントにアタッチされる `ValidationController` を使用します。 このコントローラーは Visual Studio エラー一覧に検証エラーを表示します。
 
 ```csharp
 using System;
@@ -329,9 +329,9 @@ validationController.ValidateCustom
 
  ただし、これらの手法は推奨されません。 通常、無効なモデルの修正方法をユーザーに決めてもらう方が適切です。
 
- **変更を調整して、モデルの有効性を復元します。** たとえば、ユーザーが許容される最大値を超えてプロパティを設定した場合、プロパティを最大値にリセットできます。 そのためには、規則を定義します。 詳細については、「 [ルールによってモデル内の変更が反映される](../modeling/rules-propagate-changes-within-the-model.md)」を参照してください。
+ **変更を調整して、モデルの有効性を復元します。** たとえば、ユーザーが許容される最大値を超えてプロパティを設定した場合、プロパティを最大値にリセットできます。 そのためには、規則を定義します。 詳細については、「[ルールによってモデル内の変更が反映される](../modeling/rules-propagate-changes-within-the-model.md)」を参照してください。
 
- **無効な変更が試みられた場合、トランザクションをロールバックします。** この目的のために規則を定義することもできますが、場合によっては、プロパティハンドラー **OnValueChanging ()** をオーバーライドしたり、トランザクションをロールバックするためのなどのメソッドをオーバーライドしたりすることができ `OnDeleted().` `this.Store.TransactionManager.CurrentTransaction.Rollback().` ます。詳細については、「 [ドメインプロパティ値の変更ハンドラー](../modeling/domain-property-value-change-handlers.md)」を参照してください。
+ **無効な変更が試みられた場合、トランザクションをロールバックします。** この目的のためにルールを定義することもできますが、場合によっては、プロパティ ハンドラー **OnValueChanging()** をオーバーライドしたり、`OnDeleted().` などのメソッドをオーバーライドしたりすることができます。トランザクションをロールバックするには、`this.Store.TransactionManager.CurrentTransaction.Rollback().` を使用します。詳細については、「[ドメイン プロパティ値変更ハンドラー](../modeling/domain-property-value-change-handlers.md)」を参照してください。
 
 > [!WARNING]
 > 変更が調整またはロールバックされたことをユーザーが認識できるようにします。 たとえば、`System.Windows.Forms.MessageBox.Show("message").` を使用します

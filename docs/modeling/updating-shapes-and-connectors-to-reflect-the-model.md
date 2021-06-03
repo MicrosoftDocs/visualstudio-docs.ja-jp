@@ -1,6 +1,6 @@
 ---
 title: シェイプおよびコネクタの更新とモデルへの反映
-description: Visual Studio のドメイン固有言語では、図形の外観に基になるモデルの状態が反映されるようにすることができます。
+description: Visual Studio のドメイン固有言語では、基になるモデルの状態がシェイプの外観に反映されるようにすることができます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,42 +11,42 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 57f3785fe232b20123475bd85be2be7148e5b87e
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99924347"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>シェイプおよびコネクタを更新してモデルに反映する
 
-Visual Studio のドメイン固有言語では、図形の外観に基になるモデルの状態を反映させることができます。
+Visual Studio のドメイン固有言語では、基になるモデルの状態がシェイプの外観に反映されるようにすることができます。
 
-このトピックのコード例は、プロジェクトのファイルに追加する必要があり `.cs` `Dsl` ます。 各ファイルには、次のディレクティブが必要です。
+このトピックのコード例は、`Dsl` プロジェクトの `.cs` ファイルに追加する必要があります。 各ファイルには、次のディレクティブが必要です。
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
-## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>図形マップのプロパティを設定してデコレータの表示を制御する
+## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>シェイプ マップのプロパティを設定してデコレーターの可視性を制御する
 
-DSL 定義の図形とドメインクラス間のマッピングを構成することにより、プログラムコードを記述せずにデコレータの可視性を制御できます。 詳細については、「 [Domain-Specific 言語を定義する方法](../modeling/how-to-define-a-domain-specific-language.md)」を参照してください。
+DSL 定義のシェイプとドメイン クラス間のマッピングを構成することにより、プログラム コードを記述せずにデコレーターの可視性を制御できます。 詳細については、「[方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)」を参照してください。
 
-## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>図形の色とスタイルをプロパティとして公開する
+## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>シェイプの色とスタイルをプロパティとして公開する
 
-DSL 定義で、shape クラスを右クリックし、[公開の **追加**] をポイントして、[ **塗りつぶしの色**] などの項目のいずれかをクリックします。
+DSL 定義で、シェイプ クラスを右クリックし、 **[公開済みの項目を追加]** をポイントして、 **[塗りつぶしの色]** などの項目のいずれかをクリックします。
 
-これで、図形には、プログラムコードまたはユーザーとして設定できるドメインプロパティが設定されました。 たとえば、コマンドまたはルールのプログラムコードで設定するには、次のように記述します。
+これで、シェイプのドメイン プロパティは、プログラム コードで設定することも、ユーザーとして設定することもできるようになりました。 たとえば、コマンドまたはルールのプログラム コードで設定するには、次のように記述します。
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-ユーザーではなく、プログラムの制御下でプロパティ変数を作成する場合は、DSL 定義図の [ **塗りつぶしの色** ] などの新しいドメインプロパティを選択します。 次に、プロパティウィンドウで、set **が** 参照可能になる `false` か、または **UI が読み取り専用** に設定され `true` ます。
+プロパティ変数を、ユーザーではなく、プログラムでのみ制御されるようにする場合は、DSL 定義図で **[塗りつぶしの色]** などの新しいドメイン プロパティを選択します。 次に、[プロパティ] ウィンドウで、 **[参照可能]** を `false` に設定するか、 **[読み取り専用]** を `true` に設定します。
 
-## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>色、スタイル、または場所をモデル要素のプロパティに依存するように変更規則を定義する
- モデルの他の部分に依存する図形の外観を更新する規則を定義できます。 たとえば、モデル要素のプロパティに応じて図形の色を更新するように、モデル要素に対して変更規則を定義できます。 変更規則の詳細については、「 [規則によってモデル内の変更が反映される](../modeling/rules-propagate-changes-within-the-model.md)」を参照してください。
+## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>色、スタイル、または場所がモデル要素のプロパティに依存するように変更ルールを定義する
+ モデルの他の部分に依存するシェイプの外観を更新するルールを定義できます。 たとえば、モデル要素のプロパティに応じてシェイプの色を更新するように、モデル要素に対して変更ルールを定義できます。 変更ルールの詳細については、「[ルールによってモデル内の変更が反映される](../modeling/rules-propagate-changes-within-the-model.md)」を参照してください。
 
- ルールは、元に戻すコマンドを実行したときには呼び出されないため、ストア内で保持されているプロパティを更新する場合にのみ使用してください。 これには、図形のサイズや可視性などの一部のグラフィック機能は含まれません。 図形の機能を更新するには、「 [非ストアのグラフィカル機能の更新](#OnAssociatedProperty)」を参照してください。
+ ルールは、[元に戻す] コマンドを実行したときには呼び出されないため、ストア内で保持されているプロパティを更新する場合にのみ使用してください。 これには、シェイプのサイズや可視性などの一部のグラフィカルな特徴は含まれません。 シェイプのこれらの特徴を更新するには、[ストア以外のグラフィカルな特徴の更新](#OnAssociatedProperty)に関するページを参照してください。
 
- 次の例では、前の `FillColor` セクションで説明したように、ドメインプロパティとして公開されていることを前提としています。
+ 次の例では、前のセクションで説明したように、`FillColor` がドメイン プロパティとして公開されていることを前提としています。
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -84,9 +84,9 @@ DSL 定義で、shape クラスを右クリックし、[公開の **追加**] �
   }
 ```
 
-## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>OnChildConfigured を使用して図形のプロパティを初期化する
+## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>OnChildConfigured を使用してシェイプのプロパティを初期化する
 
-図形の最初の作成時に図形のプロパティを設定するには、 `OnChildConfigured()` ダイアグラムクラスの部分定義でオーバーライドします。 図クラスは DSL 定義で指定されており、生成されたコードは、生成されたコードに含まれて **います。** 次に例を示します。
+最初の作成時にシェイプのプロパティを設定するには、図のクラスの部分定義で `OnChildConfigured()` をオーバーライドします。 図のクラスは DSL 定義で指定されており、生成されたコードは **Dsl\Generated Code\Diagram.cs** にあります。 次に例を示します。
 
 ```csharp
 partial class MyLanguageDiagram
@@ -108,13 +108,13 @@ partial class MyLanguageDiagram
 }
 ```
 
-このメソッドは、ドメインプロパティと非ストア機能 (図形のサイズなど) の両方に使用できます。
+このメソッドは、ドメイン プロパティとストア以外の特徴 (シェイプのサイズなど) の両方に使用できます。
 
-## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> AssociateValueWith () を使用して図形のその他の機能を更新する
+## <a name="use-associatevaluewith-to-update-other-features-of-a-shape"></a><a name="OnAssociatedProperty"></a> AssociateValueWith() を使用してシェイプのその他の特徴を更新する
 
-図形の一部の機能 (影があるかどうかなど)、またはコネクタの矢印のスタイルでは、機能をドメインプロパティとして公開するための組み込みメソッドはありません。  このような機能に対する変更は、トランザクションシステムの制御下にありません。 そのため、ユーザーが Undo コマンドを実行したときにルールが呼び出されないため、ルールを使用してそれらを更新するのは適切ではありません。
+シェイプの一部の特徴 (影があるかどうかなど)、またはコネクタの矢印のスタイルには、特徴をドメイン プロパティとして公開するための組み込みメソッドはありません。  このような特徴に対する変更は、トランザクション システムの制御下にありません。 したがって、ユーザーが [元に戻す] コマンドを実行したときにはルールが呼び出されないため、ルールを使用してそれらを更新するのは適切ではありません。
 
-代わりに、を使用して、このような機能を更新でき <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> ます。 次の例では、コネクタの矢印スタイルは、コネクタによって表示されるリレーションシップのドメインプロパティの値によって制御されています。
+代わりに、<xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A> を使用して、このような特徴を更新できます。 次の例では、コネクタの矢印スタイルは、コネクタによって表示されるリレーションシップのドメイン プロパティの値によって制御されています。
 
 ```csharp
 public partial class ArrowConnector // My connector class.
@@ -155,6 +155,6 @@ public partial class ArrowConnector // My connector class.
 }
 ```
 
-`AssociateValueWith()` は、登録する各ドメインプロパティに対して1回呼び出される必要があります。 呼び出された後、指定したプロパティに対する変更は、 `OnAssociatedPropertyChanged()` プロパティのモデル要素を表すすべての図形で呼び出されます。
+`AssociateValueWith()` は、登録する各ドメイン プロパティに対して 1 回呼び出される必要があります。 呼び出された後、プロパティのモデル要素を提供するシェイプでは、指定したプロパティを変更すると `OnAssociatedPropertyChanged()` が呼び出されます。
 
-各インスタンスに対してを呼び出す必要はありません `AssociateValueWith()` 。 InitializeResources はインスタンスメソッドですが、図形クラスごとに1回だけ呼び出されます。
+各インスタンスに対して `AssociateValueWith()` を呼び出す必要はありません。 InitializeResources はインスタンス メソッドですが、シェイプ クラスごとに 1 回だけ呼び出されます。

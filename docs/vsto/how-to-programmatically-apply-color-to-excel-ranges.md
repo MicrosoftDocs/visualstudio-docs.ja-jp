@@ -1,6 +1,6 @@
 ---
 title: '方法: プログラムによって Excel の範囲に色を適用する'
-description: セル範囲内のテキストに色を適用するには、NamedRange コントロールまたはネイティブの Excel 範囲オブジェクトを使用します。
+description: NamedRange コントロールまたはネイティブの Excel 範囲オブジェクトを使用して、セル範囲内のテキストに色を適用する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,36 +18,36 @@ ms.workload:
 - office
 ms.openlocfilehash: 081985dbd4b235fe5dd8d3472d0ab574603abe1b
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107828320"
 ---
 # <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>方法: プログラムによって Excel の範囲に色を適用する
-  セル範囲内のテキストに色を適用するに <xref:Microsoft.Office.Tools.Excel.NamedRange> は、コントロールまたはネイティブの Excel 範囲オブジェクトを使用します。
+  セル範囲内のテキストに色を適用するには、<xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールまたはネイティブの Excel 範囲オブジェクトを使用します。
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>NamedRange コントロールを使用する
- この例は、ドキュメントレベルのカスタマイズ用です。
+ この例は、ドキュメント レベルのカスタマイズ用です。
 
 ### <a name="to-apply-color-to-a-namedrange-control"></a>NamedRange コントロールに色を適用するには
 
-1. <xref:Microsoft.Office.Tools.Excel.NamedRange>セル A1 にコントロールを作成します。
+1. <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールをセル A1 に作成します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet65":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet65":::
 
-2. コントロールのテキストの色を設定 <xref:Microsoft.Office.Tools.Excel.NamedRange> します。
+2. <xref:Microsoft.Office.Tools.Excel.NamedRange> コントロールのテキストの色を設定します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet66":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet66":::
 
-## <a name="use-native-excel-ranges"></a>ネイティブの Excel の範囲を使用する
+## <a name="use-native-excel-ranges"></a>ネイティブの Excel 範囲を使用する
 
 ### <a name="to-apply-color-to-a-native-excel-range-object"></a>ネイティブの Excel 範囲オブジェクトに色を適用するには
 
-1. セル A1 に範囲を作成し、テキストの色を設定します。
+1. 範囲をセル A1 に作成してから、テキストの色を設定します。
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs" id="Snippet67":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet67":::

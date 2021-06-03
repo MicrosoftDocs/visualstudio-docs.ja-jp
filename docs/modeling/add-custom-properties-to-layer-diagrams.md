@@ -13,34 +13,34 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d63c6793290786499dd75ffd139f9905f46e7ab1
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99946463"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>依存関係図へのカスタム プロパティの追加
 
-依存関係図の拡張コードを記述する場合は、任意の要素を持つ値を依存関係図に格納できます。 値は、図が保存され、再び開かれたときに保持されます。 また、これらのプロパティを [ **プロパティ** ] ウィンドウに表示して、ユーザーが表示および編集できるようにすることもできます。 たとえば、ユーザーが各レイヤーに正規表現を指定できるようにすることや、各レイヤーのクラスの名前がユーザーが指定したパターンに準拠していることを確認するための検証コードをユーザーが記述できるようにすることができます。
+依存関係図の拡張コードを記述するときに、依存関係図の任意の要素と共に値を格納できます。 値は、図が保存され、再び開かれたときに保持されます。 これらのプロパティは、ユーザーが表示して編集できるように、 **[プロパティ]** ウィンドウに表示することもできます。 たとえば、ユーザーが各レイヤーに正規表現を指定できるようにすることや、各レイヤーのクラスの名前がユーザーが指定したパターンに準拠していることを確認するための検証コードをユーザーが記述できるようにすることができます。
 
-## <a name="non-visible-properties"></a>非表示のプロパティ
+## <a name="non-visible-properties"></a>表示されないプロパティ
 
-コードで依存関係図の要素に値をアタッチするだけの場合は、MEF コンポーネントを定義する必要はありません。 `Properties` [Ilayerelement](/previous-versions/ff644511(v=vs.140))にという名前のディクショナリがあります。 マーシャリング可能な値を任意のレイヤー要素のディクショナリに単純に追加します。 これらは、依存関係図の一部として保存されます。
+依存関係図の任意の要素に値をアタッチするコードが必要なだけの場合、MEF コンポーネントを定義する必要はありません。 [ILayerElement](/previous-versions/ff644511(v=vs.140)) には `Properties` という名前のディクショナリがあります。 マーシャリング可能な値を任意のレイヤー要素のディクショナリに単純に追加します。 これらの値は、依存関係図の一部として保存されます。
 
 ## <a name="editable-properties"></a>編集可能なプロパティ
 
 **最初の準備**
 
 > [!IMPORTANT]
-> プロパティを表示するには、レイヤーのプロパティを表示する各コンピューターで、次の変更を行います。
+> プロパティが表示されるようにするには、レイヤーのプロパティを表示させたい各コンピューターで次の変更を行います。
 >
-> 1. " **管理者として実行**" を使用してメモ帳を実行します。 *%ProgramFiles%\Microsoft Visual Studio [バージョン] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest* を開きます。
+> 1. **[管理者として実行]** を使用して、メモ帳を実行します。 *%ProgramFiles%\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\extension.vsixmanifest* を開きます。
 > 2. **Content** 要素内で、次を追加します。
 >
 >     ```xml
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
 >
-> 3. Visual Studio アプリケーションの [スタート] メニューの [ **Visual Studio Tools** ] セクションで、 **開発者コマンドプロンプト** を開きます。 次のように入力します。
+> 3. Visual Studio アプリケーションの [スタート] メニューの **[Visual Studio Tools]** セクションで、 **[開発者コマンド プロンプト]** を開きます。 次を入力します。
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
@@ -49,7 +49,7 @@ ms.locfileid: "99946463"
 
 **コードが VSIX プロジェクトに含まれていることを確認する**
 
-プロパティがコマンド、ジェスチャ、または検証プロジェクトの一部である場合は、何も追加する必要はありません。 カスタム プロパティのコードは、MEF コンポーネントとして定義された Visual Studio 機能拡張プロジェクトで定義する必要があります。 詳細については、「 [依存関係図へのコマンドおよびジェスチャの追加](../modeling/add-commands-and-gestures-to-layer-diagrams.md) 」または「 [依存関係図へのカスタムアーキテクチャ検証の追加](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)」を参照してください。
+プロパティがコマンド、ジェスチャ、または検証プロジェクトの一部である場合、何も追加する必要はありません。 カスタム プロパティのコードは、MEF コンポーネントとして定義された Visual Studio 機能拡張プロジェクトで定義する必要があります。 詳細については、「[依存関係図にコマンドおよびジェスチャを追加する](../modeling/add-commands-and-gestures-to-layer-diagrams.md)」または「[カスタム アーキテクチャ検証を依存関係図に追加する](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)」を参照してください。
 
 **カスタム プロパティを定義する**
 
@@ -63,11 +63,11 @@ public class MyProperty : PropertyExtension<ILayerElement>
 }
 ```
 
-[Ilayerelement](/previous-versions/ff644511(v=vs.140))またはその派生クラスには、次のようなプロパティを定義できます。
+プロパティは、[ILayerElement](/previous-versions/ff644511(v=vs.140))、またはその派生クラス (以下を含む) のいずれでも定義できます。
 
-- `ILayerModel` -モデル
+- `ILayerModel` - モデル
 
-- `ILayer` -各層
+- `ILayer` - 各レイヤー
 
 - `ILayerDependencyLink` - レイヤー間のリンク
 

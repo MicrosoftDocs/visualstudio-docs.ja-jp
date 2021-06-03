@@ -20,17 +20,17 @@ ms.workload:
 - office
 ms.openlocfilehash: 3a5dc0c7fb9f3e9a2b4a15447f81239db973c215
 ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/21/2021
 ms.locfileid: "107825954"
 ---
 # <a name="how-to-programmatically-define-and-select-ranges-in-documents"></a>方法: プログラムによって文書内の範囲を定義および選択する
-  Microsoft Office Word 文書内に範囲を定義するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用します。 ドキュメント全体をいくつかの方法で選択できます。たとえば、 <xref:Microsoft.Office.Interop.Word.Range.Select%2A> オブジェクトのメソッドを使用する <xref:Microsoft.Office.Interop.Word.Range> か、 <xref:Microsoft.Office.Tools.Word.Document> クラス (ドキュメントレベルのカスタマイズの場合) またはクラス (VSTO アドインの場合) の Content プロパティを使用し <xref:Microsoft.Office.Interop.Word.Document> ます。
+  Microsoft Office Word 文書内に範囲を定義するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトを使用します。 文書全体を選択するには、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトの <xref:Microsoft.Office.Interop.Word.Range.Select%2A> メソッドを使用する方法や、<xref:Microsoft.Office.Tools.Word.Document> クラス (ドキュメント レベルのカスタマイズの場合) または <xref:Microsoft.Office.Interop.Word.Document> クラス (VSTO アドインの場合) の Content プロパティを使用する方法など、いくつかの方法があります。
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="define-a-range"></a>範囲の定義
+## <a name="define-a-range"></a>範囲を定義する
  次の使用例は、作業中の文書の最初の 7 文字 (非印刷文字を含む) で構成される新しい <xref:Microsoft.Office.Interop.Word.Range> オブジェクトの作成方法を示します。 次に、範囲内のテキストを選択します。
 
 ### <a name="to-define-a-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで範囲を定義するには
@@ -47,7 +47,7 @@ ms.locfileid: "107825954"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet18":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet18":::
 
-## <a name="select-a-range-in-a-document-level-customization"></a>ドキュメントレベルのカスタマイズで範囲を選択する
+## <a name="select-a-range-in-a-document-level-customization"></a>ドキュメント レベルのカスタマイズで範囲を選択するには
  次の例は、<xref:Microsoft.Office.Interop.Word.Range> オブジェクトの <xref:Microsoft.Office.Interop.Word.Range.Select%2A> メソッドを使用して、または <xref:Microsoft.Office.Tools.Word.Document> クラスの <xref:Microsoft.Office.Tools.Word.Document.Content%2A> プロパティを使用して文書全体を選択する方法を示しています。
 
 ### <a name="to-select-the-entire-document-as-a-range-by-using-the-select-method"></a>Select メソッドを使用して文書全体を範囲として選択するには
@@ -82,7 +82,7 @@ ms.locfileid: "107825954"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet23":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet23":::
 
-2. ドキュメント内に少なくとも2つの文があるかどうかを確認し、範囲の *開始* と *終了* の引数を設定して、範囲を選択します。
+2. 文書内に少なくとも 2 つの文があることを確認し、範囲の *Start* 引数と *End* 引数を設定した後、その範囲を選択します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet24":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet24":::
@@ -122,16 +122,16 @@ ms.locfileid: "107825954"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet23":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet23":::
 
-2. ドキュメント内に少なくとも2つの文があるかどうかを確認し、範囲の *開始* と *終了* の引数を設定して、範囲を選択します。
+2. 文書内に少なくとも 2 つの文があることを確認し、範囲の *Start* 引数と *End* 引数を設定した後、その範囲を選択します。
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet24":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet24":::
 
 ## <a name="see-also"></a>関連項目
-- [Word オブジェクトモデルの概要](../vsto/word-object-model-overview.md)
+- [Word オブジェクト モデルの概要](../vsto/word-object-model-overview.md)
 - [方法: プログラムによって文書内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [方法: プログラムによって範囲内の開始文字と終了文字を取得する](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [方法: 範囲の開始および終了文字をプログラムで取得する](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
 - [方法: プログラムによって文書内の範囲を拡張する](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
 - [方法: プログラムによって Word 文書の範囲をリセットする](../vsto/how-to-programmatically-reset-ranges-in-word-documents.md)
-- [方法: プログラムによって文書内の範囲または選択項目を折りたたむ](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+- [方法: プログラムによって文書内の範囲または選択範囲を縮小する](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
 - [方法: 範囲を作成するときにプログラムによって段落記号を除外する](../vsto/how-to-programmatically-exclude-paragraph-marks-when-creating-ranges.md)

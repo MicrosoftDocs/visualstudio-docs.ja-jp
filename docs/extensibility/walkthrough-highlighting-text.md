@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: テキストの強調表示 |Microsoft Docs'
-description: このチュートリアルのエディターに視覚効果を追加することによって、テキストファイル内で現在の単語が出現するたびに強調表示する方法について説明します。
+title: 'チュートリアル: テキストの強調表示 | Microsoft Docs'
+description: このチュートリアルでは、エディターに視覚効果を追加して、テキスト ファイル内に現在の単語が出現するたびに強調表示する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,49 +14,49 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: f9e69f635b18d4ed67b78751ac6179cad04f002c
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106217529"
 ---
-# <a name="walkthrough-highlight-text"></a>チュートリアル: テキストの強調表示
-Managed Extensibility Framework (MEF) コンポーネントパーツを作成することによって、エディターにさまざまな視覚効果を追加できます。 このチュートリアルでは、テキストファイル内で現在の単語が出現するたびに強調表示する方法について説明します。 1つの単語がテキストファイル内に複数回出現し、カレットを1回の出現時に配置すると、すべての出現箇所が強調表示されます。
+# <a name="walkthrough-highlight-text"></a>チュートリアル: テキストを強調表示する
+Managed Extensibility Framework (MEF) コンポーネント パーツを作成して、エディターにさまざまな視覚効果を追加できます。 このチュートリアルでは、テキスト ファイル内に現在の単語が出現するたびに強調表示する方法について説明します。 1 つの単語がテキスト ファイル内に複数回出現し、キャレットを 1 つの出現位置に配置すると、すべての出現箇所が強調表示されます。
 
-## <a name="prerequisites"></a>前提条件
- Visual Studio 2015 以降では、ダウンロードセンターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップでオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「 [Visual STUDIO SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+## <a name="prerequisites"></a>必須コンポーネント
+ Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールしません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="create-a-mef-project"></a>MEF プロジェクトを作成する
 
-1. C# VSIX プロジェクトを作成します。 ([ **新しいプロジェクト** ] ダイアログで、[Visual C#]、[ **拡張機能**]、[ **VSIX プロジェクト**] の順に選択します)。ソリューションにという名前を指定 `HighlightWordTest` します。
+1. C# VSIX プロジェクトを作成します。 ( **[新しいプロジェクト]** ダイアログで、 **[Visual C#]、[拡張機能]** 、 **[VSIX プロジェクト]** の順に選択します)。ソリューションに `HighlightWordTest` という名前を付けます。
 
-2. エディター分類子項目テンプレートをプロジェクトに追加します。 詳細については、「 [エディター項目テンプレートを使用して拡張機能を作成](../extensibility/creating-an-extension-with-an-editor-item-template.md)する」を参照してください。
+2. プロジェクトに、[エディター分類子] 項目テンプレートを追加します。 詳細については、「[エディター項目テンプレートを使用して拡張機能を作成する](../extensibility/creating-an-extension-with-an-editor-item-template.md)」を参照してください。
 
 3. 既存のクラス ファイルを削除します。
 
 ## <a name="define-a-textmarkertag"></a>TextMarkerTag を定義する
- テキストを強調表示する最初の手順は、サブクラス化 <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> してその外観を定義することです。
+ テキストを強調表示する最初の手順では、<xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> をサブクラス化し、その外観を定義します。
 
 ### <a name="to-define-a-textmarkertag-and-a-markerformatdefinition"></a>TextMarkerTag と MarkerFormatDefinition を定義するには
 
-1. クラスファイルを追加し、 **HighlightWordTag** という名前を指定します。
+1. クラス ファイルを追加して、その名前を **HighlightWordTag** にします。
 
 2. 次の参照を追加します。
 
-    1. VisualStudio. CoreUtility
+    1. Microsoft.VisualStudio.CoreUtility
 
-    2. VisualStudio のデータ
+    2. Microsoft.VisualStudio.Text.Data
 
-    3. VisualStudio. Logic
+    3. Microsoft.VisualStudio.Text.Logic
 
-    4. VisualStudio. UI
+    4. Microsoft.VisualStudio.Text.UI
 
-    5. VisualStudio (Microsoft. UI)
+    5. Microsoft.VisualStudio.Text.UI.Wpf
 
     6. System.ComponentModel.Composition
 
-    7. プレゼンテーション。コア
+    7. Presentation.Core
 
-    8. Presentation. Framework
+    8. Presentation.Framework
 
 3. 次の名前空間をインポートします。
 
@@ -75,7 +75,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     using System.Windows.Media;
     ```
 
-4. を継承するクラスを作成 <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> し、という名前を指定 `HighlightWordTag` します。
+4. <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> を継承するクラスを作成し、その名前を `HighlightWordTag` にします。
 
     ```csharp
     internal class HighlightWordTag : TextMarkerTag
@@ -84,11 +84,11 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-5. から継承する2番目のクラスを作成 <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> し、という名前を指定 `HighlightWordFormatDefinition` します。 タグにこの形式定義を使用するには、次の属性を使用してエクスポートする必要があります。
+5. <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> を継承する 2 番目のクラスを作成し、その名前を `HighlightWordFormatDefinition` にします。 タグにこの形式定義を使用するには、次の属性を使用してエクスポートする必要があります。
 
-    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: タグはこの形式を参照するために使用します
+    - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: この形式を参照するためにタグでこれが使用されます
 
-    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: これにより、形式が UI に表示されます。
+    - <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: これにより、形式が UI に表示されます
 
     ```csharp
 
@@ -101,7 +101,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-6. HighlightWordFormatDefinition のコンストラクターで、表示名と外観を定義します。 Background プロパティは塗りつぶしの色を定義し、前景プロパティは境界線の色を定義します。
+6. HighlightWordFormatDefinition のコンストラクターで、その表示名と外観を定義します。 Background プロパティで塗りつぶしの色を定義し、Foreground プロパティで境界線の色を定義します。
 
     ```csharp
     public HighlightWordFormatDefinition()
@@ -113,18 +113,18 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-7. HighlightWordTag のコンストラクターで、作成した書式定義の名前を渡します。
+7. HighlightWordTag のコンストラクターで、作成した形式定義の名前を渡します。
 
     ```
     public HighlightWordTag() : base("MarkerFormatDefinition/HighlightWordFormatDefinition") { }
     ```
 
 ## <a name="implement-an-itagger"></a>ITagger を実装する
- 次の手順では、インターフェイスを実装し <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> ます。 このインターフェイスは、特定のテキストバッファーに、テキストの強調表示やその他の視覚効果を提供するタグを割り当てます。
+ 次の手順は <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> インターフェイスの実装です。 このインターフェイスでは、テキストの強調表示やその他の視覚効果を提供するタグを、特定のテキスト バッファーに割り当てます。
 
 ### <a name="to-implement-a-tagger"></a>タガーを実装するには
 
-1. 型のを実装するクラスを作成 <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> `HighlightWordTag` し、という名前を指定し `HighlightWordTagger` ます。
+1. 種類が `HighlightWordTag` の <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> を実装するクラスを作成し、その名前を `HighlightWordTagger` にします。
 
     ```csharp
     internal class HighlightWordTagger : ITagger<HighlightWordTag>
@@ -133,23 +133,23 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-2. 次のプライベートフィールドとプロパティをクラスに追加します。
+2. 次のプライベート フィールドとプロパティをクラスに追加します。
 
-    - <xref:Microsoft.VisualStudio.Text.Editor.ITextView>現在のテキストビューに対応する。
+    - 現在のテキスト ビューに対応する <xref:Microsoft.VisualStudio.Text.Editor.ITextView>。
 
-    - <xref:Microsoft.VisualStudio.Text.ITextBuffer>テキストビューの基になるテキストバッファーに対応する。
+    - テキスト ビューの基になるテキスト バッファーに対応する <xref:Microsoft.VisualStudio.Text.ITextBuffer>。
 
-    - <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>テキストを検索するために使用される。
+    - テキストの検索に使用される <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>。
 
-    - <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>テキスト範囲内を移動するためのメソッドを持つ。
+    - テキスト範囲内で移動するためのメソッドを含む <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator>。
 
-    - <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>強調表示する単語のセットを格納している。
+    - 強調表示する単語のセットを含む <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection>。
 
-    - <xref:Microsoft.VisualStudio.Text.SnapshotSpan>現在の単語に対応する。
+    - 現在の単語に対応する <xref:Microsoft.VisualStudio.Text.SnapshotSpan>。
 
-    - <xref:Microsoft.VisualStudio.Text.SnapshotPoint>キャレットの現在の位置に対応する。
+    - キャレットの現在の位置に対応する <xref:Microsoft.VisualStudio.Text.SnapshotPoint>。
 
-    - ロックオブジェクト。
+    - ロック オブジェクト。
 
     ```csharp
     ITextView View { get; set; }
@@ -163,7 +163,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
 
     ```
 
-3. 前に示したプロパティを初期化するコンストラクターを追加し、 <xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> イベントハンドラーとイベントハンドラーを追加します。
+3. 前に一覧表示したプロパティを初期化し、<xref:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged> および <xref:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged> イベント ハンドラーを追加するコンストラクターを追加します。
 
     ```csharp
     public HighlightWordTagger(ITextView view, ITextBuffer sourceBuffer, ITextSearchService textSearchService,
@@ -181,7 +181,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
 
     ```
 
-4. イベントハンドラーは、どちらも `UpdateAtCaretPosition` メソッドを呼び出します。
+4. どちらのイベント ハンドラーも `UpdateAtCaretPosition` メソッドを呼び出します。
 
     ```csharp
     void ViewLayoutChanged(object sender, TextViewLayoutChangedEventArgs e)
@@ -199,13 +199,13 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-5. また、 `TagsChanged` update メソッドによって呼び出されるイベントも追加する必要があります。
+5. また、更新メソッドによって呼び出される`TagsChanged` イベントも追加する必要があります。
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkhighlightwordtest/cs/highlightwordtag.cs" id="Snippet10":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhighlightwordtest/vb/highlightwordtag.vb" id="Snippet10":::
 
 
-6. メソッドは、 `UpdateAtCaretPosition()` テキストバッファー内で、カーソルが置かれている単語と同一のすべての単語を検索し、 <xref:Microsoft.VisualStudio.Text.SnapshotSpan> その単語の出現に対応するオブジェクトのリストを構築します。 次 `SynchronousUpdate` に、を呼び出します。これにより、イベントが発生し `TagsChanged` ます。
+6. `UpdateAtCaretPosition()` メソッドでは、カーソルが置かれている単語と一致するすべての単語をテキスト バッファー内で検索し、見つかったそれぞれの単語に対応する <xref:Microsoft.VisualStudio.Text.SnapshotSpan> オブジェクトの一覧を構築します。 続いて `SynchronousUpdate` が呼び出され、これによって `TagsChanged` イベントが発生します。
 
     ```csharp
     void UpdateAtCaretPosition(CaretPosition caretPosition)
@@ -287,7 +287,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
 
     ```
 
-7. は、 `SynchronousUpdate` プロパティとプロパティに対して同期更新を実行 `WordSpans` し、イベントを発生さ `CurrentWord` せ `TagsChanged` ます。
+7. `SynchronousUpdate` により、`WordSpans` および `CurrentWord` プロパティで同期更新が実行され、`TagsChanged` イベントが発生します。
 
     ```csharp
     void SynchronousUpdate(SnapshotPoint currentRequest, NormalizedSnapshotSpanCollection newSpans, SnapshotSpan? newCurrentWord)
@@ -307,11 +307,11 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-8. メソッドを実装する必要があり <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> ます。 このメソッドは、オブジェクトのコレクションを受け取り <xref:Microsoft.VisualStudio.Text.SnapshotSpan> 、タグ範囲の列挙体を返します。
+8. <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> メソッドを実装する必要があります。 このメソッドでは、<xref:Microsoft.VisualStudio.Text.SnapshotSpan> オブジェクトのコレクションが取得され、タグの範囲の列挙体が返されます。
 
-     C# では、このメソッドを yield 反復子として実装します。これにより、タグの遅延評価 (つまり、個々の項目にアクセスしたときにのみ、セットの評価) が有効になります。 Visual Basic で、タグを一覧に追加し、一覧を返します。
+     C# では、このメソッドを yield 列挙子として実装します。これにより、タグのレイジー評価 (つまり、個々の項目がアクセスされたときのみのセットの評価) を行えるようになります。 Visual BASIC では、一覧にタグを追加して、一覧を返します。
 
-     ここで、メソッドは <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> 青い背景を提供する "blue" を持つオブジェクトを返し <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ます。
+     ここで、メソッドにより、青い背景を表示する "blue" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> を持った <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> オブジェクトが返されます。
 
     ```csharp
     public IEnumerable<ITagSpan<HighlightWordTag>> GetTags(NormalizedSnapshotSpanCollection spans)
@@ -350,15 +350,15 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     }
     ```
 
-## <a name="create-a-tagger-provider"></a>Tagger プロバイダーを作成する
- タグを作成するには、を実装する必要があり <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> ます。 このクラスは MEF コンポーネント部分なので、この拡張機能が認識されるように、正しい属性を設定する必要があります。
+## <a name="create-a-tagger-provider"></a>タガー プロバイダーを作成する
+ タガーを作成するには、<xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> を実装する必要があります。 このクラスは、MEF コンポーネント パーツであるため、この拡張機能が認識されるように正しい属性を設定する必要があります。
 
 > [!NOTE]
-> MEF の詳細については、「 [Managed Extensibility Framework (mef)](/dotnet/framework/mef/index)」を参照してください。
+> MEF の詳細については、「[Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index)」を参照してださい。
 
-### <a name="to-create-a-tagger-provider"></a>タガープロバイダーを作成するには
+### <a name="to-create-a-tagger-provider"></a>タガー プロバイダーを作成するには
 
-1. を実装するという名前のクラスを作成 `HighlightWordTaggerProvider` <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> し、 <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "text" およびのを使用してエクスポートし <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> ます。
+1. <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider> を実装する、`HighlightWordTaggerProvider` という名前のクラスを作成し、<xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> として "text"、<xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> として <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> を指定してそれをエクスポートします。
 
     ```csharp
     [Export(typeof(IViewTaggerProvider))]
@@ -368,7 +368,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
     { }
     ```
 
-2. <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService>タグをインスタンス化するには、とという2つのエディターサービスをインポートする必要があり <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> ます。
+2. タグをインスタンス化するには、<xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> と <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> という 2 つのエディター サービスをインポートする必要があります。
 
     ```csharp
     [Import]
@@ -379,7 +379,7 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
 
     ```
 
-3. <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A>のインスタンスを返すメソッドを実装 `HighlightWordTagger` します。
+3. `HighlightWordTagger` のインスタンスを返すための <xref:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger%2A> メソッドを実装します。
 
     ```csharp
     public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag
@@ -402,11 +402,11 @@ Managed Extensibility Framework (MEF) コンポーネントパーツを作成す
 
 1. ソリューションをビルドします。
 
-2. デバッガーでこのプロジェクトを実行すると、Visual Studio の2番目のインスタンスが開始されます。
+2. デバッガーでこのプロジェクトを実行すると、Visual Studio の 2 つ目のインスタンスが起動されます。
 
-3. テキストファイルを作成し、単語が繰り返されるいくつかのテキストを入力します ("hello hello hello" など)。
+3. テキスト ファイルを作成し、単語が繰り返されるテキスト ("hello hello hello" など) を入力します。
 
-4. "Hello" のいずれかの位置にカーソルを置きます。 すべての出現箇所が青色で強調表示されます。
+4. "hello" のいずれかの出現箇所にカーソルを置きます。 すべての出現箇所が青色で強調表示されます。
 
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: コンテンツの種類をファイル名拡張子にリンクする](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)
+- [チュートリアル: コンテンツ タイプとファイル名拡張子とをリンクさせる](../extensibility/walkthrough-linking-a-content-type-to-a-file-name-extension.md)

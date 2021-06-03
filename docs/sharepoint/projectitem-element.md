@@ -1,6 +1,6 @@
 ---
-title: ProjectItem 要素 |Microsoft Docs
-description: SharePoint プロジェクト項目の XML スキーマリファレンスの SharePoint プロジェクト項目を表す ProjectItem 要素に関する参照情報を取得します。
+title: ProjectItem 要素 | Microsoft Docs
+description: ProjectItem 要素に関する参照情報を取得します。これは、SharePoint プロジェクト項目の XML スキーマ リファレンス内の SharePoint プロジェクト項目を表します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,13 +16,13 @@ ms.workload:
 - office
 ms.openlocfilehash: 2b94b44bfa442805c4c785a48c9f60f56eb8e002
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99950589"
 ---
 # <a name="projectitem-element"></a>ProjectItem 要素
-  SharePoint プロジェクトアイテムを表します。 この要素は、 *sharepointprojectitem.spdata* ファイルの必須のルート要素です。
+  SharePoint プロジェクト項目を表します。 この要素は、 *.spdata* ファイルの必須のルート要素です。
 
 ## <a name="syntax"></a>構文
 
@@ -48,22 +48,22 @@ ms.locfileid: "99950589"
 
 |属性|説明|
 |---------------|-----------------|
-|**DefaultFile**|**Xs: string** 属性 (省略可能)。<br /><br /> **ソリューションエクスプローラー** で SharePoint プロジェクト項目を開いたときに Visual Studio エディターで開くファイルの相対パス (ファイル名を含む)。 パスは、 *sharepointprojectitem.spdata* ファイルを含むフォルダーからの相対パスです。|
-|**FeatureReceiverClass**|**Xs: string** 属性 (省略可能)。<br /><br /> この SharePoint プロジェクトアイテムのフィーチャーレシーバークラスの完全修飾名。 フィーチャーレシーバーの詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|
-|**FeatureReceiverAssembly**|**Xs: string** 属性 (省略可能)。<br /><br /> この SharePoint プロジェクトアイテムのフィーチャーレシーバーを定義するアセンブリの完全修飾名を指定します。 フィーチャーレシーバーの詳細については、「 [プロジェクト項目でのパッケージ化と配置の情報の提供](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。 完全修飾アセンブリ名の詳細については、「 [アセンブリ名](/dotnet/framework/app-domains/assembly-names)」を参照してください。|
-|**SupportedTrustLevels**|**Xs: string** 属性 (省略可能)。<br /><br /> この SharePoint プロジェクト項目でサポートされる信頼レベルを指定します。 この値には、次の文字列のいずれかを指定できます: サンドボックス、FullTrust、またはすべて。 値 All は、サンドボックスと FullTrust の両方を指定します。<br /><br /> カスタム SharePoint プロジェクト項目の種類では、この属性の値は、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> メソッドの実装でプロパティに割り当てる値に対応し <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> ます。 この属性に別の値を指定すると、Visual Studio は、プロパティで指定したのと同じ信頼レベルを指定するように値を上書きし <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> ます。|
-|**SupportedDeploymentScopes**|**Xs: string** 属性 (省略可能)。<br /><br /> この SharePoint プロジェクトアイテムがサポートする配置スコープを指定します。 この値は、ファーム、サイト、Web、WebApplication、またはパッケージの1つ以上の文字列で構成されるコンマ区切りの文字列です。 例: `Web, Site`<br /><br /> カスタム SharePoint プロジェクト項目の種類では、この属性の値は、 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> メソッドの実装でプロパティに割り当てる値に対応し <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> ます。 この属性に別の値を指定すると、Visual Studio は、プロパティで指定したのと同じ信頼レベルを指定するように値を上書きし <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> ます。|
-|**種類**|**Xs: string** 属性が必要です。<br /><br /> SharePoint プロジェクトアイテムの識別子。 カスタム SharePoint プロジェクト項目の種類では、識別子はに渡す文字列です <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> 。 詳細については、「 [方法: SharePoint プロジェクト項目の種類を定義](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)する」を参照してください。<br /><br /> Visual Studio に含まれる組み込みの SharePoint プロジェクト項目の識別子の一覧については、「 [sharepoint プロジェクト項目の拡張](../sharepoint/extending-sharepoint-project-items.md)」を参照してください。|
+|**DefaultFile**|省略可能な **xs: string** 属性。<br /><br /> **ソリューション エクスプローラー** で SharePoint プロジェクト項目を開いたときに Visual Studio エディターで開くファイルの相対パス (ファイル名を含む)。 このパスは、 *.spdata* ファイルが含まれているフォルダーからの相対パスです。|
+|**FeatureReceiverClass**|省略可能な **xs:string** 属性。<br /><br /> この SharePoint プロジェクト項目のフィーチャー レシーバー クラスの完全修飾名。 フィーチャー レシーバーの詳細については、「[プロジェクト項目でのパッケージ化と配置の情報を提供する](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。|
+|**FeatureReceiverAssembly**|省略可能な **xs:string** 属性。<br /><br /> この SharePoint プロジェクト項目のフィーチャー レシーバーを定義するアセンブリの完全修飾名を指定します。 フィーチャー レシーバーの詳細については、「[プロジェクト項目でのパッケージ化と配置の情報を提供する](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)」を参照してください。 完全修飾アセンブリ名の詳細については、「[アセンブリ名](/dotnet/framework/app-domains/assembly-names)」を参照してください。|
+|**SupportedTrustLevels**|省略可能な **xs:string** 属性。<br /><br /> この SharePoint プロジェクト項目でサポートされる信頼レベルを指定します。 この値には、次の文字列のいずれかを指定できます: Sandboxed、FullTrust、または All。 値 All は、Sandboxed と FullTrust の両方を指定します。<br /><br /> カスタムの SharePoint プロジェクト項目の種類では、この属性の値は、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> メソッドの実装で <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> プロパティに割り当てる値に相当します。 この属性に別の値を指定すると、Visual Studio により、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> プロパティで指定したのと同じ信頼レベルが指定されるように値が上書きされます。|
+|**SupportedDeploymentScopes**|省略可能な **xs:string** 属性。<br /><br /> この SharePoint プロジェクト項目でサポートされる配置スコープを指定します。 この値は、Farm、Site、Web、WebApplication、または Package の 1 つ以上の文字列で構成されるコンマ区切りの文字列です。 例: `Web, Site`<br /><br /> カスタムの SharePoint プロジェクト項目の種類では、この属性の値は、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> メソッドの実装で <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> プロパティに割り当てる値に相当します。 この属性に別の値を指定すると、Visual Studio により、<xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> プロパティで指定したのと同じ信頼レベルが指定されるように値が上書きされます。|
+|**Type**|必須の **xs: string** 属性。<br /><br /> SharePoint プロジェクト項目の識別子。 カスタムの SharePoint プロジェクト項目の種類では、識別子は <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> に渡す文字列です。 詳細については、「[方法: SharePoint プロジェクト項目の種類を定義する](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)」を参照してください。<br /><br /> Visual Studio に含まれている組み込みの SharePoint プロジェクト項目の識別子の一覧については、「[SharePoint プロジェクト項目の拡張](../sharepoint/extending-sharepoint-project-items.md)」を参照してください。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|省略可能な要素です。<br /><br /> SharePoint プロジェクトアイテムに関連付けられているカスタムデータアイテムのコレクションを表します。<br /><br /> 1つの **Extensiondata** 要素だけを含めることができます。|
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|省略可能な要素です。<br /><br /> SharePoint に配置されるときにフィーチャーに含まれるプロパティ値のコレクションを表します。<br /><br /> **Featureproperties** 要素を1つだけ含めることができます。|
-|[[ファイル]](../sharepoint/files-element.md)|省略可能な **FileCollectionType** 要素。<br /><br /> SharePoint プロジェクトアイテムと共に配置するファイルを指定します。たとえば、フィーチャー要素ファイルや SharePoint 以外の依存プロジェクトの出力などです。<br /><br /> **ファイル** または **ProjectItemFolder** 要素のいずれかを含めますが、両方を含めることはできません。|
-|[ProjectItemFolder](../sharepoint/projectitemfolder-element.md)|省略可能な **ProjectItemFolderType** 要素。<br /><br /> マップされたフォルダーを表します。<br /><br /> **ファイル** または **ProjectItemFolder** 要素のいずれかを含めますが、両方を含めることはできません。|
-|[SafeControls](../sharepoint/safecontrols-element.md)|省略可能な要素です。<br /><br /> SharePoint サイトの任意の ASPX ページですべてのユーザーがアクセスできるようにセキュリティで保護されたものとして指定された ASPX コントロールおよび Web パーツのコレクションを表します。<br /><br /> **SafeControls** 要素を1つだけ含めることができます。|
+|[ExtensionData](../sharepoint/extensiondata-element.md)|省略可能な要素です。<br /><br /> SharePoint プロジェクト項目に関連付けられているカスタム データ項目のコレクションを表します。<br /><br /> 1 つの **ExtensionData** 要素だけを含めることができます。|
+|[FeatureProperties](../sharepoint/featureproperties-element.md)|省略可能な要素です。<br /><br /> フィーチャーが SharePoint に配置されるときに一緒に含まれるプロパティ値のコレクションを表します。<br /><br /> 1 つの **FeatureProperties** 要素だけを含めることができます。|
+|[ファイル](../sharepoint/files-element.md)|省略可能な **FileCollectionType** 要素です。<br /><br /> Feature 要素のファイルや従属の非 SharePoint プロジェクトの出力など、SharePoint プロジェクト項目と共に配置するファイルを指定します。<br /><br /> **Files** または **ProjectItemFolder** 要素の両方ではなく、いずれかが含まれます。|
+|[ProjectItemFolder](../sharepoint/projectitemfolder-element.md)|省略可能な **ProjectItemFolderType** 要素です。<br /><br /> マップされたフォルダーを表します。<br /><br /> **Files** または **ProjectItemFolder** 要素の両方ではなく、いずれかが含まれます。|
+|[SafeControls](../sharepoint/safecontrols-element.md)|省略可能な要素です。<br /><br /> SharePoint サイトの任意の ASPX ページで任意のユーザーがアクセスしても安全であると指定された ASPX コントロールおよび Web パーツのコレクションを表します。<br /><br /> 1 つの **SafeControls** 要素だけを含めることができます。|
 
 ### <a name="parent-elements"></a>親要素
  [なし] :
@@ -72,10 +72,10 @@ ms.locfileid: "99950589"
 
 |プロパティ|値|
 |-|-|
-|**Namespace**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**スキーマ名**|SharePoint プロジェクトアイテムスキーマ|
-|**検証ファイル**|ProjectItemModelSchema|
-|**空にすることができます**|いいえ|
+|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**スキーマ名**|SharePoint プロジェクト項目スキーマ|
+|**検証ファイル**|ProjectItemModelSchema.xsd|
+|**空の場合もあります**|いいえ|
 
 ## <a name="see-also"></a>関連項目
-[SharePoint プロジェクト項目スキーマ rseference](../sharepoint/sharepoint-project-item-schema-reference.md)
+[SharePoint プロジェクト項目スキーマのリファレンス](../sharepoint/sharepoint-project-item-schema-reference.md)

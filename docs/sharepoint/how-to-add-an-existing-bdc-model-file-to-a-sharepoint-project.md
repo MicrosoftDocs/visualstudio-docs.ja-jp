@@ -1,7 +1,7 @@
 ---
-title: '方法: 既存の BDC モデルファイルを SharePoint プロジェクトに追加する |Microsoft Docs'
+title: '方法: 既存の BDC モデル ファイルを SharePoint プロジェクトに追加する | Microsoft Docs'
 titleSuffix: ''
-description: 既存のビジネスデータ接続 (BDC) モデルファイルを Visual Studio の SharePoint プロジェクトに追加して、BDC モデルをカスタマイズ、パッケージ化、および再配置できるようにします。
+description: 既存のビジネス データ接続 (BDC) モデル ファイルを Visual Studio の SharePoint プロジェクトに追加して、BDC モデルをカスタマイズ、パッケージ化、再配置できるようにします。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -22,35 +22,35 @@ ms.workload:
 - office
 ms.openlocfilehash: af0768b4834eb1cad3654b6d74ee8f02cf464245
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99882675"
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>方法: 既存の BDC モデル ファイルを SharePoint プロジェクトに追加する
-  Visual Studio を使用して、モデルファイル (*bdcm*) を任意の SharePoint ファームプロジェクトに追加することにより、ビジネスデータ接続 (BDC) モデルをカスタマイズ、パッケージ化、および再配置できます。 詳細については、「[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)」を参照してください。
+  Visual Studio を使用してモデル ファイル ( *.bdcm*) を任意の SharePoint ファーム プロジェクトに追加すると、ビジネス データ接続 (BDC) モデルをカスタマイズ、パッケージ化、再配置できます。 詳細については、「[ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)」を参照してください。
 
-### <a name="to-add-a-bdc-model-file-to-a-sharepoint-project"></a>BDC モデルファイルを SharePoint プロジェクトに追加するには
+### <a name="to-add-a-bdc-model-file-to-a-sharepoint-project"></a>BDC モデル ファイルを SharePoint プロジェクトに追加するには
 
-1. **ソリューションエクスプローラー** で、SharePoint プロジェクトのフォルダーを選択します。
+1. **ソリューション エクスプローラー** で、SharePoint プロジェクトのフォルダーを選択します。
 
-2. メニューバーで、[**プロジェクト**] [既存の項目の追加] の順に選択し  >  ます。
+2. メニュー バーで **[プロジェクト]**  >  **[既存項目の追加]** の順に選択します。
 
-3. [ **既存項目の追加** ] ダイアログボックスで、プロジェクトに追加するモデル定義ファイルの場所を参照し、ファイルを選択して、[ **追加** ] ボタンをクリックします。
+3. **[既存項目の追加]** ダイアログ ボックスで、プロジェクトに追加するモデル定義ファイルの場所を参照し、ファイルを選択してから **[追加]** ボタンを選択します。
 
-    モデルで、 *.net アセンブリ型の基幹業務 (LOB) システム* が定義されていない場合は、[ **.Net アセンブリの追加** ] ダイアログボックスが表示されます。
+    モデルで " *.NET アセンブリ型の基幹業務 (LOB) システム*" が定義されていない場合は、 **[.NET アセンブリの LobSystem を追加]** ダイアログ ボックスが開きます。
 
-4. ダイアログボックスが表示されたら、次のいずれかの手順を実行します。
+4. ダイアログ ボックスが表示されたら、次のいずれかの手順を実行します。
 
-   - カスタムコードを記述し、デザイナーを使用してインポートしたモデルのメタデータを定義する場合は、[ **はい** ] をクリックし、システムに名前を指定して、[ **OK** ] をクリックします。
+   - カスタム コードを記述し、デザイナーを使用してインポートされたモデルのメタデータを定義する場合は、 **[はい]** ボタンを選択し、システムの名前を指定してから **[OK]** ボタンを選択します。
 
-   - それ以外の場合は、[ **いいえ** ] ボタンをクリックし、[ **OK** ] をクリックします。
+   - それ以外の場合は、 **[いいえ]** ボタンを選択してから **[OK]** ボタンを選択します。
 
-     **ビジネスデータ接続モデル** 項目がプロジェクトに追加されます。
+     **ビジネス データ接続モデル** 項目がプロジェクトに追加されます。
 
 ## <a name="see-also"></a>関連項目
 - [ビジネス データ接続モデルを作成する](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [方法: BDC モデルを作成する](../sharepoint/how-to-create-a-bdc-model.md)
 - [方法: リソース ファイルを使用して、ローカライズした名前、プロパティ、およびアクセス許可を指定する](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
-- [方法: BDC 機能にカスタムアセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)
-- [SharePoint へのビジネスデータの統合](../sharepoint/integrating-business-data-into-sharepoint.md)
+- [方法: BDC 機能にカスタム アセンブリを含める](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)
+- [SharePoint へのビジネス データの統合](../sharepoint/integrating-business-data-into-sharepoint.md)

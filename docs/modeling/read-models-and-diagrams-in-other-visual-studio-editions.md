@@ -1,6 +1,6 @@
 ---
 title: Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
-description: モデルの作成をサポートしていない Visual Studio のバージョンを使用する場合の、Visual Studio でのモデルと図の読み取り、および読み取り専用の動作について説明します。
+description: Visual Studio でのモデルと図の読み取り、およびモデルの作成をサポートしていない Visual Studio のバージョンを使用する場合の読み取り専用の動作について説明します。
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
@@ -14,7 +14,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: a8049471e9e172496381df016c6155410f3bc244
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99882935"
@@ -23,29 +23,29 @@ ms.locfileid: "99882935"
 
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
 
-モデルの作成をサポートしている Visual Studio のバージョンを確認するには、「 [アーキテクチャツールとモデリングツールのバージョンサポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+モデルの作成をサポートする Visual Studio のバージョンを確認するには、[アーキテクチャおよびモデリング ツールのバージョン サポートに関する記事](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)をご覧ください。
 
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>モデルおよび図へのアクセス
 
-依存関係図を読み取るには、最初に Visual Studio を使用してモデリングプロジェクトを開き、その中でダイアグラムを開く必要があります。
+依存関係図を読み取るには、最初に Visual Studio を使用してモデリング プロジェクトを開いてから、その中で図を開く必要があります。
 
-このため、依存関係図を読み取る場合は、それが作成されたモデリングプロジェクトにもアクセスできる必要があります。 これを行うには、ソース管理からプロジェクトにアクセスするか、プロジェクトファイルのコピーを取得します。
+このため、依存関係図を読み取る場合は、その図を生成したモデリング プロジェクトにもアクセスできる必要があります。 これを行うには、ソース管理からプロジェクトにアクセスするか、プロジェクト ファイルのコピーを取得します。
 
 > [!NOTE]
 > これは、コードから生成されたコード マップおよび .NET クラス図には適用されません。 これらの図はモデリング プロジェクトとは関係なく表示できます。
 
-依存関係図を読み取るには、最低限必要なファイルセットは次のとおりです。
+依存関係図を読み取るために最低限必要なファイル セットは次のとおりです。
 
-- 読み取り対象のダイアグラムの2つの図ファイル (例、 **mydiagram. classdiagram と MyDiagram。**[...])。
+- 読み取る図の 2 つの図ファイル (たとえば、**MyDiagram.classdiagram と MyDiagram.classdiagram.layout**)。
 
     > [!NOTE]
-    > 依存関係図については、 _Mydiagram_**. レイヤー図の抑制** という名前のファイルも必要です。
+    > 依存関係図の場合は、_Mydiagram_ **.layerdiagram.suppressions** という名前のファイルも必要です。
 
-- モデリングプロジェクトファイル (**Mymodel. modelproj**)
+- モデリング プロジェクト ファイル (**Mymodel. modelproj**)
 
-- ルートモデルファイル (**ModelDefinition\MyModel.uml**)
+- ルート モデル ファイル (**ModelDefinition\MyModel.uml**)
 
-- ダイアグラムで参照されているすべてのパッケージのパッケージファイル (**Modeldefinition\ mypackagethe uml**)
+- 図で参照されているすべてのパッケージのパッケージ ファイル (**ModelDefinition\MyPackage.uml**)
 
 ## <a name="changes-that-you-can-make-in-read-only-mode"></a>読み取り専用モードで行える変更
 
@@ -55,7 +55,7 @@ ms.locfileid: "99882935"
 
 - 図形を展開および折りたたむ。
 
-これらの変更は保存できます。 他のユーザーに変更を表示する場合は、少なくとも更新された **レイアウト** ファイルを送信する必要があります。
+これらの変更は保存できます。 他のユーザーが変更内容を表示できるようにするには、少なくとも更新した **.layout** ファイルを送信する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

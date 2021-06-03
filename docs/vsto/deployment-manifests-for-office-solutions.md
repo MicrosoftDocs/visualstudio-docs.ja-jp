@@ -1,6 +1,6 @@
 ---
 title: Office ソリューションの配置マニフェスト
-description: 配置マニフェストは、Office ソリューションの配置設定を記述する XML ファイルであり、現在のアプリケーションのバージョンを識別することを説明します。
+description: 配置マニフェストが Office ソリューションの配置設定を記述し、現在のアプリケーションのバージョンを識別する XML ファイルであることを説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
@@ -19,21 +19,21 @@ ms.workload:
 - office
 ms.openlocfilehash: 0a6c8cf672c4799a53c9df947f15bca38cb02589
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99887602"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office ソリューションの配置マニフェスト
-  配置マニフェストは、Office ソリューションの配置設定を記述する XML ファイルであり、現在のアプリケーションのバージョンを識別します。
+  配置マニフェストは、Office ソリューションの配置設定を記述し、現在のアプリケーションのバージョンを識別する XML ファイルです。
 
- Visual Studio での Office 開発では、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md) リファレンスで定義されている配置マニフェストスキーマを使用します。
+ Visual Studio の Office 配置では、[ClickOnce 配置マニフェスト](../deployment/clickonce-deployment-manifest.md)のリファレンスで定義されている [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 配置マニフェスト スキーマを使用します。
 
 ## <a name="remarks"></a>解説
- Office ソリューションの配置マニフェストファイルは、現在のバージョンとその他の配置設定を識別します。 アプリケーションマニフェストを参照し、ソリューションの現在のバージョンとソリューション内のすべてのファイルについて説明します。
+ Office ソリューションの配置マニフェスト ファイルでは、現在のバージョンとその他の配置設定を識別します。 このファイルでは、アプリケーション マニフェストを参照し、ソリューションの現在のバージョンとソリューションに含まれるすべてのファイルを記述します。
 
 ## <a name="file-name-syntax"></a>ファイル名の構文
- 配置マニフェストファイルの名前は、拡張子が *.vsto* である必要があります。 これは標準の配置マニフェストですが、 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 拡張機能は、Visual Studio Tools for Office ランタイムがファイルを処理できるようにすることとは異なります。
+ 配置マニフェスト ファイルの名前は、 *.vsto* という拡張子で終わる必要があります。 これは標準の [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 配置マニフェストですが、Visual Studio Tools for Office ランタイムでこのファイルを処理できるようにするため、拡張子が異なっています。
 
 ## <a name="example"></a>例
  次のコード例は、Visual Studio Tools for Office ソリューションの配置マニフェストを示しています。
@@ -187,4 +187,4 @@ ms.locfileid: "99887602"
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューション用アプリケーションマニフェスト](../vsto/application-manifests-for-office-solutions.md)
+- [Office ソリューション用アプリケーション マニフェスト](../vsto/application-manifests-for-office-solutions.md)
