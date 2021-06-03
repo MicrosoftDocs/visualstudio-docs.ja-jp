@@ -1,5 +1,5 @@
 ---
-title: '方法: ASPX マークアップをローカライズする |Microsoft Docs'
+title: '方法: ASPX マークアップをローカライズする | Microsoft Docs'
 description: ハードコーディングされた文字列値を、ローカライズされたリソースを参照する式に置き換えることにより、SharePoint で ASPX マークアップをローカライズする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -17,44 +17,44 @@ ms.workload:
 - office
 ms.openlocfilehash: 1876e06348d60f8a960b352525fd72ad06795101
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99931735"
 ---
 # <a name="how-to-localize-aspx-markup"></a>方法: ASPX マークアップをローカライズする
-  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] (.aspx) ページは通常、ハードコーディングされた文字列値を使用します。 これらの文字列をローカライズするには、ローカライズされたリソースを参照する式で置き換えます。
+  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] (.aspx) ページでは通常、ハードコーディングされた文字列値を使用します。 これらの文字列をローカライズするには、ローカライズされたリソースを参照する式で置き換えます。
 
-## <a name="localize-aspx-markup"></a>ASPX マークアップのローカライズ
+## <a name="localize-aspx-markup"></a>ASPX マークアップをローカライズする
 
 #### <a name="to-localize-aspx-markup"></a>ASPX マークアップをローカライズするには
 
-1. 個別のリソースファイルを追加します。1つは既定の言語用で、もう1つはローカライズされた言語ごとに1つです。
+1. 個別のリソース ファイルを追加します。既定の言語用に 1 つと、ローカライズされた言語ごとに 1 つです。
 
-     コードではなくマークアップのみをローカライズする場合は、グローバルリソースファイルプロジェクト項目を追加します。 コードとマークアップをローカライズする場合は、[リソースファイル] プロジェクト項目を追加します。
+     コードではなくマークアップのみをローカライズする場合は、グローバル リソース ファイル プロジェクト項目を追加します。 コードとマークアップをローカライズする場合は、リソース ファイル プロジェクト項目を追加します。
 
-    1. グローバルリソースファイルを追加するには、**ソリューションエクスプローラー** で、SharePoint プロジェクトアイテムのショートカットメニューを開き、[   >  **新しいアイテム** の追加] を選択します。 [SharePoint **2010** ] ノードで、[ **グローバルリソースファイル** ] テンプレートを選択します。
+    1. グローバル リソース ファイルを追加するには、**ソリューション エクスプローラー** で、SharePoint プロジェクト項目のショートカット メニューを開き、 **[追加]**  >  **[新規項目]** を選択します。 SharePoint の **[2010]** ノードで、 **[グローバル リソース ファイル]** テンプレートを選択します。
 
-    2. リソースファイルを追加するには、**ソリューションエクスプローラー** で、SharePoint プロジェクトアイテムのショートカットメニューを開き、[   >  **新しいアイテム** の追加] を選択します。 **Visual Basic** または **Visual C#** のいずれかのノードで、[**リソースファイル**] テンプレートを選択します。
+    2. リソース ファイルを追加するには、**ソリューション エクスプローラー** で、SharePoint プロジェクト項目のショートカット メニューを開き、 **[追加]**  >  **[新規項目]** を選択します。 **[Visual Basic]** または **[Visual C#]** のいずれかのノードで、 **[リソース ファイル]** テンプレートを選択します。
 
     > [!NOTE]
-    > [配置の種類] プロパティを有効にするには、SharePoint プロジェクト項目にリソースファイルを追加してください。 このプロパティは、後で必要になります。 ソリューションに SharePoint プロジェクトアイテムがない場合は、空の SharePoint プロジェクトを追加して、既定の *Elements.xml* ファイルを削除できます。
+    > [配置タイプ] プロパティを有効にするために、SharePoint プロジェクト項目にリソース ファイルを必ず追加します。 このプロパティは、後で必要になります。 ソリューションに SharePoint プロジェクト項目がない場合は、空の SharePoint プロジェクトを追加して、既定の *Elements.xml* ファイルを削除できます。
 
-2. 既定の言語リソースファイルに、MyAppResources などの *.resx* 拡張子を付加して追加した名前を付けます。 ローカライズされたリソースファイルごとに同じ基本名を使用しますが、カルチャを追加し [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] ます。 たとえば、ドイツ語のローカライズされたリソースに *MyAppResources.de* という名前を指定します。
+2. 既定の言語のリソース ファイルには、 *.resx* 拡張子が付いた任意の名前を付けます (MyAppResources.resx など)。 ローカライズされた各リソース ファイルに対しては、同じ基本名にカルチャ [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] を加えた名前を使用します (ドイツ語の場合は *MyAppResources.de-DE.resx* など)。
 
-3. 各リソースファイルの [ **展開の種類** ] プロパティの値を **appglobalresource** に変更して、サーバーの App_GlobalResources フォルダーに配置されるようにします。
+3. 各リソース ファイルの **[配置タイプ]** プロパティの値を **[AppGlobalResource]** に変更して、サーバーの App_GlobalResources フォルダーに配置されるようにします。
 
-4. ASPX マークアップに加えてコードをローカライズするためにリソースを使用している場合は、各ファイルの [ **ビルドアクション** ] プロパティの値を [ **埋め込みリソース**] のままにします。 リソースファイルのみを使用してマークアップをローカライズする場合は、必要に応じて、ファイルのプロパティ値を **コンテンツ** に変更できます。 詳細については、「 [SharePoint ソリューションのローカライズ](../sharepoint/localizing-sharepoint-solutions.md)」を参照してください。
+4. リソースを ASPX マークアップだけでなくコードのローカライズにも使用する場合は、各ファイルの **[ビルド アクション]** プロパティの値を **[埋め込まれたリソース]** のままにします。 リソース ファイルのみを使用してマークアップをローカライズする場合は、必要に応じて、ファイルのプロパティ値を **[コンテンツ]** に変更できます。 詳細については、「[SharePoint ソリューションをローカライズする](../sharepoint/localizing-sharepoint-solutions.md)」を参照してください。
 
-5. 各リソースファイルを開き、各ファイルで同じ文字列 Id を使用して、ローカライズされた文字列を追加します。
+5. 各リソース ファイルを開き、各ファイルで同じ文字列 ID を使用して、ローカライズされた文字列を追加します。
 
-6. [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ASPX ページまたはコントロールのマークアップで、ハードコーディングされた文字列を、次の形式を使用する値に置き換えます。
+6. ASPX ページまたはコントロールの [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] マークアップで、ハードコーディングされた文字列を、次の形式を使用する値に置き換えます。
 
     ```aspx-csharp
     <%$Resources:Resource File Name, String ID%>
     ```
 
-     たとえば、アプリケーションページのラベルコントロールのテキストをローカライズするには、次のように変更します。
+     たとえば、アプリケーション ページのラベル コントロールのテキストをローカライズするには、次のように変更します。
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -62,7 +62,7 @@ ms.locfileid: "99931735"
     </asp:Content>
     ```
 
-     を
+     to
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -70,7 +70,7 @@ ms.locfileid: "99931735"
     </asp:Content>
     ```
 
-7. F5 キーを **押し** て、アプリケーションをビルドして実行します。
+7. **F5** キーを押してアプリケーションをビルドし、実行します。
 
 8. SharePoint で、表示言語を既定の言語から変更します。
 

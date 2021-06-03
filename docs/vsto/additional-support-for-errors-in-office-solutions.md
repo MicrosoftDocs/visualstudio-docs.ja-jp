@@ -1,6 +1,6 @@
 ---
-title: Office ソリューションでのエラーの追加サポート
-description: サポートリソースを使用して、Visual Studio で Office ソリューションを作成するときに発生する問題に対する回答を検索する方法について説明します。
+title: Office ソリューションのエラーについての追加サポート
+description: サポート リソースを使用して、Visual Studio で Office ソリューションを作成するときに発生する問題に対する回答を見つける方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -60,12 +60,12 @@ ms.workload:
 - office
 ms.openlocfilehash: 37676b419bac620460e6c10e121e002739317315
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99948623"
 ---
-# <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションでのエラーの追加サポート
+# <a name="additional-support-for-errors-in-office-solutions"></a>Office ソリューションのエラーについての追加サポート
 
 次のリソースを使用して、Visual Studio で Office ソリューションを作成するときに発生する問題に対する回答を見つけることができます。
 
@@ -73,29 +73,29 @@ ms.locfileid: "99948623"
 
 Office ソリューションの一般的なエラーの詳細については、次のトピックを参照してください。
 
-- [Office ソリューションで発生したエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)
 
-- [Office ソリューションのセキュリティに関するトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)
+- [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)
 
 - [Office ソリューションの配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)
 
 ## <a name="other-resources"></a>その他のリソース
 
-[Visual Studio tools for Office フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsto)
+[Visual Studio Tools for Office フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsto)
 
-Visual Studio の Office developer tools に関する質問のためのフォーラムを提供します。
+Visual Studio の Office 開発者ツールに関する質問のためのフォーラムを提供します。
 
-[Microsoft ヘルプとサポート](https://support.microsoft.com)
+[Microsoft ヘルプおよびサポート](https://support.microsoft.com)
 
 サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、Support Webcast、およびその他のサービスへのアクセスを提供します。
 
-[Office ソリューションの開発に関するその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)
+[Office ソリューション開発用のその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)
 
-Visual Studio を使用した Office ソリューションおよび Office 開発の開発の詳細について学習するためのその他のリソースへのリンクを示します。
+Visual Studio を使用した Office ソリューションの開発と Office 開発の詳細について学習するためのその他のリソースへのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目
 
-- [Office ソリューションで発生したエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)
-- [Office ソリューションのセキュリティに関するトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)
+- [Office ソリューションのエラーのトラブルシューティング](../vsto/troubleshooting-errors-in-office-solutions.md)
+- [Office ソリューションのセキュリティのトラブルシューティング](../vsto/troubleshooting-office-solution-security.md)
 - [Office ソリューションの配置のトラブルシューティング](../vsto/troubleshooting-office-solution-deployment.md)
-- [Office ソリューションの開発に関するその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)
+- [Office ソリューション開発用のその他のリソース](../vsto/additional-resources-for-developing-office-solutions.md)

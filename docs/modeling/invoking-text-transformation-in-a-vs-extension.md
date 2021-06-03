@@ -1,6 +1,6 @@
 ---
 title: VS 拡張機能内でのテキスト変換の呼び出し
-description: テキストテンプレートサービスを使用してテキストテンプレートを変換する方法について説明します。 また、STextTemplating サービスを取得して ITextTemplating にキャストする方法についても説明します。
+description: テキスト テンプレート サービスを使用してテキスト テンプレートを変換する方法について説明します。 また、STextTemplating サービスを取得して ITextTemplating にキャストする方法についても説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.workload:
 - multiple
 ms.openlocfilehash: 4a90ae2a1d5460cd62ff1ccae1542f21c4002433
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99860894"
 ---
-# <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Visual Studio 拡張機能でのテキスト変換の呼び出し
+# <a name="invoke-text-transformation-in-a-visual-studio-extension"></a>Visual Studio 拡張機能でテキスト変換を呼び出す
 
-メニューコマンドや [ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)などの Visual Studio 拡張機能を作成する場合は、テキストテンプレートサービスを使用してテキストテンプレートを変換できます。 [Stexttemplating](/previous-versions/visualstudio/visual-studio-2012/bb932394(v=vs.110))サービスを取得し、 [itexttemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))にキャストします。
+メニュー コマンドや[ドメイン固有言語](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)などの Visual Studio 拡張機能を作成する場合は、テキスト テンプレート サービスを使用してテキスト テンプレートを変換できます。 [STextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932394(v=vs.110)) サービスを取得して [ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110)) にキャストします。
 
-## <a name="get-the-text-templating-service"></a>テキストテンプレートサービスを取得する
+## <a name="get-the-text-templating-service"></a>テキスト テンプレート サービスを取得する
 
 ```csharp
 using Microsoft.VisualStudio.TextTemplating;
@@ -36,11 +36,11 @@ ITextTemplating t4 = serviceProvider.GetService(typeof(STextTemplating)) as ITex
 string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath));
 ```
 
-## <a name="pass-parameters-to-the-template"></a>テンプレートにパラメーターを渡す
+## <a name="pass-parameters-to-the-template"></a>パラメーターをテンプレートに渡す
 
  パラメーターをテンプレートに渡すことができます。 テンプレート内で、`<#@parameter#>` ディレクティブを使用してパラメーター値を取得できます。
 
- パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。 **System.string や system.string** など、**すべての組み込み** 型がシリアル化可能です。
+ パラメーターの型については、シリアル化またはマーシャリング可能な型を使用する必要があります。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 この制限が必要なのは、テキスト テンプレートは別の AppDomain で実行されるためです。 **System.String** や **System.Int32** などの組み込み型はすべてシリアル化可能です。
 
  パラメーター値を渡すために、呼び出し元のコードでは `Session` ディクショナリまたは <xref:System.Runtime.Remoting.Messaging.CallContext> に値を配置できます。
 
@@ -77,11 +77,11 @@ string result = t4.ProcessTemplate("",
 //     Test: Hello    07/06/2010 12:37:45    42
 ```
 
-## <a name="error-reporting-and-the-output-directive"></a>エラー報告と output ディレクティブ
+## <a name="error-reporting-and-the-output-directive"></a>エラー レポートと出力ディレクティブ
 
-処理中に発生したエラーは、Visual Studio のエラーウィンドウに表示されます。 さらに、 [Itexttemplatingcallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110))を実装するコールバックを指定することで、エラーを通知することができます。
+処理中にエラーが発生すると、Visual Studio のエラー ウィンドウに表示されます。 また、[ITextTemplatingCallback](/previous-versions/visualstudio/visual-studio-2012/bb932397(v=vs.110)) を実装したコールバックを指定することにより、エラーの通知を受けることもできます。
 
-結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。 この情報は、コールバックにも渡されます。 詳細については、「 [T4 Output ディレクティブ](../modeling/t4-output-directive.md)」を参照してください。
+結果の文字列をファイルに書き込む場合は、テンプレートの `<#@output#>` ディレクティブで指定されているファイル拡張子とエンコードを確認できます。 この情報は、コールバックにも渡されます。 詳細については、「[T4 出力ディレクティブ](../modeling/t4-output-directive.md)」を参照してください。
 
 ```csharp
 void ProcessMyTemplate(string MyTemplateFile)
@@ -132,7 +132,7 @@ class T4Callback : ITextTemplatingCallback
 Sample text.
 ```
 
-コンパイラの警告が Visual Studio のエラーウィンドウに表示され、への呼び出しも生成され `ErrorCallback` ます。
+コンパイラの警告は Visual Studio のエラー ウィンドウに表示され、`ErrorCallback` の呼び出しも生成されます。
 
 ## <a name="reference-parameters"></a>参照パラメーター
 
@@ -140,8 +140,8 @@ Sample text.
 
 ## <a name="related-articles"></a>関連記事
 
-前処理されたテキストテンプレートからテキストを生成するには `TransformText()` 、生成されたクラスのメソッドを呼び出します。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
+前処理されたテキスト テンプレートからテキストを生成するには、生成されたクラスの `TransformText()` メソッドを呼び出します。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
 
-Visual Studio 拡張機能の外部でテキストを生成するには: カスタムホストを定義します。 詳細については、「 [カスタムホストを使用したテキストテンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)」を参照してください。
+Visual Studio 拡張機能の外部でテキストを生成するには: カスタム ホストを定義します。 詳細については、「[カスタム ホストを使用したテキスト テンプレートの処理](../modeling/processing-text-templates-by-using-a-custom-host.md)」を参照してください。
 
-後でコンパイルして実行できるソースコードを生成するには、 [Itexttemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))の[PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110))メソッドを呼び出します。
+後でコンパイルして実行できるソース コードを生成するには、[ITextTemplating](/previous-versions/visualstudio/visual-studio-2012/bb932392(v=vs.110))の [PreprocessTemplate](/previous-versions/visualstudio/visual-studio-2012/ee844321(v=vs.110)) メソッドを呼び出します。

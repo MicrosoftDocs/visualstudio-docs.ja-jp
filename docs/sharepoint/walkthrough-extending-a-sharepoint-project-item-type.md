@@ -1,6 +1,6 @@
 ---
-title: 'チュートリアル: SharePoint プロジェクト項目の種類の拡張 |Microsoft Docs'
-description: このチュートリアルでは、ビジネスデータ接続 (BDC) モデルプロジェクトアイテムなど、SharePoint プロジェクトアイテムの種類の拡張機能を作成します。
+title: 'チュートリアル: SharePoint プロジェクト項目の種類の拡張 | Microsoft Docs'
+description: このチュートリアルでは、ビジネス データ接続 (BDC) モデル プロジェクト項目など、SharePoint プロジェクト項目の種類の拡張機能を作成します。
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,38 +18,38 @@ ms.workload:
 - office
 ms.openlocfilehash: a91cbd863ed613804418cd5d1666412a01f8f542
 ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2021
 ms.locfileid: "106217698"
 ---
-# <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類の拡張
-  **ビジネスデータ接続モデル** プロジェクト項目を使用して、SharePoint の Business data CONNECTIVITY (BDC) サービスのモデルを作成できます。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。
+# <a name="walkthrough-extend-a-sharepoint-project-item-type"></a>チュートリアル: SharePoint プロジェクト項目の種類を拡張する
+  SharePoint にビジネス データ接続 (BDC) サービスのモデルを作成するには、**ビジネス データ接続モデル** プロジェクト項目を使用します。 既定では、このプロジェクト項目を使用してモデルを作成しただけでは、モデル内のデータがユーザーに表示されません。 ユーザーがデータを閲覧できるようにするには、それに加えて、SharePoint に外部リストを作成する必要があります。
 
- このチュートリアルでは、 **ビジネスデータ接続モデル** プロジェクト項目の拡張機能を作成します。 開発者は、この拡張機能を使用することで、BDC モデルのデータを表示するための外部リストを同じプロジェクト内で作成できます。 このチュートリアルでは、次のタスクについて説明します。
+ このチュートリアルでは、**ビジネス データ接続モデル** プロジェクト項目の拡張機能を作成します。 開発者は、この拡張機能を使用することで、BDC モデルのデータを表示するための外部リストを同じプロジェクト内で作成できます。 このチュートリアルでは、次のタスクについて説明します。
 
 - 次の 2 つの主要タスクを実行する Visual Studio の拡張機能を作成する。
 
-  - BDC モデル内のデータを表示するための外部リストを生成する。 拡張機能は、SharePoint プロジェクトシステムのオブジェクトモデルを使用して、リストを定義する *Elements.xml* ファイルを生成します。 さらに、BDC モデルと一緒に配置できるように、このファイルをプロジェクトに追加します。
+  - BDC モデル内のデータを表示するための外部リストを生成する。 この拡張機能は、リストを定義する *Elements.xml* ファイルを、SharePoint プロジェクト システムのオブジェクト モデルを使用して生成します。 さらに、BDC モデルと一緒に配置できるように、このファイルをプロジェクトに追加します。
 
-  - これにより、**ソリューションエクスプローラー** の **ビジネスデータ接続モデル** プロジェクト項目にショートカットメニュー項目が追加されます。 開発者は、このメニュー項目をクリックして、BDC モデル用の外部リストを生成できます。
+  - **ソリューション エクスプローラー** 内の **ビジネス データ接続モデル** プロジェクト項目に対するショートカット メニュー項目を追加する。 開発者は、このメニュー項目をクリックして、BDC モデル用の外部リストを生成できます。
 
 - 拡張機能のアセンブリを配置するための Visual Studio Extension (VSIX) パッケージを構築する。
 
 - 拡張機能をテストする。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを実行するには、開発コンピューターに次のコンポーネントが必要です。
 
 - サポート対象エディションの Microsoft Windows、SharePoint、および Visual Studio。
 
-- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、SDK の **Vsix プロジェクト** テンプレートを使用して、プロジェクト項目を配置する vsix パッケージを作成します。 詳細については、「 [Visual Studio での SharePoint ツールの拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。
+- [!include[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]。 このチュートリアルでは、プロジェクト項目を配置するための VSIX パッケージを、SDK の **VSIX プロジェクト** テンプレートを使用して作成します。 詳細については、「[Visual Studio での SharePoint ツールの拡張](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)」を参照してください。
 
   次の概念に関する知識があると役に立ちますが、チュートリアルを実行するうえで必須というわけではありません。
 
-- [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] の BDC サービス。 詳細については、「 [BDC のアーキテクチャ](/previous-versions/office/developer/sharepoint-2010/ee558876(v=office.14))」を参照してください。
+- [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] の BDC サービス。 詳細については、「[BDC アーキテクチャ](/previous-versions/office/developer/sharepoint-2010/ee558876(v=office.14))」を参照してください。
 
-- BDC モデルの XML スキーマ。 詳細については、「 [BDC モデルインフラストラクチャ](/previous-versions/office/developer/sharepoint-2010/ee556378(v=office.14))」を参照してください。
+- BDC モデルの XML スキーマ。 詳細については、「[BDC モデル インフラストラクチャ](/previous-versions/office/developer/sharepoint-2010/ee556378(v=office.14))」を参照してください。
 
 ## <a name="create-the-projects"></a>プロジェクトを作成する
  このチュートリアルを完了するには、2 つのプロジェクトを作成する必要があります。
@@ -66,42 +66,42 @@ ms.locfileid: "106217698"
 
 2. メニュー バーで、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
-3. [ **新しいプロジェクト** ] ダイアログボックスで、[ **Visual C#** ] ノードまたは [ **Visual Basic** ] ノードを展開し、[ **機能拡張** ] ノードを選択します。
+3. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードを展開し、 **[機能拡張]** ノードをクリックします。
 
     > [!NOTE]
-    > **機能拡張** ノードは、VISUAL Studio SDK をインストールした場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。
+    > **[機能拡張]** ノードは、Visual Studio SDK がインストールされている場合にのみ使用できます。 詳細については、このトピックで前に説明した「前提条件」を参照してください。
 
-4. [ **新しいプロジェクト** ] ダイアログボックスの上部にある一覧で、[ **.NET Framework 4.5**] を選択します。
+4. **[新しいプロジェクト]** ダイアログ ボックスの上部にある一覧で **[.NET Framework 4.5]** を選択します。
 
      SharePoint ツールの拡張機能を使用するには、このバージョンの .NET Framework の機能が必要です。
 
-5. [ **VSIX プロジェクト** ] テンプレートを選択します。
+5. **[VSIX プロジェクト]** テンプレートを選択します。
 
-6. [ **名前** ] ボックスに「 **GenerateExternalDataLists**」と入力し、[ **OK** ] をクリックします。
+6. **[名前]** ボックスに「**GenerateExternalDataLists**」と入力し、 **[OK]** をクリックします。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**GenerateExternalDataLists** プロジェクトを **ソリューションエクスプローラー** に追加します。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**GenerateExternalDataLists** プロジェクトが **ソリューション エクスプローラー** に追加されます。
 
-7. Source.extension.vsixmanifest ファイルが自動的に開かない場合は、GenerateExternalDataLists プロジェクトでそのショートカットメニューを開き、[**開く**] を選択します。
+7. source.extension.vsixmanifest ファイルが自動的に開かない場合は、GenerateExternalDataLists プロジェクトのショートカット メニューを開き、 **[開く]** をクリックします
 
 8. source.extension.vsixmanifest ファイルで [作成者] フィールドが空白でないことを確認し (「Contoso」と入力し)、ファイルを保存して閉じます。
 
 #### <a name="to-create-the-extension-project"></a>拡張機能プロジェクトを作成するには
 
-1. **ソリューションエクスプローラー** で、 **GenerateExternalDataLists** ソリューションノードのショートカットメニューを開き、[**追加**]、[**新しいプロジェクト**] の順に選択します。
+1. **ソリューション エクスプローラー** で **[GenerateExternalDataLists]** ソリューション ノードのショートカット メニューを開き、 **[追加]** 、 **[新しいプロジェクト]** の順に選択します。
 
-2. [ **新しいプロジェクトの追加** ] ダイアログボックスで、[ **Visual C#** ] ノードまたは [ **Visual Basic** ] ノードを展開し、[ **Windows** ] ノードをクリックします。
+2. **[新しいプロジェクトの追加]** ダイアログ ボックスで、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードを展開し、 **[Windows]** ノードをクリックします。
 
-3. ダイアログボックスの上部にある一覧で、 **.NET Framework 4.5** を選択します。
+3. ダイアログ ボックスの上部にある一覧で **[.NET Framework 4.5]** を選択します。
 
-4. プロジェクトテンプレートの一覧で、[ **クラスライブラリ**] を選択します。
+4. プロジェクト テンプレートの一覧で **[クラス ライブラリ]** を選択します。
 
-5. [ **名前** ] ボックスに「 **BdcProjectItemExtension**」と入力し、[ **OK** ] をクリックします。
+5. **[名前]** ボックスに「**BdcProjectItemExtension**」と入力し、 **[OK]** をクリックします。
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**BdcProjectItemExtension** プロジェクトをソリューションに追加し、既定の Class1 コードファイルを開きます。
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] によって、**BdcProjectItemExtension** プロジェクトがソリューションに追加され、既定の Class1 コード ファイルが開きます。
 
 6. Class1 コード ファイルをプロジェクトから削除します。
 
-## <a name="configure-the-extension-project"></a>拡張機能プロジェクトの構成
+## <a name="configure-the-extension-project"></a>拡張機能プロジェクトを構成する
  プロジェクト項目の拡張機能を作成するためのコードを記述する前に、コード ファイルおよびアセンブリ参照を拡張プロジェクトに追加します。
 
 #### <a name="to-configure-the-project"></a>プロジェクトを構成するには
@@ -112,26 +112,26 @@ ms.locfileid: "106217698"
 
     - GenerateExternalDataLists
 
-2. BdcProjectItemExtension プロジェクトを選択し、メニューバーで [**プロジェクト**] [参照の追加] の順に選択し  >  ます。
+2. BdcProjectItemExtension プロジェクトを選択し、メニュー バーで **[プロジェクト]**  >  **[参照の追加]** の順に選択します。
 
-3. [ **アセンブリ** ] ノードで、[ **フレームワーク** ] ノードを選択し、次の各アセンブリのチェックボックスをオンにします。
+3. **[アセンブリ]** ノードの下の **[フレームワーク]** ノードをクリックし、次のアセンブリの各チェック ボックスをオンにします。
 
     - System.ComponentModel.Composition
 
     - WindowsBase
 
-4. [ **アセンブリ** ] ノードで、[ **拡張機能** ] ノードを選択し、次のアセンブリのチェックボックスをオンにします。
+4. **[アセンブリ]** ノードの下の **[拡張機能]** ノードをクリックし、次のアセンブリのチェック ボックスをオンにします。
 
     - Microsoft.VisualStudio.SharePoint
 
 5. **[OK]** を選択します。
 
 ## <a name="define-the-project-item-extension"></a>プロジェクト項目の拡張機能を定義する
- **ビジネスデータ接続モデル** プロジェクト項目の拡張機能を定義するクラスを作成します。 拡張機能を定義するため、このクラスに <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> インターフェイスを実装します。 このインターフェイスは、既存の種類のプロジェクト項目を拡張する場合に必ず実装します。
+ **[ビジネス データ接続モデル]** プロジェクト項目の拡張機能を定義するクラスを作成します。 拡張機能を定義するため、このクラスに <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> インターフェイスを実装します。 このインターフェイスは、既存の種類のプロジェクト項目を拡張する場合に必ず実装します。
 
 #### <a name="to-define-the-project-item-extension"></a>プロジェクト項目の拡張機能を定義するには
 
-1. ProjectItemExtension コードファイルに次のコードを貼り付けます。
+1. 次のコードを ProjectItemExtension コード ファイルに貼り付けます。
 
     > [!NOTE]
     > このコードを追加した直後は、いくつかのコンパイル エラーが発生します。 これらのエラーは、この後の手順でコードを追加すると解消されます。
@@ -139,7 +139,7 @@ ms.locfileid: "106217698"
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/generateexternaldatalists/bdcprojectitemextension/projectitemextension.cs" id="Snippet1":::
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/generateexternaldatalists/bdcprojectitemextension/projectitemextension.vb" id="Snippet1":::
 
-## <a name="create-the-external-data-lists"></a>外部データリストを作成する
+## <a name="create-the-external-data-lists"></a>外部データ リストを作成する
  BDC モデル内の各エンティティの外部データ リストを作成する `GenerateExternalDataListsExtension` クラスの部分定義を追加します。 外部データ リストを作成するために、このコードはまず BDC モデル ファイル内の XML データを解析して、BDC モデルのエンティティ データを読み取ります。 次に、BDC モデルに基づくリスト インスタンスを作成し、このリスト インスタンスをプロジェクトに追加します。
 
 #### <a name="to-create-the-external-data-lists"></a>外部データ リストを作成するには
@@ -156,33 +156,33 @@ ms.locfileid: "106217698"
 
 1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** の順にクリックします。
 
-## <a name="create-a-vsix-package-to-deploy-the-project-item-extension"></a>プロジェクト項目の拡張機能を配置するための VSIX パッケージの作成
+## <a name="create-a-vsix-package-to-deploy-the-project-item-extension"></a>プロジェクト項目の拡張機能を配置するために VSIX パッケージを作成する
  拡張機能を配置するには、ソリューションで VSIX プロジェクトを使用して VSIX パッケージを作成します。 まず、VSIX プロジェクトに含まれている source.extension.vsixmanifest ファイルを変更して、VSIX パッケージを構成します。 次に、ソリューションをビルドして VSIX パッケージを作成します。
 
 #### <a name="to-configure-and-create-the-vsix-package"></a>VSIX パッケージを構成および作成するには
 
-1. **ソリューションエクスプローラー** で、GenerateExternalDataLists プロジェクトの source.extension.vsixmanifest ファイルのショートカットメニューを開き、[**開く**] を選択します。
+1. **ソリューション エクスプローラー** で、GenerateExternalDataLists プロジェクトの source.extension.vsixmanifest ファイルのショートカット メニューを開き、 **[開く]** をクリックします。
 
-     Visual Studio によってマニフェスト エディターでファイルが開きます。 source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要とされる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、「 [VSIX 拡張機能スキーマ1.0 リファレンス](/previous-versions/dd393700(v=vs.110))」を参照してください。
+     Visual Studio によってマニフェスト エディターでファイルが開きます。 source.extension.vsixmanifest ファイルが、すべての VSIX パッケージで必要とされる extension.vsixmanifest ファイルの基礎となります。 このファイルの詳細については、「[VSIX 拡張機能スキーマ 1.0 リファレンス](/previous-versions/dd393700(v=vs.110))」を参照してください。
 
-2. [ **Product Name** ] ボックスに、「 **External Data List Generator**」と入力します。
+2. **[製品名]** ボックスに「**External Data List Generator**」と入力します。
 
-3. [ **作成者** ] ボックスに「 **Contoso**」と入力します。
+3. **[作成者]** ボックスに、「**Contoso**」と入力します。
 
-4. [ **説明** ] ボックスに、 **外部データリストを生成するために使用できるビジネスデータ接続モデルのプロジェクト項目の拡張機能** を入力します。
+4. **[説明]** ボックスに「**An extension for Business Data Catalog Model project items that can be used to generate external data lists」(外部データ リストを生成する用途に使用できるビジネス データ接続モデル プロジェクト項目用の拡張機能)** と入力します。
 
-5. エディターの [ **アセット** ] タブで、[ **新規** ] ボタンをクリックします。
+5. エディターの **[アセット]** タブで、 **[新規作成]** をクリックします。
 
-     [ **新しい資産の追加** ] ダイアログボックスが表示されます。
+     **[新しい資産の追加]** ダイアログ ボックスが表示されます。
 
-6. [ **種類** ] ボックスの一覧で、[ **VisualStudio**] を選択します。
+6. **[種類]** ボックスの一覧で、 **[Microsoft.VisualStudio.MefComponent]** を選択します。
 
     > [!NOTE]
-    > この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、「 [Mefcomponent 要素 (VSX Schema)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))」を参照してください。
+    > この値は、extension.vsixmanifest ファイル内の `MefComponent` 要素に対応します。 この要素は、VSIX パッケージ内の拡張機能アセンブリの名前を指定します。 詳細については、「[MEFComponent 要素 (VSX スキーマ)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\))」を参照してください。
 
-7. [ **ソース** ] ボックスの一覧で、 **現在のソリューション内のプロジェクト** を選択します。
+7. **[ソース]** ボックスの一覧で、 **[現在のソリューション内のプロジェクト]** を選択します。
 
-8. [ **プロジェクト** ] ボックスの一覧で [ **BdcProjectItemExtension**] を選択し、[ **OK** ] をクリックします。
+8. **[プロジェクト]** ボックスの一覧で **[BdcProjectItemExtension]** を選択し、 **[OK]** をクリックします。
 
 9. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** の順にクリックします。
 
@@ -203,94 +203,94 @@ ms.locfileid: "106217698"
 
 3. GenerateExternalDataLists コード ファイルを開き、`GenerateExternalDataLists_Execute` メソッドのコードの先頭行にブレークポイントを追加します。
 
-4. **F5** キーを押すか、メニューバーで [**デバッグ**] [デバッグ開始] の順に選択して、デバッグを開始  >  します。
+4. **F5** キーを押すかメニュー バーで **[デバッグ]**  >  **[デバッグ開始]** の順に選択して、デバッグを開始します。
 
      Visual Studio によって、拡張機能が %UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\External Data List Generator\1.0 にインストールされ、Visual Studio の実験用インスタンスが開始されます。 このインスタンスの Visual Studio でプロジェクト項目をテストします。
 
 #### <a name="to-test-the-extension"></a>拡張機能をテストするには
 
-1. Visual Studio の実験用インスタンスのメニューバーで、[**ファイル**] [  >  **新規作成**] [プロジェクト] の順に選択し  >  ます。
+1. Visual Studio の実験用インスタンスのメニュー バーで **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** の順に選択します。
 
-2. [ **新しいプロジェクト** ] ダイアログボックスで、[ **テンプレート** ] ノードを展開し、[ **Visual C#** ] ノードを展開して、[ **SharePoint** ] ノードを展開し、[ **2010**] を選択します。
+2. **[新しいプロジェクト]** ダイアログ ボックスで、 **[テンプレート]** ノード、 **[Visual C#]** ノード、 **[SharePoint]** ノードの順に展開し、 **[2010]** をクリックします。
 
-3. ダイアログボックスの上部にある一覧で、 **.NET Framework 3.5** が選択されていることを確認します。 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] のプロジェクトには、このバージョンの .NET Framework が必要です。
+3. ダイアログ ボックスの上部にある一覧で **[.NET Framework 3.5]** が選択されていることを確認します。 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] のプロジェクトには、このバージョンの .NET Framework が必要です。
 
-4. プロジェクトテンプレートの一覧で、[ **SharePoint 2010 プロジェクト**] を選択します。
+4. プロジェクト テンプレートの一覧で **[SharePoint 2010 プロジェクト]** を選択します。
 
-5. [ **名前** ] ボックスに「 **Sharepointprojecttestbdc**」と入力し、[ **OK** ] をクリックします。
+5. **[名前]** ボックスに「**SharePointProjectTestBDC**」と入力し、 **[OK]** をクリックします。
 
-6. SharePoint カスタマイズウィザードで、デバッグに使用するサイトの URL を入力し、[ **ファームソリューションとして配置**] を選択して、[ **完了** ] をクリックします。
+6. SharePoint カスタマイズ ウィザードで、デバッグに使用するサイトの URL を入力し、 **[ファーム ソリューションとして配置する]** を選択して、 **[完了]** をクリックします。
 
-7. SharePointProjectTestBDC プロジェクトのショートカットメニューを開き、[ **追加**]、[ **新しい項目**] の順に選択します。
+7. SharePointProjectTestBDC プロジェクトのショートカット メニューを開き、 **[追加]** を選択して、 **[新しい項目]** をクリックします。
 
-8. [ **NewItem の追加-SharePointProjectTestBDC** ] ダイアログボックスで、[インストールされている言語] ノードを展開し、[ **SharePoint** ] ノードを展開します。
+8. **[新しい項目の追加 - SharePointProjectTestBDC]** ダイアログ ボックスで、インストールされている言語ノード、 **[SharePoint]** ノードの順に展開します。
 
-9. [ **2010** ] ノードを選択し、[ **ビジネスデータ接続モデル (ファームソリューションのみ)** ] テンプレートを選択します。
+9. **[2010]** ノード、 **[ビジネス データ接続モデル (ファーム ソリューションのみ)]** テンプレートの順に選択します。
 
-10. [ **名前** ] ボックスに「 **TestBDCModel**」と入力し、[ **追加** ] をクリックします。
+10. **[名前]** ボックスに「**TestBDCModel**」と入力し、 **[追加]** をクリックします。
 
 11. Visual Studio のもう一方のインスタンスで、ProjectItemExtension コード ファイルの `Initialize` メソッドに設定したブレークポイントで、コードが停止していることを確認します。
 
-12. 停止した Visual Studio のインスタンスで、F5 キーを **押す** か、メニューバーで [**デバッグ**] [続行] を選択して、  >  プロジェクトのデバッグを続行します。
+12. 停止した Visual Studio のインスタンスで、**F5** キーを押すかメニュー バーで **[デバッグ]**  >  **[続行]** の順に選択して、プロジェクトのデバッグを続行します。
 
-13. Visual Studio の実験用インスタンスで、 **F5** キーを押すか、メニューバーで [**デバッグ**] [デバッグ開始] の順に選択して、  >   **TestBDCModel** プロジェクトをビルド、配置、実行します。
+13. Visual Studio の実験用インスタンスで、**F5** キーを押すかメニュー バーで **[デバッグ]**  >  **[デバッグ開始]** の順に選択して、**TestBDCModel** プロジェクトをビルド、配置、実行します。
 
      デバッグ用に指定した SharePoint サイトの既定のページが Web ブラウザーに表示されます。
 
-14. [クイック起動] 領域の [ **リスト** ] セクションに、プロジェクトの既定の BDC モデルに基づくリストがまだ含まれていないことを確認します。 まず、SharePoint のユーザー インターフェイスを使用するか、プロジェクト項目の拡張機能を使用して、外部データ リストを作成する必要があります。
+14. クイック起動領域の **[リスト]** セクションを見て、プロジェクトの既定の BDC モデルに基づくリストがまだ存在しないことを確認します。 まず、SharePoint のユーザー インターフェイスを使用するか、プロジェクト項目の拡張機能を使用して、外部データ リストを作成する必要があります。
 
 15. Web ブラウザーを閉じます。
 
-16. TestBDCModel プロジェクトが開かれている Visual Studio のインスタンスで、**ソリューションエクスプローラー** の [ **TestBDCModel** ] ノードのショートカットメニューを開き、[**外部データの一覧の生成**] をクリックします。
+16. TestBDCModel プロジェクトを開いている Visual Studio のインスタンスで、**ソリューション エクスプローラー** の **[TestBDCModel]** ノードのショートカット メニューを開き、 **[外部データ リストの生成]** をクリックします。
 
-17. Visual Studio のもう一方のインスタンスで、`GenerateExternalDataLists_Execute` メソッドに設定したブレークポイントで、コードが停止していることを確認します。 F5 キーを **押す** か、メニューバーで [**デバッグ**] [続行] の順に選択して、  >  プロジェクトのデバッグを続行します。
+17. Visual Studio のもう一方のインスタンスで、`GenerateExternalDataLists_Execute` メソッドに設定したブレークポイントで、コードが停止していることを確認します。 **F5** キーを押すかメニュー バーで **[デバッグ]**  >  **[続行]** の順に選択して、プロジェクトのデバッグを続行します。
 
-18. Visual Studio の実験用インスタンスによって、 **[entity1datalist]** という名前のリストインスタンスが TestBDCModel プロジェクトに追加され、インスタンスによってリストインスタンスの **Feature2** という名前の機能も生成されます。
+18. Visual Studio の実験用インスタンスによって、TestBDCModel プロジェクトに **Entity1DataList** という名前のリスト インスタンスが追加されます。また、そのリスト インスタンスに対して **Feature2** という名前のフィーチャーが生成されます。
 
-19. **F5** キーを押すか、メニューバーで [**デバッグ**] [デバッグ開始] の順に選択して、  >   TestBDCModel プロジェクトをビルド、配置、実行します。
+19. **F5** キーを押すかメニュー バーで **[デバッグ]**  >  **[デバッグ開始]** の順に選択して、TestBDCModel プロジェクトをビルド、配置、実行します。
 
      デバッグに使用する SharePoint サイトの既定のページが Web ブラウザーに表示されます。
 
-20. [クイック起動] 領域の [ **リスト** ] セクションで、[ **[entity1datalist]** ] の一覧を選択します。
+20. クイック起動領域の **[リスト]** セクションで、 **[Entity1DataList]** リストを選択します。
 
 21. リストに Identifier1 および Message という名前の列が存在し、項目 (Identifier1 の値は 0 で、Message の値は Hello World) が 1 つ含まれていることを確認します。
 
-     **ビジネスデータ接続モデル** プロジェクトテンプレートでは、すべてのデータを提供する既定の BDC モデルが生成されます。
+     **[ビジネス データ接続モデル]** プロジェクト テンプレートにより、このデータをすべて提供する既定の BDC モデルが生成されます。
 
 22. Web ブラウザーを閉じます。
 
-## <a name="clean-up-the-development-computer"></a>開発用コンピューターのクリーンアップ
+## <a name="clean-up-the-development-computer"></a>開発コンピューターをクリーンアップする
  プロジェクト項目の拡張機能のテストが終わったら、外部リストおよび BDC モデルを SharePoint サイトから削除し、さらにプロジェクト項目の拡張機能を Visual Studio から削除します。
 
 #### <a name="to-remove-the-external-data-list-from-the-sharepoint-site"></a>SharePoint サイトから外部データ リストを削除するには
 
-1. SharePoint サイトの [クイック起動] 領域で、[ **[entity1datalist]** ] の一覧を選択します。
+1. SharePoint サイトのクイック起動領域で、 **[Entity1DataList]** リストをクリックします。
 
-2. SharePoint サイトのリボンで、[ **リスト** ] タブを選択します。
+2. SharePoint サイトのリボンで、 **[リスト]** タブをクリックします。
 
-3. [ **一覧** ] タブの [ **設定** ] グループで、[ **リストの設定**] を選択します。
+3. **[リスト]** タブで、 **[設定]** グループの **[リストの設定]** をクリックします。
 
-4. [ **アクセス許可と管理**] で、[ **この一覧を削除** する] を選択し、[ **OK** ] をクリックして、リストをごみ箱に送信することを確認します。
+4. **[権限と管理]** の下で、 **[このリストの削除]** を選択し、 **[OK]** をクリックして、リストをごみ箱に送ります。
 
 5. Web ブラウザーを閉じます。
 
 #### <a name="to-remove-the-bdc-model-from-the-sharepoint-site"></a>BDC モデルを SharePoint サイトから削除するには
 
-1. Visual Studio の実験用インスタンスのメニューバーで、[**ビルド** の取り消し] を選択し  >  ます。
+1. Visual Studio の実験用インスタンスのメニュー バーで **[ビルド]**  >  **[取り消し]** の順に選択します。
 
      Visual Studio によって BDC モデルが SharePoint サイトから削除されます。
 
 #### <a name="to-remove-the-project-item-extension-from-visual-studio"></a>プロジェクト項目の拡張機能を Visual Studio から削除するには
 
-1. Visual Studio の実験用インスタンスのメニューバーで、[**ツール**] [  >  **拡張機能と更新プログラム**] の順に選択します。
+1. Visual Studio の実験用インスタンスのメニュー バーで、 **[ツール]**  >  **[拡張機能と更新プログラム]** の順に選択します。
 
      **[拡張機能と更新プログラム]** ダイアログ ボックスが表示されます。
 
-2. 拡張機能の一覧で [ **外部データリストジェネレーター**] を選択し、[ **アンインストール** ] をクリックします。
+2. 拡張機能の一覧で **[External Data List Generator]** を選択し、 **[アンインストール]** をクリックします。
 
-3. 表示されるダイアログボックスで、[ **はい]** を選択して、拡張機能をアンインストールすることを確認します。
+3. 確認のダイアログ ボックスが表示されたら、 **[はい]** を選択して、拡張機能をアンインストールします。
 
-4. [ **今すぐ再起動** ] を選択して、アンインストールを完了します。
+4. **[今すぐ再起動]** をクリックするとアンインストールは完了です。
 
 5. Visual Studio の両方のインスタンス (実験用インスタンスと、GenerateExternalDataLists ソリューションを開いたインスタンス) を閉じます。
 

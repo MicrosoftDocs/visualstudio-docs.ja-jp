@@ -1,6 +1,6 @@
 ---
 title: T4 パラメーター ディレクティブ
-description: Visual Studio では、パラメーターディレクティブは、外部コンテキストから渡された値から初期化されるテンプレートコード内のプロパティを宣言します。
+description: Visual Studio では、パラメーター ディレクティブは、外部コンテキストから渡された値から初期化されるテンプレート コード内のプロパティを宣言します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,26 +11,26 @@ ms.workload:
 - multiple
 ms.openlocfilehash: fe68d31d214ae4be8fca35f1e90e63690f3ad581
 ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/08/2021
 ms.locfileid: "99924607"
 ---
 # <a name="t4-parameter-directive"></a>T4 パラメーター ディレクティブ
 
-Visual Studio テキストテンプレートでは、ディレクティブは、 `parameter` 外部コンテキストから渡された値から初期化されるテンプレートコード内のプロパティを宣言します。 テキスト変換を呼び出すコードを記述する場合は、これらの値を設定できます。
+Visual Studio テキスト テンプレートでは、`parameter` ディレクティブは、外部コンテキストから渡された値から初期化されるテンプレート コード内のプロパティを宣言します。 テキスト変換を呼び出すコードを記述する場合は、これらの値を設定できます。
 
-## <a name="using-the-parameter-directive"></a>Parameter ディレクティブの使用
+## <a name="using-the-parameter-directive"></a>パラメーター ディレクティブを使用する
 
 ```
 <#@ parameter type="Full.TypeName" name="ParameterName" #>
 ```
 
- ディレクティブは、 `parameter` 外部コンテキストから渡された値から初期化されるテンプレートコード内のプロパティを宣言します。 テキスト変換を呼び出すコードを記述する場合は、これらの値を設定できます。 値は、 `Session` ディクショナリまたはで渡すことができ <xref:System.Runtime.Remoting.Messaging.CallContext> ます。
+ `parameter` ディレクティブでは、外部コンテキストから渡された値から初期化されるテンプレート コード内のプロパティを宣言します。 テキスト変換を呼び出すコードを記述する場合は、これらの値を設定できます。 値は、`Session` ディクショナリまたは <xref:System.Runtime.Remoting.Messaging.CallContext> で渡すことができます。
 
- リモート処理可能な型のパラメーターを宣言できます。 つまり、型はを使用して宣言する <xref:System.SerializableAttribute> か、から派生する必要があり <xref:System.MarshalByRefObject> ます。 これにより、テンプレートが処理される AppDomain にパラメーター値を渡すことができます。
+ 任意のリモート処理が可能な型のパラメーターを宣言できます。 つまり、<xref:System.SerializableAttribute> を使用して型を宣言するか、<xref:System.MarshalByRefObject> から型を派生する必要があります。 これにより、テンプレートが処理される AppDomain にパラメーター値を渡すことができます。
 
- たとえば、次の内容を含むテキストテンプレートを作成できます。
+ たとえば、次の内容を含むテキスト テンプレートを作成できます。
 
 ```
 <#@ template language="C#" #>
@@ -43,7 +43,7 @@ Line <#= i #>
 ```
 
 ## <a name="passing-parameter-values-to-a-template"></a>テンプレートにパラメーター値を渡す
- メニューコマンドやイベントハンドラーなどの Visual Studio 拡張機能を作成する場合は、テキストテンプレートサービスを使用してテンプレートを処理できます。
+ メニュー コマンドやイベント ハンドラーなどの Visual Studio 拡張機能を作成する場合は、テキスト テンプレート サービスを使用してテンプレートを処理できます。
 
 ```csharp
 // Get a service provider - how you do this depends on the context:
@@ -60,8 +60,8 @@ string result = t4.ProcessTemplate("MyTemplateFile.t4",
   System.IO.File.ReadAllText("MyTemplateFile.t4"));
 ```
 
-## <a name="passing-values-in-the-call-context"></a>呼び出しコンテキストで値を渡す
- 別の方法として、の論理データとして値を渡すこともでき <xref:System.Runtime.Remoting.Messaging.CallContext> ます。
+## <a name="passing-values-in-the-call-context"></a>呼び出しコンテキスト内の値を渡す
+ 別の方法として、<xref:System.Runtime.Remoting.Messaging.CallContext> の論理データとして値を渡すこともできます。
 
  次の例では、両方のメソッドを使用して値を渡します。
 
@@ -84,10 +84,10 @@ string result = t4.ProcessTemplate("",
 //     Test 32 test
 ```
 
-## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>Run-Time (前処理される) テキストテンプレートに値を渡す
- 通常、ランタイム (前処理され `<#@parameter#>` た) テキストテンプレートでは、ディレクティブを使用する必要はありません。 代わりに、生成されたコードの追加のコンストラクターまたは設定可能なプロパティを定義して、パラメーター値を渡すことができます。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
+## <a name="passing-values-to-a-run-time-preprocessed-text-template"></a>実行時 (前処理された) テキスト テンプレートに値を渡す
+ 通常、実行時 (前処理された) テキスト テンプレートでは、`<#@parameter#>` ディレクティブを使用する必要はありません。 代わりに、生成されたコードの追加のコンストラクターまたは設定可能なプロパティを定義して、パラメーター値を渡すことができます。 詳細については、「[T4 テキスト テンプレートを使用した実行時テキスト生成](../modeling/run-time-text-generation-with-t4-text-templates.md)」を参照してください。
 
- ただし、をランタイムテンプレートで使用する場合は、 `<#@parameter>` セッションディクショナリを使用して値を渡すことができます。 例として、という前処理済みテンプレートとしてファイルを作成したとし `PreTextTemplate1` ます。 次のコードを使用して、プログラムでテンプレートを呼び出すことができます。
+ ただし、`<#@parameter>` を実行時テンプレートで使用する場合は、Session ディクショナリを使用して値を渡すことができます。 例として、`PreTextTemplate1` という前処理されたテンプレートとしてファイルを作成したとします。 次のコードを使用して、プログラムでテンプレートを呼び出すことができます。
 
 ```csharp
 PreTextTemplate1 t = new PreTextTemplate1();
@@ -101,4 +101,4 @@ string resultText = t.TransformText();
 ## <a name="obtaining-arguments-from-texttemplateexe"></a>TextTemplate.exe から引数を取得する
 
 > [!IMPORTANT]
-> ディレクティブは、 `parameter` `-a` ユーティリティのパラメーターに設定された値を取得しません `TextTransform.exe` 。 これらの値を取得するには、ディレクティブでを設定し、を `hostSpecific="true"` `template` 使用し `this.Host.ResolveParameterValue("","","argName")` ます。
+> `parameter` ディレクティブでは、`TextTransform.exe` ユーティリティの `-a` パラメーターに設定された値は取得されません。 これらの値を取得するには、`template` ディレクティブで `hostSpecific="true"` を設定し、`this.Host.ResolveParameterValue("","","argName")` を使用します。

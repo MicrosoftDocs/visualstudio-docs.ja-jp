@@ -1,6 +1,6 @@
 ---
-title: 動的ツールウィンドウを開く |Microsoft Docs
-description: 動的ツールウィンドウについて説明します。これは、UI コンテキストが適用されなくなったときに、特定の UI コンテキストが適用されるたびに開きます。
+title: 動的なツール ウィンドウを開く | Microsoft Docs
+description: 特定の UI コンテキストが適用されるたびに開き、その UI コンテキストが適用されなくなったときに閉じる動的なツール ウィンドウについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,29 +14,29 @@ ms.workload:
 - vssdk
 ms.openlocfilehash: 357644f67da9a3bbc468d708cf39e44f737dbf0f
 ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2021
 ms.locfileid: "105090422"
 ---
-# <a name="open-a-dynamic-tool-window"></a>動的ツールウィンドウを開く
-ツールウィンドウは、通常、メニューのコマンドから、または同等のキーボードショートカットによって開かれます。 ただし、特定の UI コンテキストが適用されるたびに表示されるツールウィンドウが必要になる場合があり、UI コンテキストが適用されなくなると、が終了します。 これらの種類のツールウィンドウは、 *動的* または *自動で表示* されます。
+# <a name="open-a-dynamic-tool-window"></a>動的なツール ウィンドウを開く
+ツール ウィンドウは通常、メニューのコマンド、または同等のキーボード ショートカットから開かれます。 ただし、特定の UI コンテキストが適用されるたびに開き、その UI コンテキストが適用されなくなったときに閉じるツール ウィンドウが必要になる場合があります。 これらの種類のツール ウィンドウは、"*動的*" または "*自動表示*" と呼ばれます。
 
 > [!NOTE]
-> 定義済みの UI コンテキストの一覧については、「」を参照してください <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> 。
+> 定義済みの UI コンテキストの一覧については、「<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>」を参照してください。
 
- 起動時に動的ツールウィンドウを開き、作成が失敗する可能性がある場合は、インターフェイスを実装 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> し、メソッドでエラー条件をテストする必要があり <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> ます。 起動時に開く必要がある動的なツールウィンドウがあることをシェルが認識できるようにするには、 `SupportsDynamicToolOwner` パッケージ登録に値 (1 に設定) を追加する必要があります。 この値は標準の一部ではない <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> ため、カスタム属性を作成して追加する必要があります。 カスタム属性の詳細については、「 [カスタム登録属性を使用して拡張機能を登録する](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension)」を参照してください。
+ 起動時に動的なツール ウィンドウを開くようにしたいが、その作成に失敗する可能性がある場合は、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> インターフェイスを実装し、<xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> メソッドでエラー状態をテストする必要があります。 起動時に開く必要のある動的なツール ウィンドウがあることをシェルで認識できるようにするには、パッケージの登録に (1 に設定された) `SupportsDynamicToolOwner` 値を追加する必要があります。 この値は標準の <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> に含まれていないため、これを追加するにはカスタム属性を作成する必要があります。 カスタム属性の詳細については、「[カスタム登録属性を使用して拡張機能を登録する](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension)」を参照してください。
 
- <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>ツールウィンドウを開くには、を使用します。 必要に応じて、ツールウィンドウが作成されます。
+ ツール ウィンドウを開くには、<xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> を使用します。 ツール ウィンドウが必要に応じて作成されます。
 
 > [!NOTE]
-> 動的なツールウィンドウは、ユーザーが閉じることができます。 メニューコマンドを作成して、ユーザーがツールウィンドウを再び開くことができるようにするには、ツールウィンドウを開いたのと同じ UI コンテキストでメニューコマンドを有効にし、それ以外の場合は無効にします。
+> 動的なツール ウィンドウは、ユーザーが閉じることができます。 ユーザーがツール ウィンドウを再度開くことができるようにメニュー コマンドを作成する場合は、そのメニュー コマンドを、ツール ウィンドウを開くのと同じ UI コンテキストでは有効にし、それ以外の場合は無効にする必要があります。
 
-## <a name="to-open-a-dynamic-tool-window"></a>動的ツールウィンドウを開くには
+## <a name="to-open-a-dynamic-tool-window"></a>動的なツール ウィンドウを開くには
 
-1. **DynamicToolWindow** という名前の VSIX プロジェクトを作成し、 *DynamicWindowPane* という名前のツールウィンドウ項目テンプレートを追加します。 詳細については、「 [ツールウィンドウで拡張機能を作成](../extensibility/creating-an-extension-with-a-tool-window.md)する」を参照してください。
+1. **DynamicToolWindow** という名前の VSIX プロジェクトを作成し、*DynamicWindowPane.cs* という名前のツール ウィンドウ項目テンプレートを追加します。 詳細については、[ツール ウィンドウ拡張機能での作成](../extensibility/creating-an-extension-with-a-tool-window.md)に関するページを参照してください。
 
-2. *Dynamicwindowpanepackage .cs* ファイルで、dynamicwindowpanepackage 宣言を見つけます。 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> ツールウィンドウを登録するには、属性と属性を追加します。
+2. *DynamicWindowPanePackage.cs* ファイルで、DynamicWindowPanePackage の宣言を見つけます。 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> および <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> 属性を追加して、ツール ウィンドウを登録します。
 
     ```vb
     [ProvideToolWindow(typeof(DynamicWindowPane)]
@@ -50,8 +50,8 @@ ms.locfileid: "105090422"
     {. . .}
     ```
 
-     上記の属性では、DynamicWindowPane という名前のツールウィンドウを一時的なウィンドウとして登録します。これは、Visual Studio を閉じてからもう一度開くと、永続化されません。 DynamicWindowPane は <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> 、適用されるたびに開かれ、それ以外の場合は閉じられます。
+     上記の属性では、DynamicWindowPane という名前のツール ウィンドウを、Visual Studio が閉じられて再度開かれたときには保持されない一時的なウィンドウとして登録します。 DynamicWindowPane は、<xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> が適用されるたびに開かれ、それ以外の場合は閉じられます。
 
-3. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。 ツールウィンドウが表示されません。
+3. プロジェクトをビルドし、デバッグを開始します。 実験用インスタンスが表示されます。 ツール ウィンドウは表示されません。
 
-4. 実験用インスタンスでプロジェクトを開きます。 ツールウィンドウが表示されます。
+4. 実験用インスタンスでプロジェクトを開きます。 ツール ウィンドウが表示されます。
