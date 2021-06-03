@@ -3,7 +3,7 @@ title: Visual Studio を使用して Office 用 VSTO アドインを作成する
 description: Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成する方法について説明します。
 titleSuffix: ''
 ms.custom: seodec18, SEO-VS-2020
-ms.date: 04/28/2021
+ms.date: 08/14/2019
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,17 +13,14 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 990caeec642a745bec5b6e0f2d29ff5d6213d095
-ms.sourcegitcommit: 9cb0097c33755a3e5cbadde3b0a6e9e76cee727d
+ms.openlocfilehash: 611feb69dc4c5ebdd340a61c49e76e0d7c33e713
+ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109848319"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99947959"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio を使用して Office 用 VSTO アドインを作成する
-> [!IMPORTANT]
-> VSTO は [.NET Framework](https://docs.microsoft.com/dotnet/framework/get-started/overview) に依存しています。 COM アドインも .NET Framework を使用して記述することができます。 Office アドインは、[.NET Core と .NET 5+](https://docs.microsoft.com/dotnet/core/dotnet-five) (.NET の最新バージョン) では作成できません。 これは、.NET Core と .NET 5+ を .NET Framework と同じプロセスで動作させることができず、アドインの読み込みエラーが発生する可能性があるためです。 引き続き .NET Framework を使用して、Office 用の VSTO アドインと COM アドインを記述できます。 Microsoft が VSTO または COM アドイン プラットフォームを、.NET Core または .NET 5+ を使用するように更新することはありません。 .NET Core と .NET 5+ (ASP.NET Core を含む) を利用して、[Office Web アドイン](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)のサーバー側を作成できます。
-
   Visual Studio の Microsoft Office Developer Tools を使用して、Office を拡張する .NET Framework アプリケーションを作成できます。 このようなアプリケーションは、 *Office ソリューション* とも呼ばれます。
 
  Office Developer Tools で提供される機能は、さまざまなビジネス要件に合った Office ソリューションを作成するのに役立ちます。 このツールには、Visual Basic または Visual C# を使用した Office ソリューションの作成に役立つプロジェクト テンプレートや、Office ソリューションで使用するカスタム ユーザー インターフェイスの作成に役立つビジュアルなデザイナーが含まれています。
@@ -33,7 +30,7 @@ ms.locfileid: "109848319"
  Office 開発の最新情報については、「[Microsoft Office デベロッパー センター](https://developer.microsoft.com/office/docs)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
-- [はじめに &#40;Visual Studio での Office 開発&#41;](getting-started-office-development-in-visual-studio.md)
+- [作業を始める &#40;Visual Studio での Office 開発&#41;](getting-started-office-development-in-visual-studio.md)
 
  Office ソリューションの作成用に開発コンピューターを構成する方法、Office ソリューションの作成を開始する方法、および Visual Studio での Office 開発を対象とする新機能に関する情報へのリンクを示します。
 
@@ -45,7 +42,7 @@ ms.locfileid: "109848319"
 
  ドキュメント レベルのカスタマイズと VSTO アドインに関する情報など、Office ソリューションの動作に関する情報へのリンクを示します。
 
-- [Office ソリューションの設計と作成](designing-and-creating-office-solutions.md)
+- [Office ソリューションを設計して作成する](designing-and-creating-office-solutions.md)
 
  Visual Studio で Office プロジェクトを作成し、プロジェクトを構成する方法について説明します。
 
