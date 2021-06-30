@@ -29,7 +29,7 @@ Visual Studio 2019 には、開発者向けの 2 つのコマンドライン シ
 
 :::image type="content" source="media/developer-command-prompt-for-vs/command-prompt.png" alt-text="clrver ツールが表示された Visual Studio の開発者コマンド プロンプト":::
 
-Visual Studio 2019 バージョン 16.5 以降、Visual Studio には、これらのシェル (開発者コマンド プロンプトと開発者用 PowerShell) のどちらもホストできる統合 **ターミナル** が組み込まれています。 各シェルの複数のタブを開くこともできます。 Visual Studio ターミナルは、[Windows ターミナル](/windows/terminal/)を基に構築されています。 Visual Studio でターミナルを開くには、 **[表示]**  >  **[ターミナル]** を選択します。
+Visual Studio 2019 バージョン 16.5 以降、Visual Studio には、これらのシェル (開発者コマンド プロンプトと開発者用 PowerShell) のどちらもホストできる統合 **ターミナル** が組み込まれています。 各シェルの複数のタブを開くこともできます。 Visual Studio ターミナルは、[Windows Terminal](/windows/terminal/)を基に構築されています。 Visual Studio でターミナルを開くには、 **[表示]**  >  **[ターミナル]** を選択します。
 
 :::image type="content" source="media/developer-command-prompt-for-vs/vs-terminal.png" alt-text="複数のタブが表示された Visual Studio ターミナル":::
 
@@ -134,7 +134,7 @@ Visual Studio 内から開発者コマンド プロンプトまたは開発者�
 
 - [開発者用 PowerShell](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
 - [新しい Visual Studio ターミナルの紹介](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
-- [Windows ターミナル](/windows/terminal/)
+- [Windows Terminal](/windows/terminal/)
 - [.NET Framework ツール](/dotnet/framework/tools/index)
 - [外部ツールの管理](../managing-external-tools.md)
 - [コマンド ラインから Microsoft C++ ツールセットを使用する](/cpp/build/building-on-the-command-line)
