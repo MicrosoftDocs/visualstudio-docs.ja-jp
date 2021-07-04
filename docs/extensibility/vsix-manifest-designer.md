@@ -3,7 +3,7 @@ title: VSIX マニフェスト デザイナー | Microsoft Docs
 description: Visual Studio 拡張機能のインストール動作を設定する VSIX パッケージ マニフェスト ファイルを VSIX マニフェスト デザイナーで変更する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VS.Sdk.VsixManifestEditor
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dfa6e402bfa6b0ef1949a967c37773557b79b0a3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: baea7be60c67f186da2372c4644366b4a1a7a202
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062227"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905190"
 ---
 # <a name="vsix-manifest-designer"></a>VSIX マニフェスト デザイナー
 Visual Studio 拡張機能のインストール動作を設定する VSIX パッケージ マニフェスト ファイルを変更します。

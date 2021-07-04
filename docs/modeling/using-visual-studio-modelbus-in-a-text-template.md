@@ -3,17 +3,17 @@ title: テキスト テンプレートで ModelBus を使用する
 description: Visual Studio ModelBus 参照を含むモデルを読み取るテキスト テンプレートを作成する場合に、ターゲット モデルにアクセスするための参照を解決する方法について説明します。
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f65ece27122949fec006d73858c8c89483441f1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2afe8de66b109793a4e15e8320c3f498a08b25ec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924374"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388387"
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>テキスト テンプレートでの Visual Studio ModelBus の使用
 

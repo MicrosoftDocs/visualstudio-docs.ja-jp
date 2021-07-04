@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, domain class
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cc86f04841a819423bc45c9220d6de80a5340b2d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eaaae0028d574a521319ae045cdb4f7f1bdafaa2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99915997"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390009"
 ---
 # <a name="properties-of-domain-classes"></a>ドメイン クラスのプロパティ
 ドメイン クラスには、次の表に示したプロパティがあります。 ドメイン クラスについては、「[モデル、クラス、およびリレーションシップについて」](../modeling/understanding-models-classes-and-relationships.md)を参照してください。 これらのプロパティの使用方法の詳細については、「[ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)」を参照してください。

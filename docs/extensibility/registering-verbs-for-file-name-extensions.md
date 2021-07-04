@@ -3,7 +3,7 @@ title: ファイル名拡張子の動詞の登録 | Microsoft Docs
 description: Shell キーを使用して、ファイル名拡張子のプログラム識別子に関連付けられた動詞を登録する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - verbs, registering
 ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9936efc2e01c0d82d5cc9fce140d543eb95247ad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c223dea7e265d8d040d502c99ded09380e89690f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068480"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901228"
 ---
 # <a name="register-verbs-for-file-name-extensions"></a>ファイル名拡張子の動詞を登録する
 ファイル名拡張子のアプリケーションとの関連付けには、一般に、ユーザーがファイルをダブルクリックしたときに実行される優先アクションが含まれています。 この優先アクションは、そのアクションに対応する動詞 (Open など) にリンクされています。

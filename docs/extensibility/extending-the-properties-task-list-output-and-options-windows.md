@@ -3,7 +3,7 @@ title: プロパティ、タスク一覧、出力、オプション ウィンド
 description: Visual Studio のツール ウィンドウに関する情報を、新しい [オプション] ページと [プロパティ] ページ上の新しい設定に統合する方法について説明します。
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - properties pane
 - task list
@@ -17,18 +17,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 970ab167434da4ba9c28eb6bbf9a8ea5f6cc6af0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3334ba3694ee3c1354c152b013c38472e4b90b72
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070142"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903282"
 ---
 # <a name="extend-the-properties-task-list-output-and-options-windows"></a>プロパティ、タスク一覧、出力、オプション ウィンドウを拡張する
 Visual Studio では、任意のツール ウィンドウにアクセスできます。 このチュートリアルでは、ツール ウィンドウに関する情報を新しい **[オプション]** ページと **[プロパティ]** ページ上の新しい設定に統合する方法と、 **[タスク一覧]** および **[出力]** ウィンドウに書き込む方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
- Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+ Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールすることはしません。 これは、Visual Studio のセットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="create-an-extension-with-a-tool-window"></a>ツール ウィンドウで拡張機能を作成する
 

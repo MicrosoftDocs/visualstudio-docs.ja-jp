@@ -6,23 +6,23 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, using models
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 73b0d46e1e293d0713cf7e71706fa0188aaea269
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 095a6f17691d3265320a7b77905f70903bec1cb5
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959065"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388504"
 ---
 # <a name="use-models-in-your-development-process"></a>開発プロセス内でのモデルの使用
 
 Visual Studio では、システム、アプリケーション、またはコンポーネントについて理解し、変更するためのモデルを使用することができます。 モデルは、システムが動作する世界を視覚化できるようにして、ユーザーのニーズを明確化し、システムのアーキテクチャを定義し、コードを分析し、コードが要件を満たしていることを確認できるようにします。 [Channel 9 ビデオ: モデリングによるアーキテクチャの改善](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Improving-architecture-through-modeling)を参照してください。
 
-どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+どのバージョンの Visual Studio が各モデルの種類をサポートしているかについては、「 [Version support for architecture and modeling tools](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 モデルは、いくつかの方法で役立ちます。
 
@@ -136,7 +136,7 @@ Visual Studio では、システム、アプリケーション、またはコン
 |**ビデオ**|![ビデオへのリンク ](../data-tools/media/playvideo.gif) [MSDN の操作方法ビデオ: UML モデルと図の作成および使用方法 (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [Channel 9: Visual Studio 2010 での UML](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-1-brainstorming-a-project)<br /><br /> ![ビデオへのリンク](../data-tools/media/playvideo.gif) [MSDN How Do I シリーズ: UML ツールと拡張機能 (Visual Studio 2010 Ultimate)](/previous-versions/visualstudio/visual-studio-2010/dd831853(v=vs.100))|
 |**フォーラム**|- [Visual Studio の視覚化ツールとモデリング ツール](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsarch)<br />- [Visual Studio の視覚化およびモデリング SDK (DSL ツール)](https://social.msdn.microsoft.com/Forums/home?forum=dslvsarchx)|
 |**ブログ**|[Microsoft DevOps](https://devblogs.microsoft.com/devops/)|
-|**技術記事とジャーナル**|[MSDN アーキテクチャ センター](/previous-versions/dn630665(v=msdn.10))<br /><br /> [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)|
+|**技術記事とジャーナル**|[MSDN アーキテクチャ センター](/previous-versions/dn630665(v=msdn.10))|
 
 ## <a name="see-also"></a>関連項目
 

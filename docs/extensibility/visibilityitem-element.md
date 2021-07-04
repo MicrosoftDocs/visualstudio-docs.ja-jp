@@ -3,7 +3,7 @@ title: VisibilityItem 要素 | Microsoft Docs
 description: VisibilityItem 要素では、コマンドとツールバーを静的に表示するかどうかを決定します。 エントリによって、コマンドまたはメニュー、および関連付けられているコマンド UI コンテキストを識別します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VisibilityItem element (VSCT XML schema)
 - VSCT XML schema elements, VisibilityItem
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1229c5e63838a8192c7622cdddd9881799a2da11
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 025e05dd0346c7da0a70985aa579d1673f2ffcaa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062513"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905437"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem 要素
 `VisibilityItem` 要素では、コマンドとツールバーを静的に表示するかどうかを決定します。 各エントリによって、コマンドまたはメニュー、および関連付けられているコマンド UI コンテキストを識別します。 Visual Studio では、コマンド、メニュー、ツールバー、およびそれらの表示/非表示を、これらを定義する VSPackage を読み込まずに検出します。 IDE では、<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> メソッドを使用して、コマンド UI コンテキストがアクティブかどうかを判定します。

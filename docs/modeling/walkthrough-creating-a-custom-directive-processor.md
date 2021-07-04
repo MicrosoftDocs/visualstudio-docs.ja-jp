@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 718ca7b5abf2a7730470475caf2cdf5c200b23b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e23c8de467cc45abf6fa9f61dfb29dd6c5f1d9cc
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924099"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388244"
 ---
 # <a name="walkthrough-create-a-custom-directive-processor"></a>チュートリアル: カスタム ディレクティブ プロセッサを作成する
 

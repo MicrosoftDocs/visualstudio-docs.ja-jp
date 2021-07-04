@@ -7,17 +7,17 @@ ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e6b824d53c37ef922b8c9580c87a478aef93586
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22940fb86ab0cfd7262a3ca7845521847add2dff
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924063"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388127"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>チュートリアル: テキスト テンプレートを使用してコードを生成する
 

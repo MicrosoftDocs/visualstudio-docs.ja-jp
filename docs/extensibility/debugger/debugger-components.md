@@ -3,7 +3,7 @@ title: デバッガーのコンポーネント | Microsoft Docs
 description: デバッグ セッションの構成要素について説明します。このセッションは、VSPackage として実装されている Visual Studio デバッガーによって管理されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Visual Studio], components
 - components [Visual Studio SDK], debugging
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7c558d20d24acd65ece4c4df43eb8f474c20447
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c246bc00ee4f6fcead8404b3174da39f7b5ca2d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094953"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903984"
 ---
 # <a name="debugger-components"></a>デバッガーのコンポーネント
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] デバッガーは VSPackage として実装され、デバッグ セッション全体を管理します。 デバッグ セッションは、次の要素で構成されています。

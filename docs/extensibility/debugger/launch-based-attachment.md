@@ -3,7 +3,7 @@ title: 起動ベースのアタッチ |Microsoft Docs
 description: プログラムへの起動ベースのアタッチについて説明します。自動で、手動アタッチのようなパスに従います。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, launching
 - debug engines, attaching to programs
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe698d8d1b29f02ae3971fc95a66c4823f7252c7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 97bbc098e766a1025c372ff35c5849bfe652649f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059718"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904335"
 ---
 # <a name="launch-based-attachment"></a>起動ベースのアタッチ
 プログラムへの起動ベースのアタッチは自動的に実行されます。 プログラムをホストするプロセスが SDM によって起動されると、起動ベースのアタッチは、手動アタッチ方法と同様のパスに従います。 詳細については、[プログラムへのアタッチ](../../extensibility/debugger/attaching-to-the-program.md)に関するページを参照してください。

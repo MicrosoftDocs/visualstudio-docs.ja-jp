@@ -3,7 +3,7 @@ title: プロジェクト項目への属性の追加 | Microsoft Docs
 description: Shell Interop メソッドである GetItemAttribute と SetItemAttribute を使用して、Visual Studio でプロジェクト項目に属性を追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - attributes [Visual Studio], adding to a project item
 ms.assetid: 404a71d5-cce5-44e7-9eaf-d747c794fedb
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee65a22e0a296047f5a401e00495ee25403d64e0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 36fc5905fd2b1423865982a80a6cb2ba6a803cc5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094914"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902021"
 ---
 # <a name="add-an-attribute-to-a-project-item"></a>プロジェクト項目に属性を追加する
 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A> と <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> のメソッドは、プロジェクト項目の属性の値を取得し設定します。 SetItemAttribute では、属性がまだ存在しない場合に属性を作成し、プロジェクト項目メタデータに追加します。

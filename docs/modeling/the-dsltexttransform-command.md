@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, commands
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f51d1a5cbefc3c2cf60559075a9c9a299664ed07
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 65d1e1d02c5b7d13c2e86343c6307306542d00e2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924511"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388647"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform コマンド
 DslTextTransform.cmd は、TextTransform.exe を呼び出し、共通のオプションを使用して実行するスクリプトです。 DslTextTransformation.cmd を使用すると、[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] プロジェクトの夜間ビルドを自動化できます。 詳細については、「[TextTransform ユーティリティを使用したファイルの生成](../modeling/generating-files-with-the-texttransform-utility.md)」を参照してください。

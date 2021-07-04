@@ -4,17 +4,17 @@ description: テキスト ファイルと画像ファイルのカスタマイズ
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 42819379aa2b21788686bf0917b1523bf77e6c64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f52c4deda5b934a9b55c5ecfeec95ca633edf15e
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935366"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389268"
 ---
 # <a name="customizing-text-and-image-fields"></a>テキストおよびイメージ フィールドのカスタマイズ
 図形にテキスト デコレータを定義する場合、それは TextField によって表されます。 TextFields とその他の ShapeFields の初期化の例については、DSL ソリューションの Dsl\GeneratedCode\Shapes.cs を調べてください。

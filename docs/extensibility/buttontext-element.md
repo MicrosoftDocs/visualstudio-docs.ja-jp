@@ -3,7 +3,7 @@ title: ButtonText 要素 | Microsoft Docs
 description: ButtonText 要素を使用すると、さまざまなメニューに表示されるテキストを指定できます。 他のテキスト フィールドが指定されている場合でも、ButtonText 要素を空白することはできません。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ButtonText element (VSCT XML schema)
 - VSCT XML schema elements, ButtonText
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fa9ad6aab9d42113f3e01760e191184e168b62d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cf20a6876dd7ba52413a11f30a3d0130b32e535d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068116"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900717"
 ---
 # <a name="buttontext-element"></a>ButtonText 要素
 このフィールドを使用すると、さまざまなメニューに表示されるテキストを指定できます。 既定では、`ButtonText` 要素はメニュー コントローラーに表示されます。 また、他のテキスト フィールドが空白である場合も `ButtonText` 要素が既定値になります。 他のテキスト フィールドが指定されている場合でも、`ButtonText` 要素を空白することはできません。

@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 019f77320e9118d5f3d31e647a59c71bb474d204
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: be19b3026010e37108ca1b19096d48a3c8d88ab6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935536"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389372"
 ---
 # <a name="customize-file-storage-and-xml-serialization"></a>ファイル格納処理および XML シリアル化処理をカスタマイズする
 

@@ -4,17 +4,17 @@ description: 分離シェルを使用して、DSL の操作に必要な Visual S
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 1293593e71aa57d8e74b9035320b3da5108aba09
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 946cbf99fa7836fa8d7ec5aa1d921e7cda93bf46
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924213"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388309"
 ---
 # <a name="vs-shell-deployment"></a>VS Shell 配置
 

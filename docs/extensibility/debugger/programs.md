@@ -3,7 +3,7 @@ title: プログラム | Microsoft Docs
 description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるプログラムの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], programs
 - programs, debugging
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0769d2abc650305095115d1c645e3037096974de
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 07b23fbafd9342b555e2578c4bc0401371e30785
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094615"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901280"
 ---
 # <a name="programs"></a>プログラム
 デバッガー アーキテクチャでは、"*プログラム*" は次のようなものです。

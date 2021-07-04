@@ -3,7 +3,7 @@ title: VSTextView オブジェクト | Microsoft Docs
 description: VSTextView オブジェクトは、ユーザーがテキスト バッファーの Unicode テキストを表示し、編集することができるウィンドウです。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VSTextView
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a7ec65ed2beb866bfbb4e35fd5b290d3457ad3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 90fad54be26c11db31d649d0ae6b25c108a6b361
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062162"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905164"
 ---
 # <a name="vstextview-object"></a>VSTextView オブジェクト
 

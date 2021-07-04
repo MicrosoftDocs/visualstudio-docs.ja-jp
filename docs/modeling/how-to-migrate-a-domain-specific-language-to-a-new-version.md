@@ -3,18 +3,18 @@ title: '方法: ドメイン固有言語プロジェクトを移行する'
 description: ドメイン固有言語プロジェクトをより新しいバージョンの Visual Studio に移行する方法について説明します。
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: bbefb1cd5ae546c5454660b6782f9c76f35a63f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8119f465e32d3754dc446524286e0a2c12dedc40
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922704"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387191"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>方法: ドメイン固有言語を新バージョンに移行する
 ドメイン固有言語を定義して使用するプロジェクトを [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] で配布された [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] のバージョンから [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] に移行できます。

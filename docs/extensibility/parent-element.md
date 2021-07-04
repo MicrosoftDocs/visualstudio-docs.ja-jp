@@ -3,7 +3,7 @@ title: Parent 要素 | Microsoft Docs
 description: Parent 要素は、ある要素がボタン、コンボ ボックス、メニュー、またはグループの親であることを指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Parent
 - Parent element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ac914fd3245982af89facb97ff2d528b410da99
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3dbf7202ac7fb94762ea132a2620625fae97ddfb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090383"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901553"
 ---
 # <a name="parent-element"></a>親要素
 ボタンまたはコンボ ボックスの親は、グループでしかあり得ません。 メニューまたはグループの親は、他の任意のメニューまたはグループであってもかまいません。 [CommandPlacement 要素 ](../extensibility/commandplacement-element.md) では、この要素が必須です。その他のすべてのインスタンスでは省略可能です。 この要素が省略された場合は、`Group_Undefined:0` の親が暗黙的に指定されます。

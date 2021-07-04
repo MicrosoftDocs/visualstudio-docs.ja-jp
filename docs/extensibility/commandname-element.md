@@ -3,7 +3,7 @@ title: CommandName 要素 | Microsoft Docs
 description: CommandName 要素では、[オプション] ダイアログ ボックスのキーボード カテゴリ、および [ユーザー設定] ダイアログ ボックスの [コマンド] 一覧に表示されるテキストを指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandName element (VSCT XML schema)
 - VSCT XML schema elements, CommandName
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba74c0a61ddf01407f2af6ebb8053e2f1e4fe6ac
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 193e97880fbc543568636e1979a847877e42db14
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089629"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902008"
 ---
 # <a name="commandname-element"></a>CommandName 要素
 `CommandName` 要素では、 **[オプション]** ダイアログ ボックスのキーボード カテゴリ、および **[ユーザー設定]** ダイアログ ボックスの **[コマンド]** 一覧に表示されるテキストを指定します。

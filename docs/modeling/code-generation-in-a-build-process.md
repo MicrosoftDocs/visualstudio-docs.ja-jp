@@ -7,20 +7,20 @@ ms.topic: how-to
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a785bf0fc337d1934efe4f47adaac7efe7f1f1b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7db1b41df5007678c84be71f34aea110c04348c1
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861804"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389749"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>ビルド プロセスでテキスト変換を呼び出す
 

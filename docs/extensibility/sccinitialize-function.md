@@ -2,7 +2,7 @@
 description: この関数では、ソース管理プラグインを初期化し、統合開発環境 (IDE) に機能と制限を提供します。
 title: SccInitialize 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccInitialize
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f266fbe27cb509d2d6dca47a913261eea7f937c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 633e8909febd758df455a9375f735a93e3407c77
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063826"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902528"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 関数
 この関数では、ソース管理プラグインを初期化し、統合開発環境 (IDE) に機能と制限を提供します。
@@ -72,7 +72,7 @@ SCCRTN SccInitialize (
 [出力] その他のコメントの許容される最大の長さを返します。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

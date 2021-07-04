@@ -4,17 +4,17 @@ description: テキスト テンプレートを使用してテキストを生成
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c5b5e1f4e7488253112eb33905fe534be3591782
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0c65a7ba67c3972620b3d589188e233827a12ffd
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99934898"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387269"
 ---
 # <a name="how-to--with-text-templates"></a>方法: テキスト テンプレートを使用する
 Visual Studio のテキスト テンプレートは、任意の種類のテキストを生成する便利な方法を提供します。 テキスト テンプレートを使用して、アプリケーションの一部として実行時にテキストを生成したり、デザイン時にプロジェクト コードを生成したりすることができます。 このトピックでは、最もよく寄せられる操作方法に関する質問を まとめました。

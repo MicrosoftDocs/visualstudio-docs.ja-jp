@@ -3,18 +3,18 @@ title: Windows フォームに基づくドメイン固有言語を作成する
 description: Windows フォームを使用してドメイン固有言語モデルの状態を表示する方法について説明します。
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 41c3ba299df1e6f9ce0e2848f7ffad59e5b3fbea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9a77a22b7ed888b28f12154974d735213952899c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945410"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389541"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows フォームに基づくドメイン固有言語を作成する
 

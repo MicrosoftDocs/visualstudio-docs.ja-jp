@@ -3,7 +3,7 @@ title: '[Content_types].xml ファイルの構造 | Microsoft Docs'
 description: VSIX パッケージ内のコンテンツの種類に関する情報が含まれる、コンテンツ タイプ ファイルの構造について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - content_types
 - content types
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5dea58176269536ae7f0e5857c938c60f76c5c6b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96d4d0eeea34300894674a2105d080e8a6abb607
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055896"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900422"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types] .xml ファイルの構造
 VSIX パッケージ内のコンテンツの種類に関する情報が含まれます。 Visual Studio では、[Content_Types].xml ファイルを使用してそのパッケージをインストールしますが、ファイル自体はインストールしません。

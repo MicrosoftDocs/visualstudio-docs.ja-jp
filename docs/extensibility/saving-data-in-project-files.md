@@ -3,7 +3,7 @@ title: プロジェクト ファイルへのデータの保存 | Microsoft Docs
 description: プロジェクト ファイル内にサブタイプ固有のデータを保存および取得するために Managed Package Framework に用意されているインターフェイスについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [Visual Studio], saving in project files
 - project files
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24f3f0b84f22532187537c31ba6e47a823eef8f7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5859fc9286a3e584c04ccacc1d8b8a35d98dea89
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060498"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904982"
 ---
 # <a name="save-data-in-project-files"></a>プロジェクト ファイルにデータを保存する
 プロジェクト サブタイプを使用すると、サブタイプ固有のデータをプロジェクト ファイルに保存および取得できます。 Managed Package Framework (MPF) には、このタスクを実行するための 2 つのインターフェイスが用意されています。

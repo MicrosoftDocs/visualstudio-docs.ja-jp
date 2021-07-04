@@ -2,7 +2,7 @@
 description: タスクは実行中で、まだ完了していません。
 title: TASK_STATE_EXECUTED フィールド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_EXECUTED field, Task class [.NET Framework debug engines]
 ms.assetid: 75b8f9d0-b908-40d0-b109-70feaed2ab0c
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f035d0a55c1884deceb1a8312ff74fe0dd615bfb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca0d2f578cc4e20b71e562d5b82245995bfd2969
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079307"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902853"
 ---
 # <a name="task_state_executed-field"></a>TASK_STATE_EXECUTED フィールド
 タスクは実行中で、まだ完了していません。
@@ -34,7 +34,7 @@ ms.locfileid: "105079307"
 ```
 
 ## <a name="remarks"></a>解説
- [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) フィールドにこの値が含まれている場合、<xref:System.Threading.Tasks.Task.Status%2A> プロパティは <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> を返します。
+ [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) フィールドにこの値が含まれている場合、<xref:System.Threading.Tasks.Task.Status%2A> プロパティによって <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> が返されます。
 
 ## <a name="see-also"></a>関連項目
 - [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

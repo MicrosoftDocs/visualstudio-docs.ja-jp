@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: edb257f6e5e0b74ef7f60a8447b7c89053a04e24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e9579e4969cb53ed2f1bcf749e8114386af85d0
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896475"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602141"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>DebuggerDisplay 属性を使用して、デバッガーに何を表示するかを通知する (C#、Visual Basic、F#、C++/CLI)
 
@@ -96,7 +96,7 @@ public sealed class MyClass
 ",nq" サフィックスは、式エバリュエーターに対して、最終的な値を表示するときに引用符を削除するように指示します (nq = no quotes: 引用符なし) 。
 
 ## <a name="example"></a>例
-次のコード例では、 `DebuggerDisplay`を `DebuggerBrowseable` および `DebuggerTypeProxy`と組み合わせて使用する方法を示します。 **[ウォッチ]** ウィンドウなど、デバッガーの変数ウィンドウに表示されると、次のように展開が作成されます。
+次のコード例では、 `DebuggerDisplay`を `DebuggerBrowsable` および `DebuggerTypeProxy`と組み合わせて使用する方法を示します。 **[ウォッチ]** ウィンドウなど、デバッガーの変数ウィンドウに表示されると、次のように展開が作成されます。
 
 |**Name**|**[値]**|**Type**|
 |--------------|---------------|--------------|

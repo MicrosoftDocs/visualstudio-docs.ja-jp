@@ -3,7 +3,7 @@ title: シンボル プロバイダー | Microsoft Docs
 description: 式エバリュエーターが変数と式を評価できるように、Visual Studio に用意されているシンボル プロバイダーについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - symbol handler
 - debugging [Debugging SDK], symbol handler
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 132e3c15eed86c9008e49b74b6da6e5da5a3ce33
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3332bbf705d8e3149d864dbb35418fd4c12c523b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079385"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902918"
 ---
 # <a name="symbol-provider"></a>シンボル プロバイダー
 式エバリュエーターの実装では、変数と式を評価するために、言語コンパイラによって生成されるシンボリック デバッグ情報にアクセスする必要があります。 これを行うには、シンボル ハンドラーとも呼ばれる、シンボル プロバイダー (SP) のインターフェイスを使用します。

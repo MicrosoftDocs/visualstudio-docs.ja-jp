@@ -3,19 +3,19 @@ title: 設定ストアからのサービス情報の取得 | Microsoft Docs
 description: 設定ストアを使用して、使用可能なすべてのサービスを検索する方法、または特定のサービスがインストールされているかどうかを確認する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a39987e13ed3af4bc19c3a80baf0049467daf3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cb014803945ea88cd6c2c27eee8c120059014a18
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057651"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900643"
 ---
 # <a name="get-service-information-from-the-settings-store"></a>設定ストアからのサービス情報の取得
 設定ストアを使用して、使用可能なすべてのサービスを検索する方法、または特定のサービスがインストールされているかどうかを確認できます。 サービス クラスの型を把握している必要があります。

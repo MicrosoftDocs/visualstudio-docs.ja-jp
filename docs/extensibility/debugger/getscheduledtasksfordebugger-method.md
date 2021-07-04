@@ -2,7 +2,7 @@
 description: すべてのスケジュールされたタスクの配列を取得します。
 title: GetScheduledTasksForDebugger メソッド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - GetScheduledTasksForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 7c9b4cde-6e4a-4cef-929f-7d02b1da5762
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 953230ed3c29f110e8b6e69b0fb09fb59cb9cd55
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 51da481edb636450770d0cff569b9ef411e17cf6
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054947"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900955"
 ---
 # <a name="getscheduledtasksfordebugger-method"></a>GetScheduledTasksForDebugger メソッド
 すべてのスケジュールされたタスクの配列を取得します。

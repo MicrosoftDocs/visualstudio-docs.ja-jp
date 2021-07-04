@@ -3,7 +3,7 @@ title: VSCT XML スキーマの条件付き属性 | Microsoft Docs
 description: VSCT XML スキーマのリストと項目に条件付き属性を適用する方法について説明します。 属性が true または false に評価され、結果の出力が制御されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, conditional attributes
 - conditional attributes (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bc1bcb9d80474b467e90de6262e797087589065
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e91207016ed6e1baab80b323680d10a40e0331d8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062357"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905255"
 ---
 # <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML スキーマの条件付き属性
 条件付き属性は、すべてのリストと項目に適用できます。 論理演算子と記号の展開式が true または false に評価されます。 true の場合は、関連付けられているリストまたは項目が結果の出力に含まれます。

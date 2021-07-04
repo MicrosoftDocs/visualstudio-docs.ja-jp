@@ -1,7 +1,7 @@
 ---
 title: デバッガーで呼び出し履歴を表示する | Microsoft Docs
 description: '[呼び出し履歴] ウィンドウを使用して、現在 Visual Studio の呼び出し履歴にある関数呼び出しやプロシージャ呼び出しを表示します。'
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: how-to
 f1_keywords:
@@ -30,12 +30,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: adb56ddfa53356c00224082c2460137b3f2b3751
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5e905a509443cd5fd30e860a887dd895c5ee21a6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841017"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387477"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>デバッガーで呼び出し履歴を表示し、[呼び出し履歴] ウィンドウを使用する
 

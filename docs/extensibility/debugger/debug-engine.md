@@ -3,7 +3,7 @@ title: デバッグ エンジン | Microsoft Docs
 description: デバッグ エンジンがインタープリターまたはオペレーティング システムと連携して、実行制御、ブレークポイント、式の評価などのサービスを提供するしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c13dd7165a5f85dc0122f97aaee838c528207f96
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 87c4648ed37ef4fad0d79b7048593ff0c5b7d6d0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067947"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905710"
 ---
 # <a name="debug-engine"></a>デバッグ エンジン
 デバッグ エンジン (DE) は、インタープリターまたはオペレーティング システムと連携して、実行制御、ブレークポイント、式の評価などのデバッグ サービスを提供します。 DE は、デバッグ中のプログラムの状態を監視する役割を担います。 DE ではこれを実現するために、CPU から、ランタイムによって提供される API に至るまで、サポートされているランタイムで利用可能なあらゆる手段を駆使します。

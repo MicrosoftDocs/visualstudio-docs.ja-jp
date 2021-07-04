@@ -10,16 +10,16 @@ author: rub8n
 ms.author: rurios
 manager: anthc
 monikerRange: vs-2019
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - CSharp
 - CPP
-ms.openlocfilehash: 09ec5d82251fa4598096fca8a59c9a1fd29e3f27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 90ec038e8f27407ba08633bacbb5576bee2a7883
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69585376"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902047"
 ---
 # <a name="per-monitor-awareness-support-for-visual-studio-extenders"></a>Visual Studio のエクステンダーのモニターごとの対応のサポート
 

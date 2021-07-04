@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: a5f8c3f6e96e8e593fe74fd58b3e8bafab0ad88e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ac4757464d720ca50632833b3911f0d594e1becb
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950615"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222982"
 ---
 # <a name="add-tags-to-project-templates"></a>プロジェクト テンプレートにタグを追加する
 
@@ -123,7 +123,7 @@ Visual C# アプリケーションのプロジェクト テンプレートのメ
         <Description>A basic template</Description>
         <Icon>TemplateIcon.ico</Icon>
         <ProjectType>csharp</ProjectType>
-        <LanguageTag>C#</LanguageTag>
+        <LanguageTag>csharp</LanguageTag>
         <PlatformTag>windows</PlatformTag>
         <PlatformTag>linux</PlatformTag>
         <PlatformTag>My Platform</PlatformTag>

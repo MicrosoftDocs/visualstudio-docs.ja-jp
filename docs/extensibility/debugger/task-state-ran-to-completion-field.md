@@ -2,7 +2,7 @@
 description: タスクの実行は正常に完了しました。
 title: TASK_STATE_RAN_TO_COMPLETION フィールド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_RAN_TO_COMPLETION field, Task class [.NET Framework debug engines]
 ms.assetid: 0f4830af-fe0c-4141-b768-817f4e426b8c
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f87eca3ec0d10413593e870fc2cf8fa4dc946e3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4d168fe7e878471af4f70f2e58aab9748060c99e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075394"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902814"
 ---
 # <a name="task_state_ran_to_completion-field"></a>TASK_STATE_RAN_TO_COMPLETION フィールド
 タスクの実行は正常に完了しました。
@@ -34,7 +34,7 @@ ms.locfileid: "105075394"
 ```
 
 ## <a name="remarks"></a>解説
- [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) フィールドにこの値が含まれている場合、<xref:System.Threading.Tasks.Task.Status%2A> プロパティは <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> を返します。
+ [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) フィールドにこの値が含まれている場合、<xref:System.Threading.Tasks.Task.Status%2A> プロパティによって <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> が返されます。
 
 ## <a name="see-also"></a>関連項目
 - [Task クラス](../../extensibility/debugger/task-class-internal-members.md)

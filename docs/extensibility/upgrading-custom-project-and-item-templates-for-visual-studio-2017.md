@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Visual Studio 2017 以降のバージョンで使用するために、Visual Studio SDK の以前のバージョンからカスタム プロジェクトと項目テンプレートを更新する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
 author: leslierichardson95
 ms.author: lerich
@@ -12,12 +12,12 @@ manager: jmartens
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 8442e24bf971b8a2a0bcf5baeeb397e4646ba766
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d07af0a00ab840df8a9af437bcddc427f606948
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060277"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903061"
 ---
 # <a name="upgrade-custom-project-and-item-templates-for-visual-studio-2017"></a>Visual Studio 2017 用のカスタム プロジェクトと項目テンプレートの更新
 

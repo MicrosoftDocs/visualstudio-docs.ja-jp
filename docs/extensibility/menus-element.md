@@ -3,7 +3,7 @@ title: Menus 要素 | Microsoft Docs
 description: Menus 要素では、VSPackage で実装するすべてのメニューとツール バーを定義します。 この記事には例が含まれます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Menus
 - Menus element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c5b6010945bd176f0663c7b0d57c3991470fff07
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 59c8cb242322cbb52aa90b821e14698ace6d0534
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064008"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905580"
 ---
 # <a name="menus-element"></a>Menus 要素
 VSPackage で実装するすべてのメニューとツール バーを定義します。
@@ -39,7 +39,7 @@ VSPackage で実装するすべてのメニューとツール バーを定義し
 
 |属性|説明|
 |---------------|-----------------|
-|条件|省略可能。 「[条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)」を参照してください。|
+|条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 
 ### <a name="child-elements"></a>子要素
 

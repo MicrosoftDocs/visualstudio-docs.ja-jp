@@ -4,22 +4,22 @@ summary: Visual Studio で Visual Basic アプリを作成します。
 metadata:
   title: Visual Studio を使用した Visual Basic 開発
   description: Visual Studio を使用して Visual Basic アプリを作成します。
-  ms.custom: seodec18
+  ms.custom: vs-acquisition
   ms.topic: landing-page
-  ms.date: 11/19/2019
+  ms.date: 06/19/2021
   ms.author: ghogen
   author: ghogen
-  manager: jillfra
+  manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-acquisition
   dev_langs:
   - VB
-  ms.openlocfilehash: 3462f85ea571e163617c6c5f315a28c98342acab
-  ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+  ms.openlocfilehash: 9ec157a13fc03b5e8d73eefd359e7d05652a1208
+  ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "74188617"
+  ms.lasthandoff: 06/19/2021
+  ms.locfileid: "112389918"
 landingContent:
 - title: はじめに
   linkLists:

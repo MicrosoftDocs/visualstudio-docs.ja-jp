@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, decorators
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e29dcda43fdbb7b60567ff0aa0627b41ca3ca299
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f3436bb800142e7c85594f4b05cef6fb45c4489
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873789"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390803"
 ---
 # <a name="properties-of-decorators"></a>デコレーターのプロパティ
 デコレーターとは、図の図形またはコネクタに表示されるアイコン、テキスト、または展開と折りたたみのシェブロンです。 次の表では、3 種類のデコレーターのプロパティを示します。 一部のプロパティは、図形デコレーターまたはコネクタ デコレーターにのみ表示されます。

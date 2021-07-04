@@ -3,7 +3,7 @@ title: コマンド フラグ要素 |Microsoft Docs
 description: コマンド フラグ要素によって、その親要素が変更されます。 親要素と子要素を確認します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandFlag element (VSCT XML schema)
 - VSCT XML schema elements, CommandFlag
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f9f9db3d7a8146bd7b44cf779fd62fd75803d86
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6356fd02c8045aee9dc48ebc9d30a346159080bb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089642"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902034"
 ---
 # <a name="command-flag-eelement"></a>コマンド フラグ要素
 親要素を変更します。

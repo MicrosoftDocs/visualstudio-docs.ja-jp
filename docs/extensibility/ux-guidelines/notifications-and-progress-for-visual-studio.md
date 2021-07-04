@@ -3,19 +3,19 @@ title: Visual Studio の通知と進行状況 | Microsoft Docs
 description: ソフトウェア開発タスクに関して Visual Studio で何が起こっているかをユーザーに通知するいくつかの方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6b273c1ee2ee83c713500d972ecab27a67b3145
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 994a315d04b06d1998a8c8e0c4291b6a4c54cb61
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068545"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902242"
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>Visual Studio の通知と進行状況
 ## <a name="notification-systems"></a><a name="BKMK_NotificationSystems"></a> 通知システム

@@ -3,19 +3,19 @@ title: Visual Studio 用の評価ツール | Microsoft Docs
 description: このチェックリストを使用して、Visual Studio 用に設計した新しい機能のユーザー エクスペリエンスの品質を、ビジュアルと対話の細部に関して評価します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f23521763e73ef65b9c5a2f17acb54b85b71d63
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: baee9f3e2eaefcd659f8428bd566711949d0fe90
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089889"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900760"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio の評価ツール
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio 用の機能チェックリスト

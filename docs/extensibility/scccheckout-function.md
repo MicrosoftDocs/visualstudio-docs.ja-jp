@@ -2,7 +2,7 @@
 description: 完全修飾ファイル名のリストを前提に、この関数はローカル ドライブにチェックアウトします。
 title: SccCheckout 関数 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCheckout
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f93052ebe255cddb4703a8246b7e89c744548a7f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72d36ccaf5c6dcddb6730f52b0ce1c3074c605a7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060381"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904722"
 ---
 # <a name="scccheckout-function"></a>SccCheckout 関数
 完全修飾ファイル名のリストを前提に、この関数はローカル ドライブにチェックアウトします。 コメントは、チェックアウトされているすべてのファイルに適用されます。コメント引数には `null` 文字列を指定できます。
@@ -44,7 +44,7 @@ SCCRTN SccCheckout (
 
  hWnd
 
-[入力] ソース管理プラグインが、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] 提供するすべてのダイアログ ボックスの親としてソース管理プラグインで使用できる IDE ウィンドウへのハンドル。
 
  nFiles
 
@@ -67,14 +67,14 @@ SCCRTN SccCheckout (
 [入力] ソース管理プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|チェックアウトに成功しました。|
-|SCC_E_FILENOTCONTROLLED|選択したファイルはソースコード管理されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
-|SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
+|SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下にありません。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
+|SCC_E_NOTAUTHORIZED|ユーザーには、この操作の実行が許可されていません。|
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。 ファイルはチェックアウトされませんでした。|
 |SCC_E_ALREADYCHECKEDOUT|ユーザーは既にファイルをチェックアウトしています。|
 |SCC_E_FILEISLOCKED|ファイルがロックされているため、新しいバージョンの作成が禁止されています。|

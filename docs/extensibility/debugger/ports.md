@@ -3,7 +3,7 @@ title: ポート | Microsoft Docs
 description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるポートの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ports
 - debugging [Debugging SDK], ports
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9629a27931fad9e0a7f753caad1c21893700d42
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e53b2b804433f7e9450f34dac5b21e45710cd71c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067778"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900773"
 ---
 # <a name="ports"></a>Port
 デバッガー アーキテクチャでは、"*ポート*" は次のようなものです。

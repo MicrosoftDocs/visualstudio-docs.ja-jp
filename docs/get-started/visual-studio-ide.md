@@ -2,10 +2,11 @@
 title: Visual Studio の概要
 titleSuffix: ''
 description: Visual Studio 統合開発環境について説明します。
-ms.date: 03/19/2019
+ms.date: 06/29/2021
 ms.technology: vs-ide-general
 ms.topic: overview
 ms.custom:
+- vs-acquisition
 - vs-get-started
 - SEO-VS-2020
 author: TerryGLee
@@ -16,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fb8a558485f6855af1411c99d270f1328d62db20
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 17f4d80e82a24b5fe4692482c37fcbfa615ee4f9
+ms.sourcegitcommit: 7393a37ce77c5b80312ce787baa060c91d41d959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944382"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113113671"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE へようこそ
 

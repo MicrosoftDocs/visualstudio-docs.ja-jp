@@ -16,17 +16,17 @@ helpviewer_keywords:
 - MSBuild, tasks
 - MSBuild, dependency diagrams
 - MSBuild, validating code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e330b95d2de6da53d9d1bd0f3d553ab8319bdd04
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f2d62433d150f61e9a7e21cceb20eb715a0767a
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924319"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388361"
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>依存関係図を使用したコードの検証
 
@@ -52,7 +52,7 @@ ms.locfileid: "99924319"
 
 - 依存関係図を使用するモデリング プロジェクトが含まれたソリューション。 この依存関係図は、検証する対象の C# プロジェクトまたは Visual Basic プロジェクトの成果物にリンクしている必要があります。 「[コードからの依存関係図の作成](../modeling/create-layer-diagrams-from-your-code.md)」を参照してください。
 
-この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 Visual Studio で開いている依存関係図から、またはコマンド プロンプトから、コードを手動で検証できます。 ローカル ビルドまたは Azure Pipelines ビルドの実行時に、コードを自動的に検証することもできます。 [依存関係図を使用したアーキテクチャの設計と検証](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)に関する Channel 9 ビデオを参照してください。
 

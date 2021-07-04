@@ -2,7 +2,7 @@
 description: アクションによって使用されるデータを表すオブジェクト。
 title: m_stateObject フィールド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_stateObject field, Task class [.NET Framework debug engines]
 ms.assetid: 68c54b22-3e1c-4031-b9c7-b972c519d8a0
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2128073f47c76244a18e18005a431f9317686c3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: df510fafbfe3ed6e71e9b5290fb1df0b02ae1d39
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054791"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903958"
 ---
 # <a name="m_stateobject-field"></a>m_stateObject フィールド
 アクションによって使用されるデータを表すオブジェクト。

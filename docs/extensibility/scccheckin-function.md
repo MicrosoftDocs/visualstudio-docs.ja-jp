@@ -2,7 +2,7 @@
 description: この関数は、以前にチェックアウトされたファイルをソース管理システムにチェックインし、変更内容を保存し、新しいバージョンを作成します。
 title: SccCheckin 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCheckin
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6864549c6825092b6ad26be199f8c7b5ea6bab6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d324c03096df5178decd6f6954928df3f2c6b9aa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060433"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904748"
 ---
 # <a name="scccheckin-function"></a>SccCheckin 関数
 この関数は、以前にチェックアウトされたファイルをソース管理システムにチェックインし、変更内容を保存し、新しいバージョンを作成します。 この関数は、チェックインするファイルの数と、名前の配列を使用して呼び出されます。
@@ -67,7 +67,7 @@ SCCRTN SccCheckin (
 [入力] SCC プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装は、次のいずれかの値を返すことが期待されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

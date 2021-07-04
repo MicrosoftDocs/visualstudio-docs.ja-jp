@@ -2,7 +2,7 @@
 description: この関数は、ソース管理システムで現在のファイル (ローカル ディスク上) と最後にチェックインされたバージョンとの差異を表示します (または必要に応じて差異の有無の確認のみを行います)。
 title: SccDiff 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccDiff
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 151620a81af515bd8cd74938a1006d4a98959dd9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 484d8b5e988ede9b50099e3c0376f2c3afce8317
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073990"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904657"
 ---
 # <a name="sccdiff-function"></a>SccDiff 関数
 この関数は、ソース管理システムで現在のファイル (ローカル ディスク上) と最後にチェックインされたバージョンとの差異を表示します (または必要に応じて差異の有無の確認のみを行います)。
@@ -57,7 +57,7 @@ SCCRTN SccDiff(
 [入力] ソース管理プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -66,7 +66,7 @@ SCCRTN SccDiff(
 |SCC_I_RELOADFILE|ファイルまたはプロジェクトを再度読み込む必要があります。|
 |SCC_E_FILENOTCONTROLLED|ファイルはソース管理されていません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。ファイルの差異は取得されませんでした。|
 |SCC_E_FILENOTEXIST|ローカル ファイルが見つかりませんでした。|
 

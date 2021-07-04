@@ -1,7 +1,7 @@
 ---
 title: C#、VB で推奨されるデバッガー プロパティ設定 | Microsoft Docs
 description: すべてのマネージド デバッグで同じである必要がある、ビルドとコンパイルのプロパティ設定を確認します。 その他の設定は、プロジェクトの種類によって異なる場合があります。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b3061823a97faa53680bb358475a583493be5b93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2262194dbb6a8f4b0a47b4fcfc7f9f696c60167
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893101"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390399"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>マネージド デバッグ:プロパティの推奨設定
 一部のプロパティは、すべてのマネージド デバッグ シナリオで同じように設定する必要があります。

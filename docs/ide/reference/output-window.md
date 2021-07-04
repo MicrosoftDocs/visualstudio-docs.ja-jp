@@ -7,7 +7,6 @@ ms.topic: reference
 f1_keywords:
 - vs.build.output
 - vs.debug.output
-- vs.output
 helpviewer_keywords:
 - Output window, about Output window
 - Output window
@@ -18,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bdbaf79a3700a1ba1c0574e345093af25608e39
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbc6f33c439a812d7153f48d7f20d7e1d9dd3cb1
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932047"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925164"
 ---
 # <a name="output-window"></a>[出力] ウィンドウ
 

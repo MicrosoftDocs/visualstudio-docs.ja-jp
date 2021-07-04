@@ -3,7 +3,7 @@ title: プロジェクトと項目テンプレートの登録 | Microsoft Docs
 description: Visual Studio でプロジェクト タイプに関する登録情報を使用して、[新しいプロジェクトの追加] および [新しい項目の追加] ダイアログ ボックスに表示する内容を判断する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
 - registry, Add New Item dialog box
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6f4abe3a8632f4fe9208922aee1ccd92da3dab5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b60022c6adf65d0b0d60d32b4ad7ae72067726d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062695"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905632"
 ---
 # <a name="registering-project-and-item-templates"></a>プロジェクトと項目テンプレートの登録
 プロジェクト タイプでは、プロジェクト テンプレートとプロジェクト項目テンプレートが配置されているディレクトリを登録する必要があります。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、プロジェクト タイプに関連付けられた登録情報を使用して、 **[新しいプロジェクトの追加]** および **[新しい項目の追加]** ダイアログ ボックスに表示する内容を判断します。

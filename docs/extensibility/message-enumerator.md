@@ -3,7 +3,7 @@ title: メッセージ列挙子 | Microsoft Docs
 description: この列挙子のメンバーは、IDE が SccOpenProject を呼び出すときに提供するコールバック関数である TEXTOUTPROC 関数のために使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - message enumerator
 - source control plug-ins, message enumeration
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 113f9fe8470b718a219e967b41bc92ecab2cf3c8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77c49f79ccdcfc4aa0325b89dfb38f3f8d4da721
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063995"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902593"
 ---
 # <a name="message-enumerator"></a>メッセージ列挙子
 次のフラグは、IDE が [SccOpenProject](../extensibility/sccopenproject-function.md) を呼び出すときに提供するコールバック関数である `TEXTOUTPROC` 関数のために使用されます (コールバック関数の詳細については、[LPTEXTOUTPROC](../extensibility/lptextoutproc.md) を参照)。

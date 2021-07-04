@@ -2,7 +2,7 @@
 description: System.Threading.Tasks.Task オブジェクトの追加のプロパティを格納します。
 title: m_contingentProperties フィールド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_contingentProperties field, Task class [.NET Framework debug engines]
 ms.assetid: 49e8cb36-db39-440b-acda-a325651f1165
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9218bbbd10f3bf8a877c38404d17864efed12af6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1ed8da2df71a71ce75b7a59d7aa287e24bda98bd
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059705"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901397"
 ---
 # <a name="m_contingentproperties-field"></a>m_contingentProperties フィールド
 <xref:System.Threading.Tasks.Task> オブジェクトの追加のプロパティを格納します。

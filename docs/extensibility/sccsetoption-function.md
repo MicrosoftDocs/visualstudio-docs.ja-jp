@@ -2,7 +2,7 @@
 description: この関数では、ソース管理プラグインの動作を制御するオプションを設定します。
 title: SccSetOption 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccSetOption
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 031de256b231bbd95e7535af80448db5140cba7e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 18e33cbb8dbee9b332456826ed33e46e4d2e76de
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090149"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904101"
 ---
 # <a name="sccsetoption-function"></a>SccSetOption 関数
 この関数では、ソース管理プラグインの動作を制御するオプションを設定します。
@@ -47,7 +47,7 @@ SCCRTN SccSetOption(
 [入力] オプションの設定。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

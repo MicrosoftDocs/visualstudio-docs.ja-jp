@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, domain relationships
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fb50018dccbe03512c8ab6e5f07c17dbcee307d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fc92bbc32a454208f3d455734b7697a2e69037b4
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941334"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390660"
 ---
 # <a name="properties-of-domain-relationships"></a>ドメイン リレーションシップのプロパティ
 次の表に示すプロパティは、ドメイン リレーションシップに関連付けられています。 ドメイン リレーションシップについては、「[モデル、クラス、およびリレーションシップについて」](../modeling/understanding-models-classes-and-relationships.md)を参照してください。 これらのプロパティの使用方法の詳細については、「[ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)」を参照してください。

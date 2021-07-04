@@ -9,23 +9,23 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 06f4baed4851681065f3f7ccafecd3af339398f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f46e2b774cd4da2ef9cdb9ddef7efd19f731ade7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957375"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391024"
 ---
 # <a name="dependency-diagrams-guidelines"></a>依存関係図: ガイドライン
 
 Visual Studio で "*依存関係図*" を作成することで、アプリのアーキテクチャの概要を記述します。 コードを依存関係図に照らして検証することで、作成したコードがこの設計と一貫性があるかどうかを確認します。 レイヤーの検証をビルド プロセスに含めることもできます。 「[チャンネル 9: 依存関係図を使用してアーキテクチャを設計および検証する](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Using-layer-diagrams-to-design-and-validate-your-architecture)」を参照してください。
 
-この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 > [!NOTE]
 > .NET Core プロジェクトの依存関係図は、Visual Studio 2019 バージョン16.2 以降でサポートされています。

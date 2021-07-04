@@ -3,7 +3,7 @@ title: VSPackage 開発の Devenv コマンドライン スイッチ | Microsoft
 description: 開発者が、Visual Studio IDE を起動するファイルである devenv.exe を実行するときに、コマンド ラインからタスクを自動化する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - /Setup command line switch
 - /ResetSkipPkgs command line switch
@@ -20,12 +20,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94cca255390d9f5637f0bf4f5b24f2d0fd6b4e83
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4ea08b4714a79e09fce5933b67997a032532481f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091267"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904244"
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 開発の Devenv コマンド ライン スイッチ
 

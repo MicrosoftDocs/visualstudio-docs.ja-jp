@@ -8,23 +8,23 @@ helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: df0ecb55e72683a09bb68ec61410271b8c6a8774
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5aa5a1d5d1e64dbb5fbbe5a7ab1c0bb6968351b8
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935106"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388894"
 ---
 # <a name="export-diagrams-as-images"></a>イメージとしてダイアグラムをエクスポートする
 
 Visual Studio では、同じバージョンの Visual Studio を使用していない、利害関係者、ユーザー、またはプロジェクトのチーム メンバーと共有できるように、モデリング図を読み取り専用形式で保存できます。
 
-この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 ## <a name="copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>図または図の一部を別のアプリケーションにコピーする
 

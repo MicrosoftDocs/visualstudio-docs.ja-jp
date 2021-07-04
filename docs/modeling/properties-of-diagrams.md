@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.dsldiagram
 helpviewer_keywords:
 - Domain-Specific Language, diagram
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 943b634114c28f6f914926c74861a902c663523e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8a060c79866d1746135f8a29aef15ca96dd51f63
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956166"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390673"
 ---
 # <a name="properties-of-diagrams"></a>図のプロパティ
 生成されたデザイナーでの図の表示方法を指定するプロパティを設定できます。 たとえば、図のテキストの既定の色を指定できます。

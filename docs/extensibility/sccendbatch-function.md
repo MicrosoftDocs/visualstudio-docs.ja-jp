@@ -2,7 +2,7 @@
 description: この関数では、ソース管理操作のバッチを終了します。
 title: SccEndBatch 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccEndBatch
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3bad3604c57661d0e0e091299cef127d9215d56
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11ff596f19d3a98b929f9346bbf579e0ad1258c5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090214"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904592"
 ---
 # <a name="sccendbatch-function"></a>SccEndBatch 関数
 この関数では、ソース管理操作のバッチを終了します。 これらのバッチを入れ子にすることはできません。
@@ -33,7 +33,7 @@ SCCRTN SccEndBatch(void);
  [なし] :
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

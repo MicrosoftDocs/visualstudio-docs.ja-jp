@@ -3,7 +3,7 @@ title: プロパティ ウィンドウのボタン | Microsoft Docs
 description: プロパティ ウィンドウのツールバーに既定で表示されるボタンと、それらのボタンの実装について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Properties window, buttons
 ms.assetid: bdd2e3a7-ae6e-4e88-be1a-e0e3b7ddbbcc
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88eacbdbcc50dc843769cdcf4701ba1a2bfe895a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a9c45d6cf0f271683c3c708bd71ef46377a5c5ca
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061070"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903451"
 ---
 # <a name="properties-window-buttons"></a>プロパティ ウィンドウのボタン
 開発言語や製品の種類に応じて、 **[プロパティ]** ウィンドウのツールバーには特定のボタンが既定で表示されます。 どの場合でも、 **[項目別]** 、 **[アルファベット順]** 、 **[プロパティ]** 、 **[プロパティ ページ]** ボタンが表示されます。 Visual C# と Visual Basic では、 **[イベント]** ボタンも表示されます。 特定の Visual C++ プロジェクトでは、 **[VC++ メッセージ]** および **[VC オーバーライド]** ボタンが表示されます。 他のプロジェクトの種類では、追加のボタンが表示される可能性があります。 **[プロパティ]** ウィンドウのボタンの詳細については、「[プロパティ ウィンドウ](../../ide/reference/properties-window.md)」を参照してください。

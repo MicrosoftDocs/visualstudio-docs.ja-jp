@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 51f2a6936ffd56ce95cf3fbb0a415a70ad1b528d
-ms.sourcegitcommit: 935e4d9a20928b733e573b6801a6eaff0d0b1b14
+ms.openlocfilehash: 5d77c249f79bed6a3a61e09ce9d91d5c1805fd2a
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "95970282"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112255465"
 ---
- SharePoint Server 2010 
+ SharePoint Server

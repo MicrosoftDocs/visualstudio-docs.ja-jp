@@ -2,7 +2,7 @@
 description: この関数によって、特定のソース管理コマンドのファイルの一覧が更新され、指定したすべてのファイルについてソース管理の状態が提供されます。
 title: SccPopulateList 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccPopulateList
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae531b4be3406c38180183037695a2320b372b14
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b386c576b48e14b6118f62d451c42ac20f048b45
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056533"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902346"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 関数
 この関数によって、特定のソース管理コマンドのファイルの一覧が更新され、指定したすべてのファイルについてソース管理の状態が提供されます。
@@ -72,7 +72,7 @@ SCCRTN SccPopulateList (
 [入力] コマンド フラグ (詳細については、「[特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)」の「PopulateList フラグ」セクションを参照してください)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装は、次のいずれかの値を返すことが期待されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

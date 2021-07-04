@@ -3,19 +3,19 @@ title: Visual Studio の複合パターン | Microsoft Docs
 description: Visual Studio における、一貫性のための重要な複合パターンについて説明します。 複合パターンは、対話要素とデザイン要素を結合します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b8b84baa7be7449b8edb6241e415fc90c9acd594
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090058"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901423"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio の複合パターン
 複合パターンは、個別の構成で対話要素とデザイン要素を結合します。 一貫性に関連する、Visual Studio の最も重要な複合パターンには、次のものがあります。

@@ -3,7 +3,7 @@ title: SetNotificationForWaitCompletion メソッド | Microsoft Docs
 description: デバッガーが状態ビットを使用して、Promise スタイルのタスクの非同期メソッド本体からステップアウトする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SetNotificationForWaitCompletion method, Task class [.NET Framework debug engines]
 ms.assetid: da149c9a-20f4-4543-a29e-429c8c1d2e19
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e189a2c12e262b81f93f7f8de5e58ea22b1277c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6ec469ed4f9c4fa2e503b2350235299a81a94bf9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079437"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902112"
 ---
 # <a name="setnotificationforwaitcompletion-method"></a>SetNotificationForWaitCompletion メソッド
 TASK_STATE_WAIT_COMPLETION_NOTIFICATION 状態ビットを設定またはクリアします。

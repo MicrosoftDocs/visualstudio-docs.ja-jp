@@ -3,7 +3,7 @@ title: プロジェクトのプロパティのユーザー インターフェイ
 description: プロジェクト サブタイプで、ベース プロジェクトに用意されているプロジェクトの [プロパティ ページ] ダイアログ ボックスを変更する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project properties [Visual Studio], user interface
 - projects [Visual Studio SDK], properties UI
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 051c373b85eff4483012dec5b264fa09fe7d962e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77e3554f2a3fd3b0dc1d608bb7d0a1198116a4e3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064476"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903590"
 ---
 # <a name="project-property-user-interface"></a>プロジェクト プロパティのユーザー インターフェイス
 

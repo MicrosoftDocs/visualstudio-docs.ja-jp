@@ -3,7 +3,7 @@ title: Web サイト サポートの属性 | Microsoft Docs
 description: Web サイト プロジェクトを使用して Visual Studio の機能を拡張するために必要な Web サイト サポートの属性について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - web site projects, registration
 ms.assetid: 46d52e2c-ca2a-4bbd-8500-5b0129768aec
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5259914b238927a58a7297a8e9c0b6fcef0f04c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 348fd16234e38cd7832ae18e7b28e6abe0bc63d9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069102"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901774"
 ---
 # <a name="web-site-support-attributes"></a>Web サイト サポートの属性
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web サイト プロジェクトを拡張して、Web プログラミング言語のサポートを提供できます。 この言語は [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] に自身を登録して、その言語が選択されたときに **[新しい Web サイト]** ダイアログ ボックスにプロジェクト テンプレートを表示できるようにする必要があります。

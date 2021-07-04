@@ -3,7 +3,7 @@ title: IntelliSenseHostFlags | Microsoft Docs
 description: IntelliSenseHostFlags 列挙型により、IntelliSense ホスト フラグを指定します。 この記事では、列挙値について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - IntellisenseHostFlags
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 83a3911670a10710ad6ae5cd6496fb76af6c27bb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 33345f86c69d0faeaa5863534e21eca5ecc176cc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079138"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902619"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
 IntelliSense ホスト フラグを指定します。

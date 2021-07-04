@@ -3,7 +3,7 @@ title: プロジェクト タイプの基本情報 | Microsoft Docs
 description: プロジェクト タイプを作成する必要がある場合と、プロジェクト サブタイプを使用して既存のプロジェクト タイプを拡張できる場合について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86ed1c1098fe13cd19ce686782e18b190f455f8c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 051e7b76edd4559914307459fdcbdf1b7c0b600e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064294"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903558"
 ---
 # <a name="project-type-essentials"></a>プロジェクト タイプの基本情報
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] には、[!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] や [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] などの言語に対応した複数のプロジェクト タイプが含まれています。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] では、独自のプロジェクト タイプを作成することもできます。

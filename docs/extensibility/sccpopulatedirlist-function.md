@@ -2,7 +2,7 @@
 description: この関数では、確認するディレクトリの一覧が指定されたとき、どのディレクトリとファイル (オプション) がソース管理に格納されるかを特定します。
 title: SccPopulateDirList 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccPopulateDirList
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d04fc7796db57dedcf8af495c67876cd4974ab1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf2620ff42106be7c858c5104dbf9cb2521252ab
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063748"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902359"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList 関数
 この関数では、確認するディレクトリの一覧が指定されたとき、どのディレクトリとファイル (オプション) がソース管理に格納されるかを特定します。
@@ -62,7 +62,7 @@ SCCRTN SccPopulateDirList(
 [入力] ディレクトリの処理方法を制御する値の組み合わせ (指定できる値については、「[特定のコマンドで使用されるビットフラグ](../extensibility/bitflags-used-by-specific-commands.md)」の「PopulateDirList フラグ」セクションを参照)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

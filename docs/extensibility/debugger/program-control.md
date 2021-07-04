@@ -3,7 +3,7 @@ title: プログラムの制御 | Microsoft Docs
 description: プログラム レベルで実行される Visual Studio デバッグのルーチン (スレッドの実行、ステップ実行、続行、中断/再開など) について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 6be80904-e66c-4cae-8891-1113b799fb01
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2d869094eff3713a3c9e7ec63a8003bb12a018c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b2946309c72fbdddf2794c1da1e773e9a529368
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094680"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900714"
 ---
 # <a name="program-control"></a>プログラムの制御
 Visual Studio のデバッグでは、次のステップ実行と続行のルーチンがすべてプログラム レベルで実行されます。

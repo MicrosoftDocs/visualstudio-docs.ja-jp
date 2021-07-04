@@ -4,7 +4,7 @@ title: AsyncTaskMethodBuilder 構造体の内部メンバー
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, AsyncTaskMethodBuilder structure [.NET Framework]
 - AsyncTaskMethodBuilder structure [.NET Framework debug engines]
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f76d6156928f983a3eb93e7a33b50ff46ec9e87d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c5b21045688fc2be555c7a42d6e3b9014b66c761
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055532"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903841"
 ---
 # <a name="asynctaskmethodbuilder-structure---internal-members"></a>AsyncTaskMethodBuilder 構造体 - 内部メンバー
 このトピックでは、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> クラスの内部メンバーについて説明します。 このクラスに関する一般的な情報については、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder> のリファレンス トピックを参照してください。

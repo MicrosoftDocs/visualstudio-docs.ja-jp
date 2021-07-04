@@ -2,7 +2,7 @@
 description: この関数は、ソース管理から現在開いているプロジェクトにファイルの一覧を追加します。
 title: SccAddFilesFromSCC 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccAddFilesFromSCC
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 056e918642e75bbd74c310499544cb2500428646
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6fa08ec93383fa661d1e2dd055b3139b2ba90f34
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060472"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904865"
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 関数
 この関数は、ソース管理から現在開いているプロジェクトにファイルの一覧を追加します。
@@ -42,7 +42,7 @@ SCCRTN SccAddFilesFromSCC(
 ### <a name="parameters"></a>パラメーター
  pContext
 
-[入力] ソース管理プラグインのコンテキスト ポインター。
+[in] ソース管理プラグインのコンテキスト ポインター。
 
  hWnd
 
@@ -77,7 +77,7 @@ SCCRTN SccAddFilesFromSCC(
 [入力、出力] 各ファイルに対して成功 (0 以外または TRUE) または失敗 (0 または FALSE) を示すフラグの配列 (配列のサイズは、少なくとも `cFiles` 以上の長さである必要があります)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

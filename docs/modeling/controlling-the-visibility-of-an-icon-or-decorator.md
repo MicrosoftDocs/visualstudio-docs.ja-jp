@@ -4,17 +4,17 @@ description: モデルのプロパティの状態に応じて、アイコンま�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 23df6dc45d1d96997a18942e7878a84a5d9f60a7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c60d66188364ddd18be1d60a92b51ee5d7a9fc8
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942803"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389619"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>アイコンまたはデコレーターの可視性の制御
 "*デコレーター*" は、ドメイン固有言語 (DSL) の図形に表示されるアイコンまたはテキスト行です。 モデルのプロパティの状態に応じて、デコレーターを表示したり、非表示にしたりすることができます。 たとえば、人物を表す図形に対して、その人物の性別や子の数などに応じて異なるアイコンを表示できます。

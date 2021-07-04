@@ -7,23 +7,23 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - models, versions of Visual Studio
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a8049471e9e172496381df016c6155410f3bc244
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 95fbf6451a3f07581ff2bdb098428f41904d4276
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882935"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389905"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Visual Studio の他のエディションでモデルおよびダイアグラムを読み取る
 
 モデルの作成をサポートしていないバージョンの Visual Studio でモデルを開くと、モデルは読み取り専用モードで開きます。 このモードでは、ダイアグラムのレイアウトは変更できますが、モデルは変更できません。
 
-モデルの作成をサポートする Visual Studio のバージョンを確認するには、[アーキテクチャおよびモデリング ツールのバージョン サポートに関する記事](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)をご覧ください。
+モデルの作成をサポートする Visual Studio のバージョンを確認するには、[アーキテクチャおよびモデリング ツールのバージョン サポートに関する記事](../modeling/analyze-and-model-your-architecture.md#VersionSupport)をご覧ください。
 
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>モデルおよび図へのアクセス
 

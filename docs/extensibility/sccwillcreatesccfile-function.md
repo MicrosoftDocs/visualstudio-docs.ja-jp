@@ -2,7 +2,7 @@
 description: この関数では、ソース管理プラグインが、指定された各ファイルに対する MSSCCPRJ.SCC ファイルの作成をサポートしているかどうかを判定します。
 title: SccWillCreateSccFile 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccWillCreateSccFile
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00988afe980a29a7176c8632d95514813efaad37
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9f9e6df29b9f44d852c7c84488a3febf590fcc0e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063722"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900448"
 ---
 # <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile 関数
 この関数では、ソース管理プラグインが、指定された各ファイルに対する MSSCCPRJ.SCC ファイルの作成をサポートしているかどうかを判定します。
@@ -52,7 +52,7 @@ SCCRTN SccWillCreateSccFile(
 [入力、出力] 結果を格納するための配列。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

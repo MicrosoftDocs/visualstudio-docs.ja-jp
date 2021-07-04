@@ -2,7 +2,7 @@
 title: インストールまたはアップグレードの問題をトラブルシューティングする
 description: ときには、問題が発生してしまうことがあります。 Visual Studio のインストールまたはアップグレードが失敗した場合、このページが役に立ちます。
 ms.date: 06/24/2020
-ms.custom: seodec18
+ms.custom: vs-acquisition
 ms.topic: troubleshooting
 helpviewer_keywords:
 - '{{PLACEHOLDER}}'
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: dc6d01d213e3966e364516c4a432dfdd978275c0
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 802e4cfb78a9302bd24bca55cda1bf9eab79f9ef
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295976"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387828"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Visual Studio のインストールとアップグレードの問題のトラブルシューティング
 
@@ -41,7 +41,7 @@ Visual Studio インストーラーには、Microsoft が修正に取り組ん�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio インストーラーには、Microsoft が修正に取り組んでいる問題がいくつかあります。 問題の回避策があるかどうか、[リリース ノートの既知の問題に関するセクション](/visualstudio/releases/2019/release-notes#-known-issues)で確認してください。
 
@@ -71,7 +71,7 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Visual Studio インストーラーを閉じます。
 2. Visual Studio インストーラーのディレクトリを削除します。 通常、ディレクトリは `C:\Program Files (x86)\Microsoft Visual Studio\Installer` です。
@@ -94,7 +94,7 @@ Visual Studio インストーラーのブートストラップは、Visual Studi
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. セットアップ ログを収集します。 詳細については、「[Visual Studio のインストール ログを取得する方法](#installation-logs)」をご覧ください。
 2. Visual Studio インストーラーを開き、 **[問題の報告]** をクリックして、Visual Studio フィードバック ツールを開きます。

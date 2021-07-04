@@ -3,7 +3,7 @@ title: ファイル状態コード列挙子 | Microsoft Docs
 description: SccStatus 列挙子には、ソース管理システム内のファイルの状態を指定する定数値が含まれ、SccQueryInfo および POPLISTFUNC によって使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - named constants, SccStatus enumerator
 - source control plug-ins, file status enumeration
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: af2ff3293a55dc76925aedd7a029e1bfdd367186
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 95de8a29efcd56880cdaf452c9f21b90bba1c5c9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074952"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900968"
 ---
 # <a name="file-status-code-enumerator"></a>ファイル状態コード列挙子
 `SccStatus` 列挙子には、ソース管理システム内のファイルの状態を指定する名前付き定数値が含まれます。 この列挙は、[SccQueryInfo](../extensibility/sccqueryinfo-function.md) および `POPLISTFUNC` コールバック関数によって使用されます (詳細については、[POPLISTFUNC](../extensibility/poplistfunc.md) を参照してください)。

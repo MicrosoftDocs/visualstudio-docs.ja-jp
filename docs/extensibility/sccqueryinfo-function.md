@@ -2,7 +2,7 @@
 description: この関数は、ソース管理下にある選択された一連のファイルの状態情報を取得します。
 title: SccQueryInfo 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccQueryInfo
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 911219605859025f1877d040b5932714b10f836a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 369bbd8d783e5d33ea1519b7ad8a4a37476dc62b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073899"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904140"
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 関数
 この関数は、ソース管理下にある選択された一連のファイルの状態情報を取得します。
@@ -52,7 +52,7 @@ SCCRTN SccQueryInfo(
 [入力、出力] ソース管理プラグインが各ファイルの状態フラグを返す配列。 詳細については、[ファイルの状態コード](../extensibility/file-status-code-enumerator.md)に関するページを参照してください。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

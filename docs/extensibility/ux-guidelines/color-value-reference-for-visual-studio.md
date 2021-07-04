@@ -5,16 +5,16 @@ keywords: 色, 16 進数のコード, 色合い, テーマ付き UI, テーマ
 author: brickgeorge
 ms.author: madsk
 ms.date: 08/04/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
 ms.reviewer: Jamie.Young
 manager: jmartens
-ms.openlocfilehash: c3867bc6fd489642bfa856caed434312a9d2d571
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 720eae847a9569a270cfa138ee25e5b4a12b980e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99953150"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905528"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio のカラー値の参照
 

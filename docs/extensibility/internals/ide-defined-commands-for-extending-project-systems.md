@@ -3,7 +3,7 @@ title: プロジェクト システムを拡張するための IDE 定義コマ�
 description: プロジェクト システムの拡張に使用される、Visual Studio 統合開発環境 (IDE) で定義されているコマンドとコマンド グループについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - commands, project systems
 - project systems, environment-defined commands
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6fedca7081c531fef257e20e64426f8b35e88e87
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4525802bf308d740ea5c468fac171e74bff2b34e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086002"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901163"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>プロジェクト システムを拡張するための IDE 定義コマンド
 プロジェクト システムを拡張する場合は、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE によって提供されるコマンドとコマンド グループを使用できます。

@@ -3,19 +3,19 @@ title: Visual Studio のインタラクション パターン | Microsoft Docs
 description: Visual Studio の新機能をビルドするときに使用できる、一般的なインタラクション パターンのライブラリについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 05/13/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a3643792-b0df-481c-bc35-576f948e04cf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 215fa0145a342820320980f629bb35678ce09680
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13a2ec4332cf8010dc5d214dfd61936725ac2063
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072937"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900552"
 ---
 # <a name="interaction-patterns-for-visual-studio"></a>Visual Studio のインタラクション パターン
 ## <a name="overview"></a>概要

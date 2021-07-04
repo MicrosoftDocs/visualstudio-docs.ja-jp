@@ -3,7 +3,7 @@ title: NotifyDebuggerOfWaitCompletion メソッド | Microsoft Docs
 description: デバッガーによってブレークポイント ターゲットとして使用されるプレースホルダーである、NotifyDebuggerOfWaitCompletion メソッドについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - NotifyDebuggerOfWaitCompletion method, Task class [.NET Framework debug engines]
 ms.assetid: 841c5908-4f3f-400b-a7b0-96a95f362817
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d58bb7a5e3a3395b534e5679ec303e5d93d5dc85
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b9d6b5fbdcb8195709a751117056bcaa0617eff
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054739"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904218"
 ---
 # <a name="notifydebuggerofwaitcompletion-method"></a>NotifyDebuggerOfWaitCompletion メソッド
 デバッガーによってブレークポイント ターゲットとして使用されるプレースホルダー メソッド。 このメソッドは、インライン化または最適化することはできません。

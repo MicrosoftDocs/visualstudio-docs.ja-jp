@@ -4,23 +4,23 @@ description: Directed Graph Markup Language (DGML) は、視覚化と複雑性�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9abc3d3596a64c04bf25c0471d32a00f1cb7705d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: adaa09ca7c58652c85cf6c3510e9e47bc4af00f3
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935080"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389112"
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>Directed Graph Markup Language (DGML) リファレンス
 
 Directed Graph Markup Language (DGML) は、視覚化と、複雑性の分析を実行するために使用する情報を記述する、Visual Studio でコード マップを保持するために使用される形式です。 DGML では、単純な XML を使用して、循環と非循環の両方の有向グラフを記述します。 有向グラフは、リンク (エッジ) によって接続されている一連のノードです。 ノードとリンクを使用すると、ネットワーク構造 (ソフトウェア プロジェクトの要素など) を表すことができます。
 
-Visual Studio のバージョンによっては、DGML 機能のサブセットのみがサポートされることに注意してください。「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+Visual Studio のバージョンによっては、DGML 機能のサブセットのみがサポートされることに注意してください。「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 > [!NOTE]
 > .dgml ファイルを編集するときは、各要素とその値に使用できる属性が IntelliSense によって識別されます。 属性で色を指定するには、一般的な色の名前 ("Blue" など) または ARGB 16 進値 ("#ffa0b1c3" など) を使用してください。 DGML では、WPF (Windows Presentation Foundation) 色定義形式の小さいサブセットを使用します。 詳細については、「[Colors クラス](/dotnet/api/system.windows.media.colors?view=netframework-4.8&preserve-view=true)」を参照してください。

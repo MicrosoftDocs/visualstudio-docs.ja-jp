@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, connectors
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b09ec4278dd78f797067c3acdf3152736fb395c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43f55aecf134bf8e4d043a4fc7f6ffa2201f8e95
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899847"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390816"
 ---
 # <a name="properties-of-connectors"></a>コネクタのプロパティ
 コネクタは、生成されたデザイナーでのドメインのリレーションシップを表します。
@@ -36,15 +36,15 @@ ms.locfileid: "99899847"
 |アクセス修飾子|クラスのアクセスのレベル (`public` または `internal`)。|パブリック|
 |カスタム属性|このコネクタから生成されるソース コード クラスに属性を追加するために使用されます。|\<none>|
 |Generates Double Derived|`True` の場合、(オーバーライドによるカスタマイズをサポートするために) 基底クラスと部分クラスの両方が生成されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
-|Has Custom Constructor|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
+|カスタム コンストラクターがある|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
 |Inheritance Modifier|コネクタから生成されるソース コード クラスの継承の種類を記述します (`none`、`abstract`、`sealed`)。|なし|
 |Base Connector|このコネクタの基底クラス。|(なし)|
 |名前|このコネクタの名前。|現在の名前|
 |名前空間|このコネクタに関係する名前空間。|現在の名前空間|
-|Tooltip Type|ツールヒントがどのように定義されるか (fixed、variable、none)。 固定の場合は、`Fixed Tooltip Text` プロパティの値がツールヒントとして使用されます。変数の場合、ツールヒントはカスタム コードで定義されます。|\<none>|
+|Tooltip Type|ツールヒントがどのように定義されるか (固定、変数、またはなし)。 固定の場合は、`Fixed Tooltip Text` プロパティの値がツールヒントとして使用されます。変数の場合、ツールヒントはカスタム コードで定義されます。|\<none>|
 |メモ|このコネクタに関連付けられる私的な覚書。|\<none>|
 |Routing Style|コネクタのルーティングに使用されるスタイル。 `Rectilinear` コネクタは、必要に応じて直角に曲がります。`Straight` コネクタは曲がりません。|Rectilinear|
-|Exposed Color As Property<br /><br /> Exposed Dash Style As Property<br /><br /> Exposed Thickness As Property<br /><br /> Exposes Text Color|`True` の場合、ユーザーはシェイプの示されているプロパティを設定できます。 これを設定するには、シェイプの定義を右クリックし、 **[公開済みの項目を追加]** をクリックします。|False|
+|Exposed Color As Property<br /><br /> Exposed Dash Style As Property<br /><br /> Exposed Thickness As Property<br /><br /> Exposes Text Color|`True` の場合、ユーザーは指定された図形のプロパティを設定できます。 これを設定するには、図形の定義を右クリックし、 **[公開済みの項目を追加]** をクリックします。|False|
 |説明|生成されたデザイナーを文書化するために使用します。|\<none>|
 |表示名|生成されたデザイナーに表示されるこのコネクタの名前。|\<none>|
 |Fixed Tooltip Text|固定のツールヒントに使用されるテキスト。|\<none>|
