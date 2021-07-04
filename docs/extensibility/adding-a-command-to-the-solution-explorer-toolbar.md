@@ -3,7 +3,7 @@ title: ソリューション エクスプローラーのツールバーへのコ
 description: Visual Studio のソリューション エクスプローラーのツールバーにコマンドを実行するボタンを追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - toolbars [Visual Studio], adding buttons
 - buttons [Visual Studio], adding to Solution Explorer
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf6ffcded95d142578ed118ab26b57914eb36c37
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0aa75bd1a229be147e3462845a61266a650e072e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060095"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900240"
 ---
 # <a name="add-a-command-to-the-solution-explorer-toolbar"></a>ソリューション エクスプローラー ツールバーにコマンドを追加する
 このチュートリアルでは、**ソリューション エクスプローラー** のツールバーにボタンを追加する方法について説明します。
@@ -32,7 +32,7 @@ ms.locfileid: "105060095"
 > コマンド テーブル構成 ( *.ctc*) ファイルではなく、XML コマンド テーブル ( *.vsct*) ファイルを使用して、VSPackage にメニューとコマンドを表示する方法を定義します。 詳細については、「[Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+ Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールすることはしません。 これは、Visual Studio のセットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="create-an-extension-with-a-menu-command"></a>メニュー コマンドを使用した拡張機能の作成
  `SolutionToolbar` という名前の VSIX プロジェクトを作成します。 **ToolbarButton** という名前のメニュー コマンド項目テンプレートを追加します。 この方法の詳細については、[メニュー コマンドを使用した拡張機能の作成](../extensibility/creating-an-extension-with-a-menu-command.md)に関するページをご覧ください。

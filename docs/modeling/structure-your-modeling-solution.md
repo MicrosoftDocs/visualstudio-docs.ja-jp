@@ -4,17 +4,17 @@ description: このトピックでは、アプリケーションを、レイヤ�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 85a0bfc178c2aea86a04123815ae946226691477
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 54275c55d3d7a80dc2df1721585bc6c39ba8b06e
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899802"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385488"
 ---
 # <a name="structure-your-modeling-solution"></a>モデリング ソリューションの構築
 
@@ -24,7 +24,7 @@ ms.locfileid: "99899802"
 
 このトピックでは、複数のチーム メンバーと、複数のチームを必要とするほどの大規模なプロジェクトでの作業を想定しています。 プロジェクトのコードとモデルは、[!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] などのソース管理システムに格納されます。 少なくとも数人のチーム メンバーが Visual Studio を使用してモデルを開発しているときに、他のチーム メンバーは他のバージョンの Visual Studio を使って、モデルを表示できます。
 
-どのバージョンの Visual Studio が各ツールとモデリング機能をサポートしているかについては、「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+どのバージョンの Visual Studio が各ツールとモデリング機能をサポートしているかについては、「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 ## <a name="solution-structure"></a>ソリューション構造
 
@@ -111,4 +111,3 @@ ms.locfileid: "99899802"
 ## <a name="see-also"></a>こちらもご覧ください
 
 - [開発プロセス内でのモデルの使用](../modeling/use-models-in-your-development-process.md)
-- [Visual Studio アーキテクチャ ツーリング ガイダンス](../modeling/visual-studio-architecture-tooling-guidance.md)

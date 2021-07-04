@@ -4,17 +4,17 @@ description: 通常、Visual Studio の T4 テキスト テンプレートは、
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ccb5a216aa9a43581327b04d4b6b56f49f9b2bae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 622a6392df2608048a3ac24fda0f4dffc8e43dd4
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924648"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386138"
 ---
 # <a name="t4-template-directive"></a>T4 テンプレート ディレクティブ
 

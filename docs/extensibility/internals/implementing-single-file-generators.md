@@ -3,7 +3,7 @@ title: 単一ファイル ジェネレーターの実装 | Microsoft Docs
 description: IVsSingleFileGenerator インターフェイスを実装するカスタム ツールを使用して、Visual Studio で Visual Basic および Visual C# プロジェクト システムを拡張する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - custom tools, implementing
 - projects [Visual Studio SDK], extensibility
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a46ebce9a554c90e23f9ce5f29680fc3ef86b337
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11ce8a69841d18d383e9d8e12c14d7af652d9cb8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085833"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900045"
 ---
 # <a name="implementing-single-file-generators"></a>単一ファイル ジェネレーターの実装
 カスタム ツール (単一ファイル ジェネレーターと呼ばれることもあります) を使用して、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] で [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] および [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] プロジェクト システムを拡張できます。 カスタム ツールは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> インターフェイスを実装する COM コンポーネントです。 カスタム ツールでは、このインターフェイスを使用して、1 つの入力ファイルが 1 つの出力ファイルに変換されます。 変換の結果は、ソース コードやその他の有用な出力です。 カスタム ツールによって生成されるコード ファイルの 2 つの例は、ビジュアル デザイナーでの変更に応じて生成されるコードと、Web サービス記述言語 (WSDL) を使用して生成されるファイルです。

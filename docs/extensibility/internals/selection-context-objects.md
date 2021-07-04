@@ -3,7 +3,7 @@ title: 選択コンテキスト オブジェクト | Microsoft Docs
 description: Visual Studio IDE でグローバル選択コンテキスト オブジェクトを使用して IDE に表示する内容を決定する仕組みの詳細について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - selection, tracking
 - selection, context objects
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca6239264ca1fa42edb0b73e8a96f523cb450857
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b0c97108eaba426a4def4c1052d3adc7348eb88b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080841"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898488"
 ---
 # <a name="selection-context-objects"></a>コンテキスト オブジェクトの選択
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) では、グローバル選択コンテキスト オブジェクトを使用して、IDE に表示する内容を決定します。 IDE の各ウィンドウは、自身の選択コンテキスト オブジェクトをグローバル選択コンテキストにプッシュできます。 IDE では、あるウィンドウにフォーカスがあるときに、そのウィンドウの値でグローバル選択コンテキストを更新します。 詳細については、「[ユーザーへのフィードバック](../../extensibility/internals/feedback-to-the-user.md)」を参照してください。

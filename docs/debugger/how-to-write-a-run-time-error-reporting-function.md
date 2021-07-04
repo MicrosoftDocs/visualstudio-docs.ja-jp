@@ -1,7 +1,7 @@
 ---
 title: ランタイム エラー レポート関数を記述する | Microsoft Docs
 description: Visual Studio でのカスタム ランタイム エラー レポート関数の作成の例を示します。 _CrtDbgReportW と同じ宣言を指定し、値 1 を返す必要があります。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 23f5234cb0184de14f7506fd540004a200a65a4a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ff82afdfda8af746533f07f21d330c359a1618c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925351"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385138"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>方法: ランタイム エラー レポート関数を記述する (C++)
 ランタイム エラーのカスタム レポート関数には、`_CrtDbgReportW` と同じ宣言を使用する必要があります。 デバッガーへの戻り値は 1 です。

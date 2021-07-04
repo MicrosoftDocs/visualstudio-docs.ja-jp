@@ -3,7 +3,7 @@ title: Web サイト サポートのテンプレート | Microsoft Docs
 description: Web サイト サポートのテンプレートについて説明します。 Visual Studio Web サイトのプロジェクト テンプレートと項目テンプレートは、再利用可能で、かつカスタマイズ可能な Web サイト プロジェクトおよび項目スタブを提供します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c39e900bbdddd1d558bd0604f16924d2536cb98
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a1bd391d13a6d650cb4d23ce78789a66ef50c2e3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069096"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898896"
 ---
 # <a name="web-site-support-templates"></a>Web サイト サポートのテンプレート
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web サイトのプロジェクト テンプレートと項目テンプレートは、新しい Web サイトのプロジェクトや項目を最初から作成しなくても済むようにして開発プロセスを加速する、再利用可能で、かつカスタマイズ可能な Web サイト プロジェクトおよび項目スタブを提供します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] テンプレートの詳細については、[プロジェクト テンプレートと項目テンプレートの作成](../../ide/creating-project-and-item-templates.md)に関するページを参照してください。

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - text templates, troubleshooting
 - text templates, debugging
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b197fd52972162acbc6e7d6882507f943b2a560c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6c9e4454071002e3bce8478bc825ecfddc17620f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935353"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385774"
 ---
 # <a name="debugging-a-t4-text-template"></a>T4 テキスト テンプレートのデバッグ
 テキスト テンプレートにブレークポイントを設定できます。 デザイン時テキスト テンプレートをデバッグするには、テキスト テンプレート ファイルを保存し、ソリューション エクスプローラーでファイルのショートカット メニューを開き、 **[T4 テンプレートのデバッグ]** をクリックします。 実行時テキスト テンプレートをデバッグするには、属するアプリケーションを単純にデバッグします。

@@ -3,7 +3,7 @@ title: プロパティ表示グリッド | Microsoft Docs
 description: プロパティ ウィンドウのグリッド内のどこにプロパティ名とプロパティ値のフィールドがあるか、またプロパティの拡張でグリッドをどのように操作するかについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - properties [Visual Studio SDK], grid
 ms.assetid: 318e41b0-acf5-4842-b85e-421c9d5927c5
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9ccf8afd293c47a1eb55b0b57b8190c11492cfa8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ee3d7d8d6277f9cfa0352cb4961644e4860b46bb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061122"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899655"
 ---
 # <a name="properties-display-grid"></a>プロパティ表示グリッド
 

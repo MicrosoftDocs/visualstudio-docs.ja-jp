@@ -3,7 +3,7 @@ title: IDE によって実装されたコールバック関数 | Microsoft Docs
 description: プラグインが、IDE に情報を渡すためにソース管理操作中の適切なタイミングで呼び出すことができるコールバック関数について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e2e361551fbe03b7f0ef41b19c5d4136aa50472
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 78ce3a9cdd183cff0518ee3c6da9326c63297a85
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068103"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899148"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE によって実装されたコールバック関数
 統合開発環境 (IDE) との統合をできるだけシームレスに確立し、統合されたエンドユーザー エクスペリエンスを提供するために、ソース管理プラグインでは、IDE によって実装されたコールバック関数を使用できます。 プラグインでは、IDE に情報を渡すためにソース管理操作中の適切なタイミングでこれらの関数を呼び出すことができます。それにより、IDE では、これらの情報をそのネイティブ UI に埋め込み要素として表示できます。 このシナリオでは、プラグインが独自の UI を使用している場合に比べて、ユーザー エクスペリエンスが断片化されることは少なくなります。

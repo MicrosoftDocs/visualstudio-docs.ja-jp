@@ -3,7 +3,7 @@ title: ツール ウィンドウの登録 | Microsoft Docs
 description: ProvideToolWindowAttribute と ProvideToolWindowVisibilityAttribute を使用して、ツール ウィンドウを Visual Studio に登録する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - tool windows, registering managed
 - tool windows, registering
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13c3035f089855f88d54ecc8b3c1e6434ac10e65
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f4fb6330f913989a69c5d8d28374a40ea14d266d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056585"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899096"
 ---
 # <a name="register-a-tool-window"></a>ツール ウィンドウを登録する
 ツール ウィンドウは、<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> と <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> を使用して登録できます。

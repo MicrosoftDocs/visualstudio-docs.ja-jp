@@ -4,17 +4,17 @@ description: Visual Studio テキスト テンプレートでは、出力ディ�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e7c255d767e9b35764e03a76f9cda516dbe606
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8105edc57e68aa7cedcb612ec4f6bcd0ef367d2f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899607"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386112"
 ---
 # <a name="t4-output-directive"></a>T4 出力ディレクティブ
 

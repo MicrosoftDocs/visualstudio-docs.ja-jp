@@ -3,7 +3,7 @@ title: TaskScheduler クラス - 内部メンバー | Microsoft Docs
 description: カスタム デバッガーの実装に役立つ System.Threading.Tasks.TaskScheduler クラスの内部メンバーについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TaskScheduler class [.NET Framework debug engines]
 - debug engines, TaskScheduler class [.NET Framework]
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45e2aff7d16826a631bb5126447d60b8b2468455
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58b370a6742387f7493e4c6357cffd05f2bd88a5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057872"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900149"
 ---
 # <a name="taskscheduler-class---internal-members"></a>TaskScheduler クラス - 内部メンバー
 この記事では、カスタム デバッガーの実装に役立つ <xref:System.Threading.Tasks.TaskScheduler?displayProperty=fullName> クラスの内部メンバーについて説明します。 このクラスに関する一般的な情報については、<xref:System.Threading.Tasks.TaskScheduler> のリファレンス記事を参照してください。

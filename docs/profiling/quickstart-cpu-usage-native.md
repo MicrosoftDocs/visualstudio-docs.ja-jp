@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b5e44f5b9e2fec07fef4e54a48ff89ebb2ff74
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8c68cc67d768dbe2b1c42671a02360e5cef2b56b
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861635"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760940"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>クイック スタート: Visual Studio の CPU 使用率データの分析 (C++)
 
@@ -39,7 +39,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
 
    **[Windows コンソール アプリケーション]** プロジェクト テンプレートが表示されない場合は、 **[新しいプロジェクト]** ダイアログ ボックスの左側のペインにある **[Visual Studio インストーラーを開く]** リンクを選択します。 Visual Studio インストーラーが起動します。 **[C++ によるデスクトップ開発]** ワークロード、 **[変更]** の順に選択します。
    ::: moniker-end
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
    スタート ウィンドウが開いていない場合は、 **[ファイル]** 、 **[スタート ウィンドウ]** の順に選択します。
 
    スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。

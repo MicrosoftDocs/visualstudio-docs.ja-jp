@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - uwp
-ms.openlocfilehash: 906097e0356922cdcc5afbabb1771348962ea4ff
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e54fdd71d848d1edad93fe38598d71c9dbbede7f
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859503"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308117"
 ---
 # <a name="develop-apps-for-the-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発
 
@@ -50,7 +50,7 @@ Windows では初めて、すべての Windows 10 プラットフォームで共
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 - [Windows 10](https://support.microsoft.com/help/17777/downloads-for-windows)。 Visual Studio 2019 は、Windows 10 でのみ UWP の開発をサポートします。 詳しくは、Visual Studio の「[対象となるプラットフォーム](/visualstudio/releases/2019/compatibility/)」と「[システム要件](/visualstudio/releases/2019/system-requirements/)」をご覧ください。
 

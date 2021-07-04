@@ -3,7 +3,7 @@ title: VSCT コンパイラのコマンドライン フラグ | Microsoft Docs
 description: Visual Studio コマンド テーブル コンパイラは、.vsct ファイルのコンパイルを確実に成功させるためのコマンドライン オプションを提供します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT files, compiling
 - command-table file compilation (VSCT files)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 20c078d65af6224c65c2c574471b046deaf0cc92
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ce83df56e1bcfad50fe71da31291b5c43b26c47a
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069297"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898895"
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT コンパイラのコマンドライン フラグ
 Visual Studio コマンド テーブル (VSCT) コンパイラは、.vsct ファイルのコンパイルを確実に成功させるためのコマンドライン スイッチを提供します。

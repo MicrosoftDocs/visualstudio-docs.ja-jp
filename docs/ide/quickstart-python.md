@@ -8,16 +8,18 @@ ms.topic: quickstart
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
-ms.custom: SEO-VS-2020
+ms.custom:
+- vs-acquisition
+- SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: dc47bdb2913e2d18998663967d4da3c0a7dcdd9f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a94d28b6f9cb2aa9ee870dd6c4cc914e09b6efee
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939943"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386255"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>クイック スタート: Visual Studio を使用して初めての Python Web アプリを作成する
 

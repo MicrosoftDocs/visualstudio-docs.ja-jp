@@ -17,16 +17,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 339b3661760ee539bb4135c59863e7e9fdae5afc
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 41247c13e8b35fd6e6cd26ac0ad0ea82f742fbb0
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295820"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306697"
 ---
-# <a name="visual-studio-images-on-azure"></a><a id="top"> </a> Azure 上の Visual Studio イメージ
+# <a name="visual-studio-images-on-azure"></a>Azure 上の Visual Studio のイメージ
 
-構成済みの Azure 仮想マシン (VM) での Visual Studio の使用は、短時間で何もない状態から開発環境を稼働状態にする簡単な方法です。 さまざまな Visual Studio 構成のシステム イメージは、[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure) で入手できます。
+事前に構成済みの Azure 仮想マシン (VM) 上で Visual Studio を使用することは、ゼロから稼働状態の開発環境を構築するための簡単かつ迅速な方法です。 さまざまな Visual Studio 構成のシステム イメージは、[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure) で入手できます。
 
 Azure を利用するのが初めてであれば、 [無料の Azure アカウントを作成してください](https://azure.microsoft.com/free)。
 
@@ -34,12 +34,12 @@ Azure を利用するのが初めてであれば、 [無料の Azure アカウ�
 
 最新のメジャー バージョン (Visual Studio 2019、Visual Studio 2017、Visual Studio 2015) のイメージは、Azure Marketplace で提供されています。  リリースされたメジャー バージョンごとに、最初に Web にリリースされたバージョン (RTW: Released To Web) と最新の更新バージョンが表示されます。  これらの各バージョンでは、Visual Studio Enterprise エディションと Visual Studio Community エディションが提供されます。  これらのイメージは、少なくとも月に 1 回は更新され、最新の Visual Studio と Windows の更新プログラムが適用されます。  イメージの名前は変わりませんが、各イメージの説明には、インストールされている製品のバージョンと、その時点のイメージの日付が記載されます。
 
-| リリース バージョン                                                                                                                                          | エディション              |    製品バージョン    |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019:最新版 (バージョン 16.8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise、Community | バージョン 16.8.0    |
-| [Visual Studio 2019:RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | エンタープライズ            | バージョン 16.0.20    |
-| [Visual Studio 2017:最新 (バージョン 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise、Community | バージョン 15.9.29   |
-| [Visual Studio 2017:RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise、Community | バージョン 15.0.28   |
+| リリース バージョン                                                                                                                                                | エディション              | 製品バージョン       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------|
+| [Visual Studio 2019:最新版 (バージョン 16.8)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Enterprise、Community | バージョン 16.8.0        |
+| [Visual Studio 2019:RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | エンタープライズ            | バージョン 16.0.20       |
+| [Visual Studio 2017:最新 (バージョン 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Enterprise、Community | バージョン 15.9.29       |
+| [Visual Studio 2017:RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Enterprise、Community | バージョン 15.0.28       |
 | [Visual Studio 2015:最新 (Update 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Enterprise、Community | Version 14.0.25431.01 |
 
 > [!NOTE]
@@ -92,8 +92,9 @@ Azure では、VM サイズを変更して、最初の選択を再調整する�
 ## <a name="after-the-vm-is-running-whats-next"></a>VM を実行したら、次に何をすればよいですか。
 
 Visual Studio は、Azure の "ライセンス持ち込み" モデルに従って動作します。 私有するハードウェア上のインストールと同様、まずは、Visual Studio インストールのラインセンス付与を行います。 Visual Studio のロックを解除するには、次のいずれかを行います。
-- Visual Studio サブスクリプションに関連付けられた Microsoft アカウントでサインインする
-- 最初の購入時に提供されたプロダクト キーを使って Visual Studio のロックを解除する
+
+* Visual Studio サブスクリプションに関連付けられた Microsoft アカウントでサインインする
+* 最初の購入時に提供されたプロダクト キーを使って Visual Studio のロックを解除する
 
 詳しくは、[Visual Studio へのサインイン](../ide/signing-in-to-visual-studio.md)と [Visual Studio のロック解除方法](../ide/how-to-unlock-visual-studio.md)に関するページをご覧ください。
 

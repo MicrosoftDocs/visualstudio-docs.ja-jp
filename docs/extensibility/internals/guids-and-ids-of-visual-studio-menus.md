@@ -3,7 +3,7 @@ title: Visual Studio メニューの GUID および ID | Microsoft Docs
 description: Visual Studio 統合開発環境 (IDE) に含まれている Visual Studio メニュー バー上にあるメニューとグループの GUID と ID の値の一覧について紹介します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - visual studio menus
 - visual studio groups
@@ -17,12 +17,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9f5066c5ae5c9fa57517406b8eca388747979c4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bceee5fce8a77ad5169020bd3d21896bdbc71443
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082089"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898072"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Visual Studio メニューの GUID および ID
 この記事では、Visual Studio メニュー バーのメニューとグループの GUID と ID の値の一覧を紹介します。 これらの値は、Visual Studio SDK の一部としてインストールされる *.vsct* ファイルで定義されています。 詳細については、「[IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)」を参照してください。

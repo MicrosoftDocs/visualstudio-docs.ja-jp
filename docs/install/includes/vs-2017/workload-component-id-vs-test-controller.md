@@ -3,19 +3,19 @@ title: Visual Studio Test Controller 2017 のワークロードとコンポー�
 titleSuffix: ''
 description: Visual Studio のワークロードとコンポーネントを使用して、複数のマシンに自動テストを配布します
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: a42697ccd673f11144fc2b53d566f6e03014aef1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f3b44936b14981760f397e5fda1063a4acaa3a1
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932087"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449918"
 ---
 ## <a name="test-controller"></a>Test Controller
 
@@ -35,4 +35,4 @@ Microsoft.VisualStudio.ComponentGroup.TestTools.TestController | Test Controller
 
 コンポーネント ID | 名前 | バージョン
 --- | --- | ---
-N/A | 該当なし | N/A
+N/A | N/A | N/A

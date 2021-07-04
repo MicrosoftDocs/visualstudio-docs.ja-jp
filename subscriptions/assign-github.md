@@ -7,12 +7,12 @@ ms.assetid: f271d623-dcde-442a-865c-4dca5ad8a9c5
 ms.date: 03/03/2021
 ms.topic: conceptual
 description: Visual Studio Subscription with GitHub Enterprise でのサブスクリプションの管理
-ms.openlocfilehash: c174b9beb7a7a0eec6bdb65e684869bc0be7dadb
-ms.sourcegitcommit: 8da735b586276c95bf566a867655e3464ab1f989
+ms.openlocfilehash: a1ece92990bf54d85140b1d3548ebf811913fae4
+ms.sourcegitcommit: 0088835f22334b8fee89f8c07bb12bcdfdef1639
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109740666"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110188114"
 ---
 # <a name="manage-visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise を使用して Visual Studio サブスクリプションを管理する
 Microsoft と Enterprise Agreement (EA) を契約しているお客様は、Visual Studio Standard サブスクリプションと GitHub Enterprise が一体化した、新しいサブスクリプション オファーを購入できます。 この方法により、Visual Studio サブスクライバーは GitHub Enterprise を簡単かつ経済的に入手することができます。 
@@ -33,6 +33,10 @@ Visual Studio サブスクリプションの管理の詳細については、次
 > Visual Studio Subscription with GitHub Enterprise を、最初に購入せずに Visual Studio サブスクリプション管理者によって割り当てられた場合、GitHub Enterprise アカウントを作成したいという希望は GitHub に通知されません。  Visual Studio Subscription with GitHub Enterprise は、サブスクリプションが割り当てられる前に、**少なくとも 1 つ購入しておく** 必要があります。
 
 ## <a name="moving-to-visual-studio-with-github-enterprise"></a>Visual Studio with GitHub Enterprise に移動する
+</br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWEAsv]
+
 標準の Visual Studio Enterprise および Visual Studio Professional サブスクリプションが割り当てられた後に組織が GitHub Enterprise バンドルで Visual Studio サブスクリプションを購入すると、既存のサブスクライバーを対応する Visual Studio Enterprise with GitHub Enterprise サブスクリプションか Visual Studio Professional with GitHub Enterprise サブスクリプションに移動する目的で役立つ機能が管理ポータルに追加されます。  たとえば、Visual Studio Professional サブスクリプションのサブスクライバーが Visual Studio Professional with GitHub Enterprise サブスクリプションに移動されます。 左側のバーにある [概要] パネルに次のタイルが表示されます。
 
    > [!div class="mx-imgBorder"]

@@ -3,7 +3,7 @@ title: 従来の言語サービスの実装 2 | Microsoft Docs
 description: マネージド パッケージ フレームワーク (MPF) を使用して、拡張言語サービス機能をサポートする従来の言語サービスを実装する方法について説明します。 パート 2/2。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - language services [managed package framework], implementing
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bdb0d05faaa139b808d8d117125c5208da470e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fca2548ddb0c8281241b14de0ec470cfe22db1a1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085820"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900123"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>従来の言語サービスの実装 2
 Managed Package Framework (MPF) を使用して言語サービスを実装するには、<xref:Microsoft.VisualStudio.Package.LanguageService> クラスからクラスを派生させ、次の抽象メソッドとプロパティを実装する必要があります。

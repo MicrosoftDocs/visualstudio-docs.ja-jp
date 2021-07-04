@@ -3,7 +3,7 @@ title: Include 要素 | Microsoft Docs
 description: Include 要素では、現在のファイルに挿入するために指定されているインクルード パス上に存在する可能性があるファイルを指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Include
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd64f897dc2a089a2e94f5e0c53e3ef116f7b385
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0005626c7fbb276775661a7cfb73d17f5e20d62
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082102"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899357"
 ---
 # <a name="include-element"></a>Include 要素
 Include 要素では、現在のファイルに挿入するために指定されているインクルード パス上に存在する可能性があるファイルを指定します。  定義されているすべてのシンボルと型が、コンパイルされた結果の一部になります。

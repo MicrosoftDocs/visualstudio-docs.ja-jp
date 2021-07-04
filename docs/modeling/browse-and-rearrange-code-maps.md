@@ -19,17 +19,17 @@ helpviewer_keywords:
 - Visual Studio ALM, graph documents
 - Visual Studio Ultimate, graph documents
 - dependency graphs, browsing
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e579f62c24795ad99939fe10f68c42acaaa89b60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 83132cfccd0af7244cf31f502669144eb3388bd8
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861935"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385553"
 ---
 # <a name="browse-and-rearrange-code-maps"></a>コード マップの参照および再配置
 

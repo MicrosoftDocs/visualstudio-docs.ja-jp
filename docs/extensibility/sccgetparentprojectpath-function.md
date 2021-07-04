@@ -2,7 +2,7 @@
 description: この関数では、指定されたプロジェクトの親プロジェクト パスを特定します。
 title: SccGetParentProjectPath 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetParentProjectPath
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305f226117bbb9cf906231a0b9bbaa24c1d87a8e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13a0a77808004c7bc8f408bbf34a3ed4f0715b36
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063982"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900136"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath 関数
 この関数では、指定されたプロジェクトの親プロジェクト パスを特定します。 この関数は、ユーザーが Visual Studio プロジェクトをソース管理に追加しているときに呼び出されます。
@@ -39,7 +39,7 @@ SCCRTN SccGetParentProjectPath(
 ### <a name="parameters"></a>パラメーター
  pContext
 
-[入力] ソース管理プラグインのコンテキスト ポインター。
+[in] ソース管理プラグインのコンテキスト ポインター。
 
  hWnd
 
@@ -62,7 +62,7 @@ SCCRTN SccGetParentProjectPath(
 [入力、出力] 親プロジェクト パスを識別する出力文字列 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -72,7 +72,7 @@ SCCRTN SccGetParentProjectPath(
 |SCC_E_UNKNOWNPROJECT|プロジェクトがソース管理プラグインで認識されていません。|
 |SCC_E_INVALIDFILEPATH|ファイル パスが無効であるか、または使用できません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_PROJSYNTAXERR|プロジェクト構文が無効です。|
 |SCC_E_CONNECTIONFAILURE|ストアへの接続で問題が発生しました。|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|

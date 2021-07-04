@@ -3,19 +3,19 @@ title: Visual Studio のアプリケーション パターン | Microsoft Docs
 description: ドキュメント ウィンドウ、ツール ウィンドウ、モードレス ダイアログの違いについて説明します (Visual Studio の新機能のウィンドウの使用パターンを含む)。
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b19d60294431a08fa26f11bf58606893f392cd1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2726c7096bbf4606fbab2c32b01ffd197549e13c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060238"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899187"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Visual Studio のアプリケーション パターン
 ## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> ウィンドウの対話式操作

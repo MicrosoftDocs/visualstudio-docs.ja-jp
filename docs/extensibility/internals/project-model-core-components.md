@@ -3,7 +3,7 @@ title: プロジェクト モデルのコア コンポーネント | Microsoft D
 description: この記事では、プロジェクト モデル コアで識別されるインターフェイスおよびサービスと、オブジェクトに関連付けられたインターフェイスおよびサービスについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project models, objects and interfaces
 - project models, services
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae01d149611afe5bf75a6952f19baff7d70f6210
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88dc53378e7e06d0a7d4ad362f7bb3876e186c80
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062812"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899707"
 ---
 # <a name="project-model-core-components"></a>プロジェクト モデルのコア コンポーネント
 次の表は、プロジェクト モデルについて詳しく記しています。 この表では、モデルで識別されるインターフェイスおよびサービスと、特定のオブジェクトに関連付けられているインターフェイスおよびサービスについて簡単に説明します。 また、表には、特定のプロジェクト タイプの要件に応じて、プロジェクトの作成とメンテナンスでオプションとなる他のインターフェイスの詳細も示されます。

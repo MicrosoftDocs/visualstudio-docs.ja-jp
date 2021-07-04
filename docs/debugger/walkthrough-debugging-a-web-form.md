@@ -1,7 +1,7 @@
 ---
 title: Web フォームをデバッグする | Microsoft Docs
 description: チュートリアルに従い、ASP.NET Web アプリケーション (Web フォーム) をデバッグする方法について確認します。ブレークポイントの設定方法や変数の調べ方が含まれます。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 476d36a8ea303f2dd6062eaf0a597c47df580ff7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 18347b7ba9ff52778b5acef685acd8f1ee400793
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884170"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385210"
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>チュートリアル: Web フォームのデバッグ
 このチュートリアルでは、[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web アプリケーション (Web フォーム) をデバッグする方法について説明します。 実行の開始と終了の方法、ブレークポイントの設定方法、および **ウォッチ** ウィンドウでの変数の確認方法についても説明します。

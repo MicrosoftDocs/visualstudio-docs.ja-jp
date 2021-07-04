@@ -7,16 +7,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - deployment, VSIX
 ms.assetid: 680c3b25-7901-4768-8363-6d1fcd1ea636
-ms.author: heaths
-manager: jmartens
+author: leslierichardson95
+ms.author: lerich
 ms.workload:
 - vssdk
-ms.openlocfilehash: 175623723b8f7b59a644a439afd10246eab01c95
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd0fcd294983d6a6567676f06703b4bd1dd376c4
+ms.sourcegitcommit: b4cc3dee59421f7089112becf128a369acadaf61
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893595"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112990507"
 ---
 # <a name="locate-visual-studio"></a>Visual Studio を探す
 

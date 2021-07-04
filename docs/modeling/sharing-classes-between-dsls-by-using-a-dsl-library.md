@@ -4,17 +4,17 @@ description: Visual Studio Visualization and Modeling SDK で、別の DSL に�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61e4785ab99ecccc61a097dd27140e250f103de2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c3729e4f386ec5a21c8f30ee3f0df6e7ffa8d891
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899813"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385501"
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL ライブラリによる DSL 間でのクラスの共有
 Visual Studio Visualization and Modeling SDK では、別の DSL にインポートできる不完全な DSL 定義を作成できます。 これにより、類似するモデルの共通部分を考慮することができます。

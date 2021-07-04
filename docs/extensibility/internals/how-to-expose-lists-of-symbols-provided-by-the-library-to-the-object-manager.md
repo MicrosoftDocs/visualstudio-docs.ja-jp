@@ -3,7 +3,7 @@ title: 提供されるシンボルのリストをオブジェクト マネージ
 description: IVsSimpleObjectList2 インターフェイスを実装して、Visual Studio のオブジェクト マネージャーにシンボルのリストを公開し、シンボル参照ツールを更新する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - IVsSimpleLibrary2 interface, lists of symbols
 - IVsLibrary2 interface, lists of symbols
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cf4cef21746834a92abfd8b2e1df3f61e08b2dd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fceb8b2d4a79243117e03aab57ce239b13c3d750
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078891"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898176"
 ---
 # <a name="how-to-expose-lists-of-symbols-provided-by-the-library-to-the-object-manager"></a>方法: ライブラリによって提供されるシンボルのリストをオブジェクト マネージャーに公開する
 シンボル参照ツールである **[クラス ビュー]** 、 **[オブジェクト ブラウザー]** 、 **[呼び出しブラウザー]** 、および **[シンボルの検索結果]** では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] オブジェクトマネージャーに新しいデータの要求を渡します。 オブジェクト マネージャーでは、適切なライブラリを検索し、シンボルの新しいリストを要求します。 ライブラリでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> インターフェイスを介して要求されたデータを [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] オブジェクト マネージャーに提供することによって応答します。 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] オブジェクト マネージャーでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> インターフェイスのメソッドを呼び出してデータを取得し、それを使用してシンボル参照ツールのビューを設定または更新します。

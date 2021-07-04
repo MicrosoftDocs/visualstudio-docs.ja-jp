@@ -3,7 +3,7 @@ title: エラー処理と戻り値 | Microsoft Docs
 description: Visual Studio SDK によって、エラー通知を受信したときに豊富なエラー情報を記録するための相互運用機能アセンブリを提供する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio SDK], handling
 - error handling
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac9c027623b34afa532f62b4b4c9443f219343e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ef33936e3dc36d98cc88b1285aa0b198a84cbd59
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075264"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898319"
 ---
 # <a name="error-handling-and-return-values"></a>エラー処理と戻り値
 Vspackage と COM では、エラーに同じアーキテクチャが使用されています。 `SetErrorInfo` 関数と `GetErrorInfo` 関数は、Win32 アプリケーション プログラミング インターフェイス (API) の一部です。 統合開発環境 (IDE) のすべての VSPackage では、これらのグローバル Win32 API を呼び出して、エラー通知を受け取ったときに豊富なエラー情報を記録できます。 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] には、エラー情報を管理するための相互運用機能アセンブリが用意されています。

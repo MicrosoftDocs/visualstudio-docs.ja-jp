@@ -12,12 +12,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: b50edfe91a9b497760c44d3fd548eb6d2a15a049
-ms.sourcegitcommit: f4b49f1fc50ffcb39c6b87e2716b4dc7085c7fb5
+ms.openlocfilehash: 2f3c611ae157be4f2ea89254856bdd3b6fba448d
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93399378"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687677"
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio におけるクロス プラットフォーム モバイル開発
 
@@ -46,7 +46,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 
  C# または F# を使用することで (Visual Basic は現時点ではサポートされていません)、Android、iOS、Windows のネイティブ アプリを開発できます。  始めるには、Visual Studio をインストールし、インストーラーで **[.NET によるモバイル開発]** オプションを選択します。
 
- Visual Studio を既にインストールしてある場合は、 **Visual Studio インストーラー** をもう一度実行し、Xamarin に対して上と同じ **[.NET によるモバイル開発]** オプションを選択します。
+ Visual Studio を既にインストールしてある場合は、**Visual Studio インストーラー** をもう一度実行し、Xamarin に対して上と同じ **[.NET によるモバイル開発]** オプションを選択します。
 
  完了すると、プロジェクト テンプレートが **[新しいプロジェクト]** ダイアログ ボックスに表示されます。 Xamarin テンプレートを見つける最も簡単な方法は、"Xamarin" で検索することです。
 
@@ -110,7 +110,7 @@ Visual Studio Tools for Xamarin を利用すれば、コードや UI を共有�
 |**詳細を表示**|
 |--------------------|
 |[Visual Studio のインストール](https://visualstudio.microsoft.com/vs/community/) (VisualStudio.com)|
-|[Visual Studio Tools for Apache Cordova の使用を開始する](/visualstudio/cross-platform/tools-for-cordova/)|
+|[Visual Studio Tools for Apache Cordova の使用を開始する](/previous-versions/visualstudio/cross-platform/tools-for-cordova/)|
 |[Visual Studio Emulator for Android について学習する](https://visualstudio.microsoft.com/vs/msft-android-emulator/) (VisualStudio.com)|
 
 ::: moniker-end

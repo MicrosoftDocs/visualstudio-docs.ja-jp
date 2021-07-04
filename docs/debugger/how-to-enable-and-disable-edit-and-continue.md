@@ -1,7 +1,7 @@
 ---
 title: エディット コンティニュを有効および無効にする | Microsoft Docs
 description: デザイン時に Visual Studio の [オプション] で [エディット コンティニュ] を無効または有効にする方法について学習します。 エディット コンティニュはデバッグ ビルドでのみ動作します。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -27,12 +27,12 @@ manager: jmartens
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 51ff58b02e4ea0a197b6a13f12487226269413ed
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 261963cbc1aee63374d6a9c147f42678208c39ec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884378"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384708"
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>方法: エディット コンティニュを有効および無効にする (C#、VB、C++)
 

@@ -3,7 +3,7 @@ title: プロパティ ウィンドウにプロパティを表示する | Micros
 description: オブジェクトのパブリック プロパティについて説明します。 これらのプロパティに加えた変更は、[プロパティ] ウィンドウに反映されます。
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - properties [Visual Studio SDK], exposing in Property Browser
 - properties [Visual Studio SDK]
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9de86e956fe6a4d7841d519d7252b75ae216229
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5f932772b031332d7df2a2487c70576f49407ba1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075251"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898738"
 ---
 # <a name="expose-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを表示する
 
@@ -27,7 +27,7 @@ ms.locfileid: "105075251"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールしません。 これは、Visual Studio のセットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールすることはしません。 これは、Visual Studio のセットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="expose-properties-to-the-properties-window"></a>[プロパティ] ウィンドウにプロパティを表示する
 

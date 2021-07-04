@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 3167dd58a593a426644c3658fbd660f517e10b39
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: da38b7482396b0bf46f5566c0c4a5416c94e83eb
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837984"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222826"
 ---
 # <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
 

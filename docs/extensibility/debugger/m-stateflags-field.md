@@ -2,7 +2,7 @@
 description: System.Threading.Tasks.Task オブジェクトの現在の状態に関する情報を格納します。
 title: m_stateFlags フィールド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_stateFlags field, Task class [.NET Framework debug engines]
 ms.assetid: 82b20efc-08f2-4cd2-91f6-4e01e3da906b
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5df101d0c75ad7bd2a12393c4440c7dcd5484656
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0bf584511bc2f0ee43429abe83dea3d7a45259d9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059666"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898914"
 ---
 # <a name="m_stateflags-field"></a>m_stateFlags フィールド
 <xref:System.Threading.Tasks.Task> オブジェクトの現在の状態に関する情報を格納します。

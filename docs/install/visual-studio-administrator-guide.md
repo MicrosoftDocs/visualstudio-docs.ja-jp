@@ -10,19 +10,19 @@ helpviewer_keywords:
 - administrator guide, Visual Studio
 - installing Visual Studio, administrator guide
 ms.assetid: 4af353f5-6cfd-4ebe-bcfb-f42306e451a0
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0b86d8bc6d3533d2ed50eb4e87330a81f1028f13
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: ba41c545c2af2e0490ef0410fde7849706123940
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547415"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306710"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio 管理者ガイド
 
@@ -34,7 +34,7 @@ ms.locfileid: "106547415"
 
 組織全体に Visual Studio を展開する前に、いくつかの意思決定を行い、作業を完了する必要があります。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 * 各ターゲット コンピューターで[最小インストール要件](/visualstudio/releases/2019/system-requirements/)が満たされていることを確認します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "106547415"
 
   インターネットに接続されていないコンピューターの場合、オフラインの Visual Studio インスタンスを更新する最も簡単かつ迅速な方法は、最小限のレイアウトを作成することです。 詳細については、「[最小限のオフライン レイアウトを使用して Visual Studio を更新する](update-minimal-layout.md)」をご覧ください。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 * 会社に必要な[ワークロードとコンポーネント](workload-and-component-ids.md?view=vs-2019&preserve-view=true)を決定します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "106547415"
 
 * グループ ポリシーを有効にするかどうかと、個々のコンピューターで顧客フィードバックを無効にするように Visual Studio を構成するかどうかを決定します。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="step-1---download-visual-studio-product-files"></a>手順 1 - Visual Studio 製品ファイルをダウンロードする
 

@@ -4,17 +4,17 @@ description: CleanUpBehavior ディレクティブと、テキスト テンプ�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 49609dd13e2e322f88f265d27e55c49154f4c5c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 078b688c238bea47e4ab38b3302708bf5e5189cf
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899656"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386346"
 ---
 # <a name="t4-cleanupbehavior-directive"></a>T4 CleanUpBehavior ディレクティブ
 

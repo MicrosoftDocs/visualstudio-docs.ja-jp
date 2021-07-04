@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 57cb56d0d9a93d0f11e4047f6e25b64841c47e93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ad3737ccfa4b0dae8ad427bd79e4adeb2756795b
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841680"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222761"
 ---
 # <a name="use-bind-mounts"></a>バインド マウントを使用する
 
@@ -49,14 +48,15 @@ ms.locfileid: "99841680"
 
     ```bash
     docker run -dp 3000:3000 \
-        -w /app -v ${PWD}:/app \
+        -w /app \
+        -v "%cd%:/app" \
         node:12-alpine \
         sh -c "yarn install && yarn run dev"
     ```
 
     - `-dp 3000:3000` - 以前と同じです。 デタッチ (バックグラウンド) モードで実行し、ポート マッピングを作成します
     - `-w /app` - "作業ディレクトリ" またはコマンドが実行される現在のディレクトリを設定します
-    - `-v ${PWD}:/app` - コンテナー内のホストから現在のディレクトリを `/app` ディレクトリにバインド マウントします
+    - `-v "%cd%:/app"` - コンテナー内のホストから現在のディレクトリを `/app` ディレクトリにバインド マウントします
     - `node:12-alpine` - 使用するイメージ。 これは、Dockerfile からのアプリのベース イメージです
     - `sh -c "yarn install && yarn run dev"` - コマンド。 `sh` を使用 (alpine に `bash` はありません) し、`yarn install` を実行して "*すべての*" 依存関係をインストールし、`yarn run dev` を実行して、shell を開始します。 `package.json` を確認すると、`dev` スクリプトが `nodemon` を開始していることがわかります。
 

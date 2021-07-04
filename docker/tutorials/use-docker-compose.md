@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 3bcf3a69dcf8053851e3d8519a25f61fe23ae7e3
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 645d168aefe05040193d564d5c158acfb6688c11
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082566"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222748"
 ---
 # <a name="use-docker-compose"></a>Docker Compose の使用
 

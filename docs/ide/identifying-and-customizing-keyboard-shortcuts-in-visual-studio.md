@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4686a6459f62fceeebe202cf52d7c30cf99f6fc3
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: a1a3aa2ace6279211c27847b8b9cc46d71b0d9ad
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221250"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038604"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Visual Studio でのキーボード ショートカットの識別とカスタマイズ
 
@@ -35,7 +35,7 @@ Visual Studio のコマンドのショートカット キーを確認し、カ�
 
 - ショートカット キーを選択するときのコンテキスト。 たとえば、**F2** ショートカットでは、**設定デザイナー** を使っている場合は `Edit.EditCell` コマンドが呼び出され、**チーム エクスプローラー** を使っている場合は `File.Rename` コマンドが呼び出されます。
 
-設定、カスタマイズ、コンテキストにかかわらず、**[オプション]** ダイアログ ボックスでいつでもショートカット キーを変更できます。 [よく使われるキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)に関する記事では、数十のコマンドの既定のキーボード ショートカットを調べることもできます。 すべての既定のショートカットの完全な一覧については (**全般的な開発** 設定に基づくもの)、[すべてのキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)に関する記事をご覧ください。
+設定、カスタマイズ、コンテキストにかかわらず、**[オプション]** ダイアログ ボックスでいつでもショートカット キーを変更できます。 [よく使われるキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md#most-popular-keyboard-shortcuts)に関する記事では、数十のコマンドの既定のキーボード ショートカットを調べることもできます。 すべての既定のショートカットの完全な一覧については (**全般的な開発** 設定に基づくもの)、[すべてのキーボード ショートカット](../ide/default-keyboard-shortcuts-in-visual-studio.md)に関する記事をご覧ください。
 
 ショートカットを "*全体*" コンテキストに割り当て、他のコンテキストに割り当てていない場合、そのショートカットによって常にそのコマンドが呼び出されます。 しかし、ショートカット キーは [全体] コンテキストの 1 つのコマンドに割り当て、特定のコンテキストの別のコマンドに割り当てることができます。 そのようなショートカット キーを特定のコンテキストで使用すると、ショートカット キーによって [全体] コンテキストではなく特定のコンテキストのコマンドが呼び出されます。
 

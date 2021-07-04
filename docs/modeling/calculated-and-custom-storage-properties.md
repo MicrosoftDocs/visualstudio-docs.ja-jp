@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c0874302a7cae4b7a2a3c02edade3ef88fd402a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f98dca6759b9e4a77e71139b6d9ec9b394d99b04
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861843"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385423"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>計算プロパティおよびカスタム格納プロパティ
 ドメイン固有言語 (DSL) のすべてのドメイン プロパティをダイアグラム上と言語エクスプローラー内でユーザーに表示して、プログラム コードでアクセスすることができます。 ただし、プロパティの値が格納される方法は異なります。

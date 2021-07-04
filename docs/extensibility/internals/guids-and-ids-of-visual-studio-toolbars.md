@@ -3,7 +3,7 @@ title: Visual Studio ツール バーの GUID および ID | Microsoft Docs
 description: Visual Studio 統合開発環境 (IDE) に含まれているツール バーおよびそれらに含まれるグループの、GUID と ID の値の一覧を確認します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - visual studio groups
 - toolbars
@@ -18,12 +18,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d2ba6c92a2913ec63a59751a4181454aa67fa67
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082076"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898111"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio ツール バーの GUID および ID
 このトピックでは、Visual Studio 統合開発環境 (IDE) に含まれているツール バーおよびそれらに含まれるグループの、GUID と ID の値について説明します。 これらの値は、Visual Studio SDK の一部としてインストールされる *.vsct* ファイルで定義されています。 詳細については、「[IDE 定義コマンド、メニュー、およびグループ](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)」を参照してください。

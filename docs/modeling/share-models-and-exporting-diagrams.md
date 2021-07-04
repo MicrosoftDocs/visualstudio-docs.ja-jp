@@ -7,22 +7,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e12dcd1fcb9119aa65811fc149d86150a8b084e7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ef33052e8ae98e5a716265a130f8b2031bbfd340
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899785"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385657"
 ---
 # <a name="share-models-and-exporting-diagrams"></a>モデルおよびエクスポート ダイアグラムの共有
 Visual Studio では、いくつかの方法でモデルと図を同僚と共有できます。
 
- この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../ide/class-designer/how-to-add-class-diagrams-to-projects.md)」を参照してください。
 
 ## <a name="working-on-a-model-as-a-team"></a>チームとしてのモデルの操作
  Visual Studio のユーザーは、モデル、依存関係図、有向グラフを作成し、編集できます。
@@ -32,7 +32,7 @@ Visual Studio では、いくつかの方法でモデルと図を同僚と共有
  中規模または大規模プロジェクトでのモデルの整理に関するヒントについては、「[モデリング ソリューションの構築](../modeling/structure-your-modeling-solution.md)」を参照してください。
 
 ## <a name="reading-and-reviewing-models"></a>モデルの読み取りと確認
- 特定のバージョンの Visual Studio (モデルの作成はできない) を使用しているチーム メンバーは、モデル、モデリング図、および有向グラフを読み取ることができますが、編集はできません。  この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ 特定のバージョンの Visual Studio (モデルの作成はできない) を使用しているチーム メンバーは、モデル、モデリング図、および有向グラフを読み取ることができますが、編集はできません。  この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
  依存関係図は、その図が作成されたモデル内でのみ開くことができます。 このため、図にアクセスするには、すべてのモデリング プロジェクト ファイルまたはそのコピーへのアクセスを提供する必要があります。
 

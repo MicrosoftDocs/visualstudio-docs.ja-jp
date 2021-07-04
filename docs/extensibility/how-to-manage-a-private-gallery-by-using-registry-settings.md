@@ -3,7 +3,7 @@ title: レジストリ設定を使用してプライベート ギャラリーを
 description: Visual Studio ギャラリー、サンプル ギャラリー、またはプライベート ギャラリーで、コントロール、テンプレート、およびツールへのアクセスを制御する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - VSIX private galleries, managing
 - managing VSIX private galleries
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5981dc4399e09df207b154b900fa163895c344c9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9fef1e6447ac07e9c3d4ccfb76a9ee1e06f91e42
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070064"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898836"
 ---
 # <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>方法: レジストリ設定を使用してプライベート ギャラリーを管理する
 管理者、または Isolated Shell 拡張機能の開発者は、Visual Studio ギャラリー、サンプル ギャラリー、またはプライベート ギャラリーで、コントロール、テンプレート、およびツールへのアクセスを制御できます。 ギャラリーを利用できるようにする、または使用できないようにするには、変更するレジストリ キーとその値を記述した *.pkgdef* ファイルを作成します。

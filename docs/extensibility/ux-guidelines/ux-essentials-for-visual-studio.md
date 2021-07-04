@@ -3,19 +3,19 @@ title: UX Essentials for Visual Studio | Microsoft Docs
 description: 画面解像度の認識も含め、Visual Studio 向けに開発する新機能に関してこれらのユーザー エクスペリエンスのベスト プラクティスを確認します。
 ms.custom: SEO-VS-2020
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce44b9234465af6bf52ce8baa0e60e641e845d3c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74b27e87e6f16130573ef6671286501f77e44352
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052672"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899421"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>UX Essentials for Visual Studio
 
