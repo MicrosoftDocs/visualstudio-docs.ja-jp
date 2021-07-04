@@ -1,7 +1,7 @@
 ---
 title: Node.js と React のアプリを作成する
 description: Visual Studio のテンプレートから Node.js Web アプリケーション プロジェクトを作成する方法を学習します。
-ms.custom: ''
+ms.custom: vs-acquisition
 ms.date: 4/21/2020
 ms.topic: tutorial
 ms.devlang: javascript
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 80516adffcb058d6ce28751e7a9f30002ca3a640
-ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
+ms.openlocfilehash: 3299f38e99c6b96cacd3c3661937a29bdec3c93d
+ms.sourcegitcommit: 809fff25b7701882c899c639eeb6da38ad4fb88a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2021
-ms.locfileid: "109729300"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112550702"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>チュートリアル: Visual Studio で Node.js と React のアプリを作成する
 
@@ -308,7 +308,7 @@ webpack は、ブラウザーで実行できるように JavaScript ファイル
 
 1. コマンド プロンプトに次のコマンドを入力します。
 
-    `node_modules\.bin\webpack app.tsx --config webpack-config.js`
+    `node_modules\.bin\webpack ./app.tsx --config webpack-config.js`
 
     コマンド プロンプト ウィンドウに結果が表示されます。
 
@@ -336,7 +336,7 @@ Visual Studio 2019 以降では、ビルド スクリプトが必須です。 (�
 
    ```json
    "scripts": {
-    "build": "webpack-cli app.tsx --config webpack-config.js"
+    "build": "webpack-cli ./app.tsx --config webpack-config.js"
    }
    ```
 

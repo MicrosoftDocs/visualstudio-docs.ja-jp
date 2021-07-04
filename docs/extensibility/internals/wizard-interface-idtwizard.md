@@ -3,7 +3,7 @@ title: ウィザード インターフェイス (IDTWizard) |Microsoft Docs
 description: IDE では、IDTWizard インターフェイスを使用してウィザードと通信します。 IDE でインストールされるために、ウィザードはこのインターフェイスを実装する必要があります。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IDTWizard interface
 - wizards, interface
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b8dc88341bc72755ae0f5011d18182c5b78bb483
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 930996de7fa5366463ec2d60f7cf96d941f6c243
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074198"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898618"
 ---
 # <a name="wizard-interface-idtwizard"></a>ウィザード インターフェイス (IDTWizard)
 統合開発環境 (IDE) では、<xref:EnvDTE.IDTWizard> インターフェイスを使用してウィザードと通信します。 IDE でインストールされるために、ウィザードはこのインターフェイスを実装する必要があります。

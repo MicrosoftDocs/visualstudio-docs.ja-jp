@@ -3,7 +3,7 @@ title: オプションとオプション ページ |Microsoft Docs
 description: VSPackage の状態を決定するオプションの値を変更できる、オプション ページのサポートについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], managed package framework support
 - managed package framework, Tools Options pages support
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32bcb32c4fc80a5806c9007c3119a2ba3de62427
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: ea05e894c0bfca077f1256c35e6fbe5c58bc91ea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106214513"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899889"
 ---
 # <a name="options-and-options-pages"></a>オプションとオプション ページ
 **[ツール]** メニューの **[オプション]** をクリックすると、 **[オプション]** ダイアログ ボックスが開きます。 このダイアログ ボックス内のオプションは、総称してオプション ページと呼ばれます。 ナビゲーション ウィンドウのツリー コントロールにはオプション カテゴリが含まれていて、すべてのカテゴリにオプション ページがあります。 ページを選択すると、そのオプションが右側のウィンドウに表示されます。 これらのページでは、VSPackage の状態を決定するオプションの値を変更できます。

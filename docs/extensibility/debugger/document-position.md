@@ -3,7 +3,7 @@ title: ドキュメントの位置 | Microsoft Docs
 description: Visual Studio デバッグでのドキュメントの位置により、IDE で認識されるソース ファイル内の位置を抽象化する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: b59d739c-7572-427f-a70d-4e5df63d02c1
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d14f9619059735aaecabf72adef248c69ed247e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58a3ac3db62619c5d0eaa9e89e09d7d5def06ff1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097254"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898163"
 ---
 # <a name="document-position"></a>ドキュメントの位置
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のデバッグにおける "*ドキュメントの位置*":

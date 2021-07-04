@@ -6,18 +6,18 @@ ms.author: dominicn
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: cc10cd6125dc19571424358fd1ce9de46f7d86c5
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 5f1a400506f7766ba22ffbc1debde687b1709a21
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74984900"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760927"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript および TypeScript のサポート
 
 Visual Studio for Mac では、構文の強調表示、コードの書式設定、IntelliSense で JavaScript と TypeScript を利用できます。
 
-![TypeScript エディター サポート](https://msdnshared.blob.core.windows.net/media/2018/03/TypeScript-editor.gif)
+![TypeScript エディター サポート](/visualstudio/mac/media/tsjseditor-2019.gif)
 
 JavaScript のコード記述に関する詳細については、[JavaScript でのコードの記述](/scripting/javascript/writing-javascript-code)に関するガイドを参照してください。
 

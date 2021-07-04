@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
-ms.date: 02/18/2021
+ms.date: 05/18/2021
 ms.topic: how-to
 description: サブスクリプション管理者に連絡し、質問や問題に対する支援を求める方法について説明します。
-ms.openlocfilehash: 4eb17f5480b3839248d0968b6c20434c149bb756
-ms.sourcegitcommit: 79a6be815244f1cfc7b4123afff29983fce0555c
+ms.openlocfilehash: 343cf2eede966e83390c6f2689d0db840507f827
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102250044"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973517"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>サブスクリプション管理者のサポートを受ける
 職場または学校から Visual Studio サブスクリプションが与えられる場合、おそらく、サブスクリプション管理者 ("admin") からそれを割り当てられています。  管理者はサブスクリプションを割り当てたり、削除したり、サインイン電子メールのアドレスを変更したり、ソフトウェアのダウンロードを許可するかどうかを決定したり、サブスクリプションに関連するその他の機能を実行したりできます。
@@ -30,7 +30,7 @@ ms.locfileid: "102250044"
 6. 最後に、 **[送信]** を選択します。
 
 > [!NOTE]
-> **スーパー管理者:** "管理者に問い合わせる" 要求の送信先のメール アドレスを設定するには、[契約の基本設定](admin-prefs.md#contact-email-address)でそのアドレスを指定します。
+> **スーパー管理者:** "管理者に問い合わせる" 要求の送信先のメール アドレスを設定するには、[契約の基本設定](admin-preferences.md#contact-email-address)でそのアドレスを指定します。
 
 ## <a name="resources"></a>リソース
 - [Visual Studio サブスクリプションのサポート](https://my.visualstudio.com/gethelp)

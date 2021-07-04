@@ -7,20 +7,16 @@ robots: noindex, nofollow
 author: evanwindom
 ms.author: v-evwin
 ms.date: 12/07/2020
-ms.openlocfilehash: 9168e857d07c7843bd1576185598f5911263528e
-ms.sourcegitcommit: 5c146b2dfaefc4f44802600c2cd252a7a0e4b846
+ms.openlocfilehash: da284ea9403e4aab929e175f95508cc16684fc60
+ms.sourcegitcommit: a740129796159a69c704d9d372edaa7a7f191d17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525546"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530453"
 ---
 # <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio サブスクリプション サポート ウィジェット コンテンツのインクルード ファイル
 
 ## <a name="admin-solutions"></a>管理者ソリューション
-
-[!INCLUDE [Admin sign-in issues](admin-solutions/includes/admin-sign-in-issues.md)]
-
-[!INCLUDE [Admin tasks](admin-solutions/includes/admin-task-how-to.md)]
 
 [!INCLUDE [Become a super admin](admin-solutions/includes/become-a-super-admin-managed.md)]
 
@@ -28,13 +24,8 @@ ms.locfileid: "100525546"
 
 [!INCLUDE [Cannot access subscriptions](admin-solutions/includes/cannot-access-subs.md)]
 
-[!INCLUDE [Example change email](admin-solutions/includes/example-change-email.md)]
-
-[!INCLUDE [How do I change my sign-in email admin](admin-solutions/includes/how-do-i-change-my-sign-in-email-admin.md)]
-
 [!INCLUDE [I only see VSDE](admin-solutions/includes/only-see-vsde.md)]
 
-[!INCLUDE [Request subscriptions](admin-solutions/includes/request-subscriptions.md)]
 
 ## <a name="benefit-activations"></a>特典のアクティブ化
 

@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: df2102c38250aa5c1bda52b4324cba808501db3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43034ff2e65564cc8af2710b796b76996f21f4c8
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841745"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222774"
 ---
 # <a name="update-the-app"></a>アプリの更新
 
@@ -115,7 +114,7 @@ VS Code 拡張機能を開けば、2 回のクリックでコンテナーを削�
 
 永続化について学習する前に、これらのイメージを他のユーザーと共有する方法を簡単に説明します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 チュートリアルを続行します。
 

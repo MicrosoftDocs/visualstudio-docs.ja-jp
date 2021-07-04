@@ -1,7 +1,7 @@
 ---
 title: デバッガーでコード間を移動する | Microsoft Docs
 description: Visual Studio デバッガーを使用してコードのトラブルシューティングを行う方法について説明します。 トピックに含まれる内容は、中断モードへの移行、コードのステップ実行、ターゲットに対する実行、となります。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/12/2018
 ms.topic: how-to
 f1_keywords:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e6ad377ddb457018099256cd64b6b8382c69df81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b9c0424b07ba7a24f109e967d464856781e5dbb2
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99942075"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385241"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Visual Studio デバッガーでコード間を移動する
 

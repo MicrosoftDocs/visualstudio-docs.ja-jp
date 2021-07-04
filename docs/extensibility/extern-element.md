@@ -3,7 +3,7 @@ title: Extern 要素 | Microsoft Docs
 description: Extern 要素は、コンパイル時に、.vsct ファイルとマージする外部ヘッダー (.h) ファイルを参照します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Extern
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5771dbc1c6b17b0f488d42c30a036ff1d90a5a18
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 502b93f18aacfed26d3ea440c017e6de5281a35d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074991"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900188"
 ---
 # <a name="extern-element"></a>Extern 要素
 Extern 要素は、コンパイル時に、 *.vsct* ファイルとマージする外部ヘッダー ( *.h*) ファイルを参照します。 マージするファイルは、VSCT コンパイラに提供されるインクルード パスに存在するか、[Include 要素](../extensibility/include-element.md)によって参照されている必要があります。 ファイルは、他の *.vsct* ファイルや C++ ヘッダー ファイルなどになります。
@@ -42,7 +42,7 @@ Extern 要素は、コンパイル時に、 *.vsct* ファイルとマージす�
 
 |属性|説明|
 |---------------|-----------------|
-|href|必須。 ヘッダー ファイルのパス:<br /><br /> href="stdidcmd.h"|
+|href|必須。 ヘッダー ファイルへのパス:<br /><br /> href="stdidcmd.h"|
 |条件|省略可能。 [条件付き属性](../extensibility/vsct-xml-schema-conditional-attributes.md)に関するページを参照してください。|
 |language|省略可能。 コマンド テーブル内のすべての [\<Strings>](../extensibility/strings-element.md) 要素の既定の言語:<br /><br /> language="en-us"|
 
@@ -56,7 +56,7 @@ Extern 要素は、コンパイル時に、 *.vsct* ファイルとマージす�
 
 |要素|説明|
 |-------------|-----------------|
-|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage によって IDE に提供されるコマンドを表すすべての要素 (つまり、メニュー項目、メニュー、ツールバー、およびコンボ ボックス) を定義します。|
+|[CommandTable 要素](../extensibility/commandtable-element.md)|VSPackage によって IDE に提供されるコマンドを表すすべての要素 (つまり、メニュー項目、メニュー、ツール バー、コンボ ボックス) を定義します。|
 
 ## <a name="example"></a>例
 

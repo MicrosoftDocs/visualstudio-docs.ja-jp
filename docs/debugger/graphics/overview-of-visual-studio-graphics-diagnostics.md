@@ -1,7 +1,7 @@
 ---
 title: グラフィックス診断の概要 | Microsoft Docs
 description: Visual Studio のグラフィックス診断は、Direct3D アクティビティをログに記録し、そのログを分析してレンダリングとパフォーマンスに関する問題をトラブルシューティングするための一連のツールです。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 02/09/2017
 ms.topic: conceptual
 author: mikejo5000
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae7969a3eb0e33b46755cdb3fa92cc2bcbe19c8a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 24b67b9585db973e6cbef3b1c28c6068e7c37034
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905188"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386202"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断の概要
 Visual Studio の "*グラフィックス診断*" は、Direct3D アプリのレンダリングとパフォーマンスを記録し、問題を分析するためのツール セットです。 グラフィックス診断は、Windows PC 上のローカルで、またはリモートの PC やデバイス上で実行されているアプリに対して使用できます。

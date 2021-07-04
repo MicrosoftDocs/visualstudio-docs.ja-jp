@@ -3,7 +3,7 @@ title: 特定のコマンドで使用されるビットフラグ | Microsoft Doc
 description: ソース管理プラグイン API で使用されるビットフラグについて説明します。それらを使用する関数別に整理してあります。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41f070d61e547724b3067a9f4a1980d658fc30be
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: be5915d96b574336d7091239275a2aaef456a7f3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097293"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899368"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>特定のコマンドで使用されるビットフラグ
 ソース管理プラグイン API の多くの関数の動作は、単一の値に 1 つ以上のビットを設定することによって変更できます。 これらの値はビットフラグと呼ばれます。 ソース管理プラグイン API で使用されるさまざまなビットフラグについては、それらを使用する関数別にグループ化して、ここで詳しく説明しています。

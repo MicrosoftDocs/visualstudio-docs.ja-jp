@@ -2,19 +2,19 @@
 title: Visual Studio の UI テキストとヘルプ | Microsoft Docs
 description: Visual Studio のヘルプ情報で使用される UI のテキストと用語について説明します。
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8635907b5c0190165855378fa692fb9abca4b0ec
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 40b128c5e95c70457d92843e620b4aa072c409ba
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052659"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899434"
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>Visual Studio の UI テキストとヘルプ
 ## <a name="ui-text-and-terminology"></a><a name="BKMK_UITextAndTerminology"></a> UI のテキストおよび用語

@@ -8,15 +8,16 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
   ms.topic: landing-page
-  author: jillre
-  ms.author: jillfra
-  ms.date: 09/24/2019
-  ms.openlocfilehash: a97cdc17a9e71520d34437e8897f3301de58fb5e
-  ms.sourcegitcommit: 566144d59c376474c09bbb55164c01d70f4b621c
+  author: j-martens
+  ms.author: jmartens
+  ms.date: 06/14/2021
+  ms.custom: vs-acquisition
+  ms.openlocfilehash: a8f0b61e9978accf1af7142271b66f84ec5cbdb4
+  ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/19/2020
-  ms.locfileid: "90809662"
+  ms.lasthandoff: 06/19/2021
+  ms.locfileid: "112385163"
 landingContent:
 - title: はじめに
   linkLists:
@@ -74,9 +75,11 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
+    - text: リリース ノート
+      url: /visualstudio/releases/2019/release-notes
     - text: Visual Studio 2019 の新機能
       url: ../ide/whats-new-visual-studio-2019.md
     - text: Visual Studio 2017 の新機能
       url: ../ide/whats-new-visual-studio-2017.md
-    - text: Visual Studio ドキュメントの新機能
+    - text: ドキュメントの新着情報
       url: ../ide/whats-new-visual-studio-docs.md

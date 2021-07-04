@@ -5,24 +5,24 @@ ms.date: 07/17/2019
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2c8510a1ba83243d2d92b538d80876a8b0f20079
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 03a192657a46c2db15cb2d1121735905f06da478
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935658"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306671"
 ---
 # <a name="update-visual-studio-while-on-a-servicing-baseline"></a>サービス ベースライン使用時の Visual Studio の更新
 
-Visual Studio は、製品のライフサイクルの間に頻繁に更新されます。 2 種類の更新があります。 
+Visual Studio は、製品のライフサイクルの間に頻繁に更新されます。 2 種類の更新があります。
 
 * **マイナー リリース更新**&mdash; たとえば、16.0 から 16.1 &mdash; 新しい機能とコンポーネントが含まれます。  
 * **サービス更新** — たとえば、16.0.4 から 16.0.5 — 重要な問題だけに対象を絞った修正が含まれます。
@@ -51,7 +51,7 @@ Visual Studio は、製品のライフサイクルの間に頻繁に更新され
 
 インターネット ベースのインストールを行う場合は、セットアップを起動するために使うコマンドラインに、`--channelUri` と存在しないチャンネル マニフェストを追加します。 これにより、Visual Studio の更新で入手可能な最新リリースを使えないようになります。 次に例を示します。
 
-```cmd
+```shell
 vs_enterprise.exe --channelUri c:\doesnotexist.chman
 ```
 
@@ -69,19 +69,31 @@ vs_enterprise.exe --channelUri c:\doesnotexist.chman
 
 1. Visual Studio インストーラーを更新する。
 
-    ```cmd
+    ```shell
     vs_enterprise.exe --quiet --update
     ```
 
+::: moniker range="vs-2019"
+ 
 2. Visual Studio アプリケーション自体を更新する。
-
-    ```cmd
+    ```shell
     vs_enterprise.exe update --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
     ```
 
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+2. Visual Studio アプリケーション自体を更新する。
+    ```shell
+    vs_enterprise.exe update --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" --quiet --wait --norestart --channelUri c:\doesnotexist.chman
+    ```
+
+::: moniker-end
+
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Visual Studio のインストール](install-visual-studio.md)
 * [Visual Studio 管理者ガイド](visual-studio-administrator-guide.md)

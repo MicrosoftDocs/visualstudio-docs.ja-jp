@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9ee4109c888888d2dee36804a178f7db8d41753f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9408e099caaef097be3fc4eea26cee2b1889e8e
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841771"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222904"
 ---
 # <a name="persist-your-data"></a> データを保持する
 
@@ -141,7 +140,7 @@ docker volume inspect todo-db
 
 ただし、前に説明したように、変更ごとにイメージを再構築するにはかなりの時間がかかります。 変更を加えるには、もっと良い方法があるのではないでしょうか。 (以前に触れましたが) バインド マウントを使用することをお勧めします。 次はこれを見てみましょう。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 チュートリアルを続行します。
 

@@ -4,17 +4,17 @@ description: ドメイン ロールに関連付けられているプロパティ
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9edee5f8128933b2ecb36434a64d39c40d3d799f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 670704a86f0c149d26c7c869259c0f2f6bb75881
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99941308"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385149"
 ---
 # <a name="properties-of-domain-roles"></a>ドメイン ロールのプロパティ
 次の表に示すプロパティは、ドメイン ロールに関連付けられています。 ドメイン ロールについては、「[モデル、クラス、およびリレーションシップについて」](../modeling/understanding-models-classes-and-relationships.md)を参照してください。 これらのプロパティの使用方法の詳細については、「[ドメイン固有言語のカスタマイズおよび拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)」を参照してください。

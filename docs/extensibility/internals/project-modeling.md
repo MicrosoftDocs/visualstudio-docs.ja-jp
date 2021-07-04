@@ -3,7 +3,7 @@ title: プロジェクトのモデリング | Microsoft Docs
 description: 新しいプロジェクト タイプに対するオートメーションを作成するために必要な標準プロジェクト オブジェクトと、プロジェクト オートメーションが従うパスについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - automation [Visual Studio SDK], implementing project objects
 - project models, automation
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 506606291996c94ff10514c6c57f83c6e1133862
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b90271fcc43c627f2eb7dbb2f318427ad0d9839e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062825"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899681"
 ---
 # <a name="project-modeling"></a>プロジェクトのモデリング
 プロジェクトのオートメーションを実現する次のステップでは、標準のプロジェクト オブジェクト (<xref:EnvDTE.Projects> および `ProjectItems` コレクション、`Project` および <xref:EnvDTE.ProjectItem> オブジェクト、実装に固有の残りのオブジェクト) を実装します。 これらの標準オブジェクトは、Dteinternal.h ファイルで定義されています。 標準オブジェクトの実装は、BscPrj サンプルに用意されています。 これらのクラスをモデルとして使用して、他のプロジェクト タイプのプロジェクト オブジェクトと両立する独自の標準プロジェクト オブジェクトを作成できます。

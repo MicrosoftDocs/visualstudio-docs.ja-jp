@@ -3,7 +3,7 @@ title: Strings 要素 | Microsoft Docs
 description: Strings 要素には、ButtonText 子要素と、その他の省略可能な子要素が含まれます。 テキスト文字列内のアンパサンドは、キーボード ショートカットを指定します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Strings element (VSCT XML schema)
 - VSCT XML schema elements, Strings
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0bd9ad9b8059eb7fd566c1e0c26a938af6d18b2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 27a649c7d3a8bb808153c280921d2304de59c379
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089902"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899408"
 ---
 # <a name="strings-element"></a>文字列要素
 Strings 要素には、少なくとも **Buttontext** 子要素が含まれていることが必要です。 その以外の子要素はすべて、省略可能です。 "&" や "<" など、無効な XML 文字は、エンティティ ("&amp;" や "&lt;" など) としてコーディングする必要があります。

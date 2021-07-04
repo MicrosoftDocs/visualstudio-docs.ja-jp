@@ -3,7 +3,7 @@ title: 出力ウィンドウの拡張 | Microsoft Docs
 description: Visual Studio SDK の出力ウィンドウを拡張し、独自のカスタム ウィンドウを作成および管理する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Output window, about Output window
 ms.assetid: b02fa88c-f92a-4ff6-ba5f-2eb4d48a643a
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf875d070d27d307380f23e71af2bda7c4a205b5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 402c53691525530171edafd6a0751dfc72c9798d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075043"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900228"
 ---
 # <a name="extend-the-output-window"></a>出力ウィンドウを拡張する
 **出力** ウィンドウは、一連の読み取り/書き込みテキスト ウィンドウです。 Visual Studio には、プロジェクトによってビルドに関するメッセージを伝達する **ビルド** と [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] によって IDE に関するメッセージを伝達する **全般** という組み込みのウィンドウがあります。 プロジェクトでは、<xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> インターフェイス メソッドを使用して、**ビルド** ウィンドウへの参照が自動的に取得され、Visual Studio によって、<xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> サービスから、**全般** ウィンドウに直接アクセスできます。 組み込みのウィンドウに加えて、独自のカスタム ウィンドウを作成して管理することもできます。

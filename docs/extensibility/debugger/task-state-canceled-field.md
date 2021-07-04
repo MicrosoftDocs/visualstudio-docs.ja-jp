@@ -2,7 +2,7 @@
 description: タスクは、実行状態に到達する前に取り消されたか、または取り消しが確認され、例外なしで完了しました。
 title: TASK_STATE_CANCELED Field | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_CANCELED field, Task class [.NET Framework debug engines]
 ms.assetid: f4f5a96a-8230-493d-9696-8d2716bda261
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e02bd5c81fea58e49eca0909d53d2fe68269b72d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 90b3c048edb4e52a426a2fd40d8bfd31168fea7d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079268"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900175"
 ---
 # <a name="task_state_canceled-field"></a>TASK_STATE_CANCELED フィールド
 タスクは、実行状態に到達する前に取り消されたか、または取り消しが確認され、例外なしで完了しました。

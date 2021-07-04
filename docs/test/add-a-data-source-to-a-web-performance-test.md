@@ -11,12 +11,12 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: fc7367db64f096ce5a90e9b51a8f5df162779f36
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 71aa3dbf4657896093dae59451140f48f83f1622
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971220"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761005"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web パフォーマンス テストへのデータ ソースの追加
 
@@ -66,7 +66,7 @@ ms.locfileid: "99971220"
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. Visual Studio Enterprise をお持ちでない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページからダウンロードできます。
 

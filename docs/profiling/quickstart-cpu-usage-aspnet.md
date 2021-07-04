@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - aspnet
-ms.openlocfilehash: fa8601b6fe625c5cab2aa1f5de8a69f2d550ee2a
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: aa0c95e3a9f3598cd6399b565adb75faccac22a8
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683630"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761148"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-aspnet-core"></a>クイック スタート: Visual Studio での CPU 使用率データの分析 (ASP.NET Core)
 
@@ -41,7 +41,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
 
    ダイアログ ボックスが表示されたら、真ん中のウィンドウで **[MVC]** を選択し、 **[OK]** をクリックします。
    ::: moniker-end
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
    Visual Studio 2019 で、スタート ウィンドウの **[新しいプロジェクトの作成]** を選択します。 スタート ウィンドウが開いていない場合は、 **[ファイル]**  >  **[スタート ウィンドウ]** の順に選択してから、 **[新しいプロジェクトの作成]** を選択します。
 
    検索ボックスに「**Web アプリ**」と入力し、言語として **C#** を選択して、 **[ASP.NET Core Web Application (Model-View-Controller)]\(ASP.NET Core Web アプリケーション (Model-View-Controller)\)** を選択した後、 **[次へ]** を選択します。 次の画面で、プロジェクトに「*MyProfilingApp_MVC*」という名前を指定し、 **[次へ]** を選択します。
@@ -169,7 +169,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
     ```
 
     ::: moniker-end
-    ::: moniker range="vs-2019"
+    ::: moniker range=">=vs-2019"
 
     ```csharp
     public IActionResult Privacy()
@@ -215,7 +215,7 @@ Windows 8 以降では、デバッガーを使用してプロファイル ツー
    ::: moniker range="vs-2017"
    Visual Studio 2017 では、 **[About]\(詳細情報\)** リンクをクリックしてコードを実行します。
    ::: moniker-end
-   ::: moniker range="vs-2019"
+   ::: moniker range=">=vs-2019"
    Visual Studio 2019 では、 **[プライバシー]** リンクをクリックしてコードを実行します。
    ::: moniker-end
 

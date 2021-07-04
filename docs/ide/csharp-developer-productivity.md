@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3ac2e91ed9166a2eb8bdc4a19f2143c4fc71640
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 09a33db9df8e1309792cd6a3722bb82333348d84
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161314"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038656"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>C# 開発者のための Visual Studio 生産性ガイド
 
@@ -64,7 +64,7 @@ Visual Studio によって開発者の生産性がどのように向上するか
 > [!NOTE]
 > 一部の拡張機能によって、既定の Visual Studio キー バインドがバインド解除されます。 上記のコマンドを使用するには、 **[ツール]**  >  **[設定のインポートとエクスポート]**  >  **[すべての設定をリセット]** または **[ツール]**  >  **[オプション]**  >  **[キーボード]**  >  **[リセット]** の順に進み、キー バインドを Visual Studio の既定値に復元します。
 
-キーボード ショートカットとコマンドの詳細については、「[生産性のショートカット](../ide/productivity-shortcuts.md)」および[よく使われるキーボード ショートカット](default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)に関する記事をご覧ください。
+キーボード ショートカットとコマンドの詳細については、「[生産性のショートカット](../ide/productivity-shortcuts.md)」および[よく使われるキーボード ショートカット](default-keyboard-shortcuts-in-visual-studio.md)に関する記事をご覧ください。
 
 ## <a name="navigate-quickly-to-files-or-types"></a>ファイルまたは型にすばやく移動する
 
@@ -152,7 +152,7 @@ Visual Studio には、多くのリファクタリング、コード生成アク
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 - [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2019)
 - [SonarLint for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2019)

@@ -1,7 +1,7 @@
 ---
 title: 高度な機能
 description: 経験豊富な開発者や、既に Visual Studio に習熟している開発者向けにより適している可能性がある高度な機能について説明します。
-ms.custom: SEO-VS-2020
+ms.custom: vs-acquisition
 ms.date: 06/01/2018
 ms.topic: conceptual
 author: TerryGLee
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04b048250b2529e21dd30738821b273c268e3498
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6cc6604816921b054b0c909177c8e641493920a8
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862084"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386197"
 ---
 # <a name="features-of-visual-studio"></a>Visual Studio の機能
 
@@ -82,13 +82,9 @@ Visual Studio を使用して、macOS、Linux、Windows 用のアプリおよび
 
 - [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/) を使用して、iOS、Android、および Windows 向けにモバイル アプリをビルドします。
 
-- 標準的な Web テクノロジである &mdash;HTML、CSS、および JavaScript&mdash; を使用して iOS、Android、および Windows 用のモバイル アプリをビルドするには、[Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/) を使用します。
-
 - [Visual Studio Tools for Unity](/gamedev/unity/get-started/visual-studio-tools-for-unity.md) を使用して、C# で 2D および 3D ゲームをビルドします。
 
 - iOS、Android、および Windows デバイス用のネイティブ C++ アプリをビルドします。 [C++ for Cross-Platform Development](/cpp/cross-platform/visual-cpp-for-cross-platform-mobile-development) を使用することによって、iOS、Android、および Windows 用にビルドされたライブラリ内で共通コードを共有します。
-
-- [Android エミュレーター](../cross-platform/visual-studio-emulator-for-android.md)で、Android アプリを展開、テスト、およびデバッグします。
 
 ## <a name="connect-to-databases"></a>データベースへの接続
 

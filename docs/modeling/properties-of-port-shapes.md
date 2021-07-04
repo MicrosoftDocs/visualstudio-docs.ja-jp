@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.port
 helpviewer_keywords:
 - Domain-Specific Language, port shape
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 91b505278ef62a7e0ded42f407e1c38083fa7c6d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b5994d2629a49757980695ca99a6d12ae21160a6
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883013"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386528"
 ---
 # <a name="properties-of-port-shapes"></a>ポート シェイプのプロパティ
 ポート シェイプを使用して、生成されたデザイナーのドメイン クラスを表すことができます。
@@ -40,7 +40,7 @@ ms.locfileid: "99883013"
 |アクセス修飾子|クラスのアクセスのレベル (`public` または `internal`)。|パブリック|
 |カスタム属性|この図形から生成されるソース コード クラスに属性を追加するために使用されます。|\<none>|
 |2 つの派生を生成する|`True` の場合、(オーバーライドによるカスタマイズをサポートするために) 基底クラスと部分クラスの両方が生成されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください|いいえ|
-|カスタム コンストラクターがある|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|いいえ|
+|カスタム コンストラクターがある|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
 |継承修飾子|ポートから生成されるソース コード クラスの継承の種類 (`none`、`abstract`、または `sealed`) を記述します。|なし|
 |ベース ポート|この図形の基底クラス。|(なし)|
 |名前|この図形の名前。|現在の名前|
@@ -49,7 +49,7 @@ ms.locfileid: "99883013"
 |Notes|この図形に関連付けられている非公式のメモ。|\<none>|
 |初期の高さ|この図形の初期の高さ (インチ単位)。|1|
 |初期の幅|この図形の初期の幅 (インチ単位)。|1.5|
-|塗りつぶしの色をプロパティとして公開する<br /><br /> 塗りつぶしのグラデーション モードを公開する<br /><br /> 輪郭の色をプロパティとして公開する<br /><br /> 輪郭の破線スタイルをプロパティとして公開する<br /><br /> 輪郭の太さをプロパティとして公開する<br /><br /> テキストの色を公開する|`True` の場合、ユーザーは指定された図形のプロパティを設定できます。 これを設定するには、図形の定義を右クリックし、 **[公開済みの項目を追加]** をクリックします。|いいえ|
+|塗りつぶしの色をプロパティとして公開する<br /><br /> 塗りつぶしのグラデーション モードを公開する<br /><br /> 輪郭の色をプロパティとして公開する<br /><br /> 輪郭の破線スタイルをプロパティとして公開する<br /><br /> 輪郭の太さをプロパティとして公開する<br /><br /> テキストの色を公開する|`True` の場合、ユーザーは指定された図形のプロパティを設定できます。 これを設定するには、図形の定義を右クリックし、 **[公開済みの項目を追加]** をクリックします。|False|
 |説明|生成されたデザイナーを文書化するために使用します。|\<none>|
 |表示名|生成されたデザイナーに表示されるこの図形の名前。|\<none>|
 |固定ツールヒントのテキスト|固定ツールヒントに使用されるテキスト。|\<none>|

@@ -4,6 +4,7 @@ description: Visual Basic 開発者として、Visual Studio を使用してコ�
 ms.date: 03/02/2021
 ms.technology: vs-ide-general
 ms.custom:
+- vs-acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: conceptual
@@ -14,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 398070e0214e36f696bb69614bb6a51b3462a551
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 486201d61f6bd2d149c9aea66efee1814ce667e7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682917"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386632"
 ---
 # <a name="welcome-to-the-visual-studio-ide--visual-basic"></a>Visual Studio IDE へようこそ | Visual Basic
 
@@ -432,7 +433,7 @@ IDE の他のカスタマイズ方法については、「[Visual Studio IDE の
 
    プロジェクト全体で変数の名前が変更され、この場合は 2 か所だけです。
 
-4. 次は IntelliSense を試してみましょう。 `Console.WriteLine("Hello " + username + "!")` という行の下に、次のコード フラグメントを入力します。
+4. 次は IntelliSense を試してみましょう。 `Console.WriteLine("Hello &quot; + username + &quot;!")` という行の下に、次のコード フラグメントを入力します。
 
     ```vb
    Dim now = Date.
@@ -481,13 +482,13 @@ IDE の他のカスタマイズ方法については、「[Visual Studio IDE の
 
 ::: moniker-end
 
-## <a name="debug-code"></a>コードのデバッグ
+## <a name="debug-code&quot;></a>コードのデバッグ
 
-コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 特定の行でコードの実行を停止する "*ブレークポイント*" を設定できます。 コードが実行されたときに変数の値がどのように変わるかなどを確認できます。
+コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 特定の行でコードの実行を停止する &quot;*ブレークポイント*&quot; を設定できます。 コードが実行されたときに変数の値がどのように変わるかなどを確認できます。
 
-ブレークポイントを設定して、プログラムが "実行中" の `username` 変数の値を見てみましょう。
+ブレークポイントを設定して、プログラムが &quot;実行中&quot; の `username` 変数の値を見てみましょう。
 
-1. `Console.WriteLine("Hello " + username + "!")` というコード行を探します。 この行にブレークポイントを設定するには、つまりこの行でプログラムの実行を一時停止するには、エディターの左端の余白をクリックします。 コード行の任意の場所をクリックしてから、**F9** キーを押してもかまいません。
+1. `Console.WriteLine(&quot;Hello &quot; + username + &quot;!")` というコード行を探します。 この行にブレークポイントを設定するには、つまりこの行でプログラムの実行を一時停止するには、エディターの左端の余白をクリックします。 コード行の任意の場所をクリックしてから、**F9** キーを押してもかまいません。
 
    余白の左端に赤い円が表示され、コードが赤で強調表示されます。
 

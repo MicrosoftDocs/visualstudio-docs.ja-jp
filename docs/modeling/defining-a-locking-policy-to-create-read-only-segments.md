@@ -4,17 +4,17 @@ description: ドメイン固有言語 (DSL) モデルの一部または全部を
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aa7590689b4d7acdb7a7ebe501584ed6a8bd41bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bb8e05ffc030716f32ab7e79233ca9e02ef2e11
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935418"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385787"
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>ロック ポリシーの定義と読み取り専用セグメントの作成
 Visual Studio の視覚化およびモデリング SDK の不変 API を使用すると、ドメイン固有言語 (DSL) モデルの一部または全部をプログラムでロックして、読み取りはできるが変更はできないようにすることができます。 この読み取り専用オプションを使用して、たとえばユーザーが同僚に DSL モデルに注釈付けとレビューを行うように依頼できますが、同僚はオリジナルを変更することはできないようにすることができます。

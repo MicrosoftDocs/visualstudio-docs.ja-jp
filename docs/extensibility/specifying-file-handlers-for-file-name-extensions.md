@@ -3,7 +3,7 @@ title: ファイル名拡張子のファイル ハンドラーの指定 | Micros
 description: OpenWithList と OpenWithProgids を使用して、Visual Studio SDK でファイル拡張子を処理するアプリケーションを特定する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - file extensions, specifying file handlers
 ms.assetid: e3de4730-a95c-465a-b3b2-92ca85364ad7
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65705467b1531e139c0ec857d6a7b57015d5f2f9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6ab370b4be8c12ad0df0c4822bcc7b487fb4aa21
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089967"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899447"
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>ファイル名拡張子のファイル ハンドラーを指定する
 特定のファイル拡張子を持つファイルを処理するアプリケーションを特定する方法は、数多くあります。 OpenWithList 動詞と OpenWithProgids 動詞は、ファイル拡張子のレジストリ エントリの下でファイルハンドラーを指定する 2 つの方法です。

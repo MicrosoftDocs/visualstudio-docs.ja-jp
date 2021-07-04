@@ -3,7 +3,7 @@ title: 言語サービス フィルターの重要なコマンド | Microsoft Do
 description: Visual Studio でフル機能の言語サービス フィルターを作成するときにサポートする必要がある重要なコマンドについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - language services, filters
 - language services, commands to support
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d27f1c3057266d1b167999f3178a3e554a78ddb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8dd5f65248411a7ea6b892d5b4c800718456339f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069557"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899057"
 ---
 # <a name="important-commands-for-language-service-filters"></a>言語サービス フィルターの重要なコマンド
 フル機能の言語サービス フィルターを作成する場合は、次のコマンドの処理について検討してください。 コマンド識別子の完全なリストは、マネージ コードの場合は <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> 列挙型で、アンマネージド [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] コードの場合は Stdidcmd.h ヘッダー ファイルで定義されます。 Stdidcmd.h ファイルは、*Visual Studio SDK のインストール パス*\VisualStudioIntegration\Common\Inc にあります。

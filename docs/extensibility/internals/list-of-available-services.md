@@ -3,7 +3,7 @@ title: 使用可能なサービスの一覧 | Microsoft Docs
 description: 各サービスのインターフェイスを取得するためのサービス GUID を含む、Visual Studio と Visual Studio SDK でサポートされている使用可能なサービスの一覧を表示します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - services, Visual Studio
 - Visual Studio, services
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5a875a913f57d3b700728542162e996449dc964
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f5ba7fdfd7d86ef9158554d30acdd2995c98e5ec
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095226"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899941"
 ---
 # <a name="list-of-available-services"></a>使用可能なサービスの一覧
 

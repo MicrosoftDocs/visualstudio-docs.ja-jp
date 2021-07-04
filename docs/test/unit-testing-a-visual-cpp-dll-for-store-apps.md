@@ -9,12 +9,12 @@ manager: jmartens
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 5117ffb8731ef06f054b0ecbfc651aef2563078e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f1981b3876d2e42e992ef261738da2443edfc114
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962627"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042913"
 ---
 # <a name="how-to-test-a-c-dll"></a>C++ DLL をテストする方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "99962627"
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> ソリューションと単体テスト プロジェクトを作成する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 まず、新しいテスト プロジェクトを作成します。 **[ファイル]** メニューで、 **[新規]**  >  **[プロジェクト]** の順にクリックします。 **[新しいプロジェクトの作成]** ダイアログで検索ボックスに "test" と入力し、 **[言語]** を C++ に設定します。 プロジェクト テンプレートの一覧の **[単体テスト アプリ (ユニバーサル Windows)]** を選択します。
 
@@ -81,7 +81,7 @@ ms.locfileid: "99962627"
 
 ## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> DLL プロジェクトをソリューションに追加する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 **ソリューション エクスプローラー** でソリューション名を選択します。 ショートカット メニューの **[追加]** をポイントし、 **[新しいプロジェクト]** を選択します。 **[新しいプロジェクトの追加]** ダイアログで、 **[言語]** を C++ に設定し、検索ボックスに "DLL" と入力します。 結果の一覧から、 **[単体テスト アプリ (ユニバーサル ウィンドウ - C++/CX)]** を選択します。
 

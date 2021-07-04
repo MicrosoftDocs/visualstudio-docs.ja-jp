@@ -3,7 +3,7 @@ title: MSSCCPRJ.SCC ファイル | Microsoft Docs
 description: Visual Studio SDK で動作するソース管理プラグインによって使用されるクライアント側のローカル ファイルである MSSCCPRJ.SCC ファイルについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 945d1a4d1acde0ac3fef9918123f963cf27127f1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e006e4462522f4c464f40e0656dcef4d32c85fb7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090552"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899252"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ.SCC ファイル
 IDE を使用して Visual Studio ソリューションまたはプロジェクトをソース管理下に置くと、IDE では 2 つの重要な情報を受け取ります。 これらの情報は、ソース管理プラグインから文字列の形式で渡されます。 これらの文字列 "AuxPath" と "ProjName" は、IDE にとっては不透明ですが、バージョン管理内のソリューションまたはプロジェクトを見つけるためにプラグインによって使用されます。 IDE では通常、[SccGetProjPath](../extensibility/sccgetprojpath-function.md) を呼び出してこれらの文字列を初めて取得した後、それを将来の [SccOpenProject](../extensibility/sccopenproject-function.md) の呼び出しのためにソリューションまたはプロジェクト ファイルに保存します。 ソリューションおよびプロジェクト ファイルに埋め込まれている場合、文字列 "AuxPath" と "ProjName" は、バージョン管理内にあるソリューションおよびプロジェクト ファイルをユーザーがブランチ、フォーク、またはコピーしても自動的には更新されません。 ソリューションおよびプロジェクト ファイルがバージョン管理内のその正しい場所を確実に指すようにするには、ユーザーがそれらの文字列を手動で更新する必要があります。 これらの文字列は意図的に不透明になっているため、その更新方法が常に明確であるとは限らない可能性があります。

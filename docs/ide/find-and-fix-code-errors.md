@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: d6da05729be409b142f6c9cec2c543fb2b9171ee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5af76de5dbcc7a70722acf0ee01cfed93dbad761
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869428"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308260"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio でコードを機能させる
 
@@ -100,7 +100,7 @@ C++ コードを分析するには、[静的コード分析](/cpp/code-quality/q
 
 慣れてくれば、すばやく矢印キーと **Ctrl**+ **.** キー を使用して、リファクタリング機会を簡単にチェックし、コードをクリーンアップできます。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="run-code-cleanup"></a>コードのクリーンアップの実行
 

@@ -2,19 +2,19 @@
 title: Visual Studio のイメージとアイコン / Microsoft Docs
 description: Visual Studio のイメージとアイコンの作成に使用されるデザインの概念について説明します。
 ms.date: 04/26/2017
-ms.topic: overview
+ms.topic: reference
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 141e388e6877efe2b14c6f652b38b876bafe197f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 36b77dc79574b1741c8feaded65104810e58c2fb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069076"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898793"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio のイメージとアイコン
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"> Visual Studio でのイメージの使用</a>

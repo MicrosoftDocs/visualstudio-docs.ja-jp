@@ -7,16 +7,17 @@ author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
 ms.custom: seodec18
+monikerRange: vs-2017
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: a40745b19bde57f7f0ca52e04a11a89ad1ca69ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2de0f255da54d5bd8abf865f6534041d88bbbca3
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912423"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254837"
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python 用 Azure クラウド サービス プロジェクト
 
@@ -26,14 +27,14 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 この記事では、Visual Studio 2017 以降のプロジェクト テンプレートとその他のサポートについて詳しく説明します (以前のバージョンとよく似ていますが、いくつかの違いがあります)。 Python からの Azure の操作について詳しくは、[Azure Python デベロッパー センター](/azure/python/)をご覧ください。
 
-## <a name="create-a-project"></a>プロジェクトの作成
+## <a name="create-a-project"></a>プロジェクトを作成する
 
 1. クラウド サービス テンプレートを使用するために必要な [Azure .NET SDK for Visual Studio](https://visualstudio.microsoft.com/vs/azure-tools/) をインストールします。
 1. Visual Studio で、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** を選択し、"Azure Python" を検索して **[Azure クラウド サービス]** を一覧から選びます。
 
     ![Python 用 Azure クラウド プロジェクト テンプレート](media/template-azure-cloud-project.png)
 
-1. 含める 1 つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、**ソリューション エクスプローラー** で **[ロール]** を右クリックし、**[追加]** の下で項目の 1 つを選びます。
+1. 含める 1 つ以上のロールを選びます。 クラウド プロジェクトは、異なる言語で記述されたロールを結合できるため、アプリケーションの各部分を最も適した言語で簡単に記述できます。 このダイアログの完了後に新しいロールをプロジェクトに追加するには、**ソリューション エクスプローラー** で **[ロール]** を右クリックし、 **[追加]** の下で項目の 1 つを選びます。
 
     ![Azure クラウド プロジェクト テンプレートでのロールの追加](media/template-azure-cloud-service-project-wizard.png)
 
@@ -73,7 +74,7 @@ Visual Studio は、Python を使用して Azure Cloud Services の作成に使�
 
 ## <a name="deploy-a-role"></a>ロールのデプロイ
 
-**発行** ウィザードを開くには、**ソリューション エクスプローラー** でロール プロジェクトを選び、メイン メニューから **[ビルド]**  >  **[発行]** の順に選択するか、プロジェクトを右クリックして **[発行]** を選択します。
+**発行** ウィザードを開くには、**ソリューション エクスプローラー** でロール プロジェクトを選び、メイン メニューから **[ビルド]** > **[発行]** の順に選択するか、プロジェクトを右クリックして **[発行]** を選択します。
 
 発行プロセスには 2 つのフェーズが含まれます。 まず、Visual Studio で、クラウド サービスのすべてのロールを含む 1 つのパッケージを作成します。 このパッケージは Azure にデプロイされるもので、ロールごとに 1 台以上の仮想マシンを初期化し、ソースをデプロイします。
 

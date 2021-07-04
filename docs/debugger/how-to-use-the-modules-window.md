@@ -1,7 +1,7 @@
 ---
 title: DLL と実行可能ファイルの表示
 description: Visual Studio のデバッグ セッション中に、[モジュール] ウィンドウでアプリによって使用される DLL と実行可能ファイル (.exe ファイル) を表示します。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 titleSuffix: Visual Studio Modules window
 ms.date: 11/04/2018
 ms.topic: how-to
@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8add274d74d9d8d7d72f2808a2b0100c66a19717
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f82b8a5051cf1c338c4b1aab6e78209fb2bc08b0
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912206"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112385410"
 ---
 # <a name="view-dlls-and-executables-in-the-modules-window-c-c-visual-basic-f"></a>[モジュール] ウィンドウでの DLL と実行可能ファイルの表示 (C#、C++、Visual Basic、F#)
 

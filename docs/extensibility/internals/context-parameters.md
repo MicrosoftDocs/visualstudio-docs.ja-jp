@@ -3,7 +3,7 @@ title: コンテキスト パラメーター | Microsoft Docs
 description: ウィザードを追加または実装するときに、プロジェクトの状態を定義する Visual Studio 統合開発環境 (IDE) のコンテキスト パラメーターについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - wizards, context parameters
 - context parameters
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14d60aa31fb586651ea6e2b00a8f8038bfaa42b9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 536e5abf92884c5c19399e73b4e1773e66919657
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057079"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898228"
 ---
 # <a name="context-parameters"></a>コンテキスト パラメーター
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 統合開発環境 (IDE) では、 **[新しいプロジェクト]** 、 **[新しい項目の追加]** 、または **[サブプロジェクトの追加]** ダイアログ ボックスにウィザードを追加できます。 追加したウィザードは、 **[ファイル]** メニューで、または **ソリューション エクスプローラー** でプロジェクトを右クリックして表示できます。 IDE により、ウィザードの実装にコンテキスト パラメーターが渡されます。 IDE によりウィザードが呼び出されと、コンテキスト パラメーターによってプロジェクトの状態が定義されます。

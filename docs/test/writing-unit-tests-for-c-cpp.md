@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: d20bcdef769d8cd751230000b0e4d4319b10e46f
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 877c9163d05f458ce45a46d6b3e6d14e354df591
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217464"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042888"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio で C/C++ 用の単体テストを作成する
 
@@ -51,7 +51,7 @@ Google Test アダプターと Boost.Test アダプターは、Visual Studio Mar
 
 以下のセクションでは、C++ の単体テストを始めるための基本的な手順を示します。 基本的な構成は、Microsoft と Google どちらのテスト フレームワークでも似ています。 Boost.Test では、テスト プロジェクトを手動で作成することが必要です。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ### <a name="create-a-test-project-in-visual-studio-2019"></a>Visual Studio 2019 でテスト プロジェクトを作成する
 

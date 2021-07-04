@@ -13,12 +13,12 @@ manager: jmartens
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 274eda05a8af5c9be4fbbf67e3e78f254d1a7902
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 005743ad730184edb8a709b4c15867f857290f9b
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867517"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687622"
 ---
 # <a name="visual-studio-emulator-for-android"></a>Visual Studio Emulator for Android
 
@@ -29,6 +29,6 @@ Visual Studio Emulator for Android は、Android デバイスをエミュレー�
 > - Visual Studio 2015 以降、Visual Studio Emulator for Android はサポートされていません。
 > - Visual Studio Emulator for Android の場合、Android バージョン 6.0 より後のエミュレーター イメージを利用できません。
 > - Google Android Emulator は現在、[Hyper-V](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration#accelerating-with-hyper-v) に対応しています。
-> - C++ for Mobile Device Development と Visual Studio Tools for Apache Cordova のいずれも Google Android Emulator と連動します。 詳細については、「[Android での Apache Cordova アプリの実行](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator)」を参照してください。 (この記事で説明していますが、Hyper-V を無効にする必要がなくなりました)
+> - C++ for Mobile Device Development と Visual Studio Tools for Apache Cordova のいずれも Google Android Emulator と連動します。 詳細については、「[Android での Apache Cordova アプリの実行](/previous-versions/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#google-android-emulator)」を参照してください。 (この記事で説明していますが、Hyper-V を無効にする必要がなくなりました)
 >
 > Google Android エミュレーターの構成と使用の詳細については、「[Android Emulator のセットアップ](/xamarin/android/get-started/installation/android-emulator/)」を参照してください。

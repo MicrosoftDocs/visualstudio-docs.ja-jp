@@ -3,19 +3,19 @@ title: Visual Studio Professional 2017 のワークロードとコンポーネ�
 titleSuffix: ''
 description: ワークロード ID とコンポーネント ID を使用して、コマンドラインを使用して Visual Studio をインストールするか、VSIX マニフェストで依存関係として指定します。
 keywords: ''
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.date: 2/12/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: 692568b2b355844e0204346ccf7e58af1178cbde
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c6e0b2106f7f7e7b718efebeea1781f43594b00a
+ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881702"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "110449721"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-professional-2017"></a>Visual Studio のコア エディター (Visual Studio Professional 2017 に付属)
 
@@ -265,7 +265,7 @@ Microsoft.VisualStudio.Component.Debugger.JustInTime | Just-In-Time デバッガ
 Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 Tools | 15.6.27406.0 | 推奨
 Component.Dotfuscator | PreEmptive Protection - Dotfuscator | 15.0.26208.0 | Optional
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | Optional
-Component.Microsoft.Web.LibraryManager | ライブラリ マネージャー | 15.8.27705.0 | Optional
+Component.Microsoft.Web.LibraryManager | ライブラリ マネージャー | 15.8.27705.0 | オプション
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Optional
 Microsoft.Net.Component.4.6.2.SDK | .NET Framework 4.6.2 SDK | 15.6.27406.0 | Optional
 Microsoft.Net.Component.4.6.2.TargetingPack | .NET Framework 4.6.2 Targeting Pack | 15.6.27406.0 | Optional
@@ -285,7 +285,7 @@ Microsoft.Net.Core.Component.SDK.2.1 | .NET Core 2.1 開発ツール | 15.8.2792
 Microsoft.NetCore.ComponentGroup.DevelopmentTools | .NET Core 2.0 開発ツール | 15.8.27729.1 | Optional
 Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1 | .NET Core 2.1 開発ツール | 15.8.27924.0 | Optional
 Microsoft.VisualStudio.Component.Common.Azure.Tools | 接続および発行ツール | 15.9.28107.0 | Optional
-Microsoft.VisualStudio.Component.DockerTools | コンテナー開発ツール | 15.8.27906.1 | Optional
+Microsoft.VisualStudio.Component.DockerTools | コンテナー開発ツール | 15.8.27906.1 | オプション
 Microsoft.VisualStudio.Component.DockerTools.BuildTools | コンテナーの開発ツール - Build Tools | 15.7.27617.1 | Optional
 Microsoft.VisualStudio.Component.FSharp | F# 言語サポート | 15.8.27825.0 | Optional
 Microsoft.VisualStudio.Component.FSharp.Desktop | F# デスクトップ言語のサポート | 15.8.27825.0 | Optional
@@ -397,7 +397,7 @@ Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134
 Microsoft.VisualStudio.Component.Windows81SDK | Windows 8.1 SDK | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.WinXP | C++ に関する Windows XP サポート | 15.8.27924.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Win81 | Windows 8.1 SDK と UCRT SDK | 15.6.27406.0 | Optional
-Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP | C++ に関する Windows XP サポート | 15.8.27705.0 | Optional
+Microsoft.VisualStudio.ComponentGroup.NativeDesktop.WinXP | C++ に関する Windows XP サポート | 15.8.27705.0 | オプション
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.15063 | Windows 10 SDK (10.0.15063.0) | 15.8.27825.0 | Optional
 Microsoft.VisualStudio.ComponentGroup.Windows10SDK.16299 | Windows 10 SDK (10.0.16299.0) | 15.8.27825.0 | Optional
 
@@ -420,7 +420,7 @@ Microsoft.VisualStudio.Component.Graphics.Tools | DirectX 用グラフィック�
 Microsoft.VisualStudio.Component.Graphics.Win81 | グラフィックス ツール Windows 8.1 SDK | 15.6.27406.0 | 推奨
 Microsoft.VisualStudio.Component.VC.DiagnosticTools | C++ のプロファイル ツール | 15.0.26823.1 | 推奨
 Microsoft.VisualStudio.Component.Windows10SDK.17763 | Windows 10 SDK (10.0.17763.0) | 15.9.28307.102 | 推奨
-Component.Android.NDK.R12B | Android NDK (R12B) | 12.1.10 | Optional
+Component.Android.NDK.R12B | Android NDK (R12B) | 12.1.10 | オプション
 Component.Android.SDK23.Private | Android SDK セットアップ (API レベル 23) (JavaScript/C++ を使用したモバイル開発のためにローカルにインストール) | 15.9.28016.0 | Optional
 Component.Ant | Apache Ant (1.9.3) | 1.9.3.8 | Optional
 Component.Cocos | Cocos | 15.0.26906.1 | Optional
@@ -479,11 +479,11 @@ Microsoft.VisualStudio.Component.VC.CoreIde | Visual Studio C++ コア機能 | 1
 Component.Android.NDK.R15C | Android NDK (R15C) | 15.2.1 | 推奨
 Component.Ant | Apache Ant (1.9.3) | 1.9.3.8 | 推奨
 Component.MDD.Android | C++ Android 開発ツール | 15.0.26606.0 | 推奨
-Component.Android.NDK.R12B | Android NDK (R12B) | 12.1.10 | Optional
-Component.Android.NDK.R12B_3264 | Android NDK (R12B) (32 ビット) | 12.1.11 | Optional
-Component.Android.NDK.R13B | Android NDK (R13B) | 13.1.7 | Optional
-Component.Android.NDK.R13B_3264 | Android NDK (R13B) (32 ビット) | 13.1.8 | Optional
-Component.Android.NDK.R15C_3264 | Android NDK (R15C) (32 ビット) | 15.2.1 | Optional
+Component.Android.NDK.R12B | Android NDK (R12B) | 12.1.10 | オプション
+Component.Android.NDK.R12B_3264 | Android NDK (R12B) (32 ビット) | 12.1.11 | オプション
+Component.Android.NDK.R13B | Android NDK (R13B) | 13.1.7 | オプション
+Component.Android.NDK.R13B_3264 | Android NDK (R13B) (32 ビット) | 13.1.8 | オプション
+Component.Android.NDK.R15C_3264 | Android NDK (R15C) (32 ビット) | 15.2.1 | オプション
 Component.Google.Android.Emulator.API23.Private | Google Android Emulator (API レベル 23) (ローカル インストール) | 15.6.27413.0 | Optional
 Component.HAXM.Private | Intel Hardware Accelerated Execution Manager (HAXM) (ローカル インストール) | 15.9.28307.421 | Optional
 Component.Incredibuild | IncrediBuild - ビルド アクセラレーション | 15.7.27617.1 | Optional
@@ -810,10 +810,10 @@ Component.CPython2.x64 | Python 2 64 ビット (2.7.14) | 2.7.14 | Optional
 Component.CPython2.x86 | Python 2 32 ビット (2.7.14) | 2.7.14 | Optional
 Component.CPython3.x86 | Python 3 32 ビット (3.6.6) | 3.6.6 | Optional
 Component.Microsoft.VisualStudio.RazorExtension | Razor 言語サービス | 15.0.26720.2 | Optional
-Component.Microsoft.Web.LibraryManager | ライブラリ マネージャー | 15.8.27705.0 | Optional
+Component.Microsoft.Web.LibraryManager | ライブラリ マネージャー | 15.8.27705.0 | オプション
 Component.WebSocket | WebSocket4Net | 15.0.26606.0 | Optional
 Microsoft.Component.ClickOnce | ClickOnce Publishing | 15.8.27825.0 | Optional
-Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Optional
+Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | オプション
 Microsoft.Component.NetFX.Native | .NET Native | 15.0.26208.0 | Optional
 Microsoft.Component.PythonTools.UWP | Python IoT サポート | 15.0.26606.0 | Optional
 Microsoft.Component.VC.Runtime.UCRTSDK | Windows Universal CRT SDK | 15.6.27309.0 | Optional
@@ -833,7 +833,7 @@ Microsoft.VisualStudio.Component.Azure.Waverton | Azure Cloud Services コア �
 Microsoft.VisualStudio.Component.Azure.Waverton.BuildTools | Azure Cloud Services ビルド ツール | 15.7.27617.1 | Optional
 Microsoft.VisualStudio.Component.ClassDesigner | クラス デザイナー | 15.0.26208.0 | Optional
 Microsoft.VisualStudio.Component.DiagnosticTools | .NET プロファイル ツール | 15.8.27729.1 | Optional
-Microsoft.VisualStudio.Component.DockerTools | コンテナー開発ツール | 15.8.27906.1 | Optional
+Microsoft.VisualStudio.Component.DockerTools | コンテナー開発ツール | 15.8.27906.1 | オプション
 Microsoft.VisualStudio.Component.DockerTools.BuildTools | コンテナーの開発ツール - Build Tools | 15.7.27617.1 | Optional
 Microsoft.VisualStudio.Component.Graphics | イメージ エディターと 3D モデル エディター | 15.6.27406.0 | Optional
 Microsoft.VisualStudio.Component.Graphics.Tools | DirectX 用グラフィックス デバッガーおよび GPU プロファイラー | 15.6.27406.0 | Optional

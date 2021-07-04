@@ -3,7 +3,7 @@ title: スタック フレーム | Microsoft Docs
 description: この記事では、Visual Studio のデバッガー アーキテクチャにおけるスタック フレームの定義と役割について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - stack frames, debugging
 - debugging [Debugging SDK], stack frames
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0c54292d79b119fc36c9eff3f0f3519c92a4205
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77b503afcc38ab9427e5268097655433007de5d9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079396"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898553"
 ---
 # <a name="stack-frames"></a>スタック フレーム
 デバッガー アーキテクチャでは、"*スタック フレーム*" は次のようなものです。

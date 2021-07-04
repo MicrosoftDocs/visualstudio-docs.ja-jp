@@ -25,12 +25,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bd8859b98e54aa9692beaa98dd0f2c2ca70e2796
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: be11db364d0505833e722d3db308b41a18ccbb9d
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682589"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308130"
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio のウィンドウ レイアウトをカスタマイズする
 
@@ -56,7 +56,7 @@ IDE には *ツール ウィンドウ* と *ドキュメント ウィンドウ* 
 
 **[プレビュー]** タブで、ファイルを開かずに、エディターで見ることができます。 ファイルのプレビューは、**ソリューション エクスプローラー** でファイルを選択したり、デバッグ中にファイルにステップ インしたり、 **[定義へ移動]** を使用したり、検索結果を参照する際に利用できます。 プレビュー ファイルはドキュメント タブの右側にあるタブに表示されます。 ファイルを変更するか **[開く]** を選択すると、編集のためにファイルが開きます。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 #### <a name="vertical-document-tabs"></a>縦型のドキュメント タブ
 
@@ -169,7 +169,7 @@ Visual Studio を使用すると、最大 10 個のカスタム ウィンドウ 
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. 新しい C# **WPF アプリケーション** プロジェクトを作成します。 このプロジェクトで、ユーザー インターフェイスを開発するとします。 デザイナー ウィンドウの領域を最大化し、他のツール ウィンドウは他の場所に移動します。
 

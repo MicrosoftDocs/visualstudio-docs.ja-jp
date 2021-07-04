@@ -8,17 +8,17 @@ f1_keywords:
 - vs.dsltools.dsldesigner.swimlane
 helpviewer_keywords:
 - Domain-Specific Language, swimlane
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61994a25b5fa862a2014e2dd5b57a0c47130e6ba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c171bda2670b698297dd876a8a4403a91cd4af7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882987"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112386489"
 ---
 # <a name="properties-of-swimlanes"></a>スイムレーンのプロパティ
 スイムレーンを図に追加できます。 図はスイムレーンによって縦または横に並んだ領域に分割されます。 スイムレーンの内部に表示される他の図形を定義できます。 詳細については、「[方法: ドメイン固有言語を定義する](../modeling/how-to-define-a-domain-specific-language.md)」を参照してください。 これらのプロパティの使用方法の詳細については、「[ドメイン固有言語のカスタマイズと拡張](../modeling/customizing-and-extending-a-domain-specific-language.md)」を参照してください。
@@ -36,7 +36,7 @@ ms.locfileid: "99882987"
 |アクセス修飾子|クラスのアクセスのレベル (`public` または `internal`)。|パブリック|
 |カスタム属性|このスイムレーンから生成されるコード クラスに属性を追加するために使用されます。|\<none>|
 |Generates Double Derived|`True` の場合、(オーバーライドによるカスタマイズをサポートするために) 基底クラスと部分クラスの両方が生成されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
-|Has Custom Constructor|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
+|カスタム コンストラクターがある|`True` の場合、ソース コードにカスタム コンストラクターが用意されます。 詳細については、「[生成されたクラスをオーバーライドして拡張する](../modeling/overriding-and-extending-the-generated-classes.md)」を参照してください。|False|
 |Inheritance Modifier|スイムレーンから生成されるソース コード クラスの継承の種類を記述します(`none`、`abstract`、`sealed`)。|なし|
 |Base Swimlane|このスイムレーンの基底クラス。|(なし)|
 |名前|このスイムレーンの名前。|現在の名前|

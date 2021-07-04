@@ -12,12 +12,12 @@ manager: jmartens
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7efc8e5955f4d11004d8408cadf312e6cbcb43eb
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.openlocfilehash: e2224ffc1776a15453d1382872c2d3f5a9e86c3c
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607406"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760953"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>初めて Visual Studio のテスト ツールを検討する
 
@@ -34,7 +34,7 @@ Visual Studio のテスト ツールを使用することで、チームと共�
 ![Visual Studio テスト エクスプローラー](media/devtest-testexplorer.png)
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 ![Visual Studio テスト エクスプローラー 16.2](media/vs-2019/test-explorer-16-2.PNG)
 ::: moniker-end
 

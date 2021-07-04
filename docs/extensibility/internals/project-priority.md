@@ -3,7 +3,7 @@ title: プロジェクトの優先順位 | Microsoft Docs
 description: ある項目が複数のプロジェクトのメンバーである場合に、その項目を開くための最適なプロジェクトを特定するために Visual Studio IDE で使用する優先順位スキームについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], opening items
 ms.assetid: 9f707592-2fb6-4f75-9269-f6d4700a998e
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aefb6b1670da812a36efcc1baa3cb23f23e2561
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2ac0556e63b25f0f2a0df399cb23d5e2e9473008
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064489"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899642"
 ---
 # <a name="project-priority"></a>プロジェクトの優先順位
 プロジェクト項目は通常、ソリューション内の 1 つのプロジェクトのみのメンバーです。 そのため、IDE では、その項目を開くためにどのプロジェクトが使用されるかを容易に特定できます。 ただし、ある項目が複数のプロジェクトのメンバーである場合、IDE では、その項目を開くための最適なプロジェクトを特定するために優先順位スキームを使用します。

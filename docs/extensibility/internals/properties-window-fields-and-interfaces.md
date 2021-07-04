@@ -3,7 +3,7 @@ title: プロパティ ウィンドウのフィールドとインターフェイ
 description: Visual Studio IDE 内でフォーカスのあるウィンドウに基づいて、プロパティ ウィンドウにどのような情報を表示するかを決定する選択について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Properties window, fields and interfaces
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f445d31fe995321ad6ec334a5b6eb93570b8875
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7a74e82480d1a4c71179c0e0b0671bac4ae97191
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061031"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899629"
 ---
 # <a name="properties-window-fields-and-interfaces"></a>プロパティ ウィンドウのフィールドとインターフェイス
 **[プロパティ]** ウィンドウにどのような情報を表示するかを決定する選択のモデルは、IDE 内でフォーカスのあるウィンドウに基づいています。 すべてのウィンドウと、選択されたウィンドウ内のオブジェクトでは、その選択コンテキスト オブジェクトをグローバル選択コンテキストにプッシュできます。 環境では、あるウィンドウにフォーカスがあるときに、そのウィンドウ フレームの値でグローバル選択コンテキストを更新します。 フォーカスが変更されると、選択コンテキストも変更されます。

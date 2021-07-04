@@ -19,16 +19,19 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 236efe20ee652e2690cedf36843d539bf8a9cc46
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 85921343ac52c066735d607ce32635e953cf2e6a
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850296"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254788"
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>クラス デザイナーを使用したクラスと型の設計と表示
 
 Visual Studio の **クラス デザイナー** では、コード内のクラスとその他の型をデザイン、視覚化、およびリファクターできます。 C#、Visual Basic、または C++ プロジェクト内にあるクラスを作成および編集するには、クラス ダイアグラムを使用します。 クラス ダイアグラムを使用すると、プロジェクト構造をより深く理解したり、コードを再編成したりすることもできます。
+
+>[!NOTE]
+>クラス デザイナーは .NET Core プロジェクトで使用できません。
 
 ## <a name="what-you-can-do-with-class-diagrams"></a>クラス ダイアグラムでできること
 

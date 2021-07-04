@@ -3,7 +3,7 @@ title: イベント ソース (Visual Studio SDK) | Microsoft Docs
 description: Visual Studio デバッグでのイベントの 2 つのソース (デバッグ エンジンとセッション デバッグ マネージャー) について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], event sources
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec6213a1462c391d13bbdf8a20ac61e232cafb49
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8a1956cb3643b9f49fae6bb42bbb46675b7b2398
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097007"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898566"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>イベント ソース (Visual Studio SDK)
 イベントには、デバッグ エンジン (DE) とセッション デバッグ マネージャー (SDM) の 2 つのソースがあります。 DE から送信されるイベントには NULL 以外のエンジンが含まれ、SDM から送信されるイベントには NULL エンジンが含まれます。

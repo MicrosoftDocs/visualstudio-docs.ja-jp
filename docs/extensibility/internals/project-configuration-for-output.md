@@ -3,7 +3,7 @@ title: 出力のプロジェクト構成 | Microsoft Docs
 description: 各構成でサポート可能なビルド プロセス、および出力項目を使用できるようにするためのインターフェイスとメソッドについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project configurations, output
 ms.assetid: a4517f73-45af-4745-9d7f-9fddf887b636
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 13e37999ad9f3bada375c1897207e1e4c15546e8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b718e70bac0d9e09936daf743420acc04a1c4ad
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082011"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899876"
 ---
 # <a name="project-configuration-for-output"></a>出力のためのプロジェクト構成
 すべての構成は、実行可能ファイルやリソース ファイルなどの出力項目を生成する一連のビルド プロセスをサポートできます。 これらの出力項目はユーザーには非公開であり、実行可能ファイル (.exe、.dll、.lib) やソース ファイル (.idl、.h ファイル) などの関連する種類の出力をリンクするグループに配置することができます。
