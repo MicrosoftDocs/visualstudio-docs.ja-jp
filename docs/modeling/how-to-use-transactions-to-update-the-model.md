@@ -4,17 +4,17 @@ description: トランザクションではストアに加えられた変更が�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe892269d0e02d1f8e0aca2e943993ebb03cea41
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e91e569573076d1614a9fa946b67f3bda01e6fba
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922576"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390543"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>方法: トランザクションを使用してモデルを更新する
 トランザクションでは、ストアに加えられた変更がグループとして扱われます。 グループ化された変更は、単一のユニットとしてコミットまたはロールバックできます。

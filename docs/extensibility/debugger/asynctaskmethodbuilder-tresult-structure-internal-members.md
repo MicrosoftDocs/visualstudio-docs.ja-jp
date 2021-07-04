@@ -2,7 +2,7 @@
 description: このトピックでは、System.Runtime.CompilerServices.AsyncTaskMethodBuilder クラスの内部メンバーについて説明します。
 title: AsyncTaskMethodBuilder&lt;TResult&gt; 構造体 - 内部メンバー | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
 - debug engines, AsyncTaskMethodBuilder<TResult> structure [.NET Framework]
@@ -12,15 +12,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 253d4fa79280fbb49ff0292121c0d0a5cfe4bdb2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ca9d5ccfcd5870902cc40a623aabb93a3115f469
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055519"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903802"
 ---
 # <a name="asynctaskmethodbuilderlttresultgt-structure---internal-members"></a>AsyncTaskMethodBuilder&lt;TResult&gt; 構造体 - 内部メンバー
-このトピックでは、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> クラスの内部メンバーについて説明します。 このクラスに関する一般的な情報については、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> リファレンス トピックを参照してください。
+このトピックでは、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> クラスの内部メンバーについて説明します。 このクラスに関する一般的な情報については、<xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601> のリファレンス トピックを参照してください。
 
  **名前空間:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 

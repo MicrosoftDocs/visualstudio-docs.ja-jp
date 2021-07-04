@@ -2,7 +2,7 @@
 description: この関数は、現在の状態の完全修飾ディレクトリの一覧を調べます。
 title: SccDirQueryInfo 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccDirQueryInfo
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81087d4f4da3435fb7bc80ec4a965394c7d6c7f3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a3e65fa03c7fc2b6a8ce83ba2bb39250547aadb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060329"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904618"
 ---
 # <a name="sccdirqueryinfo-function"></a>SccDirQueryInfo 関数
 この関数は、現在の状態の完全修飾ディレクトリの一覧を調べます。
@@ -52,13 +52,13 @@ LPLONG  lpStatus
 [入力、出力] ステータス フラグを返すソース管理プラグインの配列構造体 (詳細については、[ディレクトリ状態コード](../extensibility/directory-status-code-enumerator.md)に関するページを参照してください)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|クエリに成功しました。|
 |SCC_E_OPNOTSUPPORTED|ソース コード管理システムでは、この操作はサポートされていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|
 
 ## <a name="remarks"></a>解説

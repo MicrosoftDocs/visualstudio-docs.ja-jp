@@ -17,23 +17,23 @@ helpviewer_keywords:
 - dependency diagrams
 - diagrams - modeling, layer
 - constraints, architectural
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f173e27588538c806d075e0a6b010fbd848f2690
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bb138164cfab44778c932a4bcb93572a3053a70
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917005"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391037"
 ---
 # <a name="dependency-diagrams-reference"></a>依存関係図: リファレンス
 
 Visual Studio では、システムの大まかな論理アーキテクチャを視覚化するために *依存関係図* を使用できます。 依存関係図では、システム内の物理的な成果物が *レイヤー* と呼ばれる抽象的な論理グループに整理されます。 これらのレイヤーは成果物が実行する主要タスクまたはシステムの主要コンポーネントについて説明します。 各レイヤーには、より詳細なタスクを示す入れ子になったレイヤーを含めることもできます。
 
-この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 > [!NOTE]
 > .NET Core プロジェクトの依存関係図は、Visual Studio 2019 バージョン 16.2 以降でサポートされています。

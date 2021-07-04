@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f34ee9e852c1210425407f80788aa1b9d5c33c1e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 21115673a41e26b2f1685442d2ed0ad93a147990
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912288"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254889"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python 対話型ウィンドウの使用
 
@@ -73,16 +73,34 @@ Visual Studio では、複数の Python REPL モードから選ぶことがで�
 
 <a name="meta-commands"></a> また、**対話型** ウィンドウは複数のメタコマンドもサポートします。 すべてのメタコマンドは `$` で始まり、「`$help`」と入力するとメタコマンドの一覧が表示され、「`$help <command>`」と入力すると特定のコマンドの使用方法の詳細が表示されます。
 
+:::moniker range="<=vs-2017"
+
 | メタコマンド | 説明 |
 | --- | --- |
 | `$$` | コメントを挿入します。セッションのコードにコメントを追加するのに役立ちます。 |
 | `$attach` | Visual Studio のデバッガーを REPL ウィンドウ プロセスにアタッチして、デバッグできるようにします。 |
-| `$cls`、`$clear` | エディター ウィンドウの内容を消去し、履歴と実行コンテキストはそのまま維持します。 |
+| `$cls`, `$clear` | エディター ウィンドウの内容を消去し、履歴と実行コンテキストはそのまま維持します。 |
 | `$help` | コマンドの一覧または特定のコマンドのヘルプを表示します。 |
 | `$load` | ファイルからコマンドを読み込み、完了するまで実行します。 |
 | `$mod` | 現在のスコープを指定されたモジュール名に切り替えます。 |
 | `$reset` | 実行環境を初期状態にリセットしますが、履歴は保持します。 |
 | `$wait` | 少なくとも指定されたミリ秒数だけ待機します。 |
+
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+| メタコマンド | 説明 |
+| --- | --- |
+| `$$` | コメントを挿入します。セッションのコードにコメントを追加するのに役立ちます。 |
+| `$cls`, `$clear` | エディター ウィンドウの内容を消去し、履歴と実行コンテキストはそのまま維持します。 |
+| `$help` | コマンドの一覧または特定のコマンドのヘルプを表示します。 |
+| `$load` | ファイルからコマンドを読み込み、完了するまで実行します。 |
+| `$mod` | 現在のスコープを指定されたモジュール名に切り替えます。 |
+| `$reset` | 実行環境を初期状態にリセットしますが、履歴は保持します。 |
+| `$wait` | 少なくとも指定されたミリ秒数だけ待機します。 |
+
+:::moniker-end
 
 Visual Studio 拡張機能で `IInteractiveWindowCommand` を実装およびエクスポートすることで、コマンドを拡張することもできます ([例](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85))。
 

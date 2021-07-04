@@ -6,22 +6,22 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - UML, modeling architecture
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e78e88884801b7aa7fcbcfe1147afd6fad653fd8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fa2be8f4da963c21d9f7f68939421dd7d2d72d0b
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99954372"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390113"
 ---
 # <a name="model-your-app39s-architecture"></a>アプリのアーキテクチャをモデル化する
 ソフトウェア システムまたはアプリケーションがユーザーのニーズに確実に対応するように、ソフトウェア システムまたはアプリケーションの全体的な構造および動作の記述の一部として Visual Studio でモデルを作成することができます。 モデルを使用して、設計全体で使用するパターンを記述することもできます。 これらのモデルは、既存のアーキテクチャの理解、変更についての話し合い、開発者の意図の伝達に役立ちます。
 
- この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ この機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
  モデルの目的は、自然言語による記述のあいまいさを減らし、開発者同士が設計を視覚化してさまざまな設計について話し合えるようにすることです。 モデルは、他のドキュメントまたはディスカッションと一緒に使用する必要があります。 モデルだけでは、アーキテクチャの完全な仕様を表すことができません。
 

@@ -3,7 +3,7 @@ title: Bitmaps 要素 | Microsoft Docs
 description: Bitmaps 要素を使用すると、1 つまたは複数のビットマップ要素をグループ化できます。 この記事には、Bitmaps 要素の例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Bitmaps
 - Bitmaps element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc17162c8d66df99eefe721589863ee4221c8602
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a86943e683502bdd1cd19668e9aafcb8fe7e1bc8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068207"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903308"
 ---
 # <a name="bitmaps-element"></a>Bitmaps 要素
 [ビットマップ要素](../extensibility/bitmap-element.md)の要素をグループ化します。
@@ -52,7 +52,7 @@ ms.locfileid: "105068207"
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンド コレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンドのコレクションを表します。|
 
 ## <a name="example"></a>例
 

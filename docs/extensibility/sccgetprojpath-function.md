@@ -2,7 +2,7 @@
 description: この関数では、ユーザーに、ソース管理プラグインに対してのみ意味がある文字列であるプロジェクト パスを入力するよう求めます。
 title: SccGetProjPath 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetProjPath
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07c6b8f865d8b1b1d87c9c9468d74e2208265290
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 93266464249b8de037a618bab55ede31988384cb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063969"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901072"
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath 関数
 この関数では、ユーザーに、ソース管理プラグインに対してのみ意味がある文字列であるプロジェクト パスを入力するよう求めます。 これは、ユーザーが次の操作を行っているときに呼び出されます。
@@ -88,7 +88,7 @@ SCCRTN SccGetProjPath (
 |FALSE|既存のプロジェクトが選択されました。|
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

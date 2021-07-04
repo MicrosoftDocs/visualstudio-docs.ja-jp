@@ -2,7 +2,7 @@
 description: この関数は、キューに置かれた状態イベントを取得します。
 title: SccGetEvents 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetEvents
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e7611a3f71b5fa6205708aca6b957f3921a71517
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9438ac10301e2da43b26a88575e44a8ad2c0bf82
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072989"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901059"
 ---
 # <a name="sccgetevents-function"></a>SccGetEvents 関数
 この関数は、キューに置かれた状態イベントを取得します。
@@ -52,7 +52,7 @@ SCCRTN SccGetEvents (
 [入力、出力] この呼び出しの後にキューに残されたエントリの数を返します。 この数値が大きい場合、呼び出し元では、[SccQueryInfo](../extensibility/sccqueryinfo-function.md) を呼び出して、すべての情報を一度に取得することを決定できます。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

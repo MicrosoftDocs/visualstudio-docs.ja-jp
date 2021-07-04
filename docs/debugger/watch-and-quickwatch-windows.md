@@ -1,11 +1,9 @@
 ---
 title: 変数にウォッチを設定する | Microsoft Docs
 description: デバッグ中は、[ウォッチ] と [クイックウォッチ] の変数と式を確認します。 [ウォッチ] では複数の変数を表示でき、[クイックウォッチ] では 1 つのみ、中断中にのみ表示できます。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/11/2018
 ms.topic: how-to
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - debugging [Visual Studio], Watch window
 - expressions [debugger], evaluating
@@ -18,12 +16,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 402b8a0c1e9d0ee72425317f299a3e68f091cc93
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 246f82b2d55e8e15bb5a56afba846a8b5dc8f245
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883988"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924904"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>ウォッチ ウィンドウとクイック ウォッチを使用して変数を監視する
 

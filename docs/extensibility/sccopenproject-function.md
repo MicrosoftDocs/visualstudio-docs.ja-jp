@@ -2,7 +2,7 @@
 description: この関数では、既存のソース管理プロジェクトを開くか、または新しいソース管理プロジェクトを作成します。
 title: SccOpenProject 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccOpenProject
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: baada63e84e95fd466e0e5640c592dfe303d8e1a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1326319b483aa707b77e0d7142d816b01fc7d3b1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063761"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902398"
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 関数
 この関数では、既存のソース管理プロジェクトを開くか、または新しいソース管理プロジェクトを作成します。
@@ -77,7 +77,7 @@ SCCRTN SccOpenProject (
 [入力] プロジェクトがソース管理プラグインで認識されていない場合、新しいプロジェクトを作成する必要があるかどうかを通知します。 値は `SCC_OP_CREATEIFNEW` と `SCC_OP_SILENTOPEN.` の組み合わせにすることができます。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -89,7 +89,7 @@ SCCRTN SccOpenProject (
 |SCC_E_UNKNOWNPROJECT|プロジェクトがソース管理プラグインで認識されておらず、`SCC_OPT_CREATEIFNEW` フラグは設定されませんでした。|
 |SCC_E_INVALIDFILEPATH|ファイル パスが無効であるか、または使用できません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NONSPECFICERROR|不特定のエラー。ソース管理システムは初期化されませんでした。|
 
 ## <a name="remarks"></a>解説

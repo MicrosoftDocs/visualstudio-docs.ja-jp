@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a309ba898c22836fb5c0cebfc390b6c8d7c116c5
-ms.sourcegitcommit: f1dff6c4532c43b0444aa12ea57e90bb7dba6fba
+ms.openlocfilehash: 6553017034dc46cfd1c035564a83dde89d77d057
+ms.sourcegitcommit: 4908561809ad397c99cf204f52d5e779512e502c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104805992"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112254850"
 ---
 # <a name="python-web-application-project-templates"></a>Python Web アプリケーション プロジェクト テンプレート
 
@@ -31,7 +31,17 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 
 ![Web アプリ用の新しいプロジェクト ダイアログ](media/projects-new-project-dialog-web.png)
 
+::: moniker range="<=vs-2017"
+
 前述の汎用的な **Web プロジェクト** テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。 **Azure クラウド サービス** テンプレートの詳細については、「[Python 用 Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)」を参照してください。
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+前述の汎用的な **Web プロジェクト** テンプレートは、空の Visual Studio プロジェクトのみを提供し、コードはなく Python プロジェクトであること以外に前提条件もありません。
+
+::: moniker-end
 
 その他のテンプレートはすべて、Bottle、Flask、または Django の Web フレームワークに基づいており、次のセクションで説明する 3 つの一般的なグループに分類されます。 このようなテンプレートのいずれかで作成されたアプリには、アプリをローカルで実行およびデバッグするのに必要なコードが含まれています。 また、各テンプレートでは、実稼働 Web サーバーで使用するために必要な [WSGI アプリ オブジェクト](https://www.python.org/dev/peps/pep-3333/) (python.org) も用意されています。
 
@@ -79,7 +89,11 @@ Python Web アプリを Azure にデプロイする方法については、「[A
 
 Microsoft Azure App Service にデプロイする場合は、Python のバージョンとして[サイト拡張機能](./managing-python-on-azure-app-service.md?view=vs-2019&preserve-view=true)を選び、パッケージを手動でインストールします。 また、Azure App Service は、Visual Studio からデプロイされるときに *requirements.txt* ファイルからパッケージを自動的にインストール **しない** ため、[aka.ms/PythonOnAppService](managing-python-on-azure-app-service.md) の構成の詳細に従ってください。
 
+::: moniker range="<=vs-2017"
+
 Microsoft Azure Cloud Services は *requirements.txt* ファイルをサポート *します*。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事をご覧ください。
+
+::: moniker-end
 
 ## <a name="debugging"></a>デバッグ
 
@@ -141,11 +155,15 @@ Pyramid アプリは、現在、`pcreate` コマンドライン ツールを使�
 
 別のフレームワークの設定を共有する場合、または別のフレームワークの設定を要求する場合は、[GitHub で懸案事項](https://github.com/Microsoft/PTVS/issues)を開きます。
 
+::: moniker range="<=vs-2017"
+
 ## <a name="convert-a-project-to-azure-cloud-service"></a>プロジェクトを Azure クラウド サービス プロジェクトに変換する
 
 **[Microsoft Azure クラウド サービス プロジェクトに変換]** コマンド (下図) は、クラウド サービス プロジェクトをソリューションに追加します。 このプロジェクトには、使用する仮想マシンとサービスのデプロイ設定と構成が含まれています。 クラウド プロジェクトで **[発行]** コマンドを使用して、Cloud Services にデプロイします。Python プロジェクトの **[発行]** コマンドでは、引き続き Web サイトにデプロイされます。 詳細については、[Azure クラウド サービス プロジェクト](python-azure-cloud-service-project-template.md)に関する記事を参照してください。
 
 ![[Microsoft Azure クラウド サービス プロジェクトに変換] コマンド](media/template-web-convert-menu.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>参照
 

@@ -3,7 +3,7 @@ title: POPLISTFUNC | Microsoft Docs
 description: ファイルまたはディレクトリのリストを更新するためにソース管理プラグインによって使用される POPLISTFUNC コールバック関数について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - POPDIRLISTFUNC
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aec322d73e49d4aae91956bd8df015a01c922a10
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b52ed40397793b44f8a9c7ed9c36aa5996ae0176
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090240"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900383"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 このコールバックは、IDE によって [SccPopulateList](../extensibility/sccpopulatelist-function.md) に提供され、ソース管理プラグインでファイルまたはディレクトリのリストを更新するために使用されます (`SccPopulateList` 関数にも提供されています)。

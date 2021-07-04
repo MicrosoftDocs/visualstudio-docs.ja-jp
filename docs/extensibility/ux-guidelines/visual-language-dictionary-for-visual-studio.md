@@ -3,17 +3,17 @@ title: ビジュアル言語リファレンス
 description: このビジュアル リファレンスでは、Visual Studio 内のアイコンやその他の画像の構成要素となっている概念について説明します。
 ms.date: 08/04/2017
 ms.reviewer: Jamie.Young
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d20a30c0-0dcc-4e2c-a809-31c8ea28c7df
 author: brickgeorge
 ms.author: brgeorge
 manager: jmartens
-ms.openlocfilehash: 79d0b2c9e2d3502f971b6ba832b5077e82295b84
-ms.sourcegitcommit: d1e51dd407ec2b51e5954a000501de85e9fcd3d8
+ms.openlocfilehash: 9d4426ad481a0e3c083d32300d6e1f3c1e011248
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106069267"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906082"
 ---
 # <a name="visual-language-dictionary"></a>ビジュアル言語辞書
 

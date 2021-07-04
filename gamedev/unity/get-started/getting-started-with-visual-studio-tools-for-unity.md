@@ -1,7 +1,6 @@
 ---
 title: Visual Studio Tools for Unity の使用を開始する | Microsoft Docs
 description: Visual Studio Tools for Unity をインストールして開発環境を設定する方法について説明します。
-ms.custom: ''
 ms.date: 01/27/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
@@ -13,12 +12,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 791f25b61c86f0115c225d505bdb1edb07869961
-ms.sourcegitcommit: 69256dc47489853dc66a037f5b0c1275977540c0
+ms.openlocfilehash: 706700c8343d934f7a9a5ce32f98bf96e67d4259
+ms.sourcegitcommit: 07e6db4bf2966863093e3974c60c3b46e6953416
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109782609"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112488846"
 ---
 # <a name="get-started-with-visual-studio-and-unity"></a>Visual Studio と Unity の使用を開始する
 

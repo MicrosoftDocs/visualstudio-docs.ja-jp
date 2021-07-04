@@ -2,7 +2,7 @@
 description: 現在アクティブなすべての System.Threading.Tasks.TaskScheduler オブジェクトの配列を取得します。
 title: GetTaskSchedulersForDebugger メソッド | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - GetTaskSchedulersForDebugger method, TaskScheduler class [.NET Framework debug engines]
 ms.assetid: 58aa236a-5ab8-4695-b303-89dffdbcd946
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d024e44dee8e7513d862e3d299c2ed2b9e53cd5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 58cb913f5dbc729c297de8a34aa5dd4c3c99b48a
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054856"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900916"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger メソッド
 現在アクティブなすべての <xref:System.Threading.Tasks.TaskScheduler> オブジェクトの配列を取得します。

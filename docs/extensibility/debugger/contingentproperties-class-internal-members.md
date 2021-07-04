@@ -2,7 +2,7 @@
 description: System.Threading.Tasks.Task オブジェクトの追加のプロパティが含まれます。
 title: ContingentProperties クラス - 内部メンバー | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ContingentProperties class [.NET Framework debug engines]
 - debug engines, ContingentProperties class [.NET Framework]
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 295b8c3b33059811e665e362c9894103b47c422d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8fca0bf68de4493d0165f9e66e251945ba6168b2
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054999"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905684"
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties クラス - 内部メンバー
 <xref:System.Threading.Tasks.Task> オブジェクトの追加プロパティが含まれています。

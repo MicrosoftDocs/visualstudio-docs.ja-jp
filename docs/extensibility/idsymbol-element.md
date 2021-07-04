@@ -3,7 +3,7 @@ title: IDSymbol 要素 | Microsoft Docs
 description: IDSymbol 要素には、メニュー、グループ、またはコマンドを表す GUID:ID ペアの ID が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IDSymbol element (VSCT XML schema)
 - VSCT XML schema elements, IDSymbol
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f59089ab981bc97100386b3e1907ef903ede3bd0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e5158b16fb2d12a7d1a93c0296126e915a138269
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069843"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904943"
 ---
 # <a name="idsymbol-element"></a>IDSymbol 要素
 `IDSymbol` 要素には、メニュー、グループ、またはコマンドを表す GUID:ID ペアの ID が含まれています。 GUID は親 `GuidSymbol` 要素から取得されます。 `IDSymbol` 要素には、`value` 属性に含まれている ID のフレンドリ名を提供する `name` 属性があります。

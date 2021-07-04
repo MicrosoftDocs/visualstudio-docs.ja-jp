@@ -2,7 +2,7 @@
 description: この関数により、表示とコンパイル用の 1 つ以上のファイルのコピーが取得されますが、編集用はされません。
 title: SccGet 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGet
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 172e0ec5fdba4b91c3cf86ea964b4a98a23a5fa8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 805c19b0c326e8389b4e1905edf370ad042aac92
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060342"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904553"
 ---
 # <a name="sccget-function"></a>SccGet 関数
 この関数により、表示とコンパイル用の 1 つ以上のファイルのコピーが取得されますが、編集用はされません。 ほとんどのシステムでは、ファイルは読み取り専用としてタグ付けされています。
@@ -43,7 +43,7 @@ SCCRTN SccGet(
 
  hWnd
 
-[入力] ソース管理プラグインが、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] 提供するすべてのダイアログ ボックスの親としてソース管理プラグインで使用できる IDE ウィンドウへのハンドル。
 
  nFiles
 
@@ -62,7 +62,7 @@ SCCRTN SccGet(
 [入力] ソース管理プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -70,7 +70,7 @@ SCCRTN SccGet(
 |SCC_E_FILENOTCONTROLLED|ファイルはソース管理されていません。|
 |SCC_E_OPNOTSUPPORTED|ソース管理システムでは、この操作はサポートされていません。|
 |SCC_E_FILEISCHECKEDOUT|ユーザーが現在チェックアウトしているファイルを取得できません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NOSPECIFIEDVERSION|無効なバージョン、日付または時刻が指定されました。|
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。ファイルは同期されませんでした。|
 |SCC_I_OPERATIONCANCELED|操作が完了する前にキャンセルされました。|

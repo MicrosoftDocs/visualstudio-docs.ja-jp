@@ -3,7 +3,7 @@ title: Commands 要素 | Microsoft Docs
 description: Commands 要素は、VSPackage ツールバー上のコマンドのコレクションを表し、メニュー、グループ、ボタン、コンボ ボックス、ビットマップのセクションを含むことができます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Commands
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 671e855a31af17310fdab58689d8775b490cb93a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e4c7b058acdd634079d0ca60dddb9f80e0e26ff0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089590"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901871"
 ---
 # <a name="commands-element"></a>Commands 要素
 VSPackage ツール バー上のコマンドのコレクションを表します。 コレクションには、メニュー、グループ、ボタン、コンボ ボックス、ビットマップの 5 つのサブセクションを含めることができます。
@@ -52,7 +52,7 @@ VSPackage ツール バー上のコマンドのコレクションを表します
 
 |要素|説明|
 |-------------|-----------------|
-|[Menus 要素](../extensibility/menus-element.md)|VSPackage が実装するすべてのメニューを定義します。|
+|[Menus 要素](../extensibility/menus-element.md)|VSPackage で実装するすべてのメニューを定義します。|
 |[Groups 要素](../extensibility/groups-element.md)|VSPackage のコマンド グループを定義するエントリが含まれます。|
 |[Buttons 要素](../extensibility/buttons-element.md)|Button 要素をグループ化します。|
 |[Bitmaps 要素](../extensibility/bitmaps-element.md)|Bitmap 要素をグループ化します。|

@@ -2,7 +2,7 @@
 description: この関数は、ユーザー固有のさまざまなオプションを取得します。
 title: SccGetUserOption 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetUserOption
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 262a15069f840c048f574396d5a7ec076760d77e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 622abc04609edf410214af6b8acf795f969e2fbc
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063956"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901111"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption 関数
 この関数は、ユーザー固有のさまざまなオプションを取得します。
@@ -47,7 +47,7 @@ SCCRTN SccGetUserOption(
 [出力] オプションに関連付けられた値。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

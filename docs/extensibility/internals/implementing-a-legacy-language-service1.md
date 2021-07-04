@@ -3,7 +3,7 @@ title: 従来の言語サービスの実装 1 | Microsoft Docs
 description: マネージド パッケージ フレームワーク (MPF) を使用して、拡張言語サービス機能をサポートする従来の言語サービスを実装する方法について説明します。 パート 1/2。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - language services, managed
 ms.assetid: df638f24-166d-4b80-be82-c9c39ca7a556
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99e3f11a9ea60595b2372921702282c2bb4d8dcd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 34be4e54fbce413fe5ba916892216a9234d4ba93
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085911"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901150"
 ---
 # <a name="implementing-a-legacy-language-service-1"></a>従来の言語サービスの実装 1
 マネージド パッケージ フレームワーク (MPF) のクラスを使用すると、構文の強調表示、かっこの一致、IntelliSense の入力候補などのさまざまな機能をサポートする従来の言語サービスを実装できます。

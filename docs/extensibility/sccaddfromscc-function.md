@@ -2,7 +2,7 @@
 description: この関数では、ソース管理システムに既に存在するファイルをユーザーが参照し、そのファイルを現在のプロジェクトの一部として含めることができます。
 title: SccAddFromScc 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccAddFromScc
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be67fd18c6cac7217da0d79aaef766e942e15fb9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 48560f135d73c4e53ba132845f4c768cdf4ac982
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085677"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904878"
 ---
 # <a name="sccaddfromscc-function"></a>SccAddFromScc 関数
 この関数では、ソース管理システムに既に存在するファイルをユーザーが参照し、そのファイルを現在のプロジェクトの一部として含めることができます。 たとえば、この関数では、ファイルをコピーすることなく、共通のヘッダー ファイルを現在のプロジェクトに取得できます。 返されるファイルの配列 `lplpFileNames` には、ユーザーが IDE プロジェクトに追加するファイルのリストが含まれています。

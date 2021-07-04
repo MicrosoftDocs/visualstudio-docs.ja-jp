@@ -2,7 +2,7 @@
 description: このトピックでは、System.Runtime.CompilerServices.AsyncVoidMethodBuilder クラスの内部メンバーについて説明します。
 title: AsyncVoidMethodBuilder 構造体 - 内部メンバー | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, AsyncVoidMethodBuilder structure [.NET Framework]
 - AsyncVoidMethodBuilder structure [.NET Framework debug engines]
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4097bce1f7fd90c5b73a3bb450a873561d76d9c1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d6606e26d14ba114ed8346c0cc11a81f8bdd3e8e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055337"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903634"
 ---
 # <a name="asyncvoidmethodbuilder-structure---internal-members"></a>AsyncVoidMethodBuilder 構造体 - 内部メンバー
 このトピックでは、<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> クラスの内部メンバーについて説明します。 このクラスに関する一般的な情報については、<xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> のリファレンス トピックを参照してください。

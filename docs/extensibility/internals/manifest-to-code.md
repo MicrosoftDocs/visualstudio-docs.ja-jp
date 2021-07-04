@@ -3,19 +3,19 @@ title: Manifest to Code | Microsoft Docs
 description: Visual Studio イメージ サービスで使用する .imagemanifest ファイルを取得する Manifest from Code ツールを使用する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5ae844b0b0b6d585895b6939d1d33b2a699c2756
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e63349b27ec8ea5617f6d1836ce9ece3251662d3
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095161"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903166"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 Manifest to Code ツールは、Visual Studio イメージ サービス用の .imagemanifest ファイルを取得し、Visual Studio 拡張機能の C++、C#、VB、または .vsct ファイルでイメージ マニフェストの値を参照するための 1 つ以上のラッパー ファイルを生成するコンソール アプリケーションです。 このツールでは、Visual Studio イメージ サービスから直接イメージを要求するために、またはコードが独自の UI およびレンダリングを処理しない場合に API を通じてマニフェスト値を渡すために使用できるラッパー ファイルを生成します。
@@ -35,9 +35,9 @@ Manifest to Code ツールは、Visual Studio イメージ サービス用の .i
 |/monikerClass|monikerClass の名前と、ツールによって作成された関連ファイル。 C++ 言語オプションの場合、.h ファイルだけが生成されます。 VSCT 言語の場合、これは無視されます。<br /><br /> 既定値: \<Manifest Path>\MyMonikers\<Lang Ext>。|オプション|
 |/classAccess|imageIdClass と monikerClass のアクセス修飾子。 アクセス修飾子が指定の言語に対して有効であることを確認します。 VSCT 言語オプションでは、これは無視されます。<br /><br /> 既定値: Public|オプション|
 |/namespace|コード ラッパーで定義されている名前空間。 VSCT 言語オプションでは、これは無視されます。 '.' または '::' は、選択した言語オプションに関係なく、名前空間の有効な区切り記号です。<br /><br /> 既定値: MyImages|オプション|
-|/noLogo|このフラグを設定すると、製品および著作権情報は印刷されなくなります。|オプション|
-|/?|ヘルプ情報を印刷します。|オプション|
-|/help|ヘルプ情報を印刷します。|オプション|
+|/noLogo|このフラグを設定すると、製品および著作権情報は出力されなくなります。|オプション|
+|/?|ヘルプ情報を出力します。|オプション|
+|/help|ヘルプ情報を出力します。|オプション|
 
  **例**
 

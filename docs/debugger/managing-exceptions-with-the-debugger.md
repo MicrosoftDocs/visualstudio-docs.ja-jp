@@ -1,7 +1,7 @@
 ---
 title: デバッガーでの例外の管理 | Microsoft Docs
 description: デバッガーが中断する例外を指定する方法、デバッガーを中断するポイント、中断を処理する方法について説明します。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 10/09/2018
 ms.topic: how-to
 f1_keywords:
@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b594857b00ee233c186008efc9d0fba7d968a9bc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89795df3a4c6b87c6a878cd07a072027f880e660
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893166"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390425"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio のデバッガーでの例外の管理
 

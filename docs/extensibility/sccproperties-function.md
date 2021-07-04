@@ -2,7 +2,7 @@
 description: この関数では、ファイルまたはプロジェクトのソース管理プロパティが表示されます。
 title: SccProperties 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccProperties
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56306bb7c248ea500e16964c0929f34a27187298
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd50353ab29c05e5e5db2dc2b3f363af46ca8aa7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056520"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904192"
 ---
 # <a name="sccproperties-function"></a>SccProperties 関数
 この関数では、ファイルまたはプロジェクトのソース管理プロパティが表示されます。
@@ -47,7 +47,7 @@ SCCRTN SccProperties (
 [入力] ファイルまたはプロジェクトの完全修飾パス名。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装は、次のいずれかの値を返すことが期待されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

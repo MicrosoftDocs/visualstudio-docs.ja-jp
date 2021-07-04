@@ -3,7 +3,7 @@ title: コマンド コード列挙子 | Microsoft Docs
 description: コマンド コード列挙子は、オプションが指定されているコマンドを示すために SccGetCommandOptions および SccPopulateListto のオプションで使用されます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - command code enumerator
 - source control plug-ins, command code enumeration
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e2df7ca11d5e93a3ae43d2a6bd1d7ccf8dfe5aa6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b97d5083c4f262ae2d86aeef5ee2627fdc854bcb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089707"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901384"
 ---
 # <a name="command-code-enumerator"></a>コマンド コード列挙子
 この列挙子は、オプションが指定されているコマンドを示すために [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) および [SccPopulateList](../extensibility/sccpopulatelist-function.md) のオプションで使用されます。

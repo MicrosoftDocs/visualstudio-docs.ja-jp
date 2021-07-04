@@ -3,7 +3,7 @@ title: POPDIRLISTFUNC | Microsoft Docs
 description: ディレクトリを更新してどれがソース管理下にあるかを確認するために渡される、POPDIRLISTFUNC コールバック関数について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - POPLISTFUNC
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f8cde3e6835a7d3262bbb89fed13e0dbc8e540e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c98b35d9f915e16072333c72df2e1e045850f5d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090253"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900396"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 これは、ディレクトリのコレクションと (必要に応じて) ファイル名を更新して、どれがソース管理下にあるかを確認するために、[SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) 関数に渡されるコールバック関数です。

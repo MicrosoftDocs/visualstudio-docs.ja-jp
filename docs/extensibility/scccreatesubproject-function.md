@@ -2,7 +2,7 @@
 description: この関数は、lpParentProjPath 引数で指定された既存の親プロジェクトの下に、指定された名前のサブプロジェクトを作成します。
 title: SccCreateSubProject 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCreateSubProject
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70568c27afb4bdb5794db64322113dffbd824452
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a6df7a801d282113b530f24472419a9735256702
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074003"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904683"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject 関数
 この関数は、`lpParentProjPath` 引数で指定された既存の親プロジェクトの下に、指定された名前のサブプロジェクトを作成します。
@@ -40,7 +40,7 @@ SCCRTN SccCreateSubProject(
 ### <a name="parameters"></a>パラメーター
  pContext
 
-[入力] ソース管理プラグインのコンテキスト ポインター。
+[in] ソース管理プラグインのコンテキスト ポインター。
 
  hWnd
 
@@ -67,7 +67,7 @@ SCCRTN SccCreateSubProject(
 [入力、出力] サブプロジェクトのパスを識別する出力文字列 (NULL 終端文字を含め、最大 SCC_PRJPATH_SIZE 文字)。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -79,7 +79,7 @@ SCCRTN SccCreateSubProject(
 |SCC_E_UNKNOWNPROJECT|親プロジェクトがソース管理プラグインで認識されていません。|
 |SCC_E_INVALIDFILEPATH|ファイル パスが無効であるか、または使用できません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_CONNECTIONFAILURE|ソース管理プラグイン接続の問題が発生しました。|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|
 

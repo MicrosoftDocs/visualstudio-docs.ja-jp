@@ -3,19 +3,19 @@ title: Visual Studio ユーザー エクスペリエンス ガイドライン | 
 description: Visual Studio ユーザー エクスペリエンス ガイドラインには、新しい機能の一貫性のあるユーザー エクスペリエンスを作成するために役立つ一般的なユーザー モデルとインタラクション パターンが含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 10/05/2018
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: 3abbe495-cbbc-4982-a809-38bda34553a7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a218cc3923f26c048bcf40894d66fccea2526aa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fef6315a9962d483b477c5b5f730c5ffe80b9911
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062643"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905502"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio ユーザー エクスペリエンス ガイドライン
 Visual Studio の新機能を設計する場合は、Visual Studio ユーザー エクスペリエンス ガイドラインに従ってください。 これらのガイドラインには、新しいユーザー インターフェイス (UI) の設計者が開発環境内でシームレスかつ一貫したユーザー エクスペリエンスを作成できるようにするための、一般的なユーザー モデルとインタラクション パターンに関する情報が含まれています。

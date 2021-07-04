@@ -3,19 +3,19 @@ title: Visual Studio のレイアウト | Microsoft Docs
 description: Visual Studio ダイアログのレイアウトについて説明します (テーマが適用されていないダイアログやテーマが適用された外観を持つ新しいダイアログを含む)。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c15b7458bfd18314015bbb9228c212a06fcd82f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e52b7b3fd620080b73e8d3de80672003ecb8fcf7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072976"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900532"
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio のレイアウト
 Visual Studio ダイアログの大部分は[ユーティリティ ダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout)です。これは、標準の [Windows デスクトップ ダイアログ レイアウトの原則](/windows/desktop/uxguide/win-dialog-box)に従う、テーマが適用されていないダイアログです。 Visual Studio が UI を更新するために移行されると、一部の代表的なダイアログには、製品を明確するエクスペリエンスとしてそれらが確立される新しいデザインが使用されます。 これらの[テーマが適用されたダイアログのレイアウト](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout)は、テーマが適用された外観を持っています。

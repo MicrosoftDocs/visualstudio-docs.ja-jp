@@ -3,7 +3,7 @@ title: デバッグ パッケージ | Microsoft Docs
 description: デバッグ インターフェイスを使用してセッション デバッグ マネージャーと通信することによって、デバッグ パッケージが Visual Studio シェルで動作して UI を処理するしくみについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], packages
 ms.assetid: 99947fd4-fb87-4c69-b26c-65634e17d285
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90c4c82895f7a30d4df9126a280c6c9ffa7ffa76
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8be920ae352067a6e77593ca0a922474d68851d9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067908"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905671"
 ---
 # <a name="debug-package"></a>デバッグ パッケージ
 デバッグ パッケージは Visual Studio シェルで動作し、すべての UI を処理します。 Visual Studio のデバッグ インターフェイスを使用し、セッション デバッグ マネージャー (SDM) と通信します。

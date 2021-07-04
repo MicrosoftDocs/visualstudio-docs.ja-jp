@@ -1,7 +1,7 @@
 ---
 title: Web アプリのデバッグ - エラーとトラブルシューティング
 description: Web アプリケーションのデバッグに役立つ参照ページのリンクを掲載しています。トラブルシューティング ページや、遭遇する可能性がある各エラーを説明したページなどです。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cce4bcbf946dad69fc3e11a7b54365fc549c699
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b7b77afecaaadd65e203bda52dfc9cb92bef52ff
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872301"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387711"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web アプリケーションのデバッグ: エラーとトラブルシューティング
 Web アプリケーションのデバッグを試行した場合に、次のエラーが発生することがあります。

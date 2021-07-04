@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - Domain-Specific Language, definition file
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ef8f49e46c554efca89862c787fbfbe97c48c8f4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6212dfcb9e93110a97e7143e5b1c946efebee89f
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959117"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390842"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 定義のプロパティ
 DslDefinition プロパティでは、バージョン番号付けなどの "*ドメイン固有言語*" 定義のプロパティを定義します。 DslDefinition プロパティは、"*ドメイン固有言語デザイナー*" の図の空いている領域をクリックすると、 **[プロパティ]** ウィンドウに表示されます。

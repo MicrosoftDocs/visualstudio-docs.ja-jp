@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: シンプルな C# コンソール アプリを拡張する'
 description: Visual Studio で C# コンソール アプリを開発する方法について、ステップ バイ ステップで説明します。
-ms.custom: get-started
+ms.custom: vs-acquisition, get-started
 ms.date: 04/15/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cce069b1c4acb1784388b7afb06e810dbe826d59
-ms.sourcegitcommit: 54aac5044a9853a435577acc5a134cb254494ffb
+ms.openlocfilehash: c7c38ed40143064090535735b2050dd31904d608
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107584126"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390178"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>チュートリアル: シンプルな C# コンソール アプリを拡張する
 

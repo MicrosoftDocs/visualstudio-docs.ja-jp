@@ -4,22 +4,22 @@ summary: Visual Studio を使用して C# アプリを作成します。
 metadata:
   title: Visual Studio を使用した C# 開発
   description: Visual Studio を使用して C# アプリを作成します。
-  ms.custom: seodec18
+  ms.custom: vs-acquisition
   ms.topic: landing-page
-  ms.date: 11/19/2019
+  ms.date: 06/19/2021
   author: ghogen
   ms.author: ghogen
-  manager: jillfra
+  manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: c76e2690d937a1580817d79d2cbe3a4f88d382f1
-  ms.sourcegitcommit: 04954be0c4373f82f79181e1a5e7812be4d3e1f7
+  ms.openlocfilehash: ff25c69e47d8345fb44713e24eeed03cb7d5ff69
+  ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/14/2021
-  ms.locfileid: "100496250"
+  ms.lasthandoff: 06/19/2021
+  ms.locfileid: "112390048"
 landingContent:
 - title: はじめに
   linkLists:

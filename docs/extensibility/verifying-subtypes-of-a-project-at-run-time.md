@@ -3,7 +3,7 @@ title: 実行時におけるプロジェクトのサブタイプの確認 | Micr
 description: 依存する指定されたカスタム プロジェクトのサブタイプの有無を VSPackage に確認させる方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project subtypes
 - check subtypes
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c52d3297ce4903cb8f8e7cb2f9ab5169d21ac94e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 621a40e1857d7c78ec4c5be08a3b7c3808a0d48b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062604"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905474"
 ---
 # <a name="verify-subtypes-of-a-project-at-run-time"></a>実行時におけるプロジェクトのサブタイプの確認
 カスタム プロジェクトのサブタイプに依存する VSPackage には、サブタイプが存在しない場合にも正常に失敗するように、そのサブタイプを検索するロジックを含める必要があります。 次の手順は、指定されたサブタイプの有無を確認する方法を示しています。

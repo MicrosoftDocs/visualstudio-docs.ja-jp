@@ -4,7 +4,7 @@ titleSuffix: ''
 description: Visual Studio を変更する方法について、ステップ バイ ステップで説明します。
 ms.date: 10/12/2020
 ms.topic: how-to
-ms.custom: contperf-fy21q2
+ms.custom: vs-acquisition
 helpviewer_keywords:
 - modify Visual Studio
 - change visual studio
@@ -18,16 +18,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 30b28af562e5dbaa8c05624f6cc9d531cf652419
-ms.sourcegitcommit: 8d3d51042261df603487169a7a008fe8f71404ec
+ms.openlocfilehash: 435ee6ad72141453e89aadcfd4ac3310bde0d538
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109501773"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391076"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Visual Studio のワークロード、コンポーネント、および言語パックを変更する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 必要なときに必要なものだけが含まれるように、Visual Studio を変更するのは簡単です。 これを行うには、Visual Studio インストーラー開き、ワークロードとコンポーネントを追加または削除します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "109501773"
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. コンピューター上の **Visual Studio インストーラー** を見つけます。
 
@@ -119,12 +119,11 @@ ms.locfileid: "109501773"
 
 1. 必要な場合、 **[ワークロード]** タブを選択し、目的のワークロードを選択または選択解除します。
 
-
 1. 新しいワークロードがインストールされたら、Visual Studio インストーラーで **[起動]** を選択し、Visual Studio を開きます。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
  ワークロードには、使用するプログラミング言語またはプラットフォームに必要な機能が含まれています。 ワークロードを使用することで、必要に応じて、実行する作業に合わせ、Visual Studio を変更できます。
 
@@ -147,7 +146,6 @@ ms.locfileid: "109501773"
 
 ::: moniker-end
 
-
 >[!TIP]
 > SQL Server Data Tools (SSDT) については、「[Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする](/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15&preserve-view=true)」を参照してください。
 
@@ -156,9 +154,10 @@ ms.locfileid: "109501773"
 既定では、インストーラーが最初に実行されるときに、オペレーティング システムの言語に一致させます。 しかし、必要に応じていつでも言語を変更できます。 
 
 そのためには次を行います。
+
 1. Visual Studio インストーラーで **[言語パック]** タブを選択します。
-2. 目的の言語を選択します。
-3. 画面の指示に従います。
+1. 目的の言語を選択します。
+1. 画面の指示に従います。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

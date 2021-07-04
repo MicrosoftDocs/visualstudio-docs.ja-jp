@@ -3,7 +3,7 @@ title: ウィザード (.Vsz) ファイル |Microsoft Docs
 description: IDE がウィザードを起動するために使用する .vsz ファイルについて説明します。 ファイルには、呼び出すウィザードとウィザードに渡す内容に関する情報が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - .vsz files
 - vsz files
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de687dae79fa1613090fb400f73ab658ee5d66cb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074237"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900656"
 ---
 # <a name="wizard-vsz-file"></a>ウィザード (.Vsz) ファイル
 

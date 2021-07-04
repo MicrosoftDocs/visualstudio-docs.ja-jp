@@ -2,7 +2,7 @@
 description: この関数では、前のチェックアウト操作を元に戻します。これで、選択したファイルのコンテンツがチェックアウト前の状態に復元されます。
 title: SccUncheckout 関数 |Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccUncheckout
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0144755d18bbabee47f7aad25337e3c41588ebe5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3a382a112b5a11acc36c52735c949ebef71052ec
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090162"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904088"
 ---
 # <a name="sccuncheckout-function"></a>SccUncheckout 関数
 この関数では、前のチェックアウト操作を元に戻します。これで、選択したファイルのコンテンツがチェックアウト前の状態に復元されます。 チェックアウト後にファイルに加えられた変更はすべて失われます。
@@ -43,11 +43,11 @@ SCCRTN SccUncheckout (
 
  hWnd
 
-[入力] ソース管理プラグインで、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] 提供するすべてのダイアログ ボックスの親としてソース管理プラグインで使用できる IDE ウィンドウへのハンドル。
 
  nFiles
 
-[入力] `lpFileNames`  配列で指定されているファイルの数。
+[入力] `lpFileNames` 配列で指定されているファイルの数。
 
  lpFileNames
 
@@ -62,13 +62,13 @@ SCCRTN SccUncheckout (
 [入力] ソース管理プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
 |SCC_OK|チェックアウトが正常に元に戻されました。|
-|SCC_E_FILENOTCONTROLLED|選択したファイルはソースコード管理されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_FILENOTCONTROLLED|選択したファイルはソース コード管理下にありません。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NONSPECIFICERROR|不特定のエラーです。 チェックアウトを元に戻すことができませんでした。|
 |SCC_E_NOTCHECKEDOUT|ユーザーは、ファイルをチェックアウトしていません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|

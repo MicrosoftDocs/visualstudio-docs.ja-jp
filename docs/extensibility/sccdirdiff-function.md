@@ -2,7 +2,7 @@
 description: この関数は、クライアント ディスク上の現在のローカル ディレクトリと、ソース管理下にある対応するプロジェクトの差異を表示します。
 title: SccDirDiff 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccDirDiff
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 974d0aa22ff3940472be34b691a61632dc742223
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e938cdaedf8541d787673371cfce3d07e005711f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073977"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904644"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 関数
 この関数は、クライアント ディスク上の現在のローカル ディレクトリと、ソース管理下にある対応するプロジェクトの差異を表示します。
@@ -57,7 +57,7 @@ SCCRTN SccDirDiff(
 [入力] ソース管理プラグイン固有のオプション。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|
@@ -66,7 +66,7 @@ SCCRTN SccDirDiff(
 |SCC_I_RELOADFILE|ファイルまたはプロジェクトを再度読み込む必要があります。|
 |SCC_E_FILENOTCONTROLLED|ディレクトリはソース コード管理されていません。|
 |SCC_E_NOTAUTHORIZED|ユーザーはこの操作の実行が許可されていません。|
-|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題である可能性があります。 再試行することをお勧めします。|
+|SCC_E_ACCESSFAILURE|ソース管理システムへのアクセス中に問題が発生しました。ネットワークまたは競合の問題が原因になっている可能性があります。 再試行することをお勧めします。|
 |SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|不特定のエラーです。|
 |SCC_E_FILENOTEXIST|ローカル ディレクトリが見つかりませんでした。|
 

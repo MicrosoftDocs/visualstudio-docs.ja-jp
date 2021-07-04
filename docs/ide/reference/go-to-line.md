@@ -4,8 +4,6 @@ description: '[指定行へのジャンプ] ダイアログ ボックスと、�
 ms.custom: SEO-VS-2020
 ms.date: 05/18/2018
 ms.topic: reference
-f1_keywords:
-- vs.gotoline
 helpviewer_keywords:
 - code, locating lines
 - Go To Line dialog box
@@ -15,12 +13,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2cc2555f87d1781712e60463401a38f843635e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4fffe6f453dc179d363e9f3aaba0f6582d821750
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889929"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925203"
 ---
 # <a name="go-to-line-dialog-box"></a>[指定行へのジャンプ] ダイアログ ボックス
 

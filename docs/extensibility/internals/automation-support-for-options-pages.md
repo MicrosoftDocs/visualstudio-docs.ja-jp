@@ -3,7 +3,7 @@ title: オプション ページのオートメーションのサポート | Mic
 description: VSPackage のカスタム [ツール] メニューの [オプション] ページを、Visual Studio オートメーション モデルで使用できるようにする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], automation support
 - automation [Visual Studio SDK], creating Tools Options pages
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b587af698cf7f044c02baab1a8207be1457d6cfd
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5a4f6b33b7a5e17c610831db5d4387065915ea00
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105086223"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901657"
 ---
 # <a name="automation-support-for-options-pages"></a>オプション ページのオートメーションのサポート
 VSPackage では、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] の **[ツール]** メニュー ( **[ツール] メニューの [オプション]** ページ) にカスタムの **[オプション]** ダイアログ ボックスを表示し、オートメーション モデルで使用できるようにすることができます。

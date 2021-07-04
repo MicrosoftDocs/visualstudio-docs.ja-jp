@@ -2,7 +2,7 @@
 description: この関数は、ソース管理の管理ツールを呼び出します。
 title: SccRunScc 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccRunScc
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e78e58eafebd06d1ce7c710a31ce295b49f26340
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c865931ed52601761f0bd519bf360d584d49ec04
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073821"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904114"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc 関数
 この関数は、ソース管理の管理ツールを呼び出します。
@@ -41,7 +41,7 @@ SCCRTN SccRunScc(
 
  hWnd
 
-[入力] ソース管理プラグインが、提供するすべてのダイアログ ボックスの親として使用できる IDE ウィンドウへのハンドル。
+[入力] 提供するすべてのダイアログ ボックスの親としてソース管理プラグインで使用できる IDE ウィンドウへのハンドル。
 
  nFiles
 
@@ -52,7 +52,7 @@ SCCRTN SccRunScc(
 [入力] 選択されたファイル名の配列。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

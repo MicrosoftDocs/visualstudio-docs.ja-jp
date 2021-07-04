@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - text templates, generating templates from templates
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: e3debeeafa55e483e9625c67534694debff6acfa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9347e32a72e7f590f8f513c4b47a4b7aae699f27
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922792"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387178"
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>方法: エスケープ シーケンスを使用してテンプレートからテンプレートを生成する
 別のテキスト テンプレートを生成テキストの出力として作成するテキスト テンプレートを作成できます。 そのためには、エスケープ シーケンスを使用してテキスト テンプレート タグを記述する必要があります。 エスケープ シーケンスを使用しない場合、生成されたテキスト テンプレートには定義済みの意味があります。 テキスト テンプレートでのエスケープ シーケンスの使用の詳細については、「[テキスト テンプレートでのエスケープ シーケンスの使用](../modeling/using-escape-sequences-in-text-templates.md)」を参照してください。

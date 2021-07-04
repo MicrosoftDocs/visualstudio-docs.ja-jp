@@ -3,7 +3,7 @@ title: セッション デバッグ マネージャー | Microsoft Docs
 description: セッション デバッグ マネージャーについて説明します。セッション デバッグ マネージャーは、任意の数のコンピューター上の複数のプロセスで、プログラムをデバッグしている複数のデバッグ エンジンを管理します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - session debug manager, unifying session views
 - session debug manager, broadcasting
@@ -17,12 +17,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e5a206b8ece21b14758dfeb02563d4d323dcf60
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 217a2d401e61c58a58d958bb754265a19a2a367d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079463"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902086"
 ---
 # <a name="session-debug-manager"></a>セッション デバッグ マネージャー
 セッション デバッグ マネージャー (SDM) は、任意の数のコンピューター上の複数のプロセスで、任意の数のプログラムをデバッグしている任意の数のデバッグ エンジン (DE) を管理します。 デバッグ エンジンのマルチプレクサーに加えて、SDM ではデバッグ セッションの統合ビューを IDE に提供します。

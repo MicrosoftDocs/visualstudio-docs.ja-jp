@@ -3,7 +3,7 @@ title: 機能フラグ | Microsoft Docs
 description: ソース管理プラグインの機能を示す SCC_CAP_xxx フラグと、拡張機能を示す SCC_EXCAP_xxx フラグについて説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, capability flags
 ms.assetid: a3f6071c-eac8-4bcd-8ffd-8d0a2d24a252
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12acefb99de787d55bc0f932757dde5ea928c6cb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3fdb660fd4e7c595f522686280f8bec6c0acae81
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094927"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905099"
 ---
 # <a name="capability-flags"></a>機能フラグ
 SCC_CAP_ *xxx* フラグは、ソース管理プラグインの機能を示すために使用されるビット フラグです。 SCC_EXCAP_ *xxx* フラグは、拡張機能を示し、整数値に解決される増分フラグです。

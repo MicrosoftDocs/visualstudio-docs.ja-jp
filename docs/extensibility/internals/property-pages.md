@@ -3,7 +3,7 @@ title: プロパティ ページ | Microsoft Docs
 description: Visual Studio SDK で新しいプロジェクトの種類のプロパティ ページを操作する方法について説明します。これにより、ユーザーはプロジェクトのプロパティを表示したり変更したりできます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - configuration options, changing properties
 - property pages
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3e36960b35119434e56f075f622ae2513454dd6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88ebf99ef2361a232c4a5c4c02b9a140155d66e9
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061018"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903412"
 ---
 # <a name="property-pages"></a>[プロパティ ページ]
 ユーザーは、プロパティ ページを使用して、プロジェクト構成に依存するプロパティや依存しないプロパティを表示したり変更したりすることができます。 **[プロパティ ページ]** ボタンは、選択されたオブジェクトのプロパティ ページ ビューを提供するオブジェクトに関する **[プロパティ]** ウィンドウまたはソリューション エクスプローラーのツールバーで有効になります。 プロパティ ページは環境によって作成され、ソリューションやプロジェクトに対して使用できます。 ただし、構成に依存するプロパティを使用するプロジェクト項目に対して使用可能にすることもできます。 この機能は、プロジェクト内のファイルを正しくビルドするにはさまざまなコンパイラ スイッチの設定が必要な場合に使用されることがあります。

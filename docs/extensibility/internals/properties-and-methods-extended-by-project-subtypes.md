@@ -3,7 +3,7 @@ title: プロジェクト サブタイプによって拡張されるプロパテ
 description: プロジェクト サブタイプを拡張または変更して、Visual Studio のプロジェクト システムの動作をカスタマイズするための機能について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project subtypes, extended methods
 - project subtypes, extended properties
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32c489ba2907cabff47b916039f96754d403455
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8ddcf020cf0b3e3e4f0f4a7c61ff1f15ce9ded5e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064242"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903542"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>プロジェクト サブタイプによって拡張されるプロパティとメソッド
 プロジェクト サブタイプは、ベース プロジェクトのアグリゲーターとして構築されるため、プロジェクトの動作に大きな影響力があります。 このセクションでは、プロジェクト サブタイプによって拡張または変更できる機能の一部についてまとめています。

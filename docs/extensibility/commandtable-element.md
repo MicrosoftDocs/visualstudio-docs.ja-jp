@@ -3,7 +3,7 @@ title: CommandTable 要素 | Microsoft Docs
 description: CommandTable は、VSPackage が IDE に提供するコマンドのレイアウトと種類を定義する .vsct ファイルのルート要素です。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - CommandTable
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 507bdd20602c680f58b62e85251eaaa592982bc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 55faf4ee8bdc7ec261508fd07f5a573e7a29560f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089525"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901852"
 ---
 # <a name="commandtable-element"></a>CommandTable 要素
 CommandTable は、 *.vsct* ファイルのルート要素です。 これは、VSPackage が IDE に提供するコマンドの実際のレイアウトと種類を定義するファイルです。 コマンドには、メニュー項目、メニュー、ツール バー、コンボ ボックスが含まれる場合があります。 詳細については、「[Visual Studio コマンド テーブル (.vsct) ファイル](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)」を参照してください。

@@ -3,7 +3,7 @@ title: Bitmap 要素 | Microsoft Docs
 description: Bitmap 要素では、ビットマップを定義します。 ビットマップは、リソースまたはファイルのどちらかから読み込まれます。 この記事には例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, Bitmaps
 - Bitmaps element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32f07857f2d04989b0de021988b2961d4a1553d2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c8f3daf25a3ffe025bcdef65dbaa6def942d0fb4
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068220"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903321"
 ---
 # <a name="bitmap-element"></a>Bitmap 要素
 ビットマップを定義します。 ビットマップは、リソースまたはファイルのどちらかから読み込まれます。

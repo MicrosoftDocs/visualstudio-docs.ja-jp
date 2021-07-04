@@ -6,22 +6,22 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e4884ec4eb3e316e22e4ba54cd8defe71d4b8018
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dadffd0a2950d55145b24d3172564eb572f98d70
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935171"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389151"
 ---
 # <a name="develop-tests-from-a-model"></a>モデルからテストを開発する
 システムとそのコンポーネントのテストを編成する際に、要件モデルとアーキテクチャ モデルを使用できます。 こうすることで、ユーザーやその他の利害関係者にとって重要な要求をテストしやすくなり、要求が変更された場合にすばやくテストを更新することができます。 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] を使用した場合、モデルとテストの間のリンクを維持することもできます。
 
- これら機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+ これら機能をサポートする Visual Studio のバージョンを確認するには、「[アーキテクチャ ツールとモデリング ツールのバージョン サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 ## <a name="system-and-subsystem-testing"></a>システムとサブシステムのテスト
  "*システム テスト*" は "*受け入れテスト*" とも呼ばれ、ユーザーのニーズが満たされているかどうかをテストするものです。 このようなテストでは内部の設計ではなく、外部から確認できるシステムの動作に焦点が当てられます。

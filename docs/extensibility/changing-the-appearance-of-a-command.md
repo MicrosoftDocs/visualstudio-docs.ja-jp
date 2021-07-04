@@ -3,7 +3,7 @@ title: コマンドの外観の変更 | Microsoft Docs
 description: コマンドを使用可能/使用不可、表示/非表示、またはオン/オフにするかなど、コマンドの外観を変更することでフィードバックを提供する方法を説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - commands, changing appearance
 - menu commands, changing appearance
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8b6911d865b253ff82ffcc6c4911e0989f109f28
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ddeed08d7bc33b9a9ae5405876f3b28459d4eaf2
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089824"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905034"
 ---
 # <a name="change-the-appearance-of-a-command"></a>コマンドの外観の変更
 コマンドの外観を変更することで、ユーザーにフィードバックを提供できます。 たとえば、コマンドを使用できないときは、その外観が変化するようにします。 コマンドの使用可能と使用不可、表示と非表示、メニューでのオンとオフを切り替えることができます。

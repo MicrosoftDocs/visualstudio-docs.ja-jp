@@ -4,17 +4,17 @@ description: 自分のコンピューターまたは他のコンピューター�
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bf6082ec8860f7f50e758eb65a8471ece94103aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 879028746eac10160492f03651ef8b51714e9c6a
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950412"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112391011"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL の MSI および VSIX 配置
 ドメイン固有言語は、自分のコンピューターにもその他のコンピューターにインストールできます。 Visual Studio は、あらかじめターゲット コンピューターにインストールされている必要があります。

@@ -3,7 +3,7 @@ title: 実行中のドキュメント テーブル | Microsoft Docs
 description: メモリー内の開いているすべてのドキュメントを含め、実行中のドキュメント テーブルが Visual Studio IDE でどのように保持されるかを説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - read locks
 - running document table (RDT), IVsDocumentLockHolder interface
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 615910684fd79d3cbd8d8a1e012c239e27abc180
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d260534d58853afc6b84ba484eb3a806250e2aa6
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080971"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900409"
 ---
 # <a name="running-document-table"></a>ドキュメント テーブルの実行
 IDE では、現在開いているすべてのドキュメントの一覧が、実行中のドキュメント テーブル (RDT) と呼ばれる内部構造で保持されます。 この一覧には、これらのドキュメントが現在編集中かどうかに関係なく、メモリ内の開いているすべてのドキュメントが含まれます。 ドキュメントは、プロジェクトまたはメイン プロジェクト ファイル (.vcxproj ファイルなど) 内のファイルを含む、永続化された任意の項目です。

@@ -1,7 +1,7 @@
 ---
 title: デバッガー ウィンドウを使用してデータを検査する | Microsoft Docs
 description: 情報を提供するさまざまな種類のデバッガー ウィンドウがあります。 この記事では、そのような種類の一覧を提供します。 それぞれに詳細情報へのリンクがあります。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 04/25/2018
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e626302e4ec311aeaccef77af2870ae69ee76aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9959c73802e15ca25dcce62631e4faa81391d47a
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872912"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389892"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio でデバッガー ウィンドウを使用してデータを検査する
 

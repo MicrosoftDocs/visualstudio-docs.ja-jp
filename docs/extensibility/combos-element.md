@@ -3,7 +3,7 @@ title: Combos 要素 | Microsoft Docs
 description: Combos 要素では、コンボ ボックスに表示されるコマンドを定義する Combo 要素をグループ化します。 この記事には例が含まれます。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Combos element (VSCT XML schema)
 - VSCT XML schema elements, Combos
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: be9135e2f863f3ab277e6c7408579d7ef8242bce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77c293fa827187461c5a6b84333c503a2f5cc231
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089720"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903919"
 ---
 # <a name="combos-element"></a>Combos 要素
 [Combo 要素](../extensibility/combo-element.md)の要素をグループ化します。
@@ -52,7 +52,7 @@ ms.locfileid: "105089720"
 
 |要素|説明|
 |-------------|-----------------|
-|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンド コレクションを表します。|
+|[Commands 要素](../extensibility/commands-element.md)|VSPackage ツール バー上のコマンドのコレクションを表します。|
 
 ## <a name="example"></a>例
 

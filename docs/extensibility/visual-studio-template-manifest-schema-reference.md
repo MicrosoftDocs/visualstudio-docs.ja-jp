@@ -3,19 +3,19 @@ title: Visual Studio テンプレート マニフェスト スキーマ リフ�
 description: このスキーマ リファレンスでは、Visual Studio のプロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレート マニフェスト ファイルの形式について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 033e735b93a534164d96cf47d6412c609525ad8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 259d2dd050f4681053f331bfd4ec39dd7b214059
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062500"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905385"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio テンプレート マニフェスト スキーマ リファレンス
 このスキーマでは、Visual Studio のプロジェクトまたは項目テンプレートに対して生成される Visual Studio テンプレート マニフェスト ( *.vstman*) ファイルの形式を記述します。 このスキーマでは、テンプレートに関する場所やその他の関連情報も記述します。

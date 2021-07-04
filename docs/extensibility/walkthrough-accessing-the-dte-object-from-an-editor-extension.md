@@ -3,7 +3,7 @@ title: エディター拡張機能から DTE オブジェクトにアクセス�
 description: このチュートリアルのコード例を使用して、エディター拡張機能から DTE オブジェクトにアクセスする方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 04/24/2019
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - getting the DTE object
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7035842f608428f149dd2c0965b4792afa25db67
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 094a37960fa5b32d018eebe3becee4fde43cc392
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062071"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905125"
 ---
 # <a name="walkthrough-access-the-dte-object-from-an-editor-extension"></a>チュートリアル: エディター拡張機能から DTE オブジェクトにアクセスする
 

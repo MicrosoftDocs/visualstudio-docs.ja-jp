@@ -3,7 +3,7 @@ title: Symbols 要素 | Microsoft Docs
 description: Symbols 要素では、他の VSCT 要素によって使用される GUID と ID を定義します。 この記事には例が含まれています。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Symbols element (VSCT XML schema)
 - VSCT XML schema elements, Symbols
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a013bbe438d1e4dd1f6b5149dcb7da78835fd09
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b593f353714f2fbb6f5b726fa2bbc0da449043ea
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056052"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901735"
 ---
 # <a name="symbols-element"></a>Symbols 要素
 他の VSCT 要素によって使用される GUID と ID を定義します。 アンマネージド コードの場合、この情報は通常、[Extern 要素](../extensibility/extern-element.md)によって指定されるヘッダー ファイルから取得されます。 マネージド コードでは、Symbols 要素の子要素を使用して、この情報を定義します。

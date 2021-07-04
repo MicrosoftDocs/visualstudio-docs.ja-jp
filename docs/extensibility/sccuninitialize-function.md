@@ -2,7 +2,7 @@
 description: この関数では、ソース管理プラグインをシャットダウンする準備として、SccInitialize の以前の呼び出しによって作成された割り当てや開いている接続をすべてクリーンアップします。
 title: SccUninitialize 関数 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccUninitialize
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d387167e2032cbb253e86f8d67da38f99fc1076
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d46aedd3e962d0684689ff29a34061b777fe08e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063774"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904075"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize 関数
 この関数では、ソース管理プラグインをシャットダウンする準備として、[SccInitialize](../extensibility/sccinitialize-function.md) の以前の呼び出しによって作成された割り当てや開いている接続をすべてクリーンアップします。
@@ -37,7 +37,7 @@ SCCRTN SccUninitialize (
 [入力] [SccInitialize](../extensibility/sccinitialize-function.md) で作成されたソース管理プラグインのコンテキスト構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
- この関数のソース管理プラグインの実装では、次のいずれかの値を返すことが想定されます。
+ この関数のソース管理プラグインの実装では、次のいずれかの値が返されることが予期されています。
 
 |値|説明|
 |-----------|-----------------|

@@ -7,17 +7,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, creating extensions
 - layer models
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 10e0e07b6a8ee4245e19628e03bfdf484f94d34c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c2ed8700cfb18aacf41464bfdfacaedac557bb00
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935145"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388907"
 ---
 # <a name="extend-dependency-diagrams"></a>依存関係図の拡張
 
@@ -35,7 +35,7 @@ ms.locfileid: "99935145"
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-レイヤー拡張機能を実行するコンピューターに、適切なエディションの Visual Studio をインストールしておく必要があります。 依存関係図がサポートされている Visual Studio のエディションを確認するには、「[アーキテクチャおよびモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください。
+レイヤー拡張機能を実行するコンピューターに、適切なエディションの Visual Studio をインストールしておく必要があります。 依存関係図がサポートされている Visual Studio のエディションを確認するには、「[アーキテクチャおよびモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

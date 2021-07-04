@@ -3,19 +3,17 @@ title: テスト エクスプローラーを使用して単体テストを実行
 description: Visual Studio でテスト エクスプローラーを使用してテストを実行する方法について説明します。 このトピックでは、ビルドの後の自動テストの実行の有効化、テスト結果の表示、テストの一覧のグループ化とフィルター処理、プレイリストの作成、テストのショートカットの使用方法について説明します。
 ms.date: 07/14/2020
 ms.topic: how-to
-f1_keywords:
-- vs.unittesting.testexplorer.overview
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 05a850b0c88a39366805ff892fb698f637b3bbe1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26dbed25f42f40614597075ad26c855398b56025
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836333"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925125"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>テスト エクスプローラーを使用して単体テストを実行する
 

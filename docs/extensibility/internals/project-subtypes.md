@@ -3,7 +3,7 @@ title: プロジェクト サブタイプ | Microsoft Docs
 description: プロジェクト サブタイプを使用して、Visual Studio のプロジェクト システムの動作をカスタマイズする方法について説明します。 VSPackage では、COM 集計を使用してプロジェクト サブタイプを実装します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1695bc79e38c7a9ebbda7736e57116123343f30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd0f959d300fdc797d9e42d581a163b8b0892591
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064333"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903581"
 ---
 # <a name="project-subtypes"></a>プロジェクト サブタイプ
 プロジェクト サブタイプを使用して、[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] のプロジェクト システムの動作をカスタマイズまたは風味付けすることができます。 カスタマイズには、プロジェクト ファイルへの追加データの保存、 **[新しい項目の追加]** ダイアログ ボックスでの項目の追加またはフィルター処理、アセンブリのデバッグおよびデプロイ方法の制御、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの拡張などが含まれます。 VSPackage では、COM 集計を使用してプロジェクト サブタイプを実装します。

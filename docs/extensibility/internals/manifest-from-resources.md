@@ -3,19 +3,19 @@ title: Manifest from Resources | Microsoft Docs
 description: Manifest from Resources ツールを使用して、Visual Studio イメージサービスで使用するために .png ファイルまたは .xaml ファイルを .imagemanifest ファイルに追加する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42bd932b093ae805e8885bc9fc61324c3cadbe30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f69a46362b3076025a63625adb1ee4a478622259
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095174"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903179"
 ---
 # <a name="manifest-from-resources"></a>リソースからのマニフェスト
 Manifest from Resources ツールは、イメージ リソース (.png または .xaml ファイル) の一覧を取得し、それらのイメージを Visual Studio イメージ サービスで使用できるようにする .imagemanifest ファイルを生成するコンソール アプリケーションです。 また、このツールを使用して、既存の .imagemanifest にイメージを追加することもできます。 このツールは、イメージの高 DPI およびテーマ適用のサポートを Visual Studio 拡張機能に追加する場合に役立ちます。 生成された .imagemanifest ファイルは、Visual Studio 拡張機能 (.vsix) の一部に含められ、一部としてデプロイされる必要があります。
@@ -38,9 +38,9 @@ Manifest from Resources ツールは、イメージ リソース (.png または
 |/isNative|アセンブリ引数がネイティブ アセンブリのパスであるときにこのフラグを設定します。 アセンブリ引数がマネージド アセンブリの名前であるときにこのフラグを省略します。 (このフラグの追加情報については、「メモ」セクションを参照してください)。|オプション|
 |/newGuids|このフラグを設定すると、既存のマニフェストからの値をマージするのではなく、画像の GUID シンボルの新しい値を作成するようにツールに指示します。|オプション|
 |/newIds|このフラグを設定すると、既存のマニフェストからの値をマージするのではなく、すべての画像に対して新しい ID シンボル値を作成するようにツールに指示します。|オプション|
-|/noLogo|このフラグを設定すると、製品および著作権情報は印刷されなくなります。|オプション|
-|/?|ヘルプ情報を印刷します。|オプション|
-|/help|ヘルプ情報を印刷します。|オプション|
+|/noLogo|このフラグを設定すると、製品および著作権情報は出力されなくなります。|オプション|
+|/?|ヘルプ情報を出力します。|オプション|
+|/help|ヘルプ情報を出力します。|オプション|
 
  **例**
 

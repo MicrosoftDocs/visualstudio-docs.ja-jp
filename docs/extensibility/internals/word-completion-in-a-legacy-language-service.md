@@ -3,7 +3,7 @@ title: 従来の言語サービスでの単語補完 | Microsoft Docs
 description: Visual Studio SDK の従来の言語サービスでは、単語補完をサポートできます。 VSPackage で従来の言語サービスを実装する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - language services [managed package framework], IntelliSense Complete Word
 - IntelliSense, Complete Word
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 360778e4dbc89130e8a533640fefb188047fe8ca
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ea386aea3a17b0fb0d93ff9872f92e86a166be5c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074081"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902632"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>従来の言語サービスでの単語補完
 単語補完では、部分的に入力された単語の不足している文字を補います。 補完候補が 1 つしかない場合は、補完文字が入力されると、その単語が完成します。 単語の一部が複数の候補に一致する場合は、補完候補の一覧が表示されます。 補完文字は、識別子に使用されない任意の文字にすることができます。

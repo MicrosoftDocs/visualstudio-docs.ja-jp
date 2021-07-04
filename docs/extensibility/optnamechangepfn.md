@@ -3,7 +3,7 @@ title: OPTNAMECHANGEPFN | Microsoft Docs
 description: ソース管理プラグインから Visual Studio IDE に名前の変更を伝える OPTNAMECHANGEPFN コールバック関数について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - OPTNAMECHANGEPFN
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e6cb58aebbe76eff5c66dc29ecfad8c77c8717c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 340012663ad7d21c0b5c2ef81283f5d780d6011c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090370"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901527"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
 これは、[SccSetOption](../extensibility/sccsetoption-function.md) の呼び出し (オプション `SCC_OPT_NAMECHANGEPFN` を使用) で指定され、ソース管理プラグインによって行われた名前の変更を IDE に戻すために使用されるコールバック関数です。

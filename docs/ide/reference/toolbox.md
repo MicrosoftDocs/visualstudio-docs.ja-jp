@@ -6,7 +6,6 @@ ms.date: 06/01/2020
 ms.topic: reference
 f1_keywords:
 - vs.toolbox.general
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [Visual Studio]
 - custom controls [Visual Studio]
@@ -15,12 +14,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 52b7eeefd157e99fc5214f29c220d94fd6e19772
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a4947562eb49501e60711111d8765716cbae5c6
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841900"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925216"
 ---
 # <a name="toolbox"></a>ツールボックス
 
@@ -37,7 +36,7 @@ ms.locfileid: "99841900"
 
 プロジェクトが対象とする .NET バージョンも、ツールボックスに表示されるコントロール セットに影響します。 必要に応じて、プロジェクトのプロパティ ページからターゲット フレームワークのバージョンを変更できます。 **ソリューション エクスプローラー** でプロジェクト ノードを選択し、メニュー バーで **[プロジェクト]** 、 **[<プロジェクト名> のプロパティ]** の順に選択します。 **[アプリケーション]** タブの **[ターゲット フレームワーク]** ドロップ ダウンを使用します。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ![[アプリケーション] ダイアログ ボックスのスクリーンショット。[ターゲット フレームワーク] ドロップダウンのオプションを確認できます。](media/vs-2019/toolbox-change-dotnet-version.png ".NET バージョンを変更できるダイアログ ボックスのスクリーンショット")
 

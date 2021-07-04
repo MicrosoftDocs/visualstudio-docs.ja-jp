@@ -3,7 +3,7 @@ title: VSIX 拡張機能スキーマ 2.0 リファレンス | Microsoft Docs
 description: VSIX 拡張機能スキーマ 2.0 では、VSIX パッケージのコンテンツを記述する VSIX 配置マニフェスト ファイルのファイル形式を定義します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - vsix
 - extension schema
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1b94c7b2cacb7ad78031721156bdd90cb666c4f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 66393bbe6383fcc6cae942a3d7e86f1d701a9634
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062292"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905242"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 拡張機能スキーマ 2.0 リファレンス
 VSIX 配置マニフェスト ファイルには、VSIX パッケージのコンテンツが記述されます。 ファイル形式は、スキーマによって管理されます。 このスキーマのバージョン 2.0 では、カスタム型および属性の追加がサポートされています。  マニフェストのスキーマは拡張可能です。 マニフェスト ローダーでは、認識されない XML 要素および属性は無視されます。

@@ -3,7 +3,7 @@ title: 式の評価 (Visual Studio Debugging SDK) | Microsoft Docs
 description: 中断モード時に、IDE ではプログラム変数を含む式が評価されます。 デバッグ エンジンで式が解析および評価される方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e6a79a3268f0bd4acebde795109d39466032a2f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cf213c30ef26490b44579d83c68b2640360584a7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096799"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904514"
 ---
 # <a name="expression-evaluation-visual-studio-debugging-sdk"></a>式の評価 (Visual Studio Debugging SDK)
 中断モード時に、IDE では複数のプログラム変数を含む単純な式を評価する必要があります。 その評価を行うには、デバッグ エンジン (DE) によって、IDE のいずれかのウィンドウに入力された式を解析して評価する必要があります。

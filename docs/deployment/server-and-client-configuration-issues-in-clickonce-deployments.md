@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 469749c28acdb90e835082dd05010102ab50e52b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9f0361816d0621f52e9f95f4159dd0d46f4f5951
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877617"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111352008"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 配置でのサーバーおよびクライアント構成の問題
 Windows Server でインターネット インフォメーション サービス (IIS) を使用していて、配置に、Microsoft Word ファイルなどの Windows では認識されない種類のファイルが含まれている場合は、IIS でそのファイルの送信が拒否されて、配置が成功しません。
@@ -132,7 +132,7 @@ Windows Server でインターネット インフォメーション サービス
 
  IIS を使用している場合は、HTTP 圧縮を簡単に有効にできます。 ただし、HTTP 圧縮を有効にすると、特定のファイルの種類 (つまり HTML ファイルとテキスト ファイル) に対してのみ有効になります。 アセンブリ ( *.dll*)、XML ( *.xml*)、配置マニフェスト ( *.application*)、アプリケーション マニフェスト ( *.manifest*) に対して圧縮を有効にするには、IIS で圧縮する種類の一覧に、これらのファイルの種類を追加する必要があります。 配置にファイルの種類を追加するまでは、テキスト ファイルと HTML ファイルのみが圧縮されます。
 
- IIS の詳細な手順については、「[HTTP 圧縮のために追加のドキュメントの種類を指定する方法](https://support.microsoft.com/help/234497)」を参照してください。
+ IIS の詳細な手順については、「[HTTP 圧縮のために追加のドキュメントの種類を指定する方法](/troubleshoot/iis/content-types-http-compression)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 - [ClickOnce 配置のトラブルシューティング](../deployment/troubleshooting-clickonce-deployments.md)

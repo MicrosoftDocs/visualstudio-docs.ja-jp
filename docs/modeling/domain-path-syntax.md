@@ -6,17 +6,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, domain path
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c11776576d00306e4b0f3de5e7ff830037c1fefd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69dfd02dca5ead65d4f36303e547aaeba04cde98
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935158"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112389099"
 ---
 # <a name="domain-path-syntax"></a>ドメイン パス構文
 DSL 定義は XPath に似た構文を使用して、モデル内の特定の要素を見つけます。
