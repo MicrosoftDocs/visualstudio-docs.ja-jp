@@ -10,12 +10,12 @@ metadata:
   author: jillre
   ms.author: jillfra
   ms.date: 10/10/2019
-  ms.openlocfilehash: 25f0b8538b17b3826a66febf34ccafe38a7996f5
-  ms.sourcegitcommit: c025a5e2013c4955ca685092b13e887ce64aaf64
+  ms.openlocfilehash: 3240241636ff81804fed17a39045bae3518ee628
+  ms.sourcegitcommit: 5366c6bca3fb217a2fbf847998387578f51ec45c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/02/2020
-  ms.locfileid: "91659265"
+  ms.lasthandoff: 06/02/2021
+  ms.locfileid: "110748020"
 landingContent:
 - title: XAML の詳細情報
   linkLists:
@@ -33,6 +33,8 @@ landingContent:
       url: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
     - text: XAML のデザイン時データ
       url: xaml-designtime-data.md
+    - text: XAML のデザイン時サンプル データ
+      url: xaml-design-time-sample-data.md
 - title: XAML のデバッグ
   linkLists:
   - linkListType: overview

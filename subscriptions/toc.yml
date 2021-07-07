@@ -13,7 +13,7 @@
             - name: 概要
               href: vscloud-overview.md
             - name: 請求に関する FAQ
-              href: vscloud-billing-faq.md
+              href: vscloud-billing-faq.yml
             - name: CSP のための購入
               href: vscloud-csp.md
         - name: Microsoft Partner Network
@@ -56,16 +56,22 @@
       items:
         - name: ベネフィットについて
           href: about-benefits.md
+        - name: Azure Dev/Test オファー
+          items:
+            - name: 個人向け (クレジット)
+              items:
+                - name: Azure DevTest の個人クレジット
+                  href: vs-azure.md
+            - name: 組織向け
+              items:
+                - name: Azure DevTest の従量課金制
+                  href: vs-azure-payg.md
+                - name: Azure EA DevTest
+                  href: azure-ea-devtest.md
         - name: ツール
           items:
-            - name: Azure DevTest の個人クレジット
-              href: vs-azure.md
             - name: Azure DevOps
               href: vs-azure-devops.md
-            - name: Azure DevTest の従量課金制
-              href: vs-azure-payg.md
-            - name: Azure EA DevTest
-              href: azure-ea-devtest.md
             - name: CAST の強調表示
               href: vs-cast.md
             - name: CloudPilot

@@ -2,21 +2,21 @@
 title: Visual Studio のバージョン コントロールに関するドキュメント
 summary: Git や GitHub などのバージョン コントロール テクノロジを使用して、Visual Studio 2019 内からコードを共有します。
 metadata:
-  title: Visual Studio でのバージョン コントロール
-  description: Git や GitHub などのバージョン コントロール テクノロジは、Visual Studio 内から直接入手できます。 これらのコードを使用して、コードベースを離れることなくコードを共有および管理できます。
+  title: Visual Studio での Git によるバージョン コントロールとソース コード管理
+  description: Visual Studio のバージョン コントロール テクノロジを使用します。 ご利用のコードベースを離れることなく、Git および GitHub でコード リリースを共有、統合、および管理することができます。
   ms.topic: landing-page
-  ms.date: 04/20/2021
+  ms.date: 07/02/2021
   author: TerryGLee
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 50226243cc698391d79a52371262ec6202b45ad9
-  ms.sourcegitcommit: a0f5e7188838c5989c9cc78d99fb29bb2813501e
+  ms.openlocfilehash: 9bdd994d5fe1d5f54251ce49047feaf75145dcda
+  ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/11/2021
-  ms.locfileid: "109729227"
+  ms.lasthandoff: 07/03/2021
+  ms.locfileid: "113280401"
 landingContent:
 - title: 概要
   linkLists:
@@ -24,6 +24,8 @@ landingContent:
     links:
     - text: Visual Studio での Git エクスペリエンス
       url: git-with-visual-studio.md
+    - text: Git の設定と環境設定
+      url: git-settings.md
   - linkListType: concept
     links:
     - text: Visual Studio でソース管理を簡単にする方法

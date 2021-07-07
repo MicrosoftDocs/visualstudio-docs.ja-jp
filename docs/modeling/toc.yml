@@ -2,6 +2,8 @@
   href: analyze-and-model-your-architecture.md
 - name: Visual Studio 2017 での設計向けの新機能
   href: what-s-new-for-design-in-visual-studio.md
+- name: アーキテクチャ ツールをインストールする
+  href: install-architecture-tools.md
 - name: 視覚化およびモデリングを使用して設計を変更する
   href: scenario-change-your-design-using-visualization-and-modeling.md
 - name: コード マップと依存関係の図
@@ -58,8 +60,6 @@
       href: generate-and-configure-your-app-from-models.md
     - name: モデリング ソリューションの構築
       href: structure-your-modeling-solution.md
-    - name: Visual Studio アーキテクチャ ツーリング ガイダンス
-      href: visual-studio-architecture-tooling-guidance.md
 - name: 開発時のシステムの検証
   items:
     - name: 検証タスクとリソース

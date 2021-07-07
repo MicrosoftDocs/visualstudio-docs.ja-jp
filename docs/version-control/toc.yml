@@ -4,6 +4,8 @@
   items:
     - name: Visual Studio での Git エクスペリエンス
       href: git-with-visual-studio.md
+    - name: Git の設定と環境設定
+      href: git-settings.md
     - name: Visual Studio でソース管理を簡単にする方法
       href: git-visual-studio-source-control.md
 - name: はじめに
