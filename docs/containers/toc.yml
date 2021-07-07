@@ -26,7 +26,7 @@
           href: deploy-app-service.md
         - name: Docker Hub に配置する
           href: deploy-docker-hub.md
-        - name: 起動プロファイルを管理する (プレビュー)
+        - name: 起動プロファイルを管理する
           href: launch-profiles.md
         - name: コンテナーとイメージの表示と診断
           href: view-and-diagnose-containers.md

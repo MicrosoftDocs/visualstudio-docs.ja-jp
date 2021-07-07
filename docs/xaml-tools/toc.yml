@@ -22,6 +22,8 @@
       href: debugging-or-disabling-project-code-in-xaml-designer.md
     - name: XAML のデザイン時データ
       href: xaml-designtime-data.md
+    - name: XAML のデザイン時サンプル データ
+      href: xaml-design-time-sample-data.md
     - name: Blend for Visual Studio
       items:
         - name: 概要

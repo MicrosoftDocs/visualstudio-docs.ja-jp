@@ -9,6 +9,20 @@
       href: starting-to-develop-visual-studio-extensions.md
     - name: '初めての拡張機能の作成: Hello World'
       href: extensibility-hello-world.md
+    - name: Visual Studio 2022 の拡張機能を更新する (プレビュー)
+      items:
+        - name: 拡張機能を更新する
+          href: migration/update-visual-studio-extension.md
+        - name: '例: ImageOptimizer'
+          href: migration/samples.md
+        - name: 前のバージョンを対象とする
+          href: migration/target-previous-versions.md
+        - name: API リストの分割
+          href: migration/breaking-api-list.md
+        - name: 削除された API リスト
+          href: migration/removed-api-list.md
+        - name: 移行された PIA
+          href: migration/migrated-assemblies.md
     - name: Visual Studio 2019 SDK の新機能
       items:
         - name: Visual Studio 2019 SDK の新機能
@@ -51,7 +65,7 @@
           href: workspace-indexing.md
         - name: 言語サービス
           href: workspace-language-services.md
-        - name: Build
+        - name: ビルド
           href: workspace-build.md
     - name: メニューとコマンドを拡張する
       items:
@@ -811,9 +825,9 @@
               href: adding-command-line-switches.md
         - name: エラー処理と戻り値
           href: error-handling-and-return-values.md
-        - name: Objects
+        - name: オブジェクト
           items:
-            - name: Objects
+            - name: オブジェクト
               href: objects.md
             - name: VSCodeWindow オブジェクト
               href: vscodewindow-object.md

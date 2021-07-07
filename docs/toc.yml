@@ -151,32 +151,33 @@
       href: ide/quickstart-ide-orientation.md
     - name: 'C++: コンソール アプリを作成する'
       href: /cpp/get-started/tutorial-console-cpp
-    - name: 'Python:Web アプリの作成'
-      href: ide/quickstart-python.md
-    - name: 'Node.js: Web アプリの作成'
-      href: ide/quickstart-nodejs.md
-    - name: 'F#: Web サービスの作成'
-      href: ide/quickstart-fsharp.md
     - name: 'C#: Web アプリの作成'
       href: ide/quickstart-aspnet-core.md
     - name: 'C#: コンソール アプリを作成する'
       href: ide/quickstart-csharp-console.md
     - name: 'Visual Basic: コンソール アプリを作成する'
       href: ide/quickstart-visual-basic-console.md
+    - name: 'Node.js: Web アプリの作成'
+      href: ide/quickstart-nodejs.md
+    - name: 'Python:Web アプリの作成'
+      href: ide/quickstart-python.md
+    - name: 'F#: Web サービスの作成'
+      href: ide/quickstart-fsharp.md
 - name: チュートリアル
+  expanded: true
   items:
-    - name: C#
-      href: get-started/csharp/
-    - name: F#
-      href: /dotnet/fsharp/
-    - name: Visual Basic
-      href: get-started/visual-basic/
-    - name: C++
+    - name: C++ >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: Python
-      href: python/
-    - name: Node.js
+    - name: C#  >>
+      href: get-started/csharp/
+    - name: Visual Basic  >>
+      href: get-started/visual-basic/
+    - name: Node.js  >>
       href: javascript/
+    - name: Python  >>
+      href: python/
+    - name: F#  >>
+      href: /dotnet/fsharp/
 - name: 開発
   items:
     - name: コードを整理して編集する
@@ -199,6 +200,8 @@
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
         - name: プロジェクトの移植、移行、およびアップグレード
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
+        - name: '[ソリューション エクスプローラー] ツール ウィンドウを使用する'
+          href: ide/use-solution-explorer.md
         - name: プロジェクトおよびソリューションのプロパティの管理
           href: ide/managing-project-and-solution-properties.md
         - name: プロジェクト参照
@@ -443,6 +446,8 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: 到達できないコードの削除
                   href: ide/reference/remove-unreachable-code.md
+                - name: 未使用の参照を削除する
+                  href: ide/reference/remove-unused-references.md
                 - name: 名前の変更
                   href: ide/reference/rename.md
                 - name: 条件式を簡略化する
@@ -897,6 +902,7 @@
 - name: デバッグ >>
   href: debugger/index.yml
 - name: バージョン コントロール >>
+  displayName: 'git, github, source control, source, versioning, clone, integrate, release'
   href: version-control/index.yml
 - name: テスト >>
   displayName: Unit testing
@@ -977,14 +983,9 @@
       href: ide/reference/accessibility-products-and-services-from-microsoft.md
 - name: リファレンス
   items:
-    - name: キーボード ショートカット
-      items:
-        - name: よく使うコマンド
-          displayName: keyboard shortcuts
-          href: ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md
-        - name: すべてのコマンド
-          displayName: keyboard commands
-          href: ide/default-keyboard-shortcuts-in-visual-studio.md
+    - name: キーボード ショートカットとコマンド
+      displayName: 'keyboard, shortcuts, short cuts, ctrl, short-cut'
+      href: ide/default-keyboard-shortcuts-in-visual-studio.md
     - name: Visual Studio のコマンド
       items:
         - name: 関連項目
@@ -1426,14 +1427,12 @@
 - name: リソース
   expanded: true
   items:
-    - name: Visual Studio 2017 の新機能
+    - name: 'Visual Studio 2017: 新機能'
       href: ide/whats-new-visual-studio-2017.md
-    - name: Visual Studio 2019 の新機能
+    - name: 'Visual Studio 2019: 新機能'
       href: ide/whats-new-visual-studio-2019.md
-    - name: ドキュメントの新着情報
+    - name: Docs の新機能
       href: ide/whats-new-visual-studio-docs.md
-    - name: ドキュメントの新着情報の履歴
-      href: ide/whats-new-visual-studio-docs-history.md
     - name: リリース ノート
       items:
         - name: リリースのタイミング
@@ -1448,14 +1447,16 @@
           href: 'https://visualstudio.microsoft.com/license-terms/'
         - name: サポート ライフサイクルとサービス
           href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: カスタマー エクスペリエンス向上プログラム
+    - name: カスタマー エクスペリエンスの向上
       items:
-        - name: 概要
+        - name: プログラムについて
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: システムによって生成されたログ
           href: ide/diagnostic-data-collection.md
-    - name: IDE に関するエラーのトラブルシューティング情報
+    - name: Visual Studio での接続されたエクスペリエンス
+      href: ide/reference/connected-experiences.md
+    - name: IDE エラーのトラブルシューティング
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: フィードバックの送信
   items:
@@ -1463,7 +1464,7 @@
       href: ide/feedback-options.md
     - name: 問題を報告する
       items:
-        - name: 問題を報告する方法
+        - name: 問題を報告する
           href: ide/how-to-report-a-problem-with-visual-studio.md
         - name: 問題の状態の報告とよくあるご質問
           href: ide/report-a-problem.md
