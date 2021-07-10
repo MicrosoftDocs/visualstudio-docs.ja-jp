@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 50a7567701dfc4245ca91bac5e353f066b185939
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 88563c9344f4277ece51dee68343f43104741192
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89325483"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112447"
 ---
- Microsoft SharePoint Foundation 2010 
+ Microsoft SharePoint Foundation

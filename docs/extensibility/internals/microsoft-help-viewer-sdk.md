@@ -10,12 +10,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c53191c5f6e02c0b37d29f89a65119f1edab92ea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8bc2ed473e25dc75d0155bc864aa02c157e3482f
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063319"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448325"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft ヘルプ ビューアー SDK
 
@@ -608,7 +608,7 @@ Visual Studio コンテンツには、Visual Studio ロゴやその他のグラ�
 |tabLeftBD.gif|コード スニペット コンテナーをレンダリングするために使用されます||
 |tabRightBD.gif|コード スニペット コンテナーをレンダリングするために使用されます||
 |vs_logo_bk.gif|Branding.xml タグ \<LogoFileName> に定義されている通常のコントラスト ロゴの参照に使用されます。  Visual Studio 製品の場合、ロゴ名は vs_logo_bk.gif です。||
-|vs_logo_wh.gif|Branding.xml タグ \<LogoFileNameHC> に定義されている通常のハイ ロゴの参照に使用されます。  Visual Studio 製品の場合、ロゴ名は vs_logo_wh.gif です。||
+|vs_logo_wh.gif|Branding.xml タグ \<LogoFileNameHC> に定義されている高コントラスト ロゴの参照に使用されます。  Visual Studio 製品の場合、ロゴ名は vs_logo_wh.gif です。||
 |ccOff.png|字幕のグラフィック||
 |ccOn.png|字幕のグラフィック||
 |ImageSprite.png|折りたたみ可能な領域をレンダリングするために使用されます|展開または折りたたみのグラフィック|

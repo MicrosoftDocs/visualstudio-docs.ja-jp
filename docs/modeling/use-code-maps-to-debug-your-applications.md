@@ -13,27 +13,29 @@ helpviewer_keywords:
 - mapping code relationships
 - code maps
 - mapping relationships in code
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a39be2e465ebe8b04501f319e89d6f8bc926b4c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 23d05240208c6160968ae0013acfdb9f2a25c973
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924467"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388556"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>コード マップを使用してアプリケーションをデバッグする
 
-コード マップを使用すると、大規模なコード ベース、よく知らないコード、またはレガシ コードでの見失いを回避できます。 たとえば、デバッグの際は、多数のファイルとプロジェクトにわたってコードに注意を払うことが必要になる場合があります。 コード マップを使用すると、これらのコード内を移動して、コード間の関係を確認できます。 これにより、このコードを頭の中で追跡したり、別の図を描画したりする必要はありません。 コード マップがあれば、作業を中断しても作業中のコードを思い出すのに役立ちます。
+[Visual Studio でコード マップ](../modeling/map-dependencies-across-your-solutions.md)を使用すると、大規模なコード ベース、よく知らないコード、またはレガシ コードでの見失いを回避できます。 たとえば、デバッグの際は、多数のファイルとプロジェクトにわたってコードに注意を払うことが必要になる場合があります。 コード マップを使用すると、これらのコード内を移動して、コード間の関係を確認できます。 これにより、このコードを頭の中で追跡したり、別の図を描画したりする必要はありません。 コード マップがあれば、作業を中断しても作業中のコードを思い出すのに役立ちます。
 
 ![コード マップ &#45; コード内の関係の対応付け](../modeling/media/codemapstoryboardpaint.png)
 
 **緑色の矢印は、エディターでカーソルが表示される場所を示します。**
 
 コード マップを使用するときに使用できるコマンドやアクションの詳細については、「[コード マップの参照および再配置](../modeling/browse-and-rearrange-code-maps.md)」を参照してください。
+
+デバッガー ツールで Visual Studio をデバッグする方法を[こちら](../debugger/debugger-feature-tour.md)でご覧ください。
 
 > [!NOTE]
 > コード マップの作成および編集には、Visual Studio Enterprise エディションが必要です。 Visual Studio Community および Professional エディションでは、Enterprise エディションで生成されたダイアグラムを開くことはできますが、編集することはできません。

@@ -17,31 +17,41 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e6771482925a935d1b6424412d4176db5e9ad6c6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a9b74ba786c9d1104fd507442d959e75afb17bf2
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99923475"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112425"
 ---
 # <a name="how-to-add-and-remove-mapped-folders"></a>方法: マップされたフォルダーの追加と削除を行う
+
   画像やレイアウトなど、SharePoint でよく使用されるフォルダーの中には、ファイル階層に深く埋め込まれているものがあります。 これらのフォルダーを SharePoint プロジェクトにマップして、より簡単にアクセスすることができます。 マップされたフォルダーは、SharePoint サーバーのインストール内のファイルの物理的な場所に対応する SharePoint プロジェクト内のフォルダーです。
 
  SharePoint アプリケーションを配置すると、ソリューション パッケージ (.wsp) によって、マップされたフォルダーとそのすべてのサブフォルダーの内容が、SharePoint を実行しているサーバーの SharePoint フォルダー ツリー内の特定の場所にコピーされます。 この場所は、マップされたフォルダーに設定されている **[配置場所]** プロパティによって決まります。 マップされたフォルダー内のすべてのサブフォルダーは、マップされたフォルダーの **配置場所** を基準としています。 マップされたフォルダーの名前ではなく、 **[配置場所]** プロパティによって、項目が配置される場所が決まります。
 プロジェクトのメニュー バーまたはショートカット メニューのコマンドを使用して、マップされたフォルダーをプロジェクトに追加できます。 **[Add SharePoint "Images" Mapped Folder]\(SharePoint のマップされた "Images" フォルダーの追加\)** と **[Add SharePoint "Layouts" folder]\(SharePoint の "Layouts" フォルダーの追加\)** コマンドを使用して、最も頻繁に使用されるマップされたフォルダーを追加できます。 ショートカット メニューの **[SharePoint のマップされたフォルダーの追加]** コマンドを使用した後、 **[SharePoint のマップされたフォルダーの追加]** ダイアログ ボックスでフォルダーを指定することで、他の利用可能な SharePoint フォルダーをプロジェクトにマップできます。
 
 ## <a name="add-mapped-folders-to-a-project"></a>マップされたフォルダーをプロジェクトに追加する
+
  次の手順では、2 つのマップされたフォルダーを視覚的 Web パーツ プロジェクトに追加する方法について説明します。 始めるには、視覚的 Web パーツ プロジェクトを作成します。
 
-#### <a name="to-add-mapped-folders-to-a-project"></a>マップされたフォルダーをプロジェクトに追加するには
+## <a name="to-add-mapped-folders-to-a-project"></a>マップされたフォルダーをプロジェクトに追加するには
 
 1. メニュー バーで、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
-
+::: moniker range="=vs-2017"
 2. **[新しいプロジェクト]** ダイアログ ボックスで、 **[Visual Basic]** または **[Visual C#]** のいずれかのノードを展開します。 **[Office/SharePoint]** ノードを展開し、 **[SharePoint ソリューション]** ノードを選択します。
 
 3. プロジェクト テンプレートの一覧で、 **[SharePoint 2013 Visual Web パーツ]** テンプレートを選択します。
 
 4. **[名前]** ボックスに「**TestProject1**」と入力した後、 **[OK]** ボタンをクリックします。
+::: moniker-end
+::: moniker range=">=vs-2019"
+2. **[新しいプロジェクトの作成]** ダイアログで、インストールした SharePoint の特定のバージョンに対応する *SharePoint 視覚的 Web パーツ** を選択します。 たとえば、SharePoint 2019 がインストールされている場合は、 **[SharePoint 2019 視覚的 Web パーツ]** テンプレートを選択します。
+    [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
+
+3. **[名前]** ボックスに「**TestProject1**」と入力します。
+4. 次に、 **[作成]** ボタンを選択します。
+::: moniker-end
 
 5. **SharePoint カスタマイズ ウィザード** で、 **[完了]** ボタンをクリックして既定の設定を保持します。
 
@@ -56,9 +66,10 @@ ms.locfileid: "99923475"
      **Resources** という名前のフォルダーがプロジェクトに表示されます。 このフォルダーに、文字列リソース ファイルなどのアイテムを格納できます。 サブフォルダーは、マップされたフォルダーの内容を整理するのに便利ですが、 **[SharePoint マップ フォルダーの追加]** コマンドを使用してマップされたフォルダーを追加しても、自動的には作成されません。 サブフォルダーを追加するには、**Resources** フォルダーを選択し、メニュー バーで **[プロジェクト]**  >  **[新しいフォルダー]** を選択します。
 
 ## <a name="change-the-deployment-location-of-a-mapped-folder"></a>マップされたフォルダーの配置場所を変更する
+
  既定では、マップされたフォルダーは、SharePoint ルート インストール パスを基準とする特定の場所に追加されます。それは \<SharePointRoot> トークンによって示されます。 ただし、マップされたフォルダーの **[配置場所]** プロパティを変更することで、この場所を変更できます。 マップされたフォルダーには、それぞれに固有の **[配置場所]** プロパティがあります。
 
-#### <a name="to-change-the-deployment-location-of-a-mapped-folder"></a>マップされたフォルダーの配置場所を変更するには
+### <a name="to-change-the-deployment-location-of-a-mapped-folder"></a>マップされたフォルダーの配置場所を変更するには
 
 1. 前の手順で作成したプロジェクトで、マップされたフォルダーを選択します。
 
@@ -70,7 +81,7 @@ ms.locfileid: "99923475"
 
 ## <a name="rename-or-remove-mapped-folders"></a>マップされたフォルダーの名前変更または削除を行う
 
-#### <a name="to-rename-or-remove-a-mapped-folder"></a>マップされたフォルダーの名前変更または削除を行うには
+### <a name="to-rename-or-remove-a-mapped-folder"></a>マップされたフォルダーの名前変更または削除を行うには
 
 1. 前の手順で作成したプロジェクトで、マップされたフォルダーを選択します。
 
@@ -81,4 +92,5 @@ ms.locfileid: "99923475"
 3. マップされたフォルダーをプロジェクトから削除するには、そのショートカット メニューを開き、 **[削除]** を選択してから、ダイアログ ボックスの **[OK]** ボタンをクリックして削除を確定します。
 
 ## <a name="see-also"></a>関連項目
+
 - [SharePoint ソリューションの開発](../sharepoint/developing-sharepoint-solutions.md)

@@ -19,12 +19,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e9a90198ce4cf3dc54eedbf80bbf4ffbad634cbc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007e82ee7c1c2839ba266794432605f1f92a1669
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836489"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307792"
 ---
 # <a name="autorecover-environment-options-dialog-box"></a>[自動バックアップ]\ ([オプション] ダイアログ ボックス - [環境])
 
@@ -35,6 +35,12 @@ ms.locfileid: "99836489"
 :::image type="content" source="media/autorecover-options.png" alt-text="[オプション] ダイアログ ボックスの [自動バックアップ] セクションのスクリーンショット":::
 
 **自動バックアップの実行間隔: [n] 分**
+
+::: moniker range=">=vs-2022"
+
+このオプションを使用し、エディターでファイルを自動的に保存する頻度をカスタマイズします。 以前に保存したファイルについては、Visual Studio の場合、***%LocalAppData%\Microsoft\VisualStudio\BackupFiles\\[projectname]*** にファイルのコピーが保存されます。 ファイルが新しく、手動でまだ保存していない場合、Visual Studio では、ランダムに生成されたファイル名でファイルが自動保存されます。
+
+::: moniker-end
 
 ::: moniker range="vs-2019"
 

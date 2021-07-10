@@ -1,9 +1,9 @@
 ---
-title: XAML デザイナーの概要
+title: Visual Studio XAML Designer で UI を作成する
 description: XAML ベースのアプリのデザインに役立つビジュアル インターフェイスを提供する、Blend for Visual Studio の XAML デザイナーのワークスペース UI と機能について説明します。
 ms.date: 03/03/2020
 ms.topic: conceptual
-ms.custom: contperf-fy21q4; SEO-VS-2020
+ms.custom: contperf-fy21q4, SEO-VS-2020
 f1_keywords:
 - VS.XamlDesigner
 - VS.DevicePanel
@@ -14,12 +14,12 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 3d5584380b78bba05f1596a99aa2298789df018f
-ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
+ms.openlocfilehash: ef7d94acbb558ef2a8a3c557051e6dea16be916c
+ms.sourcegitcommit: 809fff25b7701882c899c639eeb6da38ad4fb88a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107879357"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112550689"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML デザイナーを使用して UI を作成する
 

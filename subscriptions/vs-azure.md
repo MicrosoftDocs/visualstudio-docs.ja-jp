@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 03/18/2021
+ms.date: 06/07/2021
 ms.topic: how-to
 description: Visual Studio サブスクリプションに含まれる Azure DevTest の個人クレジットの特典をアクティブ化する方法を説明します。
-ms.openlocfilehash: 1fb85c64ec49d906ba843ac944d550ef1e41fd4d
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 4946efb3aa32fd7c80a2926ad2b83c15cfe92452
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672258"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588440"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションで Microsoft Azure を使用する
 Visual Studio サブスクライバーは、追加料金なしで Microsoft Azure を使うことができます。  [月単位の Azure DevTest の個人クレジット](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)で、Azure が開発/テストのための個人用サンドボックスになります。  仮想マシン、クラウド サービス、その他の Azure リソースをプロビジョニングできます。  クレジットの額はサブスクリプションのレベルによって異なります。
@@ -43,7 +43,7 @@ Visual Studio サブスクライバーは、追加料金なしで Microsoft Azur
 0. 後で簡単にアクセスできるように、[Azure portal](https://portal.azure.com) をブックマークします。
 
 ## <a name="maintain-a-subscription-to-use-monthly-credits"></a>月単位のクレジットを使用するサブスクリプションを保守する
-Visual Studio サブスクリプションの有効期限が切れた場合、または削除された場合、毎月の Azure  Dev/Test の個別クレジットを含め、すべてのサブスクリプション特典が利用できなくなります。 毎月のクレジットで Azure の使用を続けるには、サブスクリプションを更新するか、新しいサブスクリプションを購入するか、Azure の Dev/Test の個別クレジットが含まれる有効なサブスクリプションに Azure 特典を移す必要があります。  
+Visual Studio サブスクリプションの有効期限が切れた場合、または削除された場合、毎月の Azure  Dev/Test の個別クレジットを含め、すべてのサブスクリプション特典が利用できなくなります。 毎月のクレジットで Azure の使用を続けるには、サブスクリプションを更新するか、新しいサブスクリプションを購入するか、Azure の Dev/Test の個別クレジットが含まれる別の Azure サブスクリプションに Azure リソースを移す必要があります。  
 
 > [!IMPORTANT]
 > 現在の Azure サブスクリプションが無効になるか、データにアクセスできなくなる前に、リソースを別の Azure サブスクリプションに移す必要があります。  
@@ -55,7 +55,7 @@ Azure の毎月のクレジットは、いくつかの方法で引き続きご�
     - [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab)
     - [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab)
 - **組織の誰かが代表してサブスクリプションを購入する場合**、[Visual Studio サブスクリプションの管理者に問い合わせ](./contact-my-admin.md)、必要な毎月のクレジットが与えられるサブスクリプションをリクエストしてください。  
-- 別の Microsoft アカウントに関連付けられている同じサブスクリプション レベルで **別の Visual Studio サブスクリプションがアクティブになっている** 場合、Visual Studio [サブスクリプション ポータル](https://my.visualstudio.com/subscriptions)で [代替アカウントを追加する](./manage-vs-subscriptions.md#managing-my-profile)ことで、別の有効な Visual Studio サブスクリプションに Azure 特典を移すことができます。  
+- 同じサブスクリプション レベルで **別の Visual Studio サブスクリプションがアクティブになっている場合**、それを使用して新しい Azure クレジット サブスクリプションを設定できます。  
 
 以下の適格性テーブルを使用して、各サブスクリプションの種類に含まれるクレジットの数を確認してください。  
 

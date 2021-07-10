@@ -3,7 +3,7 @@ title: RegPkg ユーティリティ | Microsoft Docs
 description: RegPkg.exe ユーティリティで VSPackage を Visual Studio に登録し、それを配置のために準備する方法について説明します。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - regpkg, registration utility
 - registration, regpkg utility
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5160608379549abbd469bd6cf1c17e4357eac15
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b605d251b2e516a468401805fc0e125801129c16
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060758"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903360"
 ---
 # <a name="regpkg-utility"></a>RegPkg ユーティリティ
 > [!NOTE]
@@ -34,9 +34,7 @@ ms.locfileid: "105060758"
 RegPkg [/root:<root>] [/regfile:<regfile>] [/rgsfile:<rgsfile> [/rgm]] [/vrgfile:<vrgfile>] [/codebase | /assembly] [/unregister] AssemblyPath
 ```
 
- /root:root 指定された Visual Studio ルートで登録を実行します。
-
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ルート。
+ /root:root 指定された [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ルートで登録を実行します。
 
  /regfile:FileName レジストリを更新するのではなく、.reg ファイルを作成します。  /vrgfile、/rgsfile、または /wixfile と共に使用することはできません。
 

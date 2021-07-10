@@ -8,17 +8,17 @@ helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a261589af027c76708a70631426d8033eb2ada63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90c180bf9d910227013c2e089001ce5332cd1bd3
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99924232"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388348"
 ---
 # <a name="visualize-code"></a>コードの視覚化
 
@@ -32,7 +32,7 @@ Visual Studio の視覚化ツールとモデリング ツールを使って、�
 
 またこれらのツールを使用すると、プロジェクトの関係者と簡単にやり取りすることができます。
 
-各機能がサポートされる Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)」を参照してください
+各機能がサポートされる Visual Studio のバージョンを確認するには、「[アーキテクチャとモデリング ツールのエディション サポート](../modeling/analyze-and-model-your-architecture.md#VersionSupport)」を参照してください
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
@@ -44,6 +44,7 @@ Visual Studio の視覚化ツールとモデリング ツールを使って、�
 
 ## <a name="see-also"></a>関連項目
 
+- [アーキテクチャ コード ツールをインストールする](install-architecture-tools.md)
 - [シナリオ: 視覚化およびモデリングを使用したデザインの変更](../modeling/scenario-change-your-design-using-visualization-and-modeling.md)
 - [アーキテクチャの分析とモデル化](../modeling/analyze-and-model-your-architecture.md)
 - [アプリのアーキテクチャをモデル化する](../modeling/model-your-app-s-architecture.md)

@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 28451b9bf317c33e1aff52a62247374ea2b6871e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1675cf43cb9632d4480265f00a377c1f5c530b51
+ms.sourcegitcommit: c5f2a142ebf9f00808314f79a4508a82e6df1198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913887"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111395359"
 ---
 # <a name="item-metadata-in-task-batching"></a>タスクのバッチの項目メタデータ
 
@@ -138,9 +138,9 @@ MSBuild では、同じメタデータに基づいて複数の項目リストを
 
 ## <a name="batch-one-item-at-a-time"></a>一度に 1 つの項目をバッチ処理する
 
-バッチ処理は、作成時にすべての項目に割り当てられる既知の項目メタデータでも実行できます。 それにより、コレクション内のすべての項目にバッチ処理に使用するメタデータが与えられます。 `Identity` メタデータ値はすべての項目に固有のものであり、1 つの項目リスト内のすべての項目を 1 つの個別バッチに分割するときに役立ちます。 既知の項目メタデータの一覧については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。
+バッチ処理は、作成時にすべての項目に割り当てられる既知の項目メタデータでも実行できます。 それにより、コレクション内のすべての項目にバッチ処理に使用するメタデータが与えられます。 `Identity` メタデータ値は、1 つの項目リスト内のすべての項目を 1 つの個別バッチに分割するときに役立ちます。 既知の項目メタデータの一覧については、「[既知の項目メタデータ](../msbuild/msbuild-well-known-item-metadata.md)」をご覧ください。
 
-次の例では、項目リストの各項目を 1 つずつバッチ処理する方法を示しています。 すべての項目の `Identity` メタデータ値が固有であるため、`ExampColl` 項目リストは 6 つのバッチに分割されます。各バッチに項目リストの 1 つの項目が含まれています。 `Text` 属性に `%(Identity)` があることで、バッチ処理を実行する必要があることが MSBuild に通知されます。
+次の例では、項目リストの各項目を 1 つずつバッチ処理する方法を示しています。 `ExampColl` 項目リストは 6 つのバッチに分割されます。各バッチには、項目リストの 1 項目が含まれます。 `Text` 属性に `%(Identity)` があることで、バッチ処理を実行する必要があることが MSBuild に通知されます。
 
 ```xml
 <Project
@@ -174,6 +174,35 @@ Identity: 'Item3' -- Items in ExampColl: Item3
 Identity: 'Item4' -- Items in ExampColl: Item4
 Identity: 'Item5' -- Items in ExampColl: Item5
 Identity: 'Item6' -- Items in ExampColl: Item6
+```
+
+ただし、`Identity` が一意であるとは限りません。その値は、`Include` 属性の評価後の最終値です。 そのため、`Include` 属性が複数回使用されている場合、まとめてバッチ処理されます。 次の例からわかるように、この手法では、グループ内の項目ごとに `Include` 属性が一意になる必要があります。 この点について説明するために、次のコードを検証してください。
+
+```xml
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Item Include="1">
+      <M>1</M>
+    </Item>
+    <Item Include="1">
+      <M>2</M>
+    </Item>
+    <Item Include="2">
+      <M>3</M>
+    </Item>
+  </ItemGroup>
+
+  <Target Name="Batching">
+    <Warning Text="@(Item->'%(Identity): %(M)')" Condition=" '%(Identity)' != '' "/>
+  </Target>
+</Project>
+```
+
+出力からは、最初の 2 つの項目が同じバッチにあることがわかります。この 2 つでは`Include` 属性が同じであるからです。
+
+```output
+test.proj(15,5): warning : 1: 1;1: 2
+test.proj(15,5): warning : 2: 3
 ```
 
 ## <a name="filter-item-lists"></a>項目リストをフィルター処理する

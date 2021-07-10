@@ -1,7 +1,7 @@
 ---
 title: デバッガーで実行中のプロセスにアタッチする
 description: ローカルまたはリモート コンピューターで実行中のプロセスに、Visual Studio デバッガーをアタッチする方法について説明します。
-ms.custom: SEO-VS-2020, seodec18
+ms.custom: SEO-VS-2020
 ms.date: 06/12/2020
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a76aff1c17988f61b5f89e2e8d20ef7129efcae
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9774878b8d8862fca0b8b35de924b7bc1ab45656
+ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866009"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113280505"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio デバッガーで実行中のプロセスへのアタッチ
 
@@ -159,6 +159,12 @@ IIS に配置されている ASP.NET アプリケーションをデバッグす�
 リモート デスクトップ (ターミナル サービス) セッションでのデバッグ時には、 **[使用可能なプロセス]** リストにすべての使用可能なプロセスが表示されない場合があります。 制限されたユーザー アカウントを持つユーザーとして Visual Studio を実行している場合、 **[使用可能なプロセス]** リストには、セッション 0 で実行されているプロセスは表示されません。 セッション 0 は、サービスや *w3wp.exe* などのその他のサーバー プロセスに使用されます。 この問題を解決するには、管理者アカウントで [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行するか、ターミナル サービス セッションからではなくサーバー コンソールから [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] を実行します。
 
 どちらの方法も実行できない場合、3 つ目の方法として、Windows コマンド ラインから `vsjitdebugger.exe -p <ProcessId>` を実行することによって、プロセスにアタッチできます。 プロセス ID は *tlist.exe* を使用して確認できます。 *tlist.exe* を入手するには、[WDK と WinDbg のダウンロード](/windows-hardware/drivers/download-the-wdk)に関するページで Windows 用のデバッグ ツールをダウンロードし、インストールします。
+
+## <a name="attach-to-a-net-core-process-running-on-azure-app-service-windows"></a>Azure App Service (Windows) 上で実行されている .NET Core プロセスに添付する
+
+Azure App Service (Windows) に発行する場合は、 **[ホスティング]** の下の **[...]** メニューの下に **[デバッガーを添付する]** オプションがあります。 Visual Studio は、プロファイルの発行対象である Azure App Service (Windows) のインスタンスにリモート デバッガーを添付しようと試みます。
+
+:::image type="content" source="../debugger/media/attach-debugger-publish-profile.png" alt-text="[発行の概要] ページ内の [デバッガーを添付する] オプションのスクリーンショット。":::
 
 ## <a name="attach-to-a-net-core-process-running-on-linux-using-ssh"></a>SSH を使用して Linux 上で実行されている .NET Core プロセスにアタッチする
 

@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b4dce707d51d7a2840aeef78f4d70392c884275
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a47ff76c98c5788fdfca3d633c87664b6802de70
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932020"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222956"
 ---
 # <a name="property-functions"></a>プロパティ関数
 
@@ -342,9 +342,11 @@ Output:
 -->
 ```
 
+<a name="TargetFramework"></a>
+
 ## <a name="msbuild-targetframework-and-targetplatform-functions"></a>MSBuild の TargetFramework と TargetPlatform の関数
 
-MSBuild では、[TargetFramework と TargetPlatform のプロパティ](msbuild-target-framework-and-target-platform.md)を処理するための関数がいくつか定義されています。
+MSBuild 16.7 以降には、[TargetFramework と TargetPlatform のプロパティ](msbuild-target-framework-and-target-platform.md)を処理するための関数がいくつか定義されています。
 
 |関数シグネチャ|説明|
 |------------------------|-----------------|
@@ -384,6 +386,39 @@ Value3 = windows
 Value4 = 7.0
 Value5 = True
 ```
+
+## <a name="msbuild-version-comparison-functions"></a>MSBuild のバージョン比較関数
+
+MSBuild 16.5 以降には、バージョンを表す文字列を比較する関数がいくつか定義されています。
+
+> [!Note]
+> 条件に比較演算子を使用して[文字列を比較し、それを `System.Version` オブジェクトとして解析できます](msbuild-conditions.md#comparing-versions)が、比較によって予期しない結果になる可能性があります。 プロパティ関数を使用することをお勧めします。
+
+|関数シグネチャ|説明|
+|------------------------|-----------------|
+|VersionEquals(string a, string b)|以下の規則に従ってバージョン `a` と `b` が等しい場合は `true` を返します。|
+|VersionGreaterThan(string a, string b)|以下の規則に従ってバージョン `a` が `b` よりも大きい場合、`true` を返します。|
+|VersionGreaterThanOrEquals(string a, string b)|以下の規則に従ってバージョン `a` が `b` よりも大きいか等しい場合、`true` を返します。|
+|VersionLessThan(string a, string b)|以下の規則に従ってバージョン `a` が `b` よりも小さい場合、`true` を返します。|
+|VersionLessThanOrEquals(string a, string b)|以下の規則に従ってバージョン `a` が `b` よりも小さいか等しい場合、`true` を返します。|
+|VersionNotEquals(string a, string b)|以下の規則に従ってバージョン `a` と `b` が等しい場合は `false` を返します。|
+
+これらのメソッドでは、以下の例外を除き、バージョンは <xref:System.Version?displayProperty=fullName> のように解析されます。
+
+* 先頭の `v` または `V` は無視されるので、`$(TargetFrameworkVersion)` と比較できます。
+
+* バージョン文字列の最初の '-' または '+' から末尾までのすべてが無視されます。 これにより、セマンティック バージョン (semver) を渡すことはできますが、その順序は semver と同じではありません。 その代わり、プレリリース指定子とビルド メタデータには並べ替えの重み付けがありません。 これは、たとえば、`>= x.y` の場合に機能を有効にして、`x.y.z-pre` の場合に起動する場合に役立ちます。
+
+* 指定されていない部分は、ゼロ値の部分と同じです。 (`x == x.0 == x.0.0 == x.0.0.0`).
+
+* 整数部には空白を使用できません。
+
+* メジャー バージョンのみが有効です (`3` は `3.0.0.0` と同じです)。
+
+* `+` は整数部の正符号としては使用できません (semver のメタデータとして扱われ、無視されます)。
+
+> [!TIP]
+> [TargetFramework プロパティ](msbuild-target-framework-and-target-platform.md)の比較には、一般的に、バージョンを抽出して比較するのではなく、[IsTargetFrameworkCompatible](#TargetFramework) を使用するようにします。 これにより、バージョンだけでなく `TargetFrameworkIdentifier` が異なる `TargetFramework`s を比較することができます。
 
 ## <a name="msbuild-condition-functions"></a>MSBuild 条件関数
 

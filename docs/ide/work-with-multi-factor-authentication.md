@@ -10,12 +10,12 @@ manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 6935c2f37f75f0318ec9402c3fcd0ff763555032
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 9ac42ccff8c7bffcc22c453002aad1caf6935d28
+ms.sourcegitcommit: e4630a3bb89b4d606fe2cbd709bc773c5b538b78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296015"
+ms.lasthandoff: 06/26/2021
+ms.locfileid: "112975673"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>多要素認証が必要なアカウントで Visual Studio を使用する方法
 
@@ -68,11 +68,16 @@ ms.locfileid: "107296015"
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Visual Studio で特定の Azure Active Directory テナントの使用をオプトアウトする方法
 
-Visual Studio 2019 バージョン 16.6 には、特定のテナントを除外して Visual Studio で非表示にする柔軟性が備わっています。 フィルターを適用すると、そのテナントで認証する必要がなくなりますが、関連付けられているリソースにはアクセスできなくなります。 
+Visual Studio 2019 バージョン 16.6 には、テナントを個別に、またはグローバルに除外して、Visual Studio で実質的に非表示にする柔軟性があります。 フィルターを適用すると、そのテナントで認証する必要がなくなりますが、関連付けられているリソースにはアクセスできなくなります。
 
 この機能は、複数のテナントがあり、特定のサブセットをターゲットにして開発環境を最適化する場合に便利です。 問題のあるテナントをフィルターで除外できるため、特定の CA/MFA ポリシーを検証できない場合にも役立ちます。 
 
-### <a name="how-to-filter-out-a-tenant"></a>テナントを除外する方法
+### <a name="how-to-filter-out-all-tenants"></a>テナントをすべて除外する方法
+すべてのテナントをグローバルにフィルターで除外するには、[アカウント設定] ダイアログ **([ファイル] > [アカウント設定])** を開き、 **[Authenticate Across all Azure Active Directories]** \(すべての Azure Active Directories で認証する\) チェックボックスをオフにします。
+
+このオプションをオフにすると、アカウントの既定のテナントでのみで認証されます。 また、お使いのアカウントが、ゲストになっている可能性のある他のテナントに関連付けられているすべてのリソースにアクセスできないことも意味します。
+
+### <a name="how-to-filter-out-individual-tenants"></a>個々のテナントをフィルター処理する方法
 Visual Studio アカウントに関連付けられているテナントをフィルター処理するには、[アカウントの設定] ダイアログ **([ファイル] >[アカウントの設定...])** を開き、 **[フィルターの適用]** をクリックします。 
 </br>
 </br>

@@ -2,7 +2,7 @@
 title: Visual Studio 2019 の新機能
 titleSuffix: ''
 description: Visual Studio 2019 の新機能について説明します。
-ms.date: 03/19/2021
+ms.date: 06/17/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e4c432afb1a4341dbe30f023d95bfccb4689094
-ms.sourcegitcommit: 5fb684ff8729eb118aa91ce9f049c79eeb9747b1
+ms.openlocfilehash: d34c3a3b4d808b1f4e24051763f1c0876a175a3a
+ms.sourcegitcommit: a9526ab1556c47570286c7a7d3314af67fd1dcf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2021
-ms.locfileid: "107913099"
+ms.lasthandoff: 06/18/2021
+ms.locfileid: "112365470"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019 の新機能
 
-**[16.9 リリース](/visualstudio/releases/2019/release-notes/)の更新**
+**16.10 リリース向けに更新されました。** [完全リリース ノート](/visualstudio/releases/2019/release-notes/)を見る | [製品ロードマップ](/visualstudio/productinfo/vs-roadmap)を見る
 
 >[!div class="button"]
 >[Visual Studio 2019 のダウンロード](https://visualstudio.microsoft.com/downloads)
@@ -220,17 +220,19 @@ Azure VM で実行される ASP.NET (Core およびデスクトップ) アプリ
 
 ## <a name="whats-next"></a>次の内容
 
-Visual Studio 2019 は、より優れた開発を可能にする新機能で頻繁に更新されています。 最新のイノベーションの詳細については、「[The Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)」 (Visual Studio に関するブログ) を参照してください。 現在までプレビューでリリースしたものの記録については、[プレビュー リリース ノート](/visualstudio/releases/2019/release-notes-preview/)に関する記事を参照してください。 今後のリリース予定の一覧については、[Visual Studio のロードマップ](/visualstudio/productinfo/vs-roadmap)に関するページを参照してください。
+Visual Studio は、開発をさらに効率的にするような新しい機能で頻繁に更新しています。 最新のイノベーションの詳細については、「[The Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)」 (Visual Studio に関するブログ) を参照してください。 現在までプレビューでリリースしたものの記録については、[プレビュー リリース ノート](/visualstudio/releases/2019/release-notes-preview/)に関する記事を参照してください。 今後のリリース予定の一覧については、[Visual Studio のロードマップ](/visualstudio/productinfo/vs-roadmap)に関するページを参照してください。
 
-一方、現在機能している新機能は次のとおりです。
+現在、次をご利用いただけます。
 
 - **Visual Studio 2019 での Git エクスペリエンスの向上 (プレビュー)**
 
-   Visual Studio 2019 [バージョン 16.8](/visualstudio/releases/2019/release-notes/) で新しい Git バージョン管理エクスペリエンスが既定でオンになるようになりましたが、最新のプレビュー リリースでエクスペリエンスを向上させるため、機能が引き続き追加されます。
+   Git バージョン コントロール ツールは Visual Studio 2019 [バージョン 16.8](/visualstudio/releases/2019/release-notes-history/) 以降で既定ですが、Visual Studio 2019 プレビューの最新リリース、[バージョン 16.11](/visualstudio/releases/2019/release-notes-preview/) では使い勝手を良くする機能を引き続き追加します。
 
-   詳細については、「[Visual Studio での Git エクスペリエンス](../version-control/git-with-visual-studio.md)」ページを参照してください。
+   詳細については、[Visual Studio のバージョン コントロール](/visualstudio/version-control/)に関するページを参照してください。
 
-プレビュー リリースの詳細および試したい場合のダウンロード リンクについては、「 **[Visual Studio Preview](https://aka.ms/vspreview/)** 」ページを参照してください。
+- **Visual Studio 2022 (プレビュー) の最初のパブリック リリースを利用できるようになりました**
+
+    次のメジャー リリース [Visual Studio 2022](/visualstudio/releases/2022/release-notes-preview/) のパブリック プレビューが利用できるようになりました。 新しいバージョンは以前より速く、わかりやすく、軽量です。 また、Visual Studio で初めて 64 ビットになりました。 ダウンロード リンクと詳細については、「 **[Visual Studio 2022 プレビュー 1 が利用可能になりました](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-1-now-available/)** 」を参照してください。 をご覧ください。
 
 ## <a name="give-us-feedback"></a>フィードバックの送信
 

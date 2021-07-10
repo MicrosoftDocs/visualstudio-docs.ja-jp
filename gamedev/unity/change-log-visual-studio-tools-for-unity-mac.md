@@ -2,7 +2,7 @@
 title: 変更ログ (Visual Studio Tools for Unity、Mac) | Microsoft Docs
 description: Visual Studio Tools for Unity、Mac の変更ログを確認します。 バージョン 1.0.0.0 から 2.7.0.0 以降にかけて行われた変更を確認します。
 ms.custom: ''
-ms.date: 3/1/2021
+ms.date: 6/3/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,87 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: f11c5c1407d16d7a82a9d8d24e6a8dd3a04e57eb
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 2d3faf8e5231ca5d2e99bcf80dc18b6d4f4607cd
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683372"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448299"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>変更ログ (Visual Studio Tools for Unity、Mac)
 
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="21020"></a>2.10.2.0
+リリース日: 2021 年 6 月 2 日
+
+### <a name="new-features"></a>新機能
+
+- **統合:**
+
+  - [`UNT0024`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0024.md) 診断が追加されました。 ベクトル計算よりもスカラー計算を優先します。
+
+- **評価:**
+
+  - 移植可能な pdb シンボルを使用し、表示されるローカルを適切にフィルター処理するサポートが追加されました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - 最近の Unity バージョンのプレーヤーのアナウンス解析を修正しました。
+
+## <a name="21010"></a>2.10.1.0
+リリース日: 2021 年 5 月 11 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0008.md) クイック修正の安定性問題を修正しました。
+
+  - スレッドのパフォーマンス問題を修正しました。
+
+  - エラーリストに表示されない警告とエラーのフィルター処理を修正しました。
+
+  - Unity バックグラウンド プロセスのフィルター処理を修正しました。
+
+## <a name="21000"></a>2.10.0.0
+リリース日: 2021 年 4 月 13 日
+
+### <a name="new-features"></a>新機能
+
+- **統合:**
+
+  - [`UNT0019`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0019.md) 診断が追加されました。 `GameObject.gameObject` の不要な間接呼び出し。
+
+  - [`UNT0020`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0020.md) 診断が追加されました。 非静的メソッドで使用される `MenuItem` 属性。
+
+  - [`UNT0021`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0021.md) 診断が追加されました。 Unity メッセージは保護する必要があります (オプトイン)。
+
+  - [`UNT0022`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0022.md) 診断が追加されました。 位置と回転を設定する非効率的なメソッド。
+
+  - [`UNT0023`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0023.md) 診断が追加されました。 Unity オブジェクトの合体代入。
+
+  - `IDE0074` 用の [`USP0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0017.md) サプレッサーが追加されました。 Unity オブジェクトでは、合体代入を使用しないでください。
+
+## <a name="2940"></a>2.9.4.0
+リリース日: 2021 年 4 月 6 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - テスト列挙の問題を修正
+
+## <a name="2930"></a>2.9.3.0
+リリース日: 2021 年 3 月 30 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - テスト ランナーの問題を修正 
 
 ## <a name="2920"></a>2.9.2.0
 リリース日: 2021 年 3 月 2 日

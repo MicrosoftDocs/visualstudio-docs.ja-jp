@@ -9,19 +9,19 @@ f1_keywords:
 - uninstall
 - uninstall Visual Studio
 ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 7d7c4400d553d8244d3b9239f0b0a984d382c99a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d34a5be9598682982c3918aafec7725e59d6f92
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959169"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306788"
 ---
 # <a name="uninstall-visual-studio"></a>Visual Studio のアンインストール
 
@@ -68,7 +68,7 @@ Visual Studio 2017 のすべてのインストールと Visual Studio インス�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. コンピューター上の **Visual Studio インストーラー** を見つけます。
 
@@ -91,14 +91,14 @@ Visual Studio 2017 のすべてのインストールと Visual Studio インス�
 
      ![Visual Studio のアンインストールの確認](media/vs-2019/uninstall-visualstudio-confirm.png "Visual Studio 2019 をアンインストールすることを確認する")
 
-後で気が変わって Visual Studio 2019 を再インストールする場合は、再度 Visual Studio インストーラーを起動し、 **[使用可能]** タブを選択し、インストールする Visual Studio のエディションを選択してから、 **[インストール]** を選択します。
+後で気が変わって Visual Studio 2019 または 2022 を再インストールする場合は、再度 Visual Studio インストーラーを起動し、 **[使用可能]** タブを選択し、インストールする Visual Studio のエディションを選択してから、 **[インストール]** を選択します。
 
 ## <a name="uninstall-visual-studio-installer"></a>Visual Studio インストーラーをアンインストールする
 
-Visual Studio 2019 のすべてのインストールと Visual Studio インストーラーを自分のマシンから削除するには、[アプリと機能] からアンインストールします。
+Visual Studio 2019、Visual Studio 2022、Visual Studio インストーラーのすべてのインストールを自分のマシンから削除するには、[アプリと機能] からアンインストールします。
 
 1. Windows 10 では、[検索するテキストをここに入力] ボックスに「**アプリと機能**」と入力します。
-1. **Visual Studio 2019** を見つけます。
+1. **Visual Studio 2019** または **Visual Studio 2022** を見つけます。
 1. **[アンインストール]** を選択します。
 1. 次に、**Microsoft Visual Studio インストーラー** を見つけます。
 1. **[アンインストール]** を選択します。

@@ -1,7 +1,7 @@
 ---
-description: Visual Studio の設定をインポート、エクスポート、またはリセットします。
+description: Visual Studio の設定をインポート、エクスポート、またはリセットします。 vssettings ファイル拡張子
 title: '[設定のインポートとエクスポート] コマンド'
-ms.date: 11/21/2018
+ms.date: 05/28/2021
 ms.topic: reference
 f1_keywords:
 - Tools.ImportandExportSettings
@@ -14,16 +14,18 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f2ea4811af2c44277b9a6dc285972c5267b28d7
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: dba50cf598c3c74f6c9407fbef5d55f938941a11
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223675"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687641"
 ---
-# <a name="import-and-export-settings-command"></a>[設定のインポートとエクスポート] コマンド
+# <a name="import-and-export-settings-command-vssettings-file"></a>[設定のインポートとエクスポート] コマンド (.vssettings ファイル)
 
-Visual Studio の設定をインポート、エクスポート、またはリセットします。
+Visual Studio の設定ファイル `.vssettings` をインポート、エクスポート、またはリセットします。
+
+ファイルのスキーマが開いています。 最も一般的には、スキーマは XML 構造に従います。その構造では、各カテゴリはタグであり、それ自体にサブカテゴリ タグを含めることができます。 これらのサブカテゴリ タグには、プロパティ値タグを含めることができます。 ほとんどのパッケージでは共通の構造を使用されますが、Visual Studio 内のパッケージはすべて、選択したスキーマを使用して任意の XML をファイルに提供できます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,17 +37,17 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 
 /export:`filename`
 
-任意。 現在の設定を指定したファイルにエクスポートします。
+省略可能。 現在の設定を指定したファイルにエクスポートします。
 
 /import:`filename`
 
-任意。 設定を指定したファイルからインポートします。
+省略可能。 設定を指定したファイルからインポートします。
 
 /reset
 
-任意。 現在の設定をリセットします。
+省略可能。 現在の設定をリセットします。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 スイッチを指定しないでこのコマンドを実行すると、**[設定のインポートとエクスポート]** ウィザードが開きます。 詳細については、[設定の同期](../synchronized-settings-in-visual-studio.md)と[環境設定](../environment-settings.md)に関するページを参照してください。
 
@@ -56,6 +58,8 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 ```cmd
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 ```
+
+
 
 ## <a name="see-also"></a>関連項目
 

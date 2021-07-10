@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 1b92792cf9db0090c52f583754e56c306e6d7234
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 9229c3717b686a3f08ef49e7912ac0515864d793
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082579"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222813"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>ToDo サンプル アプリをビルドして実行する
 
@@ -30,7 +29,9 @@ ms.locfileid: "106082579"
 
 1. Docker for Windows または Docker Community Edition がローカル コンピューターにインストールされていることを確認します。 [Docker for Windows のインストール ドキュメント](https://docs.docker.com/docker-for-windows/install/)を参照してください。 インストール プロセスにより、サンプルを含む ZIP ファイルが localhost アドレスで使用できるようになります。
 
-1. [ZIP をダウンロードします](https://github.com/docker/getting-started/tree/master/app)。 ZIP ファイルを開き、内容を確実に抽出します。
+1. アプリのソースを [Docker](https://github.com/docker/getting-started) リポジトリからダウンロードします。 リポジトリの ZIP ファイルをダウンロードできます。 ZIP ファイルをダウンロードするには、緑色の **[Code]\(コード\)** ボタンを使用し、 **[Download ZIP]\(ZIP のダウンロード\)** を選択します。 ZIP ファイルを開き、アプリのソースを *app* フォルダーから自分のハード ドライブ上のフォルダーにすべて抽出します。
+
+   ![緑の [Code]\(コード\) ボタンと [Download ZIP]\(ZIP のダウンロード\) オプションを示すスクリーンショット](media/download-zip.png)
 
 1. 抽出したら、任意のコード エディターを使用してプロジェクトを開きます。 エディターを必要としている場合は、[Visual Studio Code](https://code.visualstudio.com/) を使用できます。 `package.json` と 2 つのサブディレクトリ (`src` と `spec`) が表示されます。
 

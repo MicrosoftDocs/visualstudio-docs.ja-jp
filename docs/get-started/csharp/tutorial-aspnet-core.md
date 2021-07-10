@@ -2,8 +2,8 @@
 title: 'チュートリアル: C# と ASP.NET Core の概要'
 titleSuffix: ''
 description: Visual Studio を使用して C# で ASP.NET Core Web アプリを作成する方法について段階的に説明します。
-ms.custom: seodec18, get-started
-ms.date: 02/12/2021
+ms.custom: vs-acquisition, get-started
+ms.date: 06/12/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,40 +16,41 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: a86b7273a123a5c9ed0519caf2166127c090d16f
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 25840b820a92925c3d7434d0c76b0138b533b2dc
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107296925"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112388114"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>チュートリアル: Visual Studio での C# および ASP.NET Core の概要
 
 Visual Studio を使用した ASP.NET Core での C# 開発に関するこのチュートリアルでは、C# ASP.NET Core Web アプリを作成し、それを変更し、IDE の一部の機能を検討した後で、アプリを実行します。
 
-## <a name="before-you-begin"></a>始める前に
+## <a name="prerequisites"></a>前提条件
 
-### <a name="install-visual-studio"></a>Visual Studio のインストール
+1. Visual Studio のインストール
+   ::: moniker range="vs-2017"
+   
+   Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ページに移動し、無料試用版をインストールしてください。
+   
+   ::: moniker-end
+   
+   ::: moniker range="vs-2019"
+   
+   Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+   
+   ::: moniker-end
 
-::: moniker range="vs-2017"
+   ::: moniker range="vs-2022"
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ページに移動し、無料試用版をインストールしてください。
+   Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
-::: moniker-end
+   ::: moniker-end
 
-::: moniker range="vs-2019"
+1. Visual Studio の更新 - Visual Studio を既にインストールしている場合は、最新のリリースを実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio を最新リリースに更新する](../../install/update-visual-studio.md)」ページを参照してください。
 
-Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
-
-::: moniker-end
-
-### <a name="update-visual-studio"></a>Visual Studio を更新する
-
-Visual Studio を既にインストールしている場合は、最新のリリースを実行していることを確認します。 インストールを更新する方法の詳細については、「[Visual Studio を最新リリースに更新する](../../install/update-visual-studio.md)」ページを参照してください。
-
-### <a name="choose-your-theme-optional"></a>テーマを選択する (省略可能)
-
-このチュートリアルには、ダーク テーマを使用しているスクリーン ショットが含まれます。 ダーク テーマを使用していないが、使用したい場合は、その方法について「[Visual Studio IDE とエディターのカスタマイズ](../../ide/quickstart-personalize-the-ide.md)」ページを参照してください。
+1. テーマを選択する (省略可能) - このチュートリアルには、ダーク テーマを使用しているスクリーンショットが含まれます。 方法については、「[Visual Studio IDE とエディターのカスタマイズ](../../ide/quickstart-personalize-the-ide.md)」ページをご覧ください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -102,7 +103,7 @@ Visual Studio を既にインストールしている場合は、最新のリリ
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
 

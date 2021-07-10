@@ -1,7 +1,10 @@
 ---
 title: Visual Basic 開発者向けの編集の概要
 description: この 10 分間の Visual Studio のコード エディターの紹介では、Visual Basic でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
-ms.custom: seodec18, get-started
+ms.custom:
+- vs-acquisition
+- seodec18
+- get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -12,12 +15,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 227d54fbc2734290954fc1c847a34846bb6dc5cf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe411074c95db15fde4819ffb07eca39a05e844d
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99944538"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390165"
 ---
 # <a name="learn-to-use-the-code-editor-with-visual-basic"></a>Visual Basic でコード エディターを使用する方法を学習する
 
@@ -34,6 +37,13 @@ ms.locfileid: "99944538"
 
 > [!TIP]
 > Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+> [!TIP]
+> Visual Studio プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
 ::: moniker-end
 

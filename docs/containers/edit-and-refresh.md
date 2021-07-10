@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: multiple
 ms.date: 07/25/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 3eafb6f3ef345da4316fdbe5d6b96a25d7dc90a9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8fb821acb48dd05aa09723fe5c6c254e7d1ca648
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867634"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306385"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>ローカルの Docker コンテナーでのアプリのデバッグ
 
@@ -38,6 +38,12 @@ Docker がインストールされたローカルの Windows デスクトップ�
 ::: moniker range="vs-2019"
 
 * Web 開発ワークロードがインストールされている [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+* Web 開発ワークロードがインストールされている [Visual Studio 2022 Preview]()
 
 ::: moniker-end
 

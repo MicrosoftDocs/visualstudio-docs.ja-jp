@@ -15,16 +15,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3504e866a7f89de8fa38f92a8bfea501ddd952c9
-ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
+ms.openlocfilehash: f15281db55381dadbfd3370eb10a04feeab9c3a5
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "109666797"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307571"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>ネットワーク ベースの Visual Studio 配置の更新プログラムを制御する
 
-企業の管理者は、多くの場合、レイアウトを作成してそれをネットワーク ファイル共有でホストし、エンド ユーザーに展開します。 このページでは、ネットワーク レイアウト オプションを適切に構成する方法について説明します。 
+企業の管理者は、多くの場合、レイアウトを作成してそれをネットワーク ファイル共有でホストし、エンド ユーザーに展開します。 このページでは、ネットワーク レイアウト オプションを適切に構成する方法について説明します。
 
 ## <a name="controlling-where-visual-studio-looks-for-updates"></a>Visual Studio が更新プログラムを探す場所を変更する
 
@@ -34,17 +34,17 @@ ms.locfileid: "109666797"
 
 **シナリオ 2: クライアントが元々インストールされており、ネットワーク レイアウトからのみ更新プログラムを受け取る必要があります**
 
-Visual Studio クライアントによって更新プログラムを検索する場所を制御する場合、たとえば、クライアント コンピューターからインターネットにアクセスできず、確実にレイアウトからのみインストールする場合は、クライアントのインストーラーによって更新された製品ビットが検索される場所を構成することができます。 クライアントによってレイアウトから初期インストールが行われる前に、この設定が正しく構成されていることを確認することをお勧めします。 
+Visual Studio クライアントによって更新プログラムを検索する場所を制御する場合、たとえば、クライアント コンピューターからインターネットにアクセスできず、確実にレイアウトからのみインストールする場合は、クライアントのインストーラーによって更新された製品ビットが検索される場所を構成することができます。 クライアントによってレイアウトから初期インストールが行われる前に、この設定が正しく構成されていることを確認することをお勧めします。
 
 1. オフライン レイアウトを作成します。
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --layout C:\vsoffline --lang en-US
    ```
 
 2. それをホストするファイル共有にコピーします。
 
-   ```cmd
+   ```shell
    xcopy /e C:\vsoffline \\server\share\VS
    ```
 
@@ -58,7 +58,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
    これでエンド ユーザーはこの共有からセットアップを実行し、Visual Studio をインストールできます。
 
-   ```cmd
+   ```shell
    \\server\share\VS\vs_enterprise.exe
    ```
 
@@ -66,7 +66,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
 1. 次のようなコマンドを使用します。
 
-   ```cmd
+   ```shell
    vs_enterprise.exe --layout \\server\share\VS --lang en-US
    ```
 
@@ -82,8 +82,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
 **シナリオ 3: クライアントは元々Web からインストールされていましたが、現在はネットワーク レイアウトからの更新プログラムのみを受け取る必要があります**
 
-場合によっては、クライアント コンピューターに既に Web から Visual Studio がインストールされている可能性がありますが、管理者は、今後のすべての更新プログラムを管理されたレイアウトから取得することを希望しています。 これを行うためにサポートされている唯一の方法は、目的のバージョンの製品を使用してネットワーク レイアウトを作成し、クライアント コンピューター上で、"_レイアウトの場所から_" ブートストラップを実行することです (例: `\\server\share\vs_enterprise.exe`)。 理想的には、元のクライアントのインストールは、ChannelURI が正しく構成されたネットワーク レイアウトからブートストラップを使用して行われるべきですが、ネットワーク レイアウトの場所から更新されたブートストラップを実行することもできます。 どちらの操作でも、クライアント コンピューター上に特定のレイアウトの場所との接続が組み込まれます。 このシナリオが正しく機能するための唯一の注意点は、レイアウトの `response.json` ファイルの "ChannelURI" が、最初のインストールが行われたときにクライアントのマシンに設定された ChannelURI と同じである必要があることです。 ほとんどの場合、この値は元々インターネットの[リリース チャネル](https://aka.ms/vs/16/release/channel)に設定されていました。 
-
+場合によっては、クライアント コンピューターに既に Web から Visual Studio がインストールされている可能性がありますが、管理者は、今後のすべての更新プログラムを管理されたレイアウトから取得することを希望しています。 これを行うためにサポートされている唯一の方法は、目的のバージョンの製品を使用してネットワーク レイアウトを作成し、クライアント コンピューター上で、"_レイアウトの場所から_" ブートストラップを実行することです (例: `\\server\share\vs_enterprise.exe`)。 理想的には、元のクライアントのインストールは、ChannelURI が正しく構成されたネットワーク レイアウトからブートストラップを使用して行われるべきですが、ネットワーク レイアウトの場所から更新されたブートストラップを実行することもできます。 どちらの操作でも、クライアント コンピューター上に特定のレイアウトの場所との接続が組み込まれます。 このシナリオが正しく機能するための唯一の注意点は、レイアウトの `response.json` ファイルの "ChannelURI" が、最初のインストールが行われたときにクライアントのマシンに設定された ChannelURI と同じである必要があることです。 ほとんどの場合、この値は元々インターネットの[リリース チャネル](https://aka.ms/vs/16/release/channel)に設定されていました。
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Visual Studio IDE の通知を制御する
 
@@ -95,7 +94,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 上述のとおり、Visual Studio はそのインストール元である場所 (ネットワーク共有やインターネットなど) で更新プログラムが利用できないか確認します。 更新プログラムが利用可能になると、Visual Studio では、ユーザーへの通知としてウィンドウの右下隅に通知アイコンが表示されます。
 
@@ -109,7 +108,7 @@ Visual Studio クライアントによって更新プログラムを検索する
 
 Visual Studio 2017 は[プライベート レジストリにレジストリ エントリを保存する](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance)ので、そのレジストリを通常の方法で直接編集することはできません。 ただし、Visual Studio には `vsregedit.exe` ユーティリティが含まれます。これを利用し、Visual Studio 設定を変更できます。 次のコマンドで通知をオフにできます。
 
-```cmd
+```shell
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
 ```
 
@@ -119,8 +118,18 @@ vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterpris
 
 Visual Studio 2019 は[プライベート レジストリにレジストリ エントリを保存する](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance)ので、そのレジストリを通常の方法で直接編集することはできません。 ただし、Visual Studio には `vsregedit.exe` ユーティリティが含まれます。これを利用し、Visual Studio 設定を変更できます。 次のコマンドで通知をオフにできます。
 
-```cmd
+```shell
 vsregedit.exe set "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
+```
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+Visual Studio 2022 は[プライベート レジストリにレジストリ エントリを保存する](tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance)ので、そのレジストリを通常の方法で直接編集することはできません。 ただし、Visual Studio には `vsregedit.exe` ユーティリティが含まれます。これを利用し、Visual Studio 設定を変更できます。 次のコマンドで通知をオフにできます。
+
+```shell
+vsregedit.exe set "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" HKCU ExtensionManager AutomaticallyCheckForUpdates2Override dword 0
 ```
 
 ::: moniker-end

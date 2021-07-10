@@ -1,21 +1,20 @@
 ---
-title: Docker チュートリアル - Docker の概要
+title: 'チュートリアル: Docker と Visual Studio Code の概要'
 description: Visual Studio Code を使用して Docker を操作する方法の基礎について説明した、複数の手順から成るチュートリアルです。
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
-ms.topic: conceptual
+ms.topic: tutorial
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 554badf01122b6c41d89c00b740574d28185e35e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75a51f478e4e58700f6025dd6a87fcc38439ed87
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837971"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222657"
 ---
 # <a name="tutorial-get-started-with-docker"></a>チュートリアル: Docker の概要
 

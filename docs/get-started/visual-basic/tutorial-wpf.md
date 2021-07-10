@@ -1,7 +1,7 @@
 ---
 title: Visual Basic で WPF を使った Hello World アプリ
 description: Windows Presentation Foundation (WPF) UI フレームワークを使って、Visual Studio で単純な Windows デスクトップ .NET アプリを Visual Basic で作成します。
-ms.custom: seodec18, get-started
+ms.custom: vs-acquisition, seodec18, get-started
 ms.date: 04/23/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ ms.author: jmartens
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: f337551c16aa63b606c10492bab9956a92cbe141
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: e757dc25fe094b1ffa745cd43ad251abbc9448a7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295430"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390126"
 ---
 # <a name="tutorial-create-a-simple-application-with-visual-basic"></a>チュートリアル: Visual Basic で単純なアプリケーションを作成する
 
@@ -31,9 +31,15 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
 ::: moniker-end
 
@@ -77,9 +83,9 @@ Visual Studio は HelloWPFApp というプロジェクトとソリューショ�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio 2019 を開きます。
+1. Visual Studio を開きます。
 
 2. **[新しいプロジェクトの作成]** 画面で、"WPF" を検索し、 **[WPF アプリ (.NET Framework)]** を選択して、 **[次へ]** を選択します。
 
@@ -327,6 +333,12 @@ IsChecked="True"
 ::: moniker range="vs-2019"
 
 - [Visual Studio 2019 の新機能](../../ide/whats-new-visual-studio-2019.md)
+- [生産性に関するヒント](../../ide/productivity-features.md)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
 - [生産性に関するヒント](../../ide/productivity-features.md)
 
 ::: moniker-end

@@ -9,26 +9,26 @@ manager: jmartens
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: de86c2021a2abf3cd5346c684199e8f59e2d314e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c12c8a0979ab081ea2f09faeeccdb5a8a9d2175
+ms.sourcegitcommit: 398b4d4e5ce0f978720f11990db05b209766aedc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99839189"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112016308"
 ---
 # <a name="install-data-science-support-in-visual-studio"></a>Visual Studio でのデータ サイエンス サポートのインストール
 
 Visual Studio のインストーラーを使って選択し、インストールするデータ サイエンスと分析のアプリケーション ワークロードでは、次の言語とそのランタイム ディストリビューションを使用できます。
 
 ::: moniker range="vs-2017"
-- [Python および Anaconda](../python/overview-of-python-tools-for-visual-studio.md)
-- [.NET framework と F#](/dotnet/fsharp/)
-- [R および Microsoft R Client](../rtvs/index.md)
+- [Python と Anaconda](../python/overview-of-python-tools-for-visual-studio.md)
+- [F# と NET Framework](/dotnet/fsharp/)
+- [R と Microsoft R Client](../rtvs/index.md)
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 - [Python](../python/overview-of-python-tools-for-visual-studio.md)
-- [.NET framework と F#](/dotnet/fsharp/)
+- [F# と NET Framework](/dotnet/fsharp/)
 ::: moniker-end
 
 ![Visual Studio インストーラーのデータ サイエンスと分析のアプリケーション ワークロード](media/workload/data-science-workload.png)
@@ -37,8 +37,8 @@ Visual Studio のインストーラーを使って選択し、インストール
 Python と R は、データ サイエンスで使用される主要な 2 つのスクリプト言語です。 いずれの言語も学習が簡単で、パッケージの機能豊富なエコシステムのサポートがあります。 それらのパッケージは、データの取得、クリーンアップ、モデルのトレーニング、展開およびプロットなどの広範囲のシナリオに対応しています。 F# も、さまざまなデータ処理タスクに適した機能第一の強力な .NET 言語です。
 ::: moniker-end
 
-::: moniker range="vs-2019"
-Python は、データ サイエンスで使用される主要なスクリプト言語です。 Python は学習が簡単で、パッケージの機能豊富なエコシステムのサポートがあります。 それらのパッケージは、データの取得、クリーンアップ、モデルのトレーニング、展開およびプロットなどの広範囲のシナリオに対応しています。 F# も、さまざまなデータ処理タスクに適した機能第一の強力な .NET 言語です。 (R 言語については、[Azure Notebooks](https://notebooks.azure.com) を推奨します。)
+::: moniker range=">=vs-2019"
+Python は、データ サイエンスで使用される主要なスクリプト言語です。 Python は学習が簡単で、パッケージの機能豊富なエコシステムのサポートがあります。 それらのパッケージは、データの取得、クリーンアップ、モデルのトレーニング、展開およびプロットなどの広範囲のシナリオに対応しています。 F# も、さまざまなデータ処理タスクに適した機能第一の強力な .NET 言語です。
 ::: moniker-end
 
 <!--Note link on the image because this one is large -->
@@ -48,7 +48,7 @@ Python は、データ サイエンスで使用される主要なスクリプト
 
 ワークロードは、既定で次のオプションをインストールします。これは、Visual Studio インストーラーのワークロードの [概要] セクションで変更できます。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 - F# デスクトップ言語のサポート
 - Python:
   - Python 言語サポート
@@ -80,19 +80,19 @@ SQL Server では、SQL Server 内で直接高度な分析を行うことが可�
 
 データが既にあるところでコードを実行すると、次のような利点があります。
 
-- **データ移動が不要**:データをデータベースからアプリケーションまたはモデルに移動せずに、データベース内でアプリケーションをビルドできます。 この機能により、セキュリティ、コンプライアンス、ガバナンスおよび整合性の障壁が取り除かれ、大量のデータの移動に関係する同様の多数の問題もなくなります。 また、クライアントのマシンのメモリに入りきらないデータセットも使用できます。
+- **データ移動が不要**: データをデータベースからアプリケーションまたはモデルに移動せずに、データベース内でアプリケーションをビルドできます。 この機能により、セキュリティ、コンプライアンス、ガバナンスおよび整合性の障壁が取り除かれ、大量のデータの移動に関係する同様の多数の問題もなくなります。 また、クライアントのマシンのメモリに入りきらないデータセットも使用できます。
 
-- **導入が簡単**:モデルの準備ができたら、T-SQL スクリプトに単純に埋め込むことで、それを本番に導入することができます。 任意の言語で記述された任意の SQL クライアント アプリケーションで、ストアド プロシージャ呼び出しを使用して、モデルおよびインテリジェンスを利用することができます。 特定の言語統合は必要ありません。
+- **導入が簡単**: モデルの準備ができたら、T-SQL スクリプトに単純に埋め込むことで、それを本番に導入することができます。 任意の言語で記述された任意の SQL クライアント アプリケーションで、ストアド プロシージャ呼び出しを使用して、モデルおよびインテリジェンスを利用することができます。 特定の言語統合は必要ありません。
 
-- **エンタープライズ レベルのパフォーマンスとスケール**:メモリ内テーブルと列のストア インデックスなどの SQL Server の高度な機能を、RevoScale パッケージの高性能な拡張性の高い API と共に使用できます。 データを移動する必要がなくなるということは、データが大きくなった場合や、アプリケーションのパフォーマンスを向上させる場合のクライアント メモリの制約を回避できることも意味します。
+- **エンタープライズ レベルのパフォーマンスとスケール**: メモリ内テーブルと列のストア インデックスなどの SQL Server の高度な機能を、RevoScale パッケージの高性能な拡張性の高い API と共に使用できます。 データを移動する必要がなくなるということは、データが大きくなった場合や、アプリケーションのパフォーマンスを向上させる場合のクライアント メモリの制約を回避できることも意味します。
 
-- **拡張性が高い**:SQL Server に任意の最新のオープン ソースのパッケージをインストールし実行して、SQL Server 内の大量のデータにディープ ラーニングおよび AI アプリケーションを構築できます。 SQL Server にパッケージをインストールすることは、ローカル マシンにパッケージをインストールするのと同じくらい簡単です。
+- **拡張性が高い**: SQL Server に任意の最新のオープン ソース パッケージをインストールし実行して、SQL Server 内の大量のデータにディープ ラーニングおよび AI アプリケーションを構築できます。 SQL Server にパッケージをインストールすることは、ローカル マシンにパッケージをインストールするのと同じくらい簡単です。
 
-- **追加コストなしで広範に利用可能**:言語統合は、Express Edition を含む SQL Server 2017 以降のすべてのエディションで利用できます。
+- **追加コストなしで広範に利用可能**: 言語は、Express Edition を含む SQL Server 2017 以降のすべてのエディションに統合できます。
 
 SQL Server への統合のメリットを最大限に得るには、Visual Studio インストーラーで **[SQL Server Data Tools]** オプションを使用して **データ ストレージと処理** ワークロードをインストールします。 後者のオプションにより、SQL IntelliSense、構文の強調表示および展開が可能になります。
 
-![データの保存と処理ワークロード](media/workload/data-storage-workload.png) &nbsp;&nbsp;&nbsp;&nbsp; ![データの保存と処理ワークロード オプション](media/workload/data-storage-workload-options.png)
+![[データの保存と処理] ワークロード](media/workload/data-storage-workload.png) &nbsp;&nbsp;&nbsp;&nbsp; ![データの保存と処理ワークロード オプション](media/workload/data-storage-workload-options.png)
 
 詳細情報
 
@@ -111,4 +111,4 @@ Azure SDK for Python を使用すると、Windows、Mac、Linux で実行され�
 Azure Notebook (現在プレビュー中) を使用すると、クラウドで Microsoft Azure で実行されている Jupyter Notebook に自由にオンライン アクセスできます。 このサービスには、使用を開始できるように Python、R および F# のサンプル ノートブックが含まれています。 [notebooks.azure.com](https://notebooks.azure.com/) にアクセスしてください。
 
 <!--Note link on the image because this one is large -->
-[![入門用の R のサンプルと Azure Notebook のスクリーンショット](media/workload/data-science-workload-notebooks.png)](media/workload/data-science-workload-notebooks.png#lightbox)
+[![入門用の R のサンプルと Azure Notebooks のスクリーンショット](media/workload/data-science-workload-notebooks.png)](media/workload/data-science-workload-notebooks.png#lightbox)

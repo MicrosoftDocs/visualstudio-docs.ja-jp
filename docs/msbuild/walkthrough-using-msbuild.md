@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b214452a2eb7a85b4a9baea5e4b4e80a1a71e63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e3a301c1bd4758ea08f49036fcf8756c8d7e7c26
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933857"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112306450"
 ---
 # <a name="walkthrough-use-msbuild"></a>チュートリアル: MSBuild の使用
 
@@ -38,8 +38,8 @@ MSBuild は、Visual Studio から実行することも、**コマンド ウィ�
 Visual Studio をご利用の場合、既に MSBuild がインストールされています。 Visual Studio のないシステムに MSBuild 15 をインストールするには、[Visual Studio の旧バージョンのダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/) ページに移動し、 **[Visual Studio 2017]** を展開し、 **[ダウンロード]** ボタンを選択します。 Visual Studio サブスクリプションをご利用の場合、サインインして最新版の **Build Tools for Visual Studio 2017** をダウンロードするためのリンクを見つけてください。 Visual Studio サブスクリプションをお持ちでない場合でも、最新版のビルド ツールをインストールできます。 このページで、バージョン セレクターを使用して 2019 版のページに切り替え、インストール手順に従います。
 ::: moniker-end
 
-::: moniker range="vs-2019"
-Visual Studio をご利用の場合、既に MSBuild がインストールされています。 Visual Studio 2019 の場合、Visual Studio のインストール フォルダーの下にインストールされます。 Windows 10 での一般的な既定のインストールの場合、*MSBuild\Current\Bin* のインストール フォルダーの下に MSBuild.exe が置かれます。
+::: moniker range=">=vs-2019"
+Visual Studio をご利用の場合、既に MSBuild がインストールされています。 Visual Studio 2019 以降の場合、Visual Studio のインストール フォルダーの下にインストールされます。 Windows 10 での一般的な既定のインストールの場合、*MSBuild\Current\Bin* のインストール フォルダーの下に MSBuild.exe が置かれます。
 
 Visual Studio のないシステムに MSBuild をインストールするには、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/) ページに移動し、下にスクロールして **[すべてのダウンロード]** を表示し、 **[Tools for Visual Studio 2019]** を展開します。 MSBuild が含まれる **Build Tools for Visual Studio 2019** をインストールするか、[.NET Core SDK](/dotnet/core/sdk#acquiring-the-net-core-sdk) をインストールします。
 

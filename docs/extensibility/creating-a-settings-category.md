@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1e3ef6dbfc58c67ce8e4dd7ff26634e4dbce2218
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fe46ea835a119978fd3decd26949db3d59944e5e
+ms.sourcegitcommit: 63cb90e8cea112aa2ce8741101b309dbc709e393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089343"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110687619"
 ---
 # <a name="create-a-settings-category"></a>設定カテゴリの作成
 
@@ -28,7 +28,7 @@ ms.locfileid: "105089343"
 このチュートリアルを開始するには、まず、「[オプション ページを作成する](../extensibility/creating-an-options-page.md)」の最初のセクションを完了する必要があります。 結果のオプションのプロパティ グリッドを使用すると、カテゴリ内のプロパティを確認および変更できます。 プロパティ カテゴリを設定ファイルに保存した後、ファイルを調べて、プロパティ値がどのように格納されているかを確認します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- Visual Studio 2015 以降では、ダウンロード センターからの Visual Studio SDK のインストールは行いません。 これは、Visual Studio セットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
+ Visual Studio 2015 以降では、ダウンロード センターから Visual Studio SDK をインストールすることはしません。 これは、Visual Studio のセットアップにオプション機能として含まれています。 VS SDK は、後でインストールすることもできます。 詳細については、「[Visual Studio SDK のインストール](../extensibility/installing-the-visual-studio-sdk.md)」を参照してください。
 
 ## <a name="create-a-settings-category"></a>設定カテゴリの作成
  このセクションでは、カスタム設定ポイントを使用して、設定カテゴリの値を保存および復元します。
@@ -118,7 +118,9 @@ ms.locfileid: "105089343"
 
 9. 新しい設定ファイルに「*MySettings.vssettings*」という名前を付け、適切なディレクトリに保存します。 **[完了]** をクリックします。
 
-     **[エクスポートの完了]** ページに、設定が正常にエクスポートされたことが表示されます。
+   `.vssettings` ファイルは Visual Studio 設定ファイルです。 ファイルのスキーマが開いています。 最も一般的には、スキーマは XML 構造に従います。その構造では、各カテゴリはタグであり、それ自体にサブカテゴリ タグを含めることができます。 これらのサブカテゴリ タグには、プロパティ値タグを含めることができます。 ほとんどのパッケージでは共通の構造を使用されますが、Visual Studio 内のパッケージはすべて、選択したスキーマを使用して任意の XML をファイルに提供できます。
+
+   **[エクスポートの完了]** ページに、設定が正常にエクスポートされたことが表示されます。
 
 10. **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。 *MySettings.vssettings* を検索して開きます。
 

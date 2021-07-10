@@ -4,6 +4,7 @@ description: プロジェクトとソリューションの違いと、Visual Stu
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom:
+- vs-acquisition
 - get-started
 - SEO-VS-2020
 ms.topic: tutorial
@@ -14,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: fe3eaf3c5efcc8341613e9f223d22410111a548f
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 1d06b53afc811517ac86be9bdc3e86cf7593bbaf
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682593"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390035"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>プロジェクトとソリューションの概要
 
@@ -34,6 +35,12 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 ::: moniker range="vs-2019"
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
 ::: moniker-end
 
@@ -222,7 +229,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. **QuickTest** プロジェクトで **[依存関係]** ノードを選択し、右クリックまたはコンテキスト メニューから、 **[プロジェクト参照の追加]** を選択します。
 
@@ -292,7 +299,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 単体テストが動作していることを確認する場合は、メニュー バーから **[テスト]**  >  **[すべてのテストを実行する]** の順に選択します。 **テスト エクスプローラー** と呼ばれるウィンドウが開くので、**TestGetCurrentDate** テストが成功しているか確認する必要があります。
 

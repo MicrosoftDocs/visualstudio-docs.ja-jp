@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a480c539fc178e5ae672427fe32e9fd34728dc79
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d72b69b2c80c4e20b5a4dadae18764a138210295
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99919156"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222709"
 ---
 # <a name="msbuild-conditions"></a>MSBuild の条件
 
@@ -35,7 +35,7 @@ MSBuild では、`Condition` 属性が許可されている場所ならどこで
 |---------------|-----------------|
 |'`stringA`' == '`stringB`'|`stringA` が `stringB` に等しい場合、`true` と評価されます。<br /><br /> 次に例を示します。<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> 単純な英数字文字列またはブール値には、単一引用符は必要ありません。 ただし、空の値には単一引用符が必要です。 この確認では、大文字と小文字が区別されません。|
 |'`stringA`' != '`stringB`'|`stringA` が `stringB` と等しくない場合、`true` と評価されます。<br /><br /> 次に例を示します。<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> 単純な英数字文字列またはブール値には、単一引用符は必要ありません。 ただし、空の値には単一引用符が必要です。 この確認では、大文字と小文字が区別されません。|
-|\<, >, \<=, >=|オペランドの数値を評価します。 関係の評価が true の場合、`true` を返します。 オペランドは、10 進数または 16 進数として評価される必要があります。 16 進数は、"0 x" で始まる必要があります。 **注:** XML では、文字 `<` および `>` をエスケープする必要があります。 シンボル `<` は、`&lt;` として表されます。 シンボル `>` は、`&gt;` として表されます。|
+|\<, >, \<=, >=|オペランドの数値を評価します。 関係の評価が true の場合、`true` を返します。 オペランドは、10 進数または 16 進数、またはドット付きの 4 つの部分のバージョンに評価される必要があります。 16 進数は、"0 x" で始まる必要があります。 **注:** XML では、文字 `<` および `>` をエスケープする必要があります。 シンボル `<` は、`&lt;` として表されます。 シンボル `>` は、`&gt;` として表されます。|
 |Exists('`stringA`')|`stringA` という名前のファイルまたはフォルダーが存在する場合、`true` と評価されます。<br /><br /> 次に例を示します。<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> 単純な英数字文字列またはブール値には、単一引用符は必要ありません。 ただし、空の値には単一引用符が必要です。|
 |HasTrailingSlash('`stringA`')|指定した文字列の末尾にバックスラッシュ (\\) 文字かスラッシュ (/) 文字のいずれかが含まれる場合、`true` と評価されます。<br /><br /> 次に例を示します。<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> 単純な英数字文字列またはブール値には、単一引用符は必要ありません。 ただし、空の値には単一引用符が必要です。|
 |!|オペランドが `false` と評価される場合、`true` と評価されます。|
@@ -65,6 +65,15 @@ MSBuild プロジェクト ファイルには、真のブール型は存在し�
 ブール値のロジックは条件のコンテキストでのみ評価されるので、`<Prop2>'$(Prop1)' == 'true'</Prop>` などのプロパティ設定は、ブール値として評価されるのではなく、文字列として表されます (変数の展開後)。  
 
 ブール値として使用する文字列プロパティを操作しやすくするために、MSBuild にはいくつかの特別な処理規則が実装されています。 ブール型リテラルは許容されます。そのため、`Condition="true"` や `Condition="false"` は期待どおりに動作します。 MSBuild には、ブール型の否定演算子をサポートする特殊な規則も含まれています。 `$(Prop)` が 'true' の場合、`!$(Prop)` は `!true` に展開され、想定どおり `false` と等価になります。
+
+## <a name="comparing-versions"></a>バージョンの比較
+
+`<`、`>`、`<=` および `>=` の関係演算子は、<xref:System.Version?displayProperty=fullName> が解析するバージョンをサポートするので、4 つの数値部分を持つバージョンを相互に比較できます。 たとえば、`'1.2.3.4' < '1.10.0.0'` は `true` です。
+
+> [!CAUTION]
+> `System.Version` の比較では、1 つのまたは両方のバージョンで 4 つの部分すべてが指定されていない場合に、驚くべき結果を生成する場合があります。 たとえば、バージョン 1.1 はバージョン 1.1.0 より古くなります。
+
+MSBuild には、セマンティック バージョン (semver) と互換性のある、規則セットが異なる、[バージョンを比較するプロパティ関数](property-functions.md#msbuild-version-comparison-functions)があります。
 
 ## <a name="see-also"></a>関連項目
 

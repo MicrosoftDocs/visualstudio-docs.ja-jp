@@ -2,7 +2,7 @@
 title: 変更ログ (Visual Studio Tools for Unity、Windows) | Microsoft Docs
 description: Visual Studio Tools for Unity、Windows の変更ログを確認します。 バージョン 1.0.0.0 から 4.7.0.0 以降にかけて行われた変更を確認します。
 ms.custom: ''
-ms.date: 3/1/2021
+ms.date: 6/2/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
 ms.topic: conceptual
@@ -12,16 +12,71 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: a03d0fc896fcbc971bc62cd9391c4f38d0aad06c
-ms.sourcegitcommit: 3e1ff87fba290f9e60fb4049d011bb8661255d58
+ms.openlocfilehash: 2ff13b017ffe0d310ddfd1b302c6436e9d708a36
+ms.sourcegitcommit: f430d014f912aa7874e1db65026dc72688b973e4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107879383"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111448312"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>変更ログ (Visual Studio Tools for Unity、Windows)
 
 Visual Studio Tools for Unity の変更ログです。
+
+## <a name="41020"></a>4.10.2.0
+リリース日: 2021 年 5 月 25 日
+
+### <a name="new-features"></a>新機能
+
+- **統合:**
+
+  - [`UNT0024`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0024.md) 診断が追加されました。 ベクトル計算よりもスカラー計算を優先します。
+
+- **評価:**
+
+  - 移植可能な pdb シンボルを使用し、表示されるローカルを適切にフィルター処理するサポートが追加されました。
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - アセット参照検索の安定性を修正しました。
+
+  - 最近の Unity バージョンのプレーヤーのアナウンス解析を修正しました。
+
+## <a name="41010"></a>4.10.1.0
+リリース日: 2021 年 5 月 11 日
+
+### <a name="bug-fixes"></a>バグ修正
+
+- **統合:**
+
+  - [`UNT0008`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0008.md) クイック修正の安定性問題を修正しました。
+
+  - スレッドのパフォーマンス問題を修正しました。
+
+## <a name="41000"></a>4.10.0.0
+リリース日: 2021 年 4 月 13 日
+
+### <a name="new-features"></a>新機能
+
+- **統合:**
+
+  - [`UNT0019`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0019.md) 診断が追加されました。 `GameObject.gameObject` の不要な間接呼び出し。
+
+  - [`UNT0020`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0020.md) 診断が追加されました。 非静的メソッドで使用される `MenuItem` 属性。
+
+  - [`UNT0021`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0021.md) 診断が追加されました。 Unity メッセージは保護する必要があります (オプトイン)。
+
+  - [`UNT0022`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0022.md) 診断が追加されました。 位置と回転を設定する非効率的なメソッド。
+
+  - [`UNT0023`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0023.md) 診断が追加されました。 Unity オブジェクトの合体代入。
+
+  - `IDE0074` 用の [`USP0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0017.md) サプレッサーが追加されました。 Unity オブジェクトでは、合体代入を使用しないでください。
+
+  - Unity をターゲットにし、フレーバーのない C# プロジェクトの検出を追加しました。
+
+  - CodeLens で Unity アセット参照検索を追加しました。
 
 ## <a name="4910"></a>4.9.1.0
 リリース日: 2021 年 3 月 2 日

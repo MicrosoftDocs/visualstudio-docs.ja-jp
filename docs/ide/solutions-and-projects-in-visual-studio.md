@@ -1,18 +1,15 @@
 ---
-title: ソリューションとプロジェクトについて学習する
+title: Visual Studio のソリューションおよびプロジェクト
 description: Visual Studio のプロジェクトとソリューションの概要、テンプレートから新しいプロジェクトを作成する方法、ソリューション エクスプローラーでプロジェクトを表示および管理する方法について説明します。
 ms.custom: SEO-VS-2020, contperf-fy21q2
 ms.date: 12/31/2020
 ms.topic: conceptual
 f1_keywords:
-- vs.addnewitem
-- vs.addnewsolutionitem
 - vs.openproject
 - vs.addexistingitem
 - vs.addexistingsolutionitem
 - vs.environment.projects
 - vs.environment.solutions
-- VS.SolutionExplorer
 - VS.SolutionExplorer.Solutions
 helpviewer_keywords:
 - solutions [Visual Studio]
@@ -22,16 +19,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 473c3ca0e4a9998d6a320e384bf39b4b5e037085
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0a186c63cf695184b74780eeb6ab16b85c8aef5e
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99878501"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924969"
 ---
-# <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
+# <a name="what-are-solutions-and-projects-in-visual-studio"></a>Visual Studio のソリューションおよびプロジェクト
 
-このページでは、Visual Studio での "*プロジェクト*" と "*ソリューション*" の概念について説明します。 また、ソリューション エクスプローラー ツール ウィンドウ、および新しいプロジェクトの作成方法についても簡単に説明します。
+この記事では、Visual Studio の "*プロジェクト*" と "*ソリューション*" について説明します。 また、ソリューション エクスプローラー ツール ウィンドウ、および新しいプロジェクトの作成方法についても簡単に説明します。
 
 > [!NOTE]
 > このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、[Visual Studio for Mac のプロジェクトおよびソリューション](/visualstudio/mac/projects-and-solutions)に関するページを参照してください。
@@ -92,9 +89,9 @@ Visual Studio では、ソリューションの設定を格納するために、
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-![Visual Studio 2019 での 2 つのプロジェクトを含むソリューション エクスプローラーのスクリーンショット。](../ide/media/solution-explorer.png)
+![Visual Studio での 2 つのプロジェクトを含むソリューション エクスプローラーのスクリーンショット。](../ide/media/solution-explorer.png)
 
 **ソリューション エクスプローラー** の上部にあるツール バーには、ソリューション ビューからフォルダー ビューへの切り替え、保留中の変更のフィルター処理、すべてのファイルの表示、すべてのノードの表示、[プロパティ](managing-project-and-solution-properties.md) ページの表示、[コード エディター](writing-code-in-the-code-and-text-editor.md)でのコードのプレビューなどを行うためのボタンがあります。
 

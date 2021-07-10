@@ -1,8 +1,8 @@
 ---
-title: コード マップ
+title: コード マップで依存関係を視覚化する
 description: コード マップを使用して、コードがどのように整合するかをファイルやコード行に目を通さずに確認する方法について説明します。
 ms.custom: SEO-VS-2020
-ms.date: 05/16/2018
+ms.date: 05/16/2021
 ms.topic: how-to
 f1_keywords:
 - vs.progression.codemap
@@ -13,28 +13,27 @@ helpviewer_keywords:
 - code visualization [Visual Studio]
 - dependencies, visualizing
 - dependency graphs
-author: JoshuaPartlow
-ms.author: joshuapa
+author: mgoertz-msft
+ms.author: mgoertz
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 9723fd44aedf4950b99a49b62d421230b43d55fc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d33e3d882d25045802f2c015c88b87b970d9d04e
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99946528"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390438"
 ---
 # <a name="map-dependencies-with-code-maps"></a>コード マップを使用して依存関係をマップする
 
-コード マップを作成すると、コード全体の依存関係を視覚化できます。 コード マップは、コードがどのように整合するかをファイルやコード行に目を通さずに確認する場合に役立ちます。
+この記事では、コード マップを使用してコード全体の依存関係を視覚化する方法について学習します。
+
+## <a name="what-are-code-maps"></a>コード マップとは何か
+
+Visual Studio では、コード マップを利用すると、ファイルやコード行を読まなくても、プログラム コードの適性を簡単に確認できます。  こうしたマップを利用することで、構造、依存関係、更新方法など、コード内の編成と関係を確認し、提案された変更のコストを見積もることができます。
 
 ![Visual Studio でコード マップを使用して依存関係を表示する](../modeling/media/codemapsmainintro.png)
-
-コード マップの作成および編集には、Visual Studio Enterprise エディションが必要です。 Visual Studio Community および Professional エディションでは、Enterprise エディションで生成されたダイアグラムを開くことはできますが、編集することはできません。
-
-> [!NOTE]
-> Visual Studio Enterprise で生成されたマップを、Visual Studio Professional を使用する他のユーザーと 共有する前に、マップ上のすべての項目 (非表示の項目、展開されたグループ、グループ間リンクなど) が表示されていることを確認してください。
 
 次の言語でコードの依存関係をマップできます。
 
@@ -47,21 +46,14 @@ ms.locfileid: "99946528"
 > [!NOTE]
 > C# または Visual Basic 以外のプロジェクトの場合、コード マップを開始したり、既存のコード マップに項目を追加したりするためのオプションは少なくなります。 たとえば、C++ プロジェクトのテキスト エディター内のオブジェクトを右クリックすることも、コード マップにそのオブジェクト追加することもできません。 ただし、**ソリューション エクスプローラー**、**クラス ビュー**、および **オブジェクト ブラウザー** から、個々のコード要素またはファイルをドラッグ アンド ドロップできます。
 
-## <a name="install-code-map-and-live-dependency-validation"></a>コード マップとライブ依存関係検証をインストールする
+## <a name="prerequisites"></a>前提条件
 
-Visual Studio でコード マップを作成するには、最初に **コード マップ** と **ライブ依存関係検証** の各コンポーネントをインストールします。
+Visual Studio でコード マップを作成するには、最初に [**コード マップ** と **ライブ依存関係検証** の各コンポーネントをインストールします](install-architecture-tools.md)。
 
-1. **Visual Studio インストーラー** を開きます。 これは、Windows の [スタート] メニューから開くことも、Visual Studio 内で **[ツール]**  >  **[ツールと機能の取得]** の順に選択して開くこともできます。
+コード マップの作成および編集には、**Visual Studio Enterprise エディション** が必要です。 ただし、Visual Studio Community および Professional エディションでは、Enterprise エディションで生成されたダイアグラムを開くことはできますが、編集することはできません。
 
-1. **[個々のコンポーネント]** タブを選択します。
-
-1. **[コード ツール]** セクションまで下にスクロールして、 **[コード マップ]** と **[ライブ依存関係検証]** を選択します。
-
-   ![Visual Studio インストーラーでのコード マップとライブ依存関係検証のコンポーネント](media/modeling-components.png)
-
-1. **[変更]** を選択します。
-
-   **コード マップ** と **ライブ依存関係検証** の各コンポーネントのインストールが開始します。 Visual Studio を閉じるように求められる場合があります。
+> [!NOTE]
+> Visual Studio Enterprise で生成されたマップを、Visual Studio Professional を使用する他のユーザーと 共有する前に、マップ上のすべての項目 (非表示の項目、展開されたグループ、グループ間リンクなど) が表示されていることを確認してください。
 
 ## <a name="add-a-code-map"></a>コード マップを追加する
 
@@ -81,6 +73,11 @@ Visual Studio でコード マップを作成するには、最初に **コー�
    空のマップが、現在のソリューションの **[ソリューション項目]** フォルダーに表示されます。
 
 同様に、ソリューションに追加せずに新しいコード マップ ファイルを作成するには、 **[アーキテクチャ]**  >  **[新しいコード マップ]** または **[ファイル]**  >  **[新規作成]**  >  **[ファイル]** の順に選択します。
+
+詳細情報:
+- [コード マップの共有](share-code-maps.md)
+- [C++ のコード マップの作成](code-maps-for-cpp.md)
+- [コード マップ パフォーマンスの改善](code-maps-performance.md)
 
 ## <a name="generate-a-code-map-for-your-solution"></a>ソリューションのコード マップを生成する
 
@@ -154,7 +151,7 @@ Visual Studio でコード マップを作成するには、最初に **コー�
 - [DGML ファイルを編集してコード マップをカスタマイズする](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 - [アナライザーを実行](../modeling/find-potential-problems-using-code-map-analyzers.md)してコード内の潜在的な問題を検索する
 
-## <a name="view-specific-dependencies-in-a-code-map"></a>特定の依存関係をコード マップに表示する
+## <a name="view-dependencies"></a>依存関係の表示
 
 保留中の変更が含まれるいくつかのファイルでコード レビューを行うとします。 これらの変更の依存関係を表示するため、これらのファイルからコード マップを作成できます。
 
@@ -166,7 +163,7 @@ Visual Studio でコード マップを作成するには、最初に **コー�
 
 1. **ソリューション エクスプローラー** のツールバーで、 **[コード マップに表示]** ![[選択したノードから新しいグラフを作成] ボタン](../modeling/media/createnewgraphfromselectedbutton.gif) をクリックします。 または、1 つまたは 1 グループの項目のショートカット メニューを開き、 **[コード マップに表示]** をクリックします。
 
-   **ソリューション エクスプローラー**、**クラス ビュー**、または **オブジェクト ブラウザー** から[新規](#add-a-code-map)または既存のコード マップに項目をドラッグすることもできます。 項目の親階層を含めるには、**Ctrl** キーを押したまま項目をドラッグするか、コード マップ ツールバーで **[親を含める]** ボタンを使用して既定のアクションを指定します。 また、Visual Studio の外部 (**Windows エクスプローラー** など) からアセンブリ ファイルをドラッグすることもできます。
+   **ソリューション エクスプローラー**、**クラス ビュー**、または **オブジェクト ブラウザー** から [新規](#add-a-code-map)または既存のコード マップに項目をドラッグすることもできます。 項目の親階層を含めるには、**Ctrl** キーを押したまま項目をドラッグするか、コード マップ ツールバーで **[親を含める]** ボタンを使用して既定のアクションを指定します。 また、Visual Studio の外部 (**Windows エクスプローラー** など) からアセンブリ ファイルをドラッグすることもできます。
 
    > [!NOTE]
    > Windows Phone または Microsoft ストアなどの複数のアプリで共有されるプロジェクトから項目を追加すると、その項目は、現在アクティブなアプリ プロジェクトと共にマップに表示されます。 コンテキストを別のアプリ プロジェクトに変更し、共有プロジェクトからさらに項目を追加した場合、その項目は、新しくアクティブになったアプリ プロジェクトと共に表示されます。 マップ上の項目に実行する操作は、同じコンテキストを共有する項目にのみ適用されます。
@@ -240,6 +237,10 @@ Visual Studio でコード マップを作成するには、最初に **コー�
 
 ## <a name="see-also"></a>関連項目
 
+- [コード マップの共有](share-code-maps.md)
+- [C++ のコード マップの作成](code-maps-for-cpp.md)
+- [コード マップ パフォーマンスの改善](code-maps-performance.md)
+- [ビデオ: Visual Studio 2015 コード マップを使用してコードからのデザインを理解する](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
 - [ビデオ: Visual Studio 2015 コード マップを使用してコードからのデザインを理解する](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/502)
 - [コード マップを使用してアプリケーションをデバッグする](../modeling/use-code-maps-to-debug-your-applications.md)
 - [デバッグを行うときの呼び出し履歴に対するメソッドのマップ](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)

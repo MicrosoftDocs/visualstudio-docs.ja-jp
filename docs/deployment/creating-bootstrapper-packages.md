@@ -22,12 +22,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cbb0db729d39295ee9c608a19302a109980f10
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 007a7f42448ab8026d8acdc262ce5e0dcdd99b28
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912215"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877729"
 ---
 # <a name="create-bootstrapper-packages"></a>ブートストラップ パッケージの作成
 セットアップ プログラムは、Windows インストーラー (*.msi*) ファイルや実行可能プログラムなどの再頒布可能コンポーネントを検出およびインストールするように構成できる汎用的なインストーラーです。 インストーラーはブートストラップとも呼ばれます。 ブートストラップは、コンポーネントのインストールを管理するためのメタデータを指定する、一連の XML マニフェストによってプログラミングされます。  ClickOnce の **[前提条件]** ダイアログ ボックスに表示される各再頒布可能コンポーネント (前提条件) はブートストラップ パッケージです。 ブートストラップ パッケージは、必須コンポーネントのインストール方法を記述するマニフェスト ファイルを含むディレクトリおよびファイルのグループです。
@@ -63,20 +63,17 @@ CustomBootstrapperPackage
 次に、再頒布可能ファイルをブートストラップ フォルダーにコピーします。 詳細については、「[方法: ローカライズされたブートストラップ パッケージを作成する](../deployment/how-to-create-a-localized-bootstrapper-package.md)」を参照してください。
 
 ```
-*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper*
+*\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages*
 ```
 
-または、旧バージョンの Visual Studio の場合
+または
 
 ```
-*\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+*<VS Install Path>\MSBuild\Microsoft\VisualStudio\BootstrapperPackages*
 ```
 
-or
-
-```
-*\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
-```
+>[!NOTE]
+>上の一覧の Visual Studio インストール パスは Visual Studio 2019 Update 7 リリース以降のものです。
 
 ブートストラップ フォルダーの場所は、次のレジストリ キーの **Path** 値からも見つけることができます。
 

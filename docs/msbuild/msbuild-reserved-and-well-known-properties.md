@@ -17,12 +17,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: cbf2aff512b98e7a813134c3b376b6972c8cd4f9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2edfd4b9391beed5c379817c55871759ff02eec
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897739"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112384929"
 ---
 # <a name="msbuild-reserved-and-well-known-properties"></a>MSBuild の予約済みおよび既知のプロパティ
 
@@ -71,7 +71,10 @@ MSBuild には、プロジェクト ファイルに関する情報と MSBuild �
 | `MSBuildThisFileName` | 予約されています。 | `MSBuildThisFileFullPath` のファイル名の部分 (ファイル名拡張子を除く)。 | `ConsoleApp1` |
 | `MSBuildToolsPath` | 予約されています。 | `MSBuildToolsVersion` の値に関連付けられている MSBuild バージョンのインストール パス。<br /><br /> パスに最後の円記号を含めません。<br /><br /> このプロパティはオーバーライドできません。 | `C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin` |
 | `MSBuildToolsVersion` | 予約されています。 | プロジェクトのビルドに使用する MSBuild ツールセットのバージョン。<br /><br /> メモ:MSBuild ツールセットは、アプリケーションのビルドに使用されるタスク、ターゲット、およびツールで構成されています。 ツールには、*csc.exe* や *vbc.exe* などのコンパイラが含まれます。 詳細については、「[ツールセット (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)」と「[標準ツールセット構成とカスタム ツールセット構成](../msbuild/standard-and-custom-toolset-configurations.md)」を参照してください。 | `Current` |
-| `MSBuildVersion` | 予約されています。 | プロジェクトのビルドに使用される MSBuild のバージョン。 <br /><br/> このプロパティはオーバーライドできません。オーバーライドすると、エラー メッセージ `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` が返されます。 | 16.7.0 |
+| `MSBuildVersion` | 予約されています。 | プロジェクトのビルドに使用される MSBuild のバージョン。 <br /><br/> このプロパティはオーバーライドできません。オーバーライドすると、エラー メッセージ `MSB4004 - The 'MSBuildVersion' property is reserved, and can not be modified.` が返されます。 | 16.11.0 |
+| `MSBuildAssemblyVersion` | 予約済み | プロジェクトのビルドに使用される MSBuild アセンブリのバージョン。 | 16.0 |
+| `MSBuildFileVersion` | 予約済み | プロジェクトのビルドに使用される MSBuild アセンブリの 4 パート バージョン。 | 16.11.0.30701 |
+| `MSBuildSemanticVersion` | 予約済み | プロジェクトのビルドに使用される MSBuild アセンブリのフル semver 2.0 バージョン。 | 16.11.0-preview-21302-05+5e37cc992 |
 
 ## <a name="names-that-conflict-with-msbuild-elements"></a>MSBuild の要素と競合する名前
 

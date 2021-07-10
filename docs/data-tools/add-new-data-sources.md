@@ -15,18 +15,18 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: b6e42681d2c25162df22af9711d47b71ba155d67
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a377acba7b8c64503e5e5f821b5f3f833a8d73b2
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867439"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308052"
 ---
 # <a name="add-new-data-sources"></a>新しいデータ ソースの追加
 
-:::moniker range="vs-2019"
+:::moniker range=">=vs-2019"
 > [!NOTE]
-> この記事で説明する機能は、.NET Framework Windows フォームおよび WPF 開発に適用されます。 Visual Studio 2019 (およびそれ以前のバージョン) では、これらの機能は、WPF と Windowsフォームのどちらについても、.NET Core 開発ではサポートされていません。
+> この記事で説明する機能は、.NET Framework Windows フォームおよび WPF 開発に適用されます。 これらの機能は、WPF と Windows フォームのどちらについても、.NET Core 開発ではサポートされていません。
 :::moniker-end
 
 Visual Studio の .NET データ ツールのコンテキストでは、"*データ ソース*" という用語は、データ ストアに接続し、データを .NET アプリケーションで使用できるようにする .NET オブジェクトを指します。 Visual Studio デザイナーでは、データ ソースの出力を使用して、 **[データ ソース]** ウィンドウからデータベース オブジェクトをドラッグ アンド ドロップしたときにデータをフォームにバインドする定型コードを生成できます。 この種のデータ ソースとして、次のものを使用できます。

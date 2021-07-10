@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 04/06/2021
 ms.technology: vs-azure
 ms.topic: reference
-ms.openlocfilehash: ed4b2a0dc1dc7a0520bf8e83ab1968a3815196e0
-ms.sourcegitcommit: e12d6cdaeb37564f05361965db2ec8ad0d4f21ad
+ms.openlocfilehash: b3744640aada798179c86cc60d2c8ce7b02ccfaa
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "108025866"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973480"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose のビルド プロパティ
 
@@ -44,7 +44,7 @@ ms.locfileid: "108025866"
 |DockerComposeProjectPath|csproj または vbproj|docker-compose プロジェクト (dcproj) ファイルの相対パス。 docker-compose.yml ファイルに格納されている関連イメージ ビルド設定を見つける目的で、サービス プロジェクトの公開時にこのプロパティを設定します。|-|
 |DockerComposeProjectsToIgnore|dcproj| プロジェクトがデバッグ中に docker-compose ツールによって無視されるように指定します。 このプロパティは、任意のプロジェクトに使用できます。 ファイル パスは、次の 2 つの方法のどちらかで指定できます。 <br> 1. dcproj を基準として。 たとえば、「 `<DockerComposeProjectsToIgnore>path\to\AngularProject1.csproj</DockerComposeProjectsToIgnore>` 」のように入力します。 <br> 2. 絶対パス。<br> **注**: これらのパスは、区切り文字 `;` で区切る必要があります。|-|
 |DockerComposeUpArguments|dcproj|`docker-compose up` コマンドに渡す追加のパラメーターを指定します。 たとえば、「 `--timeout 500` 」のように入力します。|-|
-|DockerDevelopmentMode| dcproj | ユーザー プロジェクトをコンテナーにビルドするかどうかを制御します。 **Fast** または **Regular** の許可される値によって、Dockerfile で[どのステージがビルドされるか](https://aka.ms/containerfastmode)が制御されます。 デバッグ構成は、既定では Fast モードであり、それ以外の場合は Regular モードです。 | Fast |
+|DockerDevelopmentMode| dcproj | ユーザー プロジェクトをコンテナーにビルドするかどうかを制御します。 **Fast** または **Regular** の許可される値によって、Dockerfile で [どのステージがビルドされるか](https://aka.ms/containerfastmode)が制御されます。 デバッグ構成は、既定では Fast モードであり、それ以外の場合は Regular モードです。 | Fast |
 |DockerLaunchAction| dcproj | F5 または Ctrl + F5 キーで実行する起動アクションを指定します。  指定できる値には、None、LaunchBrowser、LaunchWCFTestClient があります。 | None |
 |DockerLaunchBrowser| dcproj | ブラウザーを起動するかどうかを示します。 DockerLaunchAction が指定されている場合は無視されます。 | False |
 |DockerServiceName| dcproj| DockerLaunchAction または DockerLaunchBrowser が指定されている場合、DockerServiceName では、docker-compose ファイルで参照されているどのサービスが起動されるかを指定します。|-|
@@ -155,5 +155,7 @@ MSBuild プロパティの一般情報については、[MSBuild プロパティ
 [コンテナー ツールのビルド プロパティ](container-msbuild-properties.md)
 
 [コンテナー ツールの起動設定](container-launch-settings.md)
+
+[Visual Studio で Docker Compose の起動プロファイルを管理する](launch-profiles.md)
 
 [MSBuild の予約済みおよび既知のプロパティ](../msbuild/msbuild-reserved-and-well-known-properties.md)

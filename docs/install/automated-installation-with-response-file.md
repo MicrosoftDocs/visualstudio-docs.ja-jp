@@ -9,25 +9,25 @@ helpviewer_keywords:
 - automate
 - installation
 - command-line
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d3fa063d82a9d0ba9f26e326961b1345b47151b8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe1d1a3c5ec13995cb69fff6ba6ec74c7a6c90d9
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868733"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307725"
 ---
-# <a name="how-to-define-settings-in-a-response-file"></a>応答ファイルの設定を定義する方法
+# <a name="automate-installs-by-using-settings-in-a-response-file"></a>応答ファイルの設定を利用し、インストールを自動化する
 
 Visual Studio を展開する管理者は、次の例のように `--in` パラメーターを使用して応答ファイルを指定できます。
 
-```cmd
+```shell
 vs_enterprise.exe --in customInstall.json
 ```
 
@@ -64,7 +64,7 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -119,7 +119,7 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ```json
 {
@@ -156,7 +156,7 @@ Visual Studio セットアップをレイアウト フォルダーから実行�
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 * [Visual Studio のワークロードとコンポーネント ID](workload-and-component-ids.md)
 * [Visual Studio をインストールまたは使用するときのネットワーク関連のエラーのトラブルシューティング](troubleshooting-network-related-errors-in-visual-studio.md)

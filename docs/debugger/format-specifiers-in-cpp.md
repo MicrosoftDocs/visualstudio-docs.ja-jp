@@ -26,12 +26,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3fa99594f42e7e9c3739a8a8d57abf226bc04c
-ms.sourcegitcommit: 66951f064d601b1d7a2253cb9b250380807e12db
+ms.openlocfilehash: 868c02091814fe49ea0224190c7d205e8b67c42b
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103483194"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112042978"
 ---
 # <a name="format-specifiers-for-c-in-the-visual-studio-debugger"></a>Visual Studio デバッガーでの書式指定子 (C++)
 
@@ -104,6 +104,7 @@ int main() {
 |nr|"未加工ビュー" 項目の抑制|
 |nvo|数値に対してのみ "未加工ビュー" 項目を表示する|
 |!|データ型の表示カスタマイズをすべて無視した、未処理の書式。|\<customized representation>|4|
+|ハンドル|win32 ハンドルに関する情報を表示します|0x000000000000009c| スレッド ID など、ハンドルに関する有用な情報を表示します。 |
 
 ::: moniker-end
 

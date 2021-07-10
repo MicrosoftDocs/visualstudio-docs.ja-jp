@@ -6,19 +6,19 @@ ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: 627b0b1260a3ccdd401dbb170f8e2dfffadea2dc
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 92b97cb1091722bdf0caa6e7708e015612c545ad
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389963"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112044704"
 ---
-Visual Studio を使用すると、コンテナー化された ASP.NET Core アプリを簡単にビルド、デバッグ、および実行して、Azure Container Registry (ACR)、Docker Hub、Azure App Service、または独自のコンテナー レジストリに発行することができます。 この記事では、ACR に発行します。
+Visual Studio を使用すると、コンテナー化された ASP.NET Core アプリを簡単にビルド、デバッグ、および実行して、Azure Container Registry、Docker Hub、Azure App Service、または独自のコンテナー レジストリに発行することができます。 この記事では、コンテナー レジストリに発行します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* **Web 開発**、**Azure Tools** ワークロード、かつ/または **.NET Core クロスプラットフォーム開発**ワークロードがインストールされた [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+* **Web 開発**、**Azure Tools** ワークロード、かつ/または **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 * Azure Container Registry に発行する場合、Azure サブスクリプション。 [無料試用版にサインアップします](https://azure.microsoft.com/free/dotnet/)。
 
 ## <a name="installation-and-setup"></a>インストールとセットアップ
@@ -45,12 +45,12 @@ Docker をインストールするには、まず、「[Docker Desktop for Windo
 *Dockerfile* (Docker の最終イメージを作成するためのレシピ) は、プロジェクトで作成されます。 その中に含まれるコマンドの詳細については、「[Dockerfile reference](https://docs.docker.com/engine/reference/builder/)」 (Dockerfile リファレンス) を参照してください。
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/aspnet:2.1 AS base
 WORKDIR /app
 EXPOSE 59518
 EXPOSE 44364
 
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
 WORKDIR /src
 COPY HelloDockerTools/HelloDockerTools.csproj HelloDockerTools/
 RUN dotnet restore HelloDockerTools/HelloDockerTools.csproj
@@ -75,7 +75,7 @@ ENTRYPOINT ["dotnet", "HelloDockerTools.dll"]
 
 ツールバーのデバッグ ドロップダウンから **[Docker]** を選択し、アプリのデバッグを開始します。 証明書の信頼を求めるメッセージが表示される場合があります。続行するには、証明書を信頼することを選びます。
 
-**出力**ウィンドウには、行われているアクションの内容が表示されます。
+**出力** ウィンドウには、行われているアクションの内容が表示されます。
 
 **[ツール]** メニュー、[NuGet パッケージ マネージャー]、 **[パッケージ マネージャー コンソール]** の順に選択して、 **[パッケージ マネージャー コンソール]** (PMC) を開きます。
 
@@ -102,7 +102,7 @@ baf9a678c88d        hellodockertools:dev   "C:\\remote_debugge..."   21 seconds 
 アプリの開発とデバッグのサイクルが完了すると、アプリの実稼働イメージを作成できます。
 
 1. 構成ドロップダウンを **[リリース]** に変更し、アプリを構築します。
-1. **ソリューション エクスプローラー**で対象のプロジェクトを右クリックし、 **[発行]** を選択します。
+1. **ソリューション エクスプローラー** で対象のプロジェクトを右クリックし、 **[発行]** を選択します。
 1. 発行先ダイアログで **[コンテナー レジストリ]** タブを選択します。
 1. **[新しい Azure コンテナー レジストリを作成する]** を選択し、 **[発行]** をクリックします。
 1. **[新しい Azure コンテナー レジストリを作成する]** で、目的の値を入力します。

@@ -5,19 +5,19 @@ ms.date: 02/18/2020
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 140083f1-05bc-4014-949e-fb5802397c7a
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 338d7a19bf613ee2b2432fba6b635cf0c46eb008
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a56d820805fa97f3672480c063ebfcc0fdc96fb6
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868648"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046093"
 ---
 # <a name="known-issues-for-containers"></a>コンテナーの既知の問題
 
@@ -29,7 +29,7 @@ Windows コンテナーに Visual Studio Build Tools をインストールする
 
 ::: moniker range="vs-2017"
 
-* イメージ microsoft/windowsservercore:10.0.14393.1593 に基づいて Visual Studio をコンテナーにインストールできません。 10.0.14393 より前または後の Windows バージョンでタグ付けされたイメージでは動作します。
+* Visual Studio は、mcr.microsoft.com/windows/servercore:10.0.14393.1593 のイメージに基づくコンテナーにはインストールできません。 10.0.14393 より前または後の Windows バージョンでタグ付けされたイメージでは動作します。
 
 * 10.0.14393 以前の Windows SDK バージョンをインストールすることはできません。 一部のパッケージはインストールに失敗し、そのようなパッケージに依存するワークロードは動作しません。
 
@@ -38,7 +38,7 @@ Windows コンテナーに Visual Studio Build Tools をインストールする
 * イメージを構築するときに `-m 2GB` (またはそれ以上) を渡します。 一部のワークロードではインストール時の既定の 1 GB よりも多くのメモリを必要とします。
 * Docker で既定の 20 GB よりも多くのディスクを使用するように構成します。
 * コマンド ラインで `--norestart` を渡します。 現時点では、コンテナー内から Windows コンテナーを再起動しようとすると、ホストに `ERROR_TOO_MANY_OPEN_FILES` が返されます。
-* microsoft/windowsservercore に直接基づくイメージの場合は、.NET Framework が正しくインストールされない可能性があり、インストール エラーは示されていません。 インストールが完了した後、マネージド コードが実行されない可能性があります。 代わりに、イメージを [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 以降に基づくようにします。 たとえば、次のような MSBuild を使用して構築するときにエラーが表示する場合があります。
+* 自分のイメージが mcr.microsoft.com/windows/servercore に直接基づいている場合、.NET Framework が正常にインストールされず、インストール エラーが示されない場合があります。 インストールが完了した後、マネージド コードが実行されない可能性があります。 代わりに、イメージを [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 以降に基づくようにします。 たとえば、次のような MSBuild を使用して構築するときにエラーが表示する場合があります。
 
   > C:\BuildTools\MSBuild\15.0\bin\Roslyn\Microsoft.CSharp.Core.targets(84,5): エラー MSB6003: 指定されたタスク実行可能ファイル "csc.exe" を実行できませんでした。 ファイルまたはアセンブリ 'System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'、またはその依存関係の 1 つが読み込めませんでした。 指定されたファイルが見つかりません。
 

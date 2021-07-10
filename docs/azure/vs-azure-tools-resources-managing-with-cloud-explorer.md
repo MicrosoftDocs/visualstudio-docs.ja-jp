@@ -7,14 +7,28 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 532195bad81fc9162b854493d5aca9bb2fa7f600
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 775045247cda106d31cf1517e727b9dda5142c4f
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843944"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038617"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer で Azure アカウントに関連付けられているリソースを管理する
+
+::: moniker range=">=vs-2022"
+> [!Important]
+> Cloud Explorer は、Visual Studio 2022 では廃止されています。 代わりに、次の代替手段を使用します。
+> - Microsoft から提供されている無料のスタンドアロン アプリの [Microsoft Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer) を使用します。 Windows、macOS、Linux 上で Azure Storage のデータを視覚的に操作することができます。
+> - [Kudu コンソール](https://github.com/projectkudu/kudu/wiki/Kudu-console)は、App Service サーバーとそのファイル システムに直接アクセスするための昇格されたコマンド ライン アクセスを提供します。 これは、重要なデバッグ ツールであると同時に、これでパッケージのインストールなどの CLI 操作を実行できます。
+>
+> 必要に応じて、Azure Portal を使用するか、サーバー エクスプローラーで以前のバージョンの Visual Studio の Azure ノードを引き続き使用します。
+>
+> Visual Studio 2022 の詳細については、[リリース ノート](/visualstudio/releases/2022/release-notes-preview/)を参照してください。
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
 
 Cloud Explorer を使用すると、Azure リソースやリソース グループを表示し、そのプロパティを調べることができます。また、開発者は Visual Studio 内から重要な診断操作を実行できます。
 
@@ -104,3 +118,5 @@ Azure アカウント サブスクリプションで特定の名前のリソー�
   ![Finding resources in Cloud Explorer](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 
 **検索** ボックスに文字を入力すると、その文字に一致するリソースだけがリソース ツリーに表示されます。
+
+::: moniker-end

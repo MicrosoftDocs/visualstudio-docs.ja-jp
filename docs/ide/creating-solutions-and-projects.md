@@ -1,13 +1,12 @@
 ---
-title: ソリューションとプロジェクトの使用
+title: Visual Studio のプロジェクトとソリューションを作成し、使用する
 description: ソリューションとプロジェクトの違いと、Visual Studio でそれらを使用する方法について説明します。
 ms.custom: SEO-VS-2020, contperf-fy21q2
-ms.date: 12/23/2020
+ms.date: 06/14/2021
 ms.topic: how-to
 f1_keywords:
 - vs.openprojectfromweb
 - VS.ToolsOptionsPages.Projects.General
-- SolutionItemsProject
 helpviewer_keywords:
 - solutions [Visual Studio], creating
 - projects [Visual Studio], creating
@@ -16,14 +15,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f702908c60b08ac1eaae5aa1f941a2f56eaf8fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 713d320767bd329cc53b536bdad058a5db592b3f
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956803"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924930"
 ---
-# <a name="work-with-solutions-and-projects"></a>ソリューションとプロジェクトの使用
+# <a name="create-work-with-and-delete-visual-studio-projects-and-solutions"></a>Visual Studio のプロジェクトとソリューションを作成、使用、削除する
+
+この記事では、Visual Studio プロジェクトをゼロから作成して使用し、アプリのビルドに必要な成果物を格納します。  Visual Studio のプロジェクトについては、プロジェクトとソリューションに関する[こちら](solutions-and-projects-in-visual-studio.md)の概要を参照してください。  テンプレートからプロジェクトを簡単に作成する方法については、「[テンプレートからプロジェクトを作成する](create-new-project.md)」を参照してください。
 
 "*プロジェクト*" には、ソース コード ファイル、ビットマップ、アイコン、コンポーネント、サービス参照など、Visual Studio でアプリをビルドするために必要なアイテムが格納されています。 新しいプロジェクトを作成すると、そのプロジェクトを含む *ソリューション* が Visual Studio によって作成されます。 その後、必要に応じて他の新規または既存のプロジェクトをソリューションに追加できます。 ソリューションには、特定のプロジェクトに関連付けられていないファイルを含めることもできます。
 

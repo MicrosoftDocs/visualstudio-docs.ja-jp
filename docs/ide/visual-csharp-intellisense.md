@@ -2,22 +2,22 @@
 title: C# IntelliSense
 description: C# プロジェクトのコーディング中に使用できるいくつかの IntelliSense 機能について説明します。
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/01/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - C#, IntelliSense
 - IntelliSense [C#]
-author: TerryGLee
-ms.author: tglee
+author: mikadumont
+ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7e67c3a00a427a9f3cd6167af494484a02cc3f2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3156b1236a130478d83fe82c8fa462a1144a8e6a
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99862064"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351956"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
@@ -101,6 +101,10 @@ IntelliSense の **using 追加** 操作では、必須の `using` ディレク�
 ![using の追加、クイック アクションの展開イメージ](../ide/media/addusing-quickaction.png)
 
 エラー電球アイコンをクリックし、**[using System.Xml;]** を選択すると using ディレクティブが自動的に追加されます。
+
+### <a name="add-missing-using-directives-on-paste"></a>不足している using ディレクティブを貼り付け時に追加する
+
+IntelliSense では、型をコード ファイルに貼り付けるとき、足りない `using` ディレクティブをコードに自動追加できます。 この機能によって、型をファイルに貼り付けるとき、足りない using ディレクティブを追加する作業を自動化することで時間が節約されます。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C#]** または **[基本]**  >  **[詳細設定]** でこの機能を有効にし、 **[不足している using ディレクティブを貼り付け時に追加する]** を選択します。
 
 ### <a name="remove-and-sort-usings"></a>using の削除と並べ替え
 
