@@ -2,7 +2,7 @@
 title: データを検索する Windows フォームを作成する
 description: データを検索するための Windows フォームを作成する方法の例をお読みください。 Windows フォーム アプリケーション、データ ソース、およびフォームを作成します。 パラメーター化を追加します。 アプリをテストします。
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 06/07/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows Forms, searching data
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - data-storage
-ms.openlocfilehash: eb6e5a1ba304627c08828b6ad7bff7f6accd3980
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ce9d3eeebf42855ad69f02b2d72330190a2b390
+ms.sourcegitcommit: 01a411cd7ae3488b7b979a947bca92fd296a98e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859113"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111761096"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>データを検索する Windows フォームを作成する
 
@@ -45,7 +45,12 @@ ms.locfileid: "99859113"
 
 - フォームにパラメーターを入力し、パラメーター クエリを実行します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+> [!NOTE]
+> この記事の手順は、.NET Framework Windows フォーム プロジェクトにのみ適用され、.NET Core Windows フォーム プロジェクトには適用されません。
+
+## <a name="prerequisites"></a>前提条件
+
+**データ ストレージと処理** ワークロードをインストールしておきます。 [Visual Studio の変更](../install/modify-visual-studio.md)に関するページを参照してください。
 
 このチュートリアルでは SQL Server Express LocalDB と Northwind サンプル データベースを使用します。
 
@@ -65,7 +70,9 @@ ms.locfileid: "99859113"
 
 ## <a name="create-the-windows-forms-application"></a>Windows フォーム アプリケーションを作成する
 
-C# または Visual Basic 用の新しい **Windows フォーム アプリ** プロジェクトを作成します。 プロジェクトに **WindowsSearchForm** という名前を付けます。
+:::moniker range="vs-2017"
+
+C# か Visual Basic の新しい **Windows Forms App (.NET Framework)** プロジェクトを作成します。 プロジェクトに **WindowsSearchForm** という名前を付けます。
 
 ## <a name="create-the-data-source"></a>データ ソースを作成する
 
@@ -93,13 +100,49 @@ C# または Visual Basic 用の新しい **Windows フォーム アプリ** プ
 
      プロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウに **Customers** テーブルが表示されます。
 
+:::moniker-end
+
+:::moniker range=">=vs-2019"
+
+C# か Visual Basic の新しい **Windows Forms App (.NET Framework)** プロジェクトを作成します。 プロジェクトに **WindowsSearchForm** という名前を付けます。
+
+## <a name="create-the-data-source"></a>データ ソースを作成する
+
+この手順では、**データ ソース構成** ウィザードを使用して、データベースからデータ ソースを作成します。
+
+1. **[データ ソース]** ウィンドウを開くには、クイック検索を使用し (**Ctrl**+**Q**)、**データ ソース** を探します。
+
+1. **[データ ソース]** ウィンドウで、**[新しいデータ ソースの追加]** をクリックして **データ ソース構成** ウィザードを起動します。
+
+1. **[データソースの種類を選択]** ページで、 **[データベース]** をクリックし、 **[次へ]** をクリックします。
+
+1. **[データベース モデルの選択]** 画面で **[データセット]** を選択し、 **[次へ]** をクリックします。
+
+1. **[データ接続の選択]** ページで、次のいずれかの操作を行います。
+
+    - Northwind サンプル データベースへのデータ接続がドロップダウン リストに表示されている場合は選択します。
+
+    - **[新しい接続]** を選択して **[接続の追加] または [接続の変更]** ダイアログ ボックスを表示します。
+
+1. **[アプリケーション構成ファイルに接続文字列を保存]** ページで、**[次へ]** をクリックします。
+
+1. **[データベース オブジェクトの選択]** ページで、**[テーブル]** ノードを展開します。
+
+1. **Customers** テーブルを選択し、**[完了]** をクリックします。
+
+     プロジェクトに **NorthwindDataSet** が追加され、**[データ ソース]** ウィンドウに **Customers** テーブルが表示されます。
+
+:::moniker-end
+
 ## <a name="create-the-form"></a>フォームを作成する
 
 **[データ ソース]** ウィンドウからフォームに項目をドラッグして、データ バインド コントロールを作成します。
 
+1. Windows フォーム デザイナーでフォーカスがアクティブになっており、 **[データ ソース]** ウィンドウが開いており、ピン留めされていることを確認します。
+
 1. **[データ ソース]** ウィンドウの **[Customers]** ノードを展開します。
 
-2. **[Customers]** ノードを **[データ ソース]** ウィンドウからフォームにドラッグします。
+1. **[Customers]** ノードを **[データ ソース]** ウィンドウからフォームにドラッグします。
 
      <xref:System.Windows.Forms.DataGridView> と、レコード間を移動するためのツール ストリップ (<xref:System.Windows.Forms.BindingNavigator>) がフォーム上に表示されます。 [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md)、CustomersTableAdapter、<xref:System.Windows.Forms.BindingSource>、<xref:System.Windows.Forms.BindingNavigator> がコンポーネント トレイに表示されます。
 
@@ -107,7 +150,7 @@ C# または Visual Basic 用の新しい **Windows フォーム アプリ** プ
 
 **[検索条件ビルダー]** ダイアログ ボックスを使用して、元のクエリに WHERE 句を追加できます。
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールを選択し、**[データ]** メニューの **[クエリの追加]** をクリックします。
+1. フォームのデザイン画面の真下で **[customersTableAdapter]** ボタンを選択し、 **[プロパティ]** ウィンドウで **[クエリの追加]** を選択します。
 
 2. **[検索条件ビルダー]** ダイアログ ボックスの **[新しいクエリ名]** 領域に **FillByCity** と入力します。
 

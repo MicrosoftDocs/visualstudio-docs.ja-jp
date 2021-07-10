@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 38e5f612c6a9b39874c952560627e04c26fafc25
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 349483a672b8240f7ca622638221766d6da4864c
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897979"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308156"
 ---
 # <a name="visual-studio-feedback-options"></a>Visual Studio フィードバック オプション
 
@@ -28,11 +28,11 @@ ms.locfileid: "99897979"
 
 ## <a name="report-a-problem"></a>問題を報告する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-Visual Studio を使用していて問題 &mdash; クラッシュ、パフォーマンスの低下、予期しない動作など &mdash; が発生した場合は、 **[問題を報告する]** ツールを使ってお知らせください。 Visual Studio で、右上隅にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[問題の報告]** の順に選択します。
+Visual Studio を使用していて問題 &mdash; クラッシュ、パフォーマンスの低下、予期しない動作など &mdash; が発生した場合は、**[問題を報告する]** ツールを使ってお知らせください。 Visual Studio で、右上隅にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[問題の報告]** の順に選択します。
 
-![Visual Studio 2019 IDE の [フィードバックの送信] アイコン](./media/vs-2019/send-feedback-icon.png)
+![Visual Studio IDE の [フィードバックの送信] アイコン](./media/vs-2019/send-feedback-icon.png)
 
 次に、Visual Studio で [Developer Community](https://aka.ms/feedback/suggest?space=8) インターフェイスが開かれます。ここにサインインして問題を報告することができます。 詳細については、「[Visual Studio で問題を報告する方法](how-to-report-a-problem-with-visual-studio.md)」を参照してください。
 
@@ -40,7 +40,7 @@ Visual Studio を使用していて問題 &mdash; クラッシュ、パフォー
 
 ::: moniker range="vs-2017"
 
-Visual Studio を使用していて問題 &mdash; クラッシュ、パフォーマンスの低下、予期しない動作など &mdash; が発生した場合は、 **[問題を報告する]** ツールを使ってお知らせください。 Visual Studio で、検索ボックスの横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択します。
+Visual Studio を使用していて問題 &mdash; クラッシュ、パフォーマンスの低下、予期しない動作など &mdash; が発生した場合は、**[問題を報告する]** ツールを使ってお知らせください。 Visual Studio で、検索ボックスの横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択します。
 
 ![Visual Studio 2019 IDE の [フィードバックの送信] アイコン](./media/send-feedback-icon.png)
 
@@ -50,9 +50,9 @@ Visual Studio を使用していて問題 &mdash; クラッシュ、パフォー
 
 ## <a name="suggest-a-feature"></a>機能を提案する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-Visual Studio の品質向上のためのアイデアやご提案をお持ちの場合は、 **[機能の提案]** ツールを使用してお知らせください。 Visual Studio で、右上隅にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[機能の提案]** の順に選択します。
+Visual Studio の品質向上のためのアイデアやご提案をお持ちの場合は、**[機能の提案]** ツールを使用してお知らせください。 Visual Studio で、右上隅にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[機能の提案]** の順に選択します。
 
 次に、Visual Studio で [Developer Community](https://aka.ms/feedback/suggest?space=8) インターフェイスが開かれます。ここにサインインしてアイデアを共有することができます。 詳細については、[Visual Studio 用の機能の提案](suggest-a-feature.md)に関連するページをご覧ください。
 
@@ -60,7 +60,7 @@ Visual Studio の品質向上のためのアイデアやご提案をお持ちの
 
 ::: moniker range="vs-2017"
 
-Visual Studio の品質向上のためのアイデアやご提案をお持ちの場合は、 **[提案の送信]** ツールを使用してお知らせください。 Visual Studio で、検索ボックスの横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[提案の送信]** の順に選択します。
+Visual Studio の品質向上のためのアイデアやご提案をお持ちの場合は、**[提案の送信]** ツールを使用してお知らせください。 Visual Studio で、検索ボックスの横にあるフィードバック アイコンを選択するか、メニュー バーで **[ヘルプ]** 、 **[フィードバックの送信]** 、 **[提案の送信]** の順に選択します。
 
 次に、Visual Studio で [Developer Community](https://aka.ms/feedback/suggest?space=8) ページが開かれます。ここにサインインしてアイデアを共有することができます。 詳細については、[Visual Studio 用の機能の提案](suggest-a-feature.md)に関連するページをご覧ください。
 
@@ -70,7 +70,7 @@ Visual Studio の品質向上のためのアイデアやご提案をお持ちの
 
 ドキュメントの改善でご協力いただける場合、方法が 2 つあります。
 
-* ドキュメントページの右上にある、 **[このページはお役に立ちましたか?]** という応答ツールを使用します。
+* ドキュメントページの右上にある、**[このページはお役に立ちましたか?]** という応答ツールを使用します。
 * [docs.microsoft.com](../index.yml) の Visual Studio ページについてフィードバックをいただける場合、GitHub アカウントをご使用ください。 その場合は、ドキュメントページの下部にある **[次のフィードバックを送信]**  >  **[このページ]** ボタンを選択します。
 
 ## <a name="contact-microsoft-support"></a>Microsoft サポートに問い合わせる
@@ -92,7 +92,7 @@ Microsoft サポート サービスは、当時最新だった価格、条項、
 
 * [MSDN フォーラム](https://social.msdn.microsoft.com/Forums/home)
 * [Reddit](https://www.reddit.com/r/VisualStudio/) の Visual Studio
-* [スタック オーバーフロー](https://stackoverflow.com/search?q=visual+studio+-code)
+* [Stack Overflow](https://stackoverflow.com/search?q=visual+studio+-code)
 
 また、「[コード サンプルを参照](/samples/browse/)」ページで、他の開発者のコードを閲覧したり、ご自分の例を公開したりすることもできます。
 

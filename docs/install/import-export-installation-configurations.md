@@ -4,32 +4,30 @@ titleSuffix: ''
 description: インストール構成を .vsconfig ファイルにエクスポートし、他のユーザーと共有する方法とそれをインポートして複製する方法について説明します。
 ms.date: 05/18/2019
 ms.topic: how-to
-f1_keywords:
-- vs.about
 helpviewer_keywords:
 - import installation configuration
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 043622d08b5389db8bf4cce80450f62c070a0ace
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33ee25da51d5243daa67be53f68c50ede76219b2
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949468"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925229"
 ---
 # <a name="import-or-export-installation-configurations"></a>インストール構成をインポートまたはエクスポートする
 
 インストール構成ファイルを使用し、組織全体で Visual Studio を構成できます。 これを行うには、Visual Studio インストーラーを使用して、ワークロードとコンポーネントの情報を .vsconfig ファイルにエクスポートします。 その後、新規または既存のインストールに構成をインポートしたり、他のユーザーと共有したりすることもできます。
 
-ここではその方法を説明します。
+以下にその方法を示します。
 
 ::: moniker range="vs-2017"
 
@@ -38,21 +36,21 @@ ms.locfileid: "99949468"
 
 ::: moniker-end
 
-## <a name="export-a-configuration"></a>構成のエクスポート
+## <a name="export-a-configuration"></a>構成をエクスポートする
 
 以前にインストールした Visual Studio のインスタンス、または現在インストールしているインスタンスのいずれかからインストール構成ファイルをエクスポートできます。
 
 1. Visual Studio インストーラーを開きます。
 
-1. 製品カードで **[その他]** ボタンを選択し、 **[構成のエクスポート]** を選択します。
+1. 製品カードで **[その他]** ボタンを選択し、**[構成のエクスポート]** を選択します。
 
    ![Visual Studio インストーラーの製品カードから構成をエクスポートする](../install/media/vs-2019/vs-installer-export-config.png)
 
-1. .vsconfig ファイルを保存する場所を参照するか入力して、 **[詳細の確認]** を選択します。
+1. .vsconfig ファイルを保存する場所を参照するか入力して、**[詳細の確認]** を選択します。
 
    ![Visual Studio インストーラーから構成をエクスポートする](../install/media/vs-2019/export-configuration-confirmation.png)
 
-1. 必要なワークロードとコンポーネントがあることを確認してから、 **[エクスポート]** を選択します。
+1. 必要なワークロードとコンポーネントがあることを確認してから、**[エクスポート]** を選択します。
 
 ## <a name="import-a-configuration"></a>構成をインポートする
 
@@ -60,17 +58,17 @@ ms.locfileid: "99949468"
 
 1. Visual Studio インストーラーを開きます。
 
-1. 製品カードで **[その他]** ボタンを選択し、 **[構成のインポート]** を選択します。
+1. 製品カードで **[その他]** ボタンを選択し、**[構成のインポート]** を選択します。
 
-1. インポートする .vsconfig ファイルを見つけて、 **[詳細の確認]** を選択します。
+1. インポートする .vsconfig ファイルを見つけて、**[詳細の確認]** を選択します。
 
-1. 必要なワークロードとコンポーネントがあることを確認してから、 **[閉じる]** を選択します。
+1. 必要なワークロードとコンポーネントがあることを確認してから、**[閉じる]** を選択します。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ## <a name="automatically-install-missing-components"></a>不足しているコンポーネントを自動的にインストールする
 
-**Visual Studio 2019 の新機能**:ソリューションのルート ディレクトリに .vsconfig ファイルを保存してからソリューションを開くと、不足しているコンポーネントが自動的に検出され、それらをインストールするように求められます。
+**Visual Studio 2019 の新機能**: お使いのソリューションのルート ディレクトリに .vsconfig ファイルを保存してからソリューションを開くと、Visual Studio が不足しているコンポーネントを自動的に検出し、それらをインストールするように求めます。
 
 ![ソリューション エクスプローラーで追加のコンポーネントが提案される](../install/media/vs-2019/solution-explorer-config-file.png)
 
@@ -80,9 +78,9 @@ ms.locfileid: "99949468"
 
 1. **[追加]** > **[インストール構成ファイル]** を選択します。
 
-1. .vsconfig ファイルを保存する場所を確認し、 **[詳細の確認]** を選択します。
+1. .vsconfig ファイルを保存する場所を確認し、**[詳細の確認]** を選択します。
 
-1. 必要なワークロードとコンポーネントがあることを確認してから、 **[エクスポート]** を選択します。
+1. 必要なワークロードとコンポーネントがあることを確認してから、**[エクスポート]** を選択します。
 
 ::: moniker-end
 

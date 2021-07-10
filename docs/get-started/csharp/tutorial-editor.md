@@ -1,7 +1,7 @@
 ---
-title: C# 開発者向けの編集の概要
+title: 'チュートリアル: C# 開発者の編集'
 description: この 10 分間の Visual Studio のコード エディターの紹介では、C# でコードを記述、コード内を移動、およびコードを理解する簡単な方法をいくつか説明します。
-ms.custom: seodec18, get-started
+ms.custom: vs-acquisition, get-started
 ms.date: 11/20/2018
 ms.technology: vs-ide-general
 ms.topic: tutorial
@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8724fcb717953f3897bab092eb3895e228e10c60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a6b01e9c26ea816e05a1d2186d904bdb080f098
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99909234"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390256"
 ---
 # <a name="learn-to-use-the-code-editor-with-c"></a>C でコード エディターを使用する方法を学習する\#
 
@@ -32,8 +32,13 @@ ms.locfileid: "99909234"
 
 ::: moniker range="vs-2019"
 
-> [!TIP]
-> Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
 ::: moniker-end
 

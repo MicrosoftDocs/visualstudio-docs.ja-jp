@@ -18,20 +18,20 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: e2ce8bc2c493d59b8a06a64ff69838e828315bf2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cf7fa6c7255e05c465d6c209db5e9581a49aee64
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952656"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112843"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>チュートリアル: IntelliTrace を使用した SharePoint アプリケーションのデバッグ
 
 IntelliTrace を使用すると、SharePoint ソリューション簡単にデバッグできます。 従来のデバッガーでは、現時点のソリューションを示すスナップショットだけを取得できました。 IntelliTrace を使用すると、ソリューション内で過去に発生したイベントと、そのイベントが発生したコンテキストをレビューし、コードに移動できます。
 
- このチュートリアルでは、配置済みアプリケーションからの IntelliTrace データの収集に Microsoft Monitoring Agent を使用して、Visual Studio で SharePoint 2010 プロジェクトまたは SharePoint 2013 プロジェクトをデバッグする方法について説明します。 このデータを分析するには、Visual Studio Enterprise を使用する必要があります。 このプロジェクトには、フィーチャーがアクティブ化されたときに、タスク リストにタスクを、お知らせリストにお知らせを追加するフィーチャー レシーバーが組み込まれます。 フィーチャーが非アクティブ化されると、タスクは完了とマークされ、次のお知らせがお知らせリストに追加されます。 ただし、このプロシージャには、プロジェクトの正常な実行を妨げる論理エラーが含まれています。 IntelliTrace を使用することで、このエラーを見つけて修正できます。
+ このチュートリアルでは、配置済みアプリケーションからの IntelliTrace データの収集に Microsoft Monitoring Agent を使用して、Visual Studio で SharePoint プロジェクトをデバッグする方法について説明します。 このデータを分析するには、Visual Studio Enterprise を使用する必要があります。 このプロジェクトには、フィーチャーがアクティブ化されたときに、タスク リストにタスクを、お知らせリストにお知らせを追加するフィーチャー レシーバーが組み込まれます。 フィーチャーが非アクティブ化されると、タスクは完了とマークされ、次のお知らせがお知らせリストに追加されます。 ただし、このプロシージャには、プロジェクトの正常な実行を妨げる論理エラーが含まれています。 IntelliTrace を使用することで、このエラーを見つけて修正できます。
 
- **対象:** このトピックの情報は、Visual Studio で作成された SharePoint 2010 ソリューションおよび SharePoint 2013 ソリューションに適用されます。
+ **対象:** このトピックの情報は、Visual Studio で作成された SharePoint ソリューションに適用されます。
 
  このチュートリアルでは、次の作業について説明します。
 
@@ -59,7 +59,7 @@ IntelliTrace を使用すると、SharePoint ソリューション簡単にデ�
 
 最初に、フィーチャー レシーバーがある空の SharePoint プロジェクトを作成します。
 
-1. SharePoint 2010 ソリューションまたは SharePoint 2013 ソリューションのプロジェクトを作成し、**IntelliTraceTest** という名前を付けます。
+1. インストールしているバージョンの SharePoint を対象にする SharePoint ソリューション プロジェクトを作成し、「**IntelliTraceTest**」という名前を付けます。
 
      **SharePoint カスタマイズ ウィザード** が表示されます。このウィザードで、プロジェクト用の SharePoint サイトとソリューションの信頼レベルの両方を指定できます。
 

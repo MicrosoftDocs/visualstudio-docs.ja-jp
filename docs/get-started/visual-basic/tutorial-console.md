@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Visual Basic 入門'
 description: Visual Studio で Visual Basic コンソール アプリを作成する方法の詳細な手順を説明します。
-ms.custom: seodec18, get-started
+ms.custom: vs-acquisition,  get-started
 ms.date: 02/10/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 075c84433e5784106bbe1f9c6ac6f58d9613bfdb
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 8d34fef6251da95b6c3ac99430b87d853d4b5ba7
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295495"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390712"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>チュートリアル: Visual Studio の Visual Basic の概要
 
@@ -34,6 +34,12 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 ::: moniker range="vs-2019"
 
 Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
 
 ::: moniker-end
 
@@ -73,12 +79,12 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 > [!NOTE]
 > このチュートリアルの一部のスクリーン ショットではダーク テーマが使用されています。 ダーク テーマを使用していないが、使用したい場合は、その方法について「[Visual Studio IDE とエディターのカスタマイズ](../../ide/quickstart-personalize-the-ide.md)」ページを参照してください。
 
-1. Visual Studio 2019 を開きます。
+1. Visual Studio を開きます。
 
 1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
 
@@ -146,7 +152,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. *[WhatIsYourName]* プロジェクト内で、次の Visual Basic コードを `Sub Main(args As String())` 行と `End Sub` 行の間に入力します。このコードは左かっこのすぐ後に配置します。
 
@@ -208,7 +214,7 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end 
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。 
 

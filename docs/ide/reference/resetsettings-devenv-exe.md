@@ -15,16 +15,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c7a5b8bacaa7d78be0c7b88bba8e20b416a3c076
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e523738ff23b40c80b5df21d90b582d94c59087f
+ms.sourcegitcommit: a8031c1387d2090129ed33e063744f9f31653dcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99957999"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "110724539"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Visual Studio の既定の設定を復元し、Visual Studio IDE を自動的に起動します。 このスイッチで、指定した設定ファイルに準じた設定にリセットすることもできます。
+Visual Studio の既定の設定を復元し、Visual Studio IDE を自動的に起動します。 このスイッチで、指定した設定ファイル (`*.vssettings`) に準じた設定にリセットすることもできます。
 
 既定の設定は、Visual Studio の初回起動時に選択したプロファイルから取得されます。
 
@@ -41,7 +41,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 - *SettingsFile*
 
-  任意。 Visual Studio に適用する設定ファイルの完全なパスとファイル名。
+  任意。 Visual Studio に適用する `.vssettings` ファイルの完全なパスとファイル名。
 
 - *DefaultCollectionSpecifier*
 
@@ -59,7 +59,8 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 ## <a name="remarks"></a>注釈
 
-*SettingsFile* が指定されていない場合、既存の設定を使用して IDE が開きます。
+*SettingsFile* が指定されていない場合、既存の設定を使用して IDE が開きます。 
+
 
 ## <a name="example"></a>例
 
@@ -67,10 +68,14 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 2 つ目の例では、Visual C# の既定のプロファイルを復元します。
 
-```shell
-devenv /resetsettings "%USERPROFILE%\MySettings.vssettings"
+3 つ目の例ではまた、設定の適用後に Visual Studio が閉じられます。 `/Command "File.Exit"` を追加できます。
 
-devenv /resetsettings CSharp
+```shell
+devenv /ResetSettings "%USERPROFILE%\MySettings.vssettings"
+
+devenv /ResetSettings CSharp
+
+devenv /NoSplash /ResetSettings General /Command Exit 
 ```
 
 ## <a name="see-also"></a>関連項目

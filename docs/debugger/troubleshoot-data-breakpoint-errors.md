@@ -2,7 +2,7 @@
 title: データ ブレークポイントを設定できない | Microsoft Docs
 description: '[値が変更されたときに中断] の使用時に発生する "データ ブレークポイントを設定できません" エラーの説明、解決策、および回避策を紹介します。'
 ms.custom: SEO-VS-2020
-ms.date: 12/3/2019
+ms.date: 5/19/2020
 ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unable_to_set_data_breakpoint
@@ -17,25 +17,25 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e90c3d4af8e568f1bb2e6987c66c7fbc0856c57
-ms.sourcegitcommit: 957da60a881469d9001df1f4ba3ef01388109c86
+ms.openlocfilehash: 73e7e02d90e2a89c81b5e690718c95fe7efe0fb3
+ms.sourcegitcommit: 6e27b1238a8aa704b127eac34f4173e9d56690c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98150458"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110231966"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>データ ブレークポイント エラーのトラブルシューティング
 このページでは、[値が変更されたときに中断] の使用時に発生する一般的なエラーを解決する手順を説明します。
 
 ## <a name="diagnosing-unable-to-set-data-breakpoint-errors"></a>"データ ブレークポイントを設定できません" エラーを診断する
 > [!IMPORTANT]
-> マネージド データ ブレークポイントは .NET Core 3.0 以降でサポートされています。 最新バージョンは[ここから](https://dotnet.microsoft.com/download)ダウンロードできます。
+> マネージド データ ブレークポイントは .NET Core 3.0 以降と .NET 5.0.3 以降でサポートされています。 最新バージョンは[ここから](https://dotnet.microsoft.com/download)ダウンロードできます。
 
 次に示すのは、マネージド データ ブレークポイントを使用するときに発生する可能性があるエラーの一覧です。 エラーが発生した理由と、エラーを解決する解決策または回避策について、追加の説明が含まれています。
 
-- "*ターゲット プロセスで使用される .NET のバージョンが、データ ブレークポイントをサポートしていません。データ ブレークポイントには、x86 または x64 で実行される .NET Core 3.0 以降が必要です。* "
+- *"ターゲット プロセスで使用される .NET のバージョンが、データ ブレークポイントをサポートしていません。データ ブレークポイントには、x86 または x64 で実行される .NET Core 3.x または .NET 5.0.3 以降が必要です。"*
 
-  - マネージド データ ブレークポイントがサポートされるのは .NET Core 3.0 以降です。 現在、.NET Framework または .NET Core 3.0 バージョンではサポートされていません。 
+  - マネージド データ ブレークポイントがサポートされるのは .NET Core 3.0 以降です。 現在のところ、.NET Framework、3.0 より下のバージョンの .NET Core、5.0.3 より下のバージョンの .NET ではサポートされていません。 
     
   - **解決策**:これを解決するには、プロジェクトを .NET Core 3.0 にアップグレードします。
 
@@ -69,6 +69,11 @@ ms.locfileid: "98150458"
 
   - データ ブレークポイントは、レガシ以外の C# 式エバリュエーターでしかサポートされません。 
   - **解決策**:レガシ C# 式エバリュエーターを無効にするには、[`Debug -> Options`] に移動し、[`Debugging -> General`] の下の [`"Use the legacy C# and VB expression evaluators"`] をオフにします。
+
+- *"クラス **X** には、それに特有のデータに対するデータ ブレークポイントの使用を妨げるカスタム デバッガー ビューがあります。"*
+  
+  - データ ブレークポイントは、ターゲット プロセス (デバッグされているアプリケーション) で作成されたメモリでのみサポートされます。 データ ブレークポイントが設定されているメモリには、[DebuggerTypeProxy 属性](using-debuggertypeproxy-attribute.md)か、ターゲット プロセスに含まれない他の何かで作成されたオブジェクトによって所有されている可能性があるというフラグが設定されています。
+  - **回避策**: オブジェクトの DebuggerTypeProxy ビューを展開する代わりにオブジェクトの "未加工ビュー" を展開し、データ ブレークポイントを設定します。 この操作により、DebuggerTypeProxy 属性によって作成されたオブジェクトに所有されているメモリ上にデータ ブレークポイントがないことが保証されます。
 
 ## <a name="data-breakpoint-hardware-limitations"></a>データ ブレークポイントのハードウェア制限
 

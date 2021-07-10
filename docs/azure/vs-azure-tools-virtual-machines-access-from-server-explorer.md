@@ -7,14 +7,26 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: a40434845187490ee4f8437f8e15963bddd1998f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f95542c79e6f8cde83866caa082b8e025b069589
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843788"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038578"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>サーバー エクスプローラーから Azure Virtual Machines へのアクセス
+
+::: moniker range=">=vs-2022"
+> [!Important]
+> サーバー エクスプローラーの Azure ノードは、Visual Studio 2022 で廃止されています。 Azure Portal を使用するか、サーバー エクスプローラーで以前のバージョンの Visual Studio の Azure ノードを引き続き使用します。
+>
+> また、Microsoft から無料のスタンドアロン アプリの [Microsoft Azure Storage Explorer](/azure/vs-azure-tools-storage-manage-with-storage-explorer) が提供されています。 Windows、macOS、Linux 上で Azure Storage のデータを視覚的に操作することができます。
+>
+> Visual Studio 2022 の詳細については、[リリース ノート](/visualstudio/releases/2022/release-notes-preview/)を参照してください。
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
 
 Azure でホストされている仮想マシンには、サーバー エクスプローラーでアクセスできます。 まず Azure サブスクリプションにサインインして、ご利用の Mobile Services を表示してください。 サインインするには、サーバー エクスプローラーで Azure ノードのショートカット メニューを開き、 **[Microsoft Azure への接続]** をクリックします。
 
@@ -39,3 +51,5 @@ Azure でホストされている仮想マシンには、サーバー エクス�
    | プライベート ポート |アプリケーションの内部ネットワーク アクセス用ポート。 |
    | Protocol |このエンドポイントのトランスポート レイヤーで使用されるプロトコル (TCP または UDP)。 |
    | パブリック ポート |アプリケーションに外部からアクセスする際に使用するポート。 |
+
+::: moniker-end

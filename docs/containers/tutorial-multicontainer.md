@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-azure
 ms.topic: tutorial
-ms.openlocfilehash: 412156894658cdb2160574e77ea052e4b194d386
-ms.sourcegitcommit: c875360278312457f4d2212f0811466b4def108d
+ms.openlocfilehash: 78af96eaa8f340129b2b445dd92419f84cf91ab1
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107315980"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112307818"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>チュートリアル: Docker Compose を使用して複数コンテナーのアプリを作成する
 
@@ -21,15 +21,25 @@ ms.locfileid: "107315980"
 ## <a name="prerequisites"></a>必須コンポーネント
 
 ::: moniker range="vs-2017"
+
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web 開発**、**Azure ツール** ワークロード、または **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 ::: moniker-end
 
-::: moniker range=">= vs-2019"
+::: moniker range="vs-2019"
+
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * **Web 開発**、**Azure Tools** ワークロード、および/または **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
 * .NET Core 2.2 を使って開発するための [.NET Core 2.2 開発ツール](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 * .NET Core 3.1 を使って開発するための [.NET Core 3 開発ツール](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web 開発**、**Azure Tools** ワークロード、および/または **.NET Core クロスプラットフォーム開発** ワークロードがインストールされた [Visual Studio 2022 プレビュー](https://visualstudio.microsoft.com/vs/preview/vs2022)
+* .NET Core 3.1 を使って開発するための [.NET Core 3 開発ツール](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
+* .NET 5 で開発するための [.NET 5 開発ツール](https://dotnet.microsoft.com/download/dotnet-core/5.0)。
 ::: moniker-end
 
 ## <a name="create-a-web-application-project"></a>Web アプリケーション プロジェクトを作成する
@@ -44,7 +54,7 @@ Visual Studio で、`WebFrontEnd` という名前の **[ASP.NET Core Web アプ�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 ![ASP.NET Core Web アプリ プロジェクトを作成する](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
@@ -61,7 +71,7 @@ Visual Studio で、`WebFrontEnd` という名前の **[ASP.NET Core Web アプ�
 ::: moniker range="vs-2017"
    ![Web API プロジェクト作成のスクリーンショット](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
    ![Web API プロジェクト作成のスクリーンショット](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
 ::: moniker-end
 
@@ -192,6 +202,8 @@ Visual Studio で、`WebFrontEnd` という名前の **[ASP.NET Core Web アプ�
 ## <a name="next-steps"></a>次のステップ
 
 [Azure にコンテナー](/azure/containers)をデプロイするためのオプションを確認します。
+
+デバッグ セッション中に起動するサービスに対する制御を強化するには、Docker Compose 起動プロファイルを使用し、デバッグ時に実行されるサービスを構成する方法を学習してください。 「[Docker Compose の起動プロファイルを管理する](launch-profiles.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
   

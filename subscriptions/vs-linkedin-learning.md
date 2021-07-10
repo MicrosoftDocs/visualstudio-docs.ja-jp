@@ -7,12 +7,12 @@ ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 03/17/2021
 ms.topic: how-to
 description: 一部の Visual Studio サブスクリプションに含まれる LinkedIn Premium サブスクリプションに含まれる LinkedIn Learning 特典について説明します。
-ms.openlocfilehash: dcf242dc09c833b091454ea1863184229e3b71c0
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: c4004bd72b269a2f7ad6ef5904f31bb742e68563
+ms.sourcegitcommit: 62e39ea1bf0ed939376c4375fc180ff7c4c760fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672918"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110660212"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio サブスクリプションの LinkedIn Learning 特典
 
@@ -67,6 +67,9 @@ LinkedIn Premium サブスクリプションと LinkedIn Learning 特典をア�
    > [!div class="mx-imgBorder"]
    > ![LinkedIn Learning: ホーム](_img/vs-linkedin/vs-linkedin-learning-home.png "LinkedIn Premium と LinkedIn Learning をご利用いただきありがとうございます。")
 
+> [!NOTE]
+> このオファーは Visual Studio Dev Essentials メンバーシップには含まれていません。
+
 ## <a name="eligibility"></a>特典を受ける条件
 
 | サブスクリプション レベル                                                 |     チャンネル                                            | 長所                                                          | 更新可能かどうか    |
@@ -75,11 +78,11 @@ LinkedIn Premium サブスクリプションと LinkedIn Learning 特典をア�
 | Visual Studio Enterprise Subscription with GitHub Enterprise   | VL | 6 か月       |  いいえ。  新しいサブスクライバーのみが使用できます          |
 | Visual Studio Professional (Standard) | VL、Azure、リテール                                       | 3 か月                                                            |いいえ。  新しいサブスクライバーのみが使用できます         |
 | Visual Studio Professional Subscription with GitHub Enterprise | VL | 3 か月      | いいえ。  新しいサブスクライバーのみが使用できます         |
-| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用できません                                            |  NA         |
-| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用できません                                              | NA         |
-| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用できません                                                           |NA|
+| Visual Studio Test Professional (標準)                         | VL、リテール                                              | 使用不可                                            |  N/A         |
+| MSDN Platforms (標準)                                          | VL、リテール                                              | 使用不可                                              | N/A         |
+| Visual Studio Enterprise、Visual Studio Professional (月間クラウド) | Azure                                       | 使用不可                                                           |N/A|
 
-<sup>1</sup>  *NFR、NFR Basic、Visual Studio Industry Partner、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services は含まれません。*
+<sup>1</sup>  *除外: Visual Studio Dev Essentials、NFR、NFR Basic、Visual Studio Industry Partner、Microsoft Partner Network (MPN)、FTE、MCT Software & Services Developer、BizSpark、Imagine、Most Valuable Professional (MVP)、Regional Director (RD)、MCT Software & Services。*
 
 > [!NOTE]
 > Microsoft では、クラウド サブスクリプションの Visual Studio Professional 年間サブスクリプションおよび Visual Studio Enterprise 年間サブスクリプションが提供されなくなりました。 サブスクリプションの更新、増減、キャンセルに関する既存のお客様のエクスペリエンスと機能については変更はありません。 新規のお客様は、[https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) に移動し、Visual Studio のさまざまな購入オプションを調べることをお勧めします。

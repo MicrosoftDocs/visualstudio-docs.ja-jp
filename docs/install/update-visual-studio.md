@@ -3,7 +3,7 @@ title: Visual Studio を更新する
 titleSuffix: ''
 description: Visual Studio を最新のリリースに更新する詳細な手順を説明します。
 ms.date: 04/06/2021
-ms.custom: seodec18
+ms.custom: vs-acquisition
 ms.topic: how-to
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - change [Visual Studio]
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ProductUpdates
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 02beb43dede8e38f290ff02febb3b84c53b90f9e
-ms.sourcegitcommit: 56060e3186086541d9016d4185e6f1bf3471e958
+ms.openlocfilehash: 8414d745b63eb0e9145208dca97ce9f117c5cf2c
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "106547506"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387958"
 ---
 # <a name="update-visual-studio-to-the-most-recent-release"></a>Visual Studio を最新リリースに更新する
 
@@ -164,9 +164,9 @@ Visual Studio は、Visual Studio 自体またはいずれかのコンポーネ�
 
 ::: moniker range="vs-2019"
 
-常に最新の機能、修正、改善を利用できるように、Visual Studio 2019 の[最新リリース](/visualstudio/releases/2019/release-notes/)に更新することをお勧めします。
+常に最新の機能、修正、改善を利用できるように、Visual Studio の[最新リリース](/visualstudio/releases/2019/release-notes/)に更新することをお勧めします。
 
-Visual Studio 2019 をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。 現在、別のバージョンの Visual Studio を使用している場合は、[複数バージョンの Visual Studio をインストールする](../install/install-visual-studio-versions-side-by-side.md)か、[以前のバージョンの Visual Studio をアンインストール](../install/uninstall-visual-studio.md)してください。
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。 現在、別のバージョンの Visual Studio を使用している場合は、[複数バージョンの Visual Studio をインストールする](../install/install-visual-studio-versions-side-by-side.md)か、[以前のバージョンの Visual Studio をアンインストール](../install/uninstall-visual-studio.md)してください。
 
 > [!IMPORTANT]
 > Visual Studio をインストール、更新、または変更するには、管理アクセス許可を持つアカウントでログオンする必要があります。 詳細については、「[ユーザー アクセス許可と Visual Studio](../ide/user-permissions-and-visual-studio.md)」を参照してください。
@@ -287,9 +287,133 @@ Visual Studio の更新設定は、いくつかの異なる方法でカスタマ
 
 ::: moniker-end
 
-## <a name="administrator-updates"></a>管理者の更新 
+::: moniker range=">=vs-2022"
 
-ソフトウェア インストールの管理を一元化している組織に属している場合、お使いのコンピューターでの更新をエンタープライズ管理者が Visual Studio に指示できます。 お使いのコンピューターで受け取れる更新プログラムの種類を制御または構成する方法については、「[Configuration Manager を使用して Visual Studio 更新プログラムを展開する](../install/applying-administrator-updates.md#using-configuration-manager-to-deploy-visual-studio-updates)」を参照してください。 
+常に最新の機能、修正、改善を利用できるように、Visual Studio の[最新リリース](/visualstudio/releases/2022/release-notes/)に更新することをお勧めします。
+
+Visual Studio をまだインストールしていない場合は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads) ページに移動し、無料試用版をインストールしてください。 現在、別のバージョンの Visual Studio を使用している場合は、[複数バージョンの Visual Studio をインストールする](../install/install-visual-studio-versions-side-by-side.md)か、[以前のバージョンの Visual Studio をアンインストール](../install/uninstall-visual-studio.md)してください。
+
+> [!IMPORTANT]
+> Visual Studio をインストール、更新、または変更するには、管理アクセス許可を持つアカウントでログオンする必要があります。 詳細については、「[ユーザー アクセス許可と Visual Studio](../ide/user-permissions-and-visual-studio.md)」を参照してください。
+>
+> [!NOTE]
+> このトピックは、Windows 上の Visual Studio に適用されます。 Visual Studio for Mac については、「[Visual Studio for Mac を更新する](/visualstudio/mac/update)」を参照してください。
+
+Visual&nbsp;Studio&nbsp;2022 を更新する方法を次に示します。
+
+## <a name="use-the-visual-studio-installer"></a>Visual Studio インストーラーを使用する
+
+1. コンピューター上の **Visual Studio インストーラー** を見つけます。
+
+   Windows の [スタート] メニューで "installer" を検索できます。
+
+   ![Visual Studio インストーラー](media/vs-2019/visual-studio-installer.png "Visual Studio インストーラーを検索する")
+
+   続行する前に、インストーラーの更新が必要な場合があります。 その場合は、画面の指示に従います。
+
+1. インストーラーで、インストールした Visual Studio のエディションを探します。
+
+   たとえば、以前にインストールした Visual&nbsp;Studio Community&nbsp;2022 に対して更新プログラムが存在する場合は、"**利用可能な更新プログラムがあります**" というメッセージが表示されます。
+
+     ![更新する Visual Studio 2019 のエディションを選択する](media/vs-2019/vs-installer-update-visual-studio-community.png "更新する Visual Studio 2019 のエディションを選択する")
+
+1. **[更新]** を選択して更新プログラムをインストールします。
+
+    ![[更新] ボタンを選択して更新プログラムをインストールする](media/vs-2019/vs-installer-choose-update-visual-studio-community.png "[更新] ボタンを選択して更新プログラムをインストールする")
+
+1. 更新が完了したら、コンピューターの再起動を求められる場合があります。 その場合は、その操作を行い、通常どおり Visual Studio を起動します。
+
+   コンピューターの再起動を求められなかった場合は、**[起動]** を選択してインストーラーから Visual Studio を起動します。
+
+    ![[起動] ボタンを選択して Visual Studio を起動する](media/vs-2019/choose-launch-visual-studio-community.png "[起動] ボタンを選択して Visual Studio を起動する")
+
+## <a name="use-the-ide"></a>IDE を使用する
+
+更新プログラムを確認し、Visual Studio 2022 にあるメニュー バーまたは検索ボックスを使用してインストールできます。
+
+### <a name="open-visual-studio"></a>Visual Studio を開きます
+
+1. Windows の **[スタート]** メニューから、 **[Visual Studio 2022]** を選択します。
+
+    ![Visual Studio 2022 を開きます。](media/vs-2019/vs-installer-visual-studio-2019.png "Windows から Visual Studio 2019 を開く")
+
+1. **[作業の開始]** で、任意のオプションを選択すると、IDE が開きます。
+
+    ![Visual Studio インストーラーを開く](media/vs2019-choose-option-from-get-started.png "Visual Studio インストーラーを開く")
+
+    Visual Studio が開きます。 IDE 内に、**Visual Studio 2022 の更新プログラム** に関するメッセージが表示されます。
+
+    ![IDE 内の "Visual Studio 2019 の更新プログラム" に関するメッセージ](media/vs-2019/update-visual-studio-ide-message.png "IDE 内の &quot;Visual Studio 2019 の更新プログラム&quot; に関するメッセージ")
+
+1. **Visual Studio 2022 の更新プログラム** に関するメッセージで、 **[詳細の表示]** を選択します。
+
+   ![Visual Studio 2019 の更新プログラムに関するメッセージで [詳細の表示] を選択する](media/vs-2019/update-visual-studio-ide-view-details.png "Visual Studio 2019 の更新プログラムに関するメッセージで [詳細の表示] ボタンを選択する")
+
+1. **[更新プログラムがダウンロードされてインストールの準備完了]** ダイアログ ボックスで、**[更新]** を選択します。
+
+     ![[更新プログラムがダウンロードされてインストールの準備完了] ダイアログ ボックスで [更新] ボタンを選択する](media/vs-2019/update-ready-install-visual-studio-community-from-ide.png "[更新プログラムがダウンロードされてインストールの準備完了] ダイアログ ボックスで [更新] ボタンを選択する")
+
+   Visual Studio が更新され、閉じられた後に、再起動されます。
+
+### <a name="in-visual-studio"></a>Visual Studio 内
+
+1. メニュー バーから、**[ヘルプ]** を選択して、**[更新プログラムの確認]** を選択します。
+
+     ![[ヘルプ] メニューから [更新プログラムの確認] を選択する](media/vs-2019/vs-ide-check-updates-help-menu.png "[ヘルプ] メニューから [更新プログラムの確認] を選択する")
+
+    > [!NOTE]
+    > 更新プログラムを確認するには、IDE にある検索ボックスを使用することもできます。 **Ctrl**+**Q** キーを押し、「更新プログラムの確認」と入力して、一致した検索結果を選択します。
+
+1. **[利用可能な更新プログラムがあります]** ダイアログ ボックスで、**[更新]** を選択します。
+
+     ![[利用可能な更新プログラムがあります] ダイアログ ボックスで [更新] ボタンを選択する](media/vs-2019/update-visual-studio-community-from-ide.png "[利用可能な更新プログラムがあります] ダイアログ ボックスで [更新] ボタンを選択する")
+
+   Visual Studio が更新され、閉じられた後に、再起動されます。
+
+## <a name="use-the-notifications-hub"></a>通知ハブを使用する
+
+1. Visual Studio 内に、作業内容を保存します。
+
+1. Visual Studio IDE の右下隅にある通知アイコンを選択して、**[通知]** ハブを開きます。
+
+   ![Visual Studio IDE の通知アイコン](media/vs-2019/notification-bar.png "Visual Studio IDE の通知アイコン")
+
+1. **[通知] ハブ** では、インストールする更新プログラムを選択して、**[詳細表示]** を選択します。
+
+     ![Visual Studio 2019 の通知ハブ](media/vs-2019/notification-hub-update.png "Visual Studio 2019 の通知ハブ")
+
+      > [!TIP]
+      > Visual Studio 2022 のエディションに対する更新プログラムは累積になっているため、常に最新のバージョン番号のものをインストールしてください。
+
+1. **[利用可能な更新プログラムがあります]** ダイアログ ボックスで、**[更新]** を選択します。
+
+   Visual Studio が更新され、閉じられた後に、再起動されます。
+
+## <a name="customize-update-settings"></a>更新設定のカスタマイズ
+
+Visual Studio の更新設定は、いくつかの異なる方法でカスタマイズできます。たとえば、インストール モードの変更や、自動ダウンロードの選択などを行います。
+
+2 つのインストール モードから選択することができます。
+
+* **ダウンロード中にインストールする**
+* **全部ダウンロードしてからインストールする**
+
+また、**[Automatically download updates]\(更新プログラムを自動的にダウンロードする\)** 設定を選択することもできます。これを使うと、コンピューターがアイドル状態のときに更新プログラムがダウンロードされます。
+
+その方法は次のとおりです。
+
+1. メニュー バーで **[ツール]** > **[オプション]** の順に選択します。
+
+2. **[環境]** を展開してから、**[製品の更新プログラム]** を選択します。
+
+    ![Visual Studio での更新設定](media/vs-2019/update-settings-options.png)
+
+3. Visual Studio の更新プログラム用に使用したいインストール モードと自動ダウンロード オプションを選択します。
+::: moniker-end
+
+## <a name="administrator-updates"></a>管理者の更新
+
+ソフトウェア インストールの管理を一元化している組織に属している場合、お使いのコンピューターでの更新をエンタープライズ管理者が Visual Studio に指示できます。 お使いのコンピューターで受け取れる更新プログラムの種類を制御または構成する方法については、「[Configuration Manager を使用して Visual Studio 更新プログラムを展開する](../install/applying-administrator-updates.md#using-configuration-manager-to-deploy-visual-studio-updates)」を参照してください。
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

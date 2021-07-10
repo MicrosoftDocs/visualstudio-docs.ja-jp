@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a3787d5aa21e029ab4900bdd89c88f1cc60f3489
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 10a63b114379f56ca5f253f853a1ff6bdd6c60dc
+ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901346"
+ms.lasthandoff: 06/08/2021
+ms.locfileid: "111588476"
 ---
 # <a name="csc-task"></a>Csc タスク
 
@@ -50,6 +50,7 @@ ms.locfileid: "99901346"
 | `Deterministic` | 省略可能な `Boolean` 型のパラメーターです。<br/><br/> `true` の場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます (入力が同一である場合)。<br/><br/>詳しくは、「[-deterministic (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/deterministic-compiler-option)」をご覧ください。 |
 | `DisabledWarnings` | 省略可能な `String` 型のパラメーターです。<br /><br /> 無効にする警告の一覧を指定します。 詳しくは、「[-nowarn (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/nowarn-compiler-option)」をご覧ください。 |
 | `DocumentationFile` | 省略可能な `String` 型のパラメーターです。<br /><br /> ドキュメント コメントを XML ファイルに出力します。 詳しくは、「[-doc (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)」をご覧ください。 |
+| `EmbedAllSources` | 省略可能な `Boolean` 型のパラメーターです。<br /><br /> すべてのソース ファイルを PDB に埋め込みます。 詳細については、[-embed (C# compiler options)](/dotnet/csharp/language-reference/compiler-options/listed-alphabetically)に関するページを参照してください |
 | `EmitDebugInformation` | 省略可能な `Boolean` 型のパラメーターです。<br /><br /> `true` の場合、このタスクはデバッグ情報を生成し、プログラム データベース (.pdb) ファイルにその情報を追加します。 `false` の場合、このタスクはデバッグ情報を生成しません。 既定値は `false` です。 詳しくは、「[-debug (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option)」をご覧ください。 |
 | `ErrorReport` | 省略可能な `String` 型のパラメーターです。<br /><br /> C# 内部エラーを Microsoft に報告する便利な方法を提供します。 このパラメーターの値には、`prompt`、`send`、または `none` を指定できます。 このパラメーターが `prompt` に設定されている場合、内部コンパイラにエラーが発生すると、プロンプトが表示されます。 このプロンプトで、Microsoft にバグ レポートを電子的に送信できます。 このパラメーターが `send` に設定されている場合、バグ レポートは自動的に送信されます。 このパラメーターが `none` に設定されている場合、コンパイラのテキスト出力でのみエラーが報告されます。 既定値は `none` です。 詳しくは、「[-errorreport (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option)」をご覧ください。 |
 | `FileAlignment` | 省略可能な `Int32` 型のパラメーターです。<br /><br /> 出力ファイル内のセクションのサイズを指定します。 詳しくは、「[-filealign (C# コンパイラ オプション)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option)」をご覧ください。 |

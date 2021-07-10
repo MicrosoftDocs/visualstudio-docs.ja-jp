@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: C# のコードをデバッグする'
 description: Visual Studio デバッガーの機能と、C# アプリケーションでのデバッガーの起動、コードのステップ実行、データの検査を行う方法について説明します。
-ms.custom: debug-experiment, seodec18, get-started
+ms.custom: debug-experiment, vs-acquisition, get-started
 ms.date: 04/23/2020
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 6eac51637b3f3b732f1293337080ef851f34c459
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 8fe0c698ce1263713a758bd98fba49433b3ff511
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101682745"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112390282"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>チュートリアル: Visual Studio を使用した C# のデバッグについて理解する
 
@@ -61,6 +61,12 @@ Visual Studio をまだインストールしていない場合は、[Visual Stud
 
 ::: moniker-end
 
+::: moniker range="vs-2022"
+
+Visual Studio 2022 プレビューをまだインストールしていない場合は、[Visual Studio 2022 プレビューのダウンロード](https://visualstudio.microsoft.com/vs/preview/vs2022) ページに移動し、無料試用版をインストールしてください。
+
+::: moniker-end
+
 Visual Studio は既にあり、ワークロードだけをインストールする必要がある場合は、 **[ツール]**  >  **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 Visual Studio インストーラーが起動します。 **[.NET Core クロスプラットフォームの開発]** ワークロードを選択し、 **[変更]** を選択します。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
@@ -81,9 +87,9 @@ Visual Studio は既にあり、ワークロードだけをインストールす
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio 2019 を開きます。
+1. Visual Studio を開きます。
 
    スタート ウィンドウが開いていない場合は、 **[ファイル]** 、 **[スタート ウィンドウ]** の順に選択します。
 

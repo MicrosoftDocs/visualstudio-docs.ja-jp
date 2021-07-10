@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c37ccb9c6dce1f6b20b8ade317e8135462c65011
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: b10fc1adbb0b4a6e053549749ea90acf3919d0c6
+ms.sourcegitcommit: 674d3fafa7c9e0cb0d1338027ef419a49c028c36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107800875"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "112602193"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio のオフライン インストールを作成する
 
@@ -31,9 +31,9 @@ Visual Studio 2017 はさまざまなネットワークとコンピューター�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-Visual Studio 2019 はさまざまなネットワーク構成およびコンピューター構成で問題なく動作するように設計されています。 [Visual Studio Web インストーラー](https://visualstudio.microsoft.com/downloads)を試すことを推奨していますが (これは最新の修正プログラムおよび機能が使用されるようにする小さなファイルです)、これが不可能な場合もあります。
+Visual Studio 2019 以降はさまざまなネットワーク構成およびコンピューター構成で問題なく動作するように設計されています。 [Visual Studio Web インストーラー](https://visualstudio.microsoft.com/downloads)を試すことを推奨していますが (これは最新の修正プログラムおよび機能が使用されるようにする小さなファイルです)、これが不可能な場合もあります。
 
 ::: moniker-end
 
@@ -52,7 +52,7 @@ Visual Studio 2019 はさまざまなネットワーク構成およびコンピ�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Web インストーラーをダウンロードした後、Visual Studio インストーラーから **[Download all, then install]\(全部ダウンロードしてからインストールする\)** オプションを選択します。 次に、インストールを続行します。
 
@@ -72,7 +72,7 @@ Web インストーラーをダウンロードした後、Visual Studio イン�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 小規模のブートストラップ ファイルをダウンロードした後、コマンド ラインを使用してローカル キャッシュを作成します。 次に、ローカル キャッシュを使用して Visual Studio をインストールします。
 
@@ -84,40 +84,60 @@ Web インストーラーをダウンロードした後、Visual Studio イン�
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 バージョン 15.9 の最新のブートストラップを入手するには、[Visual Studio の以前のバージョン](https://visualstudio.microsoft.com/vs/older-downloads/)のページに移動し、次のいずれかのブートストラップ ファイルをダウンロードします。 
+Visual Studio 2017 バージョン 15.9 の最新のブートストラップを入手するには、[Visual Studio の以前のバージョン](https://visualstudio.microsoft.com/vs/older-downloads/)のページに移動し、次のいずれかのブートストラップ ファイルをダウンロードします。
 
-| エディション | ファイル名 |
-|-------------|-----------------------|
-|Visual Studio Professional 2017 バージョン 15.9 | vs_professional.exe |
-|Visual Studio Enterprise 2017 バージョン 15.9 | vs_enterprise.exe |
-|Visual Studio Build Tools 2017 バージョン 15.9  | vs_buildtools.exe |
+| エディション                                      | ファイル名            |
+|----------------------------------------------|---------------------|
+| Visual Studio Professional 2017 バージョン 15.9 | vs_professional.exe |
+| Visual Studio Enterprise 2017 バージョン 15.9   | vs_enterprise.exe   |
+| Visual Studio Build Tools 2017 バージョン 15.9  | vs_buildtools.exe   |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-まずは、Visual Studio 2019 のブートストラップを、[Visual Studio のダウンロード ページ](https://visualstudio.microsoft.com/downloads)または、「[Visual Studio 2019 リリース](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release)」のページからご自分で選択した Visual Studio のバージョンおよびエディション用にダウンロードします。 お使いのセットアップ ファイル &mdash; またはブートストラップ &mdash; は、次のいずれかになります (あるいは同様のファイル)。
+まずは、Visual Studio 2019 のブートストラップを、[Visual Studio のダウンロード ページ](https://visualstudio.microsoft.com/downloads)または、「[Visual Studio 2019 リリース](/visualstudio/releases/2019/history#installing-an-earlier-release)」のページからご自分で選択した Visual Studio のバージョンおよびエディション用にダウンロードします。 お使いのセットアップ ファイル &mdash; またはブートストラップ &mdash; は、次のいずれかになります (あるいは同様のファイル)。
 
-| Edition                    | ファイル                                                                    |
-|----------------------------|-------------------------------------------------------------------------|
+| Edition                         | ファイル                                                                                                                                                                                                                               |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Visual Studio 2019 Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)       |
 | Visual Studio 2019 Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 | Visual Studio 2019 Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
-| Visual Studio 2019 Build Tools   | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
+| Visual Studio 2019 Build Tools  | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+>[!TIP]
+> Visual Studio 2022 のリリース バージョンはまだ利用できません。下のブートストラッパーは Visual Studio 2022 のプレビュー リリースのものです。
+>まず、[Visual Studio ダウンロード ページ](https://aka.ms/vs2022preview)から Visual Studio 2022 ブートストラッパーをダウンロードします。
+
+| エディション                         | ダウンロード                                                            |
+|---------------------------------|---------------------------------------------------------------------|
+| Visual Studio 2022 Professional | [vs_professional.exe](https://aka.ms/vs/17/pre/vs_professional.exe) |
+| Visual Studio 2022 Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/17/pre/vs_enterprise.exe)     |
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
 >[!TIP]
->前にブートストラップ ファイルをダウンロードしてあり、そのバージョンを確認したい場合は、次のようにします。 Windows でエクスプローラーを開き、ブートストラップ ファイルを右クリックし、 **[プロパティ]** を選択して、 **[詳細]** タブを選択し、 **[製品バージョン]** の値を表示します。 この値に対応する Visual Studio のリリースを調べるには、「[Visual Studio のビルド番号とリリース日](visual-studio-build-numbers-and-release-dates.md)」ページを参照してください。
+>前にブートストラップ ファイルをダウンロードしてあり、そのバージョンを確認したい場合は、次のようにします。 Windows でエクスプローラーを開き、ブートストラップ ファイルを右クリックし、 **[プロパティ]** を選択して、 **[詳細]** タブを選択し、 **[製品バージョン]** の値を表示します。 この値に対応する Visual Studio のリリースを調べるには、「[Visual Studio のビルド番号とリリース日](/visual-studio-build-numbers-and-release-dates.md)」ページを参照してください。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 >[!TIP]
->前にブートストラップ ファイルをダウンロードしてあり、そのバージョンを確認したい場合は、次のようにします。 Windows でエクスプローラーを開き、ブートストラップ ファイルを右クリックし、 **[プロパティ]** を選択して、 **[詳細]** タブを選択し、 **[製品バージョン]** の値を表示します。 この値に対応する Visual Studio のリリースを調べるには、「[Visual Studio 2019 リリース](https://docs.microsoft.com/visualstudio/releases/2019/history)」のページを参照してください。
+>前にブートストラップ ファイルをダウンロードしてあり、そのバージョンを確認したい場合は、次のようにします。 Windows でエクスプローラーを開き、ブートストラップ ファイルを右クリックし、 **[プロパティ]** を選択して、 **[詳細]** タブを選択し、 **[製品バージョン]** の値を表示します。 この値に対応する Visual Studio のリリースを調べるには、「[Visual Studio 2019 リリース](/visualstudio/releases/2019/history)」のページを参照してください。
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+>[!TIP]
+>前にブートストラップ ファイルをダウンロードしてあり、そのバージョンを確認したい場合は、次のようにします。 Windows でエクスプローラーを開き、ブートストラップ ファイルを右クリックし、 **[プロパティ]** を選択して、 **[詳細]** タブを選択し、 **[製品バージョン]** の値を表示します。 この値に対応する Visual Studio のリリースを調べるには、「[Visual Studio 2022 リリース](/visualstudio/releases/2022/history)」のページを参照してください。
 
 ::: moniker-end
 
@@ -132,25 +152,25 @@ Visual Studio 2017 バージョン 15.9 の最新のブートストラップを�
 
 - .NET Web と .NET デスクトップ開発の場合、次を実行します。
 
-   ```cmd
+   ```shell
     vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
     ```
 
 - .NET デスクトップと Office 開発の場合、次を実行します。
 
-   ```cmd
+   ```shell
     vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
     ```
 
 - C++ デスクトップ開発の場合、次を実行します。
 
-   ```cmd
+   ```shell
     vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
     ```
 
 - すべての機能を備えた完全なローカル レイアウトを作成するには (英語のみ)、次を実行します ("_多くの_" 機能があるため、これには時間がかかります)。
 
-   ```cmd
+   ```shell
     vs_enterprise.exe --layout c:\vslayout --lang en-US
     ```
 
@@ -161,10 +181,10 @@ Visual Studio 2017 バージョン 15.9 の最新のブートストラップを�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
    > [!NOTE]
-   > Visual Studio の完全なレイアウトでは、少なくとも 35 GB のディスク領域が必要です。 詳細については、[システム要件](/visualstudio/releases/2019/system-requirements/)に関するページを参照してください。
+   > Visual Studio の完全なレイアウトでは、少なくとも 41 GB のディスク領域が必要です。 詳細については、[システム要件](/visualstudio/releases/2019/system-requirements/)に関するページを参照してください。
 
 ::: moniker-end
 
@@ -174,13 +194,13 @@ Visual Studio をローカル インストール キャッシュからインス�
 
 たとえば、次のコマンドでローカルのインストール キャッシュを作成した場合、
 
-```cmd
+```shell
 vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
 ```
 
 次に、このコマンドを使用してインストールを実行します。
 
-```cmd
+```shell
 c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
 ```
 
@@ -190,7 +210,7 @@ c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.Mana
 > [!NOTE]
 > 署名が無効であるというエラーが発生する場合は、[更新された証明書をインストールする](install-certificates-for-visual-studio-offline.md)必要があります。 オフライン キャッシュ内の証明書フォルダーを開きます。 各証明書ファイルをダブルクリックした後、証明書マネージャー ウィザードの指示に従って操作します。 パスワードを求められたら、空のままにしてください。
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 > [!TIP]
 > オフライン インストールで、"次のパラメーターと一致する製品が見つかりません" というエラー メッセージが表示される場合は、バージョン 16.3.5 以降で `--noweb` スイッチを使用していることを確認します。
 
@@ -198,22 +218,22 @@ c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.Mana
 
 ### <a name="list-of-language-locales"></a>言語ロケールの一覧
 
-| **言語ロケール** | **Language** |
-| ----------------------- | --------------- |
-| cs-CZ | チェコ語 |
-| de-DE | ドイツ語 |
-| ja-JP | 英語 |
-| es-ES | スペイン語 |
-| fr-FR | フランス語 |
-| it-IT | イタリア語 |
-| ja-JP | 日本語 |
-| ko-KR | 韓国語 |
-| pl-PL | ポーランド語 |
-| pt-BR | ポルトガル語 - ブラジル |
-| ru-RU | ロシア語 |
-| tr-TR | トルコ語 |
-| zh-CN | 中国語 - 簡体字 |
-| zh-TW | 中国語 - 繁体字 |
+| **言語ロケール** | **Language**          |
+|---------------------|-----------------------|
+| cs-CZ               | チェコ語                 |
+| de-DE               | ドイツ語                |
+| ja-JP               | 英語               |
+| es-ES               | スペイン語               |
+| fr-FR               | フランス語                |
+| it-IT               | イタリア語               |
+| ja-JP               | 日本語              |
+| ko-KR               | 韓国語                |
+| pl-PL               | ポーランド語                |
+| pt-BR               | ポルトガル語 - ブラジル   |
+| ru-RU               | ロシア語               |
+| tr-TR               | トルコ語               |
+| zh-CN               | 中国語 - 簡体字  |
+| zh-TW               | 中国語 - 繁体字 |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

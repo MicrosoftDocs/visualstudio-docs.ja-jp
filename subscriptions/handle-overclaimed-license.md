@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
-ms.date: 03/21/2021
+ms.date: 05/18/2021
 ms.topic: conceptual
 description: サブスクリプションの割り当て超過を管理者が解決する方法について説明します
-ms.openlocfilehash: d92671a3478fd8044b959c56f3201df5ff5c5a85
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.openlocfilehash: 533ce71e8795e89bcb21fd437da6bea91db291f4
+ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776559"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "109973395"
 ---
 # <a name="over-allocated-subscriptions"></a>サブスクリプションの割り当て超過
 サブスクライバーを追加した後に、注文が変更される場合があります。これにより会社が所有するライセンス数よりも割り当てられたサブスクリプションが多くなる場合があります。 これは "割り当て超過" と呼ばれます。  
@@ -26,6 +26,9 @@ ms.locfileid: "104776559"
 > ![過剰に要求されたサブスクリプションの通知](_img/over-claimed/over-claimed-alert.png "割り当て超過の数は概要に一覧表示され、サブスクリプションの種類ごとに、グラフのハッシュされたバーで表されます。")
 
 表示ではハッシュされたバーを使用して、サブスクリプションの割り当て超過が示されていることに注目してください。  すべてのサブスクリプションの種類全体での割り当て超過の数は、上部の [概要] セクションにあります。また、サブスクリプション レベルごとに、固有の割り当て状態も表示されます。  
+
+## <a name="receive-notifications-when-over-allocations-occur"></a>割り当て超過の発生時に通知を受け取る
+割り当て超過の発生時に通知を受け取るメール アドレスを指定したり、超過すると通知が送信されるしきい値を設定したりできます。  管理ポータルで契約の基本設定を設定する方法については[こちら](admin-preferences.md)をご覧ください。
 
 ## <a name="resolve-over-allocated-subscriptions"></a>サブスクリプションの割り当て超過を解決する
 割り当て超過を解決するには、次のようにいくつかの方法があります。

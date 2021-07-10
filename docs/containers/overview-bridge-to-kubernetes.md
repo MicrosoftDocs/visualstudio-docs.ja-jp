@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jmartens
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: 1709785c63bd4fbcd702fbcacfe59dddcb71d1b3
-ms.sourcegitcommit: 0135fc6ffa38995cc9e6ab05fa265758890d2e15
+ms.openlocfilehash: 838589e0dd81232de25b88989d621a07fb22f972
+ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107526160"
+ms.lasthandoff: 06/12/2021
+ms.locfileid: "112043056"
 ---
 # <a name="how-bridge-to-kubernetes-works"></a>Bridge to Kubernetes のしくみ
 
@@ -52,6 +52,9 @@ Visual Studio で Bridge to Kubernetes を使用するには、*ASP.NET と Web 
 
 > [!NOTE]
 > クラスターへの接続が行われている間 (それに加えて 15 分間)、Bridge to Kubernetes により、ローカル コンピューター上で管理者権限を使用して *EndpointManager* という名前のプロセスが実行されます。
+
+> [!NOTE]
+> 複数のサービスを使用して並列デバッグできますが、デバッグするサービスと同じ数の Visual Studio インスタンスを起動する必要があります。 サービスが異なるポート上でローカル待機するようにし、別々に構成し、デバッグします。 このシナリオでは、分離はサポートされていません。
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig.yaml を使用した追加の構成
 

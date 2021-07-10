@@ -2,22 +2,22 @@
 title: '[オプション]、[テキスト エディター]、[C#]、[詳細]'
 description: '[C#] セクションの [詳細] ページを使用して、C# のエディターの書式設定、コードのリファクタリング、および XML ドキュメントのコメントの設定を変更する方法について説明します。'
 ms.custom: SEO-VS-2020
-ms.date: 11/13/2020
+ms.date: 06/01/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: akhera99
+author: mikadumont
 ms.author: midumont
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa202f5c0abc490967a40255332976cdf9dca25a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 29f6dd2b4a101132bc7bc19664c51fd5d4b8283e
+ms.sourcegitcommit: f50bbdb15c4f9fca0fa245ca765183c378960cc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99959325"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "111351990"
 ---
 # <a name="options-text-editor-c-advanced"></a>[オプション]、[テキスト エディター]、[C#]、[詳細]
 
@@ -103,6 +103,10 @@ ms.locfileid: "99959325"
 
    ![Visual Studio に NuGet パッケージをインストールするためのクイック アクション](media/nuget-lightbulb.png)
 
+- 不足している using ディレクティブを貼り付け時に追加する
+
+    このオプションが選択されているとき、型をファイルに貼り付けると、`using` ディレクティブがコードに自動追加されます。
+
 ## <a name="highlighting"></a>強調表示
 
 - カーソルの下にあるシンボルへの参照をハイライトする
@@ -129,8 +133,16 @@ ms.locfileid: "99959325"
 
 コードの中かっこ ( **{}** ) の間に垂直の点線を表示するには、このチェック ボックスをオンにします。 これで、宣言レベルとコード レベルのコンストラクト用のコード ブロックを簡単に確認できます。
 
-## <a name="editor-help"></a>エディターのヘルプ
+## <a name="comments"></a>説明
+
+- /// が入力されたとき、XML ドキュメントのコメントを生成する
+
+   オンにすると、`///` コメント イントロダクションを入力した後に、XML ドキュメント コメントの XML 要素が挿入されます。 XML ドキュメントの詳細については、「[XXML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)」を参照してください。
+
 ::: moniker range=">=vs-2019"
+
+## <a name="inline-hints"></a>インラインのヒント
+
 - インライン パラメーター名のヒント 
     
     選択されると、関数呼び出しの各引数の前に、リテラル、型変換されたリテラル、オブジェクト インスタンス化のパラメーター名ヒントが挿入されます。  
@@ -142,10 +154,14 @@ ms.locfileid: "99959325"
     選択すると、推論された型とラムダ パラメーター型を持つ変数の型ヒントが挿入されます。  
     
     ![CSharp のインライン型ヒント](media/inline-type-hints-csharp.png)
-::: moniker-end
-- /// が入力されたとき、XML ドキュメントのコメントを生成する
 
-   オンにすると、`///` コメント イントロダクションを入力した後に、XML ドキュメント コメントの XML 要素が挿入されます。 XML ドキュメントの詳細については、「[XXML ドキュメント コメント (C# プログラミング ガイド)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)」を参照してください。
+## <a name="inheritance-margin"></a>継承の余白 
+
+- 選択すると、コードの実装とオーバーライドを表すアイコンが余白に追加されます。 [Inheritance Margin]\(継承の余白\) アイコンをクリックすると、移動先として選択できる継承オプションが表示されます。
+
+    ![継承の余白](media/inheritance-margin.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

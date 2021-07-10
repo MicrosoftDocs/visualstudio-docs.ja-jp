@@ -11,12 +11,12 @@ ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: f16ecd899bc1dddd7383ef1a815ed6197b799a19
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5f48b5c06e91b9c05e6edc7e2a1738aeb677a7ba
+ms.sourcegitcommit: 69456d802203d21dabc3ae8662547a3241c24f47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859529"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110235912"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker を使用した Visual Studio 開発のトラブルシューティング
 
@@ -29,7 +29,7 @@ Visual Studio コンテナー ツールを使用する際、アプリケーシ�
 1. 通知領域で **[Windows 用の Docker]** を右クリックし、 **[設定]** を選択します。
 1. **[リソース]**  >  **[ファイル共有]** を選択し、アクセスする必要があるフォルダーを共有します。 システム ドライブ全体を共有することは可能ですが、お勧めできません。
 
-    ![共有ドライブ](media/troubleshooting-docker-errors/docker-settings-image.png)
+    :::image type="content" source="media//troubleshooting-docker-errors/docker-settings-image.png" alt-text="共有ドライブ":::
 
 > [!TIP]
 > Visual Studio 2017 バージョン 15.6 以降の Visual Studio バージョンでは、**共有ドライブ** が構成されていない場合、プロンプトが表示されます。
@@ -86,7 +86,7 @@ Docker では既定で、 *%ProgramData%/Docker/* フォルダーにイメージ
     "graph": "D:\\mypath\\images"
 ```
 
-![Docker ファイル共有のスクリーンショット](media/troubleshooting-docker-errors/docker-daemon-settings.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Docker ファイル共有のスクリーンショット":::
 
 **[適用および再起動]** をクリックします。 以上の手順で *%ProgramData%\docker\config\daemon.json* にある設定ファイルが変更されます。 以前に作成したイメージが移動されることはありません。
 
@@ -94,7 +94,7 @@ Docker では既定で、 *%ProgramData%/Docker/* フォルダーにイメージ
 
 プロジェクトに Docker サポートを追加する場合は、Windows または Linux のいずれかのコンテナーを選択します。 Docker サーバー ホストがプロジェクト ターゲットと同じコンテナーの種類を実行するように構成されていない場合は、次のようなエラーが表示される可能性があります。
 
-![Docker ホストとプロジェクトの不一致のスクリーンショット](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png" alt-text="Docker ホストとプロジェクトの不一致のスクリーンショット":::
 
 この問題を解決するには、次の手順を実行します。
 

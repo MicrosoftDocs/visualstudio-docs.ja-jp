@@ -2,7 +2,7 @@
 title: 既定のキーボード ショートカット
 description: さまざまなコマンドやウィンドウにアクセスできる Visual Studio の既定のキーボード ショートカットについて説明します。
 ms.custom: SEO-VS-2020
-ms.date: 03/10/2021
+ms.date: 06/21/2021
 ms.topic: reference
 helpviewer_keywords:
 - shortcut keys [Visual Studio], keyboard binding schemes
@@ -15,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 73bb5e48c37cb24d434e57356a90f2bc3907a696
-ms.sourcegitcommit: 6f18481e4f84d86a837ec5d0e8f12fff1a1a8b65
+ms.openlocfilehash: 182102d4de3a2acbec8be82f69650c708817e54c
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102782825"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222969"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio の既定のキーボード ショートカット
 
@@ -28,11 +28,175 @@ Visual Studio のさまざまな[コマンド](reference/visual-studio-commands.
 
 一般的なキーボード ショートカットの一覧、およびその他の生産性向上情報については、以下をご覧ください。
 
-- [よく使われるコマンドのキーボード ショートカット](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)
 - [キーボードのヒント](../ide/productivity-shortcuts.md)
 - [生産性に関するヒント](../ide/productivity-features.md)。
 
 Visual Studio でのアクセシビリティについて詳しくは、「[アクセシビリティのヒントとテクニック](../ide/reference/accessibility-tips-and-tricks.md)」および「[方法: キーボード主体で操作する](../ide/reference/how-to-use-the-keyboard-exclusively.md)」を参照してください。
+
+<!---## Printable shortcut cheatsheet
+
+Download and print our Visual Studio shortcut cheatsheet.
+
+[ ![Visual Studio Cheatsheet.](media/default-keyboard-shortcuts-in-visual-studio/visual-studio-shortcut-cheatsheet.png)](media/default-keyboard-shortcuts-in-visual-studio/visual-studio-shortcut-cheatsheet-extended.png#lightbox)
+-->
+## <a name="most-popular-keyboard-shortcuts"></a>よく使われるキーボード ショートカット
+
+このセクションのすべてのショートカットは、特に指定がない限り、グローバルに適用されます。 "*全体*" コンテキストは、ショートカットが Visual Studio のすべてのツール ウィンドウで適用されることを意味します。
+
+> [!NOTE]
+> **[オプション]** ダイアログ ボックスを開き、**[環境]** ノードを展開して、**[キーボード]** を選択することで、任意のコマンドの [ショートカットを調べる](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)ことができます。
+
+
+#### <a name="build-popular-shortcuts"></a>ビルド: よく使われるショートカット
+
+|コマンド|キーボード ショートカット |
+|--------------| - |
+|Build.BuildSolution|**Ctrl + Shift + B** |
+|Build.Cancel|**Ctrl + Break** |
+|Build.Compile|**Ctrl + F7** |
+|Build.RunCodeAnalysisonSolution|**Alt + F11**|
+
+#### <a name="debug-popular-shortcuts"></a>デバッグ: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|Debug.BreakatFunction|**Ctrl + B**|
+|Debug.BreakAll|**Ctrl + Alt + Break**|
+|Debug.DeleteAllBreakpoints|**Ctrl + Shift + F9**|
+|Debug.Exceptions|**Ctrl + Alt + E**|
+|Debug.QuickWatch|**Ctrl + Alt + Q**<br /><br />または **Shift + F9**|
+|Debug.Restart|**Ctrl + Shift + F5**|
+|Debug.RunToCursor|**Ctrl + F10**|
+|Debug.SetNextStatement|**Ctrl + Shift + F10**|
+|Debug.Start|**F5**|
+|Debug.StartWithoutDebugging|**Ctrl + F5**|
+|Debug.StepInto|**F11**|
+|Debug.StepOut|**Shift + F11**|
+|Debug.StepOver|**F10**|
+|Debug.StopDebugging|**Shift + F5**|
+|Debug.ToggleBreakpoint|**F9**|
+
+#### <a name="edit-popular-shortcuts"></a>編集: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|Edit.BreakLine|**Enter** [テキスト エディター、レポート デザイナー、Windows フォーム デザイナー]<br /><br />または **Shift + Enter** [テキスト エディター]|
+|Edit.CollapseToDefinitions|**Ctrl + M**、**Ctrl + O** [テキスト エディター]|
+|Edit.CommentSelection|**Ctrl + K**、**Ctrl + C** [テキスト エディター]|
+|Edit.CompleteWord|**Alt + →** [テキスト エディター、ワークフロー デザイナー]<br /><br />または **Ctrl + Space** [テキスト エディター、ワークフロー デザイナー]<br /><br />または **Ctrl + K**、**W** [ワークフロー デザイナー]<br /><br />または **Ctrl + K、Ctrl + W** [ワークフロー デザイナー]|
+|Edit.Copy|**Ctrl + C**<br /><br />または **Ctrl + Insert**|
+|Edit.Cut|**Ctrl + X**<br /><br />または **Shift + Delete**|
+|Edit.Delete|**Delete** [チーム エクスプローラー]<br /><br />または **Shift + Delete** [シーケンス図、UML アクティビティ図、レイヤー図]<br /><br />または **Ctrl + Delete** [クラス図]|
+|Edit.Find|**Ctrl + F**|
+|Edit.FindAllReferences|**Shift+F12**|
+|Edit.FindinFiles|**Ctrl + Shift + F**|
+|Edit.FindNext|**F3**|
+|Edit.FindNextSelected|**Ctrl + F3**|
+|Edit.FormatDocument|**Ctrl + K、Ctrl + D** [テキスト エディター]|
+|Edit.FormatSelection|**Ctrl + K、Ctrl + F** [テキスト エディター]|
+|Edit.GoTo|**Ctrl + G**|
+|Edit.GoToDeclaration|**Ctrl + F12**|
+|Edit.GoToDefinition|**F12**|
+|Edit.GoToFindCombo|**Ctrl + D**|
+|Edit.GoToNextLocation|**F8**|
+|Edit.InsertSnippet|**Ctrl + K**、**Ctrl + X**|
+|Edit.InsertTab|**Tab** [レポート デザイナー、Windows フォーム デザイナー、テキスト エディター]|
+|Edit.LineCut|**Ctrl + L** [テキスト エディター]|
+|Edit.LineDownExtendColumn|**Shift + Alt + ↓** [テキスト エディター]|
+|Edit.LineOpenAbove|**Ctrl + Enter** [テキスト エディター]|
+|Edit.ListMembers|**Ctrl + J** [テキスト エディター、ワークフロー デザイナー]<br /><br />または **Ctrl + K、Ctrl + L** [ワークフロー デザイナー]<br /><br />または **Ctrl + K、L** [ワークフロー デザイナー]|
+|Edit.NavigateTo|**Ctrl + ,**|
+|Edit.OpenFile|**Ctrl + Shift + G**|
+|Edit.OvertypeMode|**Insert** [テキスト エディター]|
+|Edit.ParameterInfo|**Ctrl + Shift + Space** [テキスト エディター、ワークフロー デザイナー]<br /><br />または **Ctrl + K、Ctrl + P** [ワークフロー デザイナー]<br /><br />または **Ctrl + K、P** [ワークフロー デザイナー]|
+|Edit.Paste|**Ctrl + V**<br /><br />または **Shift + Insert**|
+|Edit.PeekDefinition|**Alt + F12** [テキスト エディター]|
+|Edit.Redo|**Ctrl + Y**<br /><br />または **Shift + Alt + Backspace**<br /><br />または **Ctrl + Shift + Z**|
+|Edit.Replace|**Ctrl + H**|
+|Edit.SelectAll|**Ctrl + A**|
+|Edit.SelectCurrentWord|**Ctrl + W** [テキスト エディター]|
+|Edit.SelectionCancel|**Esc** [テキスト エディター、レポート デザイナー、設定デザイナー、Windows フォーム デザイナー、マネージド リソース エディター]|
+|Edit.SurroundWith|**Ctrl + K、Ctrl + S**|
+|Edit.TabLeft|**Shift + Tab** [テキスト エディター、レポート デザイナー、Windows フォーム エディター]|
+|Edit.ToggleAllOutlining|**Ctrl + M、Ctrl + L** [テキスト エディター]|
+|Edit.ToggleBookmark|**Ctrl + K、Ctrl + K** [テキスト エディター]|
+|Edit.ToggleCompletionMode|**Ctrl + Alt + Space** [テキスト エディター]|
+|Edit.ToggleOutliningExpansion|**Ctrl + M、Ctrl + M** [テキスト エディター]|
+|Edit.UncommentSelection|**Ctrl + K、Ctrl + U** [テキスト エディター]|
+|Edit.Undo|**Ctrl + Z**<br /><br />または **Alt + Backspace**|
+|Edit.WordDeleteToEnd|**Ctrl + Delete** [テキスト エディター]|
+|Edit.WordDeleteToStart|**Ctrl + Backspace** [テキスト エディター]|
+
+#### <a name="file-popular-shortcuts"></a>ファイル: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|File.Exit|**Alt + F4**|
+|File.NewFile|**Ctrl + N**|
+|File.NewProject|**Ctrl + Shift + N**|
+|File.NewWebSite|**Shift + Alt + N**|
+|File.OpenFile|**Ctrl + O**|
+|File.OpenProject|**Ctrl + Shift + O**|
+|File.OpenWebSite|**Shift + Alt + O**|
+|File.Rename|**F2** [チーム エクスプローラー]|
+|File.SaveAll|**Ctrl + Shift + S**|
+|File.SaveSelectedItems|**Ctrl + S**|
+|File.ViewinBrowser|**Ctrl + Shift + W**|
+
+#### <a name="project-popular-shortcuts"></a>プロジェクト: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|Project.AddExistingItem|**Shift + Alt + A**|
+|Project.AddNewItem|**Ctrl + Shift + A**|
+
+#### <a name="refactor-popular-shortcuts"></a>リファクタリング: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|-------------| - |
+|Refactor.ExtractMethod|**Ctrl + R、Ctrl + M**|
+
+#### <a name="tools-popular-shortcuts"></a>ツール: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|-------------| - |
+|Tools.AttachtoProcess|**Ctrl + Alt + P**|
+
+#### <a name="view-popular-shortcuts"></a>表示: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|View.ClassView|**Ctrl + Shift + C**|
+|View.EditLabel|**F2**|
+|View.ErrorList|**Ctrl + \\、Ctrl + E**<br /><br />または **Ctrl + \\、E**|
+|View.NavigateBackward|**Ctrl + -**|
+|View.NavigateForward|**Ctrl + Shift + -**|
+|View.ObjectBrowser|**Ctrl + Alt + J**|
+|View.Output|**Ctrl + Alt + O**|
+|View.PropertiesWindow|**F4**|
+|View.Refresh|**F5** [チーム エクスプローラー]|
+|View.ServerExplorer|**Ctrl + Alt + S**|
+|View.ShowSmartTag|**Ctrl + .**<br /><br />または **Shift + Alt + F10** [HTML エディター デザイン ビュー]|
+|View.SolutionExplorer|**Ctrl + Alt + L**|
+|View.TfsTeamExplorer|**Ctrl + \\、Ctrl + M**|
+|View.Toolbox|**Ctrl + Alt + X**|
+|View.ViewCode|**Enter** [クラス図]<br /><br />または **F7** [設定デザイナー]|
+|View.ViewDesigner|**Shift + F7** [HTML エディター ソース ビュー]|
+
+#### <a name="window-popular-shortcuts"></a>ウィンドウ: よく使われるショートカット
+
+|コマンド|キーボード ショートカット [特殊なコンテキスト]|
+|--------------| - |
+|Window.ActivateDocumentWindow|**Esc**|
+|Window.CloseDocumentWindow|**Ctrl + F4**|
+|Window.NextDocumentWindow|**Ctrl + F6**|
+|Window.NextDocumentWindowNav|**Ctrl + Tab**|
+|Window.NextSplitPane|**F6**|
+
+
+## <a name="global-shortcuts"></a>グローバル ショートカット
+
+以下のキーボード ショートカットは *グローバル* です。つまり、Visual Studio ウィンドウにフォーカスがある場合にそれらを使用できます。
 
 - [解析](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [編集](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
@@ -59,10 +223,6 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 - [Team Foundation コンテキスト メニュー](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)
 - [Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)
 - [診断ハブ](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)
-
-## <a name="global-shortcuts"></a>グローバル ショートカット
-
-以下のキーボード ショートカットは *グローバル* です。つまり、Visual Studio ウィンドウにフォーカスがある場合にそれらを使用できます。
 
 ### <a name="analyze"></a><a name="bkmk_analyze"></a> 解析
 
@@ -98,6 +258,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |Debug.ApplyCodeChanges|**Alt + F10**|
+|Debug.AttachtoProcess |**Ctrl + Alt + P**|
 |Debug.Autos|**Ctrl + Alt + V、A**|
 |Debug.BreakAll|**Ctrl + Alt + Break**|
 |Debug.Breakpoints|**Ctrl + Alt + B**|
@@ -133,6 +294,7 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Debug.ParallelWatch4|**Ctrl + Shift + D、4**|
 |Debug.Processes|**Ctrl + Alt + Z**|
 |Debug.QuickWatch|**Shift + F9** または **Ctrl + Alt + Q**|
+|Debug.ReattachtoProcess|**Shift + Alt + P**|
 |Debug.RefreshWindowsapp|**Ctrl + Shift + R**|
 |Debug.Registers|**Ctrl + Alt + G**|
 |Debug.Restart|**Ctrl + Shift + F5**|
@@ -464,7 +626,12 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |WindowsAzure.RetryMobileServiceScriptOperation|**Ctrl + Num \*、Ctrl + R**|
 |WindowsAzure.ShowMobileServiceScriptErrorDetails|**Ctrl + Num \*、Ctrl + D**|
 
-## <a name="adonet-entity-data-model-designer"></a>ADO.NET Entity Data Model デザイナー
+## <a name="context-specific-shortcuts"></a>コンテキスト固有のショートカット
+
+
+### <a name="adonet-entity-data-model-designer"></a>ADO.NET Entity Data Model デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -479,7 +646,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |View.EntityDataModelBrowser|**Ctrl + 数字 1**|
 |View.EntityDataModelMappingDetails|**Ctrl + 数字 2**|
 
-## <a name="class-diagram"></a>クラス ダイアグラム
+### <a name="class-diagram"></a>クラス ダイアグラム
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -491,7 +661,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.RemovefromDiagram|**削除**|
 |View.ViewCode|**Enter**|
 
-## <a name="coded-ui-test-editor"></a>コード化された UI テスト エディター
+### <a name="coded-ui-test-editor"></a>コード化された UI テスト エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -502,14 +675,20 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |OtherContextMenus.UITestEditorContextMenu.Movecode|**Ctrl + Alt + C**|
 |OtherContextMenus.UITestEditorContextMenu.Splitintoanewmethod|**Ctrl + Shift + T**|
 
-## <a name="dataset-editor"></a>データセット エディター
+### <a name="dataset-editor"></a>データセット エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |OtherContextMenus.ColumnContext.InsertColumn|**[挿入]**|
 |OtherContextMenus.DbTableContext.Add.Column|**Ctrl + L**|
 
-## <a name="difference-viewer"></a>相違ビューアー
+### <a name="difference-viewer"></a>相違ビューアー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -525,7 +704,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |EditorContextMenus.CodeWindow.AddComment|**Ctrl + Shift + K**|
 |EditorContextMenus.CodeWindow.EditLocalFile|**Ctrl + Shift + P**|
 
-## <a name="dom-explorer"></a>DOM Explorer
+### <a name="dom-explorer"></a>DOM Explorer
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -533,13 +715,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |DOMExplorer.SelectElement|**Ctrl + B**|
 |DOMExplorer.ShowLayout|**Ctrl + Shift + I**|
 
-## <a name="f-interactive"></a>F# Interactive
+### <a name="f-interactive"></a>F# Interactive
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |OtherContextMenus.FSIConsoleContext.CancelInteractiveEvaluation|**Ctrl + Break**|
 
-## <a name="graph-document-editor"></a>グラフ ドキュメント エディター
+### <a name="graph-document-editor"></a>グラフ ドキュメント エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -551,7 +739,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |ArchitectureContextMenus.DirectedGraphContextMenu.Remove|**削除**|
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|**F2**|
 
-## <a name="graphics-diagnostics"></a>グラフィックス診断
+### <a name="graphics-diagnostics"></a>グラフィックス診断
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -565,13 +756,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Graphics.ZoomIn|**Shift + Alt + =**|
 |Graphics.ZoomOut|**Shift + Alt + -**|
 
-## <a name="html-editor"></a>HTML エディター
+### <a name="html-editor"></a>HTML エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |OtherContextMenus.HTMLContext.GoToController|**Ctrl + M、Ctrl + G**|
 
-## <a name="html-editor-design-view"></a>HTML エディター デザイン ビュー
+### <a name="html-editor-design-view"></a>HTML エディター デザイン ビュー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -594,7 +791,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |View.ViewMarkup|**Shift + F7**|
 |Window.PreviousTab|**Ctrl + PgUp**|
 
-## <a name="html-editor-source-view"></a>HTML エディター ソース ビュー
+### <a name="html-editor-source-view"></a>HTML エディター ソース ビュー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -604,13 +804,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |View.ViewDesigner|**Shift + F7**|
 |Window.PreviousTab|**Ctrl + PgUp**|
 
-## <a name="layer-diagram"></a>レイヤー図
+### <a name="layer-diagram"></a>レイヤー図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.Delete|**Shift + Delete**|
 
-## <a name="managed-resources-editor"></a>マネージド リソース エディター
+### <a name="managed-resources-editor"></a>マネージド リソース エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -625,7 +831,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Resources.Other|**Ctrl + 数字 6**|
 |Resources.Strings|**Ctrl + 数字 1**|
 
-## <a name="merge-editor-window"></a>マージ エディター ウィンドウ
+### <a name="merge-editor-window"></a>マージ エディター ウィンドウ
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -633,7 +842,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonResultWindow|**Alt + 2**|
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonRightWindow|**Alt + 3**|
 
-## <a name="microsoft-sql-server-data-tools-schema-compare"></a>Microsoft SQL Server Data Tools、スキーマの比較
+### <a name="microsoft-sql-server-data-tools-schema-compare"></a>Microsoft SQL Server Data Tools、スキーマの比較
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -644,7 +856,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |SQL.SSDTSchemaCompareStop|**Alt + Break**|
 |SQL.SSDTSchemaCompareWriteUpdates|**Shift + Alt + U**|
 
-## <a name="microsoft-sql-server-data-tools-table-designer"></a>Microsoft SQL Server Data Tools、テーブル デザイナー
+### <a name="microsoft-sql-server-data-tools-table-designer"></a>Microsoft SQL Server Data Tools、テーブル デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -655,7 +870,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |SQL 名前の変更|**F2**<br /><br /> or<br /><br /> **Ctrl + R、R**<br /><br /> or<br /><br /> **Ctrl + R、Ctrl + R**|
 |ViewFileInScriptPanel|**Shift + Alt + PgDn**|
 
-## <a name="microsoft-sql-server-data-tools-t-sql-editor"></a>Microsoft SQL Server Data Tools、T-SQL エディター
+### <a name="microsoft-sql-server-data-tools-t-sql-editor"></a>Microsoft SQL Server Data Tools、T-SQL エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -676,7 +894,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |TSqlEditorCloneQuery|**Ctrl + Alt + N**|
 |TSqlEditorDatabaseCombo|**Shift + Alt + PgDn**|
 
-## <a name="microsoft-sql-server-data-tools-t-sql-pdw-editor"></a>Microsoft SQL Server Data Tools、T-SQL PDW エディター
+### <a name="microsoft-sql-server-data-tools-t-sql-pdw-editor"></a>Microsoft SQL Server Data Tools、T-SQL PDW エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -691,13 +912,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |TSqlEditorCloneQuery|**Ctrl + Alt + N**|
 |TSqlEditorDatabaseCombo|**Shift + Alt + PgDn**|
 
-## <a name="page-inspector"></a>Page Inspector
+### <a name="page-inspector"></a>Page Inspector
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |PageInspector.Minimize|**F12**|
 
-## <a name="query-designer"></a>クエリ デザイナー
+### <a name="query-designer"></a>クエリ デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -710,7 +937,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |QueryDesigner.Results|**Ctrl + 数字 4**|
 |QueryDesigner.SQL|**Ctrl + 数字 3**|
 
-## <a name="query-results"></a>クエリ結果
+### <a name="query-results"></a>クエリ結果
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -718,7 +948,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |SQL.QueryResultsRefresh|**Shift + Alt + R**|
 |SQL.QueryResultsStop|**Alt + Break**|
 
-## <a name="report-designer"></a>レポート デザイナー
+### <a name="report-designer"></a>レポート デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -744,14 +977,20 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.TabLeft|**Shift + Tab**|
 |View.ReportData|**Ctrl + Alt + D**|
 
-## <a name="sequence-diagram"></a>シーケンス図
+### <a name="sequence-diagram"></a>シーケンス図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |ArchitectureDesigner.Sequence.NavigateToCode|**F12**|
 |Edit.Delete|**Shift + Del**|
 
-## <a name="settings-designer"></a>設定デザイナー
+### <a name="settings-designer"></a>設定デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -760,13 +999,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.SelectionCancel|**Esc**|
 |View.ViewCode|**F7**|
 
-## <a name="solution-explorer"></a>ソリューション エクスプローラー
+### <a name="solution-explorer"></a>ソリューション エクスプローラー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector|**Ctrl + K、Ctrl + G**|
 
-## <a name="team-explorer"></a>チーム エクスプローラー
+### <a name="team-explorer"></a>チーム エクスプローラー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|ショートカット キー|
 |-------------| - |
@@ -791,13 +1036,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI|**Shift + Alt + L**|
 |View.Refresh|**F5**|
 
-## <a name="test-explorer"></a>テスト エクスプローラー
+### <a name="test-explorer"></a>テスト エクスプローラー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |TestExplorer.OpenTest|**F12**|
 
-## <a name="text-editor"></a>[テキスト エディター]
+### <a name="text-editor"></a>[テキスト エディター]
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 | コマンド | キーボード ショートカット |
 | - | - |
@@ -916,38 +1167,56 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 | TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion | **Alt + PgDn** |
 | TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion | **Alt + PgUp** |
 
-## <a name="uml-activity-diagram"></a>UML アクティビティ図
+### <a name="uml-activity-diagram"></a>UML アクティビティ図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.Delete|**Shift + Del**|
 
-## <a name="uml-class-diagram"></a>UML クラス図
+### <a name="uml-class-diagram"></a>UML クラス図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.DeleteFromModel|**Shift + Del**|
 
-## <a name="uml-component-diagram"></a>UML コンポーネント図
+### <a name="uml-component-diagram"></a>UML コンポーネント図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.DeleteFromModel|**Shift + Del**|
 
-## <a name="uml-use-case-diagram"></a>UML ユース ケース図
+### <a name="uml-use-case-diagram"></a>UML ユース ケース図
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.DeleteFromModel|**Shift + Del**|
 
-## <a name="vc-accelerator-editor"></a>VC アクセラレータ エディター
+### <a name="vc-accelerator-editor"></a>VC アクセラレータ エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |Edit.NewAccelerator|**[挿入]**|
 |Edit.NextKeyTyped|**Ctrl + W**|
 
-## <a name="vc-dialog-editor"></a>VC ダイアログ エディター
+### <a name="vc-dialog-editor"></a>VC ダイアログ エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -981,7 +1250,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Format.TestDialog|**Ctrl + T**|
 |Format.ToggleGuides|**Ctrl + G**|
 
-## <a name="vc-image-editor"></a>VC イメージ エディター
+### <a name="vc-image-editor"></a>VC イメージ エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1023,13 +1295,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Image.ZoomIn|**Ctrl + Shift + .**<br /><br /> or<br /><br /> **Ctrl + ↑**|
 |Image.ZoomOut|**Ctrl + Shift + ,**<br /><br /> or<br /><br /> **Ctrl + ↓**|
 
-## <a name="vc-string-editor"></a>VC ストリング エディター
+### <a name="vc-string-editor"></a>VC ストリング エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |Edit.NewString|**[挿入]**|
 
-## <a name="view-designer"></a>[デザイナーの表示]
+### <a name="view-designer"></a>[デザイナーの表示]
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1042,13 +1320,19 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |QueryDesigner.Results|**Ctrl + 数字 4**|
 |QueryDesigner.SQL|**Ctrl + 数字 3**|
 
-## <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>Visual Studio
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |-------------| - |
 |OtherContextMenus.ORDesignerContext.HideMethodsPane|**Ctrl + 数字 1**|
 
-## <a name="windows-forms-designer"></a>Windows フォーム デザイナー
+### <a name="windows-forms-designer"></a>Windows フォーム デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1077,7 +1361,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.SizeControlUp|**Ctrl + Shift + ↑**|
 |Edit.TabLeft|**Shift + Tab**|
 
-## <a name="work-item-editor"></a>作業項目エディター
+### <a name="work-item-editor"></a>作業項目エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1085,7 +1372,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Edit.RefreshWorkItem|**F5**|
 |Team.NewLinkedWorkItem|**Shift + Alt + L**|
 
-## <a name="work-item-query-view"></a>作業項目クエリ ビュー
+### <a name="work-item-query-view"></a>作業項目クエリ ビュー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1096,7 +1386,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Team.Refresh|**F5**|
 |Window.Toggle|**Shift + Alt + V**|
 
-## <a name="work-item-results-view"></a>作業項目結果ビュー
+### <a name="work-item-results-view"></a>作業項目結果ビュー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1109,7 +1402,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |Team.Refresh|**F5**|
 |Window.Toggle|**Shift + Alt + V**|
 
-## <a name="workflow-designer"></a>ワークフロー デザイナー
+### <a name="workflow-designer"></a>ワークフロー デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1137,7 +1433,10 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |WorkflowDesigner.ZoomIn|**Ctrl を押しながらテンキーの +**|
 |WorkflowDesigner.ZoomOut|**Ctrl を押しながらテンキーの -**|
 
-## <a name="xaml-ui-designer"></a>XAML デザイナー
+### <a name="xaml-ui-designer"></a>XAML デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
@@ -1159,14 +1458,20 @@ Visual Studio でのアクセシビリティについて詳しくは、「[ア�
 |View.EdgeRightMoveRight|**Ctrl + Shift + Alt + .**|
 |View.ShowPropertyMarkerMenu|**Ctrl + Space**|
 
-## <a name="xml-text-editor"></a>XML (テキスト) エディター
+### <a name="xml-text-editor"></a>XML (テキスト) エディター
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |
 |XML.StartXSLTDebugging|**Alt + F5**|
 |XML.StartXSLTWithoutDebugging|**Ctrl + Alt + F5**|
 
-## <a name="xml-schema-designer"></a>XML スキーマ デザイナー
+### <a name="xml-schema-designer"></a>XML スキーマ デザイナー
+
+このコンテキストに固有のショートカットは次のとおりです。
+
 
 |コマンド|キーボード ショートカット|
 |--------------| - |

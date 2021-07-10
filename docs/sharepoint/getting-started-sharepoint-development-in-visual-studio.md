@@ -17,17 +17,18 @@ ms.author: johnhart
 manager: jmartens
 ms.workload:
 - office
-ms.openlocfilehash: 109cf2fe5661f23ae7fb051829ec1c9e9a6d2329
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a710d71b80f8aa64efef52b891a8c8a760b92c10
+ms.sourcegitcommit: 1f27f33852112702ee35fbc0c02fba37899e4cf5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876629"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112112883"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>はじめに (Visual Studio での SharePoint 開発)
-  このセクションでは、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] を利用した SharePoint ソリューションを、これから [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]で開発しようとする方のために有益な情報を提供します。
 
- SharePoint 2013 アドインと SharePoint アドインについては、「 [SharePoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) 」および「 [SharePoint アドインの作成](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)」を参照してください。
+  このセクションでは、 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] および [!INCLUDE[wss_14_short](../sharepoint/includes/wss-14-short-md.md)] を利用した SharePoint ソリューションを、これから [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]で開発しようとする方のために有益な情報を提供します。
+
+ SharePoint アドインについては、[SharePoint アドインの作成](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)に関するページを参照してください。
 
  SharePoint は Web ベースのコラボレーション プラットフォームを提供します。 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] には、SharePoint サイトとコンテンツを作成するためのプロジェクト テンプレートが多数用意されています (リスト定義、ワークフロー、ビジネス データ接続モデル、サイト定義など)。 さらに、SharePoint プロジェクトとツール用の拡張機能を [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]で作成することもできます。
 

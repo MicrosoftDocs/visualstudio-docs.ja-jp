@@ -2,17 +2,18 @@
 title: チーム エクスプローラーのプロジェクトに接続する
 description: Visual Studio でチーム エクスプローラーを使用し、チーム メンバーと連携してプロジェクトを開発および管理する方法について説明します。
 ms.custom: SEO-VS-2020
-ms.date: 03/31/2021
+ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jillfra
-ms.openlocfilehash: 78a71911bb4334e04a085d91ff51238d34981beb
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+monikerRange: <=vs-2019
+ms.openlocfilehash: b45399f7a4115ce5946a67caca22ca92148e7434
+ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216606"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112308247"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>チーム エクスプローラーのプロジェクトに接続する
 
@@ -27,7 +28,7 @@ ms.locfileid: "106216606"
 チーム エクスプローラーにより Team Foundation バージョン管理 (TFVC) のリポジトリと、[Azure DevOps Services](/azure/devops/user-guide/what-is-azure-devops-services) またはオンプレミス [Azure DevOps Server](/azure/devops/user-guide/about-azure-devops-services-tfs?view=azure-devops&preserve-view=true) (以前の TFS) でホストされているプロジェクトに Visual Studio が接続されます。 ソース コード、作業項目、およびビルドを管理できます。
 
 > [!IMPORTANT]
-> Visual Studio 2019 [**バージョン 16.8**](/visualstudio/releases/2019/release-notes/) の最新のリリースでは、新しい Git バージョン管理エクスペリエンスが既定でオンになっています。 チーム エクスプローラーとの違いに関する詳細については、「[**Git とチーム エクスプローラーを並べて比較する**](git-team-explorer-feature-comparison.md)」ページを参照してください。
+> Visual Studio 2019 [**バージョン 16.8**](/visualstudio/releases/2019/release-notes-history) のリリースでは、Git バージョン コントロール エクスペリエンスが既定でオンになっています。 チーム エクスプローラーとの違いに関する詳細については、「[**Git とチーム エクスプローラーを並べて比較する**](../version-control/git-team-explorer-feature-comparison.md)」ページを参照してください。
 >
 > ただし、引き続きチーム エクスプローラーをお使いになる場合は、 **[ツール]** 、 **[オプション]** 、 **[環境]** 、 **[プレビュー機能]** の順に移動してから、 **[New Git user experience]\(新しい Git ユーザー エクスペリエンス\)** チェックボックスを切り替えます。
 

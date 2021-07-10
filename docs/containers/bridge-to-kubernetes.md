@@ -1,31 +1,40 @@
 ---
-title: Visual Studio で Bridge to Kubernetes を使用する
-titleSuffix: ''
+title: 'チュートリアル: 開発マシンを Bridge to Kubernetes と接続する'
 ms.technology: vs-azure
 ms.date: 03/24/2021
-ms.topic: quickstart
-description: Visual Studio で Bridge to Kubernetes を使用して開発用コンピューターを Kubernetes クラスターに接続する方法について説明します
+ms.topic: tutorial
+description: Visual Studio で Bridge to Kubernetes を使用してお使いの開発用コンピューターを Kubernetes クラスターに接続します。
 keywords: Bridge to Kubernetes, Azure Dev Spaces, Dev Spaces, Docker, Kubernetes, Azure, コンテナー
 monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jmartens
-ms.openlocfilehash: fdcf31d062fe2be72709979f0892e6a7f535024a
-ms.sourcegitcommit: 2049ec99f1439ec91d002853226934b067b1ee70
+ms.openlocfilehash: b8d6c98d2e2146ad57871b74cd2d522ed2b04259
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105635051"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046119"
 ---
-# <a name="use-bridge-to-kubernetes"></a>Bridge to Kubernetes を使用する
+# <a name="tutorial-use-bridge-to-kubernetes-to-connect-your-clusters-and-your-development-computers"></a>チュートリアル: Bridge to Kubernetes を使用してお使いのクラスターとお使いの開発用コンピューターを接続する
 
-Bridge to Kubernetes を使用すると、Kubernetes クラスターと、開発用コンピューターで実行されているコードの間で、トラフィックをリダイレクトすることができます。 また、このガイドでは、Kubernetes クラスター上の複数のマイクロサービスを含む大規模なサンプル アプリケーションをデプロイするためのスクリプトも提供します。
+このチュートリアルでは、Bridge to Kubernetes を使用して、お使いの Kubernetes クラスターと、お使いの開発用コンピューターで実行されているコードの間で、トラフィックをリダイレクトする方法を説明します。 
 
-## <a name="before-you-begin"></a>開始する前に
+また、このガイドでは、Kubernetes クラスター上の複数のマイクロサービスを含む大規模なサンプル アプリケーションをデプロイするためのスクリプトも提供します。
 
-このガイドでは、[TODO アプリ サンプル アプリケーション][todo-app-github]を使用して、お使いの開発用コンピューターを Kubernetes クラスターに接続する方法を示します。 Kubernetes クラスター上で実行されている独自のアプリケーションが既にある場合でも、以下の手順に従い、独自のサービスの名前を使用できます。
+Bridge to Kubernetes の詳細については、「[Bridge to Kubernetes のしくみ](overview-bridge-to-kubernetes.md)」の記事を参照してください。
 
-このサンプルでは、Bridge to Kubernetes を使用して、任意の Kubernetes クラスターで簡単な TODO アプリケーションのマイクロサービス バージョンを開発する方法を示します。 Visual Studio を使用したこのサンプルは、[TodoMVC](http://todomvc.com) によって提供されるコードを適合させています。 これらの手順は、どの Kubernetes クラスターでも使用できます。
+## <a name="prerequisites"></a>前提条件
+
+- Kubernetes クラスター
+- Windows 10 上で実行されている [Visual Studio 2019][visual-studio] バージョン 16.7 Preview 4 以降。
+- [Bridge to Kubernetes 拡張機能がインストールされていること][btk-extension]
+
+## <a name="about-the-data"></a>データについて
+
+このチュートリアルでは、Bridge to Kubernetes を使用して、任意の Kubernetes クラスターに簡単な TODO サンプル アプリケーションのマイクロサービス バージョンを開発します。 Visual Studio を使用する、この [TODO アプリのサンプル アプリケーション][todo-app-github]は、[TodoMVC](http://todomvc.com) が提供しているコードから採用しています。 
+
+ これらの手順は、どの Kubernetes クラスターでも使用できます。 したがって、Kubernetes クラスター上で実行されている自分独自のアプリケーションが既にある場合でも、以下の手順に従い、自分独自のサービスの名前を使用できます。
 
 この TODO アプリケーションのサンプルは、永続ストレージを提供するフロントエンドとバックエンドで構成されています。 この拡張サンプルでは、統計コンポーネントを追加し、特に次のいくつかのマイクロサービスにアプリケーションを分割しています。
 
@@ -37,15 +46,10 @@ Bridge to Kubernetes を使用すると、Kubernetes クラスターと、開発
 
 この拡張 TODO アプリケーションは、全体で相関する 6 つのコンポーネントで構成されています。
 
-### <a name="prerequisites"></a>前提条件
-
-- Kubernetes クラスター。
-- Windows 10 上で実行されている [Visual Studio 2019][visual-studio] バージョン 16.7 Preview 4 以降。
-- [Bridge to Kubernetes 拡張機能がインストールされていること][btk-extension]。
 
 ## <a name="check-the-cluster"></a>クラスターを確認する
 
-コマンド プロンプトを開き、kubectl がインストールされていることを確認し、パスで使用するクラスターが使用可能で準備ができていることを確認して、そのクラスターにコンテキストを設定します。
+コマンド プロンプトを開き、`kubectl` がインストールされていることを確認し、パスで使用するクラスターが使用可能で準備ができていることを確認して、そのクラスターにコンテキストを設定します。
 
 ```cmd
 kubectl cluster-info

@@ -3,19 +3,19 @@ title: VSIX カラー コンパイラ | Microsoft Docs
 description: Visual Studio 拡張機能のカラー コンパイラ ツールについて説明します。これは、Visual Studio のテーマの色を .pkgdef ファイルに変換するコンソール アプリケーションです。
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9486f1cd3e931d134c6fe2842f8704926de70966
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 2f7277299d3cedd2ea0db49a44109d8a0441ebd0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060706"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901761"
 ---
 # <a name="vsix-color-compiler"></a>VSIX カラー コンパイラ
 Visual Studio 拡張機能のカラー コンパイラ ツールは、既存の Visual Studio テーマの色を表す .xml ファイルを取得し、それを .pkgdef ファイルに変換することで、それらの色を Visual Studio で使用できるようにするコンソール アプリケーションです。 .xml ファイル間の違いを簡単に比較できるため、このツールは、カスタム カラーをソース管理で管理するために役立ちます。 また、ビルド環境にフックして、ビルドの出力を有効な .pkgdef ファイルにすることもできます。
@@ -139,8 +139,8 @@ Visual Studio 拡張機能のカラー コンパイラ ツールは、既存の 
 |-|-|-|
 |名前なし (.xml ファイル)|これは最初の名前のないパラメーターで、変換する XML ファイルへのパスです。|必須|
 |名前なし (.pkgdef ファイル)|これは 2 番目の名前のないパラメーターで、生成される .pkgdef ファイルの出力パスです。<br /><br /> 既定値: \<XML Filename>.pkgdef|省略可能|
-|/noLogo|このフラグを設定すると、製品および著作権情報は出力されなくなります。|省略可能|
-|/?|ヘルプ情報を出力します。|省略可能|
+|/noLogo|このフラグを設定すると、製品および著作権情報は出力されなくなります。|オプション|
+|/?|ヘルプ情報を出力します。|オプション|
 |/help|ヘルプ情報を出力します。|オプション|
 
  **例**
@@ -154,6 +154,8 @@ Visual Studio 拡張機能のカラー コンパイラ ツールは、既存の 
 - このツールでは、最新バージョンの VC++ ランタイムがインストールされている必要があります。
 
 - 単一のファイルのみがサポートされます。 フォルダー パスを使用した一括変換はサポートされていません。
+
+- ツールは `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\` にあります
 
 ## <a name="sample-output"></a>サンプル出力
  ツールによって生成される .pkgdef ファイルは次のキーのようになります。

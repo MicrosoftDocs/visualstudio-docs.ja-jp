@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e7791308de670b209433708e69ec473780342858
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b41529182b7cca8cea8f94206601b7a818d35420
+ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900625"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111877742"
 ---
 # <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>方法: ClickOnce アプリケーションと共に必須コンポーネントを含める
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] アプリケーションと共に必須コンポーネントを配布する前に、まず開発用コンピューターにそれらの必須コンポーネントのインストーラー パッケージをダウンロードする必要があります。 インストーラー パッケージが **[パッケージ]** フォルダーにない場合、アプリケーションを発行して **[アプリケーションと同じ場所から必須コンポーネントをダウンロードする]** を選択するとエラーが発生します。
@@ -28,6 +28,9 @@ ms.locfileid: "99900625"
 1. ファイル エクスプローラーで、**Packages** フォルダーを開きます。
 
     既定のパスは、`%ProgramFiles(x86)%\Microsoft SDKs\ClickOnce Bootstrapper\Packages\` です。
+
+>[!NOTE]
+> Visual Studio 2019 Update 7 リリース以降、ブートストラッパー パッケージはパス *<VS Install Path>\MSBuild\Microsoft\VisualStudio\BootstrapperPackages* でも見つかります。
 
 2. 追加する必須コンポーネントのフォルダーを開いてから、インストールされているバージョンの [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] の言語フォルダー (たとえば、英語の場合は **en**) を開きます。
 
@@ -47,7 +50,7 @@ ms.locfileid: "99900625"
 
 6. 必須コンポーネントのルート フォルダーにファイルをコピーします。
 
-    たとえば、Windows Installer 4.5 の前提条件の場合は、 *\Packages\WindowsInstaller 4_5* フォルダーにファイルをコピーします。
+    たとえば、.NET Framework 4.7.2 前提条件の場合、 *\Packages\DotNetFX472* フォルダーにファイルをコピーします。
 
     これで、アプリケーションと共にインストーラー パッケージを配布できます。
 

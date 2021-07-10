@@ -2,30 +2,30 @@
 title: インストールの場所を選択する
 description: ダウンロード キャッシュ、共有コンポーネント、SDK、ツールの場所を異なるドライブに変更することによって、ご利用のシステム ドライブの Visual Studio インストール占有領域を減らす方法について説明します。 たとえば、いくつかのファイルを C ドライブから D ドライブに移動します。
 ms.date: 03/30/2019
-ms.custom: seodec18
+ms.custom: vs-acquisition
 ms.topic: how-to
 helpviewer_keywords:
 - change installation locations for Visual Studio
 - select an installation location for Visual Studio files
 - move installation files to different drives
 - use the D drive
-author: ornellaalt
-ms.author: ornella
+author: j-martens
+ms.author: jmartens
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4db3a31c8baa578a17d14b3a740ff40a444ba208
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5ad065a780a16420727d90605d95038cc5f4080a
+ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868635"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112387568"
 ---
 # <a name="select-the-installation-locations-in-visual-studio"></a>Visual Studio でインストールの場所を選択する
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 一部のファイル用の場所を変更することで、ご利用のシステム ドライブ上の Visual Studio のインストール占有領域を減らせるようになりました。 具体的には、ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールのファイルに異なる場所を使用できます。
 
@@ -33,18 +33,18 @@ ms.locfileid: "99868635"
 
 ::: moniker range="vs-2017"
 
-**バージョン 15.7 の新機能**:一部のファイル用の場所を変更することで、ご利用のシステム ドライブ上の Visual Studio のインストール占有領域を減らせるようになりました。 具体的には、ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールのファイルに異なる場所を使用できます。
+**バージョン 15.7 の新機能**: 一部のファイル用の場所を変更することで、ご利用のシステム ドライブ上の Visual Studio のインストール占有領域を減らせるようになりました。 具体的には、ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールのファイルに異なる場所を使用できます。
 
 ::: moniker-end
 
    > [!NOTE]
    > 一部のツールと SDK では、インストールできる場所に関するルールが異なります。 これらのツールおよび SDK は、お客様が別の場所を選択した場合でも、ご利用のシステム ドライブにインストールされます。
 
-開始するには、 ここではその方法を説明します。
+使い始める準備はできていますか。 以下にその方法を示します。
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio をインストールするときに、 **[インストールの場所]** タブを選びます。
+1. Visual Studio をインストールするときに、**[インストールの場所]** タブを選びます。
 
    ![Visual Studio 2017 - インストールの場所を選択する](media/vs-installation-locations.png "インストールの場所を選択します。")
 
@@ -76,9 +76,9 @@ ms.locfileid: "99868635"
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-1. Visual Studio をインストールするときに、 **[インストールの場所]** タブを選びます。
+1. Visual Studio をインストールするときに、**[インストールの場所]** タブを選びます。
 
    ![Visual Studio 2019 - インストールの場所を選択する](media/vs-2019/vs-installer-installation-locations.png "インストールの場所を選択します。")
 

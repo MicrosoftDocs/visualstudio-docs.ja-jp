@@ -1,17 +1,17 @@
 ---
-ms.date: 03/02/2021
+ms.date: 07/01/2021
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
 ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: 4e36fe11b5eb604a9b109432047da9a3c26df414
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 007327dc525f515523f98323bc95e133209e1531
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101750363"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113279826"
 ---
 Visual Studio *統合開発環境* は、コードの編集、デバッグ、ビルドを行ってから、アプリを発行するために使用できるクリエイティブなランチパッドです。 統合開発環境 (IDE) は、ソフトウェア開発の多くの側面で使用できる機能を豊富に備えたプログラムです。 大部分の IDE が備える標準的なエディターおよびデバッガーに加えて、Visual Studio ではコンパイラ、コード補完ツール、グラフィック デザイナーなど、ソフトウェア開発プロセスを容易にする多くの機能を用意しています。
 
@@ -21,15 +21,15 @@ Visual Studio *統合開発環境* は、コードの編集、デバッグ、ビ
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-[![The Visual Studio 2019 IDE](../media/vs-2019/ide-overview.png)](../media/vs-2019/ide-overview.png#lightbox)
+:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="主な機能がどこに配置されているかを示すコールアウトを含む Visual Studio IDE のスクリーンショット。" lightbox="../media/vs-2019/ide-overview.png":::
 
 ::: moniker-end
 
 これはプロジェクトを開いている Visual Studio の画像です。使用頻度が高いツール ウィンドウがいくつか開いています。
 
-- [ソリューション エクスプローラー](../../ide/solutions-and-projects-in-visual-studio.md) (右上) では、コード ファイルを表示、移動、および管理できます。 **ソリューション エクスプローラー** では、ファイルを [ソリューションやプロジェクト](../tutorial-projects-solutions.md)にまとめ、コードを整理できます。
+- [ソリューション エクスプローラー](../../ide/use-solution-explorer.md) (右上) では、コード ファイルを表示、移動、および管理できます。 **ソリューション エクスプローラー** では、ファイルを [ソリューションやプロジェクト](../../ide/solutions-and-projects-in-visual-studio.md)にまとめ、コードを整理できます。
 
 - 大部分の時間を費やすことになる[エディター ウィンドウ](../../ide/writing-code-in-the-code-and-text-editor.md) (中央) にはファイルの内容が表示されます。 ここでは、コードを編集したり、ボタンやテキスト ボックスを持つウィンドウなどのユーザー インターフェイスをデザインすることができます。
 
@@ -39,7 +39,7 @@ Visual Studio *統合開発環境* は、コードの編集、デバッグ、ビ
 
 ::: moniker-end
 
-- [チーム エクスプローラー](/azure/devops/user-guide/work-team-explorer) (右下) では、[Git](https://git-scm.com/) や [Team Foundation バージョン管理 (TFVC)](/azure/devops/repos/tfvc/overview) などのバージョン管理テクノロジを使用して、作業項目を追跡し、コードを他のユーザーと共有できます。
+- [[Git Changes]\(Git 変更\)](/visualstudio/version-control/) (右下) では作業項目を追跡し、[Git](https://git-scm.com/) や [GitHub](https://docs.github.com/github) などのバージョン コントロール テクノロジを使用する他のユーザーとコードを共有できます。
 
 ## <a name="editions"></a>エディション
 
@@ -51,7 +51,7 @@ Visual Studio には 3 つのエディションがあります:という 3 つ�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio は Windows と Mac で利用できます。 [Visual Studio for Mac](/visualstudio/mac/) は Visual Studio 2019 と同じ機能を多く備え、クロスプラットフォーム アプリとモバイル アプリの開発用に最適化されています。 この記事では、Windows バージョンの Visual Studio 2019 について説明します。
 
@@ -384,13 +384,13 @@ Visual Studio を初めて開くときは、Microsoft アカウントや、職�
 
 ::: moniker-end
 
-## <a name="debug-code"></a>コードのデバッグ
+## <a name="debug-code&quot;></a>コードのデバッグ
 
-コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 特定の行でコードの実行を停止する "*ブレークポイント*" を設定できます。 コードが実行されたときに変数の値がどのように変わるかなどを確認できます。
+コードを記述するときは、実行してバグの存在を確認するために実際にテストする必要があります。 Visual Studio のデバッグ システムを使用すると、一度に 1 つのステートメントずつ、コードを実行して必要に応じて変数を検査できます。 特定の行でコードの実行を停止する &quot;*ブレークポイント*&quot; を設定できます。 コードが実行されたときに変数の値がどのように変わるかなどを確認できます。
 
-ブレークポイントを設定して、プログラムが "実行中" の `username` 変数の値を見てみましょう。
+ブレークポイントを設定して、プログラムが &quot;実行中&quot; の `username` 変数の値を見てみましょう。
 
-1. `Console.WriteLine($"\nHello {username}!");` というコード行を探します。 この行にブレークポイントを設定するには、つまりこの行でプログラムの実行を一時停止するには、エディターの左端の余白をクリックします。 コード行の任意の場所をクリックしてから、**F9** キーを押してもかまいません。
+1. `Console.WriteLine($&quot;\nHello {username}!");` というコード行を探します。 この行にブレークポイントを設定するには、つまりこの行でプログラムの実行を一時停止するには、エディターの左端の余白をクリックします。 コード行の任意の場所をクリックしてから、**F9** キーを押してもかまいません。
 
    余白の左端に赤い円が表示され、コードが赤で強調表示されます。
 
