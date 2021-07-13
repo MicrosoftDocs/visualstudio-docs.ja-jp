@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Visual Studio のバージョン コントロールに関するドキュメント
-summary: Git や GitHub などのバージョン コントロール テクノロジを使用して、Visual Studio 2019 内からコードを共有します。
+summary: Git や GitHub などのバージョン コントロール テクノロジを使用して、Visual Studio 内からコードを共有します。
 metadata:
   title: Visual Studio での Git によるバージョン コントロールとソース コード管理
   description: Visual Studio のバージョン コントロール テクノロジを使用します。 ご利用のコードベースを離れることなく、Git および GitHub でコード リリースを共有、統合、および管理することができます。
@@ -11,12 +11,12 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 9bdd994d5fe1d5f54251ce49047feaf75145dcda
-  ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
+  ms.openlocfilehash: 8143a897914a0b9c2ca3adcdc5093c89852a2f53
+  ms.sourcegitcommit: 4b19d18874a5d3c3dbea67a8e478dc7d3a813769
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/03/2021
-  ms.locfileid: "113280401"
+  ms.lasthandoff: 07/07/2021
+  ms.locfileid: "113363990"
 landingContent:
 - title: 概要
   linkLists:
@@ -44,7 +44,9 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Visual Studio での Git による生産性の向上 (プレビュー)
+    - text: Visual Studio での Git による生産性の向上
       url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
+    - text: Visual Studio 2022 (Preview) リリース ノート
+      url: /visualstudio/releases/2022/release-notes-preview/
     - text: Visual Studio 2019 リリース ノート
       url: /visualstudio/releases/2019/release-notes/
