@@ -7,6 +7,8 @@ ms.custom:
 - contperf-fy21q1
 ms.date: 08/21/2020
 ms.topic: troubleshooting
+f1_keywords:
+- vs.publish
 dev_langs:
 - FSharp
 - VB
@@ -17,12 +19,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e0a8e8a313e351d175822e2427378fb89703444
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 099bd2c6cc47895c913b3f852835d2fd09d0f9c3
+ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879229"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549486"
 ---
 # <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>フォルダー、IIS、Azure、または別の場所にアプリを配置する
 
